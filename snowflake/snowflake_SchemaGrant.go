@@ -1,0 +1,947 @@
+// Prebuilt snowflake Provider for Terraform CDK (cdktf)
+package snowflake
+
+import (
+	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
+	_init_ "github.com/hashicorp/cdktf-provider-snowflake-go/snowflake/v2/jsii"
+
+	"github.com/aws/constructs-go/constructs/v10"
+	"github.com/hashicorp/cdktf-provider-snowflake-go/snowflake/v2/internal"
+	"github.com/hashicorp/terraform-cdk-go/cdktf"
+)
+
+// Represents a {@link https://www.terraform.io/docs/providers/snowflake/r/schema_grant snowflake_schema_grant}.
+type SchemaGrant interface {
+	cdktf.TerraformResource
+	// Experimental.
+	CdktfStack() cdktf.TerraformStack
+	// Experimental.
+	Connection() interface{}
+	// Experimental.
+	SetConnection(val interface{})
+	// Experimental.
+	ConstructNodeMetadata() *map[string]interface{}
+	// Experimental.
+	Count() *float64
+	// Experimental.
+	SetCount(val *float64)
+	DatabaseName() *string
+	SetDatabaseName(val *string)
+	DatabaseNameInput() *string
+	// Experimental.
+	DependsOn() *[]*string
+	// Experimental.
+	SetDependsOn(val *[]*string)
+	EnableMultipleGrants() interface{}
+	SetEnableMultipleGrants(val interface{})
+	EnableMultipleGrantsInput() interface{}
+	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
+	// Experimental.
+	Fqn() *string
+	// Experimental.
+	FriendlyUniqueId() *string
+	Id() *string
+	SetId(val *string)
+	IdInput() *string
+	// Experimental.
+	Lifecycle() *cdktf.TerraformResourceLifecycle
+	// Experimental.
+	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	// The tree node.
+	Node() constructs.Node
+	OnFuture() interface{}
+	SetOnFuture(val interface{})
+	OnFutureInput() interface{}
+	Privilege() *string
+	SetPrivilege(val *string)
+	PrivilegeInput() *string
+	// Experimental.
+	Provider() cdktf.TerraformProvider
+	// Experimental.
+	SetProvider(val cdktf.TerraformProvider)
+	// Experimental.
+	Provisioners() *[]interface{}
+	// Experimental.
+	SetProvisioners(val *[]interface{})
+	// Experimental.
+	RawOverrides() interface{}
+	Roles() *[]*string
+	SetRoles(val *[]*string)
+	RolesInput() *[]*string
+	SchemaName() *string
+	SetSchemaName(val *string)
+	SchemaNameInput() *string
+	Shares() *[]*string
+	SetShares(val *[]*string)
+	SharesInput() *[]*string
+	// Experimental.
+	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
+	// Experimental.
+	TerraformMetaArguments() *map[string]interface{}
+	// Experimental.
+	TerraformResourceType() *string
+	WithGrantOption() interface{}
+	SetWithGrantOption(val interface{})
+	WithGrantOptionInput() interface{}
+	// Experimental.
+	AddOverride(path *string, value interface{})
+	// Experimental.
+	GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+	// Experimental.
+	GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Experimental.
+	GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+	// Experimental.
+	GetListAttribute(terraformAttribute *string) *[]*string
+	// Experimental.
+	GetNumberAttribute(terraformAttribute *string) *float64
+	// Experimental.
+	GetNumberListAttribute(terraformAttribute *string) *[]*float64
+	// Experimental.
+	GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64
+	// Experimental.
+	GetStringAttribute(terraformAttribute *string) *string
+	// Experimental.
+	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+	// Experimental.
+	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Overrides the auto-generated logical ID with a specific ID.
+	// Experimental.
+	OverrideLogicalId(newLogicalId *string)
+	ResetEnableMultipleGrants()
+	ResetId()
+	ResetOnFuture()
+	// Resets a previously passed logical Id to use the auto-generated logical id again.
+	// Experimental.
+	ResetOverrideLogicalId()
+	ResetPrivilege()
+	ResetRoles()
+	ResetSchemaName()
+	ResetShares()
+	ResetWithGrantOption()
+	SynthesizeAttributes() *map[string]interface{}
+	// Experimental.
+	ToMetadata() interface{}
+	// Returns a string representation of this construct.
+	ToString() *string
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToTerraform() interface{}
+}
+
+// The jsii proxy struct for SchemaGrant
+type jsiiProxy_SchemaGrant struct {
+	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_SchemaGrant) CdktfStack() cdktf.TerraformStack {
+	var returns cdktf.TerraformStack
+	_jsii_.Get(
+		j,
+		"cdktfStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) Connection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"connection",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) ConstructNodeMetadata() *map[string]interface{} {
+	var returns *map[string]interface{}
+	_jsii_.Get(
+		j,
+		"constructNodeMetadata",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) Count() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"count",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) DatabaseName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"databaseName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) DatabaseNameInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"databaseNameInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) DependsOn() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) EnableMultipleGrants() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableMultipleGrants",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) EnableMultipleGrantsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableMultipleGrantsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) Fqn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) FriendlyUniqueId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"friendlyUniqueId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) Id() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"id",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) IdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"idInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) Lifecycle() *cdktf.TerraformResourceLifecycle {
+	var returns *cdktf.TerraformResourceLifecycle
+	_jsii_.Get(
+		j,
+		"lifecycle",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) Node() constructs.Node {
+	var returns constructs.Node
+	_jsii_.Get(
+		j,
+		"node",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) OnFuture() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onFuture",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) OnFutureInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onFutureInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) Privilege() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"privilege",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) PrivilegeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"privilegeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) Provider() cdktf.TerraformProvider {
+	var returns cdktf.TerraformProvider
+	_jsii_.Get(
+		j,
+		"provider",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) Provisioners() *[]interface{} {
+	var returns *[]interface{}
+	_jsii_.Get(
+		j,
+		"provisioners",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) RawOverrides() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"rawOverrides",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) Roles() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"roles",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) RolesInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"rolesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) SchemaName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"schemaName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) SchemaNameInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"schemaNameInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) Shares() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"shares",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) SharesInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"sharesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
+	var returns *cdktf.TerraformProviderGeneratorMetadata
+	_jsii_.Get(
+		j,
+		"terraformGeneratorMetadata",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) TerraformMetaArguments() *map[string]interface{} {
+	var returns *map[string]interface{}
+	_jsii_.Get(
+		j,
+		"terraformMetaArguments",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) TerraformResourceType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"terraformResourceType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) WithGrantOption() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"withGrantOption",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) WithGrantOptionInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"withGrantOptionInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/schema_grant snowflake_schema_grant} Resource.
+func NewSchemaGrant(scope constructs.Construct, id *string, config *SchemaGrantConfig) SchemaGrant {
+	_init_.Initialize()
+
+	j := jsiiProxy_SchemaGrant{}
+
+	_jsii_.Create(
+		"@cdktf/provider-snowflake.SchemaGrant",
+		[]interface{}{scope, id, config},
+		&j,
+	)
+
+	return &j
+}
+
+// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/schema_grant snowflake_schema_grant} Resource.
+func NewSchemaGrant_Override(s SchemaGrant, scope constructs.Construct, id *string, config *SchemaGrantConfig) {
+	_init_.Initialize()
+
+	_jsii_.Create(
+		"@cdktf/provider-snowflake.SchemaGrant",
+		[]interface{}{scope, id, config},
+		s,
+	)
+}
+
+func (j *jsiiProxy_SchemaGrant) SetConnection(val interface{}) {
+	_jsii_.Set(
+		j,
+		"connection",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SchemaGrant) SetCount(val *float64) {
+	_jsii_.Set(
+		j,
+		"count",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SchemaGrant) SetDatabaseName(val *string) {
+	_jsii_.Set(
+		j,
+		"databaseName",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SchemaGrant) SetDependsOn(val *[]*string) {
+	_jsii_.Set(
+		j,
+		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SchemaGrant) SetEnableMultipleGrants(val interface{}) {
+	_jsii_.Set(
+		j,
+		"enableMultipleGrants",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SchemaGrant) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SchemaGrant) SetId(val *string) {
+	_jsii_.Set(
+		j,
+		"id",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SchemaGrant) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	_jsii_.Set(
+		j,
+		"lifecycle",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SchemaGrant) SetOnFuture(val interface{}) {
+	_jsii_.Set(
+		j,
+		"onFuture",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SchemaGrant) SetPrivilege(val *string) {
+	_jsii_.Set(
+		j,
+		"privilege",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SchemaGrant) SetProvider(val cdktf.TerraformProvider) {
+	_jsii_.Set(
+		j,
+		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SchemaGrant) SetProvisioners(val *[]interface{}) {
+	_jsii_.Set(
+		j,
+		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SchemaGrant) SetRoles(val *[]*string) {
+	_jsii_.Set(
+		j,
+		"roles",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SchemaGrant) SetSchemaName(val *string) {
+	_jsii_.Set(
+		j,
+		"schemaName",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SchemaGrant) SetShares(val *[]*string) {
+	_jsii_.Set(
+		j,
+		"shares",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SchemaGrant) SetWithGrantOption(val interface{}) {
+	_jsii_.Set(
+		j,
+		"withGrantOption",
+		val,
+	)
+}
+
+// Checks if `x` is a construct.
+//
+// Use this method instead of `instanceof` to properly detect `Construct`
+// instances, even when the construct library is symlinked.
+//
+// Explanation: in JavaScript, multiple copies of the `constructs` library on
+// disk are seen as independent, completely different libraries. As a
+// consequence, the class `Construct` in each copy of the `constructs` library
+// is seen as a different class, and an instance of one class will not test as
+// `instanceof` the other class. `npm install` will not create installations
+// like this, but users may manually symlink construct libraries together or
+// use a monorepo tool: in those cases, multiple copies of the `constructs`
+// library can be accidentally installed, and `instanceof` will behave
+// unpredictably. It is safest to avoid using `instanceof`, and using
+// this type-testing method instead.
+//
+// Returns: true if `x` is an object created from a class which extends `Construct`.
+func SchemaGrant_IsConstruct(x interface{}) *bool {
+	_init_.Initialize()
+
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.SchemaGrant",
+		"isConstruct",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+func SchemaGrant_TfResourceType() *string {
+	_init_.Initialize()
+	var returns *string
+	_jsii_.StaticGet(
+		"@cdktf/provider-snowflake.SchemaGrant",
+		"tfResourceType",
+		&returns,
+	)
+	return returns
+}
+
+func (s *jsiiProxy_SchemaGrant) AddOverride(path *string, value interface{}) {
+	_jsii_.InvokeVoid(
+		s,
+		"addOverride",
+		[]interface{}{path, value},
+	)
+}
+
+func (s *jsiiProxy_SchemaGrant) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		s,
+		"getAnyMapAttribute",
+		[]interface{}{terraformAttribute},
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SchemaGrant) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	var returns cdktf.IResolvable
+
+	_jsii_.Invoke(
+		s,
+		"getBooleanAttribute",
+		[]interface{}{terraformAttribute},
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SchemaGrant) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	var returns *map[string]*bool
+
+	_jsii_.Invoke(
+		s,
+		"getBooleanMapAttribute",
+		[]interface{}{terraformAttribute},
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SchemaGrant) GetListAttribute(terraformAttribute *string) *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		s,
+		"getListAttribute",
+		[]interface{}{terraformAttribute},
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SchemaGrant) GetNumberAttribute(terraformAttribute *string) *float64 {
+	var returns *float64
+
+	_jsii_.Invoke(
+		s,
+		"getNumberAttribute",
+		[]interface{}{terraformAttribute},
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SchemaGrant) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	var returns *[]*float64
+
+	_jsii_.Invoke(
+		s,
+		"getNumberListAttribute",
+		[]interface{}{terraformAttribute},
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SchemaGrant) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	var returns *map[string]*float64
+
+	_jsii_.Invoke(
+		s,
+		"getNumberMapAttribute",
+		[]interface{}{terraformAttribute},
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SchemaGrant) GetStringAttribute(terraformAttribute *string) *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		s,
+		"getStringAttribute",
+		[]interface{}{terraformAttribute},
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SchemaGrant) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	var returns *map[string]*string
+
+	_jsii_.Invoke(
+		s,
+		"getStringMapAttribute",
+		[]interface{}{terraformAttribute},
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SchemaGrant) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	var returns cdktf.IResolvable
+
+	_jsii_.Invoke(
+		s,
+		"interpolationForAttribute",
+		[]interface{}{terraformAttribute},
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SchemaGrant) OverrideLogicalId(newLogicalId *string) {
+	_jsii_.InvokeVoid(
+		s,
+		"overrideLogicalId",
+		[]interface{}{newLogicalId},
+	)
+}
+
+func (s *jsiiProxy_SchemaGrant) ResetEnableMultipleGrants() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetEnableMultipleGrants",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SchemaGrant) ResetId() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SchemaGrant) ResetOnFuture() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetOnFuture",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SchemaGrant) ResetOverrideLogicalId() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SchemaGrant) ResetPrivilege() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetPrivilege",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SchemaGrant) ResetRoles() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetRoles",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SchemaGrant) ResetSchemaName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetSchemaName",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SchemaGrant) ResetShares() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetShares",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SchemaGrant) ResetWithGrantOption() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetWithGrantOption",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SchemaGrant) SynthesizeAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		s,
+		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SchemaGrant) ToMetadata() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"toMetadata",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SchemaGrant) ToString() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		s,
+		"toString",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_SchemaGrant) ToTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"toTerraform",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+

@@ -1,0 +1,1169 @@
+// Prebuilt snowflake Provider for Terraform CDK (cdktf)
+package snowflake
+
+import (
+	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
+	_init_ "github.com/hashicorp/cdktf-provider-snowflake-go/snowflake/v2/jsii"
+
+	"github.com/aws/constructs-go/constructs/v10"
+	"github.com/hashicorp/cdktf-provider-snowflake-go/snowflake/v2/internal"
+	"github.com/hashicorp/terraform-cdk-go/cdktf"
+)
+
+// Represents a {@link https://www.terraform.io/docs/providers/snowflake/r/stage snowflake_stage}.
+type Stage interface {
+	cdktf.TerraformResource
+	AwsExternalId() *string
+	SetAwsExternalId(val *string)
+	AwsExternalIdInput() *string
+	// Experimental.
+	CdktfStack() cdktf.TerraformStack
+	Comment() *string
+	SetComment(val *string)
+	CommentInput() *string
+	// Experimental.
+	Connection() interface{}
+	// Experimental.
+	SetConnection(val interface{})
+	// Experimental.
+	ConstructNodeMetadata() *map[string]interface{}
+	CopyOptions() *string
+	SetCopyOptions(val *string)
+	CopyOptionsInput() *string
+	// Experimental.
+	Count() *float64
+	// Experimental.
+	SetCount(val *float64)
+	Credentials() *string
+	SetCredentials(val *string)
+	CredentialsInput() *string
+	Database() *string
+	SetDatabase(val *string)
+	DatabaseInput() *string
+	// Experimental.
+	DependsOn() *[]*string
+	// Experimental.
+	SetDependsOn(val *[]*string)
+	Directory() *string
+	SetDirectory(val *string)
+	DirectoryInput() *string
+	Encryption() *string
+	SetEncryption(val *string)
+	EncryptionInput() *string
+	FileFormat() *string
+	SetFileFormat(val *string)
+	FileFormatInput() *string
+	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
+	// Experimental.
+	Fqn() *string
+	// Experimental.
+	FriendlyUniqueId() *string
+	Id() *string
+	SetId(val *string)
+	IdInput() *string
+	// Experimental.
+	Lifecycle() *cdktf.TerraformResourceLifecycle
+	// Experimental.
+	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	Name() *string
+	SetName(val *string)
+	NameInput() *string
+	// The tree node.
+	Node() constructs.Node
+	// Experimental.
+	Provider() cdktf.TerraformProvider
+	// Experimental.
+	SetProvider(val cdktf.TerraformProvider)
+	// Experimental.
+	Provisioners() *[]interface{}
+	// Experimental.
+	SetProvisioners(val *[]interface{})
+	// Experimental.
+	RawOverrides() interface{}
+	Schema() *string
+	SetSchema(val *string)
+	SchemaInput() *string
+	SnowflakeIamUser() *string
+	SetSnowflakeIamUser(val *string)
+	SnowflakeIamUserInput() *string
+	StorageIntegration() *string
+	SetStorageIntegration(val *string)
+	StorageIntegrationInput() *string
+	Tag() StageTagList
+	TagInput() interface{}
+	// Experimental.
+	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
+	// Experimental.
+	TerraformMetaArguments() *map[string]interface{}
+	// Experimental.
+	TerraformResourceType() *string
+	Url() *string
+	SetUrl(val *string)
+	UrlInput() *string
+	// Experimental.
+	AddOverride(path *string, value interface{})
+	// Experimental.
+	GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{}
+	// Experimental.
+	GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Experimental.
+	GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool
+	// Experimental.
+	GetListAttribute(terraformAttribute *string) *[]*string
+	// Experimental.
+	GetNumberAttribute(terraformAttribute *string) *float64
+	// Experimental.
+	GetNumberListAttribute(terraformAttribute *string) *[]*float64
+	// Experimental.
+	GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64
+	// Experimental.
+	GetStringAttribute(terraformAttribute *string) *string
+	// Experimental.
+	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
+	// Experimental.
+	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Overrides the auto-generated logical ID with a specific ID.
+	// Experimental.
+	OverrideLogicalId(newLogicalId *string)
+	PutTag(value interface{})
+	ResetAwsExternalId()
+	ResetComment()
+	ResetCopyOptions()
+	ResetCredentials()
+	ResetDirectory()
+	ResetEncryption()
+	ResetFileFormat()
+	ResetId()
+	// Resets a previously passed logical Id to use the auto-generated logical id again.
+	// Experimental.
+	ResetOverrideLogicalId()
+	ResetSnowflakeIamUser()
+	ResetStorageIntegration()
+	ResetTag()
+	ResetUrl()
+	SynthesizeAttributes() *map[string]interface{}
+	// Experimental.
+	ToMetadata() interface{}
+	// Returns a string representation of this construct.
+	ToString() *string
+	// Adds this resource to the terraform JSON output.
+	// Experimental.
+	ToTerraform() interface{}
+}
+
+// The jsii proxy struct for Stage
+type jsiiProxy_Stage struct {
+	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_Stage) AwsExternalId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"awsExternalId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) AwsExternalIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"awsExternalIdInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) CdktfStack() cdktf.TerraformStack {
+	var returns cdktf.TerraformStack
+	_jsii_.Get(
+		j,
+		"cdktfStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) Comment() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"comment",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) CommentInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"commentInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) Connection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"connection",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) ConstructNodeMetadata() *map[string]interface{} {
+	var returns *map[string]interface{}
+	_jsii_.Get(
+		j,
+		"constructNodeMetadata",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) CopyOptions() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"copyOptions",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) CopyOptionsInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"copyOptionsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) Count() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"count",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) Credentials() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"credentials",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) CredentialsInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"credentialsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) Database() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"database",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) DatabaseInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"databaseInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) DependsOn() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) Directory() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"directory",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) DirectoryInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"directoryInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) Encryption() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"encryption",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) EncryptionInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"encryptionInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) FileFormat() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fileFormat",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) FileFormatInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fileFormatInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) Fqn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fqn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) FriendlyUniqueId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"friendlyUniqueId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) Id() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"id",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) IdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"idInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) Lifecycle() *cdktf.TerraformResourceLifecycle {
+	var returns *cdktf.TerraformResourceLifecycle
+	_jsii_.Get(
+		j,
+		"lifecycle",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) Name() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"name",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) NameInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"nameInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) Node() constructs.Node {
+	var returns constructs.Node
+	_jsii_.Get(
+		j,
+		"node",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) Provider() cdktf.TerraformProvider {
+	var returns cdktf.TerraformProvider
+	_jsii_.Get(
+		j,
+		"provider",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) Provisioners() *[]interface{} {
+	var returns *[]interface{}
+	_jsii_.Get(
+		j,
+		"provisioners",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) RawOverrides() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"rawOverrides",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) Schema() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"schema",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) SchemaInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"schemaInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) SnowflakeIamUser() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"snowflakeIamUser",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) SnowflakeIamUserInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"snowflakeIamUserInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) StorageIntegration() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"storageIntegration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) StorageIntegrationInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"storageIntegrationInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) Tag() StageTagList {
+	var returns StageTagList
+	_jsii_.Get(
+		j,
+		"tag",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) TagInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"tagInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
+	var returns *cdktf.TerraformProviderGeneratorMetadata
+	_jsii_.Get(
+		j,
+		"terraformGeneratorMetadata",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) TerraformMetaArguments() *map[string]interface{} {
+	var returns *map[string]interface{}
+	_jsii_.Get(
+		j,
+		"terraformMetaArguments",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) TerraformResourceType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"terraformResourceType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) Url() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"url",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) UrlInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"urlInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/stage snowflake_stage} Resource.
+func NewStage(scope constructs.Construct, id *string, config *StageConfig) Stage {
+	_init_.Initialize()
+
+	j := jsiiProxy_Stage{}
+
+	_jsii_.Create(
+		"@cdktf/provider-snowflake.Stage",
+		[]interface{}{scope, id, config},
+		&j,
+	)
+
+	return &j
+}
+
+// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/stage snowflake_stage} Resource.
+func NewStage_Override(s Stage, scope constructs.Construct, id *string, config *StageConfig) {
+	_init_.Initialize()
+
+	_jsii_.Create(
+		"@cdktf/provider-snowflake.Stage",
+		[]interface{}{scope, id, config},
+		s,
+	)
+}
+
+func (j *jsiiProxy_Stage) SetAwsExternalId(val *string) {
+	_jsii_.Set(
+		j,
+		"awsExternalId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Stage) SetComment(val *string) {
+	_jsii_.Set(
+		j,
+		"comment",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Stage) SetConnection(val interface{}) {
+	_jsii_.Set(
+		j,
+		"connection",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Stage) SetCopyOptions(val *string) {
+	_jsii_.Set(
+		j,
+		"copyOptions",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Stage) SetCount(val *float64) {
+	_jsii_.Set(
+		j,
+		"count",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Stage) SetCredentials(val *string) {
+	_jsii_.Set(
+		j,
+		"credentials",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Stage) SetDatabase(val *string) {
+	_jsii_.Set(
+		j,
+		"database",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Stage) SetDependsOn(val *[]*string) {
+	_jsii_.Set(
+		j,
+		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Stage) SetDirectory(val *string) {
+	_jsii_.Set(
+		j,
+		"directory",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Stage) SetEncryption(val *string) {
+	_jsii_.Set(
+		j,
+		"encryption",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Stage) SetFileFormat(val *string) {
+	_jsii_.Set(
+		j,
+		"fileFormat",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Stage) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Stage) SetId(val *string) {
+	_jsii_.Set(
+		j,
+		"id",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Stage) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	_jsii_.Set(
+		j,
+		"lifecycle",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Stage) SetName(val *string) {
+	_jsii_.Set(
+		j,
+		"name",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Stage) SetProvider(val cdktf.TerraformProvider) {
+	_jsii_.Set(
+		j,
+		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Stage) SetProvisioners(val *[]interface{}) {
+	_jsii_.Set(
+		j,
+		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Stage) SetSchema(val *string) {
+	_jsii_.Set(
+		j,
+		"schema",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Stage) SetSnowflakeIamUser(val *string) {
+	_jsii_.Set(
+		j,
+		"snowflakeIamUser",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Stage) SetStorageIntegration(val *string) {
+	_jsii_.Set(
+		j,
+		"storageIntegration",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Stage) SetUrl(val *string) {
+	_jsii_.Set(
+		j,
+		"url",
+		val,
+	)
+}
+
+// Checks if `x` is a construct.
+//
+// Use this method instead of `instanceof` to properly detect `Construct`
+// instances, even when the construct library is symlinked.
+//
+// Explanation: in JavaScript, multiple copies of the `constructs` library on
+// disk are seen as independent, completely different libraries. As a
+// consequence, the class `Construct` in each copy of the `constructs` library
+// is seen as a different class, and an instance of one class will not test as
+// `instanceof` the other class. `npm install` will not create installations
+// like this, but users may manually symlink construct libraries together or
+// use a monorepo tool: in those cases, multiple copies of the `constructs`
+// library can be accidentally installed, and `instanceof` will behave
+// unpredictably. It is safest to avoid using `instanceof`, and using
+// this type-testing method instead.
+//
+// Returns: true if `x` is an object created from a class which extends `Construct`.
+func Stage_IsConstruct(x interface{}) *bool {
+	_init_.Initialize()
+
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.Stage",
+		"isConstruct",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+func Stage_TfResourceType() *string {
+	_init_.Initialize()
+	var returns *string
+	_jsii_.StaticGet(
+		"@cdktf/provider-snowflake.Stage",
+		"tfResourceType",
+		&returns,
+	)
+	return returns
+}
+
+func (s *jsiiProxy_Stage) AddOverride(path *string, value interface{}) {
+	_jsii_.InvokeVoid(
+		s,
+		"addOverride",
+		[]interface{}{path, value},
+	)
+}
+
+func (s *jsiiProxy_Stage) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		s,
+		"getAnyMapAttribute",
+		[]interface{}{terraformAttribute},
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_Stage) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	var returns cdktf.IResolvable
+
+	_jsii_.Invoke(
+		s,
+		"getBooleanAttribute",
+		[]interface{}{terraformAttribute},
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_Stage) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	var returns *map[string]*bool
+
+	_jsii_.Invoke(
+		s,
+		"getBooleanMapAttribute",
+		[]interface{}{terraformAttribute},
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_Stage) GetListAttribute(terraformAttribute *string) *[]*string {
+	var returns *[]*string
+
+	_jsii_.Invoke(
+		s,
+		"getListAttribute",
+		[]interface{}{terraformAttribute},
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_Stage) GetNumberAttribute(terraformAttribute *string) *float64 {
+	var returns *float64
+
+	_jsii_.Invoke(
+		s,
+		"getNumberAttribute",
+		[]interface{}{terraformAttribute},
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_Stage) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	var returns *[]*float64
+
+	_jsii_.Invoke(
+		s,
+		"getNumberListAttribute",
+		[]interface{}{terraformAttribute},
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_Stage) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	var returns *map[string]*float64
+
+	_jsii_.Invoke(
+		s,
+		"getNumberMapAttribute",
+		[]interface{}{terraformAttribute},
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_Stage) GetStringAttribute(terraformAttribute *string) *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		s,
+		"getStringAttribute",
+		[]interface{}{terraformAttribute},
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_Stage) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	var returns *map[string]*string
+
+	_jsii_.Invoke(
+		s,
+		"getStringMapAttribute",
+		[]interface{}{terraformAttribute},
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_Stage) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	var returns cdktf.IResolvable
+
+	_jsii_.Invoke(
+		s,
+		"interpolationForAttribute",
+		[]interface{}{terraformAttribute},
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_Stage) OverrideLogicalId(newLogicalId *string) {
+	_jsii_.InvokeVoid(
+		s,
+		"overrideLogicalId",
+		[]interface{}{newLogicalId},
+	)
+}
+
+func (s *jsiiProxy_Stage) PutTag(value interface{}) {
+	_jsii_.InvokeVoid(
+		s,
+		"putTag",
+		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_Stage) ResetAwsExternalId() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetAwsExternalId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Stage) ResetComment() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetComment",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Stage) ResetCopyOptions() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetCopyOptions",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Stage) ResetCredentials() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetCredentials",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Stage) ResetDirectory() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDirectory",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Stage) ResetEncryption() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetEncryption",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Stage) ResetFileFormat() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetFileFormat",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Stage) ResetId() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Stage) ResetOverrideLogicalId() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Stage) ResetSnowflakeIamUser() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetSnowflakeIamUser",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Stage) ResetStorageIntegration() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetStorageIntegration",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Stage) ResetTag() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTag",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Stage) ResetUrl() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetUrl",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Stage) SynthesizeAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		s,
+		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_Stage) ToMetadata() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"toMetadata",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_Stage) ToString() *string {
+	var returns *string
+
+	_jsii_.Invoke(
+		s,
+		"toString",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (s *jsiiProxy_Stage) ToTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"toTerraform",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
