@@ -167,9 +167,5 @@ type FileFormatConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/file_format#trim_space FileFormat#trim_space}
 	TrimSpace interface{} `field:"optional" json:"trimSpace" yaml:"trimSpace"`
-	// Boolean that specifies whether to validate UTF-8 character encoding in string column data.
-	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/file_format#validate_utf8 FileFormat#validate_utf8}
-	ValidateUtf8 interface{} `field:"optional" json:"validateUtf8" yaml:"validateUtf8"`
 }
 

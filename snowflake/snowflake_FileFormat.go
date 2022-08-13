@@ -167,9 +167,6 @@ type FileFormat interface {
 	TrimSpace() interface{}
 	SetTrimSpace(val interface{})
 	TrimSpaceInput() interface{}
-	ValidateUtf8() interface{}
-	SetValidateUtf8(val interface{})
-	ValidateUtf8Input() interface{}
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -230,7 +227,6 @@ type FileFormat interface {
 	ResetTimeFormat()
 	ResetTimestampFormat()
 	ResetTrimSpace()
-	ResetValidateUtf8()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
 	ToMetadata() interface{}
@@ -1126,26 +1122,6 @@ func (j *jsiiProxy_FileFormat) TrimSpaceInput() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_FileFormat) ValidateUtf8() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"validateUtf8",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_FileFormat) ValidateUtf8Input() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"validateUtf8Input",
-		&returns,
-	)
-	return returns
-}
-
 
 // Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/file_format snowflake_file_format} Resource.
 func NewFileFormat(scope constructs.Construct, id *string, config *FileFormatConfig) FileFormat {
@@ -1513,14 +1489,6 @@ func (j *jsiiProxy_FileFormat) SetTrimSpace(val interface{}) {
 	_jsii_.Set(
 		j,
 		"trimSpace",
-		val,
-	)
-}
-
-func (j *jsiiProxy_FileFormat) SetValidateUtf8(val interface{}) {
-	_jsii_.Set(
-		j,
-		"validateUtf8",
 		val,
 	)
 }
@@ -1974,14 +1942,6 @@ func (f *jsiiProxy_FileFormat) ResetTrimSpace() {
 	_jsii_.InvokeVoid(
 		f,
 		"resetTrimSpace",
-		nil, // no parameters
-	)
-}
-
-func (f *jsiiProxy_FileFormat) ResetValidateUtf8() {
-	_jsii_.InvokeVoid(
-		f,
-		"resetValidateUtf8",
 		nil, // no parameters
 	)
 }
