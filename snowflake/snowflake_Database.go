@@ -55,6 +55,9 @@ type Database interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	IsTransient() interface{}
+	SetIsTransient(val interface{})
+	IsTransientInput() interface{}
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -117,6 +120,7 @@ type Database interface {
 	ResetFromReplica()
 	ResetFromShare()
 	ResetId()
+	ResetIsTransient()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -332,6 +336,26 @@ func (j *jsiiProxy_Database) IdInput() *string {
 	_jsii_.Get(
 		j,
 		"idInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) IsTransient() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"isTransient",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) IsTransientInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"isTransientInput",
 		&returns,
 	)
 	return returns
@@ -580,6 +604,14 @@ func (j *jsiiProxy_Database) SetId(val *string) {
 	_jsii_.Set(
 		j,
 		"id",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Database) SetIsTransient(val interface{}) {
+	_jsii_.Set(
+		j,
+		"isTransient",
 		val,
 	)
 }
@@ -865,6 +897,14 @@ func (d *jsiiProxy_Database) ResetId() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_Database) ResetIsTransient() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetIsTransient",
 		nil, // no parameters
 	)
 }
