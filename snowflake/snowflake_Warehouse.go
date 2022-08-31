@@ -650,6 +650,9 @@ func (j *jsiiProxy_Warehouse) WarehouseSizeInput() *string {
 func NewWarehouse(scope constructs.Construct, id *string, config *WarehouseConfig) Warehouse {
 	_init_.Initialize()
 
+	if err := validateNewWarehouseParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_Warehouse{}
 
 	_jsii_.Create(
@@ -672,7 +675,10 @@ func NewWarehouse_Override(w Warehouse, scope constructs.Construct, id *string, 
 	)
 }
 
-func (j *jsiiProxy_Warehouse) SetAutoResume(val interface{}) {
+func (j *jsiiProxy_Warehouse)SetAutoResume(val interface{}) {
+	if err := j.validateSetAutoResumeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"autoResume",
@@ -680,7 +686,10 @@ func (j *jsiiProxy_Warehouse) SetAutoResume(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Warehouse) SetAutoSuspend(val *float64) {
+func (j *jsiiProxy_Warehouse)SetAutoSuspend(val *float64) {
+	if err := j.validateSetAutoSuspendParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"autoSuspend",
@@ -688,7 +697,10 @@ func (j *jsiiProxy_Warehouse) SetAutoSuspend(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_Warehouse) SetComment(val *string) {
+func (j *jsiiProxy_Warehouse)SetComment(val *string) {
+	if err := j.validateSetCommentParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"comment",
@@ -696,7 +708,10 @@ func (j *jsiiProxy_Warehouse) SetComment(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Warehouse) SetConnection(val interface{}) {
+func (j *jsiiProxy_Warehouse)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -704,7 +719,7 @@ func (j *jsiiProxy_Warehouse) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Warehouse) SetCount(val *float64) {
+func (j *jsiiProxy_Warehouse)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -712,7 +727,7 @@ func (j *jsiiProxy_Warehouse) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_Warehouse) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_Warehouse)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -720,7 +735,7 @@ func (j *jsiiProxy_Warehouse) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_Warehouse) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_Warehouse)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -728,7 +743,10 @@ func (j *jsiiProxy_Warehouse) SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_Warehouse) SetId(val *string) {
+func (j *jsiiProxy_Warehouse)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -736,7 +754,10 @@ func (j *jsiiProxy_Warehouse) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Warehouse) SetInitiallySuspended(val interface{}) {
+func (j *jsiiProxy_Warehouse)SetInitiallySuspended(val interface{}) {
+	if err := j.validateSetInitiallySuspendedParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"initiallySuspended",
@@ -744,7 +765,10 @@ func (j *jsiiProxy_Warehouse) SetInitiallySuspended(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Warehouse) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_Warehouse)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -752,7 +776,10 @@ func (j *jsiiProxy_Warehouse) SetLifecycle(val *cdktf.TerraformResourceLifecycle
 	)
 }
 
-func (j *jsiiProxy_Warehouse) SetMaxClusterCount(val *float64) {
+func (j *jsiiProxy_Warehouse)SetMaxClusterCount(val *float64) {
+	if err := j.validateSetMaxClusterCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maxClusterCount",
@@ -760,7 +787,10 @@ func (j *jsiiProxy_Warehouse) SetMaxClusterCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_Warehouse) SetMaxConcurrencyLevel(val *float64) {
+func (j *jsiiProxy_Warehouse)SetMaxConcurrencyLevel(val *float64) {
+	if err := j.validateSetMaxConcurrencyLevelParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maxConcurrencyLevel",
@@ -768,7 +798,10 @@ func (j *jsiiProxy_Warehouse) SetMaxConcurrencyLevel(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_Warehouse) SetMinClusterCount(val *float64) {
+func (j *jsiiProxy_Warehouse)SetMinClusterCount(val *float64) {
+	if err := j.validateSetMinClusterCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"minClusterCount",
@@ -776,7 +809,10 @@ func (j *jsiiProxy_Warehouse) SetMinClusterCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_Warehouse) SetName(val *string) {
+func (j *jsiiProxy_Warehouse)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"name",
@@ -784,7 +820,7 @@ func (j *jsiiProxy_Warehouse) SetName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Warehouse) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_Warehouse)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -792,7 +828,10 @@ func (j *jsiiProxy_Warehouse) SetProvider(val cdktf.TerraformProvider) {
 	)
 }
 
-func (j *jsiiProxy_Warehouse) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_Warehouse)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -800,7 +839,10 @@ func (j *jsiiProxy_Warehouse) SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Warehouse) SetResourceMonitor(val *string) {
+func (j *jsiiProxy_Warehouse)SetResourceMonitor(val *string) {
+	if err := j.validateSetResourceMonitorParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"resourceMonitor",
@@ -808,7 +850,10 @@ func (j *jsiiProxy_Warehouse) SetResourceMonitor(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Warehouse) SetScalingPolicy(val *string) {
+func (j *jsiiProxy_Warehouse)SetScalingPolicy(val *string) {
+	if err := j.validateSetScalingPolicyParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"scalingPolicy",
@@ -816,7 +861,10 @@ func (j *jsiiProxy_Warehouse) SetScalingPolicy(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Warehouse) SetStatementQueuedTimeoutInSeconds(val *float64) {
+func (j *jsiiProxy_Warehouse)SetStatementQueuedTimeoutInSeconds(val *float64) {
+	if err := j.validateSetStatementQueuedTimeoutInSecondsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"statementQueuedTimeoutInSeconds",
@@ -824,7 +872,10 @@ func (j *jsiiProxy_Warehouse) SetStatementQueuedTimeoutInSeconds(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_Warehouse) SetStatementTimeoutInSeconds(val *float64) {
+func (j *jsiiProxy_Warehouse)SetStatementTimeoutInSeconds(val *float64) {
+	if err := j.validateSetStatementTimeoutInSecondsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"statementTimeoutInSeconds",
@@ -832,7 +883,10 @@ func (j *jsiiProxy_Warehouse) SetStatementTimeoutInSeconds(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_Warehouse) SetWaitForProvisioning(val interface{}) {
+func (j *jsiiProxy_Warehouse)SetWaitForProvisioning(val interface{}) {
+	if err := j.validateSetWaitForProvisioningParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"waitForProvisioning",
@@ -840,7 +894,10 @@ func (j *jsiiProxy_Warehouse) SetWaitForProvisioning(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Warehouse) SetWarehouseSize(val *string) {
+func (j *jsiiProxy_Warehouse)SetWarehouseSize(val *string) {
+	if err := j.validateSetWarehouseSizeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"warehouseSize",
@@ -868,6 +925,9 @@ func (j *jsiiProxy_Warehouse) SetWarehouseSize(val *string) {
 func Warehouse_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateWarehouse_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -892,6 +952,9 @@ func Warehouse_TfResourceType() *string {
 }
 
 func (w *jsiiProxy_Warehouse) AddOverride(path *string, value interface{}) {
+	if err := w.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		w,
 		"addOverride",
@@ -900,6 +963,9 @@ func (w *jsiiProxy_Warehouse) AddOverride(path *string, value interface{}) {
 }
 
 func (w *jsiiProxy_Warehouse) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := w.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -913,6 +979,9 @@ func (w *jsiiProxy_Warehouse) GetAnyMapAttribute(terraformAttribute *string) *ma
 }
 
 func (w *jsiiProxy_Warehouse) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := w.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -926,6 +995,9 @@ func (w *jsiiProxy_Warehouse) GetBooleanAttribute(terraformAttribute *string) cd
 }
 
 func (w *jsiiProxy_Warehouse) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := w.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -939,6 +1011,9 @@ func (w *jsiiProxy_Warehouse) GetBooleanMapAttribute(terraformAttribute *string)
 }
 
 func (w *jsiiProxy_Warehouse) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := w.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -952,6 +1027,9 @@ func (w *jsiiProxy_Warehouse) GetListAttribute(terraformAttribute *string) *[]*s
 }
 
 func (w *jsiiProxy_Warehouse) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := w.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -965,6 +1043,9 @@ func (w *jsiiProxy_Warehouse) GetNumberAttribute(terraformAttribute *string) *fl
 }
 
 func (w *jsiiProxy_Warehouse) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := w.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -978,6 +1059,9 @@ func (w *jsiiProxy_Warehouse) GetNumberListAttribute(terraformAttribute *string)
 }
 
 func (w *jsiiProxy_Warehouse) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := w.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -991,6 +1075,9 @@ func (w *jsiiProxy_Warehouse) GetNumberMapAttribute(terraformAttribute *string) 
 }
 
 func (w *jsiiProxy_Warehouse) GetStringAttribute(terraformAttribute *string) *string {
+	if err := w.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -1004,6 +1091,9 @@ func (w *jsiiProxy_Warehouse) GetStringAttribute(terraformAttribute *string) *st
 }
 
 func (w *jsiiProxy_Warehouse) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := w.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -1017,6 +1107,9 @@ func (w *jsiiProxy_Warehouse) GetStringMapAttribute(terraformAttribute *string) 
 }
 
 func (w *jsiiProxy_Warehouse) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := w.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -1030,6 +1123,9 @@ func (w *jsiiProxy_Warehouse) InterpolationForAttribute(terraformAttribute *stri
 }
 
 func (w *jsiiProxy_Warehouse) OverrideLogicalId(newLogicalId *string) {
+	if err := w.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		w,
 		"overrideLogicalId",
@@ -1038,6 +1134,9 @@ func (w *jsiiProxy_Warehouse) OverrideLogicalId(newLogicalId *string) {
 }
 
 func (w *jsiiProxy_Warehouse) PutTag(value interface{}) {
+	if err := w.validatePutTagParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		w,
 		"putTag",

@@ -99,6 +99,9 @@ func (j *jsiiProxy_DataSnowflakeMaterializedViewsMaterializedViewsList) WrapsSet
 func NewDataSnowflakeMaterializedViewsMaterializedViewsList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataSnowflakeMaterializedViewsMaterializedViewsList {
 	_init_.Initialize()
 
+	if err := validateNewDataSnowflakeMaterializedViewsMaterializedViewsListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_DataSnowflakeMaterializedViewsMaterializedViewsList{}
 
 	_jsii_.Create(
@@ -120,7 +123,10 @@ func NewDataSnowflakeMaterializedViewsMaterializedViewsList_Override(d DataSnowf
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeMaterializedViewsMaterializedViewsList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_DataSnowflakeMaterializedViewsMaterializedViewsList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -128,7 +134,10 @@ func (j *jsiiProxy_DataSnowflakeMaterializedViewsMaterializedViewsList) SetTerra
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeMaterializedViewsMaterializedViewsList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_DataSnowflakeMaterializedViewsMaterializedViewsList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -136,7 +145,10 @@ func (j *jsiiProxy_DataSnowflakeMaterializedViewsMaterializedViewsList) SetTerra
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeMaterializedViewsMaterializedViewsList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_DataSnowflakeMaterializedViewsMaterializedViewsList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -158,6 +170,9 @@ func (d *jsiiProxy_DataSnowflakeMaterializedViewsMaterializedViewsList) ComputeF
 }
 
 func (d *jsiiProxy_DataSnowflakeMaterializedViewsMaterializedViewsList) Get(index *float64) DataSnowflakeMaterializedViewsMaterializedViewsOutputReference {
+	if err := d.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns DataSnowflakeMaterializedViewsMaterializedViewsOutputReference
 
 	_jsii_.Invoke(
@@ -171,6 +186,9 @@ func (d *jsiiProxy_DataSnowflakeMaterializedViewsMaterializedViewsList) Get(inde
 }
 
 func (d *jsiiProxy_DataSnowflakeMaterializedViewsMaterializedViewsList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := d.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

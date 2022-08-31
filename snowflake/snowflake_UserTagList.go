@@ -111,6 +111,9 @@ func (j *jsiiProxy_UserTagList) WrapsSet() *bool {
 func NewUserTagList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) UserTagList {
 	_init_.Initialize()
 
+	if err := validateNewUserTagListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_UserTagList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewUserTagList_Override(u UserTagList, terraformResource cdktf.IInterpolati
 	)
 }
 
-func (j *jsiiProxy_UserTagList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_UserTagList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_UserTagList) SetInternalValue(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_UserTagList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_UserTagList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_UserTagList) SetTerraformAttribute(val *string) {
 	)
 }
 
-func (j *jsiiProxy_UserTagList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_UserTagList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_UserTagList) SetTerraformResource(val cdktf.IInterpolatingPar
 	)
 }
 
-func (j *jsiiProxy_UserTagList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_UserTagList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (u *jsiiProxy_UserTagList) ComputeFqn() *string {
 }
 
 func (u *jsiiProxy_UserTagList) Get(index *float64) UserTagOutputReference {
+	if err := u.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns UserTagOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (u *jsiiProxy_UserTagList) Get(index *float64) UserTagOutputReference {
 }
 
 func (u *jsiiProxy_UserTagList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := u.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

@@ -453,6 +453,9 @@ func (j *jsiiProxy_MaskingPolicy) ValueDataTypeInput() *string {
 func NewMaskingPolicy(scope constructs.Construct, id *string, config *MaskingPolicyConfig) MaskingPolicy {
 	_init_.Initialize()
 
+	if err := validateNewMaskingPolicyParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_MaskingPolicy{}
 
 	_jsii_.Create(
@@ -475,7 +478,10 @@ func NewMaskingPolicy_Override(m MaskingPolicy, scope constructs.Construct, id *
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicy) SetComment(val *string) {
+func (j *jsiiProxy_MaskingPolicy)SetComment(val *string) {
+	if err := j.validateSetCommentParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"comment",
@@ -483,7 +489,10 @@ func (j *jsiiProxy_MaskingPolicy) SetComment(val *string) {
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicy) SetConnection(val interface{}) {
+func (j *jsiiProxy_MaskingPolicy)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -491,7 +500,7 @@ func (j *jsiiProxy_MaskingPolicy) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicy) SetCount(val *float64) {
+func (j *jsiiProxy_MaskingPolicy)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -499,7 +508,10 @@ func (j *jsiiProxy_MaskingPolicy) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicy) SetDatabase(val *string) {
+func (j *jsiiProxy_MaskingPolicy)SetDatabase(val *string) {
+	if err := j.validateSetDatabaseParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"database",
@@ -507,7 +519,7 @@ func (j *jsiiProxy_MaskingPolicy) SetDatabase(val *string) {
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicy) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_MaskingPolicy)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -515,7 +527,7 @@ func (j *jsiiProxy_MaskingPolicy) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicy) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_MaskingPolicy)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -523,7 +535,10 @@ func (j *jsiiProxy_MaskingPolicy) SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicy) SetId(val *string) {
+func (j *jsiiProxy_MaskingPolicy)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -531,7 +546,10 @@ func (j *jsiiProxy_MaskingPolicy) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicy) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_MaskingPolicy)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -539,7 +557,10 @@ func (j *jsiiProxy_MaskingPolicy) SetLifecycle(val *cdktf.TerraformResourceLifec
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicy) SetMaskingExpression(val *string) {
+func (j *jsiiProxy_MaskingPolicy)SetMaskingExpression(val *string) {
+	if err := j.validateSetMaskingExpressionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maskingExpression",
@@ -547,7 +568,10 @@ func (j *jsiiProxy_MaskingPolicy) SetMaskingExpression(val *string) {
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicy) SetName(val *string) {
+func (j *jsiiProxy_MaskingPolicy)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"name",
@@ -555,7 +579,7 @@ func (j *jsiiProxy_MaskingPolicy) SetName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicy) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_MaskingPolicy)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -563,7 +587,10 @@ func (j *jsiiProxy_MaskingPolicy) SetProvider(val cdktf.TerraformProvider) {
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicy) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_MaskingPolicy)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -571,7 +598,10 @@ func (j *jsiiProxy_MaskingPolicy) SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicy) SetReturnDataType(val *string) {
+func (j *jsiiProxy_MaskingPolicy)SetReturnDataType(val *string) {
+	if err := j.validateSetReturnDataTypeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"returnDataType",
@@ -579,7 +609,10 @@ func (j *jsiiProxy_MaskingPolicy) SetReturnDataType(val *string) {
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicy) SetSchema(val *string) {
+func (j *jsiiProxy_MaskingPolicy)SetSchema(val *string) {
+	if err := j.validateSetSchemaParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"schema",
@@ -587,7 +620,10 @@ func (j *jsiiProxy_MaskingPolicy) SetSchema(val *string) {
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicy) SetValueDataType(val *string) {
+func (j *jsiiProxy_MaskingPolicy)SetValueDataType(val *string) {
+	if err := j.validateSetValueDataTypeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"valueDataType",
@@ -615,6 +651,9 @@ func (j *jsiiProxy_MaskingPolicy) SetValueDataType(val *string) {
 func MaskingPolicy_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateMaskingPolicy_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -639,6 +678,9 @@ func MaskingPolicy_TfResourceType() *string {
 }
 
 func (m *jsiiProxy_MaskingPolicy) AddOverride(path *string, value interface{}) {
+	if err := m.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		m,
 		"addOverride",
@@ -647,6 +689,9 @@ func (m *jsiiProxy_MaskingPolicy) AddOverride(path *string, value interface{}) {
 }
 
 func (m *jsiiProxy_MaskingPolicy) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := m.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -660,6 +705,9 @@ func (m *jsiiProxy_MaskingPolicy) GetAnyMapAttribute(terraformAttribute *string)
 }
 
 func (m *jsiiProxy_MaskingPolicy) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := m.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -673,6 +721,9 @@ func (m *jsiiProxy_MaskingPolicy) GetBooleanAttribute(terraformAttribute *string
 }
 
 func (m *jsiiProxy_MaskingPolicy) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := m.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -686,6 +737,9 @@ func (m *jsiiProxy_MaskingPolicy) GetBooleanMapAttribute(terraformAttribute *str
 }
 
 func (m *jsiiProxy_MaskingPolicy) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := m.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -699,6 +753,9 @@ func (m *jsiiProxy_MaskingPolicy) GetListAttribute(terraformAttribute *string) *
 }
 
 func (m *jsiiProxy_MaskingPolicy) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := m.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -712,6 +769,9 @@ func (m *jsiiProxy_MaskingPolicy) GetNumberAttribute(terraformAttribute *string)
 }
 
 func (m *jsiiProxy_MaskingPolicy) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := m.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -725,6 +785,9 @@ func (m *jsiiProxy_MaskingPolicy) GetNumberListAttribute(terraformAttribute *str
 }
 
 func (m *jsiiProxy_MaskingPolicy) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := m.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -738,6 +801,9 @@ func (m *jsiiProxy_MaskingPolicy) GetNumberMapAttribute(terraformAttribute *stri
 }
 
 func (m *jsiiProxy_MaskingPolicy) GetStringAttribute(terraformAttribute *string) *string {
+	if err := m.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -751,6 +817,9 @@ func (m *jsiiProxy_MaskingPolicy) GetStringAttribute(terraformAttribute *string)
 }
 
 func (m *jsiiProxy_MaskingPolicy) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := m.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -764,6 +833,9 @@ func (m *jsiiProxy_MaskingPolicy) GetStringMapAttribute(terraformAttribute *stri
 }
 
 func (m *jsiiProxy_MaskingPolicy) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := m.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -777,6 +849,9 @@ func (m *jsiiProxy_MaskingPolicy) InterpolationForAttribute(terraformAttribute *
 }
 
 func (m *jsiiProxy_MaskingPolicy) OverrideLogicalId(newLogicalId *string) {
+	if err := m.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		m,
 		"overrideLogicalId",

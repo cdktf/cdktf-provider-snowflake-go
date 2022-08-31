@@ -456,6 +456,9 @@ func (j *jsiiProxy_MaskingPolicyGrant) WithGrantOptionInput() interface{} {
 func NewMaskingPolicyGrant(scope constructs.Construct, id *string, config *MaskingPolicyGrantConfig) MaskingPolicyGrant {
 	_init_.Initialize()
 
+	if err := validateNewMaskingPolicyGrantParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_MaskingPolicyGrant{}
 
 	_jsii_.Create(
@@ -478,7 +481,10 @@ func NewMaskingPolicyGrant_Override(m MaskingPolicyGrant, scope constructs.Const
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicyGrant) SetConnection(val interface{}) {
+func (j *jsiiProxy_MaskingPolicyGrant)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -486,7 +492,7 @@ func (j *jsiiProxy_MaskingPolicyGrant) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicyGrant) SetCount(val *float64) {
+func (j *jsiiProxy_MaskingPolicyGrant)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -494,7 +500,10 @@ func (j *jsiiProxy_MaskingPolicyGrant) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicyGrant) SetDatabaseName(val *string) {
+func (j *jsiiProxy_MaskingPolicyGrant)SetDatabaseName(val *string) {
+	if err := j.validateSetDatabaseNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"databaseName",
@@ -502,7 +511,7 @@ func (j *jsiiProxy_MaskingPolicyGrant) SetDatabaseName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicyGrant) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_MaskingPolicyGrant)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -510,7 +519,10 @@ func (j *jsiiProxy_MaskingPolicyGrant) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicyGrant) SetEnableMultipleGrants(val interface{}) {
+func (j *jsiiProxy_MaskingPolicyGrant)SetEnableMultipleGrants(val interface{}) {
+	if err := j.validateSetEnableMultipleGrantsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"enableMultipleGrants",
@@ -518,7 +530,7 @@ func (j *jsiiProxy_MaskingPolicyGrant) SetEnableMultipleGrants(val interface{}) 
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicyGrant) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_MaskingPolicyGrant)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -526,7 +538,10 @@ func (j *jsiiProxy_MaskingPolicyGrant) SetForEach(val cdktf.ITerraformIterator) 
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicyGrant) SetId(val *string) {
+func (j *jsiiProxy_MaskingPolicyGrant)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -534,7 +549,10 @@ func (j *jsiiProxy_MaskingPolicyGrant) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicyGrant) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_MaskingPolicyGrant)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -542,7 +560,10 @@ func (j *jsiiProxy_MaskingPolicyGrant) SetLifecycle(val *cdktf.TerraformResource
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicyGrant) SetMaskingPolicyName(val *string) {
+func (j *jsiiProxy_MaskingPolicyGrant)SetMaskingPolicyName(val *string) {
+	if err := j.validateSetMaskingPolicyNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maskingPolicyName",
@@ -550,7 +571,10 @@ func (j *jsiiProxy_MaskingPolicyGrant) SetMaskingPolicyName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicyGrant) SetPrivilege(val *string) {
+func (j *jsiiProxy_MaskingPolicyGrant)SetPrivilege(val *string) {
+	if err := j.validateSetPrivilegeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"privilege",
@@ -558,7 +582,7 @@ func (j *jsiiProxy_MaskingPolicyGrant) SetPrivilege(val *string) {
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicyGrant) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_MaskingPolicyGrant)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -566,7 +590,10 @@ func (j *jsiiProxy_MaskingPolicyGrant) SetProvider(val cdktf.TerraformProvider) 
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicyGrant) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_MaskingPolicyGrant)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -574,7 +601,10 @@ func (j *jsiiProxy_MaskingPolicyGrant) SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicyGrant) SetRoles(val *[]*string) {
+func (j *jsiiProxy_MaskingPolicyGrant)SetRoles(val *[]*string) {
+	if err := j.validateSetRolesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"roles",
@@ -582,7 +612,10 @@ func (j *jsiiProxy_MaskingPolicyGrant) SetRoles(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicyGrant) SetSchemaName(val *string) {
+func (j *jsiiProxy_MaskingPolicyGrant)SetSchemaName(val *string) {
+	if err := j.validateSetSchemaNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"schemaName",
@@ -590,7 +623,10 @@ func (j *jsiiProxy_MaskingPolicyGrant) SetSchemaName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_MaskingPolicyGrant) SetWithGrantOption(val interface{}) {
+func (j *jsiiProxy_MaskingPolicyGrant)SetWithGrantOption(val interface{}) {
+	if err := j.validateSetWithGrantOptionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"withGrantOption",
@@ -618,6 +654,9 @@ func (j *jsiiProxy_MaskingPolicyGrant) SetWithGrantOption(val interface{}) {
 func MaskingPolicyGrant_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateMaskingPolicyGrant_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -642,6 +681,9 @@ func MaskingPolicyGrant_TfResourceType() *string {
 }
 
 func (m *jsiiProxy_MaskingPolicyGrant) AddOverride(path *string, value interface{}) {
+	if err := m.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		m,
 		"addOverride",
@@ -650,6 +692,9 @@ func (m *jsiiProxy_MaskingPolicyGrant) AddOverride(path *string, value interface
 }
 
 func (m *jsiiProxy_MaskingPolicyGrant) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := m.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -663,6 +708,9 @@ func (m *jsiiProxy_MaskingPolicyGrant) GetAnyMapAttribute(terraformAttribute *st
 }
 
 func (m *jsiiProxy_MaskingPolicyGrant) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := m.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -676,6 +724,9 @@ func (m *jsiiProxy_MaskingPolicyGrant) GetBooleanAttribute(terraformAttribute *s
 }
 
 func (m *jsiiProxy_MaskingPolicyGrant) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := m.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -689,6 +740,9 @@ func (m *jsiiProxy_MaskingPolicyGrant) GetBooleanMapAttribute(terraformAttribute
 }
 
 func (m *jsiiProxy_MaskingPolicyGrant) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := m.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -702,6 +756,9 @@ func (m *jsiiProxy_MaskingPolicyGrant) GetListAttribute(terraformAttribute *stri
 }
 
 func (m *jsiiProxy_MaskingPolicyGrant) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := m.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -715,6 +772,9 @@ func (m *jsiiProxy_MaskingPolicyGrant) GetNumberAttribute(terraformAttribute *st
 }
 
 func (m *jsiiProxy_MaskingPolicyGrant) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := m.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -728,6 +788,9 @@ func (m *jsiiProxy_MaskingPolicyGrant) GetNumberListAttribute(terraformAttribute
 }
 
 func (m *jsiiProxy_MaskingPolicyGrant) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := m.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -741,6 +804,9 @@ func (m *jsiiProxy_MaskingPolicyGrant) GetNumberMapAttribute(terraformAttribute 
 }
 
 func (m *jsiiProxy_MaskingPolicyGrant) GetStringAttribute(terraformAttribute *string) *string {
+	if err := m.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -754,6 +820,9 @@ func (m *jsiiProxy_MaskingPolicyGrant) GetStringAttribute(terraformAttribute *st
 }
 
 func (m *jsiiProxy_MaskingPolicyGrant) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := m.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -767,6 +836,9 @@ func (m *jsiiProxy_MaskingPolicyGrant) GetStringMapAttribute(terraformAttribute 
 }
 
 func (m *jsiiProxy_MaskingPolicyGrant) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := m.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -780,6 +852,9 @@ func (m *jsiiProxy_MaskingPolicyGrant) InterpolationForAttribute(terraformAttrib
 }
 
 func (m *jsiiProxy_MaskingPolicyGrant) OverrideLogicalId(newLogicalId *string) {
+	if err := m.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		m,
 		"overrideLogicalId",

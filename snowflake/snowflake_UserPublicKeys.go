@@ -362,6 +362,9 @@ func (j *jsiiProxy_UserPublicKeys) TerraformResourceType() *string {
 func NewUserPublicKeys(scope constructs.Construct, id *string, config *UserPublicKeysConfig) UserPublicKeys {
 	_init_.Initialize()
 
+	if err := validateNewUserPublicKeysParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_UserPublicKeys{}
 
 	_jsii_.Create(
@@ -384,7 +387,10 @@ func NewUserPublicKeys_Override(u UserPublicKeys, scope constructs.Construct, id
 	)
 }
 
-func (j *jsiiProxy_UserPublicKeys) SetConnection(val interface{}) {
+func (j *jsiiProxy_UserPublicKeys)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -392,7 +398,7 @@ func (j *jsiiProxy_UserPublicKeys) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_UserPublicKeys) SetCount(val *float64) {
+func (j *jsiiProxy_UserPublicKeys)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -400,7 +406,7 @@ func (j *jsiiProxy_UserPublicKeys) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_UserPublicKeys) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_UserPublicKeys)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -408,7 +414,7 @@ func (j *jsiiProxy_UserPublicKeys) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_UserPublicKeys) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_UserPublicKeys)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -416,7 +422,10 @@ func (j *jsiiProxy_UserPublicKeys) SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_UserPublicKeys) SetId(val *string) {
+func (j *jsiiProxy_UserPublicKeys)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -424,7 +433,10 @@ func (j *jsiiProxy_UserPublicKeys) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_UserPublicKeys) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_UserPublicKeys)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -432,7 +444,10 @@ func (j *jsiiProxy_UserPublicKeys) SetLifecycle(val *cdktf.TerraformResourceLife
 	)
 }
 
-func (j *jsiiProxy_UserPublicKeys) SetName(val *string) {
+func (j *jsiiProxy_UserPublicKeys)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"name",
@@ -440,7 +455,7 @@ func (j *jsiiProxy_UserPublicKeys) SetName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_UserPublicKeys) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_UserPublicKeys)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -448,7 +463,10 @@ func (j *jsiiProxy_UserPublicKeys) SetProvider(val cdktf.TerraformProvider) {
 	)
 }
 
-func (j *jsiiProxy_UserPublicKeys) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_UserPublicKeys)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -456,7 +474,10 @@ func (j *jsiiProxy_UserPublicKeys) SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_UserPublicKeys) SetRsaPublicKey(val *string) {
+func (j *jsiiProxy_UserPublicKeys)SetRsaPublicKey(val *string) {
+	if err := j.validateSetRsaPublicKeyParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"rsaPublicKey",
@@ -464,7 +485,10 @@ func (j *jsiiProxy_UserPublicKeys) SetRsaPublicKey(val *string) {
 	)
 }
 
-func (j *jsiiProxy_UserPublicKeys) SetRsaPublicKey2(val *string) {
+func (j *jsiiProxy_UserPublicKeys)SetRsaPublicKey2(val *string) {
+	if err := j.validateSetRsaPublicKey2Parameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"rsaPublicKey2",
@@ -492,6 +516,9 @@ func (j *jsiiProxy_UserPublicKeys) SetRsaPublicKey2(val *string) {
 func UserPublicKeys_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateUserPublicKeys_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -516,6 +543,9 @@ func UserPublicKeys_TfResourceType() *string {
 }
 
 func (u *jsiiProxy_UserPublicKeys) AddOverride(path *string, value interface{}) {
+	if err := u.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		u,
 		"addOverride",
@@ -524,6 +554,9 @@ func (u *jsiiProxy_UserPublicKeys) AddOverride(path *string, value interface{}) 
 }
 
 func (u *jsiiProxy_UserPublicKeys) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := u.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -537,6 +570,9 @@ func (u *jsiiProxy_UserPublicKeys) GetAnyMapAttribute(terraformAttribute *string
 }
 
 func (u *jsiiProxy_UserPublicKeys) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := u.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -550,6 +586,9 @@ func (u *jsiiProxy_UserPublicKeys) GetBooleanAttribute(terraformAttribute *strin
 }
 
 func (u *jsiiProxy_UserPublicKeys) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := u.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -563,6 +602,9 @@ func (u *jsiiProxy_UserPublicKeys) GetBooleanMapAttribute(terraformAttribute *st
 }
 
 func (u *jsiiProxy_UserPublicKeys) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := u.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -576,6 +618,9 @@ func (u *jsiiProxy_UserPublicKeys) GetListAttribute(terraformAttribute *string) 
 }
 
 func (u *jsiiProxy_UserPublicKeys) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := u.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -589,6 +634,9 @@ func (u *jsiiProxy_UserPublicKeys) GetNumberAttribute(terraformAttribute *string
 }
 
 func (u *jsiiProxy_UserPublicKeys) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := u.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -602,6 +650,9 @@ func (u *jsiiProxy_UserPublicKeys) GetNumberListAttribute(terraformAttribute *st
 }
 
 func (u *jsiiProxy_UserPublicKeys) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := u.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -615,6 +666,9 @@ func (u *jsiiProxy_UserPublicKeys) GetNumberMapAttribute(terraformAttribute *str
 }
 
 func (u *jsiiProxy_UserPublicKeys) GetStringAttribute(terraformAttribute *string) *string {
+	if err := u.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -628,6 +682,9 @@ func (u *jsiiProxy_UserPublicKeys) GetStringAttribute(terraformAttribute *string
 }
 
 func (u *jsiiProxy_UserPublicKeys) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := u.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -641,6 +698,9 @@ func (u *jsiiProxy_UserPublicKeys) GetStringMapAttribute(terraformAttribute *str
 }
 
 func (u *jsiiProxy_UserPublicKeys) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := u.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -654,6 +714,9 @@ func (u *jsiiProxy_UserPublicKeys) InterpolationForAttribute(terraformAttribute 
 }
 
 func (u *jsiiProxy_UserPublicKeys) OverrideLogicalId(newLogicalId *string) {
+	if err := u.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		u,
 		"overrideLogicalId",

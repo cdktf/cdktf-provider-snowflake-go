@@ -525,6 +525,9 @@ func (j *jsiiProxy_Pipe) TerraformResourceType() *string {
 func NewPipe(scope constructs.Construct, id *string, config *PipeConfig) Pipe {
 	_init_.Initialize()
 
+	if err := validateNewPipeParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_Pipe{}
 
 	_jsii_.Create(
@@ -547,7 +550,10 @@ func NewPipe_Override(p Pipe, scope constructs.Construct, id *string, config *Pi
 	)
 }
 
-func (j *jsiiProxy_Pipe) SetAutoIngest(val interface{}) {
+func (j *jsiiProxy_Pipe)SetAutoIngest(val interface{}) {
+	if err := j.validateSetAutoIngestParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"autoIngest",
@@ -555,7 +561,10 @@ func (j *jsiiProxy_Pipe) SetAutoIngest(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Pipe) SetAwsSnsTopicArn(val *string) {
+func (j *jsiiProxy_Pipe)SetAwsSnsTopicArn(val *string) {
+	if err := j.validateSetAwsSnsTopicArnParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"awsSnsTopicArn",
@@ -563,7 +572,10 @@ func (j *jsiiProxy_Pipe) SetAwsSnsTopicArn(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Pipe) SetComment(val *string) {
+func (j *jsiiProxy_Pipe)SetComment(val *string) {
+	if err := j.validateSetCommentParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"comment",
@@ -571,7 +583,10 @@ func (j *jsiiProxy_Pipe) SetComment(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Pipe) SetConnection(val interface{}) {
+func (j *jsiiProxy_Pipe)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -579,7 +594,10 @@ func (j *jsiiProxy_Pipe) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Pipe) SetCopyStatement(val *string) {
+func (j *jsiiProxy_Pipe)SetCopyStatement(val *string) {
+	if err := j.validateSetCopyStatementParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"copyStatement",
@@ -587,7 +605,7 @@ func (j *jsiiProxy_Pipe) SetCopyStatement(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Pipe) SetCount(val *float64) {
+func (j *jsiiProxy_Pipe)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -595,7 +613,10 @@ func (j *jsiiProxy_Pipe) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_Pipe) SetDatabase(val *string) {
+func (j *jsiiProxy_Pipe)SetDatabase(val *string) {
+	if err := j.validateSetDatabaseParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"database",
@@ -603,7 +624,7 @@ func (j *jsiiProxy_Pipe) SetDatabase(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Pipe) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_Pipe)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -611,7 +632,10 @@ func (j *jsiiProxy_Pipe) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_Pipe) SetErrorIntegration(val *string) {
+func (j *jsiiProxy_Pipe)SetErrorIntegration(val *string) {
+	if err := j.validateSetErrorIntegrationParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"errorIntegration",
@@ -619,7 +643,7 @@ func (j *jsiiProxy_Pipe) SetErrorIntegration(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Pipe) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_Pipe)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -627,7 +651,10 @@ func (j *jsiiProxy_Pipe) SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_Pipe) SetId(val *string) {
+func (j *jsiiProxy_Pipe)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -635,7 +662,10 @@ func (j *jsiiProxy_Pipe) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Pipe) SetIntegration(val *string) {
+func (j *jsiiProxy_Pipe)SetIntegration(val *string) {
+	if err := j.validateSetIntegrationParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"integration",
@@ -643,7 +673,10 @@ func (j *jsiiProxy_Pipe) SetIntegration(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Pipe) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_Pipe)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -651,7 +684,10 @@ func (j *jsiiProxy_Pipe) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
 	)
 }
 
-func (j *jsiiProxy_Pipe) SetName(val *string) {
+func (j *jsiiProxy_Pipe)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"name",
@@ -659,7 +695,7 @@ func (j *jsiiProxy_Pipe) SetName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Pipe) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_Pipe)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -667,7 +703,10 @@ func (j *jsiiProxy_Pipe) SetProvider(val cdktf.TerraformProvider) {
 	)
 }
 
-func (j *jsiiProxy_Pipe) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_Pipe)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -675,7 +714,10 @@ func (j *jsiiProxy_Pipe) SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Pipe) SetSchema(val *string) {
+func (j *jsiiProxy_Pipe)SetSchema(val *string) {
+	if err := j.validateSetSchemaParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"schema",
@@ -703,6 +745,9 @@ func (j *jsiiProxy_Pipe) SetSchema(val *string) {
 func Pipe_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validatePipe_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -727,6 +772,9 @@ func Pipe_TfResourceType() *string {
 }
 
 func (p *jsiiProxy_Pipe) AddOverride(path *string, value interface{}) {
+	if err := p.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		p,
 		"addOverride",
@@ -735,6 +783,9 @@ func (p *jsiiProxy_Pipe) AddOverride(path *string, value interface{}) {
 }
 
 func (p *jsiiProxy_Pipe) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := p.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -748,6 +799,9 @@ func (p *jsiiProxy_Pipe) GetAnyMapAttribute(terraformAttribute *string) *map[str
 }
 
 func (p *jsiiProxy_Pipe) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := p.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -761,6 +815,9 @@ func (p *jsiiProxy_Pipe) GetBooleanAttribute(terraformAttribute *string) cdktf.I
 }
 
 func (p *jsiiProxy_Pipe) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := p.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -774,6 +831,9 @@ func (p *jsiiProxy_Pipe) GetBooleanMapAttribute(terraformAttribute *string) *map
 }
 
 func (p *jsiiProxy_Pipe) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := p.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -787,6 +847,9 @@ func (p *jsiiProxy_Pipe) GetListAttribute(terraformAttribute *string) *[]*string
 }
 
 func (p *jsiiProxy_Pipe) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := p.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -800,6 +863,9 @@ func (p *jsiiProxy_Pipe) GetNumberAttribute(terraformAttribute *string) *float64
 }
 
 func (p *jsiiProxy_Pipe) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := p.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -813,6 +879,9 @@ func (p *jsiiProxy_Pipe) GetNumberListAttribute(terraformAttribute *string) *[]*
 }
 
 func (p *jsiiProxy_Pipe) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := p.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -826,6 +895,9 @@ func (p *jsiiProxy_Pipe) GetNumberMapAttribute(terraformAttribute *string) *map[
 }
 
 func (p *jsiiProxy_Pipe) GetStringAttribute(terraformAttribute *string) *string {
+	if err := p.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -839,6 +911,9 @@ func (p *jsiiProxy_Pipe) GetStringAttribute(terraformAttribute *string) *string 
 }
 
 func (p *jsiiProxy_Pipe) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := p.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -852,6 +927,9 @@ func (p *jsiiProxy_Pipe) GetStringMapAttribute(terraformAttribute *string) *map[
 }
 
 func (p *jsiiProxy_Pipe) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := p.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -865,6 +943,9 @@ func (p *jsiiProxy_Pipe) InterpolationForAttribute(terraformAttribute *string) c
 }
 
 func (p *jsiiProxy_Pipe) OverrideLogicalId(newLogicalId *string) {
+	if err := p.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		p,
 		"overrideLogicalId",

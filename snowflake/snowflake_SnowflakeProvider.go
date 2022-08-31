@@ -591,6 +591,9 @@ func (j *jsiiProxy_SnowflakeProvider) WarehouseInput() *string {
 func NewSnowflakeProvider(scope constructs.Construct, id *string, config *SnowflakeProviderConfig) SnowflakeProvider {
 	_init_.Initialize()
 
+	if err := validateNewSnowflakeProviderParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_SnowflakeProvider{}
 
 	_jsii_.Create(
@@ -613,7 +616,7 @@ func NewSnowflakeProvider_Override(s SnowflakeProvider, scope constructs.Constru
 	)
 }
 
-func (j *jsiiProxy_SnowflakeProvider) SetAccount(val *string) {
+func (j *jsiiProxy_SnowflakeProvider)SetAccount(val *string) {
 	_jsii_.Set(
 		j,
 		"account",
@@ -621,7 +624,7 @@ func (j *jsiiProxy_SnowflakeProvider) SetAccount(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SnowflakeProvider) SetAlias(val *string) {
+func (j *jsiiProxy_SnowflakeProvider)SetAlias(val *string) {
 	_jsii_.Set(
 		j,
 		"alias",
@@ -629,7 +632,10 @@ func (j *jsiiProxy_SnowflakeProvider) SetAlias(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SnowflakeProvider) SetBrowserAuth(val interface{}) {
+func (j *jsiiProxy_SnowflakeProvider)SetBrowserAuth(val interface{}) {
+	if err := j.validateSetBrowserAuthParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"browserAuth",
@@ -637,7 +643,7 @@ func (j *jsiiProxy_SnowflakeProvider) SetBrowserAuth(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_SnowflakeProvider) SetHost(val *string) {
+func (j *jsiiProxy_SnowflakeProvider)SetHost(val *string) {
 	_jsii_.Set(
 		j,
 		"host",
@@ -645,7 +651,7 @@ func (j *jsiiProxy_SnowflakeProvider) SetHost(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SnowflakeProvider) SetOauthAccessToken(val *string) {
+func (j *jsiiProxy_SnowflakeProvider)SetOauthAccessToken(val *string) {
 	_jsii_.Set(
 		j,
 		"oauthAccessToken",
@@ -653,7 +659,7 @@ func (j *jsiiProxy_SnowflakeProvider) SetOauthAccessToken(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SnowflakeProvider) SetOauthClientId(val *string) {
+func (j *jsiiProxy_SnowflakeProvider)SetOauthClientId(val *string) {
 	_jsii_.Set(
 		j,
 		"oauthClientId",
@@ -661,7 +667,7 @@ func (j *jsiiProxy_SnowflakeProvider) SetOauthClientId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SnowflakeProvider) SetOauthClientSecret(val *string) {
+func (j *jsiiProxy_SnowflakeProvider)SetOauthClientSecret(val *string) {
 	_jsii_.Set(
 		j,
 		"oauthClientSecret",
@@ -669,7 +675,7 @@ func (j *jsiiProxy_SnowflakeProvider) SetOauthClientSecret(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SnowflakeProvider) SetOauthEndpoint(val *string) {
+func (j *jsiiProxy_SnowflakeProvider)SetOauthEndpoint(val *string) {
 	_jsii_.Set(
 		j,
 		"oauthEndpoint",
@@ -677,7 +683,7 @@ func (j *jsiiProxy_SnowflakeProvider) SetOauthEndpoint(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SnowflakeProvider) SetOauthRedirectUrl(val *string) {
+func (j *jsiiProxy_SnowflakeProvider)SetOauthRedirectUrl(val *string) {
 	_jsii_.Set(
 		j,
 		"oauthRedirectUrl",
@@ -685,7 +691,7 @@ func (j *jsiiProxy_SnowflakeProvider) SetOauthRedirectUrl(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SnowflakeProvider) SetOauthRefreshToken(val *string) {
+func (j *jsiiProxy_SnowflakeProvider)SetOauthRefreshToken(val *string) {
 	_jsii_.Set(
 		j,
 		"oauthRefreshToken",
@@ -693,7 +699,7 @@ func (j *jsiiProxy_SnowflakeProvider) SetOauthRefreshToken(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SnowflakeProvider) SetPassword(val *string) {
+func (j *jsiiProxy_SnowflakeProvider)SetPassword(val *string) {
 	_jsii_.Set(
 		j,
 		"password",
@@ -701,7 +707,7 @@ func (j *jsiiProxy_SnowflakeProvider) SetPassword(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SnowflakeProvider) SetPrivateKey(val *string) {
+func (j *jsiiProxy_SnowflakeProvider)SetPrivateKey(val *string) {
 	_jsii_.Set(
 		j,
 		"privateKey",
@@ -709,7 +715,7 @@ func (j *jsiiProxy_SnowflakeProvider) SetPrivateKey(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SnowflakeProvider) SetPrivateKeyPassphrase(val *string) {
+func (j *jsiiProxy_SnowflakeProvider)SetPrivateKeyPassphrase(val *string) {
 	_jsii_.Set(
 		j,
 		"privateKeyPassphrase",
@@ -717,7 +723,7 @@ func (j *jsiiProxy_SnowflakeProvider) SetPrivateKeyPassphrase(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SnowflakeProvider) SetPrivateKeyPath(val *string) {
+func (j *jsiiProxy_SnowflakeProvider)SetPrivateKeyPath(val *string) {
 	_jsii_.Set(
 		j,
 		"privateKeyPath",
@@ -725,7 +731,7 @@ func (j *jsiiProxy_SnowflakeProvider) SetPrivateKeyPath(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SnowflakeProvider) SetRegion(val *string) {
+func (j *jsiiProxy_SnowflakeProvider)SetRegion(val *string) {
 	_jsii_.Set(
 		j,
 		"region",
@@ -733,7 +739,7 @@ func (j *jsiiProxy_SnowflakeProvider) SetRegion(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SnowflakeProvider) SetRole(val *string) {
+func (j *jsiiProxy_SnowflakeProvider)SetRole(val *string) {
 	_jsii_.Set(
 		j,
 		"role",
@@ -741,7 +747,7 @@ func (j *jsiiProxy_SnowflakeProvider) SetRole(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SnowflakeProvider) SetUsername(val *string) {
+func (j *jsiiProxy_SnowflakeProvider)SetUsername(val *string) {
 	_jsii_.Set(
 		j,
 		"username",
@@ -749,7 +755,7 @@ func (j *jsiiProxy_SnowflakeProvider) SetUsername(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SnowflakeProvider) SetWarehouse(val *string) {
+func (j *jsiiProxy_SnowflakeProvider)SetWarehouse(val *string) {
 	_jsii_.Set(
 		j,
 		"warehouse",
@@ -777,6 +783,9 @@ func (j *jsiiProxy_SnowflakeProvider) SetWarehouse(val *string) {
 func SnowflakeProvider_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateSnowflakeProvider_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -801,6 +810,9 @@ func SnowflakeProvider_TfResourceType() *string {
 }
 
 func (s *jsiiProxy_SnowflakeProvider) AddOverride(path *string, value interface{}) {
+	if err := s.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		s,
 		"addOverride",
@@ -809,6 +821,9 @@ func (s *jsiiProxy_SnowflakeProvider) AddOverride(path *string, value interface{
 }
 
 func (s *jsiiProxy_SnowflakeProvider) OverrideLogicalId(newLogicalId *string) {
+	if err := s.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		s,
 		"overrideLogicalId",

@@ -456,6 +456,9 @@ func (j *jsiiProxy_RowAccessPolicyGrant) WithGrantOptionInput() interface{} {
 func NewRowAccessPolicyGrant(scope constructs.Construct, id *string, config *RowAccessPolicyGrantConfig) RowAccessPolicyGrant {
 	_init_.Initialize()
 
+	if err := validateNewRowAccessPolicyGrantParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_RowAccessPolicyGrant{}
 
 	_jsii_.Create(
@@ -478,7 +481,10 @@ func NewRowAccessPolicyGrant_Override(r RowAccessPolicyGrant, scope constructs.C
 	)
 }
 
-func (j *jsiiProxy_RowAccessPolicyGrant) SetConnection(val interface{}) {
+func (j *jsiiProxy_RowAccessPolicyGrant)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -486,7 +492,7 @@ func (j *jsiiProxy_RowAccessPolicyGrant) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_RowAccessPolicyGrant) SetCount(val *float64) {
+func (j *jsiiProxy_RowAccessPolicyGrant)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -494,7 +500,10 @@ func (j *jsiiProxy_RowAccessPolicyGrant) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_RowAccessPolicyGrant) SetDatabaseName(val *string) {
+func (j *jsiiProxy_RowAccessPolicyGrant)SetDatabaseName(val *string) {
+	if err := j.validateSetDatabaseNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"databaseName",
@@ -502,7 +511,7 @@ func (j *jsiiProxy_RowAccessPolicyGrant) SetDatabaseName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_RowAccessPolicyGrant) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_RowAccessPolicyGrant)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -510,7 +519,10 @@ func (j *jsiiProxy_RowAccessPolicyGrant) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_RowAccessPolicyGrant) SetEnableMultipleGrants(val interface{}) {
+func (j *jsiiProxy_RowAccessPolicyGrant)SetEnableMultipleGrants(val interface{}) {
+	if err := j.validateSetEnableMultipleGrantsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"enableMultipleGrants",
@@ -518,7 +530,7 @@ func (j *jsiiProxy_RowAccessPolicyGrant) SetEnableMultipleGrants(val interface{}
 	)
 }
 
-func (j *jsiiProxy_RowAccessPolicyGrant) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_RowAccessPolicyGrant)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -526,7 +538,10 @@ func (j *jsiiProxy_RowAccessPolicyGrant) SetForEach(val cdktf.ITerraformIterator
 	)
 }
 
-func (j *jsiiProxy_RowAccessPolicyGrant) SetId(val *string) {
+func (j *jsiiProxy_RowAccessPolicyGrant)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -534,7 +549,10 @@ func (j *jsiiProxy_RowAccessPolicyGrant) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_RowAccessPolicyGrant) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_RowAccessPolicyGrant)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -542,7 +560,10 @@ func (j *jsiiProxy_RowAccessPolicyGrant) SetLifecycle(val *cdktf.TerraformResour
 	)
 }
 
-func (j *jsiiProxy_RowAccessPolicyGrant) SetPrivilege(val *string) {
+func (j *jsiiProxy_RowAccessPolicyGrant)SetPrivilege(val *string) {
+	if err := j.validateSetPrivilegeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"privilege",
@@ -550,7 +571,7 @@ func (j *jsiiProxy_RowAccessPolicyGrant) SetPrivilege(val *string) {
 	)
 }
 
-func (j *jsiiProxy_RowAccessPolicyGrant) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_RowAccessPolicyGrant)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -558,7 +579,10 @@ func (j *jsiiProxy_RowAccessPolicyGrant) SetProvider(val cdktf.TerraformProvider
 	)
 }
 
-func (j *jsiiProxy_RowAccessPolicyGrant) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_RowAccessPolicyGrant)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -566,7 +590,10 @@ func (j *jsiiProxy_RowAccessPolicyGrant) SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_RowAccessPolicyGrant) SetRoles(val *[]*string) {
+func (j *jsiiProxy_RowAccessPolicyGrant)SetRoles(val *[]*string) {
+	if err := j.validateSetRolesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"roles",
@@ -574,7 +601,10 @@ func (j *jsiiProxy_RowAccessPolicyGrant) SetRoles(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_RowAccessPolicyGrant) SetRowAccessPolicyName(val *string) {
+func (j *jsiiProxy_RowAccessPolicyGrant)SetRowAccessPolicyName(val *string) {
+	if err := j.validateSetRowAccessPolicyNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"rowAccessPolicyName",
@@ -582,7 +612,10 @@ func (j *jsiiProxy_RowAccessPolicyGrant) SetRowAccessPolicyName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_RowAccessPolicyGrant) SetSchemaName(val *string) {
+func (j *jsiiProxy_RowAccessPolicyGrant)SetSchemaName(val *string) {
+	if err := j.validateSetSchemaNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"schemaName",
@@ -590,7 +623,10 @@ func (j *jsiiProxy_RowAccessPolicyGrant) SetSchemaName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_RowAccessPolicyGrant) SetWithGrantOption(val interface{}) {
+func (j *jsiiProxy_RowAccessPolicyGrant)SetWithGrantOption(val interface{}) {
+	if err := j.validateSetWithGrantOptionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"withGrantOption",
@@ -618,6 +654,9 @@ func (j *jsiiProxy_RowAccessPolicyGrant) SetWithGrantOption(val interface{}) {
 func RowAccessPolicyGrant_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateRowAccessPolicyGrant_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -642,6 +681,9 @@ func RowAccessPolicyGrant_TfResourceType() *string {
 }
 
 func (r *jsiiProxy_RowAccessPolicyGrant) AddOverride(path *string, value interface{}) {
+	if err := r.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		r,
 		"addOverride",
@@ -650,6 +692,9 @@ func (r *jsiiProxy_RowAccessPolicyGrant) AddOverride(path *string, value interfa
 }
 
 func (r *jsiiProxy_RowAccessPolicyGrant) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := r.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -663,6 +708,9 @@ func (r *jsiiProxy_RowAccessPolicyGrant) GetAnyMapAttribute(terraformAttribute *
 }
 
 func (r *jsiiProxy_RowAccessPolicyGrant) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := r.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -676,6 +724,9 @@ func (r *jsiiProxy_RowAccessPolicyGrant) GetBooleanAttribute(terraformAttribute 
 }
 
 func (r *jsiiProxy_RowAccessPolicyGrant) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := r.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -689,6 +740,9 @@ func (r *jsiiProxy_RowAccessPolicyGrant) GetBooleanMapAttribute(terraformAttribu
 }
 
 func (r *jsiiProxy_RowAccessPolicyGrant) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := r.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -702,6 +756,9 @@ func (r *jsiiProxy_RowAccessPolicyGrant) GetListAttribute(terraformAttribute *st
 }
 
 func (r *jsiiProxy_RowAccessPolicyGrant) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := r.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -715,6 +772,9 @@ func (r *jsiiProxy_RowAccessPolicyGrant) GetNumberAttribute(terraformAttribute *
 }
 
 func (r *jsiiProxy_RowAccessPolicyGrant) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := r.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -728,6 +788,9 @@ func (r *jsiiProxy_RowAccessPolicyGrant) GetNumberListAttribute(terraformAttribu
 }
 
 func (r *jsiiProxy_RowAccessPolicyGrant) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := r.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -741,6 +804,9 @@ func (r *jsiiProxy_RowAccessPolicyGrant) GetNumberMapAttribute(terraformAttribut
 }
 
 func (r *jsiiProxy_RowAccessPolicyGrant) GetStringAttribute(terraformAttribute *string) *string {
+	if err := r.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -754,6 +820,9 @@ func (r *jsiiProxy_RowAccessPolicyGrant) GetStringAttribute(terraformAttribute *
 }
 
 func (r *jsiiProxy_RowAccessPolicyGrant) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := r.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -767,6 +836,9 @@ func (r *jsiiProxy_RowAccessPolicyGrant) GetStringMapAttribute(terraformAttribut
 }
 
 func (r *jsiiProxy_RowAccessPolicyGrant) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := r.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -780,6 +852,9 @@ func (r *jsiiProxy_RowAccessPolicyGrant) InterpolationForAttribute(terraformAttr
 }
 
 func (r *jsiiProxy_RowAccessPolicyGrant) OverrideLogicalId(newLogicalId *string) {
+	if err := r.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		r,
 		"overrideLogicalId",

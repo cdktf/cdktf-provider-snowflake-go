@@ -111,6 +111,9 @@ func (j *jsiiProxy_ExternalTableTagList) WrapsSet() *bool {
 func NewExternalTableTagList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ExternalTableTagList {
 	_init_.Initialize()
 
+	if err := validateNewExternalTableTagListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ExternalTableTagList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewExternalTableTagList_Override(e ExternalTableTagList, terraformResource 
 	)
 }
 
-func (j *jsiiProxy_ExternalTableTagList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_ExternalTableTagList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_ExternalTableTagList) SetInternalValue(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ExternalTableTagList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ExternalTableTagList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_ExternalTableTagList) SetTerraformAttribute(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalTableTagList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ExternalTableTagList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_ExternalTableTagList) SetTerraformResource(val cdktf.IInterpo
 	)
 }
 
-func (j *jsiiProxy_ExternalTableTagList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_ExternalTableTagList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (e *jsiiProxy_ExternalTableTagList) ComputeFqn() *string {
 }
 
 func (e *jsiiProxy_ExternalTableTagList) Get(index *float64) ExternalTableTagOutputReference {
+	if err := e.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns ExternalTableTagOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (e *jsiiProxy_ExternalTableTagList) Get(index *float64) ExternalTableTagOut
 }
 
 func (e *jsiiProxy_ExternalTableTagList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := e.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

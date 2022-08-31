@@ -362,6 +362,9 @@ func (j *jsiiProxy_NetworkPolicyAttachment) UsersInput() *[]*string {
 func NewNetworkPolicyAttachment(scope constructs.Construct, id *string, config *NetworkPolicyAttachmentConfig) NetworkPolicyAttachment {
 	_init_.Initialize()
 
+	if err := validateNewNetworkPolicyAttachmentParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_NetworkPolicyAttachment{}
 
 	_jsii_.Create(
@@ -384,7 +387,10 @@ func NewNetworkPolicyAttachment_Override(n NetworkPolicyAttachment, scope constr
 	)
 }
 
-func (j *jsiiProxy_NetworkPolicyAttachment) SetConnection(val interface{}) {
+func (j *jsiiProxy_NetworkPolicyAttachment)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -392,7 +398,7 @@ func (j *jsiiProxy_NetworkPolicyAttachment) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_NetworkPolicyAttachment) SetCount(val *float64) {
+func (j *jsiiProxy_NetworkPolicyAttachment)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -400,7 +406,7 @@ func (j *jsiiProxy_NetworkPolicyAttachment) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_NetworkPolicyAttachment) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_NetworkPolicyAttachment)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -408,7 +414,7 @@ func (j *jsiiProxy_NetworkPolicyAttachment) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_NetworkPolicyAttachment) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_NetworkPolicyAttachment)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -416,7 +422,10 @@ func (j *jsiiProxy_NetworkPolicyAttachment) SetForEach(val cdktf.ITerraformItera
 	)
 }
 
-func (j *jsiiProxy_NetworkPolicyAttachment) SetId(val *string) {
+func (j *jsiiProxy_NetworkPolicyAttachment)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -424,7 +433,10 @@ func (j *jsiiProxy_NetworkPolicyAttachment) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_NetworkPolicyAttachment) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_NetworkPolicyAttachment)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -432,7 +444,10 @@ func (j *jsiiProxy_NetworkPolicyAttachment) SetLifecycle(val *cdktf.TerraformRes
 	)
 }
 
-func (j *jsiiProxy_NetworkPolicyAttachment) SetNetworkPolicyName(val *string) {
+func (j *jsiiProxy_NetworkPolicyAttachment)SetNetworkPolicyName(val *string) {
+	if err := j.validateSetNetworkPolicyNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"networkPolicyName",
@@ -440,7 +455,7 @@ func (j *jsiiProxy_NetworkPolicyAttachment) SetNetworkPolicyName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_NetworkPolicyAttachment) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_NetworkPolicyAttachment)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -448,7 +463,10 @@ func (j *jsiiProxy_NetworkPolicyAttachment) SetProvider(val cdktf.TerraformProvi
 	)
 }
 
-func (j *jsiiProxy_NetworkPolicyAttachment) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_NetworkPolicyAttachment)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -456,7 +474,10 @@ func (j *jsiiProxy_NetworkPolicyAttachment) SetProvisioners(val *[]interface{}) 
 	)
 }
 
-func (j *jsiiProxy_NetworkPolicyAttachment) SetSetForAccount(val interface{}) {
+func (j *jsiiProxy_NetworkPolicyAttachment)SetSetForAccount(val interface{}) {
+	if err := j.validateSetSetForAccountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"setForAccount",
@@ -464,7 +485,10 @@ func (j *jsiiProxy_NetworkPolicyAttachment) SetSetForAccount(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_NetworkPolicyAttachment) SetUsers(val *[]*string) {
+func (j *jsiiProxy_NetworkPolicyAttachment)SetUsers(val *[]*string) {
+	if err := j.validateSetUsersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"users",
@@ -492,6 +516,9 @@ func (j *jsiiProxy_NetworkPolicyAttachment) SetUsers(val *[]*string) {
 func NetworkPolicyAttachment_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateNetworkPolicyAttachment_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -516,6 +543,9 @@ func NetworkPolicyAttachment_TfResourceType() *string {
 }
 
 func (n *jsiiProxy_NetworkPolicyAttachment) AddOverride(path *string, value interface{}) {
+	if err := n.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		n,
 		"addOverride",
@@ -524,6 +554,9 @@ func (n *jsiiProxy_NetworkPolicyAttachment) AddOverride(path *string, value inte
 }
 
 func (n *jsiiProxy_NetworkPolicyAttachment) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := n.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -537,6 +570,9 @@ func (n *jsiiProxy_NetworkPolicyAttachment) GetAnyMapAttribute(terraformAttribut
 }
 
 func (n *jsiiProxy_NetworkPolicyAttachment) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := n.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -550,6 +586,9 @@ func (n *jsiiProxy_NetworkPolicyAttachment) GetBooleanAttribute(terraformAttribu
 }
 
 func (n *jsiiProxy_NetworkPolicyAttachment) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := n.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -563,6 +602,9 @@ func (n *jsiiProxy_NetworkPolicyAttachment) GetBooleanMapAttribute(terraformAttr
 }
 
 func (n *jsiiProxy_NetworkPolicyAttachment) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := n.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -576,6 +618,9 @@ func (n *jsiiProxy_NetworkPolicyAttachment) GetListAttribute(terraformAttribute 
 }
 
 func (n *jsiiProxy_NetworkPolicyAttachment) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := n.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -589,6 +634,9 @@ func (n *jsiiProxy_NetworkPolicyAttachment) GetNumberAttribute(terraformAttribut
 }
 
 func (n *jsiiProxy_NetworkPolicyAttachment) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := n.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -602,6 +650,9 @@ func (n *jsiiProxy_NetworkPolicyAttachment) GetNumberListAttribute(terraformAttr
 }
 
 func (n *jsiiProxy_NetworkPolicyAttachment) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := n.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -615,6 +666,9 @@ func (n *jsiiProxy_NetworkPolicyAttachment) GetNumberMapAttribute(terraformAttri
 }
 
 func (n *jsiiProxy_NetworkPolicyAttachment) GetStringAttribute(terraformAttribute *string) *string {
+	if err := n.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -628,6 +682,9 @@ func (n *jsiiProxy_NetworkPolicyAttachment) GetStringAttribute(terraformAttribut
 }
 
 func (n *jsiiProxy_NetworkPolicyAttachment) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := n.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -641,6 +698,9 @@ func (n *jsiiProxy_NetworkPolicyAttachment) GetStringMapAttribute(terraformAttri
 }
 
 func (n *jsiiProxy_NetworkPolicyAttachment) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := n.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -654,6 +714,9 @@ func (n *jsiiProxy_NetworkPolicyAttachment) InterpolationForAttribute(terraformA
 }
 
 func (n *jsiiProxy_NetworkPolicyAttachment) OverrideLogicalId(newLogicalId *string) {
+	if err := n.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		n,
 		"overrideLogicalId",

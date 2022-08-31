@@ -111,6 +111,9 @@ func (j *jsiiProxy_ProcedureGrantArgumentsList) WrapsSet() *bool {
 func NewProcedureGrantArgumentsList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ProcedureGrantArgumentsList {
 	_init_.Initialize()
 
+	if err := validateNewProcedureGrantArgumentsListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ProcedureGrantArgumentsList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewProcedureGrantArgumentsList_Override(p ProcedureGrantArgumentsList, terr
 	)
 }
 
-func (j *jsiiProxy_ProcedureGrantArgumentsList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_ProcedureGrantArgumentsList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_ProcedureGrantArgumentsList) SetInternalValue(val interface{}
 	)
 }
 
-func (j *jsiiProxy_ProcedureGrantArgumentsList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ProcedureGrantArgumentsList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_ProcedureGrantArgumentsList) SetTerraformAttribute(val *strin
 	)
 }
 
-func (j *jsiiProxy_ProcedureGrantArgumentsList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ProcedureGrantArgumentsList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_ProcedureGrantArgumentsList) SetTerraformResource(val cdktf.I
 	)
 }
 
-func (j *jsiiProxy_ProcedureGrantArgumentsList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_ProcedureGrantArgumentsList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (p *jsiiProxy_ProcedureGrantArgumentsList) ComputeFqn() *string {
 }
 
 func (p *jsiiProxy_ProcedureGrantArgumentsList) Get(index *float64) ProcedureGrantArgumentsOutputReference {
+	if err := p.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns ProcedureGrantArgumentsOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (p *jsiiProxy_ProcedureGrantArgumentsList) Get(index *float64) ProcedureGra
 }
 
 func (p *jsiiProxy_ProcedureGrantArgumentsList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := p.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

@@ -502,6 +502,9 @@ func (j *jsiiProxy_MaterializedView) WarehouseInput() *string {
 func NewMaterializedView(scope constructs.Construct, id *string, config *MaterializedViewConfig) MaterializedView {
 	_init_.Initialize()
 
+	if err := validateNewMaterializedViewParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_MaterializedView{}
 
 	_jsii_.Create(
@@ -524,7 +527,10 @@ func NewMaterializedView_Override(m MaterializedView, scope constructs.Construct
 	)
 }
 
-func (j *jsiiProxy_MaterializedView) SetComment(val *string) {
+func (j *jsiiProxy_MaterializedView)SetComment(val *string) {
+	if err := j.validateSetCommentParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"comment",
@@ -532,7 +538,10 @@ func (j *jsiiProxy_MaterializedView) SetComment(val *string) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedView) SetConnection(val interface{}) {
+func (j *jsiiProxy_MaterializedView)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -540,7 +549,7 @@ func (j *jsiiProxy_MaterializedView) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedView) SetCount(val *float64) {
+func (j *jsiiProxy_MaterializedView)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -548,7 +557,10 @@ func (j *jsiiProxy_MaterializedView) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedView) SetDatabase(val *string) {
+func (j *jsiiProxy_MaterializedView)SetDatabase(val *string) {
+	if err := j.validateSetDatabaseParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"database",
@@ -556,7 +568,7 @@ func (j *jsiiProxy_MaterializedView) SetDatabase(val *string) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedView) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_MaterializedView)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -564,7 +576,7 @@ func (j *jsiiProxy_MaterializedView) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedView) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_MaterializedView)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -572,7 +584,10 @@ func (j *jsiiProxy_MaterializedView) SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedView) SetId(val *string) {
+func (j *jsiiProxy_MaterializedView)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -580,7 +595,10 @@ func (j *jsiiProxy_MaterializedView) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedView) SetIsSecure(val interface{}) {
+func (j *jsiiProxy_MaterializedView)SetIsSecure(val interface{}) {
+	if err := j.validateSetIsSecureParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"isSecure",
@@ -588,7 +606,10 @@ func (j *jsiiProxy_MaterializedView) SetIsSecure(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedView) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_MaterializedView)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -596,7 +617,10 @@ func (j *jsiiProxy_MaterializedView) SetLifecycle(val *cdktf.TerraformResourceLi
 	)
 }
 
-func (j *jsiiProxy_MaterializedView) SetName(val *string) {
+func (j *jsiiProxy_MaterializedView)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"name",
@@ -604,7 +628,10 @@ func (j *jsiiProxy_MaterializedView) SetName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedView) SetOrReplace(val interface{}) {
+func (j *jsiiProxy_MaterializedView)SetOrReplace(val interface{}) {
+	if err := j.validateSetOrReplaceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"orReplace",
@@ -612,7 +639,7 @@ func (j *jsiiProxy_MaterializedView) SetOrReplace(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedView) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_MaterializedView)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -620,7 +647,10 @@ func (j *jsiiProxy_MaterializedView) SetProvider(val cdktf.TerraformProvider) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedView) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_MaterializedView)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -628,7 +658,10 @@ func (j *jsiiProxy_MaterializedView) SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedView) SetSchema(val *string) {
+func (j *jsiiProxy_MaterializedView)SetSchema(val *string) {
+	if err := j.validateSetSchemaParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"schema",
@@ -636,7 +669,10 @@ func (j *jsiiProxy_MaterializedView) SetSchema(val *string) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedView) SetStatement(val *string) {
+func (j *jsiiProxy_MaterializedView)SetStatement(val *string) {
+	if err := j.validateSetStatementParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"statement",
@@ -644,7 +680,10 @@ func (j *jsiiProxy_MaterializedView) SetStatement(val *string) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedView) SetWarehouse(val *string) {
+func (j *jsiiProxy_MaterializedView)SetWarehouse(val *string) {
+	if err := j.validateSetWarehouseParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"warehouse",
@@ -672,6 +711,9 @@ func (j *jsiiProxy_MaterializedView) SetWarehouse(val *string) {
 func MaterializedView_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateMaterializedView_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -696,6 +738,9 @@ func MaterializedView_TfResourceType() *string {
 }
 
 func (m *jsiiProxy_MaterializedView) AddOverride(path *string, value interface{}) {
+	if err := m.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		m,
 		"addOverride",
@@ -704,6 +749,9 @@ func (m *jsiiProxy_MaterializedView) AddOverride(path *string, value interface{}
 }
 
 func (m *jsiiProxy_MaterializedView) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := m.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -717,6 +765,9 @@ func (m *jsiiProxy_MaterializedView) GetAnyMapAttribute(terraformAttribute *stri
 }
 
 func (m *jsiiProxy_MaterializedView) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := m.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -730,6 +781,9 @@ func (m *jsiiProxy_MaterializedView) GetBooleanAttribute(terraformAttribute *str
 }
 
 func (m *jsiiProxy_MaterializedView) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := m.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -743,6 +797,9 @@ func (m *jsiiProxy_MaterializedView) GetBooleanMapAttribute(terraformAttribute *
 }
 
 func (m *jsiiProxy_MaterializedView) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := m.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -756,6 +813,9 @@ func (m *jsiiProxy_MaterializedView) GetListAttribute(terraformAttribute *string
 }
 
 func (m *jsiiProxy_MaterializedView) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := m.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -769,6 +829,9 @@ func (m *jsiiProxy_MaterializedView) GetNumberAttribute(terraformAttribute *stri
 }
 
 func (m *jsiiProxy_MaterializedView) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := m.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -782,6 +845,9 @@ func (m *jsiiProxy_MaterializedView) GetNumberListAttribute(terraformAttribute *
 }
 
 func (m *jsiiProxy_MaterializedView) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := m.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -795,6 +861,9 @@ func (m *jsiiProxy_MaterializedView) GetNumberMapAttribute(terraformAttribute *s
 }
 
 func (m *jsiiProxy_MaterializedView) GetStringAttribute(terraformAttribute *string) *string {
+	if err := m.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -808,6 +877,9 @@ func (m *jsiiProxy_MaterializedView) GetStringAttribute(terraformAttribute *stri
 }
 
 func (m *jsiiProxy_MaterializedView) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := m.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -821,6 +893,9 @@ func (m *jsiiProxy_MaterializedView) GetStringMapAttribute(terraformAttribute *s
 }
 
 func (m *jsiiProxy_MaterializedView) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := m.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -834,6 +909,9 @@ func (m *jsiiProxy_MaterializedView) InterpolationForAttribute(terraformAttribut
 }
 
 func (m *jsiiProxy_MaterializedView) OverrideLogicalId(newLogicalId *string) {
+	if err := m.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		m,
 		"overrideLogicalId",
@@ -842,6 +920,9 @@ func (m *jsiiProxy_MaterializedView) OverrideLogicalId(newLogicalId *string) {
 }
 
 func (m *jsiiProxy_MaterializedView) PutTag(value interface{}) {
+	if err := m.validatePutTagParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		m,
 		"putTag",

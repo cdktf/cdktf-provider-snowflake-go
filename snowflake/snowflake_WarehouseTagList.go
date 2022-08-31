@@ -111,6 +111,9 @@ func (j *jsiiProxy_WarehouseTagList) WrapsSet() *bool {
 func NewWarehouseTagList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WarehouseTagList {
 	_init_.Initialize()
 
+	if err := validateNewWarehouseTagListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_WarehouseTagList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewWarehouseTagList_Override(w WarehouseTagList, terraformResource cdktf.II
 	)
 }
 
-func (j *jsiiProxy_WarehouseTagList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_WarehouseTagList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_WarehouseTagList) SetInternalValue(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_WarehouseTagList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_WarehouseTagList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_WarehouseTagList) SetTerraformAttribute(val *string) {
 	)
 }
 
-func (j *jsiiProxy_WarehouseTagList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_WarehouseTagList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_WarehouseTagList) SetTerraformResource(val cdktf.IInterpolati
 	)
 }
 
-func (j *jsiiProxy_WarehouseTagList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_WarehouseTagList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (w *jsiiProxy_WarehouseTagList) ComputeFqn() *string {
 }
 
 func (w *jsiiProxy_WarehouseTagList) Get(index *float64) WarehouseTagOutputReference {
+	if err := w.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns WarehouseTagOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (w *jsiiProxy_WarehouseTagList) Get(index *float64) WarehouseTagOutputRefer
 }
 
 func (w *jsiiProxy_WarehouseTagList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := w.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

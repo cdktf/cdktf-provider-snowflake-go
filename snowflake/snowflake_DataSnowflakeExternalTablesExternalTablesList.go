@@ -99,6 +99,9 @@ func (j *jsiiProxy_DataSnowflakeExternalTablesExternalTablesList) WrapsSet() *bo
 func NewDataSnowflakeExternalTablesExternalTablesList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataSnowflakeExternalTablesExternalTablesList {
 	_init_.Initialize()
 
+	if err := validateNewDataSnowflakeExternalTablesExternalTablesListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_DataSnowflakeExternalTablesExternalTablesList{}
 
 	_jsii_.Create(
@@ -120,7 +123,10 @@ func NewDataSnowflakeExternalTablesExternalTablesList_Override(d DataSnowflakeEx
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeExternalTablesExternalTablesList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_DataSnowflakeExternalTablesExternalTablesList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -128,7 +134,10 @@ func (j *jsiiProxy_DataSnowflakeExternalTablesExternalTablesList) SetTerraformAt
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeExternalTablesExternalTablesList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_DataSnowflakeExternalTablesExternalTablesList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -136,7 +145,10 @@ func (j *jsiiProxy_DataSnowflakeExternalTablesExternalTablesList) SetTerraformRe
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeExternalTablesExternalTablesList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_DataSnowflakeExternalTablesExternalTablesList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -158,6 +170,9 @@ func (d *jsiiProxy_DataSnowflakeExternalTablesExternalTablesList) ComputeFqn() *
 }
 
 func (d *jsiiProxy_DataSnowflakeExternalTablesExternalTablesList) Get(index *float64) DataSnowflakeExternalTablesExternalTablesOutputReference {
+	if err := d.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns DataSnowflakeExternalTablesExternalTablesOutputReference
 
 	_jsii_.Invoke(
@@ -171,6 +186,9 @@ func (d *jsiiProxy_DataSnowflakeExternalTablesExternalTablesList) Get(index *flo
 }
 
 func (d *jsiiProxy_DataSnowflakeExternalTablesExternalTablesList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := d.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

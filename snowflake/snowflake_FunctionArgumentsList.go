@@ -111,6 +111,9 @@ func (j *jsiiProxy_FunctionArgumentsList) WrapsSet() *bool {
 func NewFunctionArgumentsList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FunctionArgumentsList {
 	_init_.Initialize()
 
+	if err := validateNewFunctionArgumentsListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_FunctionArgumentsList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewFunctionArgumentsList_Override(f FunctionArgumentsList, terraformResourc
 	)
 }
 
-func (j *jsiiProxy_FunctionArgumentsList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_FunctionArgumentsList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_FunctionArgumentsList) SetInternalValue(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FunctionArgumentsList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_FunctionArgumentsList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_FunctionArgumentsList) SetTerraformAttribute(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FunctionArgumentsList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_FunctionArgumentsList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_FunctionArgumentsList) SetTerraformResource(val cdktf.IInterp
 	)
 }
 
-func (j *jsiiProxy_FunctionArgumentsList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_FunctionArgumentsList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (f *jsiiProxy_FunctionArgumentsList) ComputeFqn() *string {
 }
 
 func (f *jsiiProxy_FunctionArgumentsList) Get(index *float64) FunctionArgumentsOutputReference {
+	if err := f.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns FunctionArgumentsOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (f *jsiiProxy_FunctionArgumentsList) Get(index *float64) FunctionArgumentsO
 }
 
 func (f *jsiiProxy_FunctionArgumentsList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := f.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

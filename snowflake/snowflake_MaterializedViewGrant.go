@@ -506,6 +506,9 @@ func (j *jsiiProxy_MaterializedViewGrant) WithGrantOptionInput() interface{} {
 func NewMaterializedViewGrant(scope constructs.Construct, id *string, config *MaterializedViewGrantConfig) MaterializedViewGrant {
 	_init_.Initialize()
 
+	if err := validateNewMaterializedViewGrantParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_MaterializedViewGrant{}
 
 	_jsii_.Create(
@@ -528,7 +531,10 @@ func NewMaterializedViewGrant_Override(m MaterializedViewGrant, scope constructs
 	)
 }
 
-func (j *jsiiProxy_MaterializedViewGrant) SetConnection(val interface{}) {
+func (j *jsiiProxy_MaterializedViewGrant)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -536,7 +542,7 @@ func (j *jsiiProxy_MaterializedViewGrant) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedViewGrant) SetCount(val *float64) {
+func (j *jsiiProxy_MaterializedViewGrant)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -544,7 +550,10 @@ func (j *jsiiProxy_MaterializedViewGrant) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedViewGrant) SetDatabaseName(val *string) {
+func (j *jsiiProxy_MaterializedViewGrant)SetDatabaseName(val *string) {
+	if err := j.validateSetDatabaseNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"databaseName",
@@ -552,7 +561,7 @@ func (j *jsiiProxy_MaterializedViewGrant) SetDatabaseName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedViewGrant) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_MaterializedViewGrant)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -560,7 +569,10 @@ func (j *jsiiProxy_MaterializedViewGrant) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedViewGrant) SetEnableMultipleGrants(val interface{}) {
+func (j *jsiiProxy_MaterializedViewGrant)SetEnableMultipleGrants(val interface{}) {
+	if err := j.validateSetEnableMultipleGrantsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"enableMultipleGrants",
@@ -568,7 +580,7 @@ func (j *jsiiProxy_MaterializedViewGrant) SetEnableMultipleGrants(val interface{
 	)
 }
 
-func (j *jsiiProxy_MaterializedViewGrant) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_MaterializedViewGrant)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -576,7 +588,10 @@ func (j *jsiiProxy_MaterializedViewGrant) SetForEach(val cdktf.ITerraformIterato
 	)
 }
 
-func (j *jsiiProxy_MaterializedViewGrant) SetId(val *string) {
+func (j *jsiiProxy_MaterializedViewGrant)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -584,7 +599,10 @@ func (j *jsiiProxy_MaterializedViewGrant) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedViewGrant) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_MaterializedViewGrant)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -592,7 +610,10 @@ func (j *jsiiProxy_MaterializedViewGrant) SetLifecycle(val *cdktf.TerraformResou
 	)
 }
 
-func (j *jsiiProxy_MaterializedViewGrant) SetMaterializedViewName(val *string) {
+func (j *jsiiProxy_MaterializedViewGrant)SetMaterializedViewName(val *string) {
+	if err := j.validateSetMaterializedViewNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"materializedViewName",
@@ -600,7 +621,10 @@ func (j *jsiiProxy_MaterializedViewGrant) SetMaterializedViewName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedViewGrant) SetOnFuture(val interface{}) {
+func (j *jsiiProxy_MaterializedViewGrant)SetOnFuture(val interface{}) {
+	if err := j.validateSetOnFutureParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"onFuture",
@@ -608,7 +632,10 @@ func (j *jsiiProxy_MaterializedViewGrant) SetOnFuture(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedViewGrant) SetPrivilege(val *string) {
+func (j *jsiiProxy_MaterializedViewGrant)SetPrivilege(val *string) {
+	if err := j.validateSetPrivilegeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"privilege",
@@ -616,7 +643,7 @@ func (j *jsiiProxy_MaterializedViewGrant) SetPrivilege(val *string) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedViewGrant) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_MaterializedViewGrant)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -624,7 +651,10 @@ func (j *jsiiProxy_MaterializedViewGrant) SetProvider(val cdktf.TerraformProvide
 	)
 }
 
-func (j *jsiiProxy_MaterializedViewGrant) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_MaterializedViewGrant)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -632,7 +662,10 @@ func (j *jsiiProxy_MaterializedViewGrant) SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedViewGrant) SetRoles(val *[]*string) {
+func (j *jsiiProxy_MaterializedViewGrant)SetRoles(val *[]*string) {
+	if err := j.validateSetRolesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"roles",
@@ -640,7 +673,10 @@ func (j *jsiiProxy_MaterializedViewGrant) SetRoles(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedViewGrant) SetSchemaName(val *string) {
+func (j *jsiiProxy_MaterializedViewGrant)SetSchemaName(val *string) {
+	if err := j.validateSetSchemaNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"schemaName",
@@ -648,7 +684,10 @@ func (j *jsiiProxy_MaterializedViewGrant) SetSchemaName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedViewGrant) SetShares(val *[]*string) {
+func (j *jsiiProxy_MaterializedViewGrant)SetShares(val *[]*string) {
+	if err := j.validateSetSharesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"shares",
@@ -656,7 +695,10 @@ func (j *jsiiProxy_MaterializedViewGrant) SetShares(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedViewGrant) SetWithGrantOption(val interface{}) {
+func (j *jsiiProxy_MaterializedViewGrant)SetWithGrantOption(val interface{}) {
+	if err := j.validateSetWithGrantOptionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"withGrantOption",
@@ -684,6 +726,9 @@ func (j *jsiiProxy_MaterializedViewGrant) SetWithGrantOption(val interface{}) {
 func MaterializedViewGrant_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateMaterializedViewGrant_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -708,6 +753,9 @@ func MaterializedViewGrant_TfResourceType() *string {
 }
 
 func (m *jsiiProxy_MaterializedViewGrant) AddOverride(path *string, value interface{}) {
+	if err := m.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		m,
 		"addOverride",
@@ -716,6 +764,9 @@ func (m *jsiiProxy_MaterializedViewGrant) AddOverride(path *string, value interf
 }
 
 func (m *jsiiProxy_MaterializedViewGrant) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := m.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -729,6 +780,9 @@ func (m *jsiiProxy_MaterializedViewGrant) GetAnyMapAttribute(terraformAttribute 
 }
 
 func (m *jsiiProxy_MaterializedViewGrant) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := m.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -742,6 +796,9 @@ func (m *jsiiProxy_MaterializedViewGrant) GetBooleanAttribute(terraformAttribute
 }
 
 func (m *jsiiProxy_MaterializedViewGrant) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := m.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -755,6 +812,9 @@ func (m *jsiiProxy_MaterializedViewGrant) GetBooleanMapAttribute(terraformAttrib
 }
 
 func (m *jsiiProxy_MaterializedViewGrant) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := m.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -768,6 +828,9 @@ func (m *jsiiProxy_MaterializedViewGrant) GetListAttribute(terraformAttribute *s
 }
 
 func (m *jsiiProxy_MaterializedViewGrant) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := m.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -781,6 +844,9 @@ func (m *jsiiProxy_MaterializedViewGrant) GetNumberAttribute(terraformAttribute 
 }
 
 func (m *jsiiProxy_MaterializedViewGrant) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := m.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -794,6 +860,9 @@ func (m *jsiiProxy_MaterializedViewGrant) GetNumberListAttribute(terraformAttrib
 }
 
 func (m *jsiiProxy_MaterializedViewGrant) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := m.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -807,6 +876,9 @@ func (m *jsiiProxy_MaterializedViewGrant) GetNumberMapAttribute(terraformAttribu
 }
 
 func (m *jsiiProxy_MaterializedViewGrant) GetStringAttribute(terraformAttribute *string) *string {
+	if err := m.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -820,6 +892,9 @@ func (m *jsiiProxy_MaterializedViewGrant) GetStringAttribute(terraformAttribute 
 }
 
 func (m *jsiiProxy_MaterializedViewGrant) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := m.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -833,6 +908,9 @@ func (m *jsiiProxy_MaterializedViewGrant) GetStringMapAttribute(terraformAttribu
 }
 
 func (m *jsiiProxy_MaterializedViewGrant) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := m.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -846,6 +924,9 @@ func (m *jsiiProxy_MaterializedViewGrant) InterpolationForAttribute(terraformAtt
 }
 
 func (m *jsiiProxy_MaterializedViewGrant) OverrideLogicalId(newLogicalId *string) {
+	if err := m.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		m,
 		"overrideLogicalId",

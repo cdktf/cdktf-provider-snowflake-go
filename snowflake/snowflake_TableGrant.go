@@ -506,6 +506,9 @@ func (j *jsiiProxy_TableGrant) WithGrantOptionInput() interface{} {
 func NewTableGrant(scope constructs.Construct, id *string, config *TableGrantConfig) TableGrant {
 	_init_.Initialize()
 
+	if err := validateNewTableGrantParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_TableGrant{}
 
 	_jsii_.Create(
@@ -528,7 +531,10 @@ func NewTableGrant_Override(t TableGrant, scope constructs.Construct, id *string
 	)
 }
 
-func (j *jsiiProxy_TableGrant) SetConnection(val interface{}) {
+func (j *jsiiProxy_TableGrant)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -536,7 +542,7 @@ func (j *jsiiProxy_TableGrant) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_TableGrant) SetCount(val *float64) {
+func (j *jsiiProxy_TableGrant)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -544,7 +550,10 @@ func (j *jsiiProxy_TableGrant) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_TableGrant) SetDatabaseName(val *string) {
+func (j *jsiiProxy_TableGrant)SetDatabaseName(val *string) {
+	if err := j.validateSetDatabaseNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"databaseName",
@@ -552,7 +561,7 @@ func (j *jsiiProxy_TableGrant) SetDatabaseName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_TableGrant) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_TableGrant)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -560,7 +569,10 @@ func (j *jsiiProxy_TableGrant) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_TableGrant) SetEnableMultipleGrants(val interface{}) {
+func (j *jsiiProxy_TableGrant)SetEnableMultipleGrants(val interface{}) {
+	if err := j.validateSetEnableMultipleGrantsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"enableMultipleGrants",
@@ -568,7 +580,7 @@ func (j *jsiiProxy_TableGrant) SetEnableMultipleGrants(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_TableGrant) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_TableGrant)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -576,7 +588,10 @@ func (j *jsiiProxy_TableGrant) SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_TableGrant) SetId(val *string) {
+func (j *jsiiProxy_TableGrant)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -584,7 +599,10 @@ func (j *jsiiProxy_TableGrant) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_TableGrant) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_TableGrant)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -592,7 +610,10 @@ func (j *jsiiProxy_TableGrant) SetLifecycle(val *cdktf.TerraformResourceLifecycl
 	)
 }
 
-func (j *jsiiProxy_TableGrant) SetOnFuture(val interface{}) {
+func (j *jsiiProxy_TableGrant)SetOnFuture(val interface{}) {
+	if err := j.validateSetOnFutureParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"onFuture",
@@ -600,7 +621,10 @@ func (j *jsiiProxy_TableGrant) SetOnFuture(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_TableGrant) SetPrivilege(val *string) {
+func (j *jsiiProxy_TableGrant)SetPrivilege(val *string) {
+	if err := j.validateSetPrivilegeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"privilege",
@@ -608,7 +632,7 @@ func (j *jsiiProxy_TableGrant) SetPrivilege(val *string) {
 	)
 }
 
-func (j *jsiiProxy_TableGrant) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_TableGrant)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -616,7 +640,10 @@ func (j *jsiiProxy_TableGrant) SetProvider(val cdktf.TerraformProvider) {
 	)
 }
 
-func (j *jsiiProxy_TableGrant) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_TableGrant)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -624,7 +651,10 @@ func (j *jsiiProxy_TableGrant) SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_TableGrant) SetRoles(val *[]*string) {
+func (j *jsiiProxy_TableGrant)SetRoles(val *[]*string) {
+	if err := j.validateSetRolesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"roles",
@@ -632,7 +662,10 @@ func (j *jsiiProxy_TableGrant) SetRoles(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_TableGrant) SetSchemaName(val *string) {
+func (j *jsiiProxy_TableGrant)SetSchemaName(val *string) {
+	if err := j.validateSetSchemaNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"schemaName",
@@ -640,7 +673,10 @@ func (j *jsiiProxy_TableGrant) SetSchemaName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_TableGrant) SetShares(val *[]*string) {
+func (j *jsiiProxy_TableGrant)SetShares(val *[]*string) {
+	if err := j.validateSetSharesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"shares",
@@ -648,7 +684,10 @@ func (j *jsiiProxy_TableGrant) SetShares(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_TableGrant) SetTableName(val *string) {
+func (j *jsiiProxy_TableGrant)SetTableName(val *string) {
+	if err := j.validateSetTableNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"tableName",
@@ -656,7 +695,10 @@ func (j *jsiiProxy_TableGrant) SetTableName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_TableGrant) SetWithGrantOption(val interface{}) {
+func (j *jsiiProxy_TableGrant)SetWithGrantOption(val interface{}) {
+	if err := j.validateSetWithGrantOptionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"withGrantOption",
@@ -684,6 +726,9 @@ func (j *jsiiProxy_TableGrant) SetWithGrantOption(val interface{}) {
 func TableGrant_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateTableGrant_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -708,6 +753,9 @@ func TableGrant_TfResourceType() *string {
 }
 
 func (t *jsiiProxy_TableGrant) AddOverride(path *string, value interface{}) {
+	if err := t.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		t,
 		"addOverride",
@@ -716,6 +764,9 @@ func (t *jsiiProxy_TableGrant) AddOverride(path *string, value interface{}) {
 }
 
 func (t *jsiiProxy_TableGrant) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := t.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -729,6 +780,9 @@ func (t *jsiiProxy_TableGrant) GetAnyMapAttribute(terraformAttribute *string) *m
 }
 
 func (t *jsiiProxy_TableGrant) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := t.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -742,6 +796,9 @@ func (t *jsiiProxy_TableGrant) GetBooleanAttribute(terraformAttribute *string) c
 }
 
 func (t *jsiiProxy_TableGrant) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := t.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -755,6 +812,9 @@ func (t *jsiiProxy_TableGrant) GetBooleanMapAttribute(terraformAttribute *string
 }
 
 func (t *jsiiProxy_TableGrant) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := t.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -768,6 +828,9 @@ func (t *jsiiProxy_TableGrant) GetListAttribute(terraformAttribute *string) *[]*
 }
 
 func (t *jsiiProxy_TableGrant) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := t.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -781,6 +844,9 @@ func (t *jsiiProxy_TableGrant) GetNumberAttribute(terraformAttribute *string) *f
 }
 
 func (t *jsiiProxy_TableGrant) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := t.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -794,6 +860,9 @@ func (t *jsiiProxy_TableGrant) GetNumberListAttribute(terraformAttribute *string
 }
 
 func (t *jsiiProxy_TableGrant) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := t.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -807,6 +876,9 @@ func (t *jsiiProxy_TableGrant) GetNumberMapAttribute(terraformAttribute *string)
 }
 
 func (t *jsiiProxy_TableGrant) GetStringAttribute(terraformAttribute *string) *string {
+	if err := t.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -820,6 +892,9 @@ func (t *jsiiProxy_TableGrant) GetStringAttribute(terraformAttribute *string) *s
 }
 
 func (t *jsiiProxy_TableGrant) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := t.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -833,6 +908,9 @@ func (t *jsiiProxy_TableGrant) GetStringMapAttribute(terraformAttribute *string)
 }
 
 func (t *jsiiProxy_TableGrant) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := t.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -846,6 +924,9 @@ func (t *jsiiProxy_TableGrant) InterpolationForAttribute(terraformAttribute *str
 }
 
 func (t *jsiiProxy_TableGrant) OverrideLogicalId(newLogicalId *string) {
+	if err := t.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		t,
 		"overrideLogicalId",

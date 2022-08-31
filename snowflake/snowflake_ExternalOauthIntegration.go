@@ -656,6 +656,9 @@ func (j *jsiiProxy_ExternalOauthIntegration) TypeInput() *string {
 func NewExternalOauthIntegration(scope constructs.Construct, id *string, config *ExternalOauthIntegrationConfig) ExternalOauthIntegration {
 	_init_.Initialize()
 
+	if err := validateNewExternalOauthIntegrationParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ExternalOauthIntegration{}
 
 	_jsii_.Create(
@@ -678,7 +681,10 @@ func NewExternalOauthIntegration_Override(e ExternalOauthIntegration, scope cons
 	)
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) SetAllowedRoles(val *[]*string) {
+func (j *jsiiProxy_ExternalOauthIntegration)SetAllowedRoles(val *[]*string) {
+	if err := j.validateSetAllowedRolesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"allowedRoles",
@@ -686,7 +692,10 @@ func (j *jsiiProxy_ExternalOauthIntegration) SetAllowedRoles(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) SetAnyRoleMode(val *string) {
+func (j *jsiiProxy_ExternalOauthIntegration)SetAnyRoleMode(val *string) {
+	if err := j.validateSetAnyRoleModeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"anyRoleMode",
@@ -694,7 +703,10 @@ func (j *jsiiProxy_ExternalOauthIntegration) SetAnyRoleMode(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) SetAudienceUrls(val *[]*string) {
+func (j *jsiiProxy_ExternalOauthIntegration)SetAudienceUrls(val *[]*string) {
+	if err := j.validateSetAudienceUrlsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"audienceUrls",
@@ -702,7 +714,10 @@ func (j *jsiiProxy_ExternalOauthIntegration) SetAudienceUrls(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) SetBlockedRoles(val *[]*string) {
+func (j *jsiiProxy_ExternalOauthIntegration)SetBlockedRoles(val *[]*string) {
+	if err := j.validateSetBlockedRolesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"blockedRoles",
@@ -710,7 +725,10 @@ func (j *jsiiProxy_ExternalOauthIntegration) SetBlockedRoles(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) SetComment(val *string) {
+func (j *jsiiProxy_ExternalOauthIntegration)SetComment(val *string) {
+	if err := j.validateSetCommentParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"comment",
@@ -718,7 +736,10 @@ func (j *jsiiProxy_ExternalOauthIntegration) SetComment(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) SetConnection(val interface{}) {
+func (j *jsiiProxy_ExternalOauthIntegration)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -726,7 +747,7 @@ func (j *jsiiProxy_ExternalOauthIntegration) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) SetCount(val *float64) {
+func (j *jsiiProxy_ExternalOauthIntegration)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -734,7 +755,7 @@ func (j *jsiiProxy_ExternalOauthIntegration) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_ExternalOauthIntegration)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -742,7 +763,10 @@ func (j *jsiiProxy_ExternalOauthIntegration) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) SetEnabled(val interface{}) {
+func (j *jsiiProxy_ExternalOauthIntegration)SetEnabled(val interface{}) {
+	if err := j.validateSetEnabledParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"enabled",
@@ -750,7 +774,7 @@ func (j *jsiiProxy_ExternalOauthIntegration) SetEnabled(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_ExternalOauthIntegration)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -758,7 +782,10 @@ func (j *jsiiProxy_ExternalOauthIntegration) SetForEach(val cdktf.ITerraformIter
 	)
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) SetId(val *string) {
+func (j *jsiiProxy_ExternalOauthIntegration)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -766,7 +793,10 @@ func (j *jsiiProxy_ExternalOauthIntegration) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) SetIssuer(val *string) {
+func (j *jsiiProxy_ExternalOauthIntegration)SetIssuer(val *string) {
+	if err := j.validateSetIssuerParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"issuer",
@@ -774,7 +804,10 @@ func (j *jsiiProxy_ExternalOauthIntegration) SetIssuer(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) SetJwsKeysUrls(val *[]*string) {
+func (j *jsiiProxy_ExternalOauthIntegration)SetJwsKeysUrls(val *[]*string) {
+	if err := j.validateSetJwsKeysUrlsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"jwsKeysUrls",
@@ -782,7 +815,10 @@ func (j *jsiiProxy_ExternalOauthIntegration) SetJwsKeysUrls(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_ExternalOauthIntegration)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -790,7 +826,10 @@ func (j *jsiiProxy_ExternalOauthIntegration) SetLifecycle(val *cdktf.TerraformRe
 	)
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) SetName(val *string) {
+func (j *jsiiProxy_ExternalOauthIntegration)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"name",
@@ -798,7 +837,7 @@ func (j *jsiiProxy_ExternalOauthIntegration) SetName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_ExternalOauthIntegration)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -806,7 +845,10 @@ func (j *jsiiProxy_ExternalOauthIntegration) SetProvider(val cdktf.TerraformProv
 	)
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_ExternalOauthIntegration)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -814,7 +856,10 @@ func (j *jsiiProxy_ExternalOauthIntegration) SetProvisioners(val *[]interface{})
 	)
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) SetRsaPublicKey(val *string) {
+func (j *jsiiProxy_ExternalOauthIntegration)SetRsaPublicKey(val *string) {
+	if err := j.validateSetRsaPublicKeyParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"rsaPublicKey",
@@ -822,7 +867,10 @@ func (j *jsiiProxy_ExternalOauthIntegration) SetRsaPublicKey(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) SetRsaPublicKey2(val *string) {
+func (j *jsiiProxy_ExternalOauthIntegration)SetRsaPublicKey2(val *string) {
+	if err := j.validateSetRsaPublicKey2Parameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"rsaPublicKey2",
@@ -830,7 +878,10 @@ func (j *jsiiProxy_ExternalOauthIntegration) SetRsaPublicKey2(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) SetScopeDelimiter(val *string) {
+func (j *jsiiProxy_ExternalOauthIntegration)SetScopeDelimiter(val *string) {
+	if err := j.validateSetScopeDelimiterParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"scopeDelimiter",
@@ -838,7 +889,10 @@ func (j *jsiiProxy_ExternalOauthIntegration) SetScopeDelimiter(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) SetSnowflakeUserMappingAttribute(val *string) {
+func (j *jsiiProxy_ExternalOauthIntegration)SetSnowflakeUserMappingAttribute(val *string) {
+	if err := j.validateSetSnowflakeUserMappingAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"snowflakeUserMappingAttribute",
@@ -846,7 +900,10 @@ func (j *jsiiProxy_ExternalOauthIntegration) SetSnowflakeUserMappingAttribute(va
 	)
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) SetTokenUserMappingClaims(val *[]*string) {
+func (j *jsiiProxy_ExternalOauthIntegration)SetTokenUserMappingClaims(val *[]*string) {
+	if err := j.validateSetTokenUserMappingClaimsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"tokenUserMappingClaims",
@@ -854,7 +911,10 @@ func (j *jsiiProxy_ExternalOauthIntegration) SetTokenUserMappingClaims(val *[]*s
 	)
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) SetType(val *string) {
+func (j *jsiiProxy_ExternalOauthIntegration)SetType(val *string) {
+	if err := j.validateSetTypeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"type",
@@ -882,6 +942,9 @@ func (j *jsiiProxy_ExternalOauthIntegration) SetType(val *string) {
 func ExternalOauthIntegration_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateExternalOauthIntegration_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -906,6 +969,9 @@ func ExternalOauthIntegration_TfResourceType() *string {
 }
 
 func (e *jsiiProxy_ExternalOauthIntegration) AddOverride(path *string, value interface{}) {
+	if err := e.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		e,
 		"addOverride",
@@ -914,6 +980,9 @@ func (e *jsiiProxy_ExternalOauthIntegration) AddOverride(path *string, value int
 }
 
 func (e *jsiiProxy_ExternalOauthIntegration) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := e.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -927,6 +996,9 @@ func (e *jsiiProxy_ExternalOauthIntegration) GetAnyMapAttribute(terraformAttribu
 }
 
 func (e *jsiiProxy_ExternalOauthIntegration) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := e.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -940,6 +1012,9 @@ func (e *jsiiProxy_ExternalOauthIntegration) GetBooleanAttribute(terraformAttrib
 }
 
 func (e *jsiiProxy_ExternalOauthIntegration) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := e.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -953,6 +1028,9 @@ func (e *jsiiProxy_ExternalOauthIntegration) GetBooleanMapAttribute(terraformAtt
 }
 
 func (e *jsiiProxy_ExternalOauthIntegration) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := e.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -966,6 +1044,9 @@ func (e *jsiiProxy_ExternalOauthIntegration) GetListAttribute(terraformAttribute
 }
 
 func (e *jsiiProxy_ExternalOauthIntegration) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := e.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -979,6 +1060,9 @@ func (e *jsiiProxy_ExternalOauthIntegration) GetNumberAttribute(terraformAttribu
 }
 
 func (e *jsiiProxy_ExternalOauthIntegration) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := e.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -992,6 +1076,9 @@ func (e *jsiiProxy_ExternalOauthIntegration) GetNumberListAttribute(terraformAtt
 }
 
 func (e *jsiiProxy_ExternalOauthIntegration) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := e.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -1005,6 +1092,9 @@ func (e *jsiiProxy_ExternalOauthIntegration) GetNumberMapAttribute(terraformAttr
 }
 
 func (e *jsiiProxy_ExternalOauthIntegration) GetStringAttribute(terraformAttribute *string) *string {
+	if err := e.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -1018,6 +1108,9 @@ func (e *jsiiProxy_ExternalOauthIntegration) GetStringAttribute(terraformAttribu
 }
 
 func (e *jsiiProxy_ExternalOauthIntegration) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := e.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -1031,6 +1124,9 @@ func (e *jsiiProxy_ExternalOauthIntegration) GetStringMapAttribute(terraformAttr
 }
 
 func (e *jsiiProxy_ExternalOauthIntegration) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := e.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -1044,6 +1140,9 @@ func (e *jsiiProxy_ExternalOauthIntegration) InterpolationForAttribute(terraform
 }
 
 func (e *jsiiProxy_ExternalOauthIntegration) OverrideLogicalId(newLogicalId *string) {
+	if err := e.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		e,
 		"overrideLogicalId",

@@ -111,6 +111,9 @@ func (j *jsiiProxy_ExternalFunctionArgList) WrapsSet() *bool {
 func NewExternalFunctionArgList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ExternalFunctionArgList {
 	_init_.Initialize()
 
+	if err := validateNewExternalFunctionArgListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ExternalFunctionArgList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewExternalFunctionArgList_Override(e ExternalFunctionArgList, terraformRes
 	)
 }
 
-func (j *jsiiProxy_ExternalFunctionArgList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_ExternalFunctionArgList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_ExternalFunctionArgList) SetInternalValue(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ExternalFunctionArgList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ExternalFunctionArgList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_ExternalFunctionArgList) SetTerraformAttribute(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalFunctionArgList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ExternalFunctionArgList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_ExternalFunctionArgList) SetTerraformResource(val cdktf.IInte
 	)
 }
 
-func (j *jsiiProxy_ExternalFunctionArgList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_ExternalFunctionArgList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (e *jsiiProxy_ExternalFunctionArgList) ComputeFqn() *string {
 }
 
 func (e *jsiiProxy_ExternalFunctionArgList) Get(index *float64) ExternalFunctionArgOutputReference {
+	if err := e.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns ExternalFunctionArgOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (e *jsiiProxy_ExternalFunctionArgList) Get(index *float64) ExternalFunction
 }
 
 func (e *jsiiProxy_ExternalFunctionArgList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := e.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

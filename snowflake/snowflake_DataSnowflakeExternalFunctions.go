@@ -320,6 +320,9 @@ func (j *jsiiProxy_DataSnowflakeExternalFunctions) TerraformResourceType() *stri
 func NewDataSnowflakeExternalFunctions(scope constructs.Construct, id *string, config *DataSnowflakeExternalFunctionsConfig) DataSnowflakeExternalFunctions {
 	_init_.Initialize()
 
+	if err := validateNewDataSnowflakeExternalFunctionsParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_DataSnowflakeExternalFunctions{}
 
 	_jsii_.Create(
@@ -342,7 +345,7 @@ func NewDataSnowflakeExternalFunctions_Override(d DataSnowflakeExternalFunctions
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeExternalFunctions) SetCount(val *float64) {
+func (j *jsiiProxy_DataSnowflakeExternalFunctions)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -350,7 +353,10 @@ func (j *jsiiProxy_DataSnowflakeExternalFunctions) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeExternalFunctions) SetDatabase(val *string) {
+func (j *jsiiProxy_DataSnowflakeExternalFunctions)SetDatabase(val *string) {
+	if err := j.validateSetDatabaseParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"database",
@@ -358,7 +364,7 @@ func (j *jsiiProxy_DataSnowflakeExternalFunctions) SetDatabase(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeExternalFunctions) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_DataSnowflakeExternalFunctions)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -366,7 +372,7 @@ func (j *jsiiProxy_DataSnowflakeExternalFunctions) SetDependsOn(val *[]*string) 
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeExternalFunctions) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_DataSnowflakeExternalFunctions)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -374,7 +380,10 @@ func (j *jsiiProxy_DataSnowflakeExternalFunctions) SetForEach(val cdktf.ITerrafo
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeExternalFunctions) SetId(val *string) {
+func (j *jsiiProxy_DataSnowflakeExternalFunctions)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -382,7 +391,10 @@ func (j *jsiiProxy_DataSnowflakeExternalFunctions) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeExternalFunctions) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_DataSnowflakeExternalFunctions)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -390,7 +402,7 @@ func (j *jsiiProxy_DataSnowflakeExternalFunctions) SetLifecycle(val *cdktf.Terra
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeExternalFunctions) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_DataSnowflakeExternalFunctions)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -398,7 +410,10 @@ func (j *jsiiProxy_DataSnowflakeExternalFunctions) SetProvider(val cdktf.Terrafo
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeExternalFunctions) SetSchema(val *string) {
+func (j *jsiiProxy_DataSnowflakeExternalFunctions)SetSchema(val *string) {
+	if err := j.validateSetSchemaParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"schema",
@@ -426,6 +441,9 @@ func (j *jsiiProxy_DataSnowflakeExternalFunctions) SetSchema(val *string) {
 func DataSnowflakeExternalFunctions_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateDataSnowflakeExternalFunctions_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -450,6 +468,9 @@ func DataSnowflakeExternalFunctions_TfResourceType() *string {
 }
 
 func (d *jsiiProxy_DataSnowflakeExternalFunctions) AddOverride(path *string, value interface{}) {
+	if err := d.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		d,
 		"addOverride",
@@ -458,6 +479,9 @@ func (d *jsiiProxy_DataSnowflakeExternalFunctions) AddOverride(path *string, val
 }
 
 func (d *jsiiProxy_DataSnowflakeExternalFunctions) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := d.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -471,6 +495,9 @@ func (d *jsiiProxy_DataSnowflakeExternalFunctions) GetAnyMapAttribute(terraformA
 }
 
 func (d *jsiiProxy_DataSnowflakeExternalFunctions) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := d.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -484,6 +511,9 @@ func (d *jsiiProxy_DataSnowflakeExternalFunctions) GetBooleanAttribute(terraform
 }
 
 func (d *jsiiProxy_DataSnowflakeExternalFunctions) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := d.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -497,6 +527,9 @@ func (d *jsiiProxy_DataSnowflakeExternalFunctions) GetBooleanMapAttribute(terraf
 }
 
 func (d *jsiiProxy_DataSnowflakeExternalFunctions) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := d.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -510,6 +543,9 @@ func (d *jsiiProxy_DataSnowflakeExternalFunctions) GetListAttribute(terraformAtt
 }
 
 func (d *jsiiProxy_DataSnowflakeExternalFunctions) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := d.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -523,6 +559,9 @@ func (d *jsiiProxy_DataSnowflakeExternalFunctions) GetNumberAttribute(terraformA
 }
 
 func (d *jsiiProxy_DataSnowflakeExternalFunctions) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := d.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -536,6 +575,9 @@ func (d *jsiiProxy_DataSnowflakeExternalFunctions) GetNumberListAttribute(terraf
 }
 
 func (d *jsiiProxy_DataSnowflakeExternalFunctions) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := d.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -549,6 +591,9 @@ func (d *jsiiProxy_DataSnowflakeExternalFunctions) GetNumberMapAttribute(terrafo
 }
 
 func (d *jsiiProxy_DataSnowflakeExternalFunctions) GetStringAttribute(terraformAttribute *string) *string {
+	if err := d.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -562,6 +607,9 @@ func (d *jsiiProxy_DataSnowflakeExternalFunctions) GetStringAttribute(terraformA
 }
 
 func (d *jsiiProxy_DataSnowflakeExternalFunctions) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := d.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -575,6 +623,9 @@ func (d *jsiiProxy_DataSnowflakeExternalFunctions) GetStringMapAttribute(terrafo
 }
 
 func (d *jsiiProxy_DataSnowflakeExternalFunctions) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := d.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -588,6 +639,9 @@ func (d *jsiiProxy_DataSnowflakeExternalFunctions) InterpolationForAttribute(ter
 }
 
 func (d *jsiiProxy_DataSnowflakeExternalFunctions) OverrideLogicalId(newLogicalId *string) {
+	if err := d.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		d,
 		"overrideLogicalId",

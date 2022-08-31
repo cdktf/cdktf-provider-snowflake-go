@@ -632,6 +632,9 @@ func (j *jsiiProxy_ExternalTable) TerraformResourceType() *string {
 func NewExternalTable(scope constructs.Construct, id *string, config *ExternalTableConfig) ExternalTable {
 	_init_.Initialize()
 
+	if err := validateNewExternalTableParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ExternalTable{}
 
 	_jsii_.Create(
@@ -654,7 +657,10 @@ func NewExternalTable_Override(e ExternalTable, scope constructs.Construct, id *
 	)
 }
 
-func (j *jsiiProxy_ExternalTable) SetAutoRefresh(val interface{}) {
+func (j *jsiiProxy_ExternalTable)SetAutoRefresh(val interface{}) {
+	if err := j.validateSetAutoRefreshParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"autoRefresh",
@@ -662,7 +668,10 @@ func (j *jsiiProxy_ExternalTable) SetAutoRefresh(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ExternalTable) SetAwsSnsTopic(val *string) {
+func (j *jsiiProxy_ExternalTable)SetAwsSnsTopic(val *string) {
+	if err := j.validateSetAwsSnsTopicParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"awsSnsTopic",
@@ -670,7 +679,10 @@ func (j *jsiiProxy_ExternalTable) SetAwsSnsTopic(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalTable) SetComment(val *string) {
+func (j *jsiiProxy_ExternalTable)SetComment(val *string) {
+	if err := j.validateSetCommentParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"comment",
@@ -678,7 +690,10 @@ func (j *jsiiProxy_ExternalTable) SetComment(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalTable) SetConnection(val interface{}) {
+func (j *jsiiProxy_ExternalTable)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -686,7 +701,10 @@ func (j *jsiiProxy_ExternalTable) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ExternalTable) SetCopyGrants(val interface{}) {
+func (j *jsiiProxy_ExternalTable)SetCopyGrants(val interface{}) {
+	if err := j.validateSetCopyGrantsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"copyGrants",
@@ -694,7 +712,7 @@ func (j *jsiiProxy_ExternalTable) SetCopyGrants(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ExternalTable) SetCount(val *float64) {
+func (j *jsiiProxy_ExternalTable)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -702,7 +720,10 @@ func (j *jsiiProxy_ExternalTable) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_ExternalTable) SetDatabase(val *string) {
+func (j *jsiiProxy_ExternalTable)SetDatabase(val *string) {
+	if err := j.validateSetDatabaseParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"database",
@@ -710,7 +731,7 @@ func (j *jsiiProxy_ExternalTable) SetDatabase(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalTable) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_ExternalTable)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -718,7 +739,10 @@ func (j *jsiiProxy_ExternalTable) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalTable) SetFileFormat(val *string) {
+func (j *jsiiProxy_ExternalTable)SetFileFormat(val *string) {
+	if err := j.validateSetFileFormatParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"fileFormat",
@@ -726,7 +750,7 @@ func (j *jsiiProxy_ExternalTable) SetFileFormat(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalTable) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_ExternalTable)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -734,7 +758,10 @@ func (j *jsiiProxy_ExternalTable) SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_ExternalTable) SetId(val *string) {
+func (j *jsiiProxy_ExternalTable)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -742,7 +769,10 @@ func (j *jsiiProxy_ExternalTable) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalTable) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_ExternalTable)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -750,7 +780,10 @@ func (j *jsiiProxy_ExternalTable) SetLifecycle(val *cdktf.TerraformResourceLifec
 	)
 }
 
-func (j *jsiiProxy_ExternalTable) SetLocation(val *string) {
+func (j *jsiiProxy_ExternalTable)SetLocation(val *string) {
+	if err := j.validateSetLocationParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"location",
@@ -758,7 +791,10 @@ func (j *jsiiProxy_ExternalTable) SetLocation(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalTable) SetName(val *string) {
+func (j *jsiiProxy_ExternalTable)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"name",
@@ -766,7 +802,10 @@ func (j *jsiiProxy_ExternalTable) SetName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalTable) SetPartitionBy(val *[]*string) {
+func (j *jsiiProxy_ExternalTable)SetPartitionBy(val *[]*string) {
+	if err := j.validateSetPartitionByParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"partitionBy",
@@ -774,7 +813,10 @@ func (j *jsiiProxy_ExternalTable) SetPartitionBy(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalTable) SetPattern(val *string) {
+func (j *jsiiProxy_ExternalTable)SetPattern(val *string) {
+	if err := j.validateSetPatternParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"pattern",
@@ -782,7 +824,7 @@ func (j *jsiiProxy_ExternalTable) SetPattern(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalTable) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_ExternalTable)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -790,7 +832,10 @@ func (j *jsiiProxy_ExternalTable) SetProvider(val cdktf.TerraformProvider) {
 	)
 }
 
-func (j *jsiiProxy_ExternalTable) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_ExternalTable)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -798,7 +843,10 @@ func (j *jsiiProxy_ExternalTable) SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ExternalTable) SetRefreshOnCreate(val interface{}) {
+func (j *jsiiProxy_ExternalTable)SetRefreshOnCreate(val interface{}) {
+	if err := j.validateSetRefreshOnCreateParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"refreshOnCreate",
@@ -806,7 +854,10 @@ func (j *jsiiProxy_ExternalTable) SetRefreshOnCreate(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ExternalTable) SetSchema(val *string) {
+func (j *jsiiProxy_ExternalTable)SetSchema(val *string) {
+	if err := j.validateSetSchemaParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"schema",
@@ -834,6 +885,9 @@ func (j *jsiiProxy_ExternalTable) SetSchema(val *string) {
 func ExternalTable_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateExternalTable_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -858,6 +912,9 @@ func ExternalTable_TfResourceType() *string {
 }
 
 func (e *jsiiProxy_ExternalTable) AddOverride(path *string, value interface{}) {
+	if err := e.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		e,
 		"addOverride",
@@ -866,6 +923,9 @@ func (e *jsiiProxy_ExternalTable) AddOverride(path *string, value interface{}) {
 }
 
 func (e *jsiiProxy_ExternalTable) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := e.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -879,6 +939,9 @@ func (e *jsiiProxy_ExternalTable) GetAnyMapAttribute(terraformAttribute *string)
 }
 
 func (e *jsiiProxy_ExternalTable) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := e.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -892,6 +955,9 @@ func (e *jsiiProxy_ExternalTable) GetBooleanAttribute(terraformAttribute *string
 }
 
 func (e *jsiiProxy_ExternalTable) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := e.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -905,6 +971,9 @@ func (e *jsiiProxy_ExternalTable) GetBooleanMapAttribute(terraformAttribute *str
 }
 
 func (e *jsiiProxy_ExternalTable) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := e.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -918,6 +987,9 @@ func (e *jsiiProxy_ExternalTable) GetListAttribute(terraformAttribute *string) *
 }
 
 func (e *jsiiProxy_ExternalTable) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := e.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -931,6 +1003,9 @@ func (e *jsiiProxy_ExternalTable) GetNumberAttribute(terraformAttribute *string)
 }
 
 func (e *jsiiProxy_ExternalTable) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := e.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -944,6 +1019,9 @@ func (e *jsiiProxy_ExternalTable) GetNumberListAttribute(terraformAttribute *str
 }
 
 func (e *jsiiProxy_ExternalTable) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := e.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -957,6 +1035,9 @@ func (e *jsiiProxy_ExternalTable) GetNumberMapAttribute(terraformAttribute *stri
 }
 
 func (e *jsiiProxy_ExternalTable) GetStringAttribute(terraformAttribute *string) *string {
+	if err := e.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -970,6 +1051,9 @@ func (e *jsiiProxy_ExternalTable) GetStringAttribute(terraformAttribute *string)
 }
 
 func (e *jsiiProxy_ExternalTable) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := e.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -983,6 +1067,9 @@ func (e *jsiiProxy_ExternalTable) GetStringMapAttribute(terraformAttribute *stri
 }
 
 func (e *jsiiProxy_ExternalTable) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := e.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -996,6 +1083,9 @@ func (e *jsiiProxy_ExternalTable) InterpolationForAttribute(terraformAttribute *
 }
 
 func (e *jsiiProxy_ExternalTable) OverrideLogicalId(newLogicalId *string) {
+	if err := e.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		e,
 		"overrideLogicalId",
@@ -1004,6 +1094,9 @@ func (e *jsiiProxy_ExternalTable) OverrideLogicalId(newLogicalId *string) {
 }
 
 func (e *jsiiProxy_ExternalTable) PutColumn(value interface{}) {
+	if err := e.validatePutColumnParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		e,
 		"putColumn",
@@ -1012,6 +1105,9 @@ func (e *jsiiProxy_ExternalTable) PutColumn(value interface{}) {
 }
 
 func (e *jsiiProxy_ExternalTable) PutTag(value interface{}) {
+	if err := e.validatePutTagParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		e,
 		"putTag",

@@ -111,6 +111,9 @@ func (j *jsiiProxy_RoleTagList) WrapsSet() *bool {
 func NewRoleTagList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) RoleTagList {
 	_init_.Initialize()
 
+	if err := validateNewRoleTagListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_RoleTagList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewRoleTagList_Override(r RoleTagList, terraformResource cdktf.IInterpolati
 	)
 }
 
-func (j *jsiiProxy_RoleTagList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_RoleTagList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_RoleTagList) SetInternalValue(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_RoleTagList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_RoleTagList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_RoleTagList) SetTerraformAttribute(val *string) {
 	)
 }
 
-func (j *jsiiProxy_RoleTagList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_RoleTagList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_RoleTagList) SetTerraformResource(val cdktf.IInterpolatingPar
 	)
 }
 
-func (j *jsiiProxy_RoleTagList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_RoleTagList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (r *jsiiProxy_RoleTagList) ComputeFqn() *string {
 }
 
 func (r *jsiiProxy_RoleTagList) Get(index *float64) RoleTagOutputReference {
+	if err := r.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns RoleTagOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (r *jsiiProxy_RoleTagList) Get(index *float64) RoleTagOutputReference {
 }
 
 func (r *jsiiProxy_RoleTagList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := r.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

@@ -655,6 +655,9 @@ func (j *jsiiProxy_ExternalFunction) UrlOfProxyAndResourceInput() *string {
 func NewExternalFunction(scope constructs.Construct, id *string, config *ExternalFunctionConfig) ExternalFunction {
 	_init_.Initialize()
 
+	if err := validateNewExternalFunctionParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ExternalFunction{}
 
 	_jsii_.Create(
@@ -677,7 +680,10 @@ func NewExternalFunction_Override(e ExternalFunction, scope constructs.Construct
 	)
 }
 
-func (j *jsiiProxy_ExternalFunction) SetApiIntegration(val *string) {
+func (j *jsiiProxy_ExternalFunction)SetApiIntegration(val *string) {
+	if err := j.validateSetApiIntegrationParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"apiIntegration",
@@ -685,7 +691,10 @@ func (j *jsiiProxy_ExternalFunction) SetApiIntegration(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalFunction) SetComment(val *string) {
+func (j *jsiiProxy_ExternalFunction)SetComment(val *string) {
+	if err := j.validateSetCommentParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"comment",
@@ -693,7 +702,10 @@ func (j *jsiiProxy_ExternalFunction) SetComment(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalFunction) SetCompression(val *string) {
+func (j *jsiiProxy_ExternalFunction)SetCompression(val *string) {
+	if err := j.validateSetCompressionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"compression",
@@ -701,7 +713,10 @@ func (j *jsiiProxy_ExternalFunction) SetCompression(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalFunction) SetConnection(val interface{}) {
+func (j *jsiiProxy_ExternalFunction)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -709,7 +724,10 @@ func (j *jsiiProxy_ExternalFunction) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ExternalFunction) SetContextHeaders(val *[]*string) {
+func (j *jsiiProxy_ExternalFunction)SetContextHeaders(val *[]*string) {
+	if err := j.validateSetContextHeadersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"contextHeaders",
@@ -717,7 +735,7 @@ func (j *jsiiProxy_ExternalFunction) SetContextHeaders(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalFunction) SetCount(val *float64) {
+func (j *jsiiProxy_ExternalFunction)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -725,7 +743,10 @@ func (j *jsiiProxy_ExternalFunction) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_ExternalFunction) SetDatabase(val *string) {
+func (j *jsiiProxy_ExternalFunction)SetDatabase(val *string) {
+	if err := j.validateSetDatabaseParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"database",
@@ -733,7 +754,7 @@ func (j *jsiiProxy_ExternalFunction) SetDatabase(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalFunction) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_ExternalFunction)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -741,7 +762,7 @@ func (j *jsiiProxy_ExternalFunction) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalFunction) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_ExternalFunction)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -749,7 +770,10 @@ func (j *jsiiProxy_ExternalFunction) SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_ExternalFunction) SetId(val *string) {
+func (j *jsiiProxy_ExternalFunction)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -757,7 +781,10 @@ func (j *jsiiProxy_ExternalFunction) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalFunction) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_ExternalFunction)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -765,7 +792,10 @@ func (j *jsiiProxy_ExternalFunction) SetLifecycle(val *cdktf.TerraformResourceLi
 	)
 }
 
-func (j *jsiiProxy_ExternalFunction) SetMaxBatchRows(val *float64) {
+func (j *jsiiProxy_ExternalFunction)SetMaxBatchRows(val *float64) {
+	if err := j.validateSetMaxBatchRowsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"maxBatchRows",
@@ -773,7 +803,10 @@ func (j *jsiiProxy_ExternalFunction) SetMaxBatchRows(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_ExternalFunction) SetName(val *string) {
+func (j *jsiiProxy_ExternalFunction)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"name",
@@ -781,7 +814,10 @@ func (j *jsiiProxy_ExternalFunction) SetName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalFunction) SetNullInputBehavior(val *string) {
+func (j *jsiiProxy_ExternalFunction)SetNullInputBehavior(val *string) {
+	if err := j.validateSetNullInputBehaviorParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"nullInputBehavior",
@@ -789,7 +825,7 @@ func (j *jsiiProxy_ExternalFunction) SetNullInputBehavior(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalFunction) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_ExternalFunction)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -797,7 +833,10 @@ func (j *jsiiProxy_ExternalFunction) SetProvider(val cdktf.TerraformProvider) {
 	)
 }
 
-func (j *jsiiProxy_ExternalFunction) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_ExternalFunction)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -805,7 +844,10 @@ func (j *jsiiProxy_ExternalFunction) SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ExternalFunction) SetReturnBehavior(val *string) {
+func (j *jsiiProxy_ExternalFunction)SetReturnBehavior(val *string) {
+	if err := j.validateSetReturnBehaviorParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"returnBehavior",
@@ -813,7 +855,10 @@ func (j *jsiiProxy_ExternalFunction) SetReturnBehavior(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalFunction) SetReturnNullAllowed(val interface{}) {
+func (j *jsiiProxy_ExternalFunction)SetReturnNullAllowed(val interface{}) {
+	if err := j.validateSetReturnNullAllowedParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"returnNullAllowed",
@@ -821,7 +866,10 @@ func (j *jsiiProxy_ExternalFunction) SetReturnNullAllowed(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ExternalFunction) SetReturnType(val *string) {
+func (j *jsiiProxy_ExternalFunction)SetReturnType(val *string) {
+	if err := j.validateSetReturnTypeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"returnType",
@@ -829,7 +877,10 @@ func (j *jsiiProxy_ExternalFunction) SetReturnType(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalFunction) SetSchema(val *string) {
+func (j *jsiiProxy_ExternalFunction)SetSchema(val *string) {
+	if err := j.validateSetSchemaParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"schema",
@@ -837,7 +888,10 @@ func (j *jsiiProxy_ExternalFunction) SetSchema(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ExternalFunction) SetUrlOfProxyAndResource(val *string) {
+func (j *jsiiProxy_ExternalFunction)SetUrlOfProxyAndResource(val *string) {
+	if err := j.validateSetUrlOfProxyAndResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"urlOfProxyAndResource",
@@ -865,6 +919,9 @@ func (j *jsiiProxy_ExternalFunction) SetUrlOfProxyAndResource(val *string) {
 func ExternalFunction_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateExternalFunction_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -889,6 +946,9 @@ func ExternalFunction_TfResourceType() *string {
 }
 
 func (e *jsiiProxy_ExternalFunction) AddOverride(path *string, value interface{}) {
+	if err := e.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		e,
 		"addOverride",
@@ -897,6 +957,9 @@ func (e *jsiiProxy_ExternalFunction) AddOverride(path *string, value interface{}
 }
 
 func (e *jsiiProxy_ExternalFunction) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := e.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -910,6 +973,9 @@ func (e *jsiiProxy_ExternalFunction) GetAnyMapAttribute(terraformAttribute *stri
 }
 
 func (e *jsiiProxy_ExternalFunction) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := e.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -923,6 +989,9 @@ func (e *jsiiProxy_ExternalFunction) GetBooleanAttribute(terraformAttribute *str
 }
 
 func (e *jsiiProxy_ExternalFunction) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := e.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -936,6 +1005,9 @@ func (e *jsiiProxy_ExternalFunction) GetBooleanMapAttribute(terraformAttribute *
 }
 
 func (e *jsiiProxy_ExternalFunction) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := e.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -949,6 +1021,9 @@ func (e *jsiiProxy_ExternalFunction) GetListAttribute(terraformAttribute *string
 }
 
 func (e *jsiiProxy_ExternalFunction) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := e.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -962,6 +1037,9 @@ func (e *jsiiProxy_ExternalFunction) GetNumberAttribute(terraformAttribute *stri
 }
 
 func (e *jsiiProxy_ExternalFunction) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := e.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -975,6 +1053,9 @@ func (e *jsiiProxy_ExternalFunction) GetNumberListAttribute(terraformAttribute *
 }
 
 func (e *jsiiProxy_ExternalFunction) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := e.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -988,6 +1069,9 @@ func (e *jsiiProxy_ExternalFunction) GetNumberMapAttribute(terraformAttribute *s
 }
 
 func (e *jsiiProxy_ExternalFunction) GetStringAttribute(terraformAttribute *string) *string {
+	if err := e.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -1001,6 +1085,9 @@ func (e *jsiiProxy_ExternalFunction) GetStringAttribute(terraformAttribute *stri
 }
 
 func (e *jsiiProxy_ExternalFunction) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := e.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -1014,6 +1101,9 @@ func (e *jsiiProxy_ExternalFunction) GetStringMapAttribute(terraformAttribute *s
 }
 
 func (e *jsiiProxy_ExternalFunction) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := e.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -1027,6 +1117,9 @@ func (e *jsiiProxy_ExternalFunction) InterpolationForAttribute(terraformAttribut
 }
 
 func (e *jsiiProxy_ExternalFunction) OverrideLogicalId(newLogicalId *string) {
+	if err := e.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		e,
 		"overrideLogicalId",
@@ -1035,6 +1128,9 @@ func (e *jsiiProxy_ExternalFunction) OverrideLogicalId(newLogicalId *string) {
 }
 
 func (e *jsiiProxy_ExternalFunction) PutArg(value interface{}) {
+	if err := e.validatePutArgParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		e,
 		"putArg",
@@ -1043,6 +1139,9 @@ func (e *jsiiProxy_ExternalFunction) PutArg(value interface{}) {
 }
 
 func (e *jsiiProxy_ExternalFunction) PutHeader(value interface{}) {
+	if err := e.validatePutHeaderParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		e,
 		"putHeader",

@@ -361,6 +361,9 @@ func (j *jsiiProxy_RoleOwnershipGrant) ToRoleNameInput() *string {
 func NewRoleOwnershipGrant(scope constructs.Construct, id *string, config *RoleOwnershipGrantConfig) RoleOwnershipGrant {
 	_init_.Initialize()
 
+	if err := validateNewRoleOwnershipGrantParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_RoleOwnershipGrant{}
 
 	_jsii_.Create(
@@ -383,7 +386,10 @@ func NewRoleOwnershipGrant_Override(r RoleOwnershipGrant, scope constructs.Const
 	)
 }
 
-func (j *jsiiProxy_RoleOwnershipGrant) SetConnection(val interface{}) {
+func (j *jsiiProxy_RoleOwnershipGrant)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -391,7 +397,7 @@ func (j *jsiiProxy_RoleOwnershipGrant) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_RoleOwnershipGrant) SetCount(val *float64) {
+func (j *jsiiProxy_RoleOwnershipGrant)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -399,7 +405,10 @@ func (j *jsiiProxy_RoleOwnershipGrant) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_RoleOwnershipGrant) SetCurrentGrants(val *string) {
+func (j *jsiiProxy_RoleOwnershipGrant)SetCurrentGrants(val *string) {
+	if err := j.validateSetCurrentGrantsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"currentGrants",
@@ -407,7 +416,7 @@ func (j *jsiiProxy_RoleOwnershipGrant) SetCurrentGrants(val *string) {
 	)
 }
 
-func (j *jsiiProxy_RoleOwnershipGrant) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_RoleOwnershipGrant)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -415,7 +424,7 @@ func (j *jsiiProxy_RoleOwnershipGrant) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_RoleOwnershipGrant) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_RoleOwnershipGrant)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -423,7 +432,10 @@ func (j *jsiiProxy_RoleOwnershipGrant) SetForEach(val cdktf.ITerraformIterator) 
 	)
 }
 
-func (j *jsiiProxy_RoleOwnershipGrant) SetId(val *string) {
+func (j *jsiiProxy_RoleOwnershipGrant)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -431,7 +443,10 @@ func (j *jsiiProxy_RoleOwnershipGrant) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_RoleOwnershipGrant) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_RoleOwnershipGrant)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -439,7 +454,10 @@ func (j *jsiiProxy_RoleOwnershipGrant) SetLifecycle(val *cdktf.TerraformResource
 	)
 }
 
-func (j *jsiiProxy_RoleOwnershipGrant) SetOnRoleName(val *string) {
+func (j *jsiiProxy_RoleOwnershipGrant)SetOnRoleName(val *string) {
+	if err := j.validateSetOnRoleNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"onRoleName",
@@ -447,7 +465,7 @@ func (j *jsiiProxy_RoleOwnershipGrant) SetOnRoleName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_RoleOwnershipGrant) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_RoleOwnershipGrant)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -455,7 +473,10 @@ func (j *jsiiProxy_RoleOwnershipGrant) SetProvider(val cdktf.TerraformProvider) 
 	)
 }
 
-func (j *jsiiProxy_RoleOwnershipGrant) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_RoleOwnershipGrant)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -463,7 +484,10 @@ func (j *jsiiProxy_RoleOwnershipGrant) SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_RoleOwnershipGrant) SetToRoleName(val *string) {
+func (j *jsiiProxy_RoleOwnershipGrant)SetToRoleName(val *string) {
+	if err := j.validateSetToRoleNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"toRoleName",
@@ -491,6 +515,9 @@ func (j *jsiiProxy_RoleOwnershipGrant) SetToRoleName(val *string) {
 func RoleOwnershipGrant_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateRoleOwnershipGrant_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -515,6 +542,9 @@ func RoleOwnershipGrant_TfResourceType() *string {
 }
 
 func (r *jsiiProxy_RoleOwnershipGrant) AddOverride(path *string, value interface{}) {
+	if err := r.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		r,
 		"addOverride",
@@ -523,6 +553,9 @@ func (r *jsiiProxy_RoleOwnershipGrant) AddOverride(path *string, value interface
 }
 
 func (r *jsiiProxy_RoleOwnershipGrant) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := r.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -536,6 +569,9 @@ func (r *jsiiProxy_RoleOwnershipGrant) GetAnyMapAttribute(terraformAttribute *st
 }
 
 func (r *jsiiProxy_RoleOwnershipGrant) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := r.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -549,6 +585,9 @@ func (r *jsiiProxy_RoleOwnershipGrant) GetBooleanAttribute(terraformAttribute *s
 }
 
 func (r *jsiiProxy_RoleOwnershipGrant) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := r.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -562,6 +601,9 @@ func (r *jsiiProxy_RoleOwnershipGrant) GetBooleanMapAttribute(terraformAttribute
 }
 
 func (r *jsiiProxy_RoleOwnershipGrant) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := r.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -575,6 +617,9 @@ func (r *jsiiProxy_RoleOwnershipGrant) GetListAttribute(terraformAttribute *stri
 }
 
 func (r *jsiiProxy_RoleOwnershipGrant) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := r.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -588,6 +633,9 @@ func (r *jsiiProxy_RoleOwnershipGrant) GetNumberAttribute(terraformAttribute *st
 }
 
 func (r *jsiiProxy_RoleOwnershipGrant) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := r.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -601,6 +649,9 @@ func (r *jsiiProxy_RoleOwnershipGrant) GetNumberListAttribute(terraformAttribute
 }
 
 func (r *jsiiProxy_RoleOwnershipGrant) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := r.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -614,6 +665,9 @@ func (r *jsiiProxy_RoleOwnershipGrant) GetNumberMapAttribute(terraformAttribute 
 }
 
 func (r *jsiiProxy_RoleOwnershipGrant) GetStringAttribute(terraformAttribute *string) *string {
+	if err := r.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -627,6 +681,9 @@ func (r *jsiiProxy_RoleOwnershipGrant) GetStringAttribute(terraformAttribute *st
 }
 
 func (r *jsiiProxy_RoleOwnershipGrant) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := r.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -640,6 +697,9 @@ func (r *jsiiProxy_RoleOwnershipGrant) GetStringMapAttribute(terraformAttribute 
 }
 
 func (r *jsiiProxy_RoleOwnershipGrant) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := r.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -653,6 +713,9 @@ func (r *jsiiProxy_RoleOwnershipGrant) InterpolationForAttribute(terraformAttrib
 }
 
 func (r *jsiiProxy_RoleOwnershipGrant) OverrideLogicalId(newLogicalId *string) {
+	if err := r.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		r,
 		"overrideLogicalId",

@@ -320,6 +320,9 @@ func (j *jsiiProxy_DataSnowflakeFileFormats) TerraformResourceType() *string {
 func NewDataSnowflakeFileFormats(scope constructs.Construct, id *string, config *DataSnowflakeFileFormatsConfig) DataSnowflakeFileFormats {
 	_init_.Initialize()
 
+	if err := validateNewDataSnowflakeFileFormatsParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_DataSnowflakeFileFormats{}
 
 	_jsii_.Create(
@@ -342,7 +345,7 @@ func NewDataSnowflakeFileFormats_Override(d DataSnowflakeFileFormats, scope cons
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeFileFormats) SetCount(val *float64) {
+func (j *jsiiProxy_DataSnowflakeFileFormats)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -350,7 +353,10 @@ func (j *jsiiProxy_DataSnowflakeFileFormats) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeFileFormats) SetDatabase(val *string) {
+func (j *jsiiProxy_DataSnowflakeFileFormats)SetDatabase(val *string) {
+	if err := j.validateSetDatabaseParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"database",
@@ -358,7 +364,7 @@ func (j *jsiiProxy_DataSnowflakeFileFormats) SetDatabase(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeFileFormats) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_DataSnowflakeFileFormats)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -366,7 +372,7 @@ func (j *jsiiProxy_DataSnowflakeFileFormats) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeFileFormats) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_DataSnowflakeFileFormats)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -374,7 +380,10 @@ func (j *jsiiProxy_DataSnowflakeFileFormats) SetForEach(val cdktf.ITerraformIter
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeFileFormats) SetId(val *string) {
+func (j *jsiiProxy_DataSnowflakeFileFormats)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -382,7 +391,10 @@ func (j *jsiiProxy_DataSnowflakeFileFormats) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeFileFormats) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_DataSnowflakeFileFormats)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -390,7 +402,7 @@ func (j *jsiiProxy_DataSnowflakeFileFormats) SetLifecycle(val *cdktf.TerraformRe
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeFileFormats) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_DataSnowflakeFileFormats)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -398,7 +410,10 @@ func (j *jsiiProxy_DataSnowflakeFileFormats) SetProvider(val cdktf.TerraformProv
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeFileFormats) SetSchema(val *string) {
+func (j *jsiiProxy_DataSnowflakeFileFormats)SetSchema(val *string) {
+	if err := j.validateSetSchemaParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"schema",
@@ -426,6 +441,9 @@ func (j *jsiiProxy_DataSnowflakeFileFormats) SetSchema(val *string) {
 func DataSnowflakeFileFormats_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateDataSnowflakeFileFormats_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -450,6 +468,9 @@ func DataSnowflakeFileFormats_TfResourceType() *string {
 }
 
 func (d *jsiiProxy_DataSnowflakeFileFormats) AddOverride(path *string, value interface{}) {
+	if err := d.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		d,
 		"addOverride",
@@ -458,6 +479,9 @@ func (d *jsiiProxy_DataSnowflakeFileFormats) AddOverride(path *string, value int
 }
 
 func (d *jsiiProxy_DataSnowflakeFileFormats) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := d.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -471,6 +495,9 @@ func (d *jsiiProxy_DataSnowflakeFileFormats) GetAnyMapAttribute(terraformAttribu
 }
 
 func (d *jsiiProxy_DataSnowflakeFileFormats) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := d.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -484,6 +511,9 @@ func (d *jsiiProxy_DataSnowflakeFileFormats) GetBooleanAttribute(terraformAttrib
 }
 
 func (d *jsiiProxy_DataSnowflakeFileFormats) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := d.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -497,6 +527,9 @@ func (d *jsiiProxy_DataSnowflakeFileFormats) GetBooleanMapAttribute(terraformAtt
 }
 
 func (d *jsiiProxy_DataSnowflakeFileFormats) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := d.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -510,6 +543,9 @@ func (d *jsiiProxy_DataSnowflakeFileFormats) GetListAttribute(terraformAttribute
 }
 
 func (d *jsiiProxy_DataSnowflakeFileFormats) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := d.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -523,6 +559,9 @@ func (d *jsiiProxy_DataSnowflakeFileFormats) GetNumberAttribute(terraformAttribu
 }
 
 func (d *jsiiProxy_DataSnowflakeFileFormats) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := d.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -536,6 +575,9 @@ func (d *jsiiProxy_DataSnowflakeFileFormats) GetNumberListAttribute(terraformAtt
 }
 
 func (d *jsiiProxy_DataSnowflakeFileFormats) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := d.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -549,6 +591,9 @@ func (d *jsiiProxy_DataSnowflakeFileFormats) GetNumberMapAttribute(terraformAttr
 }
 
 func (d *jsiiProxy_DataSnowflakeFileFormats) GetStringAttribute(terraformAttribute *string) *string {
+	if err := d.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -562,6 +607,9 @@ func (d *jsiiProxy_DataSnowflakeFileFormats) GetStringAttribute(terraformAttribu
 }
 
 func (d *jsiiProxy_DataSnowflakeFileFormats) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := d.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -575,6 +623,9 @@ func (d *jsiiProxy_DataSnowflakeFileFormats) GetStringMapAttribute(terraformAttr
 }
 
 func (d *jsiiProxy_DataSnowflakeFileFormats) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := d.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -588,6 +639,9 @@ func (d *jsiiProxy_DataSnowflakeFileFormats) InterpolationForAttribute(terraform
 }
 
 func (d *jsiiProxy_DataSnowflakeFileFormats) OverrideLogicalId(newLogicalId *string) {
+	if err := d.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		d,
 		"overrideLogicalId",

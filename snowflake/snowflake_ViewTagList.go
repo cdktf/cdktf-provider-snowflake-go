@@ -111,6 +111,9 @@ func (j *jsiiProxy_ViewTagList) WrapsSet() *bool {
 func NewViewTagList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ViewTagList {
 	_init_.Initialize()
 
+	if err := validateNewViewTagListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ViewTagList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewViewTagList_Override(v ViewTagList, terraformResource cdktf.IInterpolati
 	)
 }
 
-func (j *jsiiProxy_ViewTagList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_ViewTagList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_ViewTagList) SetInternalValue(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ViewTagList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ViewTagList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_ViewTagList) SetTerraformAttribute(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ViewTagList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ViewTagList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_ViewTagList) SetTerraformResource(val cdktf.IInterpolatingPar
 	)
 }
 
-func (j *jsiiProxy_ViewTagList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_ViewTagList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (v *jsiiProxy_ViewTagList) ComputeFqn() *string {
 }
 
 func (v *jsiiProxy_ViewTagList) Get(index *float64) ViewTagOutputReference {
+	if err := v.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns ViewTagOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (v *jsiiProxy_ViewTagList) Get(index *float64) ViewTagOutputReference {
 }
 
 func (v *jsiiProxy_ViewTagList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := v.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

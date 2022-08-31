@@ -482,6 +482,9 @@ func (j *jsiiProxy_SchemaGrant) WithGrantOptionInput() interface{} {
 func NewSchemaGrant(scope constructs.Construct, id *string, config *SchemaGrantConfig) SchemaGrant {
 	_init_.Initialize()
 
+	if err := validateNewSchemaGrantParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_SchemaGrant{}
 
 	_jsii_.Create(
@@ -504,7 +507,10 @@ func NewSchemaGrant_Override(s SchemaGrant, scope constructs.Construct, id *stri
 	)
 }
 
-func (j *jsiiProxy_SchemaGrant) SetConnection(val interface{}) {
+func (j *jsiiProxy_SchemaGrant)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -512,7 +518,7 @@ func (j *jsiiProxy_SchemaGrant) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_SchemaGrant) SetCount(val *float64) {
+func (j *jsiiProxy_SchemaGrant)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -520,7 +526,10 @@ func (j *jsiiProxy_SchemaGrant) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_SchemaGrant) SetDatabaseName(val *string) {
+func (j *jsiiProxy_SchemaGrant)SetDatabaseName(val *string) {
+	if err := j.validateSetDatabaseNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"databaseName",
@@ -528,7 +537,7 @@ func (j *jsiiProxy_SchemaGrant) SetDatabaseName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SchemaGrant) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_SchemaGrant)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -536,7 +545,10 @@ func (j *jsiiProxy_SchemaGrant) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_SchemaGrant) SetEnableMultipleGrants(val interface{}) {
+func (j *jsiiProxy_SchemaGrant)SetEnableMultipleGrants(val interface{}) {
+	if err := j.validateSetEnableMultipleGrantsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"enableMultipleGrants",
@@ -544,7 +556,7 @@ func (j *jsiiProxy_SchemaGrant) SetEnableMultipleGrants(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_SchemaGrant) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_SchemaGrant)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -552,7 +564,10 @@ func (j *jsiiProxy_SchemaGrant) SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_SchemaGrant) SetId(val *string) {
+func (j *jsiiProxy_SchemaGrant)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -560,7 +575,10 @@ func (j *jsiiProxy_SchemaGrant) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SchemaGrant) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_SchemaGrant)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -568,7 +586,10 @@ func (j *jsiiProxy_SchemaGrant) SetLifecycle(val *cdktf.TerraformResourceLifecyc
 	)
 }
 
-func (j *jsiiProxy_SchemaGrant) SetOnFuture(val interface{}) {
+func (j *jsiiProxy_SchemaGrant)SetOnFuture(val interface{}) {
+	if err := j.validateSetOnFutureParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"onFuture",
@@ -576,7 +597,10 @@ func (j *jsiiProxy_SchemaGrant) SetOnFuture(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_SchemaGrant) SetPrivilege(val *string) {
+func (j *jsiiProxy_SchemaGrant)SetPrivilege(val *string) {
+	if err := j.validateSetPrivilegeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"privilege",
@@ -584,7 +608,7 @@ func (j *jsiiProxy_SchemaGrant) SetPrivilege(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SchemaGrant) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_SchemaGrant)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -592,7 +616,10 @@ func (j *jsiiProxy_SchemaGrant) SetProvider(val cdktf.TerraformProvider) {
 	)
 }
 
-func (j *jsiiProxy_SchemaGrant) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_SchemaGrant)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -600,7 +627,10 @@ func (j *jsiiProxy_SchemaGrant) SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_SchemaGrant) SetRoles(val *[]*string) {
+func (j *jsiiProxy_SchemaGrant)SetRoles(val *[]*string) {
+	if err := j.validateSetRolesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"roles",
@@ -608,7 +638,10 @@ func (j *jsiiProxy_SchemaGrant) SetRoles(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_SchemaGrant) SetSchemaName(val *string) {
+func (j *jsiiProxy_SchemaGrant)SetSchemaName(val *string) {
+	if err := j.validateSetSchemaNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"schemaName",
@@ -616,7 +649,10 @@ func (j *jsiiProxy_SchemaGrant) SetSchemaName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SchemaGrant) SetShares(val *[]*string) {
+func (j *jsiiProxy_SchemaGrant)SetShares(val *[]*string) {
+	if err := j.validateSetSharesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"shares",
@@ -624,7 +660,10 @@ func (j *jsiiProxy_SchemaGrant) SetShares(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_SchemaGrant) SetWithGrantOption(val interface{}) {
+func (j *jsiiProxy_SchemaGrant)SetWithGrantOption(val interface{}) {
+	if err := j.validateSetWithGrantOptionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"withGrantOption",
@@ -652,6 +691,9 @@ func (j *jsiiProxy_SchemaGrant) SetWithGrantOption(val interface{}) {
 func SchemaGrant_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateSchemaGrant_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -676,6 +718,9 @@ func SchemaGrant_TfResourceType() *string {
 }
 
 func (s *jsiiProxy_SchemaGrant) AddOverride(path *string, value interface{}) {
+	if err := s.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		s,
 		"addOverride",
@@ -684,6 +729,9 @@ func (s *jsiiProxy_SchemaGrant) AddOverride(path *string, value interface{}) {
 }
 
 func (s *jsiiProxy_SchemaGrant) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := s.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -697,6 +745,9 @@ func (s *jsiiProxy_SchemaGrant) GetAnyMapAttribute(terraformAttribute *string) *
 }
 
 func (s *jsiiProxy_SchemaGrant) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := s.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -710,6 +761,9 @@ func (s *jsiiProxy_SchemaGrant) GetBooleanAttribute(terraformAttribute *string) 
 }
 
 func (s *jsiiProxy_SchemaGrant) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := s.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -723,6 +777,9 @@ func (s *jsiiProxy_SchemaGrant) GetBooleanMapAttribute(terraformAttribute *strin
 }
 
 func (s *jsiiProxy_SchemaGrant) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := s.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -736,6 +793,9 @@ func (s *jsiiProxy_SchemaGrant) GetListAttribute(terraformAttribute *string) *[]
 }
 
 func (s *jsiiProxy_SchemaGrant) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := s.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -749,6 +809,9 @@ func (s *jsiiProxy_SchemaGrant) GetNumberAttribute(terraformAttribute *string) *
 }
 
 func (s *jsiiProxy_SchemaGrant) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := s.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -762,6 +825,9 @@ func (s *jsiiProxy_SchemaGrant) GetNumberListAttribute(terraformAttribute *strin
 }
 
 func (s *jsiiProxy_SchemaGrant) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := s.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -775,6 +841,9 @@ func (s *jsiiProxy_SchemaGrant) GetNumberMapAttribute(terraformAttribute *string
 }
 
 func (s *jsiiProxy_SchemaGrant) GetStringAttribute(terraformAttribute *string) *string {
+	if err := s.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -788,6 +857,9 @@ func (s *jsiiProxy_SchemaGrant) GetStringAttribute(terraformAttribute *string) *
 }
 
 func (s *jsiiProxy_SchemaGrant) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := s.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -801,6 +873,9 @@ func (s *jsiiProxy_SchemaGrant) GetStringMapAttribute(terraformAttribute *string
 }
 
 func (s *jsiiProxy_SchemaGrant) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := s.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -814,6 +889,9 @@ func (s *jsiiProxy_SchemaGrant) InterpolationForAttribute(terraformAttribute *st
 }
 
 func (s *jsiiProxy_SchemaGrant) OverrideLogicalId(newLogicalId *string) {
+	if err := s.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		s,
 		"overrideLogicalId",

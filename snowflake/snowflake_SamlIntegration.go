@@ -690,6 +690,9 @@ func (j *jsiiProxy_SamlIntegration) TerraformResourceType() *string {
 func NewSamlIntegration(scope constructs.Construct, id *string, config *SamlIntegrationConfig) SamlIntegration {
 	_init_.Initialize()
 
+	if err := validateNewSamlIntegrationParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_SamlIntegration{}
 
 	_jsii_.Create(
@@ -712,7 +715,10 @@ func NewSamlIntegration_Override(s SamlIntegration, scope constructs.Construct, 
 	)
 }
 
-func (j *jsiiProxy_SamlIntegration) SetConnection(val interface{}) {
+func (j *jsiiProxy_SamlIntegration)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -720,7 +726,7 @@ func (j *jsiiProxy_SamlIntegration) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_SamlIntegration) SetCount(val *float64) {
+func (j *jsiiProxy_SamlIntegration)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -728,7 +734,7 @@ func (j *jsiiProxy_SamlIntegration) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_SamlIntegration) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_SamlIntegration)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -736,7 +742,10 @@ func (j *jsiiProxy_SamlIntegration) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_SamlIntegration) SetEnabled(val interface{}) {
+func (j *jsiiProxy_SamlIntegration)SetEnabled(val interface{}) {
+	if err := j.validateSetEnabledParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"enabled",
@@ -744,7 +753,7 @@ func (j *jsiiProxy_SamlIntegration) SetEnabled(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_SamlIntegration) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_SamlIntegration)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -752,7 +761,10 @@ func (j *jsiiProxy_SamlIntegration) SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_SamlIntegration) SetId(val *string) {
+func (j *jsiiProxy_SamlIntegration)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -760,7 +772,10 @@ func (j *jsiiProxy_SamlIntegration) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SamlIntegration) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_SamlIntegration)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -768,7 +783,10 @@ func (j *jsiiProxy_SamlIntegration) SetLifecycle(val *cdktf.TerraformResourceLif
 	)
 }
 
-func (j *jsiiProxy_SamlIntegration) SetName(val *string) {
+func (j *jsiiProxy_SamlIntegration)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"name",
@@ -776,7 +794,7 @@ func (j *jsiiProxy_SamlIntegration) SetName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SamlIntegration) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_SamlIntegration)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -784,7 +802,10 @@ func (j *jsiiProxy_SamlIntegration) SetProvider(val cdktf.TerraformProvider) {
 	)
 }
 
-func (j *jsiiProxy_SamlIntegration) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_SamlIntegration)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -792,7 +813,10 @@ func (j *jsiiProxy_SamlIntegration) SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_SamlIntegration) SetSaml2EnableSpInitiated(val interface{}) {
+func (j *jsiiProxy_SamlIntegration)SetSaml2EnableSpInitiated(val interface{}) {
+	if err := j.validateSetSaml2EnableSpInitiatedParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"saml2EnableSpInitiated",
@@ -800,7 +824,10 @@ func (j *jsiiProxy_SamlIntegration) SetSaml2EnableSpInitiated(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_SamlIntegration) SetSaml2ForceAuthn(val interface{}) {
+func (j *jsiiProxy_SamlIntegration)SetSaml2ForceAuthn(val interface{}) {
+	if err := j.validateSetSaml2ForceAuthnParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"saml2ForceAuthn",
@@ -808,7 +835,10 @@ func (j *jsiiProxy_SamlIntegration) SetSaml2ForceAuthn(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_SamlIntegration) SetSaml2Issuer(val *string) {
+func (j *jsiiProxy_SamlIntegration)SetSaml2Issuer(val *string) {
+	if err := j.validateSetSaml2IssuerParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"saml2Issuer",
@@ -816,7 +846,10 @@ func (j *jsiiProxy_SamlIntegration) SetSaml2Issuer(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SamlIntegration) SetSaml2PostLogoutRedirectUrl(val *string) {
+func (j *jsiiProxy_SamlIntegration)SetSaml2PostLogoutRedirectUrl(val *string) {
+	if err := j.validateSetSaml2PostLogoutRedirectUrlParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"saml2PostLogoutRedirectUrl",
@@ -824,7 +857,10 @@ func (j *jsiiProxy_SamlIntegration) SetSaml2PostLogoutRedirectUrl(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SamlIntegration) SetSaml2Provider(val *string) {
+func (j *jsiiProxy_SamlIntegration)SetSaml2Provider(val *string) {
+	if err := j.validateSetSaml2ProviderParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"saml2Provider",
@@ -832,7 +868,10 @@ func (j *jsiiProxy_SamlIntegration) SetSaml2Provider(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SamlIntegration) SetSaml2RequestedNameidFormat(val *string) {
+func (j *jsiiProxy_SamlIntegration)SetSaml2RequestedNameidFormat(val *string) {
+	if err := j.validateSetSaml2RequestedNameidFormatParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"saml2RequestedNameidFormat",
@@ -840,7 +879,10 @@ func (j *jsiiProxy_SamlIntegration) SetSaml2RequestedNameidFormat(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SamlIntegration) SetSaml2SignRequest(val interface{}) {
+func (j *jsiiProxy_SamlIntegration)SetSaml2SignRequest(val interface{}) {
+	if err := j.validateSetSaml2SignRequestParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"saml2SignRequest",
@@ -848,7 +890,10 @@ func (j *jsiiProxy_SamlIntegration) SetSaml2SignRequest(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_SamlIntegration) SetSaml2SnowflakeAcsUrl(val *string) {
+func (j *jsiiProxy_SamlIntegration)SetSaml2SnowflakeAcsUrl(val *string) {
+	if err := j.validateSetSaml2SnowflakeAcsUrlParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"saml2SnowflakeAcsUrl",
@@ -856,7 +901,10 @@ func (j *jsiiProxy_SamlIntegration) SetSaml2SnowflakeAcsUrl(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SamlIntegration) SetSaml2SnowflakeIssuerUrl(val *string) {
+func (j *jsiiProxy_SamlIntegration)SetSaml2SnowflakeIssuerUrl(val *string) {
+	if err := j.validateSetSaml2SnowflakeIssuerUrlParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"saml2SnowflakeIssuerUrl",
@@ -864,7 +912,10 @@ func (j *jsiiProxy_SamlIntegration) SetSaml2SnowflakeIssuerUrl(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SamlIntegration) SetSaml2SnowflakeX509Cert(val *string) {
+func (j *jsiiProxy_SamlIntegration)SetSaml2SnowflakeX509Cert(val *string) {
+	if err := j.validateSetSaml2SnowflakeX509CertParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"saml2SnowflakeX509Cert",
@@ -872,7 +923,10 @@ func (j *jsiiProxy_SamlIntegration) SetSaml2SnowflakeX509Cert(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SamlIntegration) SetSaml2SpInitiatedLoginPageLabel(val *string) {
+func (j *jsiiProxy_SamlIntegration)SetSaml2SpInitiatedLoginPageLabel(val *string) {
+	if err := j.validateSetSaml2SpInitiatedLoginPageLabelParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"saml2SpInitiatedLoginPageLabel",
@@ -880,7 +934,10 @@ func (j *jsiiProxy_SamlIntegration) SetSaml2SpInitiatedLoginPageLabel(val *strin
 	)
 }
 
-func (j *jsiiProxy_SamlIntegration) SetSaml2SsoUrl(val *string) {
+func (j *jsiiProxy_SamlIntegration)SetSaml2SsoUrl(val *string) {
+	if err := j.validateSetSaml2SsoUrlParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"saml2SsoUrl",
@@ -888,7 +945,10 @@ func (j *jsiiProxy_SamlIntegration) SetSaml2SsoUrl(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SamlIntegration) SetSaml2X509Cert(val *string) {
+func (j *jsiiProxy_SamlIntegration)SetSaml2X509Cert(val *string) {
+	if err := j.validateSetSaml2X509CertParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"saml2X509Cert",
@@ -916,6 +976,9 @@ func (j *jsiiProxy_SamlIntegration) SetSaml2X509Cert(val *string) {
 func SamlIntegration_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateSamlIntegration_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -940,6 +1003,9 @@ func SamlIntegration_TfResourceType() *string {
 }
 
 func (s *jsiiProxy_SamlIntegration) AddOverride(path *string, value interface{}) {
+	if err := s.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		s,
 		"addOverride",
@@ -948,6 +1014,9 @@ func (s *jsiiProxy_SamlIntegration) AddOverride(path *string, value interface{})
 }
 
 func (s *jsiiProxy_SamlIntegration) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := s.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -961,6 +1030,9 @@ func (s *jsiiProxy_SamlIntegration) GetAnyMapAttribute(terraformAttribute *strin
 }
 
 func (s *jsiiProxy_SamlIntegration) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := s.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -974,6 +1046,9 @@ func (s *jsiiProxy_SamlIntegration) GetBooleanAttribute(terraformAttribute *stri
 }
 
 func (s *jsiiProxy_SamlIntegration) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := s.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -987,6 +1062,9 @@ func (s *jsiiProxy_SamlIntegration) GetBooleanMapAttribute(terraformAttribute *s
 }
 
 func (s *jsiiProxy_SamlIntegration) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := s.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -1000,6 +1078,9 @@ func (s *jsiiProxy_SamlIntegration) GetListAttribute(terraformAttribute *string)
 }
 
 func (s *jsiiProxy_SamlIntegration) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := s.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -1013,6 +1094,9 @@ func (s *jsiiProxy_SamlIntegration) GetNumberAttribute(terraformAttribute *strin
 }
 
 func (s *jsiiProxy_SamlIntegration) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := s.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -1026,6 +1110,9 @@ func (s *jsiiProxy_SamlIntegration) GetNumberListAttribute(terraformAttribute *s
 }
 
 func (s *jsiiProxy_SamlIntegration) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := s.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -1039,6 +1126,9 @@ func (s *jsiiProxy_SamlIntegration) GetNumberMapAttribute(terraformAttribute *st
 }
 
 func (s *jsiiProxy_SamlIntegration) GetStringAttribute(terraformAttribute *string) *string {
+	if err := s.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -1052,6 +1142,9 @@ func (s *jsiiProxy_SamlIntegration) GetStringAttribute(terraformAttribute *strin
 }
 
 func (s *jsiiProxy_SamlIntegration) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := s.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -1065,6 +1158,9 @@ func (s *jsiiProxy_SamlIntegration) GetStringMapAttribute(terraformAttribute *st
 }
 
 func (s *jsiiProxy_SamlIntegration) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := s.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -1078,6 +1174,9 @@ func (s *jsiiProxy_SamlIntegration) InterpolationForAttribute(terraformAttribute
 }
 
 func (s *jsiiProxy_SamlIntegration) OverrideLogicalId(newLogicalId *string) {
+	if err := s.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		s,
 		"overrideLogicalId",

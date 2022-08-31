@@ -1127,6 +1127,9 @@ func (j *jsiiProxy_FileFormat) TrimSpaceInput() interface{} {
 func NewFileFormat(scope constructs.Construct, id *string, config *FileFormatConfig) FileFormat {
 	_init_.Initialize()
 
+	if err := validateNewFileFormatParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_FileFormat{}
 
 	_jsii_.Create(
@@ -1149,7 +1152,10 @@ func NewFileFormat_Override(f FileFormat, scope constructs.Construct, id *string
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetAllowDuplicate(val interface{}) {
+func (j *jsiiProxy_FileFormat)SetAllowDuplicate(val interface{}) {
+	if err := j.validateSetAllowDuplicateParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"allowDuplicate",
@@ -1157,7 +1163,10 @@ func (j *jsiiProxy_FileFormat) SetAllowDuplicate(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetBinaryAsText(val interface{}) {
+func (j *jsiiProxy_FileFormat)SetBinaryAsText(val interface{}) {
+	if err := j.validateSetBinaryAsTextParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"binaryAsText",
@@ -1165,7 +1174,10 @@ func (j *jsiiProxy_FileFormat) SetBinaryAsText(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetBinaryFormat(val *string) {
+func (j *jsiiProxy_FileFormat)SetBinaryFormat(val *string) {
+	if err := j.validateSetBinaryFormatParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"binaryFormat",
@@ -1173,7 +1185,10 @@ func (j *jsiiProxy_FileFormat) SetBinaryFormat(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetComment(val *string) {
+func (j *jsiiProxy_FileFormat)SetComment(val *string) {
+	if err := j.validateSetCommentParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"comment",
@@ -1181,7 +1196,10 @@ func (j *jsiiProxy_FileFormat) SetComment(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetCompression(val *string) {
+func (j *jsiiProxy_FileFormat)SetCompression(val *string) {
+	if err := j.validateSetCompressionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"compression",
@@ -1189,7 +1207,10 @@ func (j *jsiiProxy_FileFormat) SetCompression(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetConnection(val interface{}) {
+func (j *jsiiProxy_FileFormat)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -1197,7 +1218,7 @@ func (j *jsiiProxy_FileFormat) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetCount(val *float64) {
+func (j *jsiiProxy_FileFormat)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -1205,7 +1226,10 @@ func (j *jsiiProxy_FileFormat) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetDatabase(val *string) {
+func (j *jsiiProxy_FileFormat)SetDatabase(val *string) {
+	if err := j.validateSetDatabaseParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"database",
@@ -1213,7 +1237,10 @@ func (j *jsiiProxy_FileFormat) SetDatabase(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetDateFormat(val *string) {
+func (j *jsiiProxy_FileFormat)SetDateFormat(val *string) {
+	if err := j.validateSetDateFormatParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"dateFormat",
@@ -1221,7 +1248,7 @@ func (j *jsiiProxy_FileFormat) SetDateFormat(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_FileFormat)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -1229,7 +1256,10 @@ func (j *jsiiProxy_FileFormat) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetDisableAutoConvert(val interface{}) {
+func (j *jsiiProxy_FileFormat)SetDisableAutoConvert(val interface{}) {
+	if err := j.validateSetDisableAutoConvertParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"disableAutoConvert",
@@ -1237,7 +1267,10 @@ func (j *jsiiProxy_FileFormat) SetDisableAutoConvert(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetDisableSnowflakeData(val interface{}) {
+func (j *jsiiProxy_FileFormat)SetDisableSnowflakeData(val interface{}) {
+	if err := j.validateSetDisableSnowflakeDataParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"disableSnowflakeData",
@@ -1245,7 +1278,10 @@ func (j *jsiiProxy_FileFormat) SetDisableSnowflakeData(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetEmptyFieldAsNull(val interface{}) {
+func (j *jsiiProxy_FileFormat)SetEmptyFieldAsNull(val interface{}) {
+	if err := j.validateSetEmptyFieldAsNullParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"emptyFieldAsNull",
@@ -1253,7 +1289,10 @@ func (j *jsiiProxy_FileFormat) SetEmptyFieldAsNull(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetEnableOctal(val interface{}) {
+func (j *jsiiProxy_FileFormat)SetEnableOctal(val interface{}) {
+	if err := j.validateSetEnableOctalParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"enableOctal",
@@ -1261,7 +1300,10 @@ func (j *jsiiProxy_FileFormat) SetEnableOctal(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetEncoding(val *string) {
+func (j *jsiiProxy_FileFormat)SetEncoding(val *string) {
+	if err := j.validateSetEncodingParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"encoding",
@@ -1269,7 +1311,10 @@ func (j *jsiiProxy_FileFormat) SetEncoding(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetErrorOnColumnCountMismatch(val interface{}) {
+func (j *jsiiProxy_FileFormat)SetErrorOnColumnCountMismatch(val interface{}) {
+	if err := j.validateSetErrorOnColumnCountMismatchParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"errorOnColumnCountMismatch",
@@ -1277,7 +1322,10 @@ func (j *jsiiProxy_FileFormat) SetErrorOnColumnCountMismatch(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetEscape(val *string) {
+func (j *jsiiProxy_FileFormat)SetEscape(val *string) {
+	if err := j.validateSetEscapeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"escape",
@@ -1285,7 +1333,10 @@ func (j *jsiiProxy_FileFormat) SetEscape(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetEscapeUnenclosedField(val *string) {
+func (j *jsiiProxy_FileFormat)SetEscapeUnenclosedField(val *string) {
+	if err := j.validateSetEscapeUnenclosedFieldParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"escapeUnenclosedField",
@@ -1293,7 +1344,10 @@ func (j *jsiiProxy_FileFormat) SetEscapeUnenclosedField(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetFieldDelimiter(val *string) {
+func (j *jsiiProxy_FileFormat)SetFieldDelimiter(val *string) {
+	if err := j.validateSetFieldDelimiterParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"fieldDelimiter",
@@ -1301,7 +1355,10 @@ func (j *jsiiProxy_FileFormat) SetFieldDelimiter(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetFieldOptionallyEnclosedBy(val *string) {
+func (j *jsiiProxy_FileFormat)SetFieldOptionallyEnclosedBy(val *string) {
+	if err := j.validateSetFieldOptionallyEnclosedByParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"fieldOptionallyEnclosedBy",
@@ -1309,7 +1366,10 @@ func (j *jsiiProxy_FileFormat) SetFieldOptionallyEnclosedBy(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetFileExtension(val *string) {
+func (j *jsiiProxy_FileFormat)SetFileExtension(val *string) {
+	if err := j.validateSetFileExtensionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"fileExtension",
@@ -1317,7 +1377,7 @@ func (j *jsiiProxy_FileFormat) SetFileExtension(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_FileFormat)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -1325,7 +1385,10 @@ func (j *jsiiProxy_FileFormat) SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetFormatType(val *string) {
+func (j *jsiiProxy_FileFormat)SetFormatType(val *string) {
+	if err := j.validateSetFormatTypeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"formatType",
@@ -1333,7 +1396,10 @@ func (j *jsiiProxy_FileFormat) SetFormatType(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetId(val *string) {
+func (j *jsiiProxy_FileFormat)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -1341,7 +1407,10 @@ func (j *jsiiProxy_FileFormat) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetIgnoreUtf8Errors(val interface{}) {
+func (j *jsiiProxy_FileFormat)SetIgnoreUtf8Errors(val interface{}) {
+	if err := j.validateSetIgnoreUtf8ErrorsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"ignoreUtf8Errors",
@@ -1349,7 +1418,10 @@ func (j *jsiiProxy_FileFormat) SetIgnoreUtf8Errors(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_FileFormat)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -1357,7 +1429,10 @@ func (j *jsiiProxy_FileFormat) SetLifecycle(val *cdktf.TerraformResourceLifecycl
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetName(val *string) {
+func (j *jsiiProxy_FileFormat)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"name",
@@ -1365,7 +1440,10 @@ func (j *jsiiProxy_FileFormat) SetName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetNullIf(val *[]*string) {
+func (j *jsiiProxy_FileFormat)SetNullIf(val *[]*string) {
+	if err := j.validateSetNullIfParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"nullIf",
@@ -1373,7 +1451,10 @@ func (j *jsiiProxy_FileFormat) SetNullIf(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetPreserveSpace(val interface{}) {
+func (j *jsiiProxy_FileFormat)SetPreserveSpace(val interface{}) {
+	if err := j.validateSetPreserveSpaceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"preserveSpace",
@@ -1381,7 +1462,7 @@ func (j *jsiiProxy_FileFormat) SetPreserveSpace(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_FileFormat)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -1389,7 +1470,10 @@ func (j *jsiiProxy_FileFormat) SetProvider(val cdktf.TerraformProvider) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_FileFormat)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -1397,7 +1481,10 @@ func (j *jsiiProxy_FileFormat) SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetRecordDelimiter(val *string) {
+func (j *jsiiProxy_FileFormat)SetRecordDelimiter(val *string) {
+	if err := j.validateSetRecordDelimiterParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"recordDelimiter",
@@ -1405,7 +1492,10 @@ func (j *jsiiProxy_FileFormat) SetRecordDelimiter(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetReplaceInvalidCharacters(val interface{}) {
+func (j *jsiiProxy_FileFormat)SetReplaceInvalidCharacters(val interface{}) {
+	if err := j.validateSetReplaceInvalidCharactersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"replaceInvalidCharacters",
@@ -1413,7 +1503,10 @@ func (j *jsiiProxy_FileFormat) SetReplaceInvalidCharacters(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetSchema(val *string) {
+func (j *jsiiProxy_FileFormat)SetSchema(val *string) {
+	if err := j.validateSetSchemaParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"schema",
@@ -1421,7 +1514,10 @@ func (j *jsiiProxy_FileFormat) SetSchema(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetSkipBlankLines(val interface{}) {
+func (j *jsiiProxy_FileFormat)SetSkipBlankLines(val interface{}) {
+	if err := j.validateSetSkipBlankLinesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"skipBlankLines",
@@ -1429,7 +1525,10 @@ func (j *jsiiProxy_FileFormat) SetSkipBlankLines(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetSkipByteOrderMark(val interface{}) {
+func (j *jsiiProxy_FileFormat)SetSkipByteOrderMark(val interface{}) {
+	if err := j.validateSetSkipByteOrderMarkParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"skipByteOrderMark",
@@ -1437,7 +1536,10 @@ func (j *jsiiProxy_FileFormat) SetSkipByteOrderMark(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetSkipHeader(val *float64) {
+func (j *jsiiProxy_FileFormat)SetSkipHeader(val *float64) {
+	if err := j.validateSetSkipHeaderParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"skipHeader",
@@ -1445,7 +1547,10 @@ func (j *jsiiProxy_FileFormat) SetSkipHeader(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetStripNullValues(val interface{}) {
+func (j *jsiiProxy_FileFormat)SetStripNullValues(val interface{}) {
+	if err := j.validateSetStripNullValuesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"stripNullValues",
@@ -1453,7 +1558,10 @@ func (j *jsiiProxy_FileFormat) SetStripNullValues(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetStripOuterArray(val interface{}) {
+func (j *jsiiProxy_FileFormat)SetStripOuterArray(val interface{}) {
+	if err := j.validateSetStripOuterArrayParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"stripOuterArray",
@@ -1461,7 +1569,10 @@ func (j *jsiiProxy_FileFormat) SetStripOuterArray(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetStripOuterElement(val interface{}) {
+func (j *jsiiProxy_FileFormat)SetStripOuterElement(val interface{}) {
+	if err := j.validateSetStripOuterElementParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"stripOuterElement",
@@ -1469,7 +1580,10 @@ func (j *jsiiProxy_FileFormat) SetStripOuterElement(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetTimeFormat(val *string) {
+func (j *jsiiProxy_FileFormat)SetTimeFormat(val *string) {
+	if err := j.validateSetTimeFormatParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"timeFormat",
@@ -1477,7 +1591,10 @@ func (j *jsiiProxy_FileFormat) SetTimeFormat(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetTimestampFormat(val *string) {
+func (j *jsiiProxy_FileFormat)SetTimestampFormat(val *string) {
+	if err := j.validateSetTimestampFormatParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"timestampFormat",
@@ -1485,7 +1602,10 @@ func (j *jsiiProxy_FileFormat) SetTimestampFormat(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormat) SetTrimSpace(val interface{}) {
+func (j *jsiiProxy_FileFormat)SetTrimSpace(val interface{}) {
+	if err := j.validateSetTrimSpaceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"trimSpace",
@@ -1513,6 +1633,9 @@ func (j *jsiiProxy_FileFormat) SetTrimSpace(val interface{}) {
 func FileFormat_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateFileFormat_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -1537,6 +1660,9 @@ func FileFormat_TfResourceType() *string {
 }
 
 func (f *jsiiProxy_FileFormat) AddOverride(path *string, value interface{}) {
+	if err := f.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		f,
 		"addOverride",
@@ -1545,6 +1671,9 @@ func (f *jsiiProxy_FileFormat) AddOverride(path *string, value interface{}) {
 }
 
 func (f *jsiiProxy_FileFormat) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := f.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -1558,6 +1687,9 @@ func (f *jsiiProxy_FileFormat) GetAnyMapAttribute(terraformAttribute *string) *m
 }
 
 func (f *jsiiProxy_FileFormat) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := f.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -1571,6 +1703,9 @@ func (f *jsiiProxy_FileFormat) GetBooleanAttribute(terraformAttribute *string) c
 }
 
 func (f *jsiiProxy_FileFormat) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := f.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -1584,6 +1719,9 @@ func (f *jsiiProxy_FileFormat) GetBooleanMapAttribute(terraformAttribute *string
 }
 
 func (f *jsiiProxy_FileFormat) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := f.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -1597,6 +1735,9 @@ func (f *jsiiProxy_FileFormat) GetListAttribute(terraformAttribute *string) *[]*
 }
 
 func (f *jsiiProxy_FileFormat) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := f.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -1610,6 +1751,9 @@ func (f *jsiiProxy_FileFormat) GetNumberAttribute(terraformAttribute *string) *f
 }
 
 func (f *jsiiProxy_FileFormat) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := f.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -1623,6 +1767,9 @@ func (f *jsiiProxy_FileFormat) GetNumberListAttribute(terraformAttribute *string
 }
 
 func (f *jsiiProxy_FileFormat) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := f.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -1636,6 +1783,9 @@ func (f *jsiiProxy_FileFormat) GetNumberMapAttribute(terraformAttribute *string)
 }
 
 func (f *jsiiProxy_FileFormat) GetStringAttribute(terraformAttribute *string) *string {
+	if err := f.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -1649,6 +1799,9 @@ func (f *jsiiProxy_FileFormat) GetStringAttribute(terraformAttribute *string) *s
 }
 
 func (f *jsiiProxy_FileFormat) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := f.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -1662,6 +1815,9 @@ func (f *jsiiProxy_FileFormat) GetStringMapAttribute(terraformAttribute *string)
 }
 
 func (f *jsiiProxy_FileFormat) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := f.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -1675,6 +1831,9 @@ func (f *jsiiProxy_FileFormat) InterpolationForAttribute(terraformAttribute *str
 }
 
 func (f *jsiiProxy_FileFormat) OverrideLogicalId(newLogicalId *string) {
+	if err := f.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		f,
 		"overrideLogicalId",

@@ -481,6 +481,9 @@ func (j *jsiiProxy_FileFormatGrant) WithGrantOptionInput() interface{} {
 func NewFileFormatGrant(scope constructs.Construct, id *string, config *FileFormatGrantConfig) FileFormatGrant {
 	_init_.Initialize()
 
+	if err := validateNewFileFormatGrantParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_FileFormatGrant{}
 
 	_jsii_.Create(
@@ -503,7 +506,10 @@ func NewFileFormatGrant_Override(f FileFormatGrant, scope constructs.Construct, 
 	)
 }
 
-func (j *jsiiProxy_FileFormatGrant) SetConnection(val interface{}) {
+func (j *jsiiProxy_FileFormatGrant)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -511,7 +517,7 @@ func (j *jsiiProxy_FileFormatGrant) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FileFormatGrant) SetCount(val *float64) {
+func (j *jsiiProxy_FileFormatGrant)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -519,7 +525,10 @@ func (j *jsiiProxy_FileFormatGrant) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_FileFormatGrant) SetDatabaseName(val *string) {
+func (j *jsiiProxy_FileFormatGrant)SetDatabaseName(val *string) {
+	if err := j.validateSetDatabaseNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"databaseName",
@@ -527,7 +536,7 @@ func (j *jsiiProxy_FileFormatGrant) SetDatabaseName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormatGrant) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_FileFormatGrant)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -535,7 +544,10 @@ func (j *jsiiProxy_FileFormatGrant) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormatGrant) SetEnableMultipleGrants(val interface{}) {
+func (j *jsiiProxy_FileFormatGrant)SetEnableMultipleGrants(val interface{}) {
+	if err := j.validateSetEnableMultipleGrantsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"enableMultipleGrants",
@@ -543,7 +555,10 @@ func (j *jsiiProxy_FileFormatGrant) SetEnableMultipleGrants(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FileFormatGrant) SetFileFormatName(val *string) {
+func (j *jsiiProxy_FileFormatGrant)SetFileFormatName(val *string) {
+	if err := j.validateSetFileFormatNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"fileFormatName",
@@ -551,7 +566,7 @@ func (j *jsiiProxy_FileFormatGrant) SetFileFormatName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormatGrant) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_FileFormatGrant)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -559,7 +574,10 @@ func (j *jsiiProxy_FileFormatGrant) SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_FileFormatGrant) SetId(val *string) {
+func (j *jsiiProxy_FileFormatGrant)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -567,7 +585,10 @@ func (j *jsiiProxy_FileFormatGrant) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormatGrant) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_FileFormatGrant)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -575,7 +596,10 @@ func (j *jsiiProxy_FileFormatGrant) SetLifecycle(val *cdktf.TerraformResourceLif
 	)
 }
 
-func (j *jsiiProxy_FileFormatGrant) SetOnFuture(val interface{}) {
+func (j *jsiiProxy_FileFormatGrant)SetOnFuture(val interface{}) {
+	if err := j.validateSetOnFutureParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"onFuture",
@@ -583,7 +607,10 @@ func (j *jsiiProxy_FileFormatGrant) SetOnFuture(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FileFormatGrant) SetPrivilege(val *string) {
+func (j *jsiiProxy_FileFormatGrant)SetPrivilege(val *string) {
+	if err := j.validateSetPrivilegeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"privilege",
@@ -591,7 +618,7 @@ func (j *jsiiProxy_FileFormatGrant) SetPrivilege(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormatGrant) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_FileFormatGrant)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -599,7 +626,10 @@ func (j *jsiiProxy_FileFormatGrant) SetProvider(val cdktf.TerraformProvider) {
 	)
 }
 
-func (j *jsiiProxy_FileFormatGrant) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_FileFormatGrant)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -607,7 +637,10 @@ func (j *jsiiProxy_FileFormatGrant) SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FileFormatGrant) SetRoles(val *[]*string) {
+func (j *jsiiProxy_FileFormatGrant)SetRoles(val *[]*string) {
+	if err := j.validateSetRolesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"roles",
@@ -615,7 +648,10 @@ func (j *jsiiProxy_FileFormatGrant) SetRoles(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormatGrant) SetSchemaName(val *string) {
+func (j *jsiiProxy_FileFormatGrant)SetSchemaName(val *string) {
+	if err := j.validateSetSchemaNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"schemaName",
@@ -623,7 +659,10 @@ func (j *jsiiProxy_FileFormatGrant) SetSchemaName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_FileFormatGrant) SetWithGrantOption(val interface{}) {
+func (j *jsiiProxy_FileFormatGrant)SetWithGrantOption(val interface{}) {
+	if err := j.validateSetWithGrantOptionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"withGrantOption",
@@ -651,6 +690,9 @@ func (j *jsiiProxy_FileFormatGrant) SetWithGrantOption(val interface{}) {
 func FileFormatGrant_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateFileFormatGrant_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -675,6 +717,9 @@ func FileFormatGrant_TfResourceType() *string {
 }
 
 func (f *jsiiProxy_FileFormatGrant) AddOverride(path *string, value interface{}) {
+	if err := f.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		f,
 		"addOverride",
@@ -683,6 +728,9 @@ func (f *jsiiProxy_FileFormatGrant) AddOverride(path *string, value interface{})
 }
 
 func (f *jsiiProxy_FileFormatGrant) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := f.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -696,6 +744,9 @@ func (f *jsiiProxy_FileFormatGrant) GetAnyMapAttribute(terraformAttribute *strin
 }
 
 func (f *jsiiProxy_FileFormatGrant) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := f.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -709,6 +760,9 @@ func (f *jsiiProxy_FileFormatGrant) GetBooleanAttribute(terraformAttribute *stri
 }
 
 func (f *jsiiProxy_FileFormatGrant) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := f.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -722,6 +776,9 @@ func (f *jsiiProxy_FileFormatGrant) GetBooleanMapAttribute(terraformAttribute *s
 }
 
 func (f *jsiiProxy_FileFormatGrant) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := f.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -735,6 +792,9 @@ func (f *jsiiProxy_FileFormatGrant) GetListAttribute(terraformAttribute *string)
 }
 
 func (f *jsiiProxy_FileFormatGrant) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := f.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -748,6 +808,9 @@ func (f *jsiiProxy_FileFormatGrant) GetNumberAttribute(terraformAttribute *strin
 }
 
 func (f *jsiiProxy_FileFormatGrant) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := f.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -761,6 +824,9 @@ func (f *jsiiProxy_FileFormatGrant) GetNumberListAttribute(terraformAttribute *s
 }
 
 func (f *jsiiProxy_FileFormatGrant) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := f.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -774,6 +840,9 @@ func (f *jsiiProxy_FileFormatGrant) GetNumberMapAttribute(terraformAttribute *st
 }
 
 func (f *jsiiProxy_FileFormatGrant) GetStringAttribute(terraformAttribute *string) *string {
+	if err := f.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -787,6 +856,9 @@ func (f *jsiiProxy_FileFormatGrant) GetStringAttribute(terraformAttribute *strin
 }
 
 func (f *jsiiProxy_FileFormatGrant) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := f.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -800,6 +872,9 @@ func (f *jsiiProxy_FileFormatGrant) GetStringMapAttribute(terraformAttribute *st
 }
 
 func (f *jsiiProxy_FileFormatGrant) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := f.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -813,6 +888,9 @@ func (f *jsiiProxy_FileFormatGrant) InterpolationForAttribute(terraformAttribute
 }
 
 func (f *jsiiProxy_FileFormatGrant) OverrideLogicalId(newLogicalId *string) {
+	if err := f.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		f,
 		"overrideLogicalId",

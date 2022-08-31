@@ -223,6 +223,9 @@ func (j *jsiiProxy_TableColumnDefaultOutputReference) TerraformResource() cdktf.
 func NewTableColumnDefaultOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) TableColumnDefaultOutputReference {
 	_init_.Initialize()
 
+	if err := validateNewTableColumnDefaultOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_TableColumnDefaultOutputReference{}
 
 	_jsii_.Create(
@@ -244,7 +247,10 @@ func NewTableColumnDefaultOutputReference_Override(t TableColumnDefaultOutputRef
 	)
 }
 
-func (j *jsiiProxy_TableColumnDefaultOutputReference) SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_TableColumnDefaultOutputReference)SetComplexObjectIndex(val interface{}) {
+	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIndex",
@@ -252,7 +258,10 @@ func (j *jsiiProxy_TableColumnDefaultOutputReference) SetComplexObjectIndex(val 
 	)
 }
 
-func (j *jsiiProxy_TableColumnDefaultOutputReference) SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_TableColumnDefaultOutputReference)SetComplexObjectIsFromSet(val *bool) {
+	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
@@ -260,7 +269,10 @@ func (j *jsiiProxy_TableColumnDefaultOutputReference) SetComplexObjectIsFromSet(
 	)
 }
 
-func (j *jsiiProxy_TableColumnDefaultOutputReference) SetConstant(val *string) {
+func (j *jsiiProxy_TableColumnDefaultOutputReference)SetConstant(val *string) {
+	if err := j.validateSetConstantParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"constant",
@@ -268,7 +280,10 @@ func (j *jsiiProxy_TableColumnDefaultOutputReference) SetConstant(val *string) {
 	)
 }
 
-func (j *jsiiProxy_TableColumnDefaultOutputReference) SetExpression(val *string) {
+func (j *jsiiProxy_TableColumnDefaultOutputReference)SetExpression(val *string) {
+	if err := j.validateSetExpressionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"expression",
@@ -276,7 +291,10 @@ func (j *jsiiProxy_TableColumnDefaultOutputReference) SetExpression(val *string)
 	)
 }
 
-func (j *jsiiProxy_TableColumnDefaultOutputReference) SetInternalValue(val *TableColumnDefault) {
+func (j *jsiiProxy_TableColumnDefaultOutputReference)SetInternalValue(val *TableColumnDefault) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -284,7 +302,10 @@ func (j *jsiiProxy_TableColumnDefaultOutputReference) SetInternalValue(val *Tabl
 	)
 }
 
-func (j *jsiiProxy_TableColumnDefaultOutputReference) SetSequence(val *string) {
+func (j *jsiiProxy_TableColumnDefaultOutputReference)SetSequence(val *string) {
+	if err := j.validateSetSequenceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"sequence",
@@ -292,7 +313,10 @@ func (j *jsiiProxy_TableColumnDefaultOutputReference) SetSequence(val *string) {
 	)
 }
 
-func (j *jsiiProxy_TableColumnDefaultOutputReference) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_TableColumnDefaultOutputReference)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -300,7 +324,10 @@ func (j *jsiiProxy_TableColumnDefaultOutputReference) SetTerraformAttribute(val 
 	)
 }
 
-func (j *jsiiProxy_TableColumnDefaultOutputReference) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_TableColumnDefaultOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -322,6 +349,9 @@ func (t *jsiiProxy_TableColumnDefaultOutputReference) ComputeFqn() *string {
 }
 
 func (t *jsiiProxy_TableColumnDefaultOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := t.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -335,6 +365,9 @@ func (t *jsiiProxy_TableColumnDefaultOutputReference) GetAnyMapAttribute(terrafo
 }
 
 func (t *jsiiProxy_TableColumnDefaultOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := t.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -348,6 +381,9 @@ func (t *jsiiProxy_TableColumnDefaultOutputReference) GetBooleanAttribute(terraf
 }
 
 func (t *jsiiProxy_TableColumnDefaultOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := t.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -361,6 +397,9 @@ func (t *jsiiProxy_TableColumnDefaultOutputReference) GetBooleanMapAttribute(ter
 }
 
 func (t *jsiiProxy_TableColumnDefaultOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := t.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -374,6 +413,9 @@ func (t *jsiiProxy_TableColumnDefaultOutputReference) GetListAttribute(terraform
 }
 
 func (t *jsiiProxy_TableColumnDefaultOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := t.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -387,6 +429,9 @@ func (t *jsiiProxy_TableColumnDefaultOutputReference) GetNumberAttribute(terrafo
 }
 
 func (t *jsiiProxy_TableColumnDefaultOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := t.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -400,6 +445,9 @@ func (t *jsiiProxy_TableColumnDefaultOutputReference) GetNumberListAttribute(ter
 }
 
 func (t *jsiiProxy_TableColumnDefaultOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := t.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -413,6 +461,9 @@ func (t *jsiiProxy_TableColumnDefaultOutputReference) GetNumberMapAttribute(terr
 }
 
 func (t *jsiiProxy_TableColumnDefaultOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := t.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -426,6 +477,9 @@ func (t *jsiiProxy_TableColumnDefaultOutputReference) GetStringAttribute(terrafo
 }
 
 func (t *jsiiProxy_TableColumnDefaultOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := t.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -452,6 +506,9 @@ func (t *jsiiProxy_TableColumnDefaultOutputReference) InterpolationAsList() cdkt
 }
 
 func (t *jsiiProxy_TableColumnDefaultOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := t.validateInterpolationForAttributeParameters(property); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -489,6 +546,9 @@ func (t *jsiiProxy_TableColumnDefaultOutputReference) ResetSequence() {
 }
 
 func (t *jsiiProxy_TableColumnDefaultOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := t.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

@@ -99,6 +99,9 @@ func (j *jsiiProxy_DataSnowflakeFunctionsFunctionsList) WrapsSet() *bool {
 func NewDataSnowflakeFunctionsFunctionsList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataSnowflakeFunctionsFunctionsList {
 	_init_.Initialize()
 
+	if err := validateNewDataSnowflakeFunctionsFunctionsListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_DataSnowflakeFunctionsFunctionsList{}
 
 	_jsii_.Create(
@@ -120,7 +123,10 @@ func NewDataSnowflakeFunctionsFunctionsList_Override(d DataSnowflakeFunctionsFun
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeFunctionsFunctionsList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_DataSnowflakeFunctionsFunctionsList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -128,7 +134,10 @@ func (j *jsiiProxy_DataSnowflakeFunctionsFunctionsList) SetTerraformAttribute(va
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeFunctionsFunctionsList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_DataSnowflakeFunctionsFunctionsList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -136,7 +145,10 @@ func (j *jsiiProxy_DataSnowflakeFunctionsFunctionsList) SetTerraformResource(val
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeFunctionsFunctionsList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_DataSnowflakeFunctionsFunctionsList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -158,6 +170,9 @@ func (d *jsiiProxy_DataSnowflakeFunctionsFunctionsList) ComputeFqn() *string {
 }
 
 func (d *jsiiProxy_DataSnowflakeFunctionsFunctionsList) Get(index *float64) DataSnowflakeFunctionsFunctionsOutputReference {
+	if err := d.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns DataSnowflakeFunctionsFunctionsOutputReference
 
 	_jsii_.Invoke(
@@ -171,6 +186,9 @@ func (d *jsiiProxy_DataSnowflakeFunctionsFunctionsList) Get(index *float64) Data
 }
 
 func (d *jsiiProxy_DataSnowflakeFunctionsFunctionsList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := d.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

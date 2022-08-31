@@ -111,6 +111,9 @@ func (j *jsiiProxy_SchemaTagList) WrapsSet() *bool {
 func NewSchemaTagList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SchemaTagList {
 	_init_.Initialize()
 
+	if err := validateNewSchemaTagListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_SchemaTagList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewSchemaTagList_Override(s SchemaTagList, terraformResource cdktf.IInterpo
 	)
 }
 
-func (j *jsiiProxy_SchemaTagList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_SchemaTagList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_SchemaTagList) SetInternalValue(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_SchemaTagList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_SchemaTagList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_SchemaTagList) SetTerraformAttribute(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SchemaTagList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_SchemaTagList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_SchemaTagList) SetTerraformResource(val cdktf.IInterpolatingP
 	)
 }
 
-func (j *jsiiProxy_SchemaTagList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_SchemaTagList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (s *jsiiProxy_SchemaTagList) ComputeFqn() *string {
 }
 
 func (s *jsiiProxy_SchemaTagList) Get(index *float64) SchemaTagOutputReference {
+	if err := s.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns SchemaTagOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (s *jsiiProxy_SchemaTagList) Get(index *float64) SchemaTagOutputReference {
 }
 
 func (s *jsiiProxy_SchemaTagList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := s.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

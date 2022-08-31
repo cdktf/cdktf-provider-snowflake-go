@@ -245,6 +245,9 @@ func (j *jsiiProxy_WarehouseTagOutputReference) ValueInput() *string {
 func NewWarehouseTagOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) WarehouseTagOutputReference {
 	_init_.Initialize()
 
+	if err := validateNewWarehouseTagOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_WarehouseTagOutputReference{}
 
 	_jsii_.Create(
@@ -266,7 +269,10 @@ func NewWarehouseTagOutputReference_Override(w WarehouseTagOutputReference, terr
 	)
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_WarehouseTagOutputReference)SetComplexObjectIndex(val interface{}) {
+	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIndex",
@@ -274,7 +280,10 @@ func (j *jsiiProxy_WarehouseTagOutputReference) SetComplexObjectIndex(val interf
 	)
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_WarehouseTagOutputReference)SetComplexObjectIsFromSet(val *bool) {
+	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
@@ -282,7 +291,10 @@ func (j *jsiiProxy_WarehouseTagOutputReference) SetComplexObjectIsFromSet(val *b
 	)
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) SetDatabase(val *string) {
+func (j *jsiiProxy_WarehouseTagOutputReference)SetDatabase(val *string) {
+	if err := j.validateSetDatabaseParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"database",
@@ -290,7 +302,10 @@ func (j *jsiiProxy_WarehouseTagOutputReference) SetDatabase(val *string) {
 	)
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_WarehouseTagOutputReference)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -298,7 +313,10 @@ func (j *jsiiProxy_WarehouseTagOutputReference) SetInternalValue(val interface{}
 	)
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) SetName(val *string) {
+func (j *jsiiProxy_WarehouseTagOutputReference)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"name",
@@ -306,7 +324,10 @@ func (j *jsiiProxy_WarehouseTagOutputReference) SetName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) SetSchema(val *string) {
+func (j *jsiiProxy_WarehouseTagOutputReference)SetSchema(val *string) {
+	if err := j.validateSetSchemaParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"schema",
@@ -314,7 +335,10 @@ func (j *jsiiProxy_WarehouseTagOutputReference) SetSchema(val *string) {
 	)
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_WarehouseTagOutputReference)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -322,7 +346,10 @@ func (j *jsiiProxy_WarehouseTagOutputReference) SetTerraformAttribute(val *strin
 	)
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_WarehouseTagOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -330,7 +357,10 @@ func (j *jsiiProxy_WarehouseTagOutputReference) SetTerraformResource(val cdktf.I
 	)
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) SetValue(val *string) {
+func (j *jsiiProxy_WarehouseTagOutputReference)SetValue(val *string) {
+	if err := j.validateSetValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"value",
@@ -352,6 +382,9 @@ func (w *jsiiProxy_WarehouseTagOutputReference) ComputeFqn() *string {
 }
 
 func (w *jsiiProxy_WarehouseTagOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := w.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -365,6 +398,9 @@ func (w *jsiiProxy_WarehouseTagOutputReference) GetAnyMapAttribute(terraformAttr
 }
 
 func (w *jsiiProxy_WarehouseTagOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := w.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -378,6 +414,9 @@ func (w *jsiiProxy_WarehouseTagOutputReference) GetBooleanAttribute(terraformAtt
 }
 
 func (w *jsiiProxy_WarehouseTagOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := w.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -391,6 +430,9 @@ func (w *jsiiProxy_WarehouseTagOutputReference) GetBooleanMapAttribute(terraform
 }
 
 func (w *jsiiProxy_WarehouseTagOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := w.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -404,6 +446,9 @@ func (w *jsiiProxy_WarehouseTagOutputReference) GetListAttribute(terraformAttrib
 }
 
 func (w *jsiiProxy_WarehouseTagOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := w.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -417,6 +462,9 @@ func (w *jsiiProxy_WarehouseTagOutputReference) GetNumberAttribute(terraformAttr
 }
 
 func (w *jsiiProxy_WarehouseTagOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := w.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -430,6 +478,9 @@ func (w *jsiiProxy_WarehouseTagOutputReference) GetNumberListAttribute(terraform
 }
 
 func (w *jsiiProxy_WarehouseTagOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := w.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -443,6 +494,9 @@ func (w *jsiiProxy_WarehouseTagOutputReference) GetNumberMapAttribute(terraformA
 }
 
 func (w *jsiiProxy_WarehouseTagOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := w.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -456,6 +510,9 @@ func (w *jsiiProxy_WarehouseTagOutputReference) GetStringAttribute(terraformAttr
 }
 
 func (w *jsiiProxy_WarehouseTagOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := w.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -482,6 +539,9 @@ func (w *jsiiProxy_WarehouseTagOutputReference) InterpolationAsList() cdktf.IRes
 }
 
 func (w *jsiiProxy_WarehouseTagOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := w.validateInterpolationForAttributeParameters(property); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -511,6 +571,9 @@ func (w *jsiiProxy_WarehouseTagOutputReference) ResetSchema() {
 }
 
 func (w *jsiiProxy_WarehouseTagOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := w.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(
