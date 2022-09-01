@@ -79,7 +79,7 @@ type SnowflakeProviderConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake#role SnowflakeProvider#role}
 	Role *string `field:"optional" json:"role" yaml:"role"`
-	// Sets the default warehouse. Optional. Can be sourced from SNOWFLAKE_WAREHOUSE enviornment variable.
+	// Sets the default warehouse. Optional. Can be sourced from SNOWFLAKE_WAREHOUSE environment variable.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake#warehouse SnowflakeProvider#warehouse}
 	Warehouse *string `field:"optional" json:"warehouse" yaml:"warehouse"`
