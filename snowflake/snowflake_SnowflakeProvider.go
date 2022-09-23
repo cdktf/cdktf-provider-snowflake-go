@@ -58,6 +58,9 @@ type SnowflakeProvider interface {
 	Password() *string
 	SetPassword(val *string)
 	PasswordInput() *string
+	Port() *float64
+	SetPort(val *float64)
+	PortInput() *float64
 	PrivateKey() *string
 	SetPrivateKey(val *string)
 	PrivateKeyInput() *string
@@ -67,6 +70,9 @@ type SnowflakeProvider interface {
 	PrivateKeyPath() *string
 	SetPrivateKeyPath(val *string)
 	PrivateKeyPathInput() *string
+	Protocol() *string
+	SetProtocol(val *string)
+	ProtocolInput() *string
 	// Experimental.
 	RawOverrides() interface{}
 	Region() *string
@@ -105,9 +111,11 @@ type SnowflakeProvider interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPassword()
+	ResetPort()
 	ResetPrivateKey()
 	ResetPrivateKeyPassphrase()
 	ResetPrivateKeyPath()
+	ResetProtocol()
 	ResetRegion()
 	ResetRole()
 	ResetWarehouse()
@@ -406,6 +414,26 @@ func (j *jsiiProxy_SnowflakeProvider) PasswordInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_SnowflakeProvider) Port() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"port",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) PortInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"portInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_SnowflakeProvider) PrivateKey() *string {
 	var returns *string
 	_jsii_.Get(
@@ -461,6 +489,26 @@ func (j *jsiiProxy_SnowflakeProvider) PrivateKeyPathInput() *string {
 	_jsii_.Get(
 		j,
 		"privateKeyPathInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) Protocol() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"protocol",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) ProtocolInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"protocolInput",
 		&returns,
 	)
 	return returns
@@ -707,6 +755,14 @@ func (j *jsiiProxy_SnowflakeProvider)SetPassword(val *string) {
 	)
 }
 
+func (j *jsiiProxy_SnowflakeProvider)SetPort(val *float64) {
+	_jsii_.Set(
+		j,
+		"port",
+		val,
+	)
+}
+
 func (j *jsiiProxy_SnowflakeProvider)SetPrivateKey(val *string) {
 	_jsii_.Set(
 		j,
@@ -727,6 +783,14 @@ func (j *jsiiProxy_SnowflakeProvider)SetPrivateKeyPath(val *string) {
 	_jsii_.Set(
 		j,
 		"privateKeyPath",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetProtocol(val *string) {
+	_jsii_.Set(
+		j,
+		"protocol",
 		val,
 	)
 }
@@ -919,6 +983,14 @@ func (s *jsiiProxy_SnowflakeProvider) ResetPassword() {
 	)
 }
 
+func (s *jsiiProxy_SnowflakeProvider) ResetPort() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetPort",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SnowflakeProvider) ResetPrivateKey() {
 	_jsii_.InvokeVoid(
 		s,
@@ -939,6 +1011,14 @@ func (s *jsiiProxy_SnowflakeProvider) ResetPrivateKeyPath() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetPrivateKeyPath",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetProtocol() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetProtocol",
 		nil, // no parameters
 	)
 }
