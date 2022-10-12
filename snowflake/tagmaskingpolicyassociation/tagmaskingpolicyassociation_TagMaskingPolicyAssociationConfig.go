@@ -19,7 +19,7 @@ type TagMaskingPolicyAssociationConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// The the resource id of the masking policy.
+	// The resource id of the masking policy.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/tag_masking_policy_association#masking_policy_id TagMaskingPolicyAssociation#masking_policy_id}
 	MaskingPolicyId *string `field:"required" json:"maskingPolicyId" yaml:"maskingPolicyId"`
