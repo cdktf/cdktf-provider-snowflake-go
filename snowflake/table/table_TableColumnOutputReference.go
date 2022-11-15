@@ -36,6 +36,9 @@ type TableColumnOutputReference interface {
 	IdentityInput() *TableColumnIdentity
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	MaskingPolicy() *string
+	SetMaskingPolicy(val *string)
+	MaskingPolicyInput() *string
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
@@ -82,6 +85,7 @@ type TableColumnOutputReference interface {
 	ResetComment()
 	ResetDefault()
 	ResetIdentity()
+	ResetMaskingPolicy()
 	ResetNullable()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -203,6 +207,26 @@ func (j *jsiiProxy_TableColumnOutputReference) InternalValue() interface{} {
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TableColumnOutputReference) MaskingPolicy() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"maskingPolicy",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TableColumnOutputReference) MaskingPolicyInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"maskingPolicyInput",
 		&returns,
 	)
 	return returns
@@ -356,6 +380,17 @@ func (j *jsiiProxy_TableColumnOutputReference)SetInternalValue(val interface{}) 
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_TableColumnOutputReference)SetMaskingPolicy(val *string) {
+	if err := j.validateSetMaskingPolicyParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"maskingPolicy",
 		val,
 	)
 }
@@ -643,6 +678,14 @@ func (t *jsiiProxy_TableColumnOutputReference) ResetIdentity() {
 	_jsii_.InvokeVoid(
 		t,
 		"resetIdentity",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TableColumnOutputReference) ResetMaskingPolicy() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetMaskingPolicy",
 		nil, // no parameters
 	)
 }

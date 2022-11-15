@@ -33,6 +33,10 @@ type WarehouseConfig struct {
 	AutoSuspend *float64 `field:"optional" json:"autoSuspend" yaml:"autoSuspend"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/warehouse#comment Warehouse#comment}.
 	Comment *string `field:"optional" json:"comment" yaml:"comment"`
+	// Specifies whether to enable the query acceleration service for queries that rely on this warehouse for compute resources.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/warehouse#enable_query_acceleration Warehouse#enable_query_acceleration}
+	EnableQueryAcceleration interface{} `field:"optional" json:"enableQueryAcceleration" yaml:"enableQueryAcceleration"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/warehouse#id Warehouse#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
@@ -54,6 +58,12 @@ type WarehouseConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/warehouse#min_cluster_count Warehouse#min_cluster_count}
 	MinClusterCount *float64 `field:"optional" json:"minClusterCount" yaml:"minClusterCount"`
+	// Specifies the maximum scale factor for leasing compute resources for query acceleration.
+	//
+	// The scale factor is used as a multiplier based on warehouse size.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/warehouse#query_acceleration_max_scale_factor Warehouse#query_acceleration_max_scale_factor}
+	QueryAccelerationMaxScaleFactor *float64 `field:"optional" json:"queryAccelerationMaxScaleFactor" yaml:"queryAccelerationMaxScaleFactor"`
 	// Specifies the name of a resource monitor that is explicitly assigned to the warehouse.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/warehouse#resource_monitor Warehouse#resource_monitor}

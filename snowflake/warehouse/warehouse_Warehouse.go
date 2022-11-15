@@ -37,6 +37,9 @@ type Warehouse interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	EnableQueryAcceleration() interface{}
+	SetEnableQueryAcceleration(val interface{})
+	EnableQueryAccelerationInput() interface{}
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -77,6 +80,9 @@ type Warehouse interface {
 	Provisioners() *[]interface{}
 	// Experimental.
 	SetProvisioners(val *[]interface{})
+	QueryAccelerationMaxScaleFactor() *float64
+	SetQueryAccelerationMaxScaleFactor(val *float64)
+	QueryAccelerationMaxScaleFactorInput() *float64
 	// Experimental.
 	RawOverrides() interface{}
 	ResourceMonitor() *string
@@ -134,6 +140,7 @@ type Warehouse interface {
 	ResetAutoResume()
 	ResetAutoSuspend()
 	ResetComment()
+	ResetEnableQueryAcceleration()
 	ResetId()
 	ResetInitiallySuspended()
 	ResetMaxClusterCount()
@@ -142,6 +149,7 @@ type Warehouse interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetQueryAccelerationMaxScaleFactor()
 	ResetResourceMonitor()
 	ResetScalingPolicy()
 	ResetStatementQueuedTimeoutInSeconds()
@@ -269,6 +277,26 @@ func (j *jsiiProxy_Warehouse) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Warehouse) EnableQueryAcceleration() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableQueryAcceleration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Warehouse) EnableQueryAccelerationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableQueryAccelerationInput",
 		&returns,
 	)
 	return returns
@@ -459,6 +487,26 @@ func (j *jsiiProxy_Warehouse) Provisioners() *[]interface{} {
 	_jsii_.Get(
 		j,
 		"provisioners",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Warehouse) QueryAccelerationMaxScaleFactor() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"queryAccelerationMaxScaleFactor",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Warehouse) QueryAccelerationMaxScaleFactorInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"queryAccelerationMaxScaleFactorInput",
 		&returns,
 	)
 	return returns
@@ -734,6 +782,17 @@ func (j *jsiiProxy_Warehouse)SetDependsOn(val *[]*string) {
 	)
 }
 
+func (j *jsiiProxy_Warehouse)SetEnableQueryAcceleration(val interface{}) {
+	if err := j.validateSetEnableQueryAccelerationParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"enableQueryAcceleration",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Warehouse)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
@@ -834,6 +893,17 @@ func (j *jsiiProxy_Warehouse)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Warehouse)SetQueryAccelerationMaxScaleFactor(val *float64) {
+	if err := j.validateSetQueryAccelerationMaxScaleFactorParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"queryAccelerationMaxScaleFactor",
 		val,
 	)
 }
@@ -1167,6 +1237,14 @@ func (w *jsiiProxy_Warehouse) ResetComment() {
 	)
 }
 
+func (w *jsiiProxy_Warehouse) ResetEnableQueryAcceleration() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetEnableQueryAcceleration",
+		nil, // no parameters
+	)
+}
+
 func (w *jsiiProxy_Warehouse) ResetId() {
 	_jsii_.InvokeVoid(
 		w,
@@ -1211,6 +1289,14 @@ func (w *jsiiProxy_Warehouse) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		w,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_Warehouse) ResetQueryAccelerationMaxScaleFactor() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetQueryAccelerationMaxScaleFactor",
 		nil, // no parameters
 	)
 }

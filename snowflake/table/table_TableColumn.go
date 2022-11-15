@@ -22,6 +22,10 @@ type TableColumn struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/table#identity Table#identity}
 	Identity *TableColumnIdentity `field:"optional" json:"identity" yaml:"identity"`
+	// Masking policy to apply on column.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/table#masking_policy Table#masking_policy}
+	MaskingPolicy *string `field:"optional" json:"maskingPolicy" yaml:"maskingPolicy"`
 	// Whether this column can contain null values.
 	//
 	// **Note**: Depending on your Snowflake version, the default value will not suffice if this column is used in a primary key constraint.

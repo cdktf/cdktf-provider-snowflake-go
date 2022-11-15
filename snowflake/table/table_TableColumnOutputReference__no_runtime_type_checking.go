@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package table
 
@@ -70,6 +69,10 @@ func (j *jsiiProxy_TableColumnOutputReference) validateSetComplexObjectIsFromSet
 }
 
 func (j *jsiiProxy_TableColumnOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_TableColumnOutputReference) validateSetMaskingPolicyParameters(val *string) error {
 	return nil
 }
 

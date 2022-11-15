@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package oauthintegration
 
@@ -90,6 +89,10 @@ func (j *jsiiProxy_OauthIntegration) validateSetOauthClientParameters(val *strin
 }
 
 func (j *jsiiProxy_OauthIntegration) validateSetOauthIssueRefreshTokensParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_OauthIntegration) validateSetOauthRedirectUriParameters(val *string) error {
 	return nil
 }
 

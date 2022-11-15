@@ -65,6 +65,7 @@ type MaskingPolicy interface {
 	Provisioners() *[]interface{}
 	// Experimental.
 	SetProvisioners(val *[]interface{})
+	QualifiedName() *string
 	// Experimental.
 	RawOverrides() interface{}
 	ReturnDataType() *string
@@ -342,6 +343,16 @@ func (j *jsiiProxy_MaskingPolicy) Provisioners() *[]interface{} {
 	_jsii_.Get(
 		j,
 		"provisioners",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MaskingPolicy) QualifiedName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"qualifiedName",
 		&returns,
 	)
 	return returns

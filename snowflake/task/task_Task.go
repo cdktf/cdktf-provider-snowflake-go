@@ -12,9 +12,12 @@ import (
 // Represents a {@link https://www.terraform.io/docs/providers/snowflake/r/task snowflake_task}.
 type Task interface {
 	cdktf.TerraformResource
-	After() *string
-	SetAfter(val *string)
-	AfterInput() *string
+	After() *[]*string
+	SetAfter(val *[]*string)
+	AfterInput() *[]*string
+	AllowOverlappingExecution() interface{}
+	SetAllowOverlappingExecution(val interface{})
+	AllowOverlappingExecutionInput() interface{}
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	Comment() *string
@@ -129,6 +132,7 @@ type Task interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	ResetAfter()
+	ResetAllowOverlappingExecution()
 	ResetComment()
 	ResetEnabled()
 	ResetErrorIntegration()
@@ -157,8 +161,8 @@ type jsiiProxy_Task struct {
 	internal.Type__cdktfTerraformResource
 }
 
-func (j *jsiiProxy_Task) After() *string {
-	var returns *string
+func (j *jsiiProxy_Task) After() *[]*string {
+	var returns *[]*string
 	_jsii_.Get(
 		j,
 		"after",
@@ -167,11 +171,31 @@ func (j *jsiiProxy_Task) After() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Task) AfterInput() *string {
-	var returns *string
+func (j *jsiiProxy_Task) AfterInput() *[]*string {
+	var returns *[]*string
 	_jsii_.Get(
 		j,
 		"afterInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Task) AllowOverlappingExecution() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"allowOverlappingExecution",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Task) AllowOverlappingExecutionInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"allowOverlappingExecutionInput",
 		&returns,
 	)
 	return returns
@@ -647,13 +671,24 @@ func NewTask_Override(t Task, scope constructs.Construct, id *string, config *Ta
 	)
 }
 
-func (j *jsiiProxy_Task)SetAfter(val *string) {
+func (j *jsiiProxy_Task)SetAfter(val *[]*string) {
 	if err := j.validateSetAfterParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
 		"after",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Task)SetAllowOverlappingExecution(val interface{}) {
+	if err := j.validateSetAllowOverlappingExecutionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"allowOverlappingExecution",
 		val,
 	)
 }
@@ -1109,6 +1144,14 @@ func (t *jsiiProxy_Task) ResetAfter() {
 	_jsii_.InvokeVoid(
 		t,
 		"resetAfter",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_Task) ResetAllowOverlappingExecution() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetAllowOverlappingExecution",
 		nil, // no parameters
 	)
 }

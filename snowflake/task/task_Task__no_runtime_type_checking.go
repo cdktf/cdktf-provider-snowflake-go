@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package task
 
@@ -57,7 +56,11 @@ func validateTask_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
-func (j *jsiiProxy_Task) validateSetAfterParameters(val *string) error {
+func (j *jsiiProxy_Task) validateSetAfterParameters(val *[]*string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Task) validateSetAllowOverlappingExecutionParameters(val interface{}) error {
 	return nil
 }
 

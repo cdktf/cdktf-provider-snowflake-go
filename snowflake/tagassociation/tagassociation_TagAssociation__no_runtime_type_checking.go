@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package tagassociation
 
@@ -50,6 +49,10 @@ func (t *jsiiProxy_TagAssociation) validateInterpolationForAttributeParameters(t
 }
 
 func (t *jsiiProxy_TagAssociation) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (t *jsiiProxy_TagAssociation) validatePutObjectIdentifierParameters(value interface{}) error {
 	return nil
 }
 

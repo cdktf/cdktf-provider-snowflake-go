@@ -60,6 +60,9 @@ type ResourceMonitor interface {
 	NotifyTriggers() *[]*float64
 	SetNotifyTriggers(val *[]*float64)
 	NotifyTriggersInput() *[]*float64
+	NotifyUsers() *[]*string
+	SetNotifyUsers(val *[]*string)
+	NotifyUsersInput() *[]*string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -121,6 +124,7 @@ type ResourceMonitor interface {
 	ResetFrequency()
 	ResetId()
 	ResetNotifyTriggers()
+	ResetNotifyUsers()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -359,6 +363,26 @@ func (j *jsiiProxy_ResourceMonitor) NotifyTriggersInput() *[]*float64 {
 	_jsii_.Get(
 		j,
 		"notifyTriggersInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ResourceMonitor) NotifyUsers() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"notifyUsers",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ResourceMonitor) NotifyUsersInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"notifyUsersInput",
 		&returns,
 	)
 	return returns
@@ -662,6 +686,17 @@ func (j *jsiiProxy_ResourceMonitor)SetNotifyTriggers(val *[]*float64) {
 	_jsii_.Set(
 		j,
 		"notifyTriggers",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ResourceMonitor)SetNotifyUsers(val *[]*string) {
+	if err := j.validateSetNotifyUsersParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"notifyUsers",
 		val,
 	)
 }
@@ -1004,6 +1039,14 @@ func (r *jsiiProxy_ResourceMonitor) ResetNotifyTriggers() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetNotifyTriggers",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_ResourceMonitor) ResetNotifyUsers() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetNotifyUsers",
 		nil, // no parameters
 	)
 }

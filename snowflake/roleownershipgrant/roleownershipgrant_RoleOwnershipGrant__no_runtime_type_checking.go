@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package roleownershipgrant
 
@@ -78,6 +77,10 @@ func (j *jsiiProxy_RoleOwnershipGrant) validateSetOnRoleNameParameters(val *stri
 }
 
 func (j *jsiiProxy_RoleOwnershipGrant) validateSetProvisionersParameters(val *[]interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_RoleOwnershipGrant) validateSetRevertOwnershipToRoleNameParameters(val *string) error {
 	return nil
 }
 

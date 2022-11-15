@@ -64,6 +64,9 @@ type OauthIntegration interface {
 	OauthIssueRefreshTokens() interface{}
 	SetOauthIssueRefreshTokens(val interface{})
 	OauthIssueRefreshTokensInput() interface{}
+	OauthRedirectUri() *string
+	SetOauthRedirectUri(val *string)
+	OauthRedirectUriInput() *string
 	OauthRefreshTokenValidity() *float64
 	SetOauthRefreshTokenValidity(val *float64)
 	OauthRefreshTokenValidityInput() *float64
@@ -116,6 +119,7 @@ type OauthIntegration interface {
 	ResetEnabled()
 	ResetId()
 	ResetOauthIssueRefreshTokens()
+	ResetOauthRedirectUri()
 	ResetOauthRefreshTokenValidity()
 	ResetOauthUseSecondaryRoles()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -386,6 +390,26 @@ func (j *jsiiProxy_OauthIntegration) OauthIssueRefreshTokensInput() interface{} 
 	return returns
 }
 
+func (j *jsiiProxy_OauthIntegration) OauthRedirectUri() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"oauthRedirectUri",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OauthIntegration) OauthRedirectUriInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"oauthRedirectUriInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_OauthIntegration) OauthRefreshTokenValidity() *float64 {
 	var returns *float64
 	_jsii_.Get(
@@ -635,6 +659,17 @@ func (j *jsiiProxy_OauthIntegration)SetOauthIssueRefreshTokens(val interface{}) 
 	_jsii_.Set(
 		j,
 		"oauthIssueRefreshTokens",
+		val,
+	)
+}
+
+func (j *jsiiProxy_OauthIntegration)SetOauthRedirectUri(val *string) {
+	if err := j.validateSetOauthRedirectUriParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"oauthRedirectUri",
 		val,
 	)
 }
@@ -944,6 +979,14 @@ func (o *jsiiProxy_OauthIntegration) ResetOauthIssueRefreshTokens() {
 	_jsii_.InvokeVoid(
 		o,
 		"resetOauthIssueRefreshTokens",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_OauthIntegration) ResetOauthRedirectUri() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetOauthRedirectUri",
 		nil, // no parameters
 	)
 }

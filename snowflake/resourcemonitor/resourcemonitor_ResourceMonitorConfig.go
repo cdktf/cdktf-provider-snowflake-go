@@ -46,6 +46,10 @@ type ResourceMonitorConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/resource_monitor#notify_triggers ResourceMonitor#notify_triggers}
 	NotifyTriggers *[]*float64 `field:"optional" json:"notifyTriggers" yaml:"notifyTriggers"`
+	// Specifies the list of users to receive email notifications on resource monitors.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/resource_monitor#notify_users ResourceMonitor#notify_users}
+	NotifyUsers *[]*string `field:"optional" json:"notifyUsers" yaml:"notifyUsers"`
 	// Specifies whether the resource monitor should be applied globally to your Snowflake account.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/resource_monitor#set_for_account ResourceMonitor#set_for_account}

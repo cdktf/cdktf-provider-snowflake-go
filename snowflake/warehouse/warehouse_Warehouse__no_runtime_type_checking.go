@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package warehouse
 
@@ -77,6 +76,10 @@ func (j *jsiiProxy_Warehouse) validateSetConnectionParameters(val interface{}) e
 	return nil
 }
 
+func (j *jsiiProxy_Warehouse) validateSetEnableQueryAccelerationParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Warehouse) validateSetIdParameters(val *string) error {
 	return nil
 }
@@ -106,6 +109,10 @@ func (j *jsiiProxy_Warehouse) validateSetNameParameters(val *string) error {
 }
 
 func (j *jsiiProxy_Warehouse) validateSetProvisionersParameters(val *[]interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_Warehouse) validateSetQueryAccelerationMaxScaleFactorParameters(val *float64) error {
 	return nil
 }
 

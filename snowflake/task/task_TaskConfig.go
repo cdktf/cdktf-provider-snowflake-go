@@ -37,12 +37,16 @@ type TaskConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/task#sql_statement Task#sql_statement}
 	SqlStatement *string `field:"required" json:"sqlStatement" yaml:"sqlStatement"`
-	// Specifies the predecessor task in the same database and schema of the current task.
+	// Specifies one or more predecessor tasks for the current task.
 	//
-	// When a run of the predecessor task finishes successfully, it triggers this task (after a brief lag). (Conflict with schedule)
+	// Use this option to create a DAG of tasks or add this task to an existing DAG. A DAG is a series of tasks that starts with a scheduled root task and is linked together by dependencies.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/task#after Task#after}
-	After *string `field:"optional" json:"after" yaml:"after"`
+	After *[]*string `field:"optional" json:"after" yaml:"after"`
+	// By default, Snowflake ensures that only one instance of a particular DAG is allowed to run at a time, setting the parameter value to TRUE permits DAG runs to overlap.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/task#allow_overlapping_execution Task#allow_overlapping_execution}
+	AllowOverlappingExecution interface{} `field:"optional" json:"allowOverlappingExecution" yaml:"allowOverlappingExecution"`
 	// Specifies a comment for the task.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/task#comment Task#comment}

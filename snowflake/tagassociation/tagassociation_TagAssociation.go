@@ -45,6 +45,8 @@ type TagAssociation interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
+	ObjectIdentifier() TagAssociationObjectIdentifierList
+	ObjectIdentifierInput() interface{}
 	ObjectName() *string
 	SetObjectName(val *string)
 	ObjectNameInput() *string
@@ -103,8 +105,10 @@ type TagAssociation interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutObjectIdentifier(value interface{})
 	PutTimeouts(value *TagAssociationTimeouts)
 	ResetId()
+	ResetObjectName()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -240,6 +244,26 @@ func (j *jsiiProxy_TagAssociation) Node() constructs.Node {
 	_jsii_.Get(
 		j,
 		"node",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TagAssociation) ObjectIdentifier() TagAssociationObjectIdentifierList {
+	var returns TagAssociationObjectIdentifierList
+	_jsii_.Get(
+		j,
+		"objectIdentifier",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TagAssociation) ObjectIdentifierInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"objectIdentifierInput",
 		&returns,
 	)
 	return returns
@@ -814,6 +838,17 @@ func (t *jsiiProxy_TagAssociation) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (t *jsiiProxy_TagAssociation) PutObjectIdentifier(value interface{}) {
+	if err := t.validatePutObjectIdentifierParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		t,
+		"putObjectIdentifier",
+		[]interface{}{value},
+	)
+}
+
 func (t *jsiiProxy_TagAssociation) PutTimeouts(value *TagAssociationTimeouts) {
 	if err := t.validatePutTimeoutsParameters(value); err != nil {
 		panic(err)
@@ -829,6 +864,14 @@ func (t *jsiiProxy_TagAssociation) ResetId() {
 	_jsii_.InvokeVoid(
 		t,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TagAssociation) ResetObjectName() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetObjectName",
 		nil, // no parameters
 	)
 }

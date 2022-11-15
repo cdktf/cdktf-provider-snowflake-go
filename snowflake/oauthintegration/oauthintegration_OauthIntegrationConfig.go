@@ -52,6 +52,10 @@ type OauthIntegrationConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/oauth_integration#oauth_issue_refresh_tokens OauthIntegration#oauth_issue_refresh_tokens}
 	OauthIssueRefreshTokens interface{} `field:"optional" json:"oauthIssueRefreshTokens" yaml:"oauthIssueRefreshTokens"`
+	// Specifies the client URI. After a user is authenticated, the web browser is redirected to this URI.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/oauth_integration#oauth_redirect_uri OauthIntegration#oauth_redirect_uri}
+	OauthRedirectUri *string `field:"optional" json:"oauthRedirectUri" yaml:"oauthRedirectUri"`
 	// Specifies how long refresh tokens should be valid (in seconds). OAUTH_ISSUE_REFRESH_TOKENS must be set to TRUE.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/oauth_integration#oauth_refresh_token_validity OauthIntegration#oauth_refresh_token_validity}

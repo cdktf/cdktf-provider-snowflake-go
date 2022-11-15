@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package resourcemonitor
 
@@ -86,6 +85,10 @@ func (j *jsiiProxy_ResourceMonitor) validateSetNameParameters(val *string) error
 }
 
 func (j *jsiiProxy_ResourceMonitor) validateSetNotifyTriggersParameters(val *[]*float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ResourceMonitor) validateSetNotifyUsersParameters(val *[]*string) error {
 	return nil
 }
 
