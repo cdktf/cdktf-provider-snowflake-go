@@ -56,6 +56,14 @@ func validateDataSnowflakeSystemGenerateScimAccessToken_IsConstructParameters(x 
 	return nil
 }
 
+func validateDataSnowflakeSystemGenerateScimAccessToken_IsTerraformDataSourceParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataSnowflakeSystemGenerateScimAccessToken_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataSnowflakeSystemGenerateScimAccessToken) validateSetIdParameters(val *string) error {
 	return nil
 }

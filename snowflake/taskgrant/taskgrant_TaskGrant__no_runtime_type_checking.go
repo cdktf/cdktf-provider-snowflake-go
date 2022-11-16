@@ -56,6 +56,14 @@ func validateTaskGrant_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateTaskGrant_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateTaskGrant_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_TaskGrant) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

@@ -60,6 +60,14 @@ func validateFunctionGrant_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateFunctionGrant_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateFunctionGrant_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_FunctionGrant) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

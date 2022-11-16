@@ -39,6 +39,22 @@ func validateSnowflakeProvider_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateSnowflakeProvider_IsTerraformElementParameters(x interface{}) error {
+	if x == nil {
+		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func validateSnowflakeProvider_IsTerraformProviderParameters(x interface{}) error {
+	if x == nil {
+		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_SnowflakeProvider) validateSetBrowserAuthParameters(val interface{}) error {
 	switch val.(type) {
 	case *bool:

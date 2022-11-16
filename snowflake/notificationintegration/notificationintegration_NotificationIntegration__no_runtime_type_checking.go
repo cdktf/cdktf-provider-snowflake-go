@@ -56,6 +56,14 @@ func validateNotificationIntegration_IsConstructParameters(x interface{}) error 
 	return nil
 }
 
+func validateNotificationIntegration_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateNotificationIntegration_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_NotificationIntegration) validateSetAwsSnsRoleArnParameters(val *string) error {
 	return nil
 }

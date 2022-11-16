@@ -60,6 +60,14 @@ func validateStage_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateStage_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateStage_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Stage) validateSetAwsExternalIdParameters(val *string) error {
 	return nil
 }

@@ -64,6 +64,14 @@ func validateFailoverGroup_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateFailoverGroup_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateFailoverGroup_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_FailoverGroup) validateSetAllowedAccountsParameters(val *[]*string) error {
 	return nil
 }

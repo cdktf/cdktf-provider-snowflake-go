@@ -60,6 +60,14 @@ func validateView_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateView_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateView_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_View) validateSetCommentParameters(val *string) error {
 	return nil
 }

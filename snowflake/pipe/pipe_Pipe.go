@@ -2,10 +2,10 @@ package pipe
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v3/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v4/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v3/pipe/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v4/pipe/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -752,6 +752,44 @@ func Pipe_IsConstruct(x interface{}) *bool {
 	_jsii_.StaticInvoke(
 		"@cdktf/provider-snowflake.pipe.Pipe",
 		"isConstruct",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func Pipe_IsTerraformElement(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validatePipe_IsTerraformElementParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.pipe.Pipe",
+		"isTerraformElement",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func Pipe_IsTerraformResource(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validatePipe_IsTerraformResourceParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.pipe.Pipe",
+		"isTerraformResource",
 		[]interface{}{x},
 		&returns,
 	)

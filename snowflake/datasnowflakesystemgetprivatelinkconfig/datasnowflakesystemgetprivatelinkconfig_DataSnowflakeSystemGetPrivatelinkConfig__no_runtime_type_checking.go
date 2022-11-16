@@ -56,6 +56,14 @@ func validateDataSnowflakeSystemGetPrivatelinkConfig_IsConstructParameters(x int
 	return nil
 }
 
+func validateDataSnowflakeSystemGetPrivatelinkConfig_IsTerraformDataSourceParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataSnowflakeSystemGetPrivatelinkConfig_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataSnowflakeSystemGetPrivatelinkConfig) validateSetIdParameters(val *string) error {
 	return nil
 }

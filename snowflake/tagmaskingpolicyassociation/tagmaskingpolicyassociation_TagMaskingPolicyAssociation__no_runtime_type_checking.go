@@ -56,6 +56,14 @@ func validateTagMaskingPolicyAssociation_IsConstructParameters(x interface{}) er
 	return nil
 }
 
+func validateTagMaskingPolicyAssociation_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateTagMaskingPolicyAssociation_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_TagMaskingPolicyAssociation) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

@@ -56,6 +56,14 @@ func validateFileFormat_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateFileFormat_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateFileFormat_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_FileFormat) validateSetAllowDuplicateParameters(val interface{}) error {
 	return nil
 }

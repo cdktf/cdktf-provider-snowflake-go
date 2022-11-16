@@ -56,6 +56,14 @@ func validateFileFormatGrant_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateFileFormatGrant_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateFileFormatGrant_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_FileFormatGrant) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

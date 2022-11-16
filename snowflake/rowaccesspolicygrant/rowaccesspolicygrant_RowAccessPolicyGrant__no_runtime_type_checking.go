@@ -56,6 +56,14 @@ func validateRowAccessPolicyGrant_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateRowAccessPolicyGrant_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateRowAccessPolicyGrant_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_RowAccessPolicyGrant) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

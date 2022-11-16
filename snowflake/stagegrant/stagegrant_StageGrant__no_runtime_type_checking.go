@@ -56,6 +56,14 @@ func validateStageGrant_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateStageGrant_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateStageGrant_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_StageGrant) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

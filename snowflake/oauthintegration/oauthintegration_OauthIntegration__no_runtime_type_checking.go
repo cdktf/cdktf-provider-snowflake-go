@@ -56,6 +56,14 @@ func validateOauthIntegration_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateOauthIntegration_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateOauthIntegration_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_OauthIntegration) validateSetBlockedRolesListParameters(val *[]*string) error {
 	return nil
 }

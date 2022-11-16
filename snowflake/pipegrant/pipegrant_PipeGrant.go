@@ -2,10 +2,10 @@ package pipegrant
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v3/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v4/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v3/pipegrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v4/pipegrant/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -697,6 +697,44 @@ func PipeGrant_IsConstruct(x interface{}) *bool {
 	_jsii_.StaticInvoke(
 		"@cdktf/provider-snowflake.pipeGrant.PipeGrant",
 		"isConstruct",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func PipeGrant_IsTerraformElement(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validatePipeGrant_IsTerraformElementParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.pipeGrant.PipeGrant",
+		"isTerraformElement",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func PipeGrant_IsTerraformResource(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validatePipeGrant_IsTerraformResourceParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.pipeGrant.PipeGrant",
+		"isTerraformResource",
 		[]interface{}{x},
 		&returns,
 	)

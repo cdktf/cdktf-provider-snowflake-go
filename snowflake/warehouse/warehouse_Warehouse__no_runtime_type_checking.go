@@ -60,6 +60,14 @@ func validateWarehouse_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateWarehouse_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateWarehouse_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Warehouse) validateSetAutoResumeParameters(val interface{}) error {
 	return nil
 }

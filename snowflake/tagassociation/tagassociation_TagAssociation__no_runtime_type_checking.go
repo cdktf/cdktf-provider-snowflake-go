@@ -64,6 +64,14 @@ func validateTagAssociation_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateTagAssociation_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateTagAssociation_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_TagAssociation) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

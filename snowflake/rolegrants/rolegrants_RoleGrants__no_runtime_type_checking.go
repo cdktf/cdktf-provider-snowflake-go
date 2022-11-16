@@ -56,6 +56,14 @@ func validateRoleGrants_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateRoleGrants_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateRoleGrants_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_RoleGrants) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

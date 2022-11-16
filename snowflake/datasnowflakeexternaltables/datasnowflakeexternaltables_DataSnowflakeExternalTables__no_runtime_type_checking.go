@@ -56,6 +56,14 @@ func validateDataSnowflakeExternalTables_IsConstructParameters(x interface{}) er
 	return nil
 }
 
+func validateDataSnowflakeExternalTables_IsTerraformDataSourceParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataSnowflakeExternalTables_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataSnowflakeExternalTables) validateSetDatabaseParameters(val *string) error {
 	return nil
 }

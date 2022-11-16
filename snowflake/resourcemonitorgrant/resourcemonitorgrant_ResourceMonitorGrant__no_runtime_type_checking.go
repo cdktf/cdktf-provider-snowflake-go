@@ -56,6 +56,14 @@ func validateResourceMonitorGrant_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateResourceMonitorGrant_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateResourceMonitorGrant_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ResourceMonitorGrant) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

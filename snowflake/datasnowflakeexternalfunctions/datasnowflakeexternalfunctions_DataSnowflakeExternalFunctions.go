@@ -2,10 +2,10 @@ package datasnowflakeexternalfunctions
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v3/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v4/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v3/datasnowflakeexternalfunctions/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v4/datasnowflakeexternalfunctions/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -448,6 +448,44 @@ func DataSnowflakeExternalFunctions_IsConstruct(x interface{}) *bool {
 	_jsii_.StaticInvoke(
 		"@cdktf/provider-snowflake.dataSnowflakeExternalFunctions.DataSnowflakeExternalFunctions",
 		"isConstruct",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func DataSnowflakeExternalFunctions_IsTerraformDataSource(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateDataSnowflakeExternalFunctions_IsTerraformDataSourceParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.dataSnowflakeExternalFunctions.DataSnowflakeExternalFunctions",
+		"isTerraformDataSource",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func DataSnowflakeExternalFunctions_IsTerraformElement(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateDataSnowflakeExternalFunctions_IsTerraformElementParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.dataSnowflakeExternalFunctions.DataSnowflakeExternalFunctions",
+		"isTerraformElement",
 		[]interface{}{x},
 		&returns,
 	)

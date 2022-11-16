@@ -2,10 +2,10 @@ package viewgrant
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v3/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v4/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v3/viewgrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v4/viewgrant/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -733,6 +733,44 @@ func ViewGrant_IsConstruct(x interface{}) *bool {
 	_jsii_.StaticInvoke(
 		"@cdktf/provider-snowflake.viewGrant.ViewGrant",
 		"isConstruct",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func ViewGrant_IsTerraformElement(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateViewGrant_IsTerraformElementParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.viewGrant.ViewGrant",
+		"isTerraformElement",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func ViewGrant_IsTerraformResource(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateViewGrant_IsTerraformResourceParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.viewGrant.ViewGrant",
+		"isTerraformResource",
 		[]interface{}{x},
 		&returns,
 	)

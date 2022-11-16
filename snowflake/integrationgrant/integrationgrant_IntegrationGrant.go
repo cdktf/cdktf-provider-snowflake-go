@@ -2,10 +2,10 @@ package integrationgrant
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v3/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v4/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v3/integrationgrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v4/integrationgrant/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -593,6 +593,44 @@ func IntegrationGrant_IsConstruct(x interface{}) *bool {
 	_jsii_.StaticInvoke(
 		"@cdktf/provider-snowflake.integrationGrant.IntegrationGrant",
 		"isConstruct",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func IntegrationGrant_IsTerraformElement(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateIntegrationGrant_IsTerraformElementParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.integrationGrant.IntegrationGrant",
+		"isTerraformElement",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func IntegrationGrant_IsTerraformResource(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateIntegrationGrant_IsTerraformResourceParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.integrationGrant.IntegrationGrant",
+		"isTerraformResource",
 		[]interface{}{x},
 		&returns,
 	)

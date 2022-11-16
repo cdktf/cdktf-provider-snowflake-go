@@ -2,10 +2,10 @@ package databasegrant
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v3/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v4/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v3/databasegrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v4/databasegrant/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -628,6 +628,44 @@ func DatabaseGrant_IsConstruct(x interface{}) *bool {
 	_jsii_.StaticInvoke(
 		"@cdktf/provider-snowflake.databaseGrant.DatabaseGrant",
 		"isConstruct",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func DatabaseGrant_IsTerraformElement(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateDatabaseGrant_IsTerraformElementParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.databaseGrant.DatabaseGrant",
+		"isTerraformElement",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func DatabaseGrant_IsTerraformResource(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateDatabaseGrant_IsTerraformResourceParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.databaseGrant.DatabaseGrant",
+		"isTerraformResource",
 		[]interface{}{x},
 		&returns,
 	)

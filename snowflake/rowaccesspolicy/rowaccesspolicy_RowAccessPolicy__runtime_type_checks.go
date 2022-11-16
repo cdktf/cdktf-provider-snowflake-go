@@ -119,6 +119,22 @@ func validateRowAccessPolicy_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateRowAccessPolicy_IsTerraformElementParameters(x interface{}) error {
+	if x == nil {
+		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func validateRowAccessPolicy_IsTerraformResourceParameters(x interface{}) error {
+	if x == nil {
+		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_RowAccessPolicy) validateSetCommentParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

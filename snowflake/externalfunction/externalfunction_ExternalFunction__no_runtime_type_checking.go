@@ -64,6 +64,14 @@ func validateExternalFunction_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateExternalFunction_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateExternalFunction_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ExternalFunction) validateSetApiIntegrationParameters(val *string) error {
 	return nil
 }

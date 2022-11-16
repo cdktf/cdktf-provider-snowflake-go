@@ -56,6 +56,14 @@ func validateAccountGrant_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateAccountGrant_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateAccountGrant_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_AccountGrant) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

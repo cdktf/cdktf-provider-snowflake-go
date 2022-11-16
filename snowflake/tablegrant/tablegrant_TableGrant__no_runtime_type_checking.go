@@ -56,6 +56,14 @@ func validateTableGrant_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateTableGrant_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateTableGrant_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_TableGrant) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

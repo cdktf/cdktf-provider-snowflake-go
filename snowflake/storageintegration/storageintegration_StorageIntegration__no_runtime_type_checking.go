@@ -56,6 +56,14 @@ func validateStorageIntegration_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateStorageIntegration_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateStorageIntegration_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_StorageIntegration) validateSetAzureTenantIdParameters(val *string) error {
 	return nil
 }

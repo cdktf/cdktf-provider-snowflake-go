@@ -56,6 +56,14 @@ func validateStream_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateStream_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateStream_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Stream) validateSetAppendOnlyParameters(val interface{}) error {
 	return nil
 }

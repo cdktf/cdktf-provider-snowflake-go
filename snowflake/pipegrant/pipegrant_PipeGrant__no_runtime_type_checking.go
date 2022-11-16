@@ -56,6 +56,14 @@ func validatePipeGrant_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validatePipeGrant_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validatePipeGrant_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_PipeGrant) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

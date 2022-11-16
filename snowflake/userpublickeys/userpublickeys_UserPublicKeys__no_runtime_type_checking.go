@@ -56,6 +56,14 @@ func validateUserPublicKeys_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateUserPublicKeys_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateUserPublicKeys_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_UserPublicKeys) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

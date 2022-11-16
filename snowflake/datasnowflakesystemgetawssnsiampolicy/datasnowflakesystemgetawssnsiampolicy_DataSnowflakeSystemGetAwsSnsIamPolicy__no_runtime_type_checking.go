@@ -56,6 +56,14 @@ func validateDataSnowflakeSystemGetAwsSnsIamPolicy_IsConstructParameters(x inter
 	return nil
 }
 
+func validateDataSnowflakeSystemGetAwsSnsIamPolicy_IsTerraformDataSourceParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataSnowflakeSystemGetAwsSnsIamPolicy_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataSnowflakeSystemGetAwsSnsIamPolicy) validateSetAwsSnsTopicArnParameters(val *string) error {
 	return nil
 }

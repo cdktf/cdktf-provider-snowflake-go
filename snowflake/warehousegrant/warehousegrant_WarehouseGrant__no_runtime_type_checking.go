@@ -56,6 +56,14 @@ func validateWarehouseGrant_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateWarehouseGrant_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateWarehouseGrant_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_WarehouseGrant) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

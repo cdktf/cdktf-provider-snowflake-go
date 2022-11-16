@@ -119,6 +119,22 @@ func validateFileFormat_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateFileFormat_IsTerraformElementParameters(x interface{}) error {
+	if x == nil {
+		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func validateFileFormat_IsTerraformResourceParameters(x interface{}) error {
+	if x == nil {
+		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_FileFormat) validateSetAllowDuplicateParameters(val interface{}) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

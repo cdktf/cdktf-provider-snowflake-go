@@ -64,6 +64,14 @@ func validateExternalTable_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateExternalTable_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateExternalTable_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ExternalTable) validateSetAutoRefreshParameters(val interface{}) error {
 	return nil
 }

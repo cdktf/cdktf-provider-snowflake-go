@@ -56,6 +56,14 @@ func validateDataSnowflakeCurrentAccount_IsConstructParameters(x interface{}) er
 	return nil
 }
 
+func validateDataSnowflakeCurrentAccount_IsTerraformDataSourceParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataSnowflakeCurrentAccount_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataSnowflakeCurrentAccount) validateSetIdParameters(val *string) error {
 	return nil
 }

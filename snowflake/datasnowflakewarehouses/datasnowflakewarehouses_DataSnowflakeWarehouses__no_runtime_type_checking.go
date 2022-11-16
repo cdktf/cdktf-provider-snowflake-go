@@ -56,6 +56,14 @@ func validateDataSnowflakeWarehouses_IsConstructParameters(x interface{}) error 
 	return nil
 }
 
+func validateDataSnowflakeWarehouses_IsTerraformDataSourceParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataSnowflakeWarehouses_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataSnowflakeWarehouses) validateSetIdParameters(val *string) error {
 	return nil
 }

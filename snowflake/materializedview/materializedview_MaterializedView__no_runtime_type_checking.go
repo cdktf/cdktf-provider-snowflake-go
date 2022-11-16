@@ -60,6 +60,14 @@ func validateMaterializedView_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateMaterializedView_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateMaterializedView_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_MaterializedView) validateSetCommentParameters(val *string) error {
 	return nil
 }

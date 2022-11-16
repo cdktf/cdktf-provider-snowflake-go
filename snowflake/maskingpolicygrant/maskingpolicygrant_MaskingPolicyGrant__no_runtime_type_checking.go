@@ -56,6 +56,14 @@ func validateMaskingPolicyGrant_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateMaskingPolicyGrant_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateMaskingPolicyGrant_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_MaskingPolicyGrant) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

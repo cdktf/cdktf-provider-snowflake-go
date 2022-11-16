@@ -119,6 +119,22 @@ func validateNetworkPolicyAttachment_IsConstructParameters(x interface{}) error 
 	return nil
 }
 
+func validateNetworkPolicyAttachment_IsTerraformElementParameters(x interface{}) error {
+	if x == nil {
+		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func validateNetworkPolicyAttachment_IsTerraformResourceParameters(x interface{}) error {
+	if x == nil {
+		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_NetworkPolicyAttachment) validateSetConnectionParameters(val interface{}) error {
 	switch val.(type) {
 	case *cdktf.SSHProvisionerConnection:

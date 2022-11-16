@@ -119,6 +119,22 @@ func validatePipe_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validatePipe_IsTerraformElementParameters(x interface{}) error {
+	if x == nil {
+		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func validatePipe_IsTerraformResourceParameters(x interface{}) error {
+	if x == nil {
+		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_Pipe) validateSetAutoIngestParameters(val interface{}) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

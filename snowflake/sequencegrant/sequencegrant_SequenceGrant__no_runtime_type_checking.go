@@ -56,6 +56,14 @@ func validateSequenceGrant_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateSequenceGrant_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateSequenceGrant_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_SequenceGrant) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

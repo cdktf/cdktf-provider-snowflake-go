@@ -56,6 +56,14 @@ func validatePipe_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validatePipe_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validatePipe_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Pipe) validateSetAutoIngestParameters(val interface{}) error {
 	return nil
 }

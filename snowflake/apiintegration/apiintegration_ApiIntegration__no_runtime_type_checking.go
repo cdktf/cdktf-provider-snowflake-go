@@ -56,6 +56,14 @@ func validateApiIntegration_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateApiIntegration_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateApiIntegration_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ApiIntegration) validateSetApiAllowedPrefixesParameters(val *[]*string) error {
 	return nil
 }

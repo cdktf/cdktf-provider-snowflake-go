@@ -56,6 +56,14 @@ func validateViewGrant_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateViewGrant_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateViewGrant_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ViewGrant) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

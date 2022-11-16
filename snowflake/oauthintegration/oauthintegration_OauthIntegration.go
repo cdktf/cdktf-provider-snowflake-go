@@ -2,10 +2,10 @@ package oauthintegration
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v3/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v4/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v3/oauthintegration/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v4/oauthintegration/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -743,6 +743,44 @@ func OauthIntegration_IsConstruct(x interface{}) *bool {
 	_jsii_.StaticInvoke(
 		"@cdktf/provider-snowflake.oauthIntegration.OauthIntegration",
 		"isConstruct",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func OauthIntegration_IsTerraformElement(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateOauthIntegration_IsTerraformElementParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.oauthIntegration.OauthIntegration",
+		"isTerraformElement",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func OauthIntegration_IsTerraformResource(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateOauthIntegration_IsTerraformResourceParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.oauthIntegration.OauthIntegration",
+		"isTerraformResource",
 		[]interface{}{x},
 		&returns,
 	)

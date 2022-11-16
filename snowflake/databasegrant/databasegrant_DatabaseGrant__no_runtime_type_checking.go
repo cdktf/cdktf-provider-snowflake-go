@@ -56,6 +56,14 @@ func validateDatabaseGrant_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateDatabaseGrant_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateDatabaseGrant_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DatabaseGrant) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

@@ -2,10 +2,10 @@ package accountgrant
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v3/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v4/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v3/accountgrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v4/accountgrant/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -559,6 +559,44 @@ func AccountGrant_IsConstruct(x interface{}) *bool {
 	_jsii_.StaticInvoke(
 		"@cdktf/provider-snowflake.accountGrant.AccountGrant",
 		"isConstruct",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func AccountGrant_IsTerraformElement(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateAccountGrant_IsTerraformElementParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.accountGrant.AccountGrant",
+		"isTerraformElement",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func AccountGrant_IsTerraformResource(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateAccountGrant_IsTerraformResourceParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.accountGrant.AccountGrant",
+		"isTerraformResource",
 		[]interface{}{x},
 		&returns,
 	)

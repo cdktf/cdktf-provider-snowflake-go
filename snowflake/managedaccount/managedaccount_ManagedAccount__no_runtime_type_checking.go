@@ -56,6 +56,14 @@ func validateManagedAccount_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateManagedAccount_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateManagedAccount_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ManagedAccount) validateSetAdminNameParameters(val *string) error {
 	return nil
 }

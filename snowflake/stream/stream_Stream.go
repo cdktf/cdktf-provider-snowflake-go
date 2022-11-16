@@ -2,10 +2,10 @@ package stream
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v3/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v4/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v3/stream/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v4/stream/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -742,6 +742,44 @@ func Stream_IsConstruct(x interface{}) *bool {
 	_jsii_.StaticInvoke(
 		"@cdktf/provider-snowflake.stream.Stream",
 		"isConstruct",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func Stream_IsTerraformElement(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateStream_IsTerraformElementParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.stream.Stream",
+		"isTerraformElement",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func Stream_IsTerraformResource(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateStream_IsTerraformResourceParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.stream.Stream",
+		"isTerraformResource",
 		[]interface{}{x},
 		&returns,
 	)

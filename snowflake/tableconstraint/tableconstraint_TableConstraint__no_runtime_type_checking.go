@@ -60,6 +60,14 @@ func validateTableConstraint_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateTableConstraint_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateTableConstraint_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_TableConstraint) validateSetColumnsParameters(val *[]*string) error {
 	return nil
 }

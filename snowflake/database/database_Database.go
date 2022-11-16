@@ -2,10 +2,10 @@ package database
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v3/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v4/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v3/database/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v4/database/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -711,6 +711,44 @@ func Database_IsConstruct(x interface{}) *bool {
 	_jsii_.StaticInvoke(
 		"@cdktf/provider-snowflake.database.Database",
 		"isConstruct",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func Database_IsTerraformElement(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateDatabase_IsTerraformElementParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.database.Database",
+		"isTerraformElement",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func Database_IsTerraformResource(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateDatabase_IsTerraformResourceParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.database.Database",
+		"isTerraformResource",
 		[]interface{}{x},
 		&returns,
 	)

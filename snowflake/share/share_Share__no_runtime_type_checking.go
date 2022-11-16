@@ -56,6 +56,14 @@ func validateShare_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateShare_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateShare_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Share) validateSetAccountsParameters(val *[]*string) error {
 	return nil
 }

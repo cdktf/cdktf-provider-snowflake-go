@@ -56,6 +56,14 @@ func validateScimIntegration_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateScimIntegration_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateScimIntegration_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ScimIntegration) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

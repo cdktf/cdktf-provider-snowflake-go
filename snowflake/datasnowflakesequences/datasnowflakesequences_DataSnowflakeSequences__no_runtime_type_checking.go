@@ -56,6 +56,14 @@ func validateDataSnowflakeSequences_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateDataSnowflakeSequences_IsTerraformDataSourceParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataSnowflakeSequences_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataSnowflakeSequences) validateSetDatabaseParameters(val *string) error {
 	return nil
 }

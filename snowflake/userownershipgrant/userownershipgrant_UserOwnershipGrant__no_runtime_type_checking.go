@@ -56,6 +56,14 @@ func validateUserOwnershipGrant_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateUserOwnershipGrant_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateUserOwnershipGrant_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_UserOwnershipGrant) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

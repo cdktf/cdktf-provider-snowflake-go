@@ -56,6 +56,14 @@ func validateMaterializedViewGrant_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateMaterializedViewGrant_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateMaterializedViewGrant_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_MaterializedViewGrant) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }
