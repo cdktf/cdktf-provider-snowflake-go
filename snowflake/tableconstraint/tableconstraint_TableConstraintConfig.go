@@ -33,7 +33,7 @@ type TableConstraintConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/table_constraint#table_id TableConstraint#table_id}
 	TableId *string `field:"required" json:"tableId" yaml:"tableId"`
-	// Type of constraint.
+	// Type of constraint, one of 'UNIQUE', 'PRIMARY KEY', 'FOREIGN KEY', or 'NOT NULL'.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/table_constraint#type TableConstraint#type}
 	Type *string `field:"required" json:"type" yaml:"type"`
