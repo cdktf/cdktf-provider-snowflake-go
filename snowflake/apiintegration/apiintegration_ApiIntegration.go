@@ -23,6 +23,9 @@ type ApiIntegration interface {
 	ApiBlockedPrefixes() *[]*string
 	SetApiBlockedPrefixes(val *[]*string)
 	ApiBlockedPrefixesInput() *[]*string
+	ApiKey() *string
+	SetApiKey(val *string)
+	ApiKeyInput() *string
 	ApiProvider() *string
 	SetApiProvider(val *string)
 	ApiProviderInput() *string
@@ -117,6 +120,7 @@ type ApiIntegration interface {
 	OverrideLogicalId(newLogicalId *string)
 	ResetApiAwsRoleArn()
 	ResetApiBlockedPrefixes()
+	ResetApiKey()
 	ResetAzureAdApplicationId()
 	ResetAzureTenantId()
 	ResetEnabled()
@@ -214,6 +218,26 @@ func (j *jsiiProxy_ApiIntegration) ApiBlockedPrefixesInput() *[]*string {
 	_jsii_.Get(
 		j,
 		"apiBlockedPrefixesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ApiIntegration) ApiKey() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"apiKey",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ApiIntegration) ApiKeyInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"apiKeyInput",
 		&returns,
 	)
 	return returns
@@ -588,6 +612,17 @@ func (j *jsiiProxy_ApiIntegration)SetApiBlockedPrefixes(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"apiBlockedPrefixes",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ApiIntegration)SetApiKey(val *string) {
+	if err := j.validateSetApiKeyParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"apiKey",
 		val,
 	)
 }
@@ -1001,6 +1036,14 @@ func (a *jsiiProxy_ApiIntegration) ResetApiBlockedPrefixes() {
 	_jsii_.InvokeVoid(
 		a,
 		"resetApiBlockedPrefixes",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApiIntegration) ResetApiKey() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetApiKey",
 		nil, // no parameters
 	)
 }

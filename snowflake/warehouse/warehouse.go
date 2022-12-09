@@ -77,6 +77,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetTag", GoMethod: "ResetTag"},
 			_jsii_.MemberMethod{JsiiMethod: "resetWaitForProvisioning", GoMethod: "ResetWaitForProvisioning"},
 			_jsii_.MemberMethod{JsiiMethod: "resetWarehouseSize", GoMethod: "ResetWarehouseSize"},
+			_jsii_.MemberMethod{JsiiMethod: "resetWarehouseType", GoMethod: "ResetWarehouseType"},
 			_jsii_.MemberProperty{JsiiProperty: "resourceMonitor", GoGetter: "ResourceMonitor"},
 			_jsii_.MemberProperty{JsiiProperty: "resourceMonitorInput", GoGetter: "ResourceMonitorInput"},
 			_jsii_.MemberProperty{JsiiProperty: "scalingPolicy", GoGetter: "ScalingPolicy"},
@@ -98,6 +99,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "waitForProvisioningInput", GoGetter: "WaitForProvisioningInput"},
 			_jsii_.MemberProperty{JsiiProperty: "warehouseSize", GoGetter: "WarehouseSize"},
 			_jsii_.MemberProperty{JsiiProperty: "warehouseSizeInput", GoGetter: "WarehouseSizeInput"},
+			_jsii_.MemberProperty{JsiiProperty: "warehouseType", GoGetter: "WarehouseType"},
+			_jsii_.MemberProperty{JsiiProperty: "warehouseTypeInput", GoGetter: "WarehouseTypeInput"},
 		},
 		func() interface{} {
 			j := jsiiProxy_Warehouse{}

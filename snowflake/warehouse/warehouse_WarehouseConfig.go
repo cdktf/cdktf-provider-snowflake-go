@@ -94,5 +94,9 @@ type WarehouseConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/warehouse#warehouse_size Warehouse#warehouse_size}
 	WarehouseSize *string `field:"optional" json:"warehouseSize" yaml:"warehouseSize"`
+	// Specifies a STANDARD or SNOWPARK-OPTIMIZED warehouse.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/warehouse#warehouse_type Warehouse#warehouse_type}
+	WarehouseType *string `field:"optional" json:"warehouseType" yaml:"warehouseType"`
 }
 

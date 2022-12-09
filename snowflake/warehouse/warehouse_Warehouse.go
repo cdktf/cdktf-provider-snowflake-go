@@ -111,6 +111,9 @@ type Warehouse interface {
 	WarehouseSize() *string
 	SetWarehouseSize(val *string)
 	WarehouseSizeInput() *string
+	WarehouseType() *string
+	SetWarehouseType(val *string)
+	WarehouseTypeInput() *string
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -157,6 +160,7 @@ type Warehouse interface {
 	ResetTag()
 	ResetWaitForProvisioning()
 	ResetWarehouseSize()
+	ResetWarehouseType()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
 	ToMetadata() interface{}
@@ -692,6 +696,26 @@ func (j *jsiiProxy_Warehouse) WarehouseSizeInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Warehouse) WarehouseType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"warehouseType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Warehouse) WarehouseTypeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"warehouseTypeInput",
+		&returns,
+	)
+	return returns
+}
+
 
 // Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/warehouse snowflake_warehouse} Resource.
 func NewWarehouse(scope constructs.Construct, id *string, config *WarehouseConfig) Warehouse {
@@ -970,6 +994,17 @@ func (j *jsiiProxy_Warehouse)SetWarehouseSize(val *string) {
 	_jsii_.Set(
 		j,
 		"warehouseSize",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Warehouse)SetWarehouseType(val *string) {
+	if err := j.validateSetWarehouseTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"warehouseType",
 		val,
 	)
 }
@@ -1391,6 +1426,14 @@ func (w *jsiiProxy_Warehouse) ResetWarehouseSize() {
 	_jsii_.InvokeVoid(
 		w,
 		"resetWarehouseSize",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_Warehouse) ResetWarehouseType() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetWarehouseType",
 		nil, // no parameters
 	)
 }

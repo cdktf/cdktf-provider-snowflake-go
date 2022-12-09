@@ -41,6 +41,10 @@ type ApiIntegrationConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/api_integration#api_blocked_prefixes ApiIntegration#api_blocked_prefixes}
 	ApiBlockedPrefixes *[]*string `field:"optional" json:"apiBlockedPrefixes" yaml:"apiBlockedPrefixes"`
+	// The API key (also called a “subscription key”).
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/api_integration#api_key ApiIntegration#api_key}
+	ApiKey *string `field:"optional" json:"apiKey" yaml:"apiKey"`
 	// The 'Application (client) id' of the Azure AD app for your remote service.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/api_integration#azure_ad_application_id ApiIntegration#azure_ad_application_id}

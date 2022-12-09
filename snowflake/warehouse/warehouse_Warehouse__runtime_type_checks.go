@@ -437,6 +437,14 @@ func (j *jsiiProxy_Warehouse) validateSetWarehouseSizeParameters(val *string) er
 	return nil
 }
 
+func (j *jsiiProxy_Warehouse) validateSetWarehouseTypeParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func validateNewWarehouseParameters(scope constructs.Construct, id *string, config *WarehouseConfig) error {
 	if scope == nil {
 		return fmt.Errorf("parameter scope is required, but nil was provided")

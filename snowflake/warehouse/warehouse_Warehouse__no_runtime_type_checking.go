@@ -148,6 +148,10 @@ func (j *jsiiProxy_Warehouse) validateSetWarehouseSizeParameters(val *string) er
 	return nil
 }
 
+func (j *jsiiProxy_Warehouse) validateSetWarehouseTypeParameters(val *string) error {
+	return nil
+}
+
 func validateNewWarehouseParameters(scope constructs.Construct, id *string, config *WarehouseConfig) error {
 	return nil
 }
