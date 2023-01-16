@@ -119,6 +119,7 @@ type PipeGrant interface {
 	ResetPipeName()
 	ResetPrivilege()
 	ResetRoles()
+	ResetSchemaName()
 	ResetWithGrantOption()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
@@ -987,6 +988,14 @@ func (p *jsiiProxy_PipeGrant) ResetRoles() {
 	_jsii_.InvokeVoid(
 		p,
 		"resetRoles",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PipeGrant) ResetSchemaName() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetSchemaName",
 		nil, // no parameters
 	)
 }
