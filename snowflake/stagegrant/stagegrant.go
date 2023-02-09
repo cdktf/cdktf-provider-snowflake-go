@@ -51,7 +51,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetOnFuture", GoMethod: "ResetOnFuture"},
 			_jsii_.MemberMethod{JsiiMethod: "resetOverrideLogicalId", GoMethod: "ResetOverrideLogicalId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetPrivilege", GoMethod: "ResetPrivilege"},
-			_jsii_.MemberMethod{JsiiMethod: "resetRoles", GoMethod: "ResetRoles"},
+			_jsii_.MemberMethod{JsiiMethod: "resetSchemaName", GoMethod: "ResetSchemaName"},
 			_jsii_.MemberMethod{JsiiMethod: "resetStageName", GoMethod: "ResetStageName"},
 			_jsii_.MemberMethod{JsiiMethod: "resetWithGrantOption", GoMethod: "ResetWithGrantOption"},
 			_jsii_.MemberProperty{JsiiProperty: "roles", GoGetter: "Roles"},

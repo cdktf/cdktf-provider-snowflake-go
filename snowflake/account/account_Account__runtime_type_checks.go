@@ -1,6 +1,6 @@
 //go:build !no_runtime_type_checking
 
-package functiongrant
+package account
 
 import (
 	"fmt"
@@ -11,7 +11,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-func (f *jsiiProxy_FunctionGrant) validateAddOverrideParameters(path *string, value interface{}) error {
+func (a *jsiiProxy_Account) validateAddOverrideParameters(path *string, value interface{}) error {
 	if path == nil {
 		return fmt.Errorf("parameter path is required, but nil was provided")
 	}
@@ -23,7 +23,7 @@ func (f *jsiiProxy_FunctionGrant) validateAddOverrideParameters(path *string, va
 	return nil
 }
 
-func (f *jsiiProxy_FunctionGrant) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+func (a *jsiiProxy_Account) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -31,7 +31,7 @@ func (f *jsiiProxy_FunctionGrant) validateGetAnyMapAttributeParameters(terraform
 	return nil
 }
 
-func (f *jsiiProxy_FunctionGrant) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+func (a *jsiiProxy_Account) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -39,7 +39,7 @@ func (f *jsiiProxy_FunctionGrant) validateGetBooleanAttributeParameters(terrafor
 	return nil
 }
 
-func (f *jsiiProxy_FunctionGrant) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+func (a *jsiiProxy_Account) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -47,7 +47,7 @@ func (f *jsiiProxy_FunctionGrant) validateGetBooleanMapAttributeParameters(terra
 	return nil
 }
 
-func (f *jsiiProxy_FunctionGrant) validateGetListAttributeParameters(terraformAttribute *string) error {
+func (a *jsiiProxy_Account) validateGetListAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -55,7 +55,7 @@ func (f *jsiiProxy_FunctionGrant) validateGetListAttributeParameters(terraformAt
 	return nil
 }
 
-func (f *jsiiProxy_FunctionGrant) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+func (a *jsiiProxy_Account) validateGetNumberAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -63,7 +63,7 @@ func (f *jsiiProxy_FunctionGrant) validateGetNumberAttributeParameters(terraform
 	return nil
 }
 
-func (f *jsiiProxy_FunctionGrant) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+func (a *jsiiProxy_Account) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -71,7 +71,7 @@ func (f *jsiiProxy_FunctionGrant) validateGetNumberListAttributeParameters(terra
 	return nil
 }
 
-func (f *jsiiProxy_FunctionGrant) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+func (a *jsiiProxy_Account) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -79,7 +79,7 @@ func (f *jsiiProxy_FunctionGrant) validateGetNumberMapAttributeParameters(terraf
 	return nil
 }
 
-func (f *jsiiProxy_FunctionGrant) validateGetStringAttributeParameters(terraformAttribute *string) error {
+func (a *jsiiProxy_Account) validateGetStringAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -87,7 +87,7 @@ func (f *jsiiProxy_FunctionGrant) validateGetStringAttributeParameters(terraform
 	return nil
 }
 
-func (f *jsiiProxy_FunctionGrant) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+func (a *jsiiProxy_Account) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -95,7 +95,7 @@ func (f *jsiiProxy_FunctionGrant) validateGetStringMapAttributeParameters(terraf
 	return nil
 }
 
-func (f *jsiiProxy_FunctionGrant) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+func (a *jsiiProxy_Account) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -103,7 +103,7 @@ func (f *jsiiProxy_FunctionGrant) validateInterpolationForAttributeParameters(te
 	return nil
 }
 
-func (f *jsiiProxy_FunctionGrant) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+func (a *jsiiProxy_Account) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
 	}
@@ -111,38 +111,7 @@ func (f *jsiiProxy_FunctionGrant) validateOverrideLogicalIdParameters(newLogical
 	return nil
 }
 
-func (f *jsiiProxy_FunctionGrant) validatePutArgumentsParameters(value interface{}) error {
-	if value == nil {
-		return fmt.Errorf("parameter value is required, but nil was provided")
-	}
-	switch value.(type) {
-	case cdktf.IResolvable:
-		// ok
-	case *[]*FunctionGrantArguments:
-		value := value.(*[]*FunctionGrantArguments)
-		for idx_cd4240, v := range *value {
-			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
-				return err
-			}
-		}
-	case []*FunctionGrantArguments:
-		value_ := value.([]*FunctionGrantArguments)
-		value := &value_
-		for idx_cd4240, v := range *value {
-			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
-				return err
-			}
-		}
-	default:
-		if !_jsii_.IsAnonymousProxy(value) {
-			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*FunctionGrantArguments; received %#v (a %T)", value, value)
-		}
-	}
-
-	return nil
-}
-
-func validateFunctionGrant_IsConstructParameters(x interface{}) error {
+func validateAccount_IsConstructParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
 	}
@@ -150,7 +119,7 @@ func validateFunctionGrant_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
-func validateFunctionGrant_IsTerraformElementParameters(x interface{}) error {
+func validateAccount_IsTerraformElementParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
 	}
@@ -158,7 +127,7 @@ func validateFunctionGrant_IsTerraformElementParameters(x interface{}) error {
 	return nil
 }
 
-func validateFunctionGrant_IsTerraformResourceParameters(x interface{}) error {
+func validateAccount_IsTerraformResourceParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
 	}
@@ -166,7 +135,7 @@ func validateFunctionGrant_IsTerraformResourceParameters(x interface{}) error {
 	return nil
 }
 
-func (j *jsiiProxy_FunctionGrant) validateSetArgumentDataTypesParameters(val *[]*string) error {
+func (j *jsiiProxy_Account) validateSetAdminNameParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -174,7 +143,31 @@ func (j *jsiiProxy_FunctionGrant) validateSetArgumentDataTypesParameters(val *[]
 	return nil
 }
 
-func (j *jsiiProxy_FunctionGrant) validateSetConnectionParameters(val interface{}) error {
+func (j *jsiiProxy_Account) validateSetAdminPasswordParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Account) validateSetAdminRsaPublicKeyParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Account) validateSetCommentParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Account) validateSetConnectionParameters(val interface{}) error {
 	switch val.(type) {
 	case *cdktf.SSHProvisionerConnection:
 		val := val.(*cdktf.SSHProvisionerConnection)
@@ -207,7 +200,7 @@ func (j *jsiiProxy_FunctionGrant) validateSetConnectionParameters(val interface{
 	return nil
 }
 
-func (j *jsiiProxy_FunctionGrant) validateSetDatabaseNameParameters(val *string) error {
+func (j *jsiiProxy_Account) validateSetEditionParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -215,27 +208,7 @@ func (j *jsiiProxy_FunctionGrant) validateSetDatabaseNameParameters(val *string)
 	return nil
 }
 
-func (j *jsiiProxy_FunctionGrant) validateSetEnableMultipleGrantsParameters(val interface{}) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-	switch val.(type) {
-	case *bool:
-		// ok
-	case bool:
-		// ok
-	case cdktf.IResolvable:
-		// ok
-	default:
-		if !_jsii_.IsAnonymousProxy(val) {
-			return fmt.Errorf("parameter val must be one of the allowed types: *bool, cdktf.IResolvable; received %#v (a %T)", val, val)
-		}
-	}
-
-	return nil
-}
-
-func (j *jsiiProxy_FunctionGrant) validateSetFunctionNameParameters(val *string) error {
+func (j *jsiiProxy_Account) validateSetEmailParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -243,7 +216,7 @@ func (j *jsiiProxy_FunctionGrant) validateSetFunctionNameParameters(val *string)
 	return nil
 }
 
-func (j *jsiiProxy_FunctionGrant) validateSetIdParameters(val *string) error {
+func (j *jsiiProxy_Account) validateSetFirstNameParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -251,7 +224,23 @@ func (j *jsiiProxy_FunctionGrant) validateSetIdParameters(val *string) error {
 	return nil
 }
 
-func (j *jsiiProxy_FunctionGrant) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
+func (j *jsiiProxy_Account) validateSetIdParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Account) validateSetLastNameParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Account) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 		return err
 	}
@@ -259,7 +248,7 @@ func (j *jsiiProxy_FunctionGrant) validateSetLifecycleParameters(val *cdktf.Terr
 	return nil
 }
 
-func (j *jsiiProxy_FunctionGrant) validateSetOnFutureParameters(val interface{}) error {
+func (j *jsiiProxy_Account) validateSetMustChangePasswordParameters(val interface{}) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -279,7 +268,7 @@ func (j *jsiiProxy_FunctionGrant) validateSetOnFutureParameters(val interface{})
 	return nil
 }
 
-func (j *jsiiProxy_FunctionGrant) validateSetPrivilegeParameters(val *string) error {
+func (j *jsiiProxy_Account) validateSetNameParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -287,7 +276,7 @@ func (j *jsiiProxy_FunctionGrant) validateSetPrivilegeParameters(val *string) er
 	return nil
 }
 
-func (j *jsiiProxy_FunctionGrant) validateSetProvisionersParameters(val *[]interface{}) error {
+func (j *jsiiProxy_Account) validateSetProvisionersParameters(val *[]interface{}) error {
 	for idx_97dfc6, v := range *val {
 		switch v.(type) {
 		case *cdktf.FileProvisioner:
@@ -333,7 +322,7 @@ func (j *jsiiProxy_FunctionGrant) validateSetProvisionersParameters(val *[]inter
 	return nil
 }
 
-func (j *jsiiProxy_FunctionGrant) validateSetReturnTypeParameters(val *string) error {
+func (j *jsiiProxy_Account) validateSetRegionParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -341,7 +330,7 @@ func (j *jsiiProxy_FunctionGrant) validateSetReturnTypeParameters(val *string) e
 	return nil
 }
 
-func (j *jsiiProxy_FunctionGrant) validateSetRolesParameters(val *[]*string) error {
+func (j *jsiiProxy_Account) validateSetRegionGroupParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -349,43 +338,7 @@ func (j *jsiiProxy_FunctionGrant) validateSetRolesParameters(val *[]*string) err
 	return nil
 }
 
-func (j *jsiiProxy_FunctionGrant) validateSetSchemaNameParameters(val *string) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
-func (j *jsiiProxy_FunctionGrant) validateSetSharesParameters(val *[]*string) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
-func (j *jsiiProxy_FunctionGrant) validateSetWithGrantOptionParameters(val interface{}) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-	switch val.(type) {
-	case *bool:
-		// ok
-	case bool:
-		// ok
-	case cdktf.IResolvable:
-		// ok
-	default:
-		if !_jsii_.IsAnonymousProxy(val) {
-			return fmt.Errorf("parameter val must be one of the allowed types: *bool, cdktf.IResolvable; received %#v (a %T)", val, val)
-		}
-	}
-
-	return nil
-}
-
-func validateNewFunctionGrantParameters(scope constructs.Construct, id *string, config *FunctionGrantConfig) error {
+func validateNewAccountParameters(scope constructs.Construct, id *string, config *AccountConfig) error {
 	if scope == nil {
 		return fmt.Errorf("parameter scope is required, but nil was provided")
 	}

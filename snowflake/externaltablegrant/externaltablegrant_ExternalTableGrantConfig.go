@@ -23,6 +23,10 @@ type ExternalTableGrantConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/external_table_grant#database_name ExternalTableGrant#database_name}
 	DatabaseName *string `field:"required" json:"databaseName" yaml:"databaseName"`
+	// Grants privilege to these roles.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/external_table_grant#roles ExternalTableGrant#roles}
+	Roles *[]*string `field:"required" json:"roles" yaml:"roles"`
 	// When this is set to true, multiple grants of the same type can be created.
 	//
 	// This will cause Terraform to not revoke grants applied to roles and objects outside Terraform.
@@ -48,10 +52,6 @@ type ExternalTableGrantConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/external_table_grant#privilege ExternalTableGrant#privilege}
 	Privilege *string `field:"optional" json:"privilege" yaml:"privilege"`
-	// Grants privilege to these roles.
-	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/external_table_grant#roles ExternalTableGrant#roles}
-	Roles *[]*string `field:"optional" json:"roles" yaml:"roles"`
 	// The name of the schema containing the current or future external tables on which to grant privileges.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/external_table_grant#schema_name ExternalTableGrant#schema_name}

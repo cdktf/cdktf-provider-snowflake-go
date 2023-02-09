@@ -68,6 +68,10 @@ func validateProcedureGrant_IsTerraformResourceParameters(x interface{}) error {
 	return nil
 }
 
+func (j *jsiiProxy_ProcedureGrant) validateSetArgumentDataTypesParameters(val *[]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ProcedureGrant) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

@@ -23,10 +23,10 @@ type SequenceGrantConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/sequence_grant#database_name SequenceGrant#database_name}
 	DatabaseName *string `field:"required" json:"databaseName" yaml:"databaseName"`
-	// The name of the schema containing the current or future sequences on which to grant privileges.
+	// Grants privilege to these roles.
 	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/sequence_grant#schema_name SequenceGrant#schema_name}
-	SchemaName *string `field:"required" json:"schemaName" yaml:"schemaName"`
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/sequence_grant#roles SequenceGrant#roles}
+	Roles *[]*string `field:"required" json:"roles" yaml:"roles"`
 	// When this is set to true, multiple grants of the same type can be created.
 	//
 	// This will cause Terraform to not revoke grants applied to roles and objects outside Terraform.
@@ -48,10 +48,10 @@ type SequenceGrantConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/sequence_grant#privilege SequenceGrant#privilege}
 	Privilege *string `field:"optional" json:"privilege" yaml:"privilege"`
-	// Grants privilege to these roles.
+	// The name of the schema containing the current or future sequences on which to grant privileges.
 	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/sequence_grant#roles SequenceGrant#roles}
-	Roles *[]*string `field:"optional" json:"roles" yaml:"roles"`
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/sequence_grant#schema_name SequenceGrant#schema_name}
+	SchemaName *string `field:"optional" json:"schemaName" yaml:"schemaName"`
 	// The name of the sequence on which to grant privileges immediately (only valid if on_future is false).
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/sequence_grant#sequence_name SequenceGrant#sequence_name}

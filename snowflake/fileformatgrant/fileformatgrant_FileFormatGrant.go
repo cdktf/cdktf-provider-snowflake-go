@@ -118,7 +118,7 @@ type FileFormatGrant interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPrivilege()
-	ResetRoles()
+	ResetSchemaName()
 	ResetWithGrantOption()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
@@ -983,10 +983,10 @@ func (f *jsiiProxy_FileFormatGrant) ResetPrivilege() {
 	)
 }
 
-func (f *jsiiProxy_FileFormatGrant) ResetRoles() {
+func (f *jsiiProxy_FileFormatGrant) ResetSchemaName() {
 	_jsii_.InvokeVoid(
 		f,
-		"resetRoles",
+		"resetSchemaName",
 		nil, // no parameters
 	)
 }

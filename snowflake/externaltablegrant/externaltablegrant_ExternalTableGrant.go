@@ -121,7 +121,6 @@ type ExternalTableGrant interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPrivilege()
-	ResetRoles()
 	ResetSchemaName()
 	ResetShares()
 	ResetWithGrantOption()
@@ -1015,14 +1014,6 @@ func (e *jsiiProxy_ExternalTableGrant) ResetPrivilege() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetPrivilege",
-		nil, // no parameters
-	)
-}
-
-func (e *jsiiProxy_ExternalTableGrant) ResetRoles() {
-	_jsii_.InvokeVoid(
-		e,
-		"resetRoles",
 		nil, // no parameters
 	)
 }

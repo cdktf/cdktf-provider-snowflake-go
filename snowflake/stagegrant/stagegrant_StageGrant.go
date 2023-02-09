@@ -117,7 +117,7 @@ type StageGrant interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPrivilege()
-	ResetRoles()
+	ResetSchemaName()
 	ResetStageName()
 	ResetWithGrantOption()
 	SynthesizeAttributes() *map[string]interface{}
@@ -975,10 +975,10 @@ func (s *jsiiProxy_StageGrant) ResetPrivilege() {
 	)
 }
 
-func (s *jsiiProxy_StageGrant) ResetRoles() {
+func (s *jsiiProxy_StageGrant) ResetSchemaName() {
 	_jsii_.InvokeVoid(
 		s,
-		"resetRoles",
+		"resetSchemaName",
 		nil, // no parameters
 	)
 }

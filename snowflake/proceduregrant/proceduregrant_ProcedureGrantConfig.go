@@ -23,10 +23,14 @@ type ProcedureGrantConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/procedure_grant#database_name ProcedureGrant#database_name}
 	DatabaseName *string `field:"required" json:"databaseName" yaml:"databaseName"`
-	// The name of the schema containing the current or future procedures on which to grant privileges.
+	// Grants privilege to these roles.
 	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/procedure_grant#schema_name ProcedureGrant#schema_name}
-	SchemaName *string `field:"required" json:"schemaName" yaml:"schemaName"`
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/procedure_grant#roles ProcedureGrant#roles}
+	Roles *[]*string `field:"required" json:"roles" yaml:"roles"`
+	// List of the argument data types for the procedure (must be present if procedure has arguments and procedure_name is present).
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/procedure_grant#argument_data_types ProcedureGrant#argument_data_types}
+	ArgumentDataTypes *[]*string `field:"optional" json:"argumentDataTypes" yaml:"argumentDataTypes"`
 	// arguments block.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/procedure_grant#arguments ProcedureGrant#arguments}
@@ -60,10 +64,10 @@ type ProcedureGrantConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/procedure_grant#return_type ProcedureGrant#return_type}
 	ReturnType *string `field:"optional" json:"returnType" yaml:"returnType"`
-	// Grants privilege to these roles.
+	// The name of the schema containing the current or future procedures on which to grant privileges.
 	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/procedure_grant#roles ProcedureGrant#roles}
-	Roles *[]*string `field:"optional" json:"roles" yaml:"roles"`
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/procedure_grant#schema_name ProcedureGrant#schema_name}
+	SchemaName *string `field:"optional" json:"schemaName" yaml:"schemaName"`
 	// Grants privilege to these shares (only valid if on_future is false).
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/procedure_grant#shares ProcedureGrant#shares}

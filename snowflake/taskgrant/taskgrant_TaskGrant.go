@@ -117,7 +117,7 @@ type TaskGrant interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPrivilege()
-	ResetRoles()
+	ResetSchemaName()
 	ResetTaskName()
 	ResetWithGrantOption()
 	SynthesizeAttributes() *map[string]interface{}
@@ -975,10 +975,10 @@ func (t *jsiiProxy_TaskGrant) ResetPrivilege() {
 	)
 }
 
-func (t *jsiiProxy_TaskGrant) ResetRoles() {
+func (t *jsiiProxy_TaskGrant) ResetSchemaName() {
 	_jsii_.InvokeVoid(
 		t,
-		"resetRoles",
+		"resetSchemaName",
 		nil, // no parameters
 	)
 }

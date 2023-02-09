@@ -117,7 +117,7 @@ type SequenceGrant interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPrivilege()
-	ResetRoles()
+	ResetSchemaName()
 	ResetSequenceName()
 	ResetWithGrantOption()
 	SynthesizeAttributes() *map[string]interface{}
@@ -975,10 +975,10 @@ func (s *jsiiProxy_SequenceGrant) ResetPrivilege() {
 	)
 }
 
-func (s *jsiiProxy_SequenceGrant) ResetRoles() {
+func (s *jsiiProxy_SequenceGrant) ResetSchemaName() {
 	_jsii_.InvokeVoid(
 		s,
-		"resetRoles",
+		"resetSchemaName",
 		nil, // no parameters
 	)
 }

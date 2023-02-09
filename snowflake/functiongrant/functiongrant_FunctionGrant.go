@@ -12,6 +12,9 @@ import (
 // Represents a {@link https://www.terraform.io/docs/providers/snowflake/r/function_grant snowflake_function_grant}.
 type FunctionGrant interface {
 	cdktf.TerraformResource
+	ArgumentDataTypes() *[]*string
+	SetArgumentDataTypes(val *[]*string)
+	ArgumentDataTypesInput() *[]*string
 	Arguments() FunctionGrantArgumentsList
 	ArgumentsInput() interface{}
 	// Experimental.
@@ -119,6 +122,7 @@ type FunctionGrant interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutArguments(value interface{})
+	ResetArgumentDataTypes()
 	ResetArguments()
 	ResetEnableMultipleGrants()
 	ResetFunctionName()
@@ -129,7 +133,7 @@ type FunctionGrant interface {
 	ResetOverrideLogicalId()
 	ResetPrivilege()
 	ResetReturnType()
-	ResetRoles()
+	ResetSchemaName()
 	ResetShares()
 	ResetWithGrantOption()
 	SynthesizeAttributes() *map[string]interface{}
@@ -145,6 +149,26 @@ type FunctionGrant interface {
 // The jsii proxy struct for FunctionGrant
 type jsiiProxy_FunctionGrant struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_FunctionGrant) ArgumentDataTypes() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"argumentDataTypes",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_FunctionGrant) ArgumentDataTypesInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"argumentDataTypesInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_FunctionGrant) Arguments() FunctionGrantArgumentsList {
@@ -574,6 +598,17 @@ func NewFunctionGrant_Override(f FunctionGrant, scope constructs.Construct, id *
 		"@cdktf/provider-snowflake.functionGrant.FunctionGrant",
 		[]interface{}{scope, id, config},
 		f,
+	)
+}
+
+func (j *jsiiProxy_FunctionGrant)SetArgumentDataTypes(val *[]*string) {
+	if err := j.validateSetArgumentDataTypesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"argumentDataTypes",
+		val,
 	)
 }
 
@@ -1040,6 +1075,14 @@ func (f *jsiiProxy_FunctionGrant) PutArguments(value interface{}) {
 	)
 }
 
+func (f *jsiiProxy_FunctionGrant) ResetArgumentDataTypes() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetArgumentDataTypes",
+		nil, // no parameters
+	)
+}
+
 func (f *jsiiProxy_FunctionGrant) ResetArguments() {
 	_jsii_.InvokeVoid(
 		f,
@@ -1104,10 +1147,10 @@ func (f *jsiiProxy_FunctionGrant) ResetReturnType() {
 	)
 }
 
-func (f *jsiiProxy_FunctionGrant) ResetRoles() {
+func (f *jsiiProxy_FunctionGrant) ResetSchemaName() {
 	_jsii_.InvokeVoid(
 		f,
-		"resetRoles",
+		"resetSchemaName",
 		nil, // no parameters
 	)
 }

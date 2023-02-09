@@ -117,7 +117,7 @@ type StreamGrant interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPrivilege()
-	ResetRoles()
+	ResetSchemaName()
 	ResetStreamName()
 	ResetWithGrantOption()
 	SynthesizeAttributes() *map[string]interface{}
@@ -975,10 +975,10 @@ func (s *jsiiProxy_StreamGrant) ResetPrivilege() {
 	)
 }
 
-func (s *jsiiProxy_StreamGrant) ResetRoles() {
+func (s *jsiiProxy_StreamGrant) ResetSchemaName() {
 	_jsii_.InvokeVoid(
 		s,
-		"resetRoles",
+		"resetSchemaName",
 		nil, // no parameters
 	)
 }

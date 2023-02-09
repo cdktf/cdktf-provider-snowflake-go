@@ -23,10 +23,10 @@ type TaskGrantConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/task_grant#database_name TaskGrant#database_name}
 	DatabaseName *string `field:"required" json:"databaseName" yaml:"databaseName"`
-	// The name of the schema containing the current or future tasks on which to grant privileges.
+	// Grants privilege to these roles.
 	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/task_grant#schema_name TaskGrant#schema_name}
-	SchemaName *string `field:"required" json:"schemaName" yaml:"schemaName"`
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/task_grant#roles TaskGrant#roles}
+	Roles *[]*string `field:"required" json:"roles" yaml:"roles"`
 	// When this is set to true, multiple grants of the same type can be created.
 	//
 	// This will cause Terraform to not revoke grants applied to roles and objects outside Terraform.
@@ -48,10 +48,10 @@ type TaskGrantConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/task_grant#privilege TaskGrant#privilege}
 	Privilege *string `field:"optional" json:"privilege" yaml:"privilege"`
-	// Grants privilege to these roles.
+	// The name of the schema containing the current or future tasks on which to grant privileges.
 	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/task_grant#roles TaskGrant#roles}
-	Roles *[]*string `field:"optional" json:"roles" yaml:"roles"`
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/task_grant#schema_name TaskGrant#schema_name}
+	SchemaName *string `field:"optional" json:"schemaName" yaml:"schemaName"`
 	// The name of the task on which to grant privileges immediately (only valid if on_future is false).
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/task_grant#task_name TaskGrant#task_name}

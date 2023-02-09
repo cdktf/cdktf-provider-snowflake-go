@@ -12,6 +12,9 @@ import (
 // Represents a {@link https://www.terraform.io/docs/providers/snowflake/r/procedure_grant snowflake_procedure_grant}.
 type ProcedureGrant interface {
 	cdktf.TerraformResource
+	ArgumentDataTypes() *[]*string
+	SetArgumentDataTypes(val *[]*string)
+	ArgumentDataTypesInput() *[]*string
 	Arguments() ProcedureGrantArgumentsList
 	ArgumentsInput() interface{}
 	// Experimental.
@@ -119,6 +122,7 @@ type ProcedureGrant interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutArguments(value interface{})
+	ResetArgumentDataTypes()
 	ResetArguments()
 	ResetEnableMultipleGrants()
 	ResetId()
@@ -129,7 +133,7 @@ type ProcedureGrant interface {
 	ResetPrivilege()
 	ResetProcedureName()
 	ResetReturnType()
-	ResetRoles()
+	ResetSchemaName()
 	ResetShares()
 	ResetWithGrantOption()
 	SynthesizeAttributes() *map[string]interface{}
@@ -145,6 +149,26 @@ type ProcedureGrant interface {
 // The jsii proxy struct for ProcedureGrant
 type jsiiProxy_ProcedureGrant struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_ProcedureGrant) ArgumentDataTypes() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"argumentDataTypes",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ProcedureGrant) ArgumentDataTypesInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"argumentDataTypesInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_ProcedureGrant) Arguments() ProcedureGrantArgumentsList {
@@ -574,6 +598,17 @@ func NewProcedureGrant_Override(p ProcedureGrant, scope constructs.Construct, id
 		"@cdktf/provider-snowflake.procedureGrant.ProcedureGrant",
 		[]interface{}{scope, id, config},
 		p,
+	)
+}
+
+func (j *jsiiProxy_ProcedureGrant)SetArgumentDataTypes(val *[]*string) {
+	if err := j.validateSetArgumentDataTypesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"argumentDataTypes",
+		val,
 	)
 }
 
@@ -1040,6 +1075,14 @@ func (p *jsiiProxy_ProcedureGrant) PutArguments(value interface{}) {
 	)
 }
 
+func (p *jsiiProxy_ProcedureGrant) ResetArgumentDataTypes() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetArgumentDataTypes",
+		nil, // no parameters
+	)
+}
+
 func (p *jsiiProxy_ProcedureGrant) ResetArguments() {
 	_jsii_.InvokeVoid(
 		p,
@@ -1104,10 +1147,10 @@ func (p *jsiiProxy_ProcedureGrant) ResetReturnType() {
 	)
 }
 
-func (p *jsiiProxy_ProcedureGrant) ResetRoles() {
+func (p *jsiiProxy_ProcedureGrant) ResetSchemaName() {
 	_jsii_.InvokeVoid(
 		p,
-		"resetRoles",
+		"resetSchemaName",
 		nil, // no parameters
 	)
 }

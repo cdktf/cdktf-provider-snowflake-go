@@ -23,10 +23,10 @@ type FileFormatGrantConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/file_format_grant#database_name FileFormatGrant#database_name}
 	DatabaseName *string `field:"required" json:"databaseName" yaml:"databaseName"`
-	// The name of the schema containing the current or future file formats on which to grant privileges.
+	// Grants privilege to these roles.
 	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/file_format_grant#schema_name FileFormatGrant#schema_name}
-	SchemaName *string `field:"required" json:"schemaName" yaml:"schemaName"`
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/file_format_grant#roles FileFormatGrant#roles}
+	Roles *[]*string `field:"required" json:"roles" yaml:"roles"`
 	// When this is set to true, multiple grants of the same type can be created.
 	//
 	// This will cause Terraform to not revoke grants applied to roles and objects outside Terraform.
@@ -52,10 +52,10 @@ type FileFormatGrantConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/file_format_grant#privilege FileFormatGrant#privilege}
 	Privilege *string `field:"optional" json:"privilege" yaml:"privilege"`
-	// Grants privilege to these roles.
+	// The name of the schema containing the current or future file formats on which to grant privileges.
 	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/file_format_grant#roles FileFormatGrant#roles}
-	Roles *[]*string `field:"optional" json:"roles" yaml:"roles"`
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/file_format_grant#schema_name FileFormatGrant#schema_name}
+	SchemaName *string `field:"optional" json:"schemaName" yaml:"schemaName"`
 	// When this is set to true, allows the recipient role to grant the privileges to other roles.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/file_format_grant#with_grant_option FileFormatGrant#with_grant_option}
