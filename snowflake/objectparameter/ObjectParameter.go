@@ -99,6 +99,8 @@ type ObjectParameter interface {
 	OverrideLogicalId(newLogicalId *string)
 	PutObjectIdentifier(value interface{})
 	ResetId()
+	ResetObjectIdentifier()
+	ResetObjectType()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -797,6 +799,22 @@ func (o *jsiiProxy_ObjectParameter) ResetId() {
 	_jsii_.InvokeVoid(
 		o,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_ObjectParameter) ResetObjectIdentifier() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetObjectIdentifier",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_ObjectParameter) ResetObjectType() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetObjectType",
 		nil, // no parameters
 	)
 }
