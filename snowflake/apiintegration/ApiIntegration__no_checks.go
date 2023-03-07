@@ -92,11 +92,19 @@ func (j *jsiiProxy_ApiIntegration) validateSetAzureTenantIdParameters(val *strin
 	return nil
 }
 
+func (j *jsiiProxy_ApiIntegration) validateSetCommentParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ApiIntegration) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }
 
 func (j *jsiiProxy_ApiIntegration) validateSetEnabledParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_ApiIntegration) validateSetGoogleAudienceParameters(val *string) error {
 	return nil
 }
 

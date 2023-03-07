@@ -39,6 +39,9 @@ type ApiIntegration interface {
 	AzureTenantIdInput() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	Comment() *string
+	SetComment(val *string)
+	CommentInput() *string
 	// Experimental.
 	Connection() interface{}
 	// Experimental.
@@ -65,6 +68,9 @@ type ApiIntegration interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	GoogleAudience() *string
+	SetGoogleAudience(val *string)
+	GoogleAudienceInput() *string
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -123,7 +129,9 @@ type ApiIntegration interface {
 	ResetApiKey()
 	ResetAzureAdApplicationId()
 	ResetAzureTenantId()
+	ResetComment()
 	ResetEnabled()
+	ResetGoogleAudience()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -333,6 +341,26 @@ func (j *jsiiProxy_ApiIntegration) CdktfStack() cdktf.TerraformStack {
 	return returns
 }
 
+func (j *jsiiProxy_ApiIntegration) Comment() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"comment",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ApiIntegration) CommentInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"commentInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ApiIntegration) Connection() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -428,6 +456,26 @@ func (j *jsiiProxy_ApiIntegration) FriendlyUniqueId() *string {
 	_jsii_.Get(
 		j,
 		"friendlyUniqueId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ApiIntegration) GoogleAudience() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"googleAudience",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ApiIntegration) GoogleAudienceInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"googleAudienceInput",
 		&returns,
 	)
 	return returns
@@ -660,6 +708,17 @@ func (j *jsiiProxy_ApiIntegration)SetAzureTenantId(val *string) {
 	)
 }
 
+func (j *jsiiProxy_ApiIntegration)SetComment(val *string) {
+	if err := j.validateSetCommentParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"comment",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ApiIntegration)SetConnection(val interface{}) {
 	if err := j.validateSetConnectionParameters(val); err != nil {
 		panic(err)
@@ -702,6 +761,17 @@ func (j *jsiiProxy_ApiIntegration)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ApiIntegration)SetGoogleAudience(val *string) {
+	if err := j.validateSetGoogleAudienceParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"googleAudience",
 		val,
 	)
 }
@@ -1064,10 +1134,26 @@ func (a *jsiiProxy_ApiIntegration) ResetAzureTenantId() {
 	)
 }
 
+func (a *jsiiProxy_ApiIntegration) ResetComment() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetComment",
+		nil, // no parameters
+	)
+}
+
 func (a *jsiiProxy_ApiIntegration) ResetEnabled() {
 	_jsii_.InvokeVoid(
 		a,
 		"resetEnabled",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApiIntegration) ResetGoogleAudience() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetGoogleAudience",
 		nil, // no parameters
 	)
 }

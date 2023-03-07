@@ -35,6 +35,8 @@ type UserConfig struct {
 	DefaultRole *string `field:"optional" json:"defaultRole" yaml:"defaultRole"`
 	// Specifies the set of secondary roles that are active for the user’s session upon login.
 	//
+	// Currently only ["ALL"] value is supported - more information can be found in [doc](https://docs.snowflake.com/en/sql-reference/sql/create-user#optional-object-properties-objectproperties)
+	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/user#default_secondary_roles User#default_secondary_roles}
 	DefaultSecondaryRoles *[]*string `field:"optional" json:"defaultSecondaryRoles" yaml:"defaultSecondaryRoles"`
 	// Specifies the virtual warehouse that is active by default for the user’s session upon login.

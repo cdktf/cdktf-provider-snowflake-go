@@ -53,12 +53,18 @@ type ApiIntegrationConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/api_integration#azure_tenant_id ApiIntegration#azure_tenant_id}
 	AzureTenantId *string `field:"optional" json:"azureTenantId" yaml:"azureTenantId"`
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/api_integration#comment ApiIntegration#comment}.
+	Comment *string `field:"optional" json:"comment" yaml:"comment"`
 	// Specifies whether this API integration is enabled or disabled.
 	//
 	// If the API integration is disabled, any external function that relies on it will not work.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/api_integration#enabled ApiIntegration#enabled}
 	Enabled interface{} `field:"optional" json:"enabled" yaml:"enabled"`
+	// The audience claim when generating the JWT (JSON Web Token) to authenticate to the Google API Gateway.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/api_integration#google_audience ApiIntegration#google_audience}
+	GoogleAudience *string `field:"optional" json:"googleAudience" yaml:"googleAudience"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/api_integration#id ApiIntegration#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
