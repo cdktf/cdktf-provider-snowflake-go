@@ -223,7 +223,23 @@ func (j *jsiiProxy_Procedure) validateSetExecuteAsParameters(val *string) error 
 	return nil
 }
 
+func (j *jsiiProxy_Procedure) validateSetHandlerParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_Procedure) validateSetIdParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Procedure) validateSetImportsParameters(val *[]*string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -256,6 +272,14 @@ func (j *jsiiProxy_Procedure) validateSetNameParameters(val *string) error {
 }
 
 func (j *jsiiProxy_Procedure) validateSetNullInputBehaviorParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Procedure) validateSetPackagesParameters(val *[]*string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -318,6 +342,14 @@ func (j *jsiiProxy_Procedure) validateSetReturnBehaviorParameters(val *string) e
 }
 
 func (j *jsiiProxy_Procedure) validateSetReturnTypeParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Procedure) validateSetRuntimeVersionParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

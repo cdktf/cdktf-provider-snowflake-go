@@ -39,6 +39,7 @@ type DataSnowflakeSystemGetPrivatelinkConfig interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	InternalStage() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -52,6 +53,9 @@ type DataSnowflakeSystemGetPrivatelinkConfig interface {
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	RegionlessAccountUrl() *string
+	RegionlessSnowsightUrl() *string
+	SnowsightUrl() *string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -232,6 +236,16 @@ func (j *jsiiProxy_DataSnowflakeSystemGetPrivatelinkConfig) IdInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataSnowflakeSystemGetPrivatelinkConfig) InternalStage() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"internalStage",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataSnowflakeSystemGetPrivatelinkConfig) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -277,6 +291,36 @@ func (j *jsiiProxy_DataSnowflakeSystemGetPrivatelinkConfig) RawOverrides() inter
 	_jsii_.Get(
 		j,
 		"rawOverrides",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeSystemGetPrivatelinkConfig) RegionlessAccountUrl() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"regionlessAccountUrl",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeSystemGetPrivatelinkConfig) RegionlessSnowsightUrl() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"regionlessSnowsightUrl",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeSystemGetPrivatelinkConfig) SnowsightUrl() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"snowsightUrl",
 		&returns,
 	)
 	return returns

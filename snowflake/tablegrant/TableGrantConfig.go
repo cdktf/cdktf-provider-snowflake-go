@@ -34,6 +34,12 @@ type TableGrantConfig struct {
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
+	// When this is set to true and a schema_name is provided, apply this grant on all all tables in the given schema.
+	//
+	// When this is true and no schema_name is provided apply this grant on all all tables in the given database. The table_name and shares fields must be unset in order to use on_all.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/table_grant#on_all TableGrant#on_all}
+	OnAll interface{} `field:"optional" json:"onAll" yaml:"onAll"`
 	// When this is set to true and a schema_name is provided, apply this grant on all future tables in the given schema.
 	//
 	// When this is true and no schema_name is provided apply this grant on all future tables in the given database. The table_name and shares fields must be unset in order to use on_future.
@@ -52,11 +58,11 @@ type TableGrantConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/table_grant#schema_name TableGrant#schema_name}
 	SchemaName *string `field:"optional" json:"schemaName" yaml:"schemaName"`
-	// Grants privilege to these shares (only valid if on_future is unset).
+	// Grants privilege to these shares (only valid if on_future or on_all is unset).
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/table_grant#shares TableGrant#shares}
 	Shares *[]*string `field:"optional" json:"shares" yaml:"shares"`
-	// The name of the table on which to grant privileges immediately (only valid if on_future is unset).
+	// The name of the table on which to grant privileges immediately (only valid if on_future or on_all is unset).
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/table_grant#table_name TableGrant#table_name}
 	TableName *string `field:"optional" json:"tableName" yaml:"tableName"`

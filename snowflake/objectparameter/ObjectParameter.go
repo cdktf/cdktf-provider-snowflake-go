@@ -53,6 +53,9 @@ type ObjectParameter interface {
 	ObjectType() *string
 	SetObjectType(val *string)
 	ObjectTypeInput() *string
+	OnAccount() interface{}
+	SetOnAccount(val interface{})
+	OnAccountInput() interface{}
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -101,6 +104,7 @@ type ObjectParameter interface {
 	ResetId()
 	ResetObjectIdentifier()
 	ResetObjectType()
+	ResetOnAccount()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -299,6 +303,26 @@ func (j *jsiiProxy_ObjectParameter) ObjectTypeInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ObjectParameter) OnAccount() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onAccount",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ObjectParameter) OnAccountInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onAccountInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ObjectParameter) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -484,6 +508,17 @@ func (j *jsiiProxy_ObjectParameter)SetObjectType(val *string) {
 	_jsii_.Set(
 		j,
 		"objectType",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ObjectParameter)SetOnAccount(val interface{}) {
+	if err := j.validateSetOnAccountParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"onAccount",
 		val,
 	)
 }
@@ -815,6 +850,14 @@ func (o *jsiiProxy_ObjectParameter) ResetObjectType() {
 	_jsii_.InvokeVoid(
 		o,
 		"resetObjectType",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_ObjectParameter) ResetOnAccount() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetOnAccount",
 		nil, // no parameters
 	)
 }

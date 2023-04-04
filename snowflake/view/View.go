@@ -23,6 +23,9 @@ type View interface {
 	SetConnection(val interface{})
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
+	CopyGrants() interface{}
+	SetCopyGrants(val interface{})
+	CopyGrantsInput() interface{}
 	// Experimental.
 	Count() *float64
 	// Experimental.
@@ -111,6 +114,7 @@ type View interface {
 	OverrideLogicalId(newLogicalId *string)
 	PutTag(value interface{})
 	ResetComment()
+	ResetCopyGrants()
 	ResetId()
 	ResetIsSecure()
 	ResetOrReplace()
@@ -178,6 +182,26 @@ func (j *jsiiProxy_View) ConstructNodeMetadata() *map[string]interface{} {
 	_jsii_.Get(
 		j,
 		"constructNodeMetadata",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_View) CopyGrants() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"copyGrants",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_View) CopyGrantsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"copyGrantsInput",
 		&returns,
 	)
 	return returns
@@ -521,6 +545,17 @@ func (j *jsiiProxy_View)SetConnection(val interface{}) {
 	_jsii_.Set(
 		j,
 		"connection",
+		val,
+	)
+}
+
+func (j *jsiiProxy_View)SetCopyGrants(val interface{}) {
+	if err := j.validateSetCopyGrantsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"copyGrants",
 		val,
 	)
 }
@@ -937,6 +972,14 @@ func (v *jsiiProxy_View) ResetComment() {
 	_jsii_.InvokeVoid(
 		v,
 		"resetComment",
+		nil, // no parameters
+	)
+}
+
+func (v *jsiiProxy_View) ResetCopyGrants() {
+	_jsii_.InvokeVoid(
+		v,
+		"resetCopyGrants",
 		nil, // no parameters
 	)
 }

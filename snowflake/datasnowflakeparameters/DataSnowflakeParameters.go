@@ -66,6 +66,9 @@ type DataSnowflakeParameters interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	User() *string
+	SetUser(val *string)
+	UserInput() *string
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -99,6 +102,7 @@ type DataSnowflakeParameters interface {
 	ResetOverrideLogicalId()
 	ResetParameterType()
 	ResetPattern()
+	ResetUser()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
 	ToMetadata() interface{}
@@ -364,6 +368,26 @@ func (j *jsiiProxy_DataSnowflakeParameters) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataSnowflakeParameters) User() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"user",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeParameters) UserInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"userInput",
+		&returns,
+	)
+	return returns
+}
+
 
 // Create a new {@link https://www.terraform.io/docs/providers/snowflake/d/parameters snowflake_parameters} Data Source.
 func NewDataSnowflakeParameters(scope constructs.Construct, id *string, config *DataSnowflakeParametersConfig) DataSnowflakeParameters {
@@ -488,6 +512,17 @@ func (j *jsiiProxy_DataSnowflakeParameters)SetProvider(val cdktf.TerraformProvid
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataSnowflakeParameters)SetUser(val *string) {
+	if err := j.validateSetUserParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"user",
 		val,
 	)
 }
@@ -802,6 +837,14 @@ func (d *jsiiProxy_DataSnowflakeParameters) ResetPattern() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetPattern",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataSnowflakeParameters) ResetUser() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetUser",
 		nil, // no parameters
 	)
 }

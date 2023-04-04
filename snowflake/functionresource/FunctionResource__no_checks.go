@@ -92,6 +92,10 @@ func (j *jsiiProxy_FunctionResource) validateSetImportsParameters(val *[]*string
 	return nil
 }
 
+func (j *jsiiProxy_FunctionResource) validateSetIsSecureParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_FunctionResource) validateSetLanguageParameters(val *string) error {
 	return nil
 }

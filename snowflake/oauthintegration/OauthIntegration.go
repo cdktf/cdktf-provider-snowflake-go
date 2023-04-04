@@ -61,6 +61,9 @@ type OauthIntegration interface {
 	OauthClient() *string
 	SetOauthClient(val *string)
 	OauthClientInput() *string
+	OauthClientType() *string
+	SetOauthClientType(val *string)
+	OauthClientTypeInput() *string
 	OauthIssueRefreshTokens() interface{}
 	SetOauthIssueRefreshTokens(val interface{})
 	OauthIssueRefreshTokensInput() interface{}
@@ -118,6 +121,7 @@ type OauthIntegration interface {
 	ResetComment()
 	ResetEnabled()
 	ResetId()
+	ResetOauthClientType()
 	ResetOauthIssueRefreshTokens()
 	ResetOauthRedirectUri()
 	ResetOauthRefreshTokenValidity()
@@ -365,6 +369,26 @@ func (j *jsiiProxy_OauthIntegration) OauthClientInput() *string {
 	_jsii_.Get(
 		j,
 		"oauthClientInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OauthIntegration) OauthClientType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"oauthClientType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OauthIntegration) OauthClientTypeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"oauthClientTypeInput",
 		&returns,
 	)
 	return returns
@@ -648,6 +672,17 @@ func (j *jsiiProxy_OauthIntegration)SetOauthClient(val *string) {
 	_jsii_.Set(
 		j,
 		"oauthClient",
+		val,
+	)
+}
+
+func (j *jsiiProxy_OauthIntegration)SetOauthClientType(val *string) {
+	if err := j.validateSetOauthClientTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"oauthClientType",
 		val,
 	)
 }
@@ -1009,6 +1044,14 @@ func (o *jsiiProxy_OauthIntegration) ResetId() {
 	_jsii_.InvokeVoid(
 		o,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_OauthIntegration) ResetOauthClientType() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetOauthClientType",
 		nil, // no parameters
 	)
 }

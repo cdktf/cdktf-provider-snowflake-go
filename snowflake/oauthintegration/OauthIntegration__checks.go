@@ -236,6 +236,14 @@ func (j *jsiiProxy_OauthIntegration) validateSetOauthClientParameters(val *strin
 	return nil
 }
 
+func (j *jsiiProxy_OauthIntegration) validateSetOauthClientTypeParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_OauthIntegration) validateSetOauthIssueRefreshTokensParameters(val interface{}) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

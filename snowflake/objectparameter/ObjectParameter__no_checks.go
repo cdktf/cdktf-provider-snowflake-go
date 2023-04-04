@@ -88,6 +88,10 @@ func (j *jsiiProxy_ObjectParameter) validateSetObjectTypeParameters(val *string)
 	return nil
 }
 
+func (j *jsiiProxy_ObjectParameter) validateSetOnAccountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ObjectParameter) validateSetProvisionersParameters(val *[]interface{}) error {
 	return nil
 }

@@ -248,6 +248,14 @@ func (j *jsiiProxy_Stream) validateSetNameParameters(val *string) error {
 	return nil
 }
 
+func (j *jsiiProxy_Stream) validateSetOnStageParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_Stream) validateSetOnTableParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

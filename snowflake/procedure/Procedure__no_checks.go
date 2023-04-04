@@ -84,7 +84,15 @@ func (j *jsiiProxy_Procedure) validateSetExecuteAsParameters(val *string) error 
 	return nil
 }
 
+func (j *jsiiProxy_Procedure) validateSetHandlerParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Procedure) validateSetIdParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Procedure) validateSetImportsParameters(val *[]*string) error {
 	return nil
 }
 
@@ -104,6 +112,10 @@ func (j *jsiiProxy_Procedure) validateSetNullInputBehaviorParameters(val *string
 	return nil
 }
 
+func (j *jsiiProxy_Procedure) validateSetPackagesParameters(val *[]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Procedure) validateSetProvisionersParameters(val *[]interface{}) error {
 	return nil
 }
@@ -113,6 +125,10 @@ func (j *jsiiProxy_Procedure) validateSetReturnBehaviorParameters(val *string) e
 }
 
 func (j *jsiiProxy_Procedure) validateSetReturnTypeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Procedure) validateSetRuntimeVersionParameters(val *string) error {
 	return nil
 }
 

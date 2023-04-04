@@ -88,6 +88,10 @@ func (j *jsiiProxy_DataSnowflakeParameters) validateSetPatternParameters(val *st
 	return nil
 }
 
+func (j *jsiiProxy_DataSnowflakeParameters) validateSetUserParameters(val *string) error {
+	return nil
+}
+
 func validateNewDataSnowflakeParametersParameters(scope constructs.Construct, id *string, config *DataSnowflakeParametersConfig) error {
 	return nil
 }

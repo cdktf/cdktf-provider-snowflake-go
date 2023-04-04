@@ -112,7 +112,15 @@ func (j *jsiiProxy_ResourceMonitor) validateSetStartTimestampParameters(val *str
 	return nil
 }
 
+func (j *jsiiProxy_ResourceMonitor) validateSetSuspendImmediateTriggerParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_ResourceMonitor) validateSetSuspendImmediateTriggersParameters(val *[]*float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_ResourceMonitor) validateSetSuspendTriggerParameters(val *float64) error {
 	return nil
 }
 

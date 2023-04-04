@@ -48,6 +48,9 @@ type SessionParameter interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
+	OnAccount() interface{}
+	SetOnAccount(val interface{})
+	OnAccountInput() interface{}
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -64,6 +67,9 @@ type SessionParameter interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	User() *string
+	SetUser(val *string)
+	UserInput() *string
 	Value() *string
 	SetValue(val *string)
 	ValueInput() *string
@@ -93,9 +99,11 @@ type SessionParameter interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	ResetId()
+	ResetOnAccount()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetUser()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
 	ToMetadata() interface{}
@@ -251,6 +259,26 @@ func (j *jsiiProxy_SessionParameter) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_SessionParameter) OnAccount() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onAccount",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SessionParameter) OnAccountInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onAccountInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_SessionParameter) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -306,6 +334,26 @@ func (j *jsiiProxy_SessionParameter) TerraformResourceType() *string {
 	_jsii_.Get(
 		j,
 		"terraformResourceType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SessionParameter) User() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"user",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SessionParameter) UserInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"userInput",
 		&returns,
 	)
 	return returns
@@ -429,6 +477,17 @@ func (j *jsiiProxy_SessionParameter)SetLifecycle(val *cdktf.TerraformResourceLif
 	)
 }
 
+func (j *jsiiProxy_SessionParameter)SetOnAccount(val interface{}) {
+	if err := j.validateSetOnAccountParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"onAccount",
+		val,
+	)
+}
+
 func (j *jsiiProxy_SessionParameter)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
@@ -444,6 +503,17 @@ func (j *jsiiProxy_SessionParameter)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SessionParameter)SetUser(val *string) {
+	if err := j.validateSetUserParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"user",
 		val,
 	)
 }
@@ -733,10 +803,26 @@ func (s *jsiiProxy_SessionParameter) ResetId() {
 	)
 }
 
+func (s *jsiiProxy_SessionParameter) ResetOnAccount() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetOnAccount",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SessionParameter) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SessionParameter) ResetUser() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetUser",
 		nil, // no parameters
 	)
 }

@@ -51,6 +51,9 @@ type TableGrant interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
+	OnAll() interface{}
+	SetOnAll(val interface{})
+	OnAllInput() interface{}
 	OnFuture() interface{}
 	SetOnFuture(val interface{})
 	OnFutureInput() interface{}
@@ -115,6 +118,7 @@ type TableGrant interface {
 	OverrideLogicalId(newLogicalId *string)
 	ResetEnableMultipleGrants()
 	ResetId()
+	ResetOnAll()
 	ResetOnFuture()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -295,6 +299,26 @@ func (j *jsiiProxy_TableGrant) Node() constructs.Node {
 	_jsii_.Get(
 		j,
 		"node",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TableGrant) OnAll() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onAll",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TableGrant) OnAllInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onAllInput",
 		&returns,
 	)
 	return returns
@@ -605,6 +629,17 @@ func (j *jsiiProxy_TableGrant)SetLifecycle(val *cdktf.TerraformResourceLifecycle
 	_jsii_.Set(
 		j,
 		"lifecycle",
+		val,
+	)
+}
+
+func (j *jsiiProxy_TableGrant)SetOnAll(val interface{}) {
+	if err := j.validateSetOnAllParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"onAll",
 		val,
 	)
 }
@@ -983,6 +1018,14 @@ func (t *jsiiProxy_TableGrant) ResetId() {
 	_jsii_.InvokeVoid(
 		t,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TableGrant) ResetOnAll() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetOnAll",
 		nil, // no parameters
 	)
 }

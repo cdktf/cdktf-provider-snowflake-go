@@ -96,6 +96,10 @@ func (j *jsiiProxy_Stream) validateSetNameParameters(val *string) error {
 	return nil
 }
 
+func (j *jsiiProxy_Stream) validateSetOnStageParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Stream) validateSetOnTableParameters(val *string) error {
 	return nil
 }

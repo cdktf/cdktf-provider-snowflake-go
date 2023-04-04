@@ -48,6 +48,10 @@ type OauthIntegrationConfig struct {
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
+	// Specifies the type of client being registered. Snowflake supports both confidential and public clients.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/oauth_integration#oauth_client_type OauthIntegration#oauth_client_type}
+	OauthClientType *string `field:"optional" json:"oauthClientType" yaml:"oauthClientType"`
 	// Specifies whether to allow the client to exchange a refresh token for an access token when the current access token has expired.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/oauth_integration#oauth_issue_refresh_tokens OauthIntegration#oauth_issue_refresh_tokens}

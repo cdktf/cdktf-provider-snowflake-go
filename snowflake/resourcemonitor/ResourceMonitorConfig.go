@@ -50,7 +50,7 @@ type ResourceMonitorConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/resource_monitor#notify_users ResourceMonitor#notify_users}
 	NotifyUsers *[]*string `field:"optional" json:"notifyUsers" yaml:"notifyUsers"`
-	// Specifies whether the resource monitor should be applied globally to your Snowflake account.
+	// Specifies whether the resource monitor should be applied globally to your Snowflake account (defaults to false).
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/resource_monitor#set_for_account ResourceMonitor#set_for_account}
 	SetForAccount interface{} `field:"optional" json:"setForAccount" yaml:"setForAccount"`
@@ -58,10 +58,18 @@ type ResourceMonitorConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/resource_monitor#start_timestamp ResourceMonitor#start_timestamp}
 	StartTimestamp *string `field:"optional" json:"startTimestamp" yaml:"startTimestamp"`
-	// A list of percentage thresholds at which to immediately suspend all warehouses.
+	// The number that represents the percentage threshold at which to immediately suspend all warehouses.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/resource_monitor#suspend_immediate_trigger ResourceMonitor#suspend_immediate_trigger}
+	SuspendImmediateTrigger *float64 `field:"optional" json:"suspendImmediateTrigger" yaml:"suspendImmediateTrigger"`
+	// A list of percentage thresholds at which to suspend all warehouses.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/resource_monitor#suspend_immediate_triggers ResourceMonitor#suspend_immediate_triggers}
 	SuspendImmediateTriggers *[]*float64 `field:"optional" json:"suspendImmediateTriggers" yaml:"suspendImmediateTriggers"`
+	// The number that represents the percentage threshold at which to suspend all warehouses.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/resource_monitor#suspend_trigger ResourceMonitor#suspend_trigger}
+	SuspendTrigger *float64 `field:"optional" json:"suspendTrigger" yaml:"suspendTrigger"`
 	// A list of percentage thresholds at which to suspend all warehouses.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/resource_monitor#suspend_triggers ResourceMonitor#suspend_triggers}

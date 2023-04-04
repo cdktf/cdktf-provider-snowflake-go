@@ -60,6 +60,7 @@ type Account interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	IsOrgAdmin() cdktf.IResolvable
 	LastName() *string
 	SetLastName(val *string)
 	LastNameInput() *string
@@ -384,6 +385,16 @@ func (j *jsiiProxy_Account) IdInput() *string {
 	_jsii_.Get(
 		j,
 		"idInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Account) IsOrgAdmin() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"isOrgAdmin",
 		&returns,
 	)
 	return returns

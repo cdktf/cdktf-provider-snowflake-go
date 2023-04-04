@@ -84,6 +84,10 @@ func (j *jsiiProxy_TableGrant) validateSetLifecycleParameters(val *cdktf.Terrafo
 	return nil
 }
 
+func (j *jsiiProxy_TableGrant) validateSetOnAllParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_TableGrant) validateSetOnFutureParameters(val interface{}) error {
 	return nil
 }

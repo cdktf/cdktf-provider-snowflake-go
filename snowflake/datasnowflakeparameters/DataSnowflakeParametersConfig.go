@@ -44,5 +44,9 @@ type DataSnowflakeParametersConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/d/parameters#pattern DataSnowflakeParameters#pattern}
 	Pattern *string `field:"optional" json:"pattern" yaml:"pattern"`
+	// If parameter_type is set to "SESSION" then user is the name of the user to display session parameters for.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/d/parameters#user DataSnowflakeParameters#user}
+	User *string `field:"optional" json:"user" yaml:"user"`
 }
 

@@ -42,5 +42,9 @@ type ObjectParameterConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/object_parameter#object_type ObjectParameter#object_type}
 	ObjectType *string `field:"optional" json:"objectType" yaml:"objectType"`
+	// If true, the object parameter will be set on the account level.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/object_parameter#on_account ObjectParameter#on_account}
+	OnAccount interface{} `field:"optional" json:"onAccount" yaml:"onAccount"`
 }
 

@@ -60,6 +60,9 @@ type Stream interface {
 	NameInput() *string
 	// The tree node.
 	Node() constructs.Node
+	OnStage() *string
+	SetOnStage(val *string)
+	OnStageInput() *string
 	OnTable() *string
 	SetOnTable(val *string)
 	OnTableInput() *string
@@ -118,6 +121,7 @@ type Stream interface {
 	ResetComment()
 	ResetId()
 	ResetInsertOnly()
+	ResetOnStage()
 	ResetOnTable()
 	ResetOnView()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -354,6 +358,26 @@ func (j *jsiiProxy_Stream) Node() constructs.Node {
 	_jsii_.Get(
 		j,
 		"node",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stream) OnStage() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"onStage",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stream) OnStageInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"onStageInput",
 		&returns,
 	)
 	return returns
@@ -647,6 +671,17 @@ func (j *jsiiProxy_Stream)SetName(val *string) {
 	_jsii_.Set(
 		j,
 		"name",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Stream)SetOnStage(val *string) {
+	if err := j.validateSetOnStageParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"onStage",
 		val,
 	)
 }
@@ -1008,6 +1043,14 @@ func (s *jsiiProxy_Stream) ResetInsertOnly() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetInsertOnly",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Stream) ResetOnStage() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetOnStage",
 		nil, // no parameters
 	)
 }

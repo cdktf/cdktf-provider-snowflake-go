@@ -80,7 +80,15 @@ func (j *jsiiProxy_SessionParameter) validateSetLifecycleParameters(val *cdktf.T
 	return nil
 }
 
+func (j *jsiiProxy_SessionParameter) validateSetOnAccountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_SessionParameter) validateSetProvisionersParameters(val *[]interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_SessionParameter) validateSetUserParameters(val *string) error {
 	return nil
 }
 

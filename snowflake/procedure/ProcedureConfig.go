@@ -37,7 +37,7 @@ type ProcedureConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/procedure#schema Procedure#schema}
 	Schema *string `field:"required" json:"schema" yaml:"schema"`
-	// Specifies the javascript code used to create the procedure.
+	// Specifies the code used to create the procedure.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/procedure#statement Procedure#statement}
 	Statement *string `field:"required" json:"statement" yaml:"statement"`
@@ -53,11 +53,21 @@ type ProcedureConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/procedure#execute_as Procedure#execute_as}
 	ExecuteAs *string `field:"optional" json:"executeAs" yaml:"executeAs"`
+	// The handler method for Java / Python procedures.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/procedure#handler Procedure#handler}
+	Handler *string `field:"optional" json:"handler" yaml:"handler"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/procedure#id Procedure#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
+	// Imports for Java / Python procedures.
+	//
+	// For Java this a list of jar files, for Python this is a list of Python files.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/procedure#imports Procedure#imports}
+	Imports *[]*string `field:"optional" json:"imports" yaml:"imports"`
 	// Specifies the language of the stored procedure code.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/procedure#language Procedure#language}
@@ -66,9 +76,19 @@ type ProcedureConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/procedure#null_input_behavior Procedure#null_input_behavior}
 	NullInputBehavior *string `field:"optional" json:"nullInputBehavior" yaml:"nullInputBehavior"`
+	// List of package imports to use for Java / Python procedures.
+	//
+	// For Java, package imports should be of the form: package_name:version_number, where package_name is snowflake_domain:package. For Python use it should be: ('numpy','pandas','xgboost==1.5.0').
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/procedure#packages Procedure#packages}
+	Packages *[]*string `field:"optional" json:"packages" yaml:"packages"`
 	// Specifies the behavior of the function when returning results.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/procedure#return_behavior Procedure#return_behavior}
 	ReturnBehavior *string `field:"optional" json:"returnBehavior" yaml:"returnBehavior"`
+	// Required for Python procedures. Specifies Python runtime version.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/procedure#runtime_version Procedure#runtime_version}
+	RuntimeVersion *string `field:"optional" json:"runtimeVersion" yaml:"runtimeVersion"`
 }
 

@@ -53,6 +53,9 @@ type FunctionResource interface {
 	Imports() *[]*string
 	SetImports(val *[]*string)
 	ImportsInput() *[]*string
+	IsSecure() interface{}
+	SetIsSecure(val interface{})
+	IsSecureInput() interface{}
 	Language() *string
 	SetLanguage(val *string)
 	LanguageInput() *string
@@ -136,6 +139,7 @@ type FunctionResource interface {
 	ResetHandler()
 	ResetId()
 	ResetImports()
+	ResetIsSecure()
 	ResetLanguage()
 	ResetNullInputBehavior()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -355,6 +359,26 @@ func (j *jsiiProxy_FunctionResource) ImportsInput() *[]*string {
 	_jsii_.Get(
 		j,
 		"importsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_FunctionResource) IsSecure() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"isSecure",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_FunctionResource) IsSecureInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"isSecureInput",
 		&returns,
 	)
 	return returns
@@ -756,6 +780,17 @@ func (j *jsiiProxy_FunctionResource)SetImports(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"imports",
+		val,
+	)
+}
+
+func (j *jsiiProxy_FunctionResource)SetIsSecure(val interface{}) {
+	if err := j.validateSetIsSecureParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"isSecure",
 		val,
 	)
 }
@@ -1213,6 +1248,14 @@ func (f *jsiiProxy_FunctionResource) ResetImports() {
 	_jsii_.InvokeVoid(
 		f,
 		"resetImports",
+		nil, // no parameters
+	)
+}
+
+func (f *jsiiProxy_FunctionResource) ResetIsSecure() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetIsSecure",
 		nil, // no parameters
 	)
 }

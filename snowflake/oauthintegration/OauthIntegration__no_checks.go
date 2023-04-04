@@ -96,6 +96,10 @@ func (j *jsiiProxy_OauthIntegration) validateSetOauthClientParameters(val *strin
 	return nil
 }
 
+func (j *jsiiProxy_OauthIntegration) validateSetOauthClientTypeParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_OauthIntegration) validateSetOauthIssueRefreshTokensParameters(val interface{}) error {
 	return nil
 }

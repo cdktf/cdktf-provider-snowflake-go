@@ -306,7 +306,23 @@ func (j *jsiiProxy_ResourceMonitor) validateSetStartTimestampParameters(val *str
 	return nil
 }
 
+func (j *jsiiProxy_ResourceMonitor) validateSetSuspendImmediateTriggerParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_ResourceMonitor) validateSetSuspendImmediateTriggersParameters(val *[]*float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_ResourceMonitor) validateSetSuspendTriggerParameters(val *float64) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

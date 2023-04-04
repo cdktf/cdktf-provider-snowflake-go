@@ -64,6 +64,10 @@ type FunctionResourceConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/function#imports FunctionResource#imports}
 	Imports *[]*string `field:"optional" json:"imports" yaml:"imports"`
+	// Specifies that the function is secure.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/function#is_secure FunctionResource#is_secure}
+	IsSecure interface{} `field:"optional" json:"isSecure" yaml:"isSecure"`
 	// The language of the statement.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/function#language FunctionResource#language}

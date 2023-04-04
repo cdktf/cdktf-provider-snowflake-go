@@ -47,9 +47,15 @@ type Procedure interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	Handler() *string
+	SetHandler(val *string)
+	HandlerInput() *string
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	Imports() *[]*string
+	SetImports(val *[]*string)
+	ImportsInput() *[]*string
 	Language() *string
 	SetLanguage(val *string)
 	LanguageInput() *string
@@ -65,6 +71,9 @@ type Procedure interface {
 	NullInputBehavior() *string
 	SetNullInputBehavior(val *string)
 	NullInputBehaviorInput() *string
+	Packages() *[]*string
+	SetPackages(val *[]*string)
+	PackagesInput() *[]*string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -81,6 +90,9 @@ type Procedure interface {
 	ReturnType() *string
 	SetReturnType(val *string)
 	ReturnTypeInput() *string
+	RuntimeVersion() *string
+	SetRuntimeVersion(val *string)
+	RuntimeVersionInput() *string
 	Schema() *string
 	SetSchema(val *string)
 	SchemaInput() *string
@@ -122,13 +134,17 @@ type Procedure interface {
 	ResetArguments()
 	ResetComment()
 	ResetExecuteAs()
+	ResetHandler()
 	ResetId()
+	ResetImports()
 	ResetLanguage()
 	ResetNullInputBehavior()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetPackages()
 	ResetReturnBehavior()
+	ResetRuntimeVersion()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
 	ToMetadata() interface{}
@@ -304,6 +320,26 @@ func (j *jsiiProxy_Procedure) FriendlyUniqueId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Procedure) Handler() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"handler",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Procedure) HandlerInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"handlerInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Procedure) Id() *string {
 	var returns *string
 	_jsii_.Get(
@@ -319,6 +355,26 @@ func (j *jsiiProxy_Procedure) IdInput() *string {
 	_jsii_.Get(
 		j,
 		"idInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Procedure) Imports() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"imports",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Procedure) ImportsInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"importsInput",
 		&returns,
 	)
 	return returns
@@ -404,6 +460,26 @@ func (j *jsiiProxy_Procedure) NullInputBehaviorInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Procedure) Packages() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"packages",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Procedure) PackagesInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"packagesInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Procedure) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -469,6 +545,26 @@ func (j *jsiiProxy_Procedure) ReturnTypeInput() *string {
 	_jsii_.Get(
 		j,
 		"returnTypeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Procedure) RuntimeVersion() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"runtimeVersion",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Procedure) RuntimeVersionInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"runtimeVersionInput",
 		&returns,
 	)
 	return returns
@@ -642,6 +738,17 @@ func (j *jsiiProxy_Procedure)SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
+func (j *jsiiProxy_Procedure)SetHandler(val *string) {
+	if err := j.validateSetHandlerParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"handler",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Procedure)SetId(val *string) {
 	if err := j.validateSetIdParameters(val); err != nil {
 		panic(err)
@@ -649,6 +756,17 @@ func (j *jsiiProxy_Procedure)SetId(val *string) {
 	_jsii_.Set(
 		j,
 		"id",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Procedure)SetImports(val *[]*string) {
+	if err := j.validateSetImportsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"imports",
 		val,
 	)
 }
@@ -697,6 +815,17 @@ func (j *jsiiProxy_Procedure)SetNullInputBehavior(val *string) {
 	)
 }
 
+func (j *jsiiProxy_Procedure)SetPackages(val *[]*string) {
+	if err := j.validateSetPackagesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"packages",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Procedure)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
@@ -734,6 +863,17 @@ func (j *jsiiProxy_Procedure)SetReturnType(val *string) {
 	_jsii_.Set(
 		j,
 		"returnType",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Procedure)SetRuntimeVersion(val *string) {
+	if err := j.validateSetRuntimeVersionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"runtimeVersion",
 		val,
 	)
 }
@@ -1061,10 +1201,26 @@ func (p *jsiiProxy_Procedure) ResetExecuteAs() {
 	)
 }
 
+func (p *jsiiProxy_Procedure) ResetHandler() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetHandler",
+		nil, // no parameters
+	)
+}
+
 func (p *jsiiProxy_Procedure) ResetId() {
 	_jsii_.InvokeVoid(
 		p,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_Procedure) ResetImports() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetImports",
 		nil, // no parameters
 	)
 }
@@ -1093,10 +1249,26 @@ func (p *jsiiProxy_Procedure) ResetOverrideLogicalId() {
 	)
 }
 
+func (p *jsiiProxy_Procedure) ResetPackages() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetPackages",
+		nil, // no parameters
+	)
+}
+
 func (p *jsiiProxy_Procedure) ResetReturnBehavior() {
 	_jsii_.InvokeVoid(
 		p,
 		"resetReturnBehavior",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_Procedure) ResetRuntimeVersion() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetRuntimeVersion",
 		nil, // no parameters
 	)
 }

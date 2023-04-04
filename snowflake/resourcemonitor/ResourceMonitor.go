@@ -79,9 +79,15 @@ type ResourceMonitor interface {
 	StartTimestamp() *string
 	SetStartTimestamp(val *string)
 	StartTimestampInput() *string
+	SuspendImmediateTrigger() *float64
+	SetSuspendImmediateTrigger(val *float64)
+	SuspendImmediateTriggerInput() *float64
 	SuspendImmediateTriggers() *[]*float64
 	SetSuspendImmediateTriggers(val *[]*float64)
 	SuspendImmediateTriggersInput() *[]*float64
+	SuspendTrigger() *float64
+	SetSuspendTrigger(val *float64)
+	SuspendTriggerInput() *float64
 	SuspendTriggers() *[]*float64
 	SetSuspendTriggers(val *[]*float64)
 	SuspendTriggersInput() *[]*float64
@@ -130,7 +136,9 @@ type ResourceMonitor interface {
 	ResetOverrideLogicalId()
 	ResetSetForAccount()
 	ResetStartTimestamp()
+	ResetSuspendImmediateTrigger()
 	ResetSuspendImmediateTriggers()
+	ResetSuspendTrigger()
 	ResetSuspendTriggers()
 	ResetWarehouses()
 	SynthesizeAttributes() *map[string]interface{}
@@ -458,6 +466,26 @@ func (j *jsiiProxy_ResourceMonitor) StartTimestampInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ResourceMonitor) SuspendImmediateTrigger() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"suspendImmediateTrigger",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ResourceMonitor) SuspendImmediateTriggerInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"suspendImmediateTriggerInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ResourceMonitor) SuspendImmediateTriggers() *[]*float64 {
 	var returns *[]*float64
 	_jsii_.Get(
@@ -473,6 +501,26 @@ func (j *jsiiProxy_ResourceMonitor) SuspendImmediateTriggersInput() *[]*float64 
 	_jsii_.Get(
 		j,
 		"suspendImmediateTriggersInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ResourceMonitor) SuspendTrigger() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"suspendTrigger",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ResourceMonitor) SuspendTriggerInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"suspendTriggerInput",
 		&returns,
 	)
 	return returns
@@ -742,6 +790,17 @@ func (j *jsiiProxy_ResourceMonitor)SetStartTimestamp(val *string) {
 	)
 }
 
+func (j *jsiiProxy_ResourceMonitor)SetSuspendImmediateTrigger(val *float64) {
+	if err := j.validateSetSuspendImmediateTriggerParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"suspendImmediateTrigger",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ResourceMonitor)SetSuspendImmediateTriggers(val *[]*float64) {
 	if err := j.validateSetSuspendImmediateTriggersParameters(val); err != nil {
 		panic(err)
@@ -749,6 +808,17 @@ func (j *jsiiProxy_ResourceMonitor)SetSuspendImmediateTriggers(val *[]*float64) 
 	_jsii_.Set(
 		j,
 		"suspendImmediateTriggers",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ResourceMonitor)SetSuspendTrigger(val *float64) {
+	if err := j.validateSetSuspendTriggerParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"suspendTrigger",
 		val,
 	)
 }
@@ -1113,10 +1183,26 @@ func (r *jsiiProxy_ResourceMonitor) ResetStartTimestamp() {
 	)
 }
 
+func (r *jsiiProxy_ResourceMonitor) ResetSuspendImmediateTrigger() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetSuspendImmediateTrigger",
+		nil, // no parameters
+	)
+}
+
 func (r *jsiiProxy_ResourceMonitor) ResetSuspendImmediateTriggers() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetSuspendImmediateTriggers",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_ResourceMonitor) ResetSuspendTrigger() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetSuspendTrigger",
 		nil, // no parameters
 	)
 }

@@ -50,6 +50,10 @@ type StreamConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/stream#insert_only Stream#insert_only}
 	InsertOnly interface{} `field:"optional" json:"insertOnly" yaml:"insertOnly"`
+	// Name of the stage the stream will monitor.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/stream#on_stage Stream#on_stage}
+	OnStage *string `field:"optional" json:"onStage" yaml:"onStage"`
 	// Name of the table the stream will monitor.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/stream#on_table Stream#on_table}

@@ -41,6 +41,10 @@ type ViewConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/view#comment View#comment}
 	Comment *string `field:"optional" json:"comment" yaml:"comment"`
+	// Retains the access permissions from the original view when a new view is created using the OR REPLACE clause.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/view#copy_grants View#copy_grants}
+	CopyGrants interface{} `field:"optional" json:"copyGrants" yaml:"copyGrants"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/r/view#id View#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
