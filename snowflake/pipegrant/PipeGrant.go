@@ -2,14 +2,14 @@ package pipegrant
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/pipegrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/pipegrant/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/snowflake/r/pipe_grant snowflake_pipe_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/pipe_grant snowflake_pipe_grant}.
 type PipeGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type PipeGrant interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	DatabaseName() *string
 	SetDatabaseName(val *string)
 	DatabaseNameInput() *string
@@ -166,8 +166,8 @@ func (j *jsiiProxy_PipeGrant) ConstructNodeMetadata() *map[string]interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_PipeGrant) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_PipeGrant) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -477,7 +477,7 @@ func (j *jsiiProxy_PipeGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/pipe_grant snowflake_pipe_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/pipe_grant snowflake_pipe_grant} Resource.
 func NewPipeGrant(scope constructs.Construct, id *string, config *PipeGrantConfig) PipeGrant {
 	_init_.Initialize()
 
@@ -495,7 +495,7 @@ func NewPipeGrant(scope constructs.Construct, id *string, config *PipeGrantConfi
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/pipe_grant snowflake_pipe_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/pipe_grant snowflake_pipe_grant} Resource.
 func NewPipeGrant_Override(p PipeGrant, scope constructs.Construct, id *string, config *PipeGrantConfig) {
 	_init_.Initialize()
 
@@ -517,7 +517,10 @@ func (j *jsiiProxy_PipeGrant)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_PipeGrant)SetCount(val *float64) {
+func (j *jsiiProxy_PipeGrant)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

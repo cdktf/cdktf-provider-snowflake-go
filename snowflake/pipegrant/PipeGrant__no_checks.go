@@ -68,6 +68,10 @@ func (j *jsiiProxy_PipeGrant) validateSetConnectionParameters(val interface{}) e
 	return nil
 }
 
+func (j *jsiiProxy_PipeGrant) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_PipeGrant) validateSetDatabaseNameParameters(val *string) error {
 	return nil
 }

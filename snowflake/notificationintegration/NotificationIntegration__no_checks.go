@@ -96,6 +96,10 @@ func (j *jsiiProxy_NotificationIntegration) validateSetConnectionParameters(val 
 	return nil
 }
 
+func (j *jsiiProxy_NotificationIntegration) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_NotificationIntegration) validateSetDirectionParameters(val *string) error {
 	return nil
 }

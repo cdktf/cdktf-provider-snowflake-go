@@ -2,14 +2,14 @@ package view
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/view/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/view/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/snowflake/r/view snowflake_view}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/view snowflake_view}.
 type View interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -27,9 +27,9 @@ type View interface {
 	SetCopyGrants(val interface{})
 	CopyGrantsInput() interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	Database() *string
 	SetDatabase(val *string)
 	DatabaseInput() *string
@@ -207,8 +207,8 @@ func (j *jsiiProxy_View) CopyGrantsInput() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_View) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_View) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -498,7 +498,7 @@ func (j *jsiiProxy_View) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/view snowflake_view} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/view snowflake_view} Resource.
 func NewView(scope constructs.Construct, id *string, config *ViewConfig) View {
 	_init_.Initialize()
 
@@ -516,7 +516,7 @@ func NewView(scope constructs.Construct, id *string, config *ViewConfig) View {
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/view snowflake_view} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/view snowflake_view} Resource.
 func NewView_Override(v View, scope constructs.Construct, id *string, config *ViewConfig) {
 	_init_.Initialize()
 
@@ -560,7 +560,10 @@ func (j *jsiiProxy_View)SetCopyGrants(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_View)SetCount(val *float64) {
+func (j *jsiiProxy_View)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

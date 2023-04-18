@@ -76,6 +76,10 @@ func (j *jsiiProxy_Share) validateSetConnectionParameters(val interface{}) error
 	return nil
 }
 
+func (j *jsiiProxy_Share) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Share) validateSetIdParameters(val *string) error {
 	return nil
 }

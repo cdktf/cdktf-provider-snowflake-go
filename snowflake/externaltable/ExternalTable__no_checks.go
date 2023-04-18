@@ -92,6 +92,10 @@ func (j *jsiiProxy_ExternalTable) validateSetCopyGrantsParameters(val interface{
 	return nil
 }
 
+func (j *jsiiProxy_ExternalTable) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ExternalTable) validateSetDatabaseParameters(val *string) error {
 	return nil
 }

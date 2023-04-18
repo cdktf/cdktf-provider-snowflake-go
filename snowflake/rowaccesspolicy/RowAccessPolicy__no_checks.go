@@ -72,6 +72,10 @@ func (j *jsiiProxy_RowAccessPolicy) validateSetConnectionParameters(val interfac
 	return nil
 }
 
+func (j *jsiiProxy_RowAccessPolicy) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_RowAccessPolicy) validateSetDatabaseParameters(val *string) error {
 	return nil
 }

@@ -68,6 +68,10 @@ func (j *jsiiProxy_TaskGrant) validateSetConnectionParameters(val interface{}) e
 	return nil
 }
 
+func (j *jsiiProxy_TaskGrant) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_TaskGrant) validateSetDatabaseNameParameters(val *string) error {
 	return nil
 }

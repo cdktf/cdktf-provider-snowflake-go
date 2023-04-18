@@ -84,6 +84,10 @@ func (j *jsiiProxy_Stage) validateSetCopyOptionsParameters(val *string) error {
 	return nil
 }
 
+func (j *jsiiProxy_Stage) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Stage) validateSetCredentialsParameters(val *string) error {
 	return nil
 }

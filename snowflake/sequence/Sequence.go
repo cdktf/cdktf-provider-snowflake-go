@@ -2,14 +2,14 @@ package sequence
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/sequence/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/sequence/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/snowflake/r/sequence snowflake_sequence}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/sequence snowflake_sequence}.
 type Sequence interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -24,9 +24,9 @@ type Sequence interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	Database() *string
 	SetDatabase(val *string)
 	DatabaseInput() *string
@@ -174,8 +174,8 @@ func (j *jsiiProxy_Sequence) ConstructNodeMetadata() *map[string]interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Sequence) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_Sequence) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -425,7 +425,7 @@ func (j *jsiiProxy_Sequence) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/sequence snowflake_sequence} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/sequence snowflake_sequence} Resource.
 func NewSequence(scope constructs.Construct, id *string, config *SequenceConfig) Sequence {
 	_init_.Initialize()
 
@@ -443,7 +443,7 @@ func NewSequence(scope constructs.Construct, id *string, config *SequenceConfig)
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/sequence snowflake_sequence} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/sequence snowflake_sequence} Resource.
 func NewSequence_Override(s Sequence, scope constructs.Construct, id *string, config *SequenceConfig) {
 	_init_.Initialize()
 
@@ -476,7 +476,10 @@ func (j *jsiiProxy_Sequence)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Sequence)SetCount(val *float64) {
+func (j *jsiiProxy_Sequence)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

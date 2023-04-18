@@ -8,7 +8,7 @@ type DataSnowflakeViewsConfig struct {
 	// Experimental.
 	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
 	// Experimental.
-	Count *float64 `field:"optional" json:"count" yaml:"count"`
+	Count interface{} `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
@@ -21,13 +21,13 @@ type DataSnowflakeViewsConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The database from which to return the schemas from.
 	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/d/views#database DataSnowflakeViews#database}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/data-sources/views#database DataSnowflakeViews#database}
 	Database *string `field:"required" json:"database" yaml:"database"`
 	// The schema from which to return the views from.
 	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/d/views#schema DataSnowflakeViews#schema}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/data-sources/views#schema DataSnowflakeViews#schema}
 	Schema *string `field:"required" json:"schema" yaml:"schema"`
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/d/views#id DataSnowflakeViews#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/data-sources/views#id DataSnowflakeViews#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

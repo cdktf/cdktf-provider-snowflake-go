@@ -72,6 +72,10 @@ func (j *jsiiProxy_MaskingPolicy) validateSetConnectionParameters(val interface{
 	return nil
 }
 
+func (j *jsiiProxy_MaskingPolicy) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_MaskingPolicy) validateSetDatabaseParameters(val *string) error {
 	return nil
 }

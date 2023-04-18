@@ -2,14 +2,14 @@ package tagmaskingpolicyassociation
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/tagmaskingpolicyassociation/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/tagmaskingpolicyassociation/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/snowflake/r/tag_masking_policy_association snowflake_tag_masking_policy_association}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/tag_masking_policy_association snowflake_tag_masking_policy_association}.
 type TagMaskingPolicyAssociation interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type TagMaskingPolicyAssociation interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -141,8 +141,8 @@ func (j *jsiiProxy_TagMaskingPolicyAssociation) ConstructNodeMetadata() *map[str
 	return returns
 }
 
-func (j *jsiiProxy_TagMaskingPolicyAssociation) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_TagMaskingPolicyAssociation) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -332,7 +332,7 @@ func (j *jsiiProxy_TagMaskingPolicyAssociation) TerraformResourceType() *string 
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/tag_masking_policy_association snowflake_tag_masking_policy_association} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/tag_masking_policy_association snowflake_tag_masking_policy_association} Resource.
 func NewTagMaskingPolicyAssociation(scope constructs.Construct, id *string, config *TagMaskingPolicyAssociationConfig) TagMaskingPolicyAssociation {
 	_init_.Initialize()
 
@@ -350,7 +350,7 @@ func NewTagMaskingPolicyAssociation(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/tag_masking_policy_association snowflake_tag_masking_policy_association} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/tag_masking_policy_association snowflake_tag_masking_policy_association} Resource.
 func NewTagMaskingPolicyAssociation_Override(t TagMaskingPolicyAssociation, scope constructs.Construct, id *string, config *TagMaskingPolicyAssociationConfig) {
 	_init_.Initialize()
 
@@ -372,7 +372,10 @@ func (j *jsiiProxy_TagMaskingPolicyAssociation)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_TagMaskingPolicyAssociation)SetCount(val *float64) {
+func (j *jsiiProxy_TagMaskingPolicyAssociation)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

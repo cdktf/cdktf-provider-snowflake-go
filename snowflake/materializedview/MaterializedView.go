@@ -2,14 +2,14 @@ package materializedview
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/materializedview/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/materializedview/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/snowflake/r/materialized_view snowflake_materialized_view}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/materialized_view snowflake_materialized_view}.
 type MaterializedView interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -24,9 +24,9 @@ type MaterializedView interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	Database() *string
 	SetDatabase(val *string)
 	DatabaseInput() *string
@@ -186,8 +186,8 @@ func (j *jsiiProxy_MaterializedView) ConstructNodeMetadata() *map[string]interfa
 	return returns
 }
 
-func (j *jsiiProxy_MaterializedView) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_MaterializedView) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -497,7 +497,7 @@ func (j *jsiiProxy_MaterializedView) WarehouseInput() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/materialized_view snowflake_materialized_view} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/materialized_view snowflake_materialized_view} Resource.
 func NewMaterializedView(scope constructs.Construct, id *string, config *MaterializedViewConfig) MaterializedView {
 	_init_.Initialize()
 
@@ -515,7 +515,7 @@ func NewMaterializedView(scope constructs.Construct, id *string, config *Materia
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/materialized_view snowflake_materialized_view} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/materialized_view snowflake_materialized_view} Resource.
 func NewMaterializedView_Override(m MaterializedView, scope constructs.Construct, id *string, config *MaterializedViewConfig) {
 	_init_.Initialize()
 
@@ -548,7 +548,10 @@ func (j *jsiiProxy_MaterializedView)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedView)SetCount(val *float64) {
+func (j *jsiiProxy_MaterializedView)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

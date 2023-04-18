@@ -68,6 +68,10 @@ func (j *jsiiProxy_ViewGrant) validateSetConnectionParameters(val interface{}) e
 	return nil
 }
 
+func (j *jsiiProxy_ViewGrant) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ViewGrant) validateSetDatabaseNameParameters(val *string) error {
 	return nil
 }

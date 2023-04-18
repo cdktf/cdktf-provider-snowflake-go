@@ -80,6 +80,10 @@ func (j *jsiiProxy_Database) validateSetConnectionParameters(val interface{}) er
 	return nil
 }
 
+func (j *jsiiProxy_Database) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Database) validateSetDataRetentionTimeInDaysParameters(val *float64) error {
 	return nil
 }

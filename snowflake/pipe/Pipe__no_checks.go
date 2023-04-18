@@ -84,6 +84,10 @@ func (j *jsiiProxy_Pipe) validateSetCopyStatementParameters(val *string) error {
 	return nil
 }
 
+func (j *jsiiProxy_Pipe) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Pipe) validateSetDatabaseParameters(val *string) error {
 	return nil
 }

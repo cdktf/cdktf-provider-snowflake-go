@@ -2,14 +2,14 @@ package stage
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/stage/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/stage/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/snowflake/r/stage snowflake_stage}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/stage snowflake_stage}.
 type Stage interface {
 	cdktf.TerraformResource
 	AwsExternalId() *string
@@ -30,9 +30,9 @@ type Stage interface {
 	SetCopyOptions(val *string)
 	CopyOptionsInput() *string
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	Credentials() *string
 	SetCredentials(val *string)
 	CredentialsInput() *string
@@ -248,8 +248,8 @@ func (j *jsiiProxy_Stage) CopyOptionsInput() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Stage) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_Stage) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -619,7 +619,7 @@ func (j *jsiiProxy_Stage) UrlInput() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/stage snowflake_stage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/stage snowflake_stage} Resource.
 func NewStage(scope constructs.Construct, id *string, config *StageConfig) Stage {
 	_init_.Initialize()
 
@@ -637,7 +637,7 @@ func NewStage(scope constructs.Construct, id *string, config *StageConfig) Stage
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/stage snowflake_stage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/stage snowflake_stage} Resource.
 func NewStage_Override(s Stage, scope constructs.Construct, id *string, config *StageConfig) {
 	_init_.Initialize()
 
@@ -692,7 +692,10 @@ func (j *jsiiProxy_Stage)SetCopyOptions(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Stage)SetCount(val *float64) {
+func (j *jsiiProxy_Stage)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

@@ -68,6 +68,10 @@ func (j *jsiiProxy_RoleOwnershipGrant) validateSetConnectionParameters(val inter
 	return nil
 }
 
+func (j *jsiiProxy_RoleOwnershipGrant) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_RoleOwnershipGrant) validateSetCurrentGrantsParameters(val *string) error {
 	return nil
 }

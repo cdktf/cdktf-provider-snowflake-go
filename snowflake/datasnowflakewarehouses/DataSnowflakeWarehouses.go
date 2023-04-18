@@ -2,14 +2,14 @@ package datasnowflakewarehouses
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/datasnowflakewarehouses/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/datasnowflakewarehouses/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/snowflake/d/warehouses snowflake_warehouses}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/data-sources/warehouses snowflake_warehouses}.
 type DataSnowflakeWarehouses interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -17,9 +17,9 @@ type DataSnowflakeWarehouses interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -118,8 +118,8 @@ func (j *jsiiProxy_DataSnowflakeWarehouses) ConstructNodeMetadata() *map[string]
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeWarehouses) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_DataSnowflakeWarehouses) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -269,7 +269,7 @@ func (j *jsiiProxy_DataSnowflakeWarehouses) Warehouses() DataSnowflakeWarehouses
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/d/warehouses snowflake_warehouses} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/data-sources/warehouses snowflake_warehouses} Data Source.
 func NewDataSnowflakeWarehouses(scope constructs.Construct, id *string, config *DataSnowflakeWarehousesConfig) DataSnowflakeWarehouses {
 	_init_.Initialize()
 
@@ -287,7 +287,7 @@ func NewDataSnowflakeWarehouses(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/d/warehouses snowflake_warehouses} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/data-sources/warehouses snowflake_warehouses} Data Source.
 func NewDataSnowflakeWarehouses_Override(d DataSnowflakeWarehouses, scope constructs.Construct, id *string, config *DataSnowflakeWarehousesConfig) {
 	_init_.Initialize()
 
@@ -298,7 +298,10 @@ func NewDataSnowflakeWarehouses_Override(d DataSnowflakeWarehouses, scope constr
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeWarehouses)SetCount(val *float64) {
+func (j *jsiiProxy_DataSnowflakeWarehouses)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

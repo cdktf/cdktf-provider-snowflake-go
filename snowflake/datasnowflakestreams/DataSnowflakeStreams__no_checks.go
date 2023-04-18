@@ -64,6 +64,10 @@ func validateDataSnowflakeStreams_IsTerraformElementParameters(x interface{}) er
 	return nil
 }
 
+func (j *jsiiProxy_DataSnowflakeStreams) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataSnowflakeStreams) validateSetDatabaseParameters(val *string) error {
 	return nil
 }

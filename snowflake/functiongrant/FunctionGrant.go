@@ -2,14 +2,14 @@ package functiongrant
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/functiongrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/functiongrant/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/snowflake/r/function_grant snowflake_function_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/function_grant snowflake_function_grant}.
 type FunctionGrant interface {
 	cdktf.TerraformResource
 	ArgumentDataTypes() *[]*string
@@ -26,9 +26,9 @@ type FunctionGrant interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	DatabaseName() *string
 	SetDatabaseName(val *string)
 	DatabaseNameInput() *string
@@ -221,8 +221,8 @@ func (j *jsiiProxy_FunctionGrant) ConstructNodeMetadata() *map[string]interface{
 	return returns
 }
 
-func (j *jsiiProxy_FunctionGrant) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_FunctionGrant) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -572,7 +572,7 @@ func (j *jsiiProxy_FunctionGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/function_grant snowflake_function_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/function_grant snowflake_function_grant} Resource.
 func NewFunctionGrant(scope constructs.Construct, id *string, config *FunctionGrantConfig) FunctionGrant {
 	_init_.Initialize()
 
@@ -590,7 +590,7 @@ func NewFunctionGrant(scope constructs.Construct, id *string, config *FunctionGr
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/function_grant snowflake_function_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/function_grant snowflake_function_grant} Resource.
 func NewFunctionGrant_Override(f FunctionGrant, scope constructs.Construct, id *string, config *FunctionGrantConfig) {
 	_init_.Initialize()
 
@@ -623,7 +623,10 @@ func (j *jsiiProxy_FunctionGrant)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_FunctionGrant)SetCount(val *float64) {
+func (j *jsiiProxy_FunctionGrant)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

@@ -2,14 +2,14 @@ package usergrant
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/usergrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/usergrant/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/snowflake/r/user_grant snowflake_user_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/user_grant snowflake_user_grant}.
 type UserGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type UserGrant interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -153,8 +153,8 @@ func (j *jsiiProxy_UserGrant) ConstructNodeMetadata() *map[string]interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_UserGrant) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_UserGrant) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -404,7 +404,7 @@ func (j *jsiiProxy_UserGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/user_grant snowflake_user_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/user_grant snowflake_user_grant} Resource.
 func NewUserGrant(scope constructs.Construct, id *string, config *UserGrantConfig) UserGrant {
 	_init_.Initialize()
 
@@ -422,7 +422,7 @@ func NewUserGrant(scope constructs.Construct, id *string, config *UserGrantConfi
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/user_grant snowflake_user_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/user_grant snowflake_user_grant} Resource.
 func NewUserGrant_Override(u UserGrant, scope constructs.Construct, id *string, config *UserGrantConfig) {
 	_init_.Initialize()
 
@@ -444,7 +444,10 @@ func (j *jsiiProxy_UserGrant)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_UserGrant)SetCount(val *float64) {
+func (j *jsiiProxy_UserGrant)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

@@ -64,6 +64,10 @@ func validateDataSnowflakeFileFormats_IsTerraformElementParameters(x interface{}
 	return nil
 }
 
+func (j *jsiiProxy_DataSnowflakeFileFormats) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataSnowflakeFileFormats) validateSetDatabaseParameters(val *string) error {
 	return nil
 }

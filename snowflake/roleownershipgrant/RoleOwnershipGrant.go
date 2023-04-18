@@ -2,14 +2,14 @@ package roleownershipgrant
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/roleownershipgrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/roleownershipgrant/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/snowflake/r/role_ownership_grant snowflake_role_ownership_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/role_ownership_grant snowflake_role_ownership_grant}.
 type RoleOwnershipGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type RoleOwnershipGrant interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	CurrentGrants() *string
 	SetCurrentGrants(val *string)
 	CurrentGrantsInput() *string
@@ -149,8 +149,8 @@ func (j *jsiiProxy_RoleOwnershipGrant) ConstructNodeMetadata() *map[string]inter
 	return returns
 }
 
-func (j *jsiiProxy_RoleOwnershipGrant) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_RoleOwnershipGrant) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -380,7 +380,7 @@ func (j *jsiiProxy_RoleOwnershipGrant) ToRoleNameInput() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/role_ownership_grant snowflake_role_ownership_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/role_ownership_grant snowflake_role_ownership_grant} Resource.
 func NewRoleOwnershipGrant(scope constructs.Construct, id *string, config *RoleOwnershipGrantConfig) RoleOwnershipGrant {
 	_init_.Initialize()
 
@@ -398,7 +398,7 @@ func NewRoleOwnershipGrant(scope constructs.Construct, id *string, config *RoleO
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/role_ownership_grant snowflake_role_ownership_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/role_ownership_grant snowflake_role_ownership_grant} Resource.
 func NewRoleOwnershipGrant_Override(r RoleOwnershipGrant, scope constructs.Construct, id *string, config *RoleOwnershipGrantConfig) {
 	_init_.Initialize()
 
@@ -420,7 +420,10 @@ func (j *jsiiProxy_RoleOwnershipGrant)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_RoleOwnershipGrant)SetCount(val *float64) {
+func (j *jsiiProxy_RoleOwnershipGrant)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

@@ -68,6 +68,10 @@ func (j *jsiiProxy_RoleGrants) validateSetConnectionParameters(val interface{}) 
 	return nil
 }
 
+func (j *jsiiProxy_RoleGrants) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_RoleGrants) validateSetEnableMultipleGrantsParameters(val interface{}) error {
 	return nil
 }

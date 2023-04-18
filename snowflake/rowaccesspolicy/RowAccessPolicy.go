@@ -2,14 +2,14 @@ package rowaccesspolicy
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/rowaccesspolicy/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/rowaccesspolicy/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/snowflake/r/row_access_policy snowflake_row_access_policy}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/row_access_policy snowflake_row_access_policy}.
 type RowAccessPolicy interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -24,9 +24,9 @@ type RowAccessPolicy interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	Database() *string
 	SetDatabase(val *string)
 	DatabaseInput() *string
@@ -174,8 +174,8 @@ func (j *jsiiProxy_RowAccessPolicy) ConstructNodeMetadata() *map[string]interfac
 	return returns
 }
 
-func (j *jsiiProxy_RowAccessPolicy) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_RowAccessPolicy) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -425,7 +425,7 @@ func (j *jsiiProxy_RowAccessPolicy) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/row_access_policy snowflake_row_access_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/row_access_policy snowflake_row_access_policy} Resource.
 func NewRowAccessPolicy(scope constructs.Construct, id *string, config *RowAccessPolicyConfig) RowAccessPolicy {
 	_init_.Initialize()
 
@@ -443,7 +443,7 @@ func NewRowAccessPolicy(scope constructs.Construct, id *string, config *RowAcces
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/row_access_policy snowflake_row_access_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/row_access_policy snowflake_row_access_policy} Resource.
 func NewRowAccessPolicy_Override(r RowAccessPolicy, scope constructs.Construct, id *string, config *RowAccessPolicyConfig) {
 	_init_.Initialize()
 
@@ -476,7 +476,10 @@ func (j *jsiiProxy_RowAccessPolicy)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_RowAccessPolicy)SetCount(val *float64) {
+func (j *jsiiProxy_RowAccessPolicy)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

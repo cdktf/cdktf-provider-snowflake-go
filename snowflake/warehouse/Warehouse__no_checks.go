@@ -84,6 +84,10 @@ func (j *jsiiProxy_Warehouse) validateSetConnectionParameters(val interface{}) e
 	return nil
 }
 
+func (j *jsiiProxy_Warehouse) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Warehouse) validateSetEnableQueryAccelerationParameters(val interface{}) error {
 	return nil
 }

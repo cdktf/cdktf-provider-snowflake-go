@@ -92,6 +92,10 @@ func (j *jsiiProxy_Table) validateSetConnectionParameters(val interface{}) error
 	return nil
 }
 
+func (j *jsiiProxy_Table) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Table) validateSetDatabaseParameters(val *string) error {
 	return nil
 }

@@ -100,6 +100,10 @@ func (j *jsiiProxy_ApiIntegration) validateSetConnectionParameters(val interface
 	return nil
 }
 
+func (j *jsiiProxy_ApiIntegration) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ApiIntegration) validateSetEnabledParameters(val interface{}) error {
 	return nil
 }

@@ -68,6 +68,10 @@ func (j *jsiiProxy_MaskingPolicyGrant) validateSetConnectionParameters(val inter
 	return nil
 }
 
+func (j *jsiiProxy_MaskingPolicyGrant) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_MaskingPolicyGrant) validateSetDatabaseNameParameters(val *string) error {
 	return nil
 }

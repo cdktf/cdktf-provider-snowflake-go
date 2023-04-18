@@ -2,14 +2,14 @@ package datasnowflakegrants
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/datasnowflakegrants/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/datasnowflakegrants/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/snowflake/d/grants snowflake_grants}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/data-sources/grants snowflake_grants}.
 type DataSnowflakeGrants interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -17,9 +17,9 @@ type DataSnowflakeGrants interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -138,8 +138,8 @@ func (j *jsiiProxy_DataSnowflakeGrants) ConstructNodeMetadata() *map[string]inte
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeGrants) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_DataSnowflakeGrants) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -389,7 +389,7 @@ func (j *jsiiProxy_DataSnowflakeGrants) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/d/grants snowflake_grants} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/data-sources/grants snowflake_grants} Data Source.
 func NewDataSnowflakeGrants(scope constructs.Construct, id *string, config *DataSnowflakeGrantsConfig) DataSnowflakeGrants {
 	_init_.Initialize()
 
@@ -407,7 +407,7 @@ func NewDataSnowflakeGrants(scope constructs.Construct, id *string, config *Data
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/d/grants snowflake_grants} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/data-sources/grants snowflake_grants} Data Source.
 func NewDataSnowflakeGrants_Override(d DataSnowflakeGrants, scope constructs.Construct, id *string, config *DataSnowflakeGrantsConfig) {
 	_init_.Initialize()
 
@@ -418,7 +418,10 @@ func NewDataSnowflakeGrants_Override(d DataSnowflakeGrants, scope constructs.Con
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeGrants)SetCount(val *float64) {
+func (j *jsiiProxy_DataSnowflakeGrants)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

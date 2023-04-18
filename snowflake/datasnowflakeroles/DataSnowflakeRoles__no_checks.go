@@ -64,6 +64,10 @@ func validateDataSnowflakeRoles_IsTerraformElementParameters(x interface{}) erro
 	return nil
 }
 
+func (j *jsiiProxy_DataSnowflakeRoles) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataSnowflakeRoles) validateSetIdParameters(val *string) error {
 	return nil
 }

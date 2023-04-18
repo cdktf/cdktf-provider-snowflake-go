@@ -2,14 +2,14 @@ package rowaccesspolicygrant
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/rowaccesspolicygrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/rowaccesspolicygrant/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/snowflake/r/row_access_policy_grant snowflake_row_access_policy_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/row_access_policy_grant snowflake_row_access_policy_grant}.
 type RowAccessPolicyGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type RowAccessPolicyGrant interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	DatabaseName() *string
 	SetDatabaseName(val *string)
 	DatabaseNameInput() *string
@@ -160,8 +160,8 @@ func (j *jsiiProxy_RowAccessPolicyGrant) ConstructNodeMetadata() *map[string]int
 	return returns
 }
 
-func (j *jsiiProxy_RowAccessPolicyGrant) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_RowAccessPolicyGrant) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -451,7 +451,7 @@ func (j *jsiiProxy_RowAccessPolicyGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/row_access_policy_grant snowflake_row_access_policy_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/row_access_policy_grant snowflake_row_access_policy_grant} Resource.
 func NewRowAccessPolicyGrant(scope constructs.Construct, id *string, config *RowAccessPolicyGrantConfig) RowAccessPolicyGrant {
 	_init_.Initialize()
 
@@ -469,7 +469,7 @@ func NewRowAccessPolicyGrant(scope constructs.Construct, id *string, config *Row
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/row_access_policy_grant snowflake_row_access_policy_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/row_access_policy_grant snowflake_row_access_policy_grant} Resource.
 func NewRowAccessPolicyGrant_Override(r RowAccessPolicyGrant, scope constructs.Construct, id *string, config *RowAccessPolicyGrantConfig) {
 	_init_.Initialize()
 
@@ -491,7 +491,10 @@ func (j *jsiiProxy_RowAccessPolicyGrant)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_RowAccessPolicyGrant)SetCount(val *float64) {
+func (j *jsiiProxy_RowAccessPolicyGrant)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

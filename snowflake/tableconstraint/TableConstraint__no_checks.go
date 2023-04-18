@@ -80,6 +80,10 @@ func (j *jsiiProxy_TableConstraint) validateSetConnectionParameters(val interfac
 	return nil
 }
 
+func (j *jsiiProxy_TableConstraint) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_TableConstraint) validateSetDeferrableParameters(val interface{}) error {
 	return nil
 }

@@ -76,6 +76,10 @@ func (j *jsiiProxy_StorageIntegration) validateSetConnectionParameters(val inter
 	return nil
 }
 
+func (j *jsiiProxy_StorageIntegration) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_StorageIntegration) validateSetEnabledParameters(val interface{}) error {
 	return nil
 }

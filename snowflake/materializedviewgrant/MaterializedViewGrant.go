@@ -2,14 +2,14 @@ package materializedviewgrant
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/materializedviewgrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/materializedviewgrant/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/snowflake/r/materialized_view_grant snowflake_materialized_view_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/materialized_view_grant snowflake_materialized_view_grant}.
 type MaterializedViewGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type MaterializedViewGrant interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	DatabaseName() *string
 	SetDatabaseName(val *string)
 	DatabaseNameInput() *string
@@ -170,8 +170,8 @@ func (j *jsiiProxy_MaterializedViewGrant) ConstructNodeMetadata() *map[string]in
 	return returns
 }
 
-func (j *jsiiProxy_MaterializedViewGrant) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_MaterializedViewGrant) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -501,7 +501,7 @@ func (j *jsiiProxy_MaterializedViewGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/materialized_view_grant snowflake_materialized_view_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/materialized_view_grant snowflake_materialized_view_grant} Resource.
 func NewMaterializedViewGrant(scope constructs.Construct, id *string, config *MaterializedViewGrantConfig) MaterializedViewGrant {
 	_init_.Initialize()
 
@@ -519,7 +519,7 @@ func NewMaterializedViewGrant(scope constructs.Construct, id *string, config *Ma
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/materialized_view_grant snowflake_materialized_view_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/materialized_view_grant snowflake_materialized_view_grant} Resource.
 func NewMaterializedViewGrant_Override(m MaterializedViewGrant, scope constructs.Construct, id *string, config *MaterializedViewGrantConfig) {
 	_init_.Initialize()
 
@@ -541,7 +541,10 @@ func (j *jsiiProxy_MaterializedViewGrant)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_MaterializedViewGrant)SetCount(val *float64) {
+func (j *jsiiProxy_MaterializedViewGrant)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

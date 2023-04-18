@@ -2,14 +2,14 @@ package apiintegration
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/apiintegration/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/apiintegration/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/snowflake/r/api_integration snowflake_api_integration}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/api_integration snowflake_api_integration}.
 type ApiIntegration interface {
 	cdktf.TerraformResource
 	ApiAllowedPrefixes() *[]*string
@@ -49,9 +49,9 @@ type ApiIntegration interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	CreatedOn() *string
 	// Experimental.
 	DependsOn() *[]*string
@@ -381,8 +381,8 @@ func (j *jsiiProxy_ApiIntegration) ConstructNodeMetadata() *map[string]interface
 	return returns
 }
 
-func (j *jsiiProxy_ApiIntegration) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_ApiIntegration) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -602,7 +602,7 @@ func (j *jsiiProxy_ApiIntegration) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/api_integration snowflake_api_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/api_integration snowflake_api_integration} Resource.
 func NewApiIntegration(scope constructs.Construct, id *string, config *ApiIntegrationConfig) ApiIntegration {
 	_init_.Initialize()
 
@@ -620,7 +620,7 @@ func NewApiIntegration(scope constructs.Construct, id *string, config *ApiIntegr
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/api_integration snowflake_api_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/api_integration snowflake_api_integration} Resource.
 func NewApiIntegration_Override(a ApiIntegration, scope constructs.Construct, id *string, config *ApiIntegrationConfig) {
 	_init_.Initialize()
 
@@ -730,7 +730,10 @@ func (j *jsiiProxy_ApiIntegration)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ApiIntegration)SetCount(val *float64) {
+func (j *jsiiProxy_ApiIntegration)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

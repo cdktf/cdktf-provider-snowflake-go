@@ -2,14 +2,14 @@ package warehousegrant
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/warehousegrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/warehousegrant/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/snowflake/r/warehouse_grant snowflake_warehouse_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/warehouse_grant snowflake_warehouse_grant}.
 type WarehouseGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type WarehouseGrant interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -154,8 +154,8 @@ func (j *jsiiProxy_WarehouseGrant) ConstructNodeMetadata() *map[string]interface
 	return returns
 }
 
-func (j *jsiiProxy_WarehouseGrant) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_WarehouseGrant) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -405,7 +405,7 @@ func (j *jsiiProxy_WarehouseGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/warehouse_grant snowflake_warehouse_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/warehouse_grant snowflake_warehouse_grant} Resource.
 func NewWarehouseGrant(scope constructs.Construct, id *string, config *WarehouseGrantConfig) WarehouseGrant {
 	_init_.Initialize()
 
@@ -423,7 +423,7 @@ func NewWarehouseGrant(scope constructs.Construct, id *string, config *Warehouse
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/warehouse_grant snowflake_warehouse_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/warehouse_grant snowflake_warehouse_grant} Resource.
 func NewWarehouseGrant_Override(w WarehouseGrant, scope constructs.Construct, id *string, config *WarehouseGrantConfig) {
 	_init_.Initialize()
 
@@ -445,7 +445,10 @@ func (j *jsiiProxy_WarehouseGrant)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_WarehouseGrant)SetCount(val *float64) {
+func (j *jsiiProxy_WarehouseGrant)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

@@ -68,6 +68,10 @@ func (j *jsiiProxy_ResourceMonitor) validateSetConnectionParameters(val interfac
 	return nil
 }
 
+func (j *jsiiProxy_ResourceMonitor) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ResourceMonitor) validateSetCreditQuotaParameters(val *float64) error {
 	return nil
 }

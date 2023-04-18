@@ -68,6 +68,10 @@ func (j *jsiiProxy_ResourceMonitorGrant) validateSetConnectionParameters(val int
 	return nil
 }
 
+func (j *jsiiProxy_ResourceMonitorGrant) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ResourceMonitorGrant) validateSetEnableMultipleGrantsParameters(val interface{}) error {
 	return nil
 }

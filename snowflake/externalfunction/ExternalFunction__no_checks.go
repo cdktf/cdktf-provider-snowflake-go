@@ -92,6 +92,10 @@ func (j *jsiiProxy_ExternalFunction) validateSetContextHeadersParameters(val *[]
 	return nil
 }
 
+func (j *jsiiProxy_ExternalFunction) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ExternalFunction) validateSetDatabaseParameters(val *string) error {
 	return nil
 }

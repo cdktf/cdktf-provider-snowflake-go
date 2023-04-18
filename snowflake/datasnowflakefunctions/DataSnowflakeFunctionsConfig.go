@@ -8,7 +8,7 @@ type DataSnowflakeFunctionsConfig struct {
 	// Experimental.
 	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
 	// Experimental.
-	Count *float64 `field:"optional" json:"count" yaml:"count"`
+	Count interface{} `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
@@ -21,13 +21,13 @@ type DataSnowflakeFunctionsConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The database from which to return the schemas from.
 	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/d/functions#database DataSnowflakeFunctions#database}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/data-sources/functions#database DataSnowflakeFunctions#database}
 	Database *string `field:"required" json:"database" yaml:"database"`
 	// The schema from which to return the functions from.
 	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/d/functions#schema DataSnowflakeFunctions#schema}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/data-sources/functions#schema DataSnowflakeFunctions#schema}
 	Schema *string `field:"required" json:"schema" yaml:"schema"`
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/snowflake/d/functions#id DataSnowflakeFunctions#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/data-sources/functions#id DataSnowflakeFunctions#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.

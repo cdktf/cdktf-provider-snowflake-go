@@ -68,6 +68,10 @@ func (j *jsiiProxy_ScimIntegration) validateSetConnectionParameters(val interfac
 	return nil
 }
 
+func (j *jsiiProxy_ScimIntegration) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ScimIntegration) validateSetIdParameters(val *string) error {
 	return nil
 }

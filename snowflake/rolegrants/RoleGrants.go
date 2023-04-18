@@ -2,14 +2,14 @@ package rolegrants
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/rolegrants/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/rolegrants/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/snowflake/r/role_grants snowflake_role_grants}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/role_grants snowflake_role_grants}.
 type RoleGrants interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type RoleGrants interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -150,8 +150,8 @@ func (j *jsiiProxy_RoleGrants) ConstructNodeMetadata() *map[string]interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_RoleGrants) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_RoleGrants) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -381,7 +381,7 @@ func (j *jsiiProxy_RoleGrants) UsersInput() *[]*string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/role_grants snowflake_role_grants} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/role_grants snowflake_role_grants} Resource.
 func NewRoleGrants(scope constructs.Construct, id *string, config *RoleGrantsConfig) RoleGrants {
 	_init_.Initialize()
 
@@ -399,7 +399,7 @@ func NewRoleGrants(scope constructs.Construct, id *string, config *RoleGrantsCon
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/role_grants snowflake_role_grants} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/role_grants snowflake_role_grants} Resource.
 func NewRoleGrants_Override(r RoleGrants, scope constructs.Construct, id *string, config *RoleGrantsConfig) {
 	_init_.Initialize()
 
@@ -421,7 +421,10 @@ func (j *jsiiProxy_RoleGrants)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_RoleGrants)SetCount(val *float64) {
+func (j *jsiiProxy_RoleGrants)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

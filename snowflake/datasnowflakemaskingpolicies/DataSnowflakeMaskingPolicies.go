@@ -2,14 +2,14 @@ package datasnowflakemaskingpolicies
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/datasnowflakemaskingpolicies/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/datasnowflakemaskingpolicies/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/snowflake/d/masking_policies snowflake_masking_policies}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/data-sources/masking_policies snowflake_masking_policies}.
 type DataSnowflakeMaskingPolicies interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -17,9 +17,9 @@ type DataSnowflakeMaskingPolicies interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	Database() *string
 	SetDatabase(val *string)
 	DatabaseInput() *string
@@ -124,8 +124,8 @@ func (j *jsiiProxy_DataSnowflakeMaskingPolicies) ConstructNodeMetadata() *map[st
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeMaskingPolicies) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_DataSnowflakeMaskingPolicies) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -315,7 +315,7 @@ func (j *jsiiProxy_DataSnowflakeMaskingPolicies) TerraformResourceType() *string
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/d/masking_policies snowflake_masking_policies} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/data-sources/masking_policies snowflake_masking_policies} Data Source.
 func NewDataSnowflakeMaskingPolicies(scope constructs.Construct, id *string, config *DataSnowflakeMaskingPoliciesConfig) DataSnowflakeMaskingPolicies {
 	_init_.Initialize()
 
@@ -333,7 +333,7 @@ func NewDataSnowflakeMaskingPolicies(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/d/masking_policies snowflake_masking_policies} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/data-sources/masking_policies snowflake_masking_policies} Data Source.
 func NewDataSnowflakeMaskingPolicies_Override(d DataSnowflakeMaskingPolicies, scope constructs.Construct, id *string, config *DataSnowflakeMaskingPoliciesConfig) {
 	_init_.Initialize()
 
@@ -344,7 +344,10 @@ func NewDataSnowflakeMaskingPolicies_Override(d DataSnowflakeMaskingPolicies, sc
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeMaskingPolicies)SetCount(val *float64) {
+func (j *jsiiProxy_DataSnowflakeMaskingPolicies)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

@@ -2,14 +2,14 @@ package networkpolicyattachment
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/networkpolicyattachment/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/networkpolicyattachment/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/snowflake/r/network_policy_attachment snowflake_network_policy_attachment}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/network_policy_attachment snowflake_network_policy_attachment}.
 type NetworkPolicyAttachment interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type NetworkPolicyAttachment interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -146,8 +146,8 @@ func (j *jsiiProxy_NetworkPolicyAttachment) ConstructNodeMetadata() *map[string]
 	return returns
 }
 
-func (j *jsiiProxy_NetworkPolicyAttachment) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_NetworkPolicyAttachment) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -357,7 +357,7 @@ func (j *jsiiProxy_NetworkPolicyAttachment) UsersInput() *[]*string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/network_policy_attachment snowflake_network_policy_attachment} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/network_policy_attachment snowflake_network_policy_attachment} Resource.
 func NewNetworkPolicyAttachment(scope constructs.Construct, id *string, config *NetworkPolicyAttachmentConfig) NetworkPolicyAttachment {
 	_init_.Initialize()
 
@@ -375,7 +375,7 @@ func NewNetworkPolicyAttachment(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/network_policy_attachment snowflake_network_policy_attachment} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/network_policy_attachment snowflake_network_policy_attachment} Resource.
 func NewNetworkPolicyAttachment_Override(n NetworkPolicyAttachment, scope constructs.Construct, id *string, config *NetworkPolicyAttachmentConfig) {
 	_init_.Initialize()
 
@@ -397,7 +397,10 @@ func (j *jsiiProxy_NetworkPolicyAttachment)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_NetworkPolicyAttachment)SetCount(val *float64) {
+func (j *jsiiProxy_NetworkPolicyAttachment)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

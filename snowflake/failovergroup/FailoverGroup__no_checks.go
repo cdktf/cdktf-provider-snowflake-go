@@ -92,6 +92,10 @@ func (j *jsiiProxy_FailoverGroup) validateSetConnectionParameters(val interface{
 	return nil
 }
 
+func (j *jsiiProxy_FailoverGroup) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_FailoverGroup) validateSetIdParameters(val *string) error {
 	return nil
 }

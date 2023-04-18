@@ -76,6 +76,10 @@ func (j *jsiiProxy_MaterializedView) validateSetConnectionParameters(val interfa
 	return nil
 }
 
+func (j *jsiiProxy_MaterializedView) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_MaterializedView) validateSetDatabaseParameters(val *string) error {
 	return nil
 }

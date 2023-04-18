@@ -68,6 +68,10 @@ func (j *jsiiProxy_DataSnowflakeSystemGetAwsSnsIamPolicy) validateSetAwsSnsTopic
 	return nil
 }
 
+func (j *jsiiProxy_DataSnowflakeSystemGetAwsSnsIamPolicy) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataSnowflakeSystemGetAwsSnsIamPolicy) validateSetIdParameters(val *string) error {
 	return nil
 }

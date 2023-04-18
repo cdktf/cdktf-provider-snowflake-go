@@ -88,6 +88,10 @@ func (j *jsiiProxy_FileFormat) validateSetConnectionParameters(val interface{}) 
 	return nil
 }
 
+func (j *jsiiProxy_FileFormat) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_FileFormat) validateSetDatabaseParameters(val *string) error {
 	return nil
 }

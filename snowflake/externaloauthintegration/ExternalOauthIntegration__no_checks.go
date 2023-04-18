@@ -88,6 +88,10 @@ func (j *jsiiProxy_ExternalOauthIntegration) validateSetConnectionParameters(val
 	return nil
 }
 
+func (j *jsiiProxy_ExternalOauthIntegration) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ExternalOauthIntegration) validateSetEnabledParameters(val interface{}) error {
 	return nil
 }

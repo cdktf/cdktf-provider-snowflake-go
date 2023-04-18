@@ -64,6 +64,10 @@ func validateDataSnowflakeStorageIntegrations_IsTerraformElementParameters(x int
 	return nil
 }
 
+func (j *jsiiProxy_DataSnowflakeStorageIntegrations) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataSnowflakeStorageIntegrations) validateSetIdParameters(val *string) error {
 	return nil
 }

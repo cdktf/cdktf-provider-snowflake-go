@@ -2,14 +2,14 @@ package sessionparameter
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/sessionparameter/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/sessionparameter/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/snowflake/r/session_parameter snowflake_session_parameter}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/session_parameter snowflake_session_parameter}.
 type SessionParameter interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type SessionParameter interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -149,8 +149,8 @@ func (j *jsiiProxy_SessionParameter) ConstructNodeMetadata() *map[string]interfa
 	return returns
 }
 
-func (j *jsiiProxy_SessionParameter) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_SessionParameter) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -380,7 +380,7 @@ func (j *jsiiProxy_SessionParameter) ValueInput() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/session_parameter snowflake_session_parameter} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/session_parameter snowflake_session_parameter} Resource.
 func NewSessionParameter(scope constructs.Construct, id *string, config *SessionParameterConfig) SessionParameter {
 	_init_.Initialize()
 
@@ -398,7 +398,7 @@ func NewSessionParameter(scope constructs.Construct, id *string, config *Session
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/session_parameter snowflake_session_parameter} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/session_parameter snowflake_session_parameter} Resource.
 func NewSessionParameter_Override(s SessionParameter, scope constructs.Construct, id *string, config *SessionParameterConfig) {
 	_init_.Initialize()
 
@@ -420,7 +420,10 @@ func (j *jsiiProxy_SessionParameter)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_SessionParameter)SetCount(val *float64) {
+func (j *jsiiProxy_SessionParameter)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

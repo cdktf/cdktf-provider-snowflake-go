@@ -80,6 +80,10 @@ func (j *jsiiProxy_View) validateSetCopyGrantsParameters(val interface{}) error 
 	return nil
 }
 
+func (j *jsiiProxy_View) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_View) validateSetDatabaseParameters(val *string) error {
 	return nil
 }

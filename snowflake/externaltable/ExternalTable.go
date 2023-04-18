@@ -2,14 +2,14 @@ package externaltable
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v5/externaltable/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/externaltable/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/snowflake/r/external_table snowflake_external_table}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/external_table snowflake_external_table}.
 type ExternalTable interface {
 	cdktf.TerraformResource
 	AutoRefresh() interface{}
@@ -35,9 +35,9 @@ type ExternalTable interface {
 	SetCopyGrants(val interface{})
 	CopyGrantsInput() interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	Database() *string
 	SetDatabase(val *string)
 	DatabaseInput() *string
@@ -286,8 +286,8 @@ func (j *jsiiProxy_ExternalTable) CopyGrantsInput() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_ExternalTable) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_ExternalTable) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -627,7 +627,7 @@ func (j *jsiiProxy_ExternalTable) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/external_table snowflake_external_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/external_table snowflake_external_table} Resource.
 func NewExternalTable(scope constructs.Construct, id *string, config *ExternalTableConfig) ExternalTable {
 	_init_.Initialize()
 
@@ -645,7 +645,7 @@ func NewExternalTable(scope constructs.Construct, id *string, config *ExternalTa
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/snowflake/r/external_table snowflake_external_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/external_table snowflake_external_table} Resource.
 func NewExternalTable_Override(e ExternalTable, scope constructs.Construct, id *string, config *ExternalTableConfig) {
 	_init_.Initialize()
 
@@ -711,7 +711,10 @@ func (j *jsiiProxy_ExternalTable)SetCopyGrants(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ExternalTable)SetCount(val *float64) {
+func (j *jsiiProxy_ExternalTable)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",
