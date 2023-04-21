@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/task snowflake_task}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/task snowflake_task}.
 type Task interface {
 	cdktf.TerraformResource
 	After() *[]*string
@@ -642,7 +642,7 @@ func (j *jsiiProxy_Task) WhenInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/task snowflake_task} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/task snowflake_task} Resource.
 func NewTask(scope constructs.Construct, id *string, config *TaskConfig) Task {
 	_init_.Initialize()
 
@@ -660,7 +660,7 @@ func NewTask(scope constructs.Construct, id *string, config *TaskConfig) Task {
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/task snowflake_task} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/task snowflake_task} Resource.
 func NewTask_Override(t Task, scope constructs.Construct, id *string, config *TaskConfig) {
 	_init_.Initialize()
 

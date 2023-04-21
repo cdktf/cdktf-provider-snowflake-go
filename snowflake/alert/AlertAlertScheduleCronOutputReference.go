@@ -1,14 +1,14 @@
-package proceduregrant
+package alert
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
 
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/proceduregrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/alert/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-type ProcedureGrantArgumentsOutputReference interface {
+type AlertAlertScheduleCronOutputReference interface {
 	cdktf.ComplexObject
 	// the index of the complex object in a list.
 	// Experimental.
@@ -25,13 +25,13 @@ type ProcedureGrantArgumentsOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	Expression() *string
+	SetExpression(val *string)
+	ExpressionInput() *string
 	// Experimental.
 	Fqn() *string
-	InternalValue() interface{}
-	SetInternalValue(val interface{})
-	Name() *string
-	SetName(val *string)
-	NameInput() *string
+	InternalValue() *AlertAlertScheduleCron
+	SetInternalValue(val *AlertAlertScheduleCron)
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -40,9 +40,9 @@ type ProcedureGrantArgumentsOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
-	Type() *string
-	SetType(val *string)
-	TypeInput() *string
+	TimeZone() *string
+	SetTimeZone(val *string)
+	TimeZoneInput() *string
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -77,12 +77,12 @@ type ProcedureGrantArgumentsOutputReference interface {
 	ToString() *string
 }
 
-// The jsii proxy struct for ProcedureGrantArgumentsOutputReference
-type jsiiProxy_ProcedureGrantArgumentsOutputReference struct {
+// The jsii proxy struct for AlertAlertScheduleCronOutputReference
+type jsiiProxy_AlertAlertScheduleCronOutputReference struct {
 	internal.Type__cdktfComplexObject
 }
 
-func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference) ComplexObjectIndex() interface{} {
+func (j *jsiiProxy_AlertAlertScheduleCronOutputReference) ComplexObjectIndex() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
@@ -92,7 +92,7 @@ func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference) ComplexObjectIndex() 
 	return returns
 }
 
-func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference) ComplexObjectIsFromSet() *bool {
+func (j *jsiiProxy_AlertAlertScheduleCronOutputReference) ComplexObjectIsFromSet() *bool {
 	var returns *bool
 	_jsii_.Get(
 		j,
@@ -102,7 +102,7 @@ func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference) ComplexObjectIsFromSe
 	return returns
 }
 
-func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference) CreationStack() *[]*string {
+func (j *jsiiProxy_AlertAlertScheduleCronOutputReference) CreationStack() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
@@ -112,7 +112,27 @@ func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference) CreationStack() *[]*s
 	return returns
 }
 
-func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference) Fqn() *string {
+func (j *jsiiProxy_AlertAlertScheduleCronOutputReference) Expression() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"expression",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AlertAlertScheduleCronOutputReference) ExpressionInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"expressionInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AlertAlertScheduleCronOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -122,8 +142,8 @@ func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference) InternalValue() interface{} {
-	var returns interface{}
+func (j *jsiiProxy_AlertAlertScheduleCronOutputReference) InternalValue() *AlertAlertScheduleCron {
+	var returns *AlertAlertScheduleCron
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -132,27 +152,7 @@ func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference) InternalValue() inter
 	return returns
 }
 
-func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference) Name() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"name",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference) NameInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"nameInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference) TerraformAttribute() *string {
+func (j *jsiiProxy_AlertAlertScheduleCronOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -162,7 +162,7 @@ func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference) TerraformAttribute() 
 	return returns
 }
 
-func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference) TerraformResource() cdktf.IInterpolatingParent {
+func (j *jsiiProxy_AlertAlertScheduleCronOutputReference) TerraformResource() cdktf.IInterpolatingParent {
 	var returns cdktf.IInterpolatingParent
 	_jsii_.Get(
 		j,
@@ -172,55 +172,55 @@ func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference) TerraformResource() c
 	return returns
 }
 
-func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference) Type() *string {
+func (j *jsiiProxy_AlertAlertScheduleCronOutputReference) TimeZone() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
-		"type",
+		"timeZone",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference) TypeInput() *string {
+func (j *jsiiProxy_AlertAlertScheduleCronOutputReference) TimeZoneInput() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
-		"typeInput",
+		"timeZoneInput",
 		&returns,
 	)
 	return returns
 }
 
 
-func NewProcedureGrantArgumentsOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) ProcedureGrantArgumentsOutputReference {
+func NewAlertAlertScheduleCronOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) AlertAlertScheduleCronOutputReference {
 	_init_.Initialize()
 
-	if err := validateNewProcedureGrantArgumentsOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
+	if err := validateNewAlertAlertScheduleCronOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
 		panic(err)
 	}
-	j := jsiiProxy_ProcedureGrantArgumentsOutputReference{}
+	j := jsiiProxy_AlertAlertScheduleCronOutputReference{}
 
 	_jsii_.Create(
-		"@cdktf/provider-snowflake.procedureGrant.ProcedureGrantArgumentsOutputReference",
-		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
+		"@cdktf/provider-snowflake.alert.AlertAlertScheduleCronOutputReference",
+		[]interface{}{terraformResource, terraformAttribute},
 		&j,
 	)
 
 	return &j
 }
 
-func NewProcedureGrantArgumentsOutputReference_Override(p ProcedureGrantArgumentsOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) {
+func NewAlertAlertScheduleCronOutputReference_Override(a AlertAlertScheduleCronOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@cdktf/provider-snowflake.procedureGrant.ProcedureGrantArgumentsOutputReference",
-		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
-		p,
+		"@cdktf/provider-snowflake.alert.AlertAlertScheduleCronOutputReference",
+		[]interface{}{terraformResource, terraformAttribute},
+		a,
 	)
 }
 
-func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference)SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_AlertAlertScheduleCronOutputReference)SetComplexObjectIndex(val interface{}) {
 	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
 		panic(err)
 	}
@@ -231,7 +231,7 @@ func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference)SetComplexObjectIndex(
 	)
 }
 
-func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference)SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_AlertAlertScheduleCronOutputReference)SetComplexObjectIsFromSet(val *bool) {
 	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
 		panic(err)
 	}
@@ -242,7 +242,18 @@ func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference)SetComplexObjectIsFrom
 	)
 }
 
-func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference)SetInternalValue(val interface{}) {
+func (j *jsiiProxy_AlertAlertScheduleCronOutputReference)SetExpression(val *string) {
+	if err := j.validateSetExpressionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"expression",
+		val,
+	)
+}
+
+func (j *jsiiProxy_AlertAlertScheduleCronOutputReference)SetInternalValue(val *AlertAlertScheduleCron) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -253,18 +264,7 @@ func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference)SetInternalValue(val i
 	)
 }
 
-func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference)SetName(val *string) {
-	if err := j.validateSetNameParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"name",
-		val,
-	)
-}
-
-func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference)SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_AlertAlertScheduleCronOutputReference)SetTerraformAttribute(val *string) {
 	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
 		panic(err)
 	}
@@ -275,7 +275,7 @@ func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference)SetTerraformAttribute(
 	)
 }
 
-func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_AlertAlertScheduleCronOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
 	if err := j.validateSetTerraformResourceParameters(val); err != nil {
 		panic(err)
 	}
@@ -286,22 +286,22 @@ func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference)SetTerraformResource(v
 	)
 }
 
-func (j *jsiiProxy_ProcedureGrantArgumentsOutputReference)SetType(val *string) {
-	if err := j.validateSetTypeParameters(val); err != nil {
+func (j *jsiiProxy_AlertAlertScheduleCronOutputReference)SetTimeZone(val *string) {
+	if err := j.validateSetTimeZoneParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
-		"type",
+		"timeZone",
 		val,
 	)
 }
 
-func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) ComputeFqn() *string {
+func (a *jsiiProxy_AlertAlertScheduleCronOutputReference) ComputeFqn() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		p,
+		a,
 		"computeFqn",
 		nil, // no parameters
 		&returns,
@@ -310,14 +310,14 @@ func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) ComputeFqn() *string 
 	return returns
 }
 
-func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
-	if err := p.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+func (a *jsiiProxy_AlertAlertScheduleCronOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := a.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
-		p,
+		a,
 		"getAnyMapAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -326,14 +326,14 @@ func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) GetAnyMapAttribute(te
 	return returns
 }
 
-func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
-	if err := p.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+func (a *jsiiProxy_AlertAlertScheduleCronOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := a.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
-		p,
+		a,
 		"getBooleanAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -342,14 +342,14 @@ func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) GetBooleanAttribute(t
 	return returns
 }
 
-func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
-	if err := p.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+func (a *jsiiProxy_AlertAlertScheduleCronOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := a.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
-		p,
+		a,
 		"getBooleanMapAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -358,14 +358,14 @@ func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) GetBooleanMapAttribut
 	return returns
 }
 
-func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
-	if err := p.validateGetListAttributeParameters(terraformAttribute); err != nil {
+func (a *jsiiProxy_AlertAlertScheduleCronOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := a.validateGetListAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
-		p,
+		a,
 		"getListAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -374,14 +374,14 @@ func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) GetListAttribute(terr
 	return returns
 }
 
-func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
-	if err := p.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+func (a *jsiiProxy_AlertAlertScheduleCronOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := a.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *float64
 
 	_jsii_.Invoke(
-		p,
+		a,
 		"getNumberAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -390,14 +390,14 @@ func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) GetNumberAttribute(te
 	return returns
 }
 
-func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
-	if err := p.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+func (a *jsiiProxy_AlertAlertScheduleCronOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := a.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
-		p,
+		a,
 		"getNumberListAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -406,14 +406,14 @@ func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) GetNumberListAttribut
 	return returns
 }
 
-func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
-	if err := p.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+func (a *jsiiProxy_AlertAlertScheduleCronOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := a.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
-		p,
+		a,
 		"getNumberMapAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -422,14 +422,14 @@ func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) GetNumberMapAttribute
 	return returns
 }
 
-func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) GetStringAttribute(terraformAttribute *string) *string {
-	if err := p.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+func (a *jsiiProxy_AlertAlertScheduleCronOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := a.validateGetStringAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *string
 
 	_jsii_.Invoke(
-		p,
+		a,
 		"getStringAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -438,14 +438,14 @@ func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) GetStringAttribute(te
 	return returns
 }
 
-func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
-	if err := p.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+func (a *jsiiProxy_AlertAlertScheduleCronOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := a.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
-		p,
+		a,
 		"getStringMapAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -454,11 +454,11 @@ func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) GetStringMapAttribute
 	return returns
 }
 
-func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) InterpolationAsList() cdktf.IResolvable {
+func (a *jsiiProxy_AlertAlertScheduleCronOutputReference) InterpolationAsList() cdktf.IResolvable {
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
-		p,
+		a,
 		"interpolationAsList",
 		nil, // no parameters
 		&returns,
@@ -467,14 +467,14 @@ func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) InterpolationAsList()
 	return returns
 }
 
-func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
-	if err := p.validateInterpolationForAttributeParameters(property); err != nil {
+func (a *jsiiProxy_AlertAlertScheduleCronOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := a.validateInterpolationForAttributeParameters(property); err != nil {
 		panic(err)
 	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
-		p,
+		a,
 		"interpolationForAttribute",
 		[]interface{}{property},
 		&returns,
@@ -483,14 +483,14 @@ func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) InterpolationForAttri
 	return returns
 }
 
-func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := p.validateResolveParameters(_context); err != nil {
+func (a *jsiiProxy_AlertAlertScheduleCronOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := a.validateResolveParameters(_context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
 
 	_jsii_.Invoke(
-		p,
+		a,
 		"resolve",
 		[]interface{}{_context},
 		&returns,
@@ -499,11 +499,11 @@ func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) Resolve(_context cdkt
 	return returns
 }
 
-func (p *jsiiProxy_ProcedureGrantArgumentsOutputReference) ToString() *string {
+func (a *jsiiProxy_AlertAlertScheduleCronOutputReference) ToString() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		p,
+		a,
 		"toString",
 		nil, // no parameters
 		&returns,

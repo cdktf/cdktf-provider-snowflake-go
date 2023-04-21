@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/schema_grant snowflake_schema_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/schema_grant snowflake_schema_grant}.
 type SchemaGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -51,6 +51,9 @@ type SchemaGrant interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
+	OnAll() interface{}
+	SetOnAll(val interface{})
+	OnAllInput() interface{}
 	OnFuture() interface{}
 	SetOnFuture(val interface{})
 	OnFutureInput() interface{}
@@ -112,6 +115,7 @@ type SchemaGrant interface {
 	OverrideLogicalId(newLogicalId *string)
 	ResetEnableMultipleGrants()
 	ResetId()
+	ResetOnAll()
 	ResetOnFuture()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -291,6 +295,26 @@ func (j *jsiiProxy_SchemaGrant) Node() constructs.Node {
 	_jsii_.Get(
 		j,
 		"node",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) OnAll() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onAll",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SchemaGrant) OnAllInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onAllInput",
 		&returns,
 	)
 	return returns
@@ -477,7 +501,7 @@ func (j *jsiiProxy_SchemaGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/schema_grant snowflake_schema_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/schema_grant snowflake_schema_grant} Resource.
 func NewSchemaGrant(scope constructs.Construct, id *string, config *SchemaGrantConfig) SchemaGrant {
 	_init_.Initialize()
 
@@ -495,7 +519,7 @@ func NewSchemaGrant(scope constructs.Construct, id *string, config *SchemaGrantC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/schema_grant snowflake_schema_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/schema_grant snowflake_schema_grant} Resource.
 func NewSchemaGrant_Override(s SchemaGrant, scope constructs.Construct, id *string, config *SchemaGrantConfig) {
 	_init_.Initialize()
 
@@ -584,6 +608,17 @@ func (j *jsiiProxy_SchemaGrant)SetLifecycle(val *cdktf.TerraformResourceLifecycl
 	_jsii_.Set(
 		j,
 		"lifecycle",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SchemaGrant)SetOnAll(val interface{}) {
+	if err := j.validateSetOnAllParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"onAll",
 		val,
 	)
 }
@@ -951,6 +986,14 @@ func (s *jsiiProxy_SchemaGrant) ResetId() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SchemaGrant) ResetOnAll() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetOnAll",
 		nil, // no parameters
 	)
 }

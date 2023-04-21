@@ -9,14 +9,12 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/function_grant snowflake_function_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/function_grant snowflake_function_grant}.
 type FunctionGrant interface {
 	cdktf.TerraformResource
 	ArgumentDataTypes() *[]*string
 	SetArgumentDataTypes(val *[]*string)
 	ArgumentDataTypesInput() *[]*string
-	Arguments() FunctionGrantArgumentsList
-	ArgumentsInput() interface{}
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -75,9 +73,6 @@ type FunctionGrant interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
-	ReturnType() *string
-	SetReturnType(val *string)
-	ReturnTypeInput() *string
 	Roles() *[]*string
 	SetRoles(val *[]*string)
 	RolesInput() *[]*string
@@ -121,9 +116,7 @@ type FunctionGrant interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	PutArguments(value interface{})
 	ResetArgumentDataTypes()
-	ResetArguments()
 	ResetEnableMultipleGrants()
 	ResetFunctionName()
 	ResetId()
@@ -132,7 +125,6 @@ type FunctionGrant interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPrivilege()
-	ResetReturnType()
 	ResetSchemaName()
 	ResetShares()
 	ResetWithGrantOption()
@@ -166,26 +158,6 @@ func (j *jsiiProxy_FunctionGrant) ArgumentDataTypesInput() *[]*string {
 	_jsii_.Get(
 		j,
 		"argumentDataTypesInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_FunctionGrant) Arguments() FunctionGrantArgumentsList {
-	var returns FunctionGrantArgumentsList
-	_jsii_.Get(
-		j,
-		"arguments",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_FunctionGrant) ArgumentsInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"argumentsInput",
 		&returns,
 	)
 	return returns
@@ -441,26 +413,6 @@ func (j *jsiiProxy_FunctionGrant) RawOverrides() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_FunctionGrant) ReturnType() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"returnType",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_FunctionGrant) ReturnTypeInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"returnTypeInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_FunctionGrant) Roles() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -572,7 +524,7 @@ func (j *jsiiProxy_FunctionGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/function_grant snowflake_function_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/function_grant snowflake_function_grant} Resource.
 func NewFunctionGrant(scope constructs.Construct, id *string, config *FunctionGrantConfig) FunctionGrant {
 	_init_.Initialize()
 
@@ -590,7 +542,7 @@ func NewFunctionGrant(scope constructs.Construct, id *string, config *FunctionGr
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/function_grant snowflake_function_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/function_grant snowflake_function_grant} Resource.
 func NewFunctionGrant_Override(f FunctionGrant, scope constructs.Construct, id *string, config *FunctionGrantConfig) {
 	_init_.Initialize()
 
@@ -742,17 +694,6 @@ func (j *jsiiProxy_FunctionGrant)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
-		val,
-	)
-}
-
-func (j *jsiiProxy_FunctionGrant)SetReturnType(val *string) {
-	if err := j.validateSetReturnTypeParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"returnType",
 		val,
 	)
 }
@@ -1067,29 +1008,10 @@ func (f *jsiiProxy_FunctionGrant) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
-func (f *jsiiProxy_FunctionGrant) PutArguments(value interface{}) {
-	if err := f.validatePutArgumentsParameters(value); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		f,
-		"putArguments",
-		[]interface{}{value},
-	)
-}
-
 func (f *jsiiProxy_FunctionGrant) ResetArgumentDataTypes() {
 	_jsii_.InvokeVoid(
 		f,
 		"resetArgumentDataTypes",
-		nil, // no parameters
-	)
-}
-
-func (f *jsiiProxy_FunctionGrant) ResetArguments() {
-	_jsii_.InvokeVoid(
-		f,
-		"resetArguments",
 		nil, // no parameters
 	)
 }
@@ -1138,14 +1060,6 @@ func (f *jsiiProxy_FunctionGrant) ResetPrivilege() {
 	_jsii_.InvokeVoid(
 		f,
 		"resetPrivilege",
-		nil, // no parameters
-	)
-}
-
-func (f *jsiiProxy_FunctionGrant) ResetReturnType() {
-	_jsii_.InvokeVoid(
-		f,
-		"resetReturnType",
 		nil, // no parameters
 	)
 }

@@ -111,37 +111,6 @@ func (f *jsiiProxy_FunctionGrant) validateOverrideLogicalIdParameters(newLogical
 	return nil
 }
 
-func (f *jsiiProxy_FunctionGrant) validatePutArgumentsParameters(value interface{}) error {
-	if value == nil {
-		return fmt.Errorf("parameter value is required, but nil was provided")
-	}
-	switch value.(type) {
-	case cdktf.IResolvable:
-		// ok
-	case *[]*FunctionGrantArguments:
-		value := value.(*[]*FunctionGrantArguments)
-		for idx_cd4240, v := range *value {
-			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
-				return err
-			}
-		}
-	case []*FunctionGrantArguments:
-		value_ := value.([]*FunctionGrantArguments)
-		value := &value_
-		for idx_cd4240, v := range *value {
-			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
-				return err
-			}
-		}
-	default:
-		if !_jsii_.IsAnonymousProxy(value) {
-			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*FunctionGrantArguments; received %#v (a %T)", value, value)
-		}
-	}
-
-	return nil
-}
-
 func validateFunctionGrant_IsConstructParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
@@ -385,14 +354,6 @@ func (j *jsiiProxy_FunctionGrant) validateSetProvisionersParameters(val *[]inter
 				return fmt.Errorf("parameter val[%#v] must be one of the allowed types: *cdktf.FileProvisioner, *cdktf.LocalExecProvisioner, *cdktf.RemoteExecProvisioner; received %#v (a %T)", idx_97dfc6, v, v)
 			}
 		}
-	}
-
-	return nil
-}
-
-func (j *jsiiProxy_FunctionGrant) validateSetReturnTypeParameters(val *string) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil

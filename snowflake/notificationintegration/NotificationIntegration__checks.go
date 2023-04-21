@@ -317,6 +317,14 @@ func (j *jsiiProxy_NotificationIntegration) validateSetGcpPubsubSubscriptionName
 	return nil
 }
 
+func (j *jsiiProxy_NotificationIntegration) validateSetGcpPubsubTopicNameParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_NotificationIntegration) validateSetIdParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

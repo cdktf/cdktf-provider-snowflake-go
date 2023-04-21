@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/notification_integration snowflake_notification_integration}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/notification_integration snowflake_notification_integration}.
 type NotificationIntegration interface {
 	cdktf.TerraformResource
 	AwsSnsExternalId() *string
@@ -72,6 +72,9 @@ type NotificationIntegration interface {
 	GcpPubsubSubscriptionName() *string
 	SetGcpPubsubSubscriptionName(val *string)
 	GcpPubsubSubscriptionNameInput() *string
+	GcpPubsubTopicName() *string
+	SetGcpPubsubTopicName(val *string)
+	GcpPubsubTopicNameInput() *string
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -141,6 +144,7 @@ type NotificationIntegration interface {
 	ResetDirection()
 	ResetEnabled()
 	ResetGcpPubsubSubscriptionName()
+	ResetGcpPubsubTopicName()
 	ResetId()
 	ResetNotificationProvider()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -502,6 +506,26 @@ func (j *jsiiProxy_NotificationIntegration) GcpPubsubSubscriptionNameInput() *st
 	return returns
 }
 
+func (j *jsiiProxy_NotificationIntegration) GcpPubsubTopicName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"gcpPubsubTopicName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_NotificationIntegration) GcpPubsubTopicNameInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"gcpPubsubTopicNameInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_NotificationIntegration) Id() *string {
 	var returns *string
 	_jsii_.Get(
@@ -663,7 +687,7 @@ func (j *jsiiProxy_NotificationIntegration) TypeInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/notification_integration snowflake_notification_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/notification_integration snowflake_notification_integration} Resource.
 func NewNotificationIntegration(scope constructs.Construct, id *string, config *NotificationIntegrationConfig) NotificationIntegration {
 	_init_.Initialize()
 
@@ -681,7 +705,7 @@ func NewNotificationIntegration(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/notification_integration snowflake_notification_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/notification_integration snowflake_notification_integration} Resource.
 func NewNotificationIntegration_Override(n NotificationIntegration, scope constructs.Construct, id *string, config *NotificationIntegrationConfig) {
 	_init_.Initialize()
 
@@ -836,6 +860,17 @@ func (j *jsiiProxy_NotificationIntegration)SetGcpPubsubSubscriptionName(val *str
 	_jsii_.Set(
 		j,
 		"gcpPubsubSubscriptionName",
+		val,
+	)
+}
+
+func (j *jsiiProxy_NotificationIntegration)SetGcpPubsubTopicName(val *string) {
+	if err := j.validateSetGcpPubsubTopicNameParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"gcpPubsubTopicName",
 		val,
 	)
 }
@@ -1256,6 +1291,14 @@ func (n *jsiiProxy_NotificationIntegration) ResetGcpPubsubSubscriptionName() {
 	_jsii_.InvokeVoid(
 		n,
 		"resetGcpPubsubSubscriptionName",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NotificationIntegration) ResetGcpPubsubTopicName() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetGcpPubsubTopicName",
 		nil, // no parameters
 	)
 }

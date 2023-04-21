@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/table snowflake_table}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/table snowflake_table}.
 type Table interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -533,7 +533,7 @@ func (j *jsiiProxy_Table) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/table snowflake_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/table snowflake_table} Resource.
 func NewTable(scope constructs.Construct, id *string, config *TableConfig) Table {
 	_init_.Initialize()
 
@@ -551,7 +551,7 @@ func NewTable(scope constructs.Construct, id *string, config *TableConfig) Table
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/table snowflake_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/table snowflake_table} Resource.
 func NewTable_Override(t Table, scope constructs.Construct, id *string, config *TableConfig) {
 	_init_.Initialize()
 

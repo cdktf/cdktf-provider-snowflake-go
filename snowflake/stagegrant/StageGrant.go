@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/stage_grant snowflake_stage_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/stage_grant snowflake_stage_grant}.
 type StageGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -51,6 +51,9 @@ type StageGrant interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
+	OnAll() interface{}
+	SetOnAll(val interface{})
+	OnAllInput() interface{}
 	OnFuture() interface{}
 	SetOnFuture(val interface{})
 	OnFutureInput() interface{}
@@ -112,6 +115,7 @@ type StageGrant interface {
 	OverrideLogicalId(newLogicalId *string)
 	ResetEnableMultipleGrants()
 	ResetId()
+	ResetOnAll()
 	ResetOnFuture()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -290,6 +294,26 @@ func (j *jsiiProxy_StageGrant) Node() constructs.Node {
 	_jsii_.Get(
 		j,
 		"node",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_StageGrant) OnAll() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onAll",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_StageGrant) OnAllInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onAllInput",
 		&returns,
 	)
 	return returns
@@ -476,7 +500,7 @@ func (j *jsiiProxy_StageGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/stage_grant snowflake_stage_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/stage_grant snowflake_stage_grant} Resource.
 func NewStageGrant(scope constructs.Construct, id *string, config *StageGrantConfig) StageGrant {
 	_init_.Initialize()
 
@@ -494,7 +518,7 @@ func NewStageGrant(scope constructs.Construct, id *string, config *StageGrantCon
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/stage_grant snowflake_stage_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/stage_grant snowflake_stage_grant} Resource.
 func NewStageGrant_Override(s StageGrant, scope constructs.Construct, id *string, config *StageGrantConfig) {
 	_init_.Initialize()
 
@@ -583,6 +607,17 @@ func (j *jsiiProxy_StageGrant)SetLifecycle(val *cdktf.TerraformResourceLifecycle
 	_jsii_.Set(
 		j,
 		"lifecycle",
+		val,
+	)
+}
+
+func (j *jsiiProxy_StageGrant)SetOnAll(val interface{}) {
+	if err := j.validateSetOnAllParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"onAll",
 		val,
 	)
 }
@@ -950,6 +985,14 @@ func (s *jsiiProxy_StageGrant) ResetId() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_StageGrant) ResetOnAll() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetOnAll",
 		nil, // no parameters
 	)
 }

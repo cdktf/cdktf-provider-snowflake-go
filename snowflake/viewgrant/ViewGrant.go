@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/view_grant snowflake_view_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/view_grant snowflake_view_grant}.
 type ViewGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -51,6 +51,9 @@ type ViewGrant interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
+	OnAll() interface{}
+	SetOnAll(val interface{})
+	OnAllInput() interface{}
 	OnFuture() interface{}
 	SetOnFuture(val interface{})
 	OnFutureInput() interface{}
@@ -115,6 +118,7 @@ type ViewGrant interface {
 	OverrideLogicalId(newLogicalId *string)
 	ResetEnableMultipleGrants()
 	ResetId()
+	ResetOnAll()
 	ResetOnFuture()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -295,6 +299,26 @@ func (j *jsiiProxy_ViewGrant) Node() constructs.Node {
 	_jsii_.Get(
 		j,
 		"node",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ViewGrant) OnAll() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onAll",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ViewGrant) OnAllInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onAllInput",
 		&returns,
 	)
 	return returns
@@ -501,7 +525,7 @@ func (j *jsiiProxy_ViewGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/view_grant snowflake_view_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/view_grant snowflake_view_grant} Resource.
 func NewViewGrant(scope constructs.Construct, id *string, config *ViewGrantConfig) ViewGrant {
 	_init_.Initialize()
 
@@ -519,7 +543,7 @@ func NewViewGrant(scope constructs.Construct, id *string, config *ViewGrantConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/view_grant snowflake_view_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/view_grant snowflake_view_grant} Resource.
 func NewViewGrant_Override(v ViewGrant, scope constructs.Construct, id *string, config *ViewGrantConfig) {
 	_init_.Initialize()
 
@@ -608,6 +632,17 @@ func (j *jsiiProxy_ViewGrant)SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	_jsii_.Set(
 		j,
 		"lifecycle",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ViewGrant)SetOnAll(val interface{}) {
+	if err := j.validateSetOnAllParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"onAll",
 		val,
 	)
 }
@@ -986,6 +1021,14 @@ func (v *jsiiProxy_ViewGrant) ResetId() {
 	_jsii_.InvokeVoid(
 		v,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (v *jsiiProxy_ViewGrant) ResetOnAll() {
+	_jsii_.InvokeVoid(
+		v,
+		"resetOnAll",
 		nil, // no parameters
 	)
 }

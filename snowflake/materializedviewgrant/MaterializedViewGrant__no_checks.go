@@ -92,6 +92,10 @@ func (j *jsiiProxy_MaterializedViewGrant) validateSetMaterializedViewNameParamet
 	return nil
 }
 
+func (j *jsiiProxy_MaterializedViewGrant) validateSetOnAllParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_MaterializedViewGrant) validateSetOnFutureParameters(val interface{}) error {
 	return nil
 }

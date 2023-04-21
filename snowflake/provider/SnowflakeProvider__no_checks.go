@@ -28,6 +28,10 @@ func (j *jsiiProxy_SnowflakeProvider) validateSetBrowserAuthParameters(val inter
 	return nil
 }
 
+func (j *jsiiProxy_SnowflakeProvider) validateSetInsecureModeParameters(val interface{}) error {
+	return nil
+}
+
 func validateNewSnowflakeProviderParameters(scope constructs.Construct, id *string, config *SnowflakeProviderConfig) error {
 	return nil
 }

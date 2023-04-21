@@ -52,10 +52,6 @@ func (f *jsiiProxy_FunctionGrant) validateOverrideLogicalIdParameters(newLogical
 	return nil
 }
 
-func (f *jsiiProxy_FunctionGrant) validatePutArgumentsParameters(value interface{}) error {
-	return nil
-}
-
 func validateFunctionGrant_IsConstructParameters(x interface{}) error {
 	return nil
 }
@@ -109,10 +105,6 @@ func (j *jsiiProxy_FunctionGrant) validateSetPrivilegeParameters(val *string) er
 }
 
 func (j *jsiiProxy_FunctionGrant) validateSetProvisionersParameters(val *[]interface{}) error {
-	return nil
-}
-
-func (j *jsiiProxy_FunctionGrant) validateSetReturnTypeParameters(val *string) error {
 	return nil
 }
 

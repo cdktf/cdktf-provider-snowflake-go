@@ -88,6 +88,10 @@ func (j *jsiiProxy_StageGrant) validateSetLifecycleParameters(val *cdktf.Terrafo
 	return nil
 }
 
+func (j *jsiiProxy_StageGrant) validateSetOnAllParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_StageGrant) validateSetOnFutureParameters(val interface{}) error {
 	return nil
 }

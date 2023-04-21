@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs snowflake}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs snowflake}.
 type SnowflakeProvider interface {
 	cdktf.TerraformProvider
 	Account() *string
@@ -32,6 +32,9 @@ type SnowflakeProvider interface {
 	Host() *string
 	SetHost(val *string)
 	HostInput() *string
+	InsecureMode() interface{}
+	SetInsecureMode(val interface{})
+	InsecureModeInput() interface{}
 	// Experimental.
 	MetaAttributes() *map[string]interface{}
 	// The tree node.
@@ -100,6 +103,7 @@ type SnowflakeProvider interface {
 	ResetAlias()
 	ResetBrowserAuth()
 	ResetHost()
+	ResetInsecureMode()
 	ResetOauthAccessToken()
 	ResetOauthClientId()
 	ResetOauthClientSecret()
@@ -248,6 +252,26 @@ func (j *jsiiProxy_SnowflakeProvider) HostInput() *string {
 	_jsii_.Get(
 		j,
 		"hostInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) InsecureMode() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"insecureMode",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) InsecureModeInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"insecureModeInput",
 		&returns,
 	)
 	return returns
@@ -634,7 +658,7 @@ func (j *jsiiProxy_SnowflakeProvider) WarehouseInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs snowflake} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs snowflake} Resource.
 func NewSnowflakeProvider(scope constructs.Construct, id *string, config *SnowflakeProviderConfig) SnowflakeProvider {
 	_init_.Initialize()
 
@@ -652,7 +676,7 @@ func NewSnowflakeProvider(scope constructs.Construct, id *string, config *Snowfl
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs snowflake} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs snowflake} Resource.
 func NewSnowflakeProvider_Override(s SnowflakeProvider, scope constructs.Construct, id *string, config *SnowflakeProviderConfig) {
 	_init_.Initialize()
 
@@ -694,6 +718,17 @@ func (j *jsiiProxy_SnowflakeProvider)SetHost(val *string) {
 	_jsii_.Set(
 		j,
 		"host",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetInsecureMode(val interface{}) {
+	if err := j.validateSetInsecureModeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"insecureMode",
 		val,
 	)
 }
@@ -952,6 +987,14 @@ func (s *jsiiProxy_SnowflakeProvider) ResetHost() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetHost",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetInsecureMode() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetInsecureMode",
 		nil, // no parameters
 	)
 }

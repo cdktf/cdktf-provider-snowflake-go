@@ -132,6 +132,10 @@ func (j *jsiiProxy_ExternalOauthIntegration) validateSetScopeDelimiterParameters
 	return nil
 }
 
+func (j *jsiiProxy_ExternalOauthIntegration) validateSetScopeMappingAttributeParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ExternalOauthIntegration) validateSetSnowflakeUserMappingAttributeParameters(val *string) error {
 	return nil
 }

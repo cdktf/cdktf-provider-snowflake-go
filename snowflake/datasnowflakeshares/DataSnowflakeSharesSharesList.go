@@ -1,14 +1,14 @@
-package functiongrant
+package datasnowflakeshares
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
 
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/functiongrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/datasnowflakeshares/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-type FunctionGrantArgumentsList interface {
+type DataSnowflakeSharesSharesList interface {
 	cdktf.ComplexList
 	// The creation stack of this resolvable which will be appended to errors thrown during resolution.
 	//
@@ -17,8 +17,6 @@ type FunctionGrantArgumentsList interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() interface{}
-	SetInternalValue(val interface{})
 	// The attribute on the parent resource this class is referencing.
 	TerraformAttribute() *string
 	SetTerraformAttribute(val *string)
@@ -30,7 +28,7 @@ type FunctionGrantArgumentsList interface {
 	SetWrapsSet(val *bool)
 	// Experimental.
 	ComputeFqn() *string
-	Get(index *float64) FunctionGrantArgumentsOutputReference
+	Get(index *float64) DataSnowflakeSharesSharesOutputReference
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -41,12 +39,12 @@ type FunctionGrantArgumentsList interface {
 	ToString() *string
 }
 
-// The jsii proxy struct for FunctionGrantArgumentsList
-type jsiiProxy_FunctionGrantArgumentsList struct {
+// The jsii proxy struct for DataSnowflakeSharesSharesList
+type jsiiProxy_DataSnowflakeSharesSharesList struct {
 	internal.Type__cdktfComplexList
 }
 
-func (j *jsiiProxy_FunctionGrantArgumentsList) CreationStack() *[]*string {
+func (j *jsiiProxy_DataSnowflakeSharesSharesList) CreationStack() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
@@ -56,7 +54,7 @@ func (j *jsiiProxy_FunctionGrantArgumentsList) CreationStack() *[]*string {
 	return returns
 }
 
-func (j *jsiiProxy_FunctionGrantArgumentsList) Fqn() *string {
+func (j *jsiiProxy_DataSnowflakeSharesSharesList) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -66,17 +64,7 @@ func (j *jsiiProxy_FunctionGrantArgumentsList) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_FunctionGrantArgumentsList) InternalValue() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"internalValue",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_FunctionGrantArgumentsList) TerraformAttribute() *string {
+func (j *jsiiProxy_DataSnowflakeSharesSharesList) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -86,7 +74,7 @@ func (j *jsiiProxy_FunctionGrantArgumentsList) TerraformAttribute() *string {
 	return returns
 }
 
-func (j *jsiiProxy_FunctionGrantArgumentsList) TerraformResource() cdktf.IInterpolatingParent {
+func (j *jsiiProxy_DataSnowflakeSharesSharesList) TerraformResource() cdktf.IInterpolatingParent {
 	var returns cdktf.IInterpolatingParent
 	_jsii_.Get(
 		j,
@@ -96,7 +84,7 @@ func (j *jsiiProxy_FunctionGrantArgumentsList) TerraformResource() cdktf.IInterp
 	return returns
 }
 
-func (j *jsiiProxy_FunctionGrantArgumentsList) WrapsSet() *bool {
+func (j *jsiiProxy_DataSnowflakeSharesSharesList) WrapsSet() *bool {
 	var returns *bool
 	_jsii_.Get(
 		j,
@@ -107,16 +95,16 @@ func (j *jsiiProxy_FunctionGrantArgumentsList) WrapsSet() *bool {
 }
 
 
-func NewFunctionGrantArgumentsList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FunctionGrantArgumentsList {
+func NewDataSnowflakeSharesSharesList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataSnowflakeSharesSharesList {
 	_init_.Initialize()
 
-	if err := validateNewFunctionGrantArgumentsListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+	if err := validateNewDataSnowflakeSharesSharesListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
 		panic(err)
 	}
-	j := jsiiProxy_FunctionGrantArgumentsList{}
+	j := jsiiProxy_DataSnowflakeSharesSharesList{}
 
 	_jsii_.Create(
-		"@cdktf/provider-snowflake.functionGrant.FunctionGrantArgumentsList",
+		"@cdktf/provider-snowflake.dataSnowflakeShares.DataSnowflakeSharesSharesList",
 		[]interface{}{terraformResource, terraformAttribute, wrapsSet},
 		&j,
 	)
@@ -124,28 +112,17 @@ func NewFunctionGrantArgumentsList(terraformResource cdktf.IInterpolatingParent,
 	return &j
 }
 
-func NewFunctionGrantArgumentsList_Override(f FunctionGrantArgumentsList, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) {
+func NewDataSnowflakeSharesSharesList_Override(d DataSnowflakeSharesSharesList, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@cdktf/provider-snowflake.functionGrant.FunctionGrantArgumentsList",
+		"@cdktf/provider-snowflake.dataSnowflakeShares.DataSnowflakeSharesSharesList",
 		[]interface{}{terraformResource, terraformAttribute, wrapsSet},
-		f,
+		d,
 	)
 }
 
-func (j *jsiiProxy_FunctionGrantArgumentsList)SetInternalValue(val interface{}) {
-	if err := j.validateSetInternalValueParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"internalValue",
-		val,
-	)
-}
-
-func (j *jsiiProxy_FunctionGrantArgumentsList)SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_DataSnowflakeSharesSharesList)SetTerraformAttribute(val *string) {
 	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
 		panic(err)
 	}
@@ -156,7 +133,7 @@ func (j *jsiiProxy_FunctionGrantArgumentsList)SetTerraformAttribute(val *string)
 	)
 }
 
-func (j *jsiiProxy_FunctionGrantArgumentsList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_DataSnowflakeSharesSharesList)SetTerraformResource(val cdktf.IInterpolatingParent) {
 	if err := j.validateSetTerraformResourceParameters(val); err != nil {
 		panic(err)
 	}
@@ -167,7 +144,7 @@ func (j *jsiiProxy_FunctionGrantArgumentsList)SetTerraformResource(val cdktf.IIn
 	)
 }
 
-func (j *jsiiProxy_FunctionGrantArgumentsList)SetWrapsSet(val *bool) {
+func (j *jsiiProxy_DataSnowflakeSharesSharesList)SetWrapsSet(val *bool) {
 	if err := j.validateSetWrapsSetParameters(val); err != nil {
 		panic(err)
 	}
@@ -178,11 +155,11 @@ func (j *jsiiProxy_FunctionGrantArgumentsList)SetWrapsSet(val *bool) {
 	)
 }
 
-func (f *jsiiProxy_FunctionGrantArgumentsList) ComputeFqn() *string {
+func (d *jsiiProxy_DataSnowflakeSharesSharesList) ComputeFqn() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		f,
+		d,
 		"computeFqn",
 		nil, // no parameters
 		&returns,
@@ -191,14 +168,14 @@ func (f *jsiiProxy_FunctionGrantArgumentsList) ComputeFqn() *string {
 	return returns
 }
 
-func (f *jsiiProxy_FunctionGrantArgumentsList) Get(index *float64) FunctionGrantArgumentsOutputReference {
-	if err := f.validateGetParameters(index); err != nil {
+func (d *jsiiProxy_DataSnowflakeSharesSharesList) Get(index *float64) DataSnowflakeSharesSharesOutputReference {
+	if err := d.validateGetParameters(index); err != nil {
 		panic(err)
 	}
-	var returns FunctionGrantArgumentsOutputReference
+	var returns DataSnowflakeSharesSharesOutputReference
 
 	_jsii_.Invoke(
-		f,
+		d,
 		"get",
 		[]interface{}{index},
 		&returns,
@@ -207,14 +184,14 @@ func (f *jsiiProxy_FunctionGrantArgumentsList) Get(index *float64) FunctionGrant
 	return returns
 }
 
-func (f *jsiiProxy_FunctionGrantArgumentsList) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := f.validateResolveParameters(_context); err != nil {
+func (d *jsiiProxy_DataSnowflakeSharesSharesList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := d.validateResolveParameters(_context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
 
 	_jsii_.Invoke(
-		f,
+		d,
 		"resolve",
 		[]interface{}{_context},
 		&returns,
@@ -223,11 +200,11 @@ func (f *jsiiProxy_FunctionGrantArgumentsList) Resolve(_context cdktf.IResolveCo
 	return returns
 }
 
-func (f *jsiiProxy_FunctionGrantArgumentsList) ToString() *string {
+func (d *jsiiProxy_DataSnowflakeSharesSharesList) ToString() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		f,
+		d,
 		"toString",
 		nil, // no parameters
 		&returns,

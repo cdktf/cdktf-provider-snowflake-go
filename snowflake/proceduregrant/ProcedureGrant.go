@@ -9,14 +9,12 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/procedure_grant snowflake_procedure_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/procedure_grant snowflake_procedure_grant}.
 type ProcedureGrant interface {
 	cdktf.TerraformResource
 	ArgumentDataTypes() *[]*string
 	SetArgumentDataTypes(val *[]*string)
 	ArgumentDataTypesInput() *[]*string
-	Arguments() ProcedureGrantArgumentsList
-	ArgumentsInput() interface{}
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -75,9 +73,6 @@ type ProcedureGrant interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
-	ReturnType() *string
-	SetReturnType(val *string)
-	ReturnTypeInput() *string
 	Roles() *[]*string
 	SetRoles(val *[]*string)
 	RolesInput() *[]*string
@@ -121,9 +116,7 @@ type ProcedureGrant interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	PutArguments(value interface{})
 	ResetArgumentDataTypes()
-	ResetArguments()
 	ResetEnableMultipleGrants()
 	ResetId()
 	ResetOnFuture()
@@ -132,7 +125,6 @@ type ProcedureGrant interface {
 	ResetOverrideLogicalId()
 	ResetPrivilege()
 	ResetProcedureName()
-	ResetReturnType()
 	ResetSchemaName()
 	ResetShares()
 	ResetWithGrantOption()
@@ -166,26 +158,6 @@ func (j *jsiiProxy_ProcedureGrant) ArgumentDataTypesInput() *[]*string {
 	_jsii_.Get(
 		j,
 		"argumentDataTypesInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ProcedureGrant) Arguments() ProcedureGrantArgumentsList {
-	var returns ProcedureGrantArgumentsList
-	_jsii_.Get(
-		j,
-		"arguments",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ProcedureGrant) ArgumentsInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"argumentsInput",
 		&returns,
 	)
 	return returns
@@ -441,26 +413,6 @@ func (j *jsiiProxy_ProcedureGrant) RawOverrides() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_ProcedureGrant) ReturnType() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"returnType",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ProcedureGrant) ReturnTypeInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"returnTypeInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_ProcedureGrant) Roles() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -572,7 +524,7 @@ func (j *jsiiProxy_ProcedureGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/procedure_grant snowflake_procedure_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/procedure_grant snowflake_procedure_grant} Resource.
 func NewProcedureGrant(scope constructs.Construct, id *string, config *ProcedureGrantConfig) ProcedureGrant {
 	_init_.Initialize()
 
@@ -590,7 +542,7 @@ func NewProcedureGrant(scope constructs.Construct, id *string, config *Procedure
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/procedure_grant snowflake_procedure_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/procedure_grant snowflake_procedure_grant} Resource.
 func NewProcedureGrant_Override(p ProcedureGrant, scope constructs.Construct, id *string, config *ProcedureGrantConfig) {
 	_init_.Initialize()
 
@@ -742,17 +694,6 @@ func (j *jsiiProxy_ProcedureGrant)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
-		val,
-	)
-}
-
-func (j *jsiiProxy_ProcedureGrant)SetReturnType(val *string) {
-	if err := j.validateSetReturnTypeParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"returnType",
 		val,
 	)
 }
@@ -1067,29 +1008,10 @@ func (p *jsiiProxy_ProcedureGrant) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
-func (p *jsiiProxy_ProcedureGrant) PutArguments(value interface{}) {
-	if err := p.validatePutArgumentsParameters(value); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		p,
-		"putArguments",
-		[]interface{}{value},
-	)
-}
-
 func (p *jsiiProxy_ProcedureGrant) ResetArgumentDataTypes() {
 	_jsii_.InvokeVoid(
 		p,
 		"resetArgumentDataTypes",
-		nil, // no parameters
-	)
-}
-
-func (p *jsiiProxy_ProcedureGrant) ResetArguments() {
-	_jsii_.InvokeVoid(
-		p,
-		"resetArguments",
 		nil, // no parameters
 	)
 }
@@ -1138,14 +1060,6 @@ func (p *jsiiProxy_ProcedureGrant) ResetProcedureName() {
 	_jsii_.InvokeVoid(
 		p,
 		"resetProcedureName",
-		nil, // no parameters
-	)
-}
-
-func (p *jsiiProxy_ProcedureGrant) ResetReturnType() {
-	_jsii_.InvokeVoid(
-		p,
-		"resetReturnType",
 		nil, // no parameters
 	)
 }

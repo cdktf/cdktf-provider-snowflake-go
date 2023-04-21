@@ -112,6 +112,10 @@ func (j *jsiiProxy_NotificationIntegration) validateSetGcpPubsubSubscriptionName
 	return nil
 }
 
+func (j *jsiiProxy_NotificationIntegration) validateSetGcpPubsubTopicNameParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_NotificationIntegration) validateSetIdParameters(val *string) error {
 	return nil
 }

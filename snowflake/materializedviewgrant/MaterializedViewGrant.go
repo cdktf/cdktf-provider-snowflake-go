@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/materialized_view_grant snowflake_materialized_view_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/materialized_view_grant snowflake_materialized_view_grant}.
 type MaterializedViewGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -54,6 +54,9 @@ type MaterializedViewGrant interface {
 	MaterializedViewNameInput() *string
 	// The tree node.
 	Node() constructs.Node
+	OnAll() interface{}
+	SetOnAll(val interface{})
+	OnAllInput() interface{}
 	OnFuture() interface{}
 	SetOnFuture(val interface{})
 	OnFutureInput() interface{}
@@ -116,6 +119,7 @@ type MaterializedViewGrant interface {
 	ResetEnableMultipleGrants()
 	ResetId()
 	ResetMaterializedViewName()
+	ResetOnAll()
 	ResetOnFuture()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -320,6 +324,26 @@ func (j *jsiiProxy_MaterializedViewGrant) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_MaterializedViewGrant) OnAll() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onAll",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MaterializedViewGrant) OnAllInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onAllInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_MaterializedViewGrant) OnFuture() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -501,7 +525,7 @@ func (j *jsiiProxy_MaterializedViewGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/materialized_view_grant snowflake_materialized_view_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/materialized_view_grant snowflake_materialized_view_grant} Resource.
 func NewMaterializedViewGrant(scope constructs.Construct, id *string, config *MaterializedViewGrantConfig) MaterializedViewGrant {
 	_init_.Initialize()
 
@@ -519,7 +543,7 @@ func NewMaterializedViewGrant(scope constructs.Construct, id *string, config *Ma
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/materialized_view_grant snowflake_materialized_view_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/materialized_view_grant snowflake_materialized_view_grant} Resource.
 func NewMaterializedViewGrant_Override(m MaterializedViewGrant, scope constructs.Construct, id *string, config *MaterializedViewGrantConfig) {
 	_init_.Initialize()
 
@@ -619,6 +643,17 @@ func (j *jsiiProxy_MaterializedViewGrant)SetMaterializedViewName(val *string) {
 	_jsii_.Set(
 		j,
 		"materializedViewName",
+		val,
+	)
+}
+
+func (j *jsiiProxy_MaterializedViewGrant)SetOnAll(val interface{}) {
+	if err := j.validateSetOnAllParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"onAll",
 		val,
 	)
 }
@@ -994,6 +1029,14 @@ func (m *jsiiProxy_MaterializedViewGrant) ResetMaterializedViewName() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetMaterializedViewName",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MaterializedViewGrant) ResetOnAll() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetOnAll",
 		nil, // no parameters
 	)
 }

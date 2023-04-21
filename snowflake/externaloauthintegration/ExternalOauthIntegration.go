@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/external_oauth_integration snowflake_external_oauth_integration}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/external_oauth_integration snowflake_external_oauth_integration}.
 type ExternalOauthIntegration interface {
 	cdktf.TerraformResource
 	AllowedRoles() *[]*string
@@ -92,6 +92,9 @@ type ExternalOauthIntegration interface {
 	ScopeDelimiter() *string
 	SetScopeDelimiter(val *string)
 	ScopeDelimiterInput() *string
+	ScopeMappingAttribute() *string
+	SetScopeMappingAttribute(val *string)
+	ScopeMappingAttributeInput() *string
 	SnowflakeUserMappingAttribute() *string
 	SetSnowflakeUserMappingAttribute(val *string)
 	SnowflakeUserMappingAttributeInput() *string
@@ -145,6 +148,7 @@ type ExternalOauthIntegration interface {
 	ResetRsaPublicKey()
 	ResetRsaPublicKey2()
 	ResetScopeDelimiter()
+	ResetScopeMappingAttribute()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
 	ToMetadata() interface{}
@@ -560,6 +564,26 @@ func (j *jsiiProxy_ExternalOauthIntegration) ScopeDelimiterInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ExternalOauthIntegration) ScopeMappingAttribute() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"scopeMappingAttribute",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ScopeMappingAttributeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"scopeMappingAttributeInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ExternalOauthIntegration) SnowflakeUserMappingAttribute() *string {
 	var returns *string
 	_jsii_.Get(
@@ -651,7 +675,7 @@ func (j *jsiiProxy_ExternalOauthIntegration) TypeInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/external_oauth_integration snowflake_external_oauth_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/external_oauth_integration snowflake_external_oauth_integration} Resource.
 func NewExternalOauthIntegration(scope constructs.Construct, id *string, config *ExternalOauthIntegrationConfig) ExternalOauthIntegration {
 	_init_.Initialize()
 
@@ -669,7 +693,7 @@ func NewExternalOauthIntegration(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.61.0/docs/resources/external_oauth_integration snowflake_external_oauth_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/external_oauth_integration snowflake_external_oauth_integration} Resource.
 func NewExternalOauthIntegration_Override(e ExternalOauthIntegration, scope constructs.Construct, id *string, config *ExternalOauthIntegrationConfig) {
 	_init_.Initialize()
 
@@ -887,6 +911,17 @@ func (j *jsiiProxy_ExternalOauthIntegration)SetScopeDelimiter(val *string) {
 	_jsii_.Set(
 		j,
 		"scopeDelimiter",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration)SetScopeMappingAttribute(val *string) {
+	if err := j.validateSetScopeMappingAttributeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"scopeMappingAttribute",
 		val,
 	)
 }
@@ -1274,6 +1309,14 @@ func (e *jsiiProxy_ExternalOauthIntegration) ResetScopeDelimiter() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetScopeDelimiter",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_ExternalOauthIntegration) ResetScopeMappingAttribute() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetScopeMappingAttribute",
 		nil, // no parameters
 	)
 }
