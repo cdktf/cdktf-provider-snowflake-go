@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/failover_group snowflake_failover_group}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/failover_group snowflake_failover_group}.
 type FailoverGroup interface {
 	cdktf.TerraformResource
 	AllowedAccounts() *[]*string
@@ -501,7 +501,7 @@ func (j *jsiiProxy_FailoverGroup) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/failover_group snowflake_failover_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/failover_group snowflake_failover_group} Resource.
 func NewFailoverGroup(scope constructs.Construct, id *string, config *FailoverGroupConfig) FailoverGroup {
 	_init_.Initialize()
 
@@ -519,7 +519,7 @@ func NewFailoverGroup(scope constructs.Construct, id *string, config *FailoverGr
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/failover_group snowflake_failover_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/failover_group snowflake_failover_group} Resource.
 func NewFailoverGroup_Override(f FailoverGroup, scope constructs.Construct, id *string, config *FailoverGroupConfig) {
 	_init_.Initialize()
 

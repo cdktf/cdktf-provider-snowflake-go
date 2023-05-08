@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/account_grant snowflake_account_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/account_grant snowflake_account_grant}.
 type AccountGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -382,7 +382,7 @@ func (j *jsiiProxy_AccountGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/account_grant snowflake_account_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/account_grant snowflake_account_grant} Resource.
 func NewAccountGrant(scope constructs.Construct, id *string, config *AccountGrantConfig) AccountGrant {
 	_init_.Initialize()
 
@@ -400,7 +400,7 @@ func NewAccountGrant(scope constructs.Construct, id *string, config *AccountGran
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/account_grant snowflake_account_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/account_grant snowflake_account_grant} Resource.
 func NewAccountGrant_Override(a AccountGrant, scope constructs.Construct, id *string, config *AccountGrantConfig) {
 	_init_.Initialize()
 

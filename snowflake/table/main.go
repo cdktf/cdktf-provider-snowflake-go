@@ -57,6 +57,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "putColumn", GoMethod: "PutColumn"},
 			_jsii_.MemberMethod{JsiiMethod: "putPrimaryKey", GoMethod: "PutPrimaryKey"},
 			_jsii_.MemberMethod{JsiiMethod: "putTag", GoMethod: "PutTag"},
+			_jsii_.MemberProperty{JsiiProperty: "qualifiedName", GoGetter: "QualifiedName"},
 			_jsii_.MemberProperty{JsiiProperty: "rawOverrides", GoGetter: "RawOverrides"},
 			_jsii_.MemberMethod{JsiiMethod: "resetChangeTracking", GoMethod: "ResetChangeTracking"},
 			_jsii_.MemberMethod{JsiiMethod: "resetClusterBy", GoMethod: "ResetClusterBy"},

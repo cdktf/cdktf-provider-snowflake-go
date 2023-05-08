@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/table snowflake_table}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/table snowflake_table}.
 type Table interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -76,6 +76,7 @@ type Table interface {
 	Provisioners() *[]interface{}
 	// Experimental.
 	SetProvisioners(val *[]interface{})
+	QualifiedName() *string
 	// Experimental.
 	RawOverrides() interface{}
 	Schema() *string
@@ -452,6 +453,16 @@ func (j *jsiiProxy_Table) Provisioners() *[]interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_Table) QualifiedName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"qualifiedName",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Table) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -533,7 +544,7 @@ func (j *jsiiProxy_Table) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/table snowflake_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/table snowflake_table} Resource.
 func NewTable(scope constructs.Construct, id *string, config *TableConfig) Table {
 	_init_.Initialize()
 
@@ -551,7 +562,7 @@ func NewTable(scope constructs.Construct, id *string, config *TableConfig) Table
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/resources/table snowflake_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/table snowflake_table} Resource.
 func NewTable_Override(t Table, scope constructs.Construct, id *string, config *TableConfig) {
 	_init_.Initialize()
 

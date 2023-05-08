@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/data-sources/functions snowflake_functions}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/data-sources/functions snowflake_functions}.
 type DataSnowflakeFunctions interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -315,7 +315,7 @@ func (j *jsiiProxy_DataSnowflakeFunctions) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/data-sources/functions snowflake_functions} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/data-sources/functions snowflake_functions} Data Source.
 func NewDataSnowflakeFunctions(scope constructs.Construct, id *string, config *DataSnowflakeFunctionsConfig) DataSnowflakeFunctions {
 	_init_.Initialize()
 
@@ -333,7 +333,7 @@ func NewDataSnowflakeFunctions(scope constructs.Construct, id *string, config *D
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.62.0/docs/data-sources/functions snowflake_functions} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/data-sources/functions snowflake_functions} Data Source.
 func NewDataSnowflakeFunctions_Override(d DataSnowflakeFunctions, scope constructs.Construct, id *string, config *DataSnowflakeFunctionsConfig) {
 	_init_.Initialize()
 
