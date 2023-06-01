@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs snowflake}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs snowflake}.
 type SnowflakeProvider interface {
 	cdktf.TerraformProvider
 	Account() *string
@@ -72,6 +72,9 @@ type SnowflakeProvider interface {
 	PrivateKeyPath() *string
 	SetPrivateKeyPath(val *string)
 	PrivateKeyPathInput() *string
+	Profile() *string
+	SetProfile(val *string)
+	ProfileInput() *string
 	Protocol() *string
 	SetProtocol(val *string)
 	ProtocolInput() *string
@@ -100,6 +103,7 @@ type SnowflakeProvider interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	ResetAccount()
 	ResetAlias()
 	ResetBrowserAuth()
 	ResetHost()
@@ -118,9 +122,11 @@ type SnowflakeProvider interface {
 	ResetPrivateKey()
 	ResetPrivateKeyPassphrase()
 	ResetPrivateKeyPath()
+	ResetProfile()
 	ResetProtocol()
 	ResetRegion()
 	ResetRole()
+	ResetUsername()
 	ResetWarehouse()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
@@ -517,6 +523,26 @@ func (j *jsiiProxy_SnowflakeProvider) PrivateKeyPathInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_SnowflakeProvider) Profile() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"profile",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) ProfileInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"profileInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_SnowflakeProvider) Protocol() *string {
 	var returns *string
 	_jsii_.Get(
@@ -658,7 +684,7 @@ func (j *jsiiProxy_SnowflakeProvider) WarehouseInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs snowflake} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs snowflake} Resource.
 func NewSnowflakeProvider(scope constructs.Construct, id *string, config *SnowflakeProviderConfig) SnowflakeProvider {
 	_init_.Initialize()
 
@@ -676,7 +702,7 @@ func NewSnowflakeProvider(scope constructs.Construct, id *string, config *Snowfl
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs snowflake} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs snowflake} Resource.
 func NewSnowflakeProvider_Override(s SnowflakeProvider, scope constructs.Construct, id *string, config *SnowflakeProviderConfig) {
 	_init_.Initialize()
 
@@ -817,6 +843,14 @@ func (j *jsiiProxy_SnowflakeProvider)SetPrivateKeyPath(val *string) {
 	_jsii_.Set(
 		j,
 		"privateKeyPath",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetProfile(val *string) {
+	_jsii_.Set(
+		j,
+		"profile",
 		val,
 	)
 }
@@ -967,6 +1001,14 @@ func (s *jsiiProxy_SnowflakeProvider) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (s *jsiiProxy_SnowflakeProvider) ResetAccount() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetAccount",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SnowflakeProvider) ResetAlias() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1095,6 +1137,14 @@ func (s *jsiiProxy_SnowflakeProvider) ResetPrivateKeyPath() {
 	)
 }
 
+func (s *jsiiProxy_SnowflakeProvider) ResetProfile() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetProfile",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SnowflakeProvider) ResetProtocol() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1115,6 +1165,14 @@ func (s *jsiiProxy_SnowflakeProvider) ResetRole() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetRole",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetUsername() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetUsername",
 		nil, // no parameters
 	)
 }

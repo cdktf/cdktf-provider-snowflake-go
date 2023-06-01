@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/external_function snowflake_external_function}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/external_function snowflake_external_function}.
 type ExternalFunction interface {
 	cdktf.TerraformResource
 	ApiIntegration() *string
@@ -84,6 +84,12 @@ type ExternalFunction interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	RequestTranslator() *string
+	SetRequestTranslator(val *string)
+	RequestTranslatorInput() *string
+	ResponseTranslator() *string
+	SetResponseTranslator(val *string)
+	ResponseTranslatorInput() *string
 	ReturnBehavior() *string
 	SetReturnBehavior(val *string)
 	ReturnBehaviorInput() *string
@@ -143,6 +149,8 @@ type ExternalFunction interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetRequestTranslator()
+	ResetResponseTranslator()
 	ResetReturnNullAllowed()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
@@ -519,6 +527,46 @@ func (j *jsiiProxy_ExternalFunction) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_ExternalFunction) RequestTranslator() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"requestTranslator",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalFunction) RequestTranslatorInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"requestTranslatorInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalFunction) ResponseTranslator() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"responseTranslator",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalFunction) ResponseTranslatorInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"responseTranslatorInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ExternalFunction) ReturnBehavior() *string {
 	var returns *string
 	_jsii_.Get(
@@ -650,7 +698,7 @@ func (j *jsiiProxy_ExternalFunction) UrlOfProxyAndResourceInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/external_function snowflake_external_function} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/external_function snowflake_external_function} Resource.
 func NewExternalFunction(scope constructs.Construct, id *string, config *ExternalFunctionConfig) ExternalFunction {
 	_init_.Initialize()
 
@@ -668,7 +716,7 @@ func NewExternalFunction(scope constructs.Construct, id *string, config *Externa
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/external_function snowflake_external_function} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/external_function snowflake_external_function} Resource.
 func NewExternalFunction_Override(e ExternalFunction, scope constructs.Construct, id *string, config *ExternalFunctionConfig) {
 	_init_.Initialize()
 
@@ -842,6 +890,28 @@ func (j *jsiiProxy_ExternalFunction)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ExternalFunction)SetRequestTranslator(val *string) {
+	if err := j.validateSetRequestTranslatorParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"requestTranslator",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ExternalFunction)SetResponseTranslator(val *string) {
+	if err := j.validateSetResponseTranslatorParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"responseTranslator",
 		val,
 	)
 }
@@ -1257,6 +1327,22 @@ func (e *jsiiProxy_ExternalFunction) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_ExternalFunction) ResetRequestTranslator() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetRequestTranslator",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_ExternalFunction) ResetResponseTranslator() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetResponseTranslator",
 		nil, // no parameters
 	)
 }

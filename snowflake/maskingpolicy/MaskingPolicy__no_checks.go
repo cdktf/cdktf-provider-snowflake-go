@@ -52,6 +52,10 @@ func (m *jsiiProxy_MaskingPolicy) validateOverrideLogicalIdParameters(newLogical
 	return nil
 }
 
+func (m *jsiiProxy_MaskingPolicy) validatePutSignatureParameters(value *MaskingPolicySignature) error {
+	return nil
+}
+
 func validateMaskingPolicy_IsConstructParameters(x interface{}) error {
 	return nil
 }
@@ -80,7 +84,15 @@ func (j *jsiiProxy_MaskingPolicy) validateSetDatabaseParameters(val *string) err
 	return nil
 }
 
+func (j *jsiiProxy_MaskingPolicy) validateSetExemptOtherPoliciesParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_MaskingPolicy) validateSetIdParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_MaskingPolicy) validateSetIfNotExistsParameters(val interface{}) error {
 	return nil
 }
 
@@ -96,6 +108,10 @@ func (j *jsiiProxy_MaskingPolicy) validateSetNameParameters(val *string) error {
 	return nil
 }
 
+func (j *jsiiProxy_MaskingPolicy) validateSetOrReplaceParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_MaskingPolicy) validateSetProvisionersParameters(val *[]interface{}) error {
 	return nil
 }
@@ -105,10 +121,6 @@ func (j *jsiiProxy_MaskingPolicy) validateSetReturnDataTypeParameters(val *strin
 }
 
 func (j *jsiiProxy_MaskingPolicy) validateSetSchemaParameters(val *string) error {
-	return nil
-}
-
-func (j *jsiiProxy_MaskingPolicy) validateSetValueDataTypeParameters(val *string) error {
 	return nil
 }
 

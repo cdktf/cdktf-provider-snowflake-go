@@ -1,6 +1,6 @@
 //go:build !no_runtime_type_checking
 
-package warehouse
+package maskingpolicy
 
 import (
 	"fmt"
@@ -10,7 +10,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-func (w *jsiiProxy_WarehouseTagList) validateGetParameters(index *float64) error {
+func (m *jsiiProxy_MaskingPolicySignatureColumnList) validateGetParameters(index *float64) error {
 	if index == nil {
 		return fmt.Errorf("parameter index is required, but nil was provided")
 	}
@@ -18,7 +18,7 @@ func (w *jsiiProxy_WarehouseTagList) validateGetParameters(index *float64) error
 	return nil
 }
 
-func (w *jsiiProxy_WarehouseTagList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_MaskingPolicySignatureColumnList) validateResolveParameters(_context cdktf.IResolveContext) error {
 	if _context == nil {
 		return fmt.Errorf("parameter _context is required, but nil was provided")
 	}
@@ -26,19 +26,19 @@ func (w *jsiiProxy_WarehouseTagList) validateResolveParameters(_context cdktf.IR
 	return nil
 }
 
-func (j *jsiiProxy_WarehouseTagList) validateSetInternalValueParameters(val interface{}) error {
+func (j *jsiiProxy_MaskingPolicySignatureColumnList) validateSetInternalValueParameters(val interface{}) error {
 	switch val.(type) {
 	case cdktf.IResolvable:
 		// ok
-	case *[]*WarehouseTag:
-		val := val.(*[]*WarehouseTag)
+	case *[]*MaskingPolicySignatureColumn:
+		val := val.(*[]*MaskingPolicySignatureColumn)
 		for idx_97dfc6, v := range *val {
 			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter val[%#v]", idx_97dfc6) }); err != nil {
 				return err
 			}
 		}
-	case []*WarehouseTag:
-		val_ := val.([]*WarehouseTag)
+	case []*MaskingPolicySignatureColumn:
+		val_ := val.([]*MaskingPolicySignatureColumn)
 		val := &val_
 		for idx_97dfc6, v := range *val {
 			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter val[%#v]", idx_97dfc6) }); err != nil {
@@ -47,14 +47,14 @@ func (j *jsiiProxy_WarehouseTagList) validateSetInternalValueParameters(val inte
 		}
 	default:
 		if !_jsii_.IsAnonymousProxy(val) {
-			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *[]*WarehouseTag; received %#v (a %T)", val, val)
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *[]*MaskingPolicySignatureColumn; received %#v (a %T)", val, val)
 		}
 	}
 
 	return nil
 }
 
-func (j *jsiiProxy_WarehouseTagList) validateSetTerraformAttributeParameters(val *string) error {
+func (j *jsiiProxy_MaskingPolicySignatureColumnList) validateSetTerraformAttributeParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -62,7 +62,7 @@ func (j *jsiiProxy_WarehouseTagList) validateSetTerraformAttributeParameters(val
 	return nil
 }
 
-func (j *jsiiProxy_WarehouseTagList) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+func (j *jsiiProxy_MaskingPolicySignatureColumnList) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -70,7 +70,7 @@ func (j *jsiiProxy_WarehouseTagList) validateSetTerraformResourceParameters(val 
 	return nil
 }
 
-func (j *jsiiProxy_WarehouseTagList) validateSetWrapsSetParameters(val *bool) error {
+func (j *jsiiProxy_MaskingPolicySignatureColumnList) validateSetWrapsSetParameters(val *bool) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -78,7 +78,7 @@ func (j *jsiiProxy_WarehouseTagList) validateSetWrapsSetParameters(val *bool) er
 	return nil
 }
 
-func validateNewWarehouseTagListParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) error {
+func validateNewMaskingPolicySignatureColumnListParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) error {
 	if terraformResource == nil {
 		return fmt.Errorf("parameter terraformResource is required, but nil was provided")
 	}

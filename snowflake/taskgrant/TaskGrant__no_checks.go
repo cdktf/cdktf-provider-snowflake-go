@@ -88,6 +88,10 @@ func (j *jsiiProxy_TaskGrant) validateSetLifecycleParameters(val *cdktf.Terrafor
 	return nil
 }
 
+func (j *jsiiProxy_TaskGrant) validateSetOnAllParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_TaskGrant) validateSetOnFutureParameters(val interface{}) error {
 	return nil
 }
@@ -97,6 +101,10 @@ func (j *jsiiProxy_TaskGrant) validateSetPrivilegeParameters(val *string) error 
 }
 
 func (j *jsiiProxy_TaskGrant) validateSetProvisionersParameters(val *[]interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_TaskGrant) validateSetRevertOwnershipToRoleNameParameters(val *string) error {
 	return nil
 }
 

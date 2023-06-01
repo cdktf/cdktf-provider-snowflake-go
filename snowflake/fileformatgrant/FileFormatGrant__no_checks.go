@@ -92,6 +92,10 @@ func (j *jsiiProxy_FileFormatGrant) validateSetLifecycleParameters(val *cdktf.Te
 	return nil
 }
 
+func (j *jsiiProxy_FileFormatGrant) validateSetOnAllParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_FileFormatGrant) validateSetOnFutureParameters(val interface{}) error {
 	return nil
 }
@@ -101,6 +105,10 @@ func (j *jsiiProxy_FileFormatGrant) validateSetPrivilegeParameters(val *string) 
 }
 
 func (j *jsiiProxy_FileFormatGrant) validateSetProvisionersParameters(val *[]interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_FileFormatGrant) validateSetRevertOwnershipToRoleNameParameters(val *string) error {
 	return nil
 }
 

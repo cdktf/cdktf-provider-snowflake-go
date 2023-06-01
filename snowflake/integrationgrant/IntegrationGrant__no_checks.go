@@ -96,6 +96,10 @@ func (j *jsiiProxy_IntegrationGrant) validateSetProvisionersParameters(val *[]in
 	return nil
 }
 
+func (j *jsiiProxy_IntegrationGrant) validateSetRevertOwnershipToRoleNameParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_IntegrationGrant) validateSetRolesParameters(val *[]*string) error {
 	return nil
 }

@@ -1,14 +1,14 @@
-package warehouse
+package datasnowflakealerts
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
 
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/warehouse/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/datasnowflakealerts/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-type WarehouseTagList interface {
+type DataSnowflakeAlertsAlertsList interface {
 	cdktf.ComplexList
 	// The creation stack of this resolvable which will be appended to errors thrown during resolution.
 	//
@@ -17,8 +17,6 @@ type WarehouseTagList interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() interface{}
-	SetInternalValue(val interface{})
 	// The attribute on the parent resource this class is referencing.
 	TerraformAttribute() *string
 	SetTerraformAttribute(val *string)
@@ -30,7 +28,7 @@ type WarehouseTagList interface {
 	SetWrapsSet(val *bool)
 	// Experimental.
 	ComputeFqn() *string
-	Get(index *float64) WarehouseTagOutputReference
+	Get(index *float64) DataSnowflakeAlertsAlertsOutputReference
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -41,12 +39,12 @@ type WarehouseTagList interface {
 	ToString() *string
 }
 
-// The jsii proxy struct for WarehouseTagList
-type jsiiProxy_WarehouseTagList struct {
+// The jsii proxy struct for DataSnowflakeAlertsAlertsList
+type jsiiProxy_DataSnowflakeAlertsAlertsList struct {
 	internal.Type__cdktfComplexList
 }
 
-func (j *jsiiProxy_WarehouseTagList) CreationStack() *[]*string {
+func (j *jsiiProxy_DataSnowflakeAlertsAlertsList) CreationStack() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
@@ -56,7 +54,7 @@ func (j *jsiiProxy_WarehouseTagList) CreationStack() *[]*string {
 	return returns
 }
 
-func (j *jsiiProxy_WarehouseTagList) Fqn() *string {
+func (j *jsiiProxy_DataSnowflakeAlertsAlertsList) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -66,17 +64,7 @@ func (j *jsiiProxy_WarehouseTagList) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_WarehouseTagList) InternalValue() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"internalValue",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_WarehouseTagList) TerraformAttribute() *string {
+func (j *jsiiProxy_DataSnowflakeAlertsAlertsList) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -86,7 +74,7 @@ func (j *jsiiProxy_WarehouseTagList) TerraformAttribute() *string {
 	return returns
 }
 
-func (j *jsiiProxy_WarehouseTagList) TerraformResource() cdktf.IInterpolatingParent {
+func (j *jsiiProxy_DataSnowflakeAlertsAlertsList) TerraformResource() cdktf.IInterpolatingParent {
 	var returns cdktf.IInterpolatingParent
 	_jsii_.Get(
 		j,
@@ -96,7 +84,7 @@ func (j *jsiiProxy_WarehouseTagList) TerraformResource() cdktf.IInterpolatingPar
 	return returns
 }
 
-func (j *jsiiProxy_WarehouseTagList) WrapsSet() *bool {
+func (j *jsiiProxy_DataSnowflakeAlertsAlertsList) WrapsSet() *bool {
 	var returns *bool
 	_jsii_.Get(
 		j,
@@ -107,16 +95,16 @@ func (j *jsiiProxy_WarehouseTagList) WrapsSet() *bool {
 }
 
 
-func NewWarehouseTagList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WarehouseTagList {
+func NewDataSnowflakeAlertsAlertsList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataSnowflakeAlertsAlertsList {
 	_init_.Initialize()
 
-	if err := validateNewWarehouseTagListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+	if err := validateNewDataSnowflakeAlertsAlertsListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
 		panic(err)
 	}
-	j := jsiiProxy_WarehouseTagList{}
+	j := jsiiProxy_DataSnowflakeAlertsAlertsList{}
 
 	_jsii_.Create(
-		"@cdktf/provider-snowflake.warehouse.WarehouseTagList",
+		"@cdktf/provider-snowflake.dataSnowflakeAlerts.DataSnowflakeAlertsAlertsList",
 		[]interface{}{terraformResource, terraformAttribute, wrapsSet},
 		&j,
 	)
@@ -124,28 +112,17 @@ func NewWarehouseTagList(terraformResource cdktf.IInterpolatingParent, terraform
 	return &j
 }
 
-func NewWarehouseTagList_Override(w WarehouseTagList, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) {
+func NewDataSnowflakeAlertsAlertsList_Override(d DataSnowflakeAlertsAlertsList, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@cdktf/provider-snowflake.warehouse.WarehouseTagList",
+		"@cdktf/provider-snowflake.dataSnowflakeAlerts.DataSnowflakeAlertsAlertsList",
 		[]interface{}{terraformResource, terraformAttribute, wrapsSet},
-		w,
+		d,
 	)
 }
 
-func (j *jsiiProxy_WarehouseTagList)SetInternalValue(val interface{}) {
-	if err := j.validateSetInternalValueParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"internalValue",
-		val,
-	)
-}
-
-func (j *jsiiProxy_WarehouseTagList)SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_DataSnowflakeAlertsAlertsList)SetTerraformAttribute(val *string) {
 	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
 		panic(err)
 	}
@@ -156,7 +133,7 @@ func (j *jsiiProxy_WarehouseTagList)SetTerraformAttribute(val *string) {
 	)
 }
 
-func (j *jsiiProxy_WarehouseTagList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_DataSnowflakeAlertsAlertsList)SetTerraformResource(val cdktf.IInterpolatingParent) {
 	if err := j.validateSetTerraformResourceParameters(val); err != nil {
 		panic(err)
 	}
@@ -167,7 +144,7 @@ func (j *jsiiProxy_WarehouseTagList)SetTerraformResource(val cdktf.IInterpolatin
 	)
 }
 
-func (j *jsiiProxy_WarehouseTagList)SetWrapsSet(val *bool) {
+func (j *jsiiProxy_DataSnowflakeAlertsAlertsList)SetWrapsSet(val *bool) {
 	if err := j.validateSetWrapsSetParameters(val); err != nil {
 		panic(err)
 	}
@@ -178,11 +155,11 @@ func (j *jsiiProxy_WarehouseTagList)SetWrapsSet(val *bool) {
 	)
 }
 
-func (w *jsiiProxy_WarehouseTagList) ComputeFqn() *string {
+func (d *jsiiProxy_DataSnowflakeAlertsAlertsList) ComputeFqn() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		w,
+		d,
 		"computeFqn",
 		nil, // no parameters
 		&returns,
@@ -191,14 +168,14 @@ func (w *jsiiProxy_WarehouseTagList) ComputeFqn() *string {
 	return returns
 }
 
-func (w *jsiiProxy_WarehouseTagList) Get(index *float64) WarehouseTagOutputReference {
-	if err := w.validateGetParameters(index); err != nil {
+func (d *jsiiProxy_DataSnowflakeAlertsAlertsList) Get(index *float64) DataSnowflakeAlertsAlertsOutputReference {
+	if err := d.validateGetParameters(index); err != nil {
 		panic(err)
 	}
-	var returns WarehouseTagOutputReference
+	var returns DataSnowflakeAlertsAlertsOutputReference
 
 	_jsii_.Invoke(
-		w,
+		d,
 		"get",
 		[]interface{}{index},
 		&returns,
@@ -207,14 +184,14 @@ func (w *jsiiProxy_WarehouseTagList) Get(index *float64) WarehouseTagOutputRefer
 	return returns
 }
 
-func (w *jsiiProxy_WarehouseTagList) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := w.validateResolveParameters(_context); err != nil {
+func (d *jsiiProxy_DataSnowflakeAlertsAlertsList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := d.validateResolveParameters(_context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
 
 	_jsii_.Invoke(
-		w,
+		d,
 		"resolve",
 		[]interface{}{_context},
 		&returns,
@@ -223,11 +200,11 @@ func (w *jsiiProxy_WarehouseTagList) Resolve(_context cdktf.IResolveContext) int
 	return returns
 }
 
-func (w *jsiiProxy_WarehouseTagList) ToString() *string {
+func (d *jsiiProxy_DataSnowflakeAlertsAlertsList) ToString() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		w,
+		d,
 		"toString",
 		nil, // no parameters
 		&returns,

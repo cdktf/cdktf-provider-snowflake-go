@@ -92,6 +92,10 @@ func (j *jsiiProxy_ExternalTableGrant) validateSetLifecycleParameters(val *cdktf
 	return nil
 }
 
+func (j *jsiiProxy_ExternalTableGrant) validateSetOnAllParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_ExternalTableGrant) validateSetOnFutureParameters(val interface{}) error {
 	return nil
 }
@@ -101,6 +105,10 @@ func (j *jsiiProxy_ExternalTableGrant) validateSetPrivilegeParameters(val *strin
 }
 
 func (j *jsiiProxy_ExternalTableGrant) validateSetProvisionersParameters(val *[]interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_ExternalTableGrant) validateSetRevertOwnershipToRoleNameParameters(val *string) error {
 	return nil
 }
 

@@ -104,6 +104,10 @@ func (j *jsiiProxy_PipeGrant) validateSetProvisionersParameters(val *[]interface
 	return nil
 }
 
+func (j *jsiiProxy_PipeGrant) validateSetRevertOwnershipToRoleNameParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_PipeGrant) validateSetRolesParameters(val *[]*string) error {
 	return nil
 }

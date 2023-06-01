@@ -1,6 +1,6 @@
 //go:build !no_runtime_type_checking
 
-package warehouse
+package maskingpolicy
 
 import (
 	"fmt"
@@ -10,7 +10,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-func (w *jsiiProxy_WarehouseTagOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+func (m *jsiiProxy_MaskingPolicySignatureColumnOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -18,7 +18,7 @@ func (w *jsiiProxy_WarehouseTagOutputReference) validateGetAnyMapAttributeParame
 	return nil
 }
 
-func (w *jsiiProxy_WarehouseTagOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+func (m *jsiiProxy_MaskingPolicySignatureColumnOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -26,7 +26,7 @@ func (w *jsiiProxy_WarehouseTagOutputReference) validateGetBooleanAttributeParam
 	return nil
 }
 
-func (w *jsiiProxy_WarehouseTagOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+func (m *jsiiProxy_MaskingPolicySignatureColumnOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -34,7 +34,7 @@ func (w *jsiiProxy_WarehouseTagOutputReference) validateGetBooleanMapAttributePa
 	return nil
 }
 
-func (w *jsiiProxy_WarehouseTagOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+func (m *jsiiProxy_MaskingPolicySignatureColumnOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -42,7 +42,7 @@ func (w *jsiiProxy_WarehouseTagOutputReference) validateGetListAttributeParamete
 	return nil
 }
 
-func (w *jsiiProxy_WarehouseTagOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+func (m *jsiiProxy_MaskingPolicySignatureColumnOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -50,7 +50,7 @@ func (w *jsiiProxy_WarehouseTagOutputReference) validateGetNumberAttributeParame
 	return nil
 }
 
-func (w *jsiiProxy_WarehouseTagOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+func (m *jsiiProxy_MaskingPolicySignatureColumnOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -58,7 +58,7 @@ func (w *jsiiProxy_WarehouseTagOutputReference) validateGetNumberListAttributePa
 	return nil
 }
 
-func (w *jsiiProxy_WarehouseTagOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+func (m *jsiiProxy_MaskingPolicySignatureColumnOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -66,7 +66,7 @@ func (w *jsiiProxy_WarehouseTagOutputReference) validateGetNumberMapAttributePar
 	return nil
 }
 
-func (w *jsiiProxy_WarehouseTagOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+func (m *jsiiProxy_MaskingPolicySignatureColumnOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -74,7 +74,7 @@ func (w *jsiiProxy_WarehouseTagOutputReference) validateGetStringAttributeParame
 	return nil
 }
 
-func (w *jsiiProxy_WarehouseTagOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+func (m *jsiiProxy_MaskingPolicySignatureColumnOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -82,7 +82,7 @@ func (w *jsiiProxy_WarehouseTagOutputReference) validateGetStringMapAttributePar
 	return nil
 }
 
-func (w *jsiiProxy_WarehouseTagOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (m *jsiiProxy_MaskingPolicySignatureColumnOutputReference) validateInterpolationForAttributeParameters(property *string) error {
 	if property == nil {
 		return fmt.Errorf("parameter property is required, but nil was provided")
 	}
@@ -90,7 +90,7 @@ func (w *jsiiProxy_WarehouseTagOutputReference) validateInterpolationForAttribut
 	return nil
 }
 
-func (w *jsiiProxy_WarehouseTagOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_MaskingPolicySignatureColumnOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	if _context == nil {
 		return fmt.Errorf("parameter _context is required, but nil was provided")
 	}
@@ -98,7 +98,7 @@ func (w *jsiiProxy_WarehouseTagOutputReference) validateResolveParameters(_conte
 	return nil
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+func (j *jsiiProxy_MaskingPolicySignatureColumnOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
 	switch val.(type) {
 	case *string:
 		// ok
@@ -155,7 +155,7 @@ func (j *jsiiProxy_WarehouseTagOutputReference) validateSetComplexObjectIndexPar
 	return nil
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+func (j *jsiiProxy_MaskingPolicySignatureColumnOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -163,23 +163,15 @@ func (j *jsiiProxy_WarehouseTagOutputReference) validateSetComplexObjectIsFromSe
 	return nil
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) validateSetDatabaseParameters(val *string) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
-func (j *jsiiProxy_WarehouseTagOutputReference) validateSetInternalValueParameters(val interface{}) error {
+func (j *jsiiProxy_MaskingPolicySignatureColumnOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	switch val.(type) {
-	case *WarehouseTag:
-		val := val.(*WarehouseTag)
+	case *MaskingPolicySignatureColumn:
+		val := val.(*MaskingPolicySignatureColumn)
 		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 			return err
 		}
-	case WarehouseTag:
-		val_ := val.(WarehouseTag)
+	case MaskingPolicySignatureColumn:
+		val_ := val.(MaskingPolicySignatureColumn)
 		val := &val_
 		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 			return err
@@ -188,14 +180,14 @@ func (j *jsiiProxy_WarehouseTagOutputReference) validateSetInternalValueParamete
 		// ok
 	default:
 		if !_jsii_.IsAnonymousProxy(val) {
-			return fmt.Errorf("parameter val must be one of the allowed types: *WarehouseTag, cdktf.IResolvable; received %#v (a %T)", val, val)
+			return fmt.Errorf("parameter val must be one of the allowed types: *MaskingPolicySignatureColumn, cdktf.IResolvable; received %#v (a %T)", val, val)
 		}
 	}
 
 	return nil
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) validateSetNameParameters(val *string) error {
+func (j *jsiiProxy_MaskingPolicySignatureColumnOutputReference) validateSetNameParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -203,7 +195,7 @@ func (j *jsiiProxy_WarehouseTagOutputReference) validateSetNameParameters(val *s
 	return nil
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) validateSetSchemaParameters(val *string) error {
+func (j *jsiiProxy_MaskingPolicySignatureColumnOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -211,7 +203,7 @@ func (j *jsiiProxy_WarehouseTagOutputReference) validateSetSchemaParameters(val 
 	return nil
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+func (j *jsiiProxy_MaskingPolicySignatureColumnOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -219,7 +211,7 @@ func (j *jsiiProxy_WarehouseTagOutputReference) validateSetTerraformAttributePar
 	return nil
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+func (j *jsiiProxy_MaskingPolicySignatureColumnOutputReference) validateSetTypeParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -227,15 +219,7 @@ func (j *jsiiProxy_WarehouseTagOutputReference) validateSetTerraformResourcePara
 	return nil
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) validateSetValueParameters(val *string) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
-func validateNewWarehouseTagOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
+func validateNewMaskingPolicySignatureColumnOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
 	if terraformResource == nil {
 		return fmt.Errorf("parameter terraformResource is required, but nil was provided")
 	}

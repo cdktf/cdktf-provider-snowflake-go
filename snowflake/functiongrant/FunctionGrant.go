@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/function_grant snowflake_function_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/function_grant snowflake_function_grant}.
 type FunctionGrant interface {
 	cdktf.TerraformResource
 	ArgumentDataTypes() *[]*string
@@ -57,6 +57,9 @@ type FunctionGrant interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
+	OnAll() interface{}
+	SetOnAll(val interface{})
+	OnAllInput() interface{}
 	OnFuture() interface{}
 	SetOnFuture(val interface{})
 	OnFutureInput() interface{}
@@ -73,6 +76,9 @@ type FunctionGrant interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	RevertOwnershipToRoleName() *string
+	SetRevertOwnershipToRoleName(val *string)
+	RevertOwnershipToRoleNameInput() *string
 	Roles() *[]*string
 	SetRoles(val *[]*string)
 	RolesInput() *[]*string
@@ -120,11 +126,13 @@ type FunctionGrant interface {
 	ResetEnableMultipleGrants()
 	ResetFunctionName()
 	ResetId()
+	ResetOnAll()
 	ResetOnFuture()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPrivilege()
+	ResetRevertOwnershipToRoleName()
 	ResetSchemaName()
 	ResetShares()
 	ResetWithGrantOption()
@@ -343,6 +351,26 @@ func (j *jsiiProxy_FunctionGrant) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_FunctionGrant) OnAll() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onAll",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_FunctionGrant) OnAllInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onAllInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_FunctionGrant) OnFuture() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -408,6 +436,26 @@ func (j *jsiiProxy_FunctionGrant) RawOverrides() interface{} {
 	_jsii_.Get(
 		j,
 		"rawOverrides",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_FunctionGrant) RevertOwnershipToRoleName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"revertOwnershipToRoleName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_FunctionGrant) RevertOwnershipToRoleNameInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"revertOwnershipToRoleNameInput",
 		&returns,
 	)
 	return returns
@@ -524,7 +572,7 @@ func (j *jsiiProxy_FunctionGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/function_grant snowflake_function_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/function_grant snowflake_function_grant} Resource.
 func NewFunctionGrant(scope constructs.Construct, id *string, config *FunctionGrantConfig) FunctionGrant {
 	_init_.Initialize()
 
@@ -542,7 +590,7 @@ func NewFunctionGrant(scope constructs.Construct, id *string, config *FunctionGr
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/function_grant snowflake_function_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/function_grant snowflake_function_grant} Resource.
 func NewFunctionGrant_Override(f FunctionGrant, scope constructs.Construct, id *string, config *FunctionGrantConfig) {
 	_init_.Initialize()
 
@@ -657,6 +705,17 @@ func (j *jsiiProxy_FunctionGrant)SetLifecycle(val *cdktf.TerraformResourceLifecy
 	)
 }
 
+func (j *jsiiProxy_FunctionGrant)SetOnAll(val interface{}) {
+	if err := j.validateSetOnAllParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"onAll",
+		val,
+	)
+}
+
 func (j *jsiiProxy_FunctionGrant)SetOnFuture(val interface{}) {
 	if err := j.validateSetOnFutureParameters(val); err != nil {
 		panic(err)
@@ -694,6 +753,17 @@ func (j *jsiiProxy_FunctionGrant)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_FunctionGrant)SetRevertOwnershipToRoleName(val *string) {
+	if err := j.validateSetRevertOwnershipToRoleNameParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"revertOwnershipToRoleName",
 		val,
 	)
 }
@@ -1040,6 +1110,14 @@ func (f *jsiiProxy_FunctionGrant) ResetId() {
 	)
 }
 
+func (f *jsiiProxy_FunctionGrant) ResetOnAll() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetOnAll",
+		nil, // no parameters
+	)
+}
+
 func (f *jsiiProxy_FunctionGrant) ResetOnFuture() {
 	_jsii_.InvokeVoid(
 		f,
@@ -1060,6 +1138,14 @@ func (f *jsiiProxy_FunctionGrant) ResetPrivilege() {
 	_jsii_.InvokeVoid(
 		f,
 		"resetPrivilege",
+		nil, // no parameters
+	)
+}
+
+func (f *jsiiProxy_FunctionGrant) ResetRevertOwnershipToRoleName() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetRevertOwnershipToRoleName",
 		nil, // no parameters
 	)
 }

@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/stage_grant snowflake_stage_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/stage_grant snowflake_stage_grant}.
 type StageGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -70,6 +70,9 @@ type StageGrant interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	RevertOwnershipToRoleName() *string
+	SetRevertOwnershipToRoleName(val *string)
+	RevertOwnershipToRoleNameInput() *string
 	Roles() *[]*string
 	SetRoles(val *[]*string)
 	RolesInput() *[]*string
@@ -121,6 +124,7 @@ type StageGrant interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPrivilege()
+	ResetRevertOwnershipToRoleName()
 	ResetSchemaName()
 	ResetStageName()
 	ResetWithGrantOption()
@@ -389,6 +393,26 @@ func (j *jsiiProxy_StageGrant) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_StageGrant) RevertOwnershipToRoleName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"revertOwnershipToRoleName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_StageGrant) RevertOwnershipToRoleNameInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"revertOwnershipToRoleNameInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_StageGrant) Roles() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -500,7 +524,7 @@ func (j *jsiiProxy_StageGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/stage_grant snowflake_stage_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/stage_grant snowflake_stage_grant} Resource.
 func NewStageGrant(scope constructs.Construct, id *string, config *StageGrantConfig) StageGrant {
 	_init_.Initialize()
 
@@ -518,7 +542,7 @@ func NewStageGrant(scope constructs.Construct, id *string, config *StageGrantCon
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/stage_grant snowflake_stage_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/stage_grant snowflake_stage_grant} Resource.
 func NewStageGrant_Override(s StageGrant, scope constructs.Construct, id *string, config *StageGrantConfig) {
 	_init_.Initialize()
 
@@ -659,6 +683,17 @@ func (j *jsiiProxy_StageGrant)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_StageGrant)SetRevertOwnershipToRoleName(val *string) {
+	if err := j.validateSetRevertOwnershipToRoleNameParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"revertOwnershipToRoleName",
 		val,
 	)
 }
@@ -1017,6 +1052,14 @@ func (s *jsiiProxy_StageGrant) ResetPrivilege() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetPrivilege",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_StageGrant) ResetRevertOwnershipToRoleName() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetRevertOwnershipToRoleName",
 		nil, // no parameters
 	)
 }

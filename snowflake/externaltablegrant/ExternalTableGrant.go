@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/external_table_grant snowflake_external_table_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/external_table_grant snowflake_external_table_grant}.
 type ExternalTableGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -54,6 +54,9 @@ type ExternalTableGrant interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
+	OnAll() interface{}
+	SetOnAll(val interface{})
+	OnAllInput() interface{}
 	OnFuture() interface{}
 	SetOnFuture(val interface{})
 	OnFutureInput() interface{}
@@ -70,6 +73,9 @@ type ExternalTableGrant interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	RevertOwnershipToRoleName() *string
+	SetRevertOwnershipToRoleName(val *string)
+	RevertOwnershipToRoleNameInput() *string
 	Roles() *[]*string
 	SetRoles(val *[]*string)
 	RolesInput() *[]*string
@@ -116,11 +122,13 @@ type ExternalTableGrant interface {
 	ResetEnableMultipleGrants()
 	ResetExternalTableName()
 	ResetId()
+	ResetOnAll()
 	ResetOnFuture()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPrivilege()
+	ResetRevertOwnershipToRoleName()
 	ResetSchemaName()
 	ResetShares()
 	ResetWithGrantOption()
@@ -319,6 +327,26 @@ func (j *jsiiProxy_ExternalTableGrant) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_ExternalTableGrant) OnAll() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onAll",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalTableGrant) OnAllInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onAllInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ExternalTableGrant) OnFuture() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -384,6 +412,26 @@ func (j *jsiiProxy_ExternalTableGrant) RawOverrides() interface{} {
 	_jsii_.Get(
 		j,
 		"rawOverrides",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalTableGrant) RevertOwnershipToRoleName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"revertOwnershipToRoleName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalTableGrant) RevertOwnershipToRoleNameInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"revertOwnershipToRoleNameInput",
 		&returns,
 	)
 	return returns
@@ -500,7 +548,7 @@ func (j *jsiiProxy_ExternalTableGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/external_table_grant snowflake_external_table_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/external_table_grant snowflake_external_table_grant} Resource.
 func NewExternalTableGrant(scope constructs.Construct, id *string, config *ExternalTableGrantConfig) ExternalTableGrant {
 	_init_.Initialize()
 
@@ -518,7 +566,7 @@ func NewExternalTableGrant(scope constructs.Construct, id *string, config *Exter
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/external_table_grant snowflake_external_table_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/external_table_grant snowflake_external_table_grant} Resource.
 func NewExternalTableGrant_Override(e ExternalTableGrant, scope constructs.Construct, id *string, config *ExternalTableGrantConfig) {
 	_init_.Initialize()
 
@@ -622,6 +670,17 @@ func (j *jsiiProxy_ExternalTableGrant)SetLifecycle(val *cdktf.TerraformResourceL
 	)
 }
 
+func (j *jsiiProxy_ExternalTableGrant)SetOnAll(val interface{}) {
+	if err := j.validateSetOnAllParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"onAll",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ExternalTableGrant)SetOnFuture(val interface{}) {
 	if err := j.validateSetOnFutureParameters(val); err != nil {
 		panic(err)
@@ -659,6 +718,17 @@ func (j *jsiiProxy_ExternalTableGrant)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ExternalTableGrant)SetRevertOwnershipToRoleName(val *string) {
+	if err := j.validateSetRevertOwnershipToRoleNameParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"revertOwnershipToRoleName",
 		val,
 	)
 }
@@ -997,6 +1067,14 @@ func (e *jsiiProxy_ExternalTableGrant) ResetId() {
 	)
 }
 
+func (e *jsiiProxy_ExternalTableGrant) ResetOnAll() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetOnAll",
+		nil, // no parameters
+	)
+}
+
 func (e *jsiiProxy_ExternalTableGrant) ResetOnFuture() {
 	_jsii_.InvokeVoid(
 		e,
@@ -1017,6 +1095,14 @@ func (e *jsiiProxy_ExternalTableGrant) ResetPrivilege() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetPrivilege",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_ExternalTableGrant) ResetRevertOwnershipToRoleName() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetRevertOwnershipToRoleName",
 		nil, // no parameters
 	)
 }

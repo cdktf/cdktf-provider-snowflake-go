@@ -323,6 +323,14 @@ func (j *jsiiProxy_RowAccessPolicyGrant) validateSetProvisionersParameters(val *
 	return nil
 }
 
+func (j *jsiiProxy_RowAccessPolicyGrant) validateSetRevertOwnershipToRoleNameParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_RowAccessPolicyGrant) validateSetRolesParameters(val *[]*string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

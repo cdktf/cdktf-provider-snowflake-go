@@ -104,6 +104,10 @@ func (j *jsiiProxy_StageGrant) validateSetProvisionersParameters(val *[]interfac
 	return nil
 }
 
+func (j *jsiiProxy_StageGrant) validateSetRevertOwnershipToRoleNameParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_StageGrant) validateSetRolesParameters(val *[]*string) error {
 	return nil
 }

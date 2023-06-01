@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/table_grant snowflake_table_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/table_grant snowflake_table_grant}.
 type TableGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -70,6 +70,9 @@ type TableGrant interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	RevertOwnershipToRoleName() *string
+	SetRevertOwnershipToRoleName(val *string)
+	RevertOwnershipToRoleNameInput() *string
 	Roles() *[]*string
 	SetRoles(val *[]*string)
 	RolesInput() *[]*string
@@ -124,6 +127,7 @@ type TableGrant interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPrivilege()
+	ResetRevertOwnershipToRoleName()
 	ResetRoles()
 	ResetSchemaName()
 	ResetShares()
@@ -394,6 +398,26 @@ func (j *jsiiProxy_TableGrant) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_TableGrant) RevertOwnershipToRoleName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"revertOwnershipToRoleName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TableGrant) RevertOwnershipToRoleNameInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"revertOwnershipToRoleNameInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_TableGrant) Roles() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -525,7 +549,7 @@ func (j *jsiiProxy_TableGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/table_grant snowflake_table_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/table_grant snowflake_table_grant} Resource.
 func NewTableGrant(scope constructs.Construct, id *string, config *TableGrantConfig) TableGrant {
 	_init_.Initialize()
 
@@ -543,7 +567,7 @@ func NewTableGrant(scope constructs.Construct, id *string, config *TableGrantCon
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/table_grant snowflake_table_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/table_grant snowflake_table_grant} Resource.
 func NewTableGrant_Override(t TableGrant, scope constructs.Construct, id *string, config *TableGrantConfig) {
 	_init_.Initialize()
 
@@ -684,6 +708,17 @@ func (j *jsiiProxy_TableGrant)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_TableGrant)SetRevertOwnershipToRoleName(val *string) {
+	if err := j.validateSetRevertOwnershipToRoleNameParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"revertOwnershipToRoleName",
 		val,
 	)
 }
@@ -1053,6 +1088,14 @@ func (t *jsiiProxy_TableGrant) ResetPrivilege() {
 	_jsii_.InvokeVoid(
 		t,
 		"resetPrivilege",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TableGrant) ResetRevertOwnershipToRoleName() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetRevertOwnershipToRoleName",
 		nil, // no parameters
 	)
 }

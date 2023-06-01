@@ -108,6 +108,10 @@ func (j *jsiiProxy_MaterializedViewGrant) validateSetProvisionersParameters(val 
 	return nil
 }
 
+func (j *jsiiProxy_MaterializedViewGrant) validateSetRevertOwnershipToRoleNameParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_MaterializedViewGrant) validateSetRolesParameters(val *[]*string) error {
 	return nil
 }

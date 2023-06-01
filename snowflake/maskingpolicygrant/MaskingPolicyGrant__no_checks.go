@@ -100,6 +100,10 @@ func (j *jsiiProxy_MaskingPolicyGrant) validateSetProvisionersParameters(val *[]
 	return nil
 }
 
+func (j *jsiiProxy_MaskingPolicyGrant) validateSetRevertOwnershipToRoleNameParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_MaskingPolicyGrant) validateSetRolesParameters(val *[]*string) error {
 	return nil
 }

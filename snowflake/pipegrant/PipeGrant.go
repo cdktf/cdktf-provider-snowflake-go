@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/pipe_grant snowflake_pipe_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/pipe_grant snowflake_pipe_grant}.
 type PipeGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -70,6 +70,9 @@ type PipeGrant interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	RevertOwnershipToRoleName() *string
+	SetRevertOwnershipToRoleName(val *string)
+	RevertOwnershipToRoleNameInput() *string
 	Roles() *[]*string
 	SetRoles(val *[]*string)
 	RolesInput() *[]*string
@@ -118,6 +121,7 @@ type PipeGrant interface {
 	ResetOverrideLogicalId()
 	ResetPipeName()
 	ResetPrivilege()
+	ResetRevertOwnershipToRoleName()
 	ResetRoles()
 	ResetSchemaName()
 	ResetWithGrantOption()
@@ -386,6 +390,26 @@ func (j *jsiiProxy_PipeGrant) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_PipeGrant) RevertOwnershipToRoleName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"revertOwnershipToRoleName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_PipeGrant) RevertOwnershipToRoleNameInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"revertOwnershipToRoleNameInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_PipeGrant) Roles() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -477,7 +501,7 @@ func (j *jsiiProxy_PipeGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/pipe_grant snowflake_pipe_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/pipe_grant snowflake_pipe_grant} Resource.
 func NewPipeGrant(scope constructs.Construct, id *string, config *PipeGrantConfig) PipeGrant {
 	_init_.Initialize()
 
@@ -495,7 +519,7 @@ func NewPipeGrant(scope constructs.Construct, id *string, config *PipeGrantConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/pipe_grant snowflake_pipe_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/pipe_grant snowflake_pipe_grant} Resource.
 func NewPipeGrant_Override(p PipeGrant, scope constructs.Construct, id *string, config *PipeGrantConfig) {
 	_init_.Initialize()
 
@@ -636,6 +660,17 @@ func (j *jsiiProxy_PipeGrant)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_PipeGrant)SetRevertOwnershipToRoleName(val *string) {
+	if err := j.validateSetRevertOwnershipToRoleNameParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"revertOwnershipToRoleName",
 		val,
 	)
 }
@@ -983,6 +1018,14 @@ func (p *jsiiProxy_PipeGrant) ResetPrivilege() {
 	_jsii_.InvokeVoid(
 		p,
 		"resetPrivilege",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PipeGrant) ResetRevertOwnershipToRoleName() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetRevertOwnershipToRoleName",
 		nil, // no parameters
 	)
 }

@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/file_format_grant snowflake_file_format_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/file_format_grant snowflake_file_format_grant}.
 type FileFormatGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -54,6 +54,9 @@ type FileFormatGrant interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
+	OnAll() interface{}
+	SetOnAll(val interface{})
+	OnAllInput() interface{}
 	OnFuture() interface{}
 	SetOnFuture(val interface{})
 	OnFutureInput() interface{}
@@ -70,6 +73,9 @@ type FileFormatGrant interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	RevertOwnershipToRoleName() *string
+	SetRevertOwnershipToRoleName(val *string)
+	RevertOwnershipToRoleNameInput() *string
 	Roles() *[]*string
 	SetRoles(val *[]*string)
 	RolesInput() *[]*string
@@ -113,11 +119,13 @@ type FileFormatGrant interface {
 	ResetEnableMultipleGrants()
 	ResetFileFormatName()
 	ResetId()
+	ResetOnAll()
 	ResetOnFuture()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPrivilege()
+	ResetRevertOwnershipToRoleName()
 	ResetSchemaName()
 	ResetWithGrantOption()
 	SynthesizeAttributes() *map[string]interface{}
@@ -315,6 +323,26 @@ func (j *jsiiProxy_FileFormatGrant) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_FileFormatGrant) OnAll() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onAll",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_FileFormatGrant) OnAllInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onAllInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_FileFormatGrant) OnFuture() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -380,6 +408,26 @@ func (j *jsiiProxy_FileFormatGrant) RawOverrides() interface{} {
 	_jsii_.Get(
 		j,
 		"rawOverrides",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_FileFormatGrant) RevertOwnershipToRoleName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"revertOwnershipToRoleName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_FileFormatGrant) RevertOwnershipToRoleNameInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"revertOwnershipToRoleNameInput",
 		&returns,
 	)
 	return returns
@@ -476,7 +524,7 @@ func (j *jsiiProxy_FileFormatGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/file_format_grant snowflake_file_format_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/file_format_grant snowflake_file_format_grant} Resource.
 func NewFileFormatGrant(scope constructs.Construct, id *string, config *FileFormatGrantConfig) FileFormatGrant {
 	_init_.Initialize()
 
@@ -494,7 +542,7 @@ func NewFileFormatGrant(scope constructs.Construct, id *string, config *FileForm
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/file_format_grant snowflake_file_format_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/file_format_grant snowflake_file_format_grant} Resource.
 func NewFileFormatGrant_Override(f FileFormatGrant, scope constructs.Construct, id *string, config *FileFormatGrantConfig) {
 	_init_.Initialize()
 
@@ -598,6 +646,17 @@ func (j *jsiiProxy_FileFormatGrant)SetLifecycle(val *cdktf.TerraformResourceLife
 	)
 }
 
+func (j *jsiiProxy_FileFormatGrant)SetOnAll(val interface{}) {
+	if err := j.validateSetOnAllParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"onAll",
+		val,
+	)
+}
+
 func (j *jsiiProxy_FileFormatGrant)SetOnFuture(val interface{}) {
 	if err := j.validateSetOnFutureParameters(val); err != nil {
 		panic(err)
@@ -635,6 +694,17 @@ func (j *jsiiProxy_FileFormatGrant)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_FileFormatGrant)SetRevertOwnershipToRoleName(val *string) {
+	if err := j.validateSetRevertOwnershipToRoleNameParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"revertOwnershipToRoleName",
 		val,
 	)
 }
@@ -962,6 +1032,14 @@ func (f *jsiiProxy_FileFormatGrant) ResetId() {
 	)
 }
 
+func (f *jsiiProxy_FileFormatGrant) ResetOnAll() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetOnAll",
+		nil, // no parameters
+	)
+}
+
 func (f *jsiiProxy_FileFormatGrant) ResetOnFuture() {
 	_jsii_.InvokeVoid(
 		f,
@@ -982,6 +1060,14 @@ func (f *jsiiProxy_FileFormatGrant) ResetPrivilege() {
 	_jsii_.InvokeVoid(
 		f,
 		"resetPrivilege",
+		nil, // no parameters
+	)
+}
+
+func (f *jsiiProxy_FileFormatGrant) ResetRevertOwnershipToRoleName() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetRevertOwnershipToRoleName",
 		nil, // no parameters
 	)
 }

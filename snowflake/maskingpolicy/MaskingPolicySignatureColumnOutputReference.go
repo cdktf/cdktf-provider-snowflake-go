@@ -1,14 +1,14 @@
-package warehouse
+package maskingpolicy
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
 
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/warehouse/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/maskingpolicy/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-type WarehouseTagOutputReference interface {
+type MaskingPolicySignatureColumnOutputReference interface {
 	cdktf.ComplexObject
 	// the index of the complex object in a list.
 	// Experimental.
@@ -25,9 +25,6 @@ type WarehouseTagOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
-	Database() *string
-	SetDatabase(val *string)
-	DatabaseInput() *string
 	// Experimental.
 	Fqn() *string
 	InternalValue() interface{}
@@ -35,9 +32,6 @@ type WarehouseTagOutputReference interface {
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
-	Schema() *string
-	SetSchema(val *string)
-	SchemaInput() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -46,9 +40,9 @@ type WarehouseTagOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
-	Value() *string
-	SetValue(val *string)
-	ValueInput() *string
+	Type() *string
+	SetType(val *string)
+	TypeInput() *string
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -73,8 +67,6 @@ type WarehouseTagOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
-	ResetDatabase()
-	ResetSchema()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -85,12 +77,12 @@ type WarehouseTagOutputReference interface {
 	ToString() *string
 }
 
-// The jsii proxy struct for WarehouseTagOutputReference
-type jsiiProxy_WarehouseTagOutputReference struct {
+// The jsii proxy struct for MaskingPolicySignatureColumnOutputReference
+type jsiiProxy_MaskingPolicySignatureColumnOutputReference struct {
 	internal.Type__cdktfComplexObject
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) ComplexObjectIndex() interface{} {
+func (j *jsiiProxy_MaskingPolicySignatureColumnOutputReference) ComplexObjectIndex() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
@@ -100,7 +92,7 @@ func (j *jsiiProxy_WarehouseTagOutputReference) ComplexObjectIndex() interface{}
 	return returns
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) ComplexObjectIsFromSet() *bool {
+func (j *jsiiProxy_MaskingPolicySignatureColumnOutputReference) ComplexObjectIsFromSet() *bool {
 	var returns *bool
 	_jsii_.Get(
 		j,
@@ -110,7 +102,7 @@ func (j *jsiiProxy_WarehouseTagOutputReference) ComplexObjectIsFromSet() *bool {
 	return returns
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) CreationStack() *[]*string {
+func (j *jsiiProxy_MaskingPolicySignatureColumnOutputReference) CreationStack() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
@@ -120,27 +112,7 @@ func (j *jsiiProxy_WarehouseTagOutputReference) CreationStack() *[]*string {
 	return returns
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) Database() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"database",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_WarehouseTagOutputReference) DatabaseInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"databaseInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_WarehouseTagOutputReference) Fqn() *string {
+func (j *jsiiProxy_MaskingPolicySignatureColumnOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -150,7 +122,7 @@ func (j *jsiiProxy_WarehouseTagOutputReference) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) InternalValue() interface{} {
+func (j *jsiiProxy_MaskingPolicySignatureColumnOutputReference) InternalValue() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
@@ -160,7 +132,7 @@ func (j *jsiiProxy_WarehouseTagOutputReference) InternalValue() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) Name() *string {
+func (j *jsiiProxy_MaskingPolicySignatureColumnOutputReference) Name() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -170,7 +142,7 @@ func (j *jsiiProxy_WarehouseTagOutputReference) Name() *string {
 	return returns
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) NameInput() *string {
+func (j *jsiiProxy_MaskingPolicySignatureColumnOutputReference) NameInput() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -180,27 +152,7 @@ func (j *jsiiProxy_WarehouseTagOutputReference) NameInput() *string {
 	return returns
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) Schema() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"schema",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_WarehouseTagOutputReference) SchemaInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"schemaInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_WarehouseTagOutputReference) TerraformAttribute() *string {
+func (j *jsiiProxy_MaskingPolicySignatureColumnOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -210,7 +162,7 @@ func (j *jsiiProxy_WarehouseTagOutputReference) TerraformAttribute() *string {
 	return returns
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) TerraformResource() cdktf.IInterpolatingParent {
+func (j *jsiiProxy_MaskingPolicySignatureColumnOutputReference) TerraformResource() cdktf.IInterpolatingParent {
 	var returns cdktf.IInterpolatingParent
 	_jsii_.Get(
 		j,
@@ -220,37 +172,37 @@ func (j *jsiiProxy_WarehouseTagOutputReference) TerraformResource() cdktf.IInter
 	return returns
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) Value() *string {
+func (j *jsiiProxy_MaskingPolicySignatureColumnOutputReference) Type() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
-		"value",
+		"type",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference) ValueInput() *string {
+func (j *jsiiProxy_MaskingPolicySignatureColumnOutputReference) TypeInput() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
-		"valueInput",
+		"typeInput",
 		&returns,
 	)
 	return returns
 }
 
 
-func NewWarehouseTagOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) WarehouseTagOutputReference {
+func NewMaskingPolicySignatureColumnOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) MaskingPolicySignatureColumnOutputReference {
 	_init_.Initialize()
 
-	if err := validateNewWarehouseTagOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
+	if err := validateNewMaskingPolicySignatureColumnOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
 		panic(err)
 	}
-	j := jsiiProxy_WarehouseTagOutputReference{}
+	j := jsiiProxy_MaskingPolicySignatureColumnOutputReference{}
 
 	_jsii_.Create(
-		"@cdktf/provider-snowflake.warehouse.WarehouseTagOutputReference",
+		"@cdktf/provider-snowflake.maskingPolicy.MaskingPolicySignatureColumnOutputReference",
 		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		&j,
 	)
@@ -258,17 +210,17 @@ func NewWarehouseTagOutputReference(terraformResource cdktf.IInterpolatingParent
 	return &j
 }
 
-func NewWarehouseTagOutputReference_Override(w WarehouseTagOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) {
+func NewMaskingPolicySignatureColumnOutputReference_Override(m MaskingPolicySignatureColumnOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@cdktf/provider-snowflake.warehouse.WarehouseTagOutputReference",
+		"@cdktf/provider-snowflake.maskingPolicy.MaskingPolicySignatureColumnOutputReference",
 		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
-		w,
+		m,
 	)
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference)SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_MaskingPolicySignatureColumnOutputReference)SetComplexObjectIndex(val interface{}) {
 	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
 		panic(err)
 	}
@@ -279,7 +231,7 @@ func (j *jsiiProxy_WarehouseTagOutputReference)SetComplexObjectIndex(val interfa
 	)
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference)SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_MaskingPolicySignatureColumnOutputReference)SetComplexObjectIsFromSet(val *bool) {
 	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
 		panic(err)
 	}
@@ -290,18 +242,7 @@ func (j *jsiiProxy_WarehouseTagOutputReference)SetComplexObjectIsFromSet(val *bo
 	)
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference)SetDatabase(val *string) {
-	if err := j.validateSetDatabaseParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"database",
-		val,
-	)
-}
-
-func (j *jsiiProxy_WarehouseTagOutputReference)SetInternalValue(val interface{}) {
+func (j *jsiiProxy_MaskingPolicySignatureColumnOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -312,7 +253,7 @@ func (j *jsiiProxy_WarehouseTagOutputReference)SetInternalValue(val interface{})
 	)
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference)SetName(val *string) {
+func (j *jsiiProxy_MaskingPolicySignatureColumnOutputReference)SetName(val *string) {
 	if err := j.validateSetNameParameters(val); err != nil {
 		panic(err)
 	}
@@ -323,18 +264,7 @@ func (j *jsiiProxy_WarehouseTagOutputReference)SetName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference)SetSchema(val *string) {
-	if err := j.validateSetSchemaParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"schema",
-		val,
-	)
-}
-
-func (j *jsiiProxy_WarehouseTagOutputReference)SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_MaskingPolicySignatureColumnOutputReference)SetTerraformAttribute(val *string) {
 	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
 		panic(err)
 	}
@@ -345,7 +275,7 @@ func (j *jsiiProxy_WarehouseTagOutputReference)SetTerraformAttribute(val *string
 	)
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_MaskingPolicySignatureColumnOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
 	if err := j.validateSetTerraformResourceParameters(val); err != nil {
 		panic(err)
 	}
@@ -356,22 +286,22 @@ func (j *jsiiProxy_WarehouseTagOutputReference)SetTerraformResource(val cdktf.II
 	)
 }
 
-func (j *jsiiProxy_WarehouseTagOutputReference)SetValue(val *string) {
-	if err := j.validateSetValueParameters(val); err != nil {
+func (j *jsiiProxy_MaskingPolicySignatureColumnOutputReference)SetType(val *string) {
+	if err := j.validateSetTypeParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
-		"value",
+		"type",
 		val,
 	)
 }
 
-func (w *jsiiProxy_WarehouseTagOutputReference) ComputeFqn() *string {
+func (m *jsiiProxy_MaskingPolicySignatureColumnOutputReference) ComputeFqn() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		w,
+		m,
 		"computeFqn",
 		nil, // no parameters
 		&returns,
@@ -380,14 +310,14 @@ func (w *jsiiProxy_WarehouseTagOutputReference) ComputeFqn() *string {
 	return returns
 }
 
-func (w *jsiiProxy_WarehouseTagOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
-	if err := w.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+func (m *jsiiProxy_MaskingPolicySignatureColumnOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := m.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
-		w,
+		m,
 		"getAnyMapAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -396,14 +326,14 @@ func (w *jsiiProxy_WarehouseTagOutputReference) GetAnyMapAttribute(terraformAttr
 	return returns
 }
 
-func (w *jsiiProxy_WarehouseTagOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
-	if err := w.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+func (m *jsiiProxy_MaskingPolicySignatureColumnOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := m.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
-		w,
+		m,
 		"getBooleanAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -412,14 +342,14 @@ func (w *jsiiProxy_WarehouseTagOutputReference) GetBooleanAttribute(terraformAtt
 	return returns
 }
 
-func (w *jsiiProxy_WarehouseTagOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
-	if err := w.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+func (m *jsiiProxy_MaskingPolicySignatureColumnOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := m.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
-		w,
+		m,
 		"getBooleanMapAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -428,14 +358,14 @@ func (w *jsiiProxy_WarehouseTagOutputReference) GetBooleanMapAttribute(terraform
 	return returns
 }
 
-func (w *jsiiProxy_WarehouseTagOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
-	if err := w.validateGetListAttributeParameters(terraformAttribute); err != nil {
+func (m *jsiiProxy_MaskingPolicySignatureColumnOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := m.validateGetListAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
-		w,
+		m,
 		"getListAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -444,14 +374,14 @@ func (w *jsiiProxy_WarehouseTagOutputReference) GetListAttribute(terraformAttrib
 	return returns
 }
 
-func (w *jsiiProxy_WarehouseTagOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
-	if err := w.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+func (m *jsiiProxy_MaskingPolicySignatureColumnOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := m.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *float64
 
 	_jsii_.Invoke(
-		w,
+		m,
 		"getNumberAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -460,14 +390,14 @@ func (w *jsiiProxy_WarehouseTagOutputReference) GetNumberAttribute(terraformAttr
 	return returns
 }
 
-func (w *jsiiProxy_WarehouseTagOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
-	if err := w.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+func (m *jsiiProxy_MaskingPolicySignatureColumnOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := m.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
-		w,
+		m,
 		"getNumberListAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -476,14 +406,14 @@ func (w *jsiiProxy_WarehouseTagOutputReference) GetNumberListAttribute(terraform
 	return returns
 }
 
-func (w *jsiiProxy_WarehouseTagOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
-	if err := w.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+func (m *jsiiProxy_MaskingPolicySignatureColumnOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := m.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
-		w,
+		m,
 		"getNumberMapAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -492,14 +422,14 @@ func (w *jsiiProxy_WarehouseTagOutputReference) GetNumberMapAttribute(terraformA
 	return returns
 }
 
-func (w *jsiiProxy_WarehouseTagOutputReference) GetStringAttribute(terraformAttribute *string) *string {
-	if err := w.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+func (m *jsiiProxy_MaskingPolicySignatureColumnOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := m.validateGetStringAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *string
 
 	_jsii_.Invoke(
-		w,
+		m,
 		"getStringAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -508,14 +438,14 @@ func (w *jsiiProxy_WarehouseTagOutputReference) GetStringAttribute(terraformAttr
 	return returns
 }
 
-func (w *jsiiProxy_WarehouseTagOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
-	if err := w.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+func (m *jsiiProxy_MaskingPolicySignatureColumnOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := m.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
-		w,
+		m,
 		"getStringMapAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -524,11 +454,11 @@ func (w *jsiiProxy_WarehouseTagOutputReference) GetStringMapAttribute(terraformA
 	return returns
 }
 
-func (w *jsiiProxy_WarehouseTagOutputReference) InterpolationAsList() cdktf.IResolvable {
+func (m *jsiiProxy_MaskingPolicySignatureColumnOutputReference) InterpolationAsList() cdktf.IResolvable {
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
-		w,
+		m,
 		"interpolationAsList",
 		nil, // no parameters
 		&returns,
@@ -537,14 +467,14 @@ func (w *jsiiProxy_WarehouseTagOutputReference) InterpolationAsList() cdktf.IRes
 	return returns
 }
 
-func (w *jsiiProxy_WarehouseTagOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
-	if err := w.validateInterpolationForAttributeParameters(property); err != nil {
+func (m *jsiiProxy_MaskingPolicySignatureColumnOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := m.validateInterpolationForAttributeParameters(property); err != nil {
 		panic(err)
 	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
-		w,
+		m,
 		"interpolationForAttribute",
 		[]interface{}{property},
 		&returns,
@@ -553,30 +483,14 @@ func (w *jsiiProxy_WarehouseTagOutputReference) InterpolationForAttribute(proper
 	return returns
 }
 
-func (w *jsiiProxy_WarehouseTagOutputReference) ResetDatabase() {
-	_jsii_.InvokeVoid(
-		w,
-		"resetDatabase",
-		nil, // no parameters
-	)
-}
-
-func (w *jsiiProxy_WarehouseTagOutputReference) ResetSchema() {
-	_jsii_.InvokeVoid(
-		w,
-		"resetSchema",
-		nil, // no parameters
-	)
-}
-
-func (w *jsiiProxy_WarehouseTagOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := w.validateResolveParameters(_context); err != nil {
+func (m *jsiiProxy_MaskingPolicySignatureColumnOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := m.validateResolveParameters(_context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
 
 	_jsii_.Invoke(
-		w,
+		m,
 		"resolve",
 		[]interface{}{_context},
 		&returns,
@@ -585,11 +499,11 @@ func (w *jsiiProxy_WarehouseTagOutputReference) Resolve(_context cdktf.IResolveC
 	return returns
 }
 
-func (w *jsiiProxy_WarehouseTagOutputReference) ToString() *string {
+func (m *jsiiProxy_MaskingPolicySignatureColumnOutputReference) ToString() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		w,
+		m,
 		"toString",
 		nil, // no parameters
 		&returns,

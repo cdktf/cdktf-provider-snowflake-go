@@ -96,6 +96,10 @@ func (j *jsiiProxy_RowAccessPolicyGrant) validateSetProvisionersParameters(val *
 	return nil
 }
 
+func (j *jsiiProxy_RowAccessPolicyGrant) validateSetRevertOwnershipToRoleNameParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_RowAccessPolicyGrant) validateSetRolesParameters(val *[]*string) error {
 	return nil
 }

@@ -88,6 +88,10 @@ func (j *jsiiProxy_SequenceGrant) validateSetLifecycleParameters(val *cdktf.Terr
 	return nil
 }
 
+func (j *jsiiProxy_SequenceGrant) validateSetOnAllParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_SequenceGrant) validateSetOnFutureParameters(val interface{}) error {
 	return nil
 }
@@ -97,6 +101,10 @@ func (j *jsiiProxy_SequenceGrant) validateSetPrivilegeParameters(val *string) er
 }
 
 func (j *jsiiProxy_SequenceGrant) validateSetProvisionersParameters(val *[]interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_SequenceGrant) validateSetRevertOwnershipToRoleNameParameters(val *string) error {
 	return nil
 }
 

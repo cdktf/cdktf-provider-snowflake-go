@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/materialized_view_grant snowflake_materialized_view_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/materialized_view_grant snowflake_materialized_view_grant}.
 type MaterializedViewGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -73,6 +73,9 @@ type MaterializedViewGrant interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	RevertOwnershipToRoleName() *string
+	SetRevertOwnershipToRoleName(val *string)
+	RevertOwnershipToRoleNameInput() *string
 	Roles() *[]*string
 	SetRoles(val *[]*string)
 	RolesInput() *[]*string
@@ -125,6 +128,7 @@ type MaterializedViewGrant interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPrivilege()
+	ResetRevertOwnershipToRoleName()
 	ResetRoles()
 	ResetSchemaName()
 	ResetShares()
@@ -414,6 +418,26 @@ func (j *jsiiProxy_MaterializedViewGrant) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_MaterializedViewGrant) RevertOwnershipToRoleName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"revertOwnershipToRoleName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MaterializedViewGrant) RevertOwnershipToRoleNameInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"revertOwnershipToRoleNameInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_MaterializedViewGrant) Roles() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -525,7 +549,7 @@ func (j *jsiiProxy_MaterializedViewGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/materialized_view_grant snowflake_materialized_view_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/materialized_view_grant snowflake_materialized_view_grant} Resource.
 func NewMaterializedViewGrant(scope constructs.Construct, id *string, config *MaterializedViewGrantConfig) MaterializedViewGrant {
 	_init_.Initialize()
 
@@ -543,7 +567,7 @@ func NewMaterializedViewGrant(scope constructs.Construct, id *string, config *Ma
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/materialized_view_grant snowflake_materialized_view_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/materialized_view_grant snowflake_materialized_view_grant} Resource.
 func NewMaterializedViewGrant_Override(m MaterializedViewGrant, scope constructs.Construct, id *string, config *MaterializedViewGrantConfig) {
 	_init_.Initialize()
 
@@ -695,6 +719,17 @@ func (j *jsiiProxy_MaterializedViewGrant)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_MaterializedViewGrant)SetRevertOwnershipToRoleName(val *string) {
+	if err := j.validateSetRevertOwnershipToRoleNameParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"revertOwnershipToRoleName",
 		val,
 	)
 }
@@ -1061,6 +1096,14 @@ func (m *jsiiProxy_MaterializedViewGrant) ResetPrivilege() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetPrivilege",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MaterializedViewGrant) ResetRevertOwnershipToRoleName() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetRevertOwnershipToRoleName",
 		nil, // no parameters
 	)
 }

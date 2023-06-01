@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/procedure_grant snowflake_procedure_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/procedure_grant snowflake_procedure_grant}.
 type ProcedureGrant interface {
 	cdktf.TerraformResource
 	ArgumentDataTypes() *[]*string
@@ -54,6 +54,9 @@ type ProcedureGrant interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
+	OnAll() interface{}
+	SetOnAll(val interface{})
+	OnAllInput() interface{}
 	OnFuture() interface{}
 	SetOnFuture(val interface{})
 	OnFutureInput() interface{}
@@ -73,6 +76,9 @@ type ProcedureGrant interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	RevertOwnershipToRoleName() *string
+	SetRevertOwnershipToRoleName(val *string)
+	RevertOwnershipToRoleNameInput() *string
 	Roles() *[]*string
 	SetRoles(val *[]*string)
 	RolesInput() *[]*string
@@ -119,12 +125,14 @@ type ProcedureGrant interface {
 	ResetArgumentDataTypes()
 	ResetEnableMultipleGrants()
 	ResetId()
+	ResetOnAll()
 	ResetOnFuture()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPrivilege()
 	ResetProcedureName()
+	ResetRevertOwnershipToRoleName()
 	ResetSchemaName()
 	ResetShares()
 	ResetWithGrantOption()
@@ -323,6 +331,26 @@ func (j *jsiiProxy_ProcedureGrant) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_ProcedureGrant) OnAll() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onAll",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ProcedureGrant) OnAllInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"onAllInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ProcedureGrant) OnFuture() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -408,6 +436,26 @@ func (j *jsiiProxy_ProcedureGrant) RawOverrides() interface{} {
 	_jsii_.Get(
 		j,
 		"rawOverrides",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ProcedureGrant) RevertOwnershipToRoleName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"revertOwnershipToRoleName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ProcedureGrant) RevertOwnershipToRoleNameInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"revertOwnershipToRoleNameInput",
 		&returns,
 	)
 	return returns
@@ -524,7 +572,7 @@ func (j *jsiiProxy_ProcedureGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/procedure_grant snowflake_procedure_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/procedure_grant snowflake_procedure_grant} Resource.
 func NewProcedureGrant(scope constructs.Construct, id *string, config *ProcedureGrantConfig) ProcedureGrant {
 	_init_.Initialize()
 
@@ -542,7 +590,7 @@ func NewProcedureGrant(scope constructs.Construct, id *string, config *Procedure
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/procedure_grant snowflake_procedure_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/procedure_grant snowflake_procedure_grant} Resource.
 func NewProcedureGrant_Override(p ProcedureGrant, scope constructs.Construct, id *string, config *ProcedureGrantConfig) {
 	_init_.Initialize()
 
@@ -646,6 +694,17 @@ func (j *jsiiProxy_ProcedureGrant)SetLifecycle(val *cdktf.TerraformResourceLifec
 	)
 }
 
+func (j *jsiiProxy_ProcedureGrant)SetOnAll(val interface{}) {
+	if err := j.validateSetOnAllParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"onAll",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ProcedureGrant)SetOnFuture(val interface{}) {
 	if err := j.validateSetOnFutureParameters(val); err != nil {
 		panic(err)
@@ -694,6 +753,17 @@ func (j *jsiiProxy_ProcedureGrant)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ProcedureGrant)SetRevertOwnershipToRoleName(val *string) {
+	if err := j.validateSetRevertOwnershipToRoleNameParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"revertOwnershipToRoleName",
 		val,
 	)
 }
@@ -1032,6 +1102,14 @@ func (p *jsiiProxy_ProcedureGrant) ResetId() {
 	)
 }
 
+func (p *jsiiProxy_ProcedureGrant) ResetOnAll() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetOnAll",
+		nil, // no parameters
+	)
+}
+
 func (p *jsiiProxy_ProcedureGrant) ResetOnFuture() {
 	_jsii_.InvokeVoid(
 		p,
@@ -1060,6 +1138,14 @@ func (p *jsiiProxy_ProcedureGrant) ResetProcedureName() {
 	_jsii_.InvokeVoid(
 		p,
 		"resetProcedureName",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_ProcedureGrant) ResetRevertOwnershipToRoleName() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetRevertOwnershipToRoleName",
 		nil, // no parameters
 	)
 }

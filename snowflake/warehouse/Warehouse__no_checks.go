@@ -52,10 +52,6 @@ func (w *jsiiProxy_Warehouse) validateOverrideLogicalIdParameters(newLogicalId *
 	return nil
 }
 
-func (w *jsiiProxy_Warehouse) validatePutTagParameters(value interface{}) error {
-	return nil
-}
-
 func validateWarehouse_IsConstructParameters(x interface{}) error {
 	return nil
 }

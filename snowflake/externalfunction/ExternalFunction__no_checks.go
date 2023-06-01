@@ -124,6 +124,14 @@ func (j *jsiiProxy_ExternalFunction) validateSetProvisionersParameters(val *[]in
 	return nil
 }
 
+func (j *jsiiProxy_ExternalFunction) validateSetRequestTranslatorParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ExternalFunction) validateSetResponseTranslatorParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ExternalFunction) validateSetReturnBehaviorParameters(val *string) error {
 	return nil
 }

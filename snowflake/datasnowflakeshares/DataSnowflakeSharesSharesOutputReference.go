@@ -41,7 +41,7 @@ type DataSnowflakeSharesSharesOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
-	To() *string
+	To() *[]*string
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -191,8 +191,8 @@ func (j *jsiiProxy_DataSnowflakeSharesSharesOutputReference) TerraformResource()
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeSharesSharesOutputReference) To() *string {
-	var returns *string
+func (j *jsiiProxy_DataSnowflakeSharesSharesOutputReference) To() *[]*string {
+	var returns *[]*string
 	_jsii_.Get(
 		j,
 		"to",

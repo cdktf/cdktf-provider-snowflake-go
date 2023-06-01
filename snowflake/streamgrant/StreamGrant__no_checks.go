@@ -88,6 +88,10 @@ func (j *jsiiProxy_StreamGrant) validateSetLifecycleParameters(val *cdktf.Terraf
 	return nil
 }
 
+func (j *jsiiProxy_StreamGrant) validateSetOnAllParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_StreamGrant) validateSetOnFutureParameters(val interface{}) error {
 	return nil
 }
@@ -97,6 +101,10 @@ func (j *jsiiProxy_StreamGrant) validateSetPrivilegeParameters(val *string) erro
 }
 
 func (j *jsiiProxy_StreamGrant) validateSetProvisionersParameters(val *[]interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_StreamGrant) validateSetRevertOwnershipToRoleNameParameters(val *string) error {
 	return nil
 }
 

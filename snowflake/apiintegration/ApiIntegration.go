@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/api_integration snowflake_api_integration}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/api_integration snowflake_api_integration}.
 type ApiIntegration interface {
 	cdktf.TerraformResource
 	ApiAllowedPrefixes() *[]*string
@@ -23,6 +23,9 @@ type ApiIntegration interface {
 	ApiBlockedPrefixes() *[]*string
 	SetApiBlockedPrefixes(val *[]*string)
 	ApiBlockedPrefixesInput() *[]*string
+	ApiGcpServiceAccount() *string
+	SetApiGcpServiceAccount(val *string)
+	ApiGcpServiceAccountInput() *string
 	ApiKey() *string
 	SetApiKey(val *string)
 	ApiKeyInput() *string
@@ -126,6 +129,7 @@ type ApiIntegration interface {
 	OverrideLogicalId(newLogicalId *string)
 	ResetApiAwsRoleArn()
 	ResetApiBlockedPrefixes()
+	ResetApiGcpServiceAccount()
 	ResetApiKey()
 	ResetAzureAdApplicationId()
 	ResetAzureTenantId()
@@ -226,6 +230,26 @@ func (j *jsiiProxy_ApiIntegration) ApiBlockedPrefixesInput() *[]*string {
 	_jsii_.Get(
 		j,
 		"apiBlockedPrefixesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ApiIntegration) ApiGcpServiceAccount() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"apiGcpServiceAccount",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ApiIntegration) ApiGcpServiceAccountInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"apiGcpServiceAccountInput",
 		&returns,
 	)
 	return returns
@@ -602,7 +626,7 @@ func (j *jsiiProxy_ApiIntegration) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/api_integration snowflake_api_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/api_integration snowflake_api_integration} Resource.
 func NewApiIntegration(scope constructs.Construct, id *string, config *ApiIntegrationConfig) ApiIntegration {
 	_init_.Initialize()
 
@@ -620,7 +644,7 @@ func NewApiIntegration(scope constructs.Construct, id *string, config *ApiIntegr
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/api_integration snowflake_api_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/api_integration snowflake_api_integration} Resource.
 func NewApiIntegration_Override(a ApiIntegration, scope constructs.Construct, id *string, config *ApiIntegrationConfig) {
 	_init_.Initialize()
 
@@ -660,6 +684,17 @@ func (j *jsiiProxy_ApiIntegration)SetApiBlockedPrefixes(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"apiBlockedPrefixes",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ApiIntegration)SetApiGcpServiceAccount(val *string) {
+	if err := j.validateSetApiGcpServiceAccountParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"apiGcpServiceAccount",
 		val,
 	)
 }
@@ -1109,6 +1144,14 @@ func (a *jsiiProxy_ApiIntegration) ResetApiBlockedPrefixes() {
 	_jsii_.InvokeVoid(
 		a,
 		"resetApiBlockedPrefixes",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApiIntegration) ResetApiGcpServiceAccount() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetApiGcpServiceAccount",
 		nil, // no parameters
 	)
 }

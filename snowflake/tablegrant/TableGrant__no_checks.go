@@ -104,6 +104,10 @@ func (j *jsiiProxy_TableGrant) validateSetProvisionersParameters(val *[]interfac
 	return nil
 }
 
+func (j *jsiiProxy_TableGrant) validateSetRevertOwnershipToRoleNameParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_TableGrant) validateSetRolesParameters(val *[]*string) error {
 	return nil
 }

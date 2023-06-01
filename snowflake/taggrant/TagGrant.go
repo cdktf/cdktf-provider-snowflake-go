@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/tag_grant snowflake_tag_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/tag_grant snowflake_tag_grant}.
 type TagGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -64,6 +64,9 @@ type TagGrant interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	RevertOwnershipToRoleName() *string
+	SetRevertOwnershipToRoleName(val *string)
+	RevertOwnershipToRoleNameInput() *string
 	Roles() *[]*string
 	SetRoles(val *[]*string)
 	RolesInput() *[]*string
@@ -113,6 +116,7 @@ type TagGrant interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPrivilege()
+	ResetRevertOwnershipToRoleName()
 	ResetRoles()
 	ResetWithGrantOption()
 	SynthesizeAttributes() *map[string]interface{}
@@ -340,6 +344,26 @@ func (j *jsiiProxy_TagGrant) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_TagGrant) RevertOwnershipToRoleName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"revertOwnershipToRoleName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TagGrant) RevertOwnershipToRoleNameInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"revertOwnershipToRoleNameInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_TagGrant) Roles() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -451,7 +475,7 @@ func (j *jsiiProxy_TagGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/tag_grant snowflake_tag_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/tag_grant snowflake_tag_grant} Resource.
 func NewTagGrant(scope constructs.Construct, id *string, config *TagGrantConfig) TagGrant {
 	_init_.Initialize()
 
@@ -469,7 +493,7 @@ func NewTagGrant(scope constructs.Construct, id *string, config *TagGrantConfig)
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/tag_grant snowflake_tag_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/tag_grant snowflake_tag_grant} Resource.
 func NewTagGrant_Override(t TagGrant, scope constructs.Construct, id *string, config *TagGrantConfig) {
 	_init_.Initialize()
 
@@ -588,6 +612,17 @@ func (j *jsiiProxy_TagGrant)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_TagGrant)SetRevertOwnershipToRoleName(val *string) {
+	if err := j.validateSetRevertOwnershipToRoleNameParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"revertOwnershipToRoleName",
 		val,
 	)
 }
@@ -930,6 +965,14 @@ func (t *jsiiProxy_TagGrant) ResetPrivilege() {
 	_jsii_.InvokeVoid(
 		t,
 		"resetPrivilege",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TagGrant) ResetRevertOwnershipToRoleName() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetRevertOwnershipToRoleName",
 		nil, // no parameters
 	)
 }

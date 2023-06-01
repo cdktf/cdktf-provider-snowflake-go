@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/warehouse snowflake_warehouse}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/warehouse snowflake_warehouse}.
 type Warehouse interface {
 	cdktf.TerraformResource
 	AutoResume() interface{}
@@ -97,8 +97,6 @@ type Warehouse interface {
 	StatementTimeoutInSeconds() *float64
 	SetStatementTimeoutInSeconds(val *float64)
 	StatementTimeoutInSecondsInput() *float64
-	Tag() WarehouseTagList
-	TagInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -139,7 +137,6 @@ type Warehouse interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	PutTag(value interface{})
 	ResetAutoResume()
 	ResetAutoSuspend()
 	ResetComment()
@@ -157,7 +154,6 @@ type Warehouse interface {
 	ResetScalingPolicy()
 	ResetStatementQueuedTimeoutInSeconds()
 	ResetStatementTimeoutInSeconds()
-	ResetTag()
 	ResetWaitForProvisioning()
 	ResetWarehouseSize()
 	ResetWarehouseType()
@@ -606,26 +602,6 @@ func (j *jsiiProxy_Warehouse) StatementTimeoutInSecondsInput() *float64 {
 	return returns
 }
 
-func (j *jsiiProxy_Warehouse) Tag() WarehouseTagList {
-	var returns WarehouseTagList
-	_jsii_.Get(
-		j,
-		"tag",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Warehouse) TagInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"tagInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_Warehouse) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -717,7 +693,7 @@ func (j *jsiiProxy_Warehouse) WarehouseTypeInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/warehouse snowflake_warehouse} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/warehouse snowflake_warehouse} Resource.
 func NewWarehouse(scope constructs.Construct, id *string, config *WarehouseConfig) Warehouse {
 	_init_.Initialize()
 
@@ -735,7 +711,7 @@ func NewWarehouse(scope constructs.Construct, id *string, config *WarehouseConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/warehouse snowflake_warehouse} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/warehouse snowflake_warehouse} Resource.
 func NewWarehouse_Override(w Warehouse, scope constructs.Construct, id *string, config *WarehouseConfig) {
 	_init_.Initialize()
 
@@ -1278,17 +1254,6 @@ func (w *jsiiProxy_Warehouse) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
-func (w *jsiiProxy_Warehouse) PutTag(value interface{}) {
-	if err := w.validatePutTagParameters(value); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		w,
-		"putTag",
-		[]interface{}{value},
-	)
-}
-
 func (w *jsiiProxy_Warehouse) ResetAutoResume() {
 	_jsii_.InvokeVoid(
 		w,
@@ -1405,14 +1370,6 @@ func (w *jsiiProxy_Warehouse) ResetStatementTimeoutInSeconds() {
 	_jsii_.InvokeVoid(
 		w,
 		"resetStatementTimeoutInSeconds",
-		nil, // no parameters
-	)
-}
-
-func (w *jsiiProxy_Warehouse) ResetTag() {
-	_jsii_.InvokeVoid(
-		w,
-		"resetTag",
 		nil, // no parameters
 	)
 }

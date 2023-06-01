@@ -76,6 +76,10 @@ func (j *jsiiProxy_ApiIntegration) validateSetApiBlockedPrefixesParameters(val *
 	return nil
 }
 
+func (j *jsiiProxy_ApiIntegration) validateSetApiGcpServiceAccountParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ApiIntegration) validateSetApiKeyParameters(val *string) error {
 	return nil
 }

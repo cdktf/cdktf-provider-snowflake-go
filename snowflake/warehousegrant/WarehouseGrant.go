@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/warehouse_grant snowflake_warehouse_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/warehouse_grant snowflake_warehouse_grant}.
 type WarehouseGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -61,6 +61,9 @@ type WarehouseGrant interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	RevertOwnershipToRoleName() *string
+	SetRevertOwnershipToRoleName(val *string)
+	RevertOwnershipToRoleNameInput() *string
 	Roles() *[]*string
 	SetRoles(val *[]*string)
 	RolesInput() *[]*string
@@ -107,6 +110,7 @@ type WarehouseGrant interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPrivilege()
+	ResetRevertOwnershipToRoleName()
 	ResetRoles()
 	ResetWithGrantOption()
 	SynthesizeAttributes() *map[string]interface{}
@@ -314,6 +318,26 @@ func (j *jsiiProxy_WarehouseGrant) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_WarehouseGrant) RevertOwnershipToRoleName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"revertOwnershipToRoleName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_WarehouseGrant) RevertOwnershipToRoleNameInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"revertOwnershipToRoleNameInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_WarehouseGrant) Roles() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -405,7 +429,7 @@ func (j *jsiiProxy_WarehouseGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/warehouse_grant snowflake_warehouse_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/warehouse_grant snowflake_warehouse_grant} Resource.
 func NewWarehouseGrant(scope constructs.Construct, id *string, config *WarehouseGrantConfig) WarehouseGrant {
 	_init_.Initialize()
 
@@ -423,7 +447,7 @@ func NewWarehouseGrant(scope constructs.Construct, id *string, config *Warehouse
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/warehouse_grant snowflake_warehouse_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/warehouse_grant snowflake_warehouse_grant} Resource.
 func NewWarehouseGrant_Override(w WarehouseGrant, scope constructs.Construct, id *string, config *WarehouseGrantConfig) {
 	_init_.Initialize()
 
@@ -531,6 +555,17 @@ func (j *jsiiProxy_WarehouseGrant)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_WarehouseGrant)SetRevertOwnershipToRoleName(val *string) {
+	if err := j.validateSetRevertOwnershipToRoleNameParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"revertOwnershipToRoleName",
 		val,
 	)
 }
@@ -862,6 +897,14 @@ func (w *jsiiProxy_WarehouseGrant) ResetPrivilege() {
 	_jsii_.InvokeVoid(
 		w,
 		"resetPrivilege",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_WarehouseGrant) ResetRevertOwnershipToRoleName() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetRevertOwnershipToRoleName",
 		nil, // no parameters
 	)
 }

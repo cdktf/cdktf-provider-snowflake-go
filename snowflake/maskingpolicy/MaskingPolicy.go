@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/masking_policy snowflake_masking_policy}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/masking_policy snowflake_masking_policy}.
 type MaskingPolicy interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -34,6 +34,9 @@ type MaskingPolicy interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	ExemptOtherPolicies() interface{}
+	SetExemptOtherPolicies(val interface{})
+	ExemptOtherPoliciesInput() interface{}
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -45,6 +48,9 @@ type MaskingPolicy interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	IfNotExists() interface{}
+	SetIfNotExists(val interface{})
+	IfNotExistsInput() interface{}
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -57,6 +63,9 @@ type MaskingPolicy interface {
 	NameInput() *string
 	// The tree node.
 	Node() constructs.Node
+	OrReplace() interface{}
+	SetOrReplace(val interface{})
+	OrReplaceInput() interface{}
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -74,15 +83,14 @@ type MaskingPolicy interface {
 	Schema() *string
 	SetSchema(val *string)
 	SchemaInput() *string
+	Signature() MaskingPolicySignatureOutputReference
+	SignatureInput() *MaskingPolicySignature
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
-	ValueDataType() *string
-	SetValueDataType(val *string)
-	ValueDataTypeInput() *string
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -108,8 +116,12 @@ type MaskingPolicy interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutSignature(value *MaskingPolicySignature)
 	ResetComment()
+	ResetExemptOtherPolicies()
 	ResetId()
+	ResetIfNotExists()
+	ResetOrReplace()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -218,6 +230,26 @@ func (j *jsiiProxy_MaskingPolicy) DependsOn() *[]*string {
 	return returns
 }
 
+func (j *jsiiProxy_MaskingPolicy) ExemptOtherPolicies() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"exemptOtherPolicies",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MaskingPolicy) ExemptOtherPoliciesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"exemptOtherPoliciesInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_MaskingPolicy) ForEach() cdktf.ITerraformIterator {
 	var returns cdktf.ITerraformIterator
 	_jsii_.Get(
@@ -263,6 +295,26 @@ func (j *jsiiProxy_MaskingPolicy) IdInput() *string {
 	_jsii_.Get(
 		j,
 		"idInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MaskingPolicy) IfNotExists() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"ifNotExists",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MaskingPolicy) IfNotExistsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"ifNotExistsInput",
 		&returns,
 	)
 	return returns
@@ -323,6 +375,26 @@ func (j *jsiiProxy_MaskingPolicy) Node() constructs.Node {
 	_jsii_.Get(
 		j,
 		"node",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MaskingPolicy) OrReplace() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"orReplace",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MaskingPolicy) OrReplaceInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"orReplaceInput",
 		&returns,
 	)
 	return returns
@@ -408,6 +480,26 @@ func (j *jsiiProxy_MaskingPolicy) SchemaInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_MaskingPolicy) Signature() MaskingPolicySignatureOutputReference {
+	var returns MaskingPolicySignatureOutputReference
+	_jsii_.Get(
+		j,
+		"signature",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MaskingPolicy) SignatureInput() *MaskingPolicySignature {
+	var returns *MaskingPolicySignature
+	_jsii_.Get(
+		j,
+		"signatureInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_MaskingPolicy) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -438,28 +530,8 @@ func (j *jsiiProxy_MaskingPolicy) TerraformResourceType() *string {
 	return returns
 }
 
-func (j *jsiiProxy_MaskingPolicy) ValueDataType() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"valueDataType",
-		&returns,
-	)
-	return returns
-}
 
-func (j *jsiiProxy_MaskingPolicy) ValueDataTypeInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"valueDataTypeInput",
-		&returns,
-	)
-	return returns
-}
-
-
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/masking_policy snowflake_masking_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/masking_policy snowflake_masking_policy} Resource.
 func NewMaskingPolicy(scope constructs.Construct, id *string, config *MaskingPolicyConfig) MaskingPolicy {
 	_init_.Initialize()
 
@@ -477,7 +549,7 @@ func NewMaskingPolicy(scope constructs.Construct, id *string, config *MaskingPol
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.63.0/docs/resources/masking_policy snowflake_masking_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/masking_policy snowflake_masking_policy} Resource.
 func NewMaskingPolicy_Override(m MaskingPolicy, scope constructs.Construct, id *string, config *MaskingPolicyConfig) {
 	_init_.Initialize()
 
@@ -540,6 +612,17 @@ func (j *jsiiProxy_MaskingPolicy)SetDependsOn(val *[]*string) {
 	)
 }
 
+func (j *jsiiProxy_MaskingPolicy)SetExemptOtherPolicies(val interface{}) {
+	if err := j.validateSetExemptOtherPoliciesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"exemptOtherPolicies",
+		val,
+	)
+}
+
 func (j *jsiiProxy_MaskingPolicy)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
@@ -555,6 +638,17 @@ func (j *jsiiProxy_MaskingPolicy)SetId(val *string) {
 	_jsii_.Set(
 		j,
 		"id",
+		val,
+	)
+}
+
+func (j *jsiiProxy_MaskingPolicy)SetIfNotExists(val interface{}) {
+	if err := j.validateSetIfNotExistsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"ifNotExists",
 		val,
 	)
 }
@@ -588,6 +682,17 @@ func (j *jsiiProxy_MaskingPolicy)SetName(val *string) {
 	_jsii_.Set(
 		j,
 		"name",
+		val,
+	)
+}
+
+func (j *jsiiProxy_MaskingPolicy)SetOrReplace(val interface{}) {
+	if err := j.validateSetOrReplaceParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"orReplace",
 		val,
 	)
 }
@@ -629,17 +734,6 @@ func (j *jsiiProxy_MaskingPolicy)SetSchema(val *string) {
 	_jsii_.Set(
 		j,
 		"schema",
-		val,
-	)
-}
-
-func (j *jsiiProxy_MaskingPolicy)SetValueDataType(val *string) {
-	if err := j.validateSetValueDataTypeParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"valueDataType",
 		val,
 	)
 }
@@ -910,6 +1004,17 @@ func (m *jsiiProxy_MaskingPolicy) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (m *jsiiProxy_MaskingPolicy) PutSignature(value *MaskingPolicySignature) {
+	if err := m.validatePutSignatureParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putSignature",
+		[]interface{}{value},
+	)
+}
+
 func (m *jsiiProxy_MaskingPolicy) ResetComment() {
 	_jsii_.InvokeVoid(
 		m,
@@ -918,10 +1023,34 @@ func (m *jsiiProxy_MaskingPolicy) ResetComment() {
 	)
 }
 
+func (m *jsiiProxy_MaskingPolicy) ResetExemptOtherPolicies() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetExemptOtherPolicies",
+		nil, // no parameters
+	)
+}
+
 func (m *jsiiProxy_MaskingPolicy) ResetId() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MaskingPolicy) ResetIfNotExists() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetIfNotExists",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MaskingPolicy) ResetOrReplace() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetOrReplace",
 		nil, // no parameters
 	)
 }
