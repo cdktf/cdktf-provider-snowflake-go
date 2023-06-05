@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/warehouse_grant snowflake_warehouse_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/warehouse_grant snowflake_warehouse_grant}.
 type WarehouseGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -429,7 +429,7 @@ func (j *jsiiProxy_WarehouseGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/warehouse_grant snowflake_warehouse_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/warehouse_grant snowflake_warehouse_grant} Resource.
 func NewWarehouseGrant(scope constructs.Construct, id *string, config *WarehouseGrantConfig) WarehouseGrant {
 	_init_.Initialize()
 
@@ -447,7 +447,7 @@ func NewWarehouseGrant(scope constructs.Construct, id *string, config *Warehouse
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/warehouse_grant snowflake_warehouse_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/warehouse_grant snowflake_warehouse_grant} Resource.
 func NewWarehouseGrant_Override(w WarehouseGrant, scope constructs.Construct, id *string, config *WarehouseGrantConfig) {
 	_init_.Initialize()
 

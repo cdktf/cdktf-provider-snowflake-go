@@ -68,11 +68,27 @@ func (j *jsiiProxy_DataSnowflakeDatabases) validateSetCountParameters(val interf
 	return nil
 }
 
+func (j *jsiiProxy_DataSnowflakeDatabases) validateSetHistoryParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataSnowflakeDatabases) validateSetIdParameters(val *string) error {
 	return nil
 }
 
 func (j *jsiiProxy_DataSnowflakeDatabases) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataSnowflakeDatabases) validateSetPatternParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataSnowflakeDatabases) validateSetStartsWithParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataSnowflakeDatabases) validateSetTerseParameters(val interface{}) error {
 	return nil
 }
 

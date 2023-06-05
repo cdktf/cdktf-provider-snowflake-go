@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/procedure_grant snowflake_procedure_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/procedure_grant snowflake_procedure_grant}.
 type ProcedureGrant interface {
 	cdktf.TerraformResource
 	ArgumentDataTypes() *[]*string
@@ -572,7 +572,7 @@ func (j *jsiiProxy_ProcedureGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/procedure_grant snowflake_procedure_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/procedure_grant snowflake_procedure_grant} Resource.
 func NewProcedureGrant(scope constructs.Construct, id *string, config *ProcedureGrantConfig) ProcedureGrant {
 	_init_.Initialize()
 
@@ -590,7 +590,7 @@ func NewProcedureGrant(scope constructs.Construct, id *string, config *Procedure
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/procedure_grant snowflake_procedure_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/procedure_grant snowflake_procedure_grant} Resource.
 func NewProcedureGrant_Override(p ProcedureGrant, scope constructs.Construct, id *string, config *ProcedureGrantConfig) {
 	_init_.Initialize()
 

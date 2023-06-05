@@ -56,10 +56,6 @@ func (d *jsiiProxy_Database) validatePutReplicationConfigurationParameters(value
 	return nil
 }
 
-func (d *jsiiProxy_Database) validatePutTagParameters(value interface{}) error {
-	return nil
-}
-
 func validateDatabase_IsConstructParameters(x interface{}) error {
 	return nil
 }

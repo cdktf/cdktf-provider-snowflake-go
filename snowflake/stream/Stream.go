@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/stream snowflake_stream}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/stream snowflake_stream}.
 type Stream interface {
 	cdktf.TerraformResource
 	AppendOnly() interface{}
@@ -534,7 +534,7 @@ func (j *jsiiProxy_Stream) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/stream snowflake_stream} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/stream snowflake_stream} Resource.
 func NewStream(scope constructs.Construct, id *string, config *StreamConfig) Stream {
 	_init_.Initialize()
 
@@ -552,7 +552,7 @@ func NewStream(scope constructs.Construct, id *string, config *StreamConfig) Str
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/stream snowflake_stream} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/stream snowflake_stream} Resource.
 func NewStream_Override(s Stream, scope constructs.Construct, id *string, config *StreamConfig) {
 	_init_.Initialize()
 

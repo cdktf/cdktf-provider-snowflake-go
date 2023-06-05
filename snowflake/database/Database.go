@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/database snowflake_database}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/database snowflake_database}.
 type Database interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -78,8 +78,6 @@ type Database interface {
 	RawOverrides() interface{}
 	ReplicationConfiguration() DatabaseReplicationConfigurationOutputReference
 	ReplicationConfigurationInput() *DatabaseReplicationConfiguration
-	Tag() DatabaseTagList
-	TagInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -112,7 +110,6 @@ type Database interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutReplicationConfiguration(value *DatabaseReplicationConfiguration)
-	PutTag(value interface{})
 	ResetComment()
 	ResetDataRetentionTimeInDays()
 	ResetFromDatabase()
@@ -124,7 +121,6 @@ type Database interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetReplicationConfiguration()
-	ResetTag()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
 	ToMetadata() interface{}
@@ -450,26 +446,6 @@ func (j *jsiiProxy_Database) ReplicationConfigurationInput() *DatabaseReplicatio
 	return returns
 }
 
-func (j *jsiiProxy_Database) Tag() DatabaseTagList {
-	var returns DatabaseTagList
-	_jsii_.Get(
-		j,
-		"tag",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Database) TagInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"tagInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_Database) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -501,7 +477,7 @@ func (j *jsiiProxy_Database) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/database snowflake_database} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/database snowflake_database} Resource.
 func NewDatabase(scope constructs.Construct, id *string, config *DatabaseConfig) Database {
 	_init_.Initialize()
 
@@ -519,7 +495,7 @@ func NewDatabase(scope constructs.Construct, id *string, config *DatabaseConfig)
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/database snowflake_database} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/database snowflake_database} Resource.
 func NewDatabase_Override(d Database, scope constructs.Construct, id *string, config *DatabaseConfig) {
 	_init_.Initialize()
 
@@ -963,17 +939,6 @@ func (d *jsiiProxy_Database) PutReplicationConfiguration(value *DatabaseReplicat
 	)
 }
 
-func (d *jsiiProxy_Database) PutTag(value interface{}) {
-	if err := d.validatePutTagParameters(value); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		d,
-		"putTag",
-		[]interface{}{value},
-	)
-}
-
 func (d *jsiiProxy_Database) ResetComment() {
 	_jsii_.InvokeVoid(
 		d,
@@ -1042,14 +1007,6 @@ func (d *jsiiProxy_Database) ResetReplicationConfiguration() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetReplicationConfiguration",
-		nil, // no parameters
-	)
-}
-
-func (d *jsiiProxy_Database) ResetTag() {
-	_jsii_.InvokeVoid(
-		d,
-		"resetTag",
 		nil, // no parameters
 	)
 }

@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/data-sources/databases snowflake_databases}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/data-sources/databases snowflake_databases}.
 type DataSnowflakeDatabases interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -33,6 +33,9 @@ type DataSnowflakeDatabases interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	History() interface{}
+	SetHistory(val interface{})
+	HistoryInput() interface{}
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -42,18 +45,27 @@ type DataSnowflakeDatabases interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
+	Pattern() *string
+	SetPattern(val *string)
+	PatternInput() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	StartsWith() *string
+	SetStartsWith(val *string)
+	StartsWithInput() *string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Terse() interface{}
+	SetTerse(val interface{})
+	TerseInput() interface{}
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -79,10 +91,14 @@ type DataSnowflakeDatabases interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	ResetHistory()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetPattern()
+	ResetStartsWith()
+	ResetTerse()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
 	ToMetadata() interface{}
@@ -178,6 +194,26 @@ func (j *jsiiProxy_DataSnowflakeDatabases) FriendlyUniqueId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataSnowflakeDatabases) History() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"history",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeDatabases) HistoryInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"historyInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataSnowflakeDatabases) Id() *string {
 	var returns *string
 	_jsii_.Get(
@@ -218,6 +254,26 @@ func (j *jsiiProxy_DataSnowflakeDatabases) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_DataSnowflakeDatabases) Pattern() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"pattern",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeDatabases) PatternInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"patternInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataSnowflakeDatabases) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -233,6 +289,26 @@ func (j *jsiiProxy_DataSnowflakeDatabases) RawOverrides() interface{} {
 	_jsii_.Get(
 		j,
 		"rawOverrides",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeDatabases) StartsWith() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"startsWith",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeDatabases) StartsWithInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"startsWithInput",
 		&returns,
 	)
 	return returns
@@ -268,8 +344,28 @@ func (j *jsiiProxy_DataSnowflakeDatabases) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataSnowflakeDatabases) Terse() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"terse",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/data-sources/databases snowflake_databases} Data Source.
+func (j *jsiiProxy_DataSnowflakeDatabases) TerseInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"terseInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/data-sources/databases snowflake_databases} Data Source.
 func NewDataSnowflakeDatabases(scope constructs.Construct, id *string, config *DataSnowflakeDatabasesConfig) DataSnowflakeDatabases {
 	_init_.Initialize()
 
@@ -287,7 +383,7 @@ func NewDataSnowflakeDatabases(scope constructs.Construct, id *string, config *D
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/data-sources/databases snowflake_databases} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/data-sources/databases snowflake_databases} Data Source.
 func NewDataSnowflakeDatabases_Override(d DataSnowflakeDatabases, scope constructs.Construct, id *string, config *DataSnowflakeDatabasesConfig) {
 	_init_.Initialize()
 
@@ -325,6 +421,17 @@ func (j *jsiiProxy_DataSnowflakeDatabases)SetForEach(val cdktf.ITerraformIterato
 	)
 }
 
+func (j *jsiiProxy_DataSnowflakeDatabases)SetHistory(val interface{}) {
+	if err := j.validateSetHistoryParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"history",
+		val,
+	)
+}
+
 func (j *jsiiProxy_DataSnowflakeDatabases)SetId(val *string) {
 	if err := j.validateSetIdParameters(val); err != nil {
 		panic(err)
@@ -347,10 +454,43 @@ func (j *jsiiProxy_DataSnowflakeDatabases)SetLifecycle(val *cdktf.TerraformResou
 	)
 }
 
+func (j *jsiiProxy_DataSnowflakeDatabases)SetPattern(val *string) {
+	if err := j.validateSetPatternParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"pattern",
+		val,
+	)
+}
+
 func (j *jsiiProxy_DataSnowflakeDatabases)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataSnowflakeDatabases)SetStartsWith(val *string) {
+	if err := j.validateSetStartsWithParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"startsWith",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataSnowflakeDatabases)SetTerse(val interface{}) {
+	if err := j.validateSetTerseParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"terse",
 		val,
 	)
 }
@@ -621,6 +761,14 @@ func (d *jsiiProxy_DataSnowflakeDatabases) OverrideLogicalId(newLogicalId *strin
 	)
 }
 
+func (d *jsiiProxy_DataSnowflakeDatabases) ResetHistory() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetHistory",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DataSnowflakeDatabases) ResetId() {
 	_jsii_.InvokeVoid(
 		d,
@@ -633,6 +781,30 @@ func (d *jsiiProxy_DataSnowflakeDatabases) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataSnowflakeDatabases) ResetPattern() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetPattern",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataSnowflakeDatabases) ResetStartsWith() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetStartsWith",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataSnowflakeDatabases) ResetTerse() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetTerse",
 		nil, // no parameters
 	)
 }

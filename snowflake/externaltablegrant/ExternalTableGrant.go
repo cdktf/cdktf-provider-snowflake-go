@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/external_table_grant snowflake_external_table_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/external_table_grant snowflake_external_table_grant}.
 type ExternalTableGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -548,7 +548,7 @@ func (j *jsiiProxy_ExternalTableGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/external_table_grant snowflake_external_table_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/external_table_grant snowflake_external_table_grant} Resource.
 func NewExternalTableGrant(scope constructs.Construct, id *string, config *ExternalTableGrantConfig) ExternalTableGrant {
 	_init_.Initialize()
 
@@ -566,7 +566,7 @@ func NewExternalTableGrant(scope constructs.Construct, id *string, config *Exter
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/external_table_grant snowflake_external_table_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/external_table_grant snowflake_external_table_grant} Resource.
 func NewExternalTableGrant_Override(e ExternalTableGrant, scope constructs.Construct, id *string, config *ExternalTableGrantConfig) {
 	_init_.Initialize()
 

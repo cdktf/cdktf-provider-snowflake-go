@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/row_access_policy_grant snowflake_row_access_policy_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/row_access_policy_grant snowflake_row_access_policy_grant}.
 type RowAccessPolicyGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -475,7 +475,7 @@ func (j *jsiiProxy_RowAccessPolicyGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/row_access_policy_grant snowflake_row_access_policy_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/row_access_policy_grant snowflake_row_access_policy_grant} Resource.
 func NewRowAccessPolicyGrant(scope constructs.Construct, id *string, config *RowAccessPolicyGrantConfig) RowAccessPolicyGrant {
 	_init_.Initialize()
 
@@ -493,7 +493,7 @@ func NewRowAccessPolicyGrant(scope constructs.Construct, id *string, config *Row
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.65.0/docs/resources/row_access_policy_grant snowflake_row_access_policy_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/row_access_policy_grant snowflake_row_access_policy_grant} Resource.
 func NewRowAccessPolicyGrant_Override(r RowAccessPolicyGrant, scope constructs.Construct, id *string, config *RowAccessPolicyGrantConfig) {
 	_init_.Initialize()
 
