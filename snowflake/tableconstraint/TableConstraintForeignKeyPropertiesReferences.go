@@ -4,11 +4,11 @@ package tableconstraint
 type TableConstraintForeignKeyPropertiesReferences struct {
 	// Columns to use in foreign key reference.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/table_constraint#columns TableConstraint#columns}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/table_constraint#columns TableConstraint#columns}
 	Columns *[]*string `field:"required" json:"columns" yaml:"columns"`
 	// Name of constraint.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/table_constraint#table_id TableConstraint#table_id}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/table_constraint#table_id TableConstraint#table_id}
 	TableId *string `field:"required" json:"tableId" yaml:"tableId"`
 }
 

@@ -2,14 +2,14 @@ package datasnowflakedatabase
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/datasnowflakedatabase/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/datasnowflakedatabase/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/data-sources/database snowflake_database}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/data-sources/database snowflake_database}.
 type DataSnowflakeDatabase interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -369,7 +369,7 @@ func (j *jsiiProxy_DataSnowflakeDatabase) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/data-sources/database snowflake_database} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/data-sources/database snowflake_database} Data Source.
 func NewDataSnowflakeDatabase(scope constructs.Construct, id *string, config *DataSnowflakeDatabaseConfig) DataSnowflakeDatabase {
 	_init_.Initialize()
 
@@ -387,7 +387,7 @@ func NewDataSnowflakeDatabase(scope constructs.Construct, id *string, config *Da
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/data-sources/database snowflake_database} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/data-sources/database snowflake_database} Data Source.
 func NewDataSnowflakeDatabase_Override(d DataSnowflakeDatabase, scope constructs.Construct, id *string, config *DataSnowflakeDatabaseConfig) {
 	_init_.Initialize()
 

@@ -2,14 +2,14 @@ package stagegrant
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/stagegrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/stagegrant/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/stage_grant snowflake_stage_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/stage_grant snowflake_stage_grant}.
 type StageGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -524,7 +524,7 @@ func (j *jsiiProxy_StageGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/stage_grant snowflake_stage_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/stage_grant snowflake_stage_grant} Resource.
 func NewStageGrant(scope constructs.Construct, id *string, config *StageGrantConfig) StageGrant {
 	_init_.Initialize()
 
@@ -542,7 +542,7 @@ func NewStageGrant(scope constructs.Construct, id *string, config *StageGrantCon
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/stage_grant snowflake_stage_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/stage_grant snowflake_stage_grant} Resource.
 func NewStageGrant_Override(s StageGrant, scope constructs.Construct, id *string, config *StageGrantConfig) {
 	_init_.Initialize()
 

@@ -2,14 +2,14 @@ package samlintegration
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/samlintegration/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/samlintegration/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/saml_integration snowflake_saml_integration}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/saml_integration snowflake_saml_integration}.
 type SamlIntegration interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -685,7 +685,7 @@ func (j *jsiiProxy_SamlIntegration) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/saml_integration snowflake_saml_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/saml_integration snowflake_saml_integration} Resource.
 func NewSamlIntegration(scope constructs.Construct, id *string, config *SamlIntegrationConfig) SamlIntegration {
 	_init_.Initialize()
 
@@ -703,7 +703,7 @@ func NewSamlIntegration(scope constructs.Construct, id *string, config *SamlInte
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/saml_integration snowflake_saml_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/saml_integration snowflake_saml_integration} Resource.
 func NewSamlIntegration_Override(s SamlIntegration, scope constructs.Construct, id *string, config *SamlIntegrationConfig) {
 	_init_.Initialize()
 

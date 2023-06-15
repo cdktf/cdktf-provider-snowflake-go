@@ -21,44 +21,44 @@ type MaskingPolicyGrantConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The name of the database containing the masking policy on which to grant privileges.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/masking_policy_grant#database_name MaskingPolicyGrant#database_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/masking_policy_grant#database_name MaskingPolicyGrant#database_name}
 	DatabaseName *string `field:"required" json:"databaseName" yaml:"databaseName"`
 	// The name of the masking policy on which to grant privileges immediately.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/masking_policy_grant#masking_policy_name MaskingPolicyGrant#masking_policy_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/masking_policy_grant#masking_policy_name MaskingPolicyGrant#masking_policy_name}
 	MaskingPolicyName *string `field:"required" json:"maskingPolicyName" yaml:"maskingPolicyName"`
 	// The name of the schema containing the masking policy on which to grant privileges.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/masking_policy_grant#schema_name MaskingPolicyGrant#schema_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/masking_policy_grant#schema_name MaskingPolicyGrant#schema_name}
 	SchemaName *string `field:"required" json:"schemaName" yaml:"schemaName"`
 	// When this is set to true, multiple grants of the same type can be created.
 	//
 	// This will cause Terraform to not revoke grants applied to roles and objects outside Terraform.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/masking_policy_grant#enable_multiple_grants MaskingPolicyGrant#enable_multiple_grants}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/masking_policy_grant#enable_multiple_grants MaskingPolicyGrant#enable_multiple_grants}
 	EnableMultipleGrants interface{} `field:"optional" json:"enableMultipleGrants" yaml:"enableMultipleGrants"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/masking_policy_grant#id MaskingPolicyGrant#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/masking_policy_grant#id MaskingPolicyGrant#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
 	// The privilege to grant on the masking policy. To grant all privileges, use the value `ALL PRIVILEGES`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/masking_policy_grant#privilege MaskingPolicyGrant#privilege}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/masking_policy_grant#privilege MaskingPolicyGrant#privilege}
 	Privilege *string `field:"optional" json:"privilege" yaml:"privilege"`
 	// The name of the role to revert ownership to on destroy.
 	//
 	// Has no effect unless `privilege` is set to `OWNERSHIP`
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/masking_policy_grant#revert_ownership_to_role_name MaskingPolicyGrant#revert_ownership_to_role_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/masking_policy_grant#revert_ownership_to_role_name MaskingPolicyGrant#revert_ownership_to_role_name}
 	RevertOwnershipToRoleName *string `field:"optional" json:"revertOwnershipToRoleName" yaml:"revertOwnershipToRoleName"`
 	// Grants privilege to these roles.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/masking_policy_grant#roles MaskingPolicyGrant#roles}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/masking_policy_grant#roles MaskingPolicyGrant#roles}
 	Roles *[]*string `field:"optional" json:"roles" yaml:"roles"`
 	// When this is set to true, allows the recipient role to grant the privileges to other roles.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/masking_policy_grant#with_grant_option MaskingPolicyGrant#with_grant_option}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/masking_policy_grant#with_grant_option MaskingPolicyGrant#with_grant_option}
 	WithGrantOption interface{} `field:"optional" json:"withGrantOption" yaml:"withGrantOption"`
 }
 

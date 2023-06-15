@@ -2,14 +2,14 @@ package objectparameter
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/objectparameter/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/objectparameter/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/object_parameter snowflake_object_parameter}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/object_parameter snowflake_object_parameter}.
 type ObjectParameter interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -404,7 +404,7 @@ func (j *jsiiProxy_ObjectParameter) ValueInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/object_parameter snowflake_object_parameter} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/object_parameter snowflake_object_parameter} Resource.
 func NewObjectParameter(scope constructs.Construct, id *string, config *ObjectParameterConfig) ObjectParameter {
 	_init_.Initialize()
 
@@ -422,7 +422,7 @@ func NewObjectParameter(scope constructs.Construct, id *string, config *ObjectPa
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/object_parameter snowflake_object_parameter} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/object_parameter snowflake_object_parameter} Resource.
 func NewObjectParameter_Override(o ObjectParameter, scope constructs.Construct, id *string, config *ObjectParameterConfig) {
 	_init_.Initialize()
 

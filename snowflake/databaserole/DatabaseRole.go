@@ -2,14 +2,14 @@ package databaserole
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/databaserole/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/databaserole/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/database_role snowflake_database_role}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/database_role snowflake_database_role}.
 type DatabaseRole interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -356,7 +356,7 @@ func (j *jsiiProxy_DatabaseRole) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/database_role snowflake_database_role} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/database_role snowflake_database_role} Resource.
 func NewDatabaseRole(scope constructs.Construct, id *string, config *DatabaseRoleConfig) DatabaseRole {
 	_init_.Initialize()
 
@@ -374,7 +374,7 @@ func NewDatabaseRole(scope constructs.Construct, id *string, config *DatabaseRol
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/database_role snowflake_database_role} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/database_role snowflake_database_role} Resource.
 func NewDatabaseRole_Override(d DatabaseRole, scope constructs.Construct, id *string, config *DatabaseRoleConfig) {
 	_init_.Initialize()
 

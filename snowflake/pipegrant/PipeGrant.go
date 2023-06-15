@@ -2,14 +2,14 @@ package pipegrant
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/pipegrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/pipegrant/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/pipe_grant snowflake_pipe_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/pipe_grant snowflake_pipe_grant}.
 type PipeGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -501,7 +501,7 @@ func (j *jsiiProxy_PipeGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/pipe_grant snowflake_pipe_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/pipe_grant snowflake_pipe_grant} Resource.
 func NewPipeGrant(scope constructs.Construct, id *string, config *PipeGrantConfig) PipeGrant {
 	_init_.Initialize()
 
@@ -519,7 +519,7 @@ func NewPipeGrant(scope constructs.Construct, id *string, config *PipeGrantConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/pipe_grant snowflake_pipe_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/pipe_grant snowflake_pipe_grant} Resource.
 func NewPipeGrant_Override(p PipeGrant, scope constructs.Construct, id *string, config *PipeGrantConfig) {
 	_init_.Initialize()
 

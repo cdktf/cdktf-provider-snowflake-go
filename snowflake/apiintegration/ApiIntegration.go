@@ -2,14 +2,14 @@ package apiintegration
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/apiintegration/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/apiintegration/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/api_integration snowflake_api_integration}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/api_integration snowflake_api_integration}.
 type ApiIntegration interface {
 	cdktf.TerraformResource
 	ApiAllowedPrefixes() *[]*string
@@ -626,7 +626,7 @@ func (j *jsiiProxy_ApiIntegration) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/api_integration snowflake_api_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/api_integration snowflake_api_integration} Resource.
 func NewApiIntegration(scope constructs.Construct, id *string, config *ApiIntegrationConfig) ApiIntegration {
 	_init_.Initialize()
 
@@ -644,7 +644,7 @@ func NewApiIntegration(scope constructs.Construct, id *string, config *ApiIntegr
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/api_integration snowflake_api_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/api_integration snowflake_api_integration} Resource.
 func NewApiIntegration_Override(a ApiIntegration, scope constructs.Construct, id *string, config *ApiIntegrationConfig) {
 	_init_.Initialize()
 

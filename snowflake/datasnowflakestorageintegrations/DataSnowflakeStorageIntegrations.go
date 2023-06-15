@@ -2,14 +2,14 @@ package datasnowflakestorageintegrations
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/datasnowflakestorageintegrations/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/datasnowflakestorageintegrations/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/data-sources/storage_integrations snowflake_storage_integrations}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/data-sources/storage_integrations snowflake_storage_integrations}.
 type DataSnowflakeStorageIntegrations interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -269,7 +269,7 @@ func (j *jsiiProxy_DataSnowflakeStorageIntegrations) TerraformResourceType() *st
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/data-sources/storage_integrations snowflake_storage_integrations} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/data-sources/storage_integrations snowflake_storage_integrations} Data Source.
 func NewDataSnowflakeStorageIntegrations(scope constructs.Construct, id *string, config *DataSnowflakeStorageIntegrationsConfig) DataSnowflakeStorageIntegrations {
 	_init_.Initialize()
 
@@ -287,7 +287,7 @@ func NewDataSnowflakeStorageIntegrations(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/data-sources/storage_integrations snowflake_storage_integrations} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/data-sources/storage_integrations snowflake_storage_integrations} Data Source.
 func NewDataSnowflakeStorageIntegrations_Override(d DataSnowflakeStorageIntegrations, scope constructs.Construct, id *string, config *DataSnowflakeStorageIntegrationsConfig) {
 	_init_.Initialize()
 

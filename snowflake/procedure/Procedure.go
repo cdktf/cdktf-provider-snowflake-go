@@ -2,14 +2,14 @@ package procedure
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/procedure/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/procedure/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/procedure snowflake_procedure}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/procedure snowflake_procedure}.
 type Procedure interface {
 	cdktf.TerraformResource
 	Arguments() ProcedureArgumentsList
@@ -641,7 +641,7 @@ func (j *jsiiProxy_Procedure) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/procedure snowflake_procedure} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/procedure snowflake_procedure} Resource.
 func NewProcedure(scope constructs.Construct, id *string, config *ProcedureConfig) Procedure {
 	_init_.Initialize()
 
@@ -659,7 +659,7 @@ func NewProcedure(scope constructs.Construct, id *string, config *ProcedureConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/procedure snowflake_procedure} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/procedure snowflake_procedure} Resource.
 func NewProcedure_Override(p Procedure, scope constructs.Construct, id *string, config *ProcedureConfig) {
 	_init_.Initialize()
 

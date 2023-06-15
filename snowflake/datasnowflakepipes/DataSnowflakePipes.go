@@ -2,14 +2,14 @@ package datasnowflakepipes
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/datasnowflakepipes/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/datasnowflakepipes/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/data-sources/pipes snowflake_pipes}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/data-sources/pipes snowflake_pipes}.
 type DataSnowflakePipes interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -315,7 +315,7 @@ func (j *jsiiProxy_DataSnowflakePipes) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/data-sources/pipes snowflake_pipes} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/data-sources/pipes snowflake_pipes} Data Source.
 func NewDataSnowflakePipes(scope constructs.Construct, id *string, config *DataSnowflakePipesConfig) DataSnowflakePipes {
 	_init_.Initialize()
 
@@ -333,7 +333,7 @@ func NewDataSnowflakePipes(scope constructs.Construct, id *string, config *DataS
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/data-sources/pipes snowflake_pipes} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/data-sources/pipes snowflake_pipes} Data Source.
 func NewDataSnowflakePipes_Override(d DataSnowflakePipes, scope constructs.Construct, id *string, config *DataSnowflakePipesConfig) {
 	_init_.Initialize()
 

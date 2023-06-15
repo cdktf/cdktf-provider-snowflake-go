@@ -2,14 +2,14 @@ package rolegrants
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v6/rolegrants/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/rolegrants/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/role_grants snowflake_role_grants}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/role_grants snowflake_role_grants}.
 type RoleGrants interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -381,7 +381,7 @@ func (j *jsiiProxy_RoleGrants) UsersInput() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/role_grants snowflake_role_grants} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/role_grants snowflake_role_grants} Resource.
 func NewRoleGrants(scope constructs.Construct, id *string, config *RoleGrantsConfig) RoleGrants {
 	_init_.Initialize()
 
@@ -399,7 +399,7 @@ func NewRoleGrants(scope constructs.Construct, id *string, config *RoleGrantsCon
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.1/docs/resources/role_grants snowflake_role_grants} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/role_grants snowflake_role_grants} Resource.
 func NewRoleGrants_Override(r RoleGrants, scope constructs.Construct, id *string, config *RoleGrantsConfig) {
 	_init_.Initialize()
 
