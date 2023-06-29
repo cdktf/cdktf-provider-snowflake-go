@@ -2,14 +2,14 @@ package stage
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/stage/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/stage/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/stage snowflake_stage}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/stage snowflake_stage}.
 type Stage interface {
 	cdktf.TerraformResource
 	AwsExternalId() *string
@@ -619,7 +619,7 @@ func (j *jsiiProxy_Stage) UrlInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/stage snowflake_stage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/stage snowflake_stage} Resource.
 func NewStage(scope constructs.Construct, id *string, config *StageConfig) Stage {
 	_init_.Initialize()
 
@@ -637,7 +637,7 @@ func NewStage(scope constructs.Construct, id *string, config *StageConfig) Stage
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/stage snowflake_stage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/stage snowflake_stage} Resource.
 func NewStage_Override(s Stage, scope constructs.Construct, id *string, config *StageConfig) {
 	_init_.Initialize()
 

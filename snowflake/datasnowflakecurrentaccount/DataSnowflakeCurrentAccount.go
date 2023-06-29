@@ -2,14 +2,14 @@ package datasnowflakecurrentaccount
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/datasnowflakecurrentaccount/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/datasnowflakecurrentaccount/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/data-sources/current_account snowflake_current_account}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/data-sources/current_account snowflake_current_account}.
 type DataSnowflakeCurrentAccount interface {
 	cdktf.TerraformDataSource
 	Account() *string
@@ -291,7 +291,7 @@ func (j *jsiiProxy_DataSnowflakeCurrentAccount) Url() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/data-sources/current_account snowflake_current_account} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/data-sources/current_account snowflake_current_account} Data Source.
 func NewDataSnowflakeCurrentAccount(scope constructs.Construct, id *string, config *DataSnowflakeCurrentAccountConfig) DataSnowflakeCurrentAccount {
 	_init_.Initialize()
 
@@ -309,7 +309,7 @@ func NewDataSnowflakeCurrentAccount(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/data-sources/current_account snowflake_current_account} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/data-sources/current_account snowflake_current_account} Data Source.
 func NewDataSnowflakeCurrentAccount_Override(d DataSnowflakeCurrentAccount, scope constructs.Construct, id *string, config *DataSnowflakeCurrentAccountConfig) {
 	_init_.Initialize()
 

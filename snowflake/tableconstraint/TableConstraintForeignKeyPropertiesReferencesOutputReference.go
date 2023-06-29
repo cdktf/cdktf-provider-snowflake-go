@@ -2,9 +2,9 @@ package tableconstraint
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/jsii"
 
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/tableconstraint/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/tableconstraint/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 

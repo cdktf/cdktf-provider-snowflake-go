@@ -2,14 +2,14 @@ package userpublickeys
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/userpublickeys/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/userpublickeys/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/user_public_keys snowflake_user_public_keys}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/user_public_keys snowflake_user_public_keys}.
 type UserPublicKeys interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -357,7 +357,7 @@ func (j *jsiiProxy_UserPublicKeys) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/user_public_keys snowflake_user_public_keys} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/user_public_keys snowflake_user_public_keys} Resource.
 func NewUserPublicKeys(scope constructs.Construct, id *string, config *UserPublicKeysConfig) UserPublicKeys {
 	_init_.Initialize()
 
@@ -375,7 +375,7 @@ func NewUserPublicKeys(scope constructs.Construct, id *string, config *UserPubli
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/user_public_keys snowflake_user_public_keys} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/user_public_keys snowflake_user_public_keys} Resource.
 func NewUserPublicKeys_Override(u UserPublicKeys, scope constructs.Construct, id *string, config *UserPublicKeysConfig) {
 	_init_.Initialize()
 

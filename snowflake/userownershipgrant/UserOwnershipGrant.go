@@ -2,14 +2,14 @@ package userownershipgrant
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/userownershipgrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/userownershipgrant/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/user_ownership_grant snowflake_user_ownership_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/user_ownership_grant snowflake_user_ownership_grant}.
 type UserOwnershipGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -380,7 +380,7 @@ func (j *jsiiProxy_UserOwnershipGrant) ToRoleNameInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/user_ownership_grant snowflake_user_ownership_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/user_ownership_grant snowflake_user_ownership_grant} Resource.
 func NewUserOwnershipGrant(scope constructs.Construct, id *string, config *UserOwnershipGrantConfig) UserOwnershipGrant {
 	_init_.Initialize()
 
@@ -398,7 +398,7 @@ func NewUserOwnershipGrant(scope constructs.Construct, id *string, config *UserO
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/user_ownership_grant snowflake_user_ownership_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/user_ownership_grant snowflake_user_ownership_grant} Resource.
 func NewUserOwnershipGrant_Override(u UserOwnershipGrant, scope constructs.Construct, id *string, config *UserOwnershipGrantConfig) {
 	_init_.Initialize()
 

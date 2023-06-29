@@ -2,14 +2,14 @@ package datasnowflakesystemgetsnowflakeplatforminfo
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/datasnowflakesystemgetsnowflakeplatforminfo/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/datasnowflakesystemgetsnowflakeplatforminfo/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/data-sources/system_get_snowflake_platform_info snowflake_system_get_snowflake_platform_info}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/data-sources/system_get_snowflake_platform_info snowflake_system_get_snowflake_platform_info}.
 type DataSnowflakeSystemGetSnowflakePlatformInfo interface {
 	cdktf.TerraformDataSource
 	AwsVpcIds() *[]*string
@@ -280,7 +280,7 @@ func (j *jsiiProxy_DataSnowflakeSystemGetSnowflakePlatformInfo) TerraformResourc
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/data-sources/system_get_snowflake_platform_info snowflake_system_get_snowflake_platform_info} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/data-sources/system_get_snowflake_platform_info snowflake_system_get_snowflake_platform_info} Data Source.
 func NewDataSnowflakeSystemGetSnowflakePlatformInfo(scope constructs.Construct, id *string, config *DataSnowflakeSystemGetSnowflakePlatformInfoConfig) DataSnowflakeSystemGetSnowflakePlatformInfo {
 	_init_.Initialize()
 
@@ -298,7 +298,7 @@ func NewDataSnowflakeSystemGetSnowflakePlatformInfo(scope constructs.Construct, 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/data-sources/system_get_snowflake_platform_info snowflake_system_get_snowflake_platform_info} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/data-sources/system_get_snowflake_platform_info snowflake_system_get_snowflake_platform_info} Data Source.
 func NewDataSnowflakeSystemGetSnowflakePlatformInfo_Override(d DataSnowflakeSystemGetSnowflakePlatformInfo, scope constructs.Construct, id *string, config *DataSnowflakeSystemGetSnowflakePlatformInfoConfig) {
 	_init_.Initialize()
 

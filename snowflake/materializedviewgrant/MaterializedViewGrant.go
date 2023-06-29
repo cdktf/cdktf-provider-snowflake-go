@@ -2,14 +2,14 @@ package materializedviewgrant
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/materializedviewgrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/materializedviewgrant/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/materialized_view_grant snowflake_materialized_view_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/materialized_view_grant snowflake_materialized_view_grant}.
 type MaterializedViewGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -549,7 +549,7 @@ func (j *jsiiProxy_MaterializedViewGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/materialized_view_grant snowflake_materialized_view_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/materialized_view_grant snowflake_materialized_view_grant} Resource.
 func NewMaterializedViewGrant(scope constructs.Construct, id *string, config *MaterializedViewGrantConfig) MaterializedViewGrant {
 	_init_.Initialize()
 
@@ -567,7 +567,7 @@ func NewMaterializedViewGrant(scope constructs.Construct, id *string, config *Ma
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/materialized_view_grant snowflake_materialized_view_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/materialized_view_grant snowflake_materialized_view_grant} Resource.
 func NewMaterializedViewGrant_Override(m MaterializedViewGrant, scope constructs.Construct, id *string, config *MaterializedViewGrantConfig) {
 	_init_.Initialize()
 

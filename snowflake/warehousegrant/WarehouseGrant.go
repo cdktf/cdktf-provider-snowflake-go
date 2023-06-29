@@ -2,14 +2,14 @@ package warehousegrant
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v7/warehousegrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/warehousegrant/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/warehouse_grant snowflake_warehouse_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/warehouse_grant snowflake_warehouse_grant}.
 type WarehouseGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -429,7 +429,7 @@ func (j *jsiiProxy_WarehouseGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/warehouse_grant snowflake_warehouse_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/warehouse_grant snowflake_warehouse_grant} Resource.
 func NewWarehouseGrant(scope constructs.Construct, id *string, config *WarehouseGrantConfig) WarehouseGrant {
 	_init_.Initialize()
 
@@ -447,7 +447,7 @@ func NewWarehouseGrant(scope constructs.Construct, id *string, config *Warehouse
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.66.2/docs/resources/warehouse_grant snowflake_warehouse_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/warehouse_grant snowflake_warehouse_grant} Resource.
 func NewWarehouseGrant_Override(w WarehouseGrant, scope constructs.Construct, id *string, config *WarehouseGrantConfig) {
 	_init_.Initialize()
 
