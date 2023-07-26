@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/masking_policy_grant snowflake_masking_policy_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/masking_policy_grant snowflake_masking_policy_grant}.
 type MaskingPolicyGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -475,7 +475,7 @@ func (j *jsiiProxy_MaskingPolicyGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/masking_policy_grant snowflake_masking_policy_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/masking_policy_grant snowflake_masking_policy_grant} Resource.
 func NewMaskingPolicyGrant(scope constructs.Construct, id *string, config *MaskingPolicyGrantConfig) MaskingPolicyGrant {
 	_init_.Initialize()
 
@@ -493,7 +493,7 @@ func NewMaskingPolicyGrant(scope constructs.Construct, id *string, config *Maski
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/masking_policy_grant snowflake_masking_policy_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/masking_policy_grant snowflake_masking_policy_grant} Resource.
 func NewMaskingPolicyGrant_Override(m MaskingPolicyGrant, scope constructs.Construct, id *string, config *MaskingPolicyGrantConfig) {
 	_init_.Initialize()
 

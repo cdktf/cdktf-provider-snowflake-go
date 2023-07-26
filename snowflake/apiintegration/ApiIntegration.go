@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/api_integration snowflake_api_integration}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/api_integration snowflake_api_integration}.
 type ApiIntegration interface {
 	cdktf.TerraformResource
 	ApiAllowedPrefixes() *[]*string
@@ -626,7 +626,7 @@ func (j *jsiiProxy_ApiIntegration) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/api_integration snowflake_api_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/api_integration snowflake_api_integration} Resource.
 func NewApiIntegration(scope constructs.Construct, id *string, config *ApiIntegrationConfig) ApiIntegration {
 	_init_.Initialize()
 
@@ -644,7 +644,7 @@ func NewApiIntegration(scope constructs.Construct, id *string, config *ApiIntegr
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/api_integration snowflake_api_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/api_integration snowflake_api_integration} Resource.
 func NewApiIntegration_Override(a ApiIntegration, scope constructs.Construct, id *string, config *ApiIntegrationConfig) {
 	_init_.Initialize()
 

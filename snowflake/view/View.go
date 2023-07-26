@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/view snowflake_view}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/view snowflake_view}.
 type View interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -30,6 +30,7 @@ type View interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
+	CreatedOn() *string
 	Database() *string
 	SetDatabase(val *string)
 	DatabaseInput() *string
@@ -212,6 +213,16 @@ func (j *jsiiProxy_View) Count() interface{} {
 	_jsii_.Get(
 		j,
 		"count",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_View) CreatedOn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"createdOn",
 		&returns,
 	)
 	return returns
@@ -498,7 +509,7 @@ func (j *jsiiProxy_View) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/view snowflake_view} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/view snowflake_view} Resource.
 func NewView(scope constructs.Construct, id *string, config *ViewConfig) View {
 	_init_.Initialize()
 
@@ -516,7 +527,7 @@ func NewView(scope constructs.Construct, id *string, config *ViewConfig) View {
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/view snowflake_view} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/view snowflake_view} Resource.
 func NewView_Override(v View, scope constructs.Construct, id *string, config *ViewConfig) {
 	_init_.Initialize()
 

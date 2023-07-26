@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/file_format_grant snowflake_file_format_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/file_format_grant snowflake_file_format_grant}.
 type FileFormatGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -524,7 +524,7 @@ func (j *jsiiProxy_FileFormatGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/file_format_grant snowflake_file_format_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/file_format_grant snowflake_file_format_grant} Resource.
 func NewFileFormatGrant(scope constructs.Construct, id *string, config *FileFormatGrantConfig) FileFormatGrant {
 	_init_.Initialize()
 
@@ -542,7 +542,7 @@ func NewFileFormatGrant(scope constructs.Construct, id *string, config *FileForm
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs/resources/file_format_grant snowflake_file_format_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/file_format_grant snowflake_file_format_grant} Resource.
 func NewFileFormatGrant_Override(f FileFormatGrant, scope constructs.Construct, id *string, config *FileFormatGrantConfig) {
 	_init_.Initialize()
 

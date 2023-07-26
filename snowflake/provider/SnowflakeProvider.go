@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs snowflake}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs snowflake}.
 type SnowflakeProvider interface {
 	cdktf.TerraformProvider
 	Account() *string
@@ -86,6 +86,9 @@ type SnowflakeProvider interface {
 	Role() *string
 	SetRole(val *string)
 	RoleInput() *string
+	SessionParams() *map[string]*string
+	SetSessionParams(val *map[string]*string)
+	SessionParamsInput() *map[string]*string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -126,6 +129,7 @@ type SnowflakeProvider interface {
 	ResetProtocol()
 	ResetRegion()
 	ResetRole()
+	ResetSessionParams()
 	ResetUsername()
 	ResetWarehouse()
 	SynthesizeAttributes() *map[string]interface{}
@@ -613,6 +617,26 @@ func (j *jsiiProxy_SnowflakeProvider) RoleInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_SnowflakeProvider) SessionParams() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"sessionParams",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) SessionParamsInput() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"sessionParamsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_SnowflakeProvider) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -684,7 +708,7 @@ func (j *jsiiProxy_SnowflakeProvider) WarehouseInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs snowflake} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs snowflake} Resource.
 func NewSnowflakeProvider(scope constructs.Construct, id *string, config *SnowflakeProviderConfig) SnowflakeProvider {
 	_init_.Initialize()
 
@@ -702,7 +726,7 @@ func NewSnowflakeProvider(scope constructs.Construct, id *string, config *Snowfl
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.67.0/docs snowflake} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs snowflake} Resource.
 func NewSnowflakeProvider_Override(s SnowflakeProvider, scope constructs.Construct, id *string, config *SnowflakeProviderConfig) {
 	_init_.Initialize()
 
@@ -875,6 +899,14 @@ func (j *jsiiProxy_SnowflakeProvider)SetRole(val *string) {
 	_jsii_.Set(
 		j,
 		"role",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetSessionParams(val *map[string]*string) {
+	_jsii_.Set(
+		j,
+		"sessionParams",
 		val,
 	)
 }
@@ -1165,6 +1197,14 @@ func (s *jsiiProxy_SnowflakeProvider) ResetRole() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetRole",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetSessionParams() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetSessionParams",
 		nil, // no parameters
 	)
 }
