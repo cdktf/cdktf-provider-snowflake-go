@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package resourcemonitorgrant
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/resourcemonitorgrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/resourcemonitorgrant/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/resource_monitor_grant snowflake_resource_monitor_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/resource_monitor_grant snowflake_resource_monitor_grant}.
 type ResourceMonitorGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -405,7 +408,7 @@ func (j *jsiiProxy_ResourceMonitorGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/resource_monitor_grant snowflake_resource_monitor_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/resource_monitor_grant snowflake_resource_monitor_grant} Resource.
 func NewResourceMonitorGrant(scope constructs.Construct, id *string, config *ResourceMonitorGrantConfig) ResourceMonitorGrant {
 	_init_.Initialize()
 
@@ -423,7 +426,7 @@ func NewResourceMonitorGrant(scope constructs.Construct, id *string, config *Res
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/resource_monitor_grant snowflake_resource_monitor_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/resource_monitor_grant snowflake_resource_monitor_grant} Resource.
 func NewResourceMonitorGrant_Override(r ResourceMonitorGrant, scope constructs.Construct, id *string, config *ResourceMonitorGrantConfig) {
 	_init_.Initialize()
 

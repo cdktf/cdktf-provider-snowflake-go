@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package datasnowflakesequences
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/datasnowflakesequences/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/datasnowflakesequences/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/data-sources/sequences snowflake_sequences}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/data-sources/sequences snowflake_sequences}.
 type DataSnowflakeSequences interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -315,7 +318,7 @@ func (j *jsiiProxy_DataSnowflakeSequences) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/data-sources/sequences snowflake_sequences} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/data-sources/sequences snowflake_sequences} Data Source.
 func NewDataSnowflakeSequences(scope constructs.Construct, id *string, config *DataSnowflakeSequencesConfig) DataSnowflakeSequences {
 	_init_.Initialize()
 
@@ -333,7 +336,7 @@ func NewDataSnowflakeSequences(scope constructs.Construct, id *string, config *D
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/data-sources/sequences snowflake_sequences} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/data-sources/sequences snowflake_sequences} Data Source.
 func NewDataSnowflakeSequences_Override(d DataSnowflakeSequences, scope constructs.Construct, id *string, config *DataSnowflakeSequencesConfig) {
 	_init_.Initialize()
 

@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package tagmaskingpolicyassociation
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/tagmaskingpolicyassociation/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/tagmaskingpolicyassociation/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/tag_masking_policy_association snowflake_tag_masking_policy_association}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/tag_masking_policy_association snowflake_tag_masking_policy_association}.
 type TagMaskingPolicyAssociation interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -332,7 +335,7 @@ func (j *jsiiProxy_TagMaskingPolicyAssociation) TerraformResourceType() *string 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/tag_masking_policy_association snowflake_tag_masking_policy_association} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/tag_masking_policy_association snowflake_tag_masking_policy_association} Resource.
 func NewTagMaskingPolicyAssociation(scope constructs.Construct, id *string, config *TagMaskingPolicyAssociationConfig) TagMaskingPolicyAssociation {
 	_init_.Initialize()
 
@@ -350,7 +353,7 @@ func NewTagMaskingPolicyAssociation(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/tag_masking_policy_association snowflake_tag_masking_policy_association} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/tag_masking_policy_association snowflake_tag_masking_policy_association} Resource.
 func NewTagMaskingPolicyAssociation_Override(t TagMaskingPolicyAssociation, scope constructs.Construct, id *string, config *TagMaskingPolicyAssociationConfig) {
 	_init_.Initialize()
 

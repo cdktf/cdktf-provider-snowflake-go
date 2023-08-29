@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package tablegrant
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/tablegrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/tablegrant/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/table_grant snowflake_table_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/table_grant snowflake_table_grant}.
 type TableGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -549,7 +552,7 @@ func (j *jsiiProxy_TableGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/table_grant snowflake_table_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/table_grant snowflake_table_grant} Resource.
 func NewTableGrant(scope constructs.Construct, id *string, config *TableGrantConfig) TableGrant {
 	_init_.Initialize()
 
@@ -567,7 +570,7 @@ func NewTableGrant(scope constructs.Construct, id *string, config *TableGrantCon
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/table_grant snowflake_table_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/table_grant snowflake_table_grant} Resource.
 func NewTableGrant_Override(t TableGrant, scope constructs.Construct, id *string, config *TableGrantConfig) {
 	_init_.Initialize()
 

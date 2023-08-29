@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package datasnowflakedatabases
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/datasnowflakedatabases/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/datasnowflakedatabases/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/data-sources/databases snowflake_databases}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/data-sources/databases snowflake_databases}.
 type DataSnowflakeDatabases interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -365,7 +368,7 @@ func (j *jsiiProxy_DataSnowflakeDatabases) TerseInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/data-sources/databases snowflake_databases} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/data-sources/databases snowflake_databases} Data Source.
 func NewDataSnowflakeDatabases(scope constructs.Construct, id *string, config *DataSnowflakeDatabasesConfig) DataSnowflakeDatabases {
 	_init_.Initialize()
 
@@ -383,7 +386,7 @@ func NewDataSnowflakeDatabases(scope constructs.Construct, id *string, config *D
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/data-sources/databases snowflake_databases} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/data-sources/databases snowflake_databases} Data Source.
 func NewDataSnowflakeDatabases_Override(d DataSnowflakeDatabases, scope constructs.Construct, id *string, config *DataSnowflakeDatabasesConfig) {
 	_init_.Initialize()
 

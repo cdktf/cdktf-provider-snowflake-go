@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package datasnowflakerole
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/datasnowflakerole/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/datasnowflakerole/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/data-sources/role snowflake_role}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/data-sources/role snowflake_role}.
 type DataSnowflakeRole interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -292,7 +295,7 @@ func (j *jsiiProxy_DataSnowflakeRole) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/data-sources/role snowflake_role} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/data-sources/role snowflake_role} Data Source.
 func NewDataSnowflakeRole(scope constructs.Construct, id *string, config *DataSnowflakeRoleConfig) DataSnowflakeRole {
 	_init_.Initialize()
 
@@ -310,7 +313,7 @@ func NewDataSnowflakeRole(scope constructs.Construct, id *string, config *DataSn
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/data-sources/role snowflake_role} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/data-sources/role snowflake_role} Data Source.
 func NewDataSnowflakeRole_Override(d DataSnowflakeRole, scope constructs.Construct, id *string, config *DataSnowflakeRoleConfig) {
 	_init_.Initialize()
 

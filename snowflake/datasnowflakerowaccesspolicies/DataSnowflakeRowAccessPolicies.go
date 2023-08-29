@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package datasnowflakerowaccesspolicies
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/datasnowflakerowaccesspolicies/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/datasnowflakerowaccesspolicies/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/data-sources/row_access_policies snowflake_row_access_policies}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/data-sources/row_access_policies snowflake_row_access_policies}.
 type DataSnowflakeRowAccessPolicies interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -315,7 +318,7 @@ func (j *jsiiProxy_DataSnowflakeRowAccessPolicies) TerraformResourceType() *stri
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/data-sources/row_access_policies snowflake_row_access_policies} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/data-sources/row_access_policies snowflake_row_access_policies} Data Source.
 func NewDataSnowflakeRowAccessPolicies(scope constructs.Construct, id *string, config *DataSnowflakeRowAccessPoliciesConfig) DataSnowflakeRowAccessPolicies {
 	_init_.Initialize()
 
@@ -333,7 +336,7 @@ func NewDataSnowflakeRowAccessPolicies(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/data-sources/row_access_policies snowflake_row_access_policies} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/data-sources/row_access_policies snowflake_row_access_policies} Data Source.
 func NewDataSnowflakeRowAccessPolicies_Override(d DataSnowflakeRowAccessPolicies, scope constructs.Construct, id *string, config *DataSnowflakeRowAccessPoliciesConfig) {
 	_init_.Initialize()
 

@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package networkpolicy
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/networkpolicy/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/networkpolicy/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/network_policy snowflake_network_policy}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/network_policy snowflake_network_policy}.
 type NetworkPolicy interface {
 	cdktf.TerraformResource
 	AllowedIpList() *[]*string
@@ -380,7 +383,7 @@ func (j *jsiiProxy_NetworkPolicy) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/network_policy snowflake_network_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/network_policy snowflake_network_policy} Resource.
 func NewNetworkPolicy(scope constructs.Construct, id *string, config *NetworkPolicyConfig) NetworkPolicy {
 	_init_.Initialize()
 
@@ -398,7 +401,7 @@ func NewNetworkPolicy(scope constructs.Construct, id *string, config *NetworkPol
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/network_policy snowflake_network_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/network_policy snowflake_network_policy} Resource.
 func NewNetworkPolicy_Override(n NetworkPolicy, scope constructs.Construct, id *string, config *NetworkPolicyConfig) {
 	_init_.Initialize()
 

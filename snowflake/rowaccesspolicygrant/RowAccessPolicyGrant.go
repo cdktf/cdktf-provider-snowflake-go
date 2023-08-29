@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package rowaccesspolicygrant
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/rowaccesspolicygrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/rowaccesspolicygrant/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/row_access_policy_grant snowflake_row_access_policy_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/row_access_policy_grant snowflake_row_access_policy_grant}.
 type RowAccessPolicyGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -475,7 +478,7 @@ func (j *jsiiProxy_RowAccessPolicyGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/row_access_policy_grant snowflake_row_access_policy_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/row_access_policy_grant snowflake_row_access_policy_grant} Resource.
 func NewRowAccessPolicyGrant(scope constructs.Construct, id *string, config *RowAccessPolicyGrantConfig) RowAccessPolicyGrant {
 	_init_.Initialize()
 
@@ -493,7 +496,7 @@ func NewRowAccessPolicyGrant(scope constructs.Construct, id *string, config *Row
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/row_access_policy_grant snowflake_row_access_policy_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/row_access_policy_grant snowflake_row_access_policy_grant} Resource.
 func NewRowAccessPolicyGrant_Override(r RowAccessPolicyGrant, scope constructs.Construct, id *string, config *RowAccessPolicyGrantConfig) {
 	_init_.Initialize()
 

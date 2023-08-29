@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package datasnowflakealerts
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/datasnowflakealerts/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/datasnowflakealerts/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/data-sources/alerts snowflake_alerts}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/data-sources/alerts snowflake_alerts}.
 type DataSnowflakeAlerts interface {
 	cdktf.TerraformDataSource
 	Alerts() DataSnowflakeAlertsAlertsList
@@ -341,7 +344,7 @@ func (j *jsiiProxy_DataSnowflakeAlerts) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/data-sources/alerts snowflake_alerts} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/data-sources/alerts snowflake_alerts} Data Source.
 func NewDataSnowflakeAlerts(scope constructs.Construct, id *string, config *DataSnowflakeAlertsConfig) DataSnowflakeAlerts {
 	_init_.Initialize()
 
@@ -359,7 +362,7 @@ func NewDataSnowflakeAlerts(scope constructs.Construct, id *string, config *Data
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/data-sources/alerts snowflake_alerts} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/data-sources/alerts snowflake_alerts} Data Source.
 func NewDataSnowflakeAlerts_Override(d DataSnowflakeAlerts, scope constructs.Construct, id *string, config *DataSnowflakeAlertsConfig) {
 	_init_.Initialize()
 

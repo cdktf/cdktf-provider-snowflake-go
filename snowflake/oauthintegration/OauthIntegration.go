@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package oauthintegration
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/oauthintegration/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/oauthintegration/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/oauth_integration snowflake_oauth_integration}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/oauth_integration snowflake_oauth_integration}.
 type OauthIntegration interface {
 	cdktf.TerraformResource
 	BlockedRolesList() *[]*string
@@ -535,7 +538,7 @@ func (j *jsiiProxy_OauthIntegration) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/oauth_integration snowflake_oauth_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/oauth_integration snowflake_oauth_integration} Resource.
 func NewOauthIntegration(scope constructs.Construct, id *string, config *OauthIntegrationConfig) OauthIntegration {
 	_init_.Initialize()
 
@@ -553,7 +556,7 @@ func NewOauthIntegration(scope constructs.Construct, id *string, config *OauthIn
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/oauth_integration snowflake_oauth_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/oauth_integration snowflake_oauth_integration} Resource.
 func NewOauthIntegration_Override(o OauthIntegration, scope constructs.Construct, id *string, config *OauthIntegrationConfig) {
 	_init_.Initialize()
 

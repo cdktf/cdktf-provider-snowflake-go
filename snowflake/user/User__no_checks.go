@@ -1,3 +1,6 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 //go:build no_runtime_type_checking
 
 package user
@@ -49,10 +52,6 @@ func (u *jsiiProxy_User) validateInterpolationForAttributeParameters(terraformAt
 }
 
 func (u *jsiiProxy_User) validateOverrideLogicalIdParameters(newLogicalId *string) error {
-	return nil
-}
-
-func (u *jsiiProxy_User) validatePutTagParameters(value interface{}) error {
 	return nil
 }
 

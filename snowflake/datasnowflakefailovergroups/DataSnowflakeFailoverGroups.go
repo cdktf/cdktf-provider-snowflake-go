@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package datasnowflakefailovergroups
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/datasnowflakefailovergroups/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/datasnowflakefailovergroups/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/data-sources/failover_groups snowflake_failover_groups}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/data-sources/failover_groups snowflake_failover_groups}.
 type DataSnowflakeFailoverGroups interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -293,7 +296,7 @@ func (j *jsiiProxy_DataSnowflakeFailoverGroups) TerraformResourceType() *string 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/data-sources/failover_groups snowflake_failover_groups} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/data-sources/failover_groups snowflake_failover_groups} Data Source.
 func NewDataSnowflakeFailoverGroups(scope constructs.Construct, id *string, config *DataSnowflakeFailoverGroupsConfig) DataSnowflakeFailoverGroups {
 	_init_.Initialize()
 
@@ -311,7 +314,7 @@ func NewDataSnowflakeFailoverGroups(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/data-sources/failover_groups snowflake_failover_groups} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/data-sources/failover_groups snowflake_failover_groups} Data Source.
 func NewDataSnowflakeFailoverGroups_Override(d DataSnowflakeFailoverGroups, scope constructs.Construct, id *string, config *DataSnowflakeFailoverGroupsConfig) {
 	_init_.Initialize()
 

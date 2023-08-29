@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package user
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/user/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/user/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/user snowflake_user}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/user snowflake_user}.
 type User interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -104,8 +107,6 @@ type User interface {
 	SetRsaPublicKey2(val *string)
 	RsaPublicKey2Input() *string
 	RsaPublicKeyInput() *string
-	Tag() UserTagList
-	TagInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -137,7 +138,6 @@ type User interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	PutTag(value interface{})
 	ResetComment()
 	ResetDefaultNamespace()
 	ResetDefaultRole()
@@ -157,7 +157,6 @@ type User interface {
 	ResetPassword()
 	ResetRsaPublicKey()
 	ResetRsaPublicKey2()
-	ResetTag()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
 	ToMetadata() interface{}
@@ -653,26 +652,6 @@ func (j *jsiiProxy_User) RsaPublicKeyInput() *string {
 	return returns
 }
 
-func (j *jsiiProxy_User) Tag() UserTagList {
-	var returns UserTagList
-	_jsii_.Get(
-		j,
-		"tag",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_User) TagInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"tagInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_User) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -704,7 +683,7 @@ func (j *jsiiProxy_User) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/user snowflake_user} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/user snowflake_user} Resource.
 func NewUser(scope constructs.Construct, id *string, config *UserConfig) User {
 	_init_.Initialize()
 
@@ -722,7 +701,7 @@ func NewUser(scope constructs.Construct, id *string, config *UserConfig) User {
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/user snowflake_user} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/user snowflake_user} Resource.
 func NewUser_Override(u User, scope constructs.Construct, id *string, config *UserConfig) {
 	_init_.Initialize()
 
@@ -1254,17 +1233,6 @@ func (u *jsiiProxy_User) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
-func (u *jsiiProxy_User) PutTag(value interface{}) {
-	if err := u.validatePutTagParameters(value); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		u,
-		"putTag",
-		[]interface{}{value},
-	)
-}
-
 func (u *jsiiProxy_User) ResetComment() {
 	_jsii_.InvokeVoid(
 		u,
@@ -1397,14 +1365,6 @@ func (u *jsiiProxy_User) ResetRsaPublicKey2() {
 	_jsii_.InvokeVoid(
 		u,
 		"resetRsaPublicKey2",
-		nil, // no parameters
-	)
-}
-
-func (u *jsiiProxy_User) ResetTag() {
-	_jsii_.InvokeVoid(
-		u,
-		"resetTag",
 		nil, // no parameters
 	)
 }

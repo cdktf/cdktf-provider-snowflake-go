@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package sequence
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/sequence/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/sequence/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/sequence snowflake_sequence}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/sequence snowflake_sequence}.
 type Sequence interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -425,7 +428,7 @@ func (j *jsiiProxy_Sequence) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/sequence snowflake_sequence} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/sequence snowflake_sequence} Resource.
 func NewSequence(scope constructs.Construct, id *string, config *SequenceConfig) Sequence {
 	_init_.Initialize()
 
@@ -443,7 +446,7 @@ func NewSequence(scope constructs.Construct, id *string, config *SequenceConfig)
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/sequence snowflake_sequence} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/sequence snowflake_sequence} Resource.
 func NewSequence_Override(s Sequence, scope constructs.Construct, id *string, config *SequenceConfig) {
 	_init_.Initialize()
 

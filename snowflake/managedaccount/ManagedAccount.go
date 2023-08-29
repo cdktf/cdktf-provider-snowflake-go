@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package managedaccount
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/managedaccount/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/managedaccount/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/managed_account snowflake_managed_account}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/managed_account snowflake_managed_account}.
 type ManagedAccount interface {
 	cdktf.TerraformResource
 	AdminName() *string
@@ -458,7 +461,7 @@ func (j *jsiiProxy_ManagedAccount) Url() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/managed_account snowflake_managed_account} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/managed_account snowflake_managed_account} Resource.
 func NewManagedAccount(scope constructs.Construct, id *string, config *ManagedAccountConfig) ManagedAccount {
 	_init_.Initialize()
 
@@ -476,7 +479,7 @@ func NewManagedAccount(scope constructs.Construct, id *string, config *ManagedAc
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/managed_account snowflake_managed_account} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/managed_account snowflake_managed_account} Resource.
 func NewManagedAccount_Override(m ManagedAccount, scope constructs.Construct, id *string, config *ManagedAccountConfig) {
 	_init_.Initialize()
 

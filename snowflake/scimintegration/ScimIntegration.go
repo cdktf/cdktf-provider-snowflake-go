@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package scimintegration
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v8/scimintegration/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/scimintegration/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/scim_integration snowflake_scim_integration}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/scim_integration snowflake_scim_integration}.
 type ScimIntegration interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -390,7 +393,7 @@ func (j *jsiiProxy_ScimIntegration) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/scim_integration snowflake_scim_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/scim_integration snowflake_scim_integration} Resource.
 func NewScimIntegration(scope constructs.Construct, id *string, config *ScimIntegrationConfig) ScimIntegration {
 	_init_.Initialize()
 
@@ -408,7 +411,7 @@ func NewScimIntegration(scope constructs.Construct, id *string, config *ScimInte
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.68.2/docs/resources/scim_integration snowflake_scim_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/scim_integration snowflake_scim_integration} Resource.
 func NewScimIntegration_Override(s ScimIntegration, scope constructs.Construct, id *string, config *ScimIntegrationConfig) {
 	_init_.Initialize()
 
