@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/email_notification_integration snowflake_email_notification_integration}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.1/docs/resources/email_notification_integration snowflake_email_notification_integration}.
 type EmailNotificationIntegration interface {
 	cdktf.TerraformResource
 	AllowedRecipients() *[]*string
@@ -382,7 +382,7 @@ func (j *jsiiProxy_EmailNotificationIntegration) TerraformResourceType() *string
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/email_notification_integration snowflake_email_notification_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.1/docs/resources/email_notification_integration snowflake_email_notification_integration} Resource.
 func NewEmailNotificationIntegration(scope constructs.Construct, id *string, config *EmailNotificationIntegrationConfig) EmailNotificationIntegration {
 	_init_.Initialize()
 
@@ -400,7 +400,7 @@ func NewEmailNotificationIntegration(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.0/docs/resources/email_notification_integration snowflake_email_notification_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.1/docs/resources/email_notification_integration snowflake_email_notification_integration} Resource.
 func NewEmailNotificationIntegration_Override(e EmailNotificationIntegration, scope constructs.Construct, id *string, config *EmailNotificationIntegrationConfig) {
 	_init_.Initialize()
 
