@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.1/docs/data-sources/roles snowflake_roles}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.71.0/docs/data-sources/roles snowflake_roles}.
 type DataSnowflakeRoles interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -296,7 +296,7 @@ func (j *jsiiProxy_DataSnowflakeRoles) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.1/docs/data-sources/roles snowflake_roles} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.71.0/docs/data-sources/roles snowflake_roles} Data Source.
 func NewDataSnowflakeRoles(scope constructs.Construct, id *string, config *DataSnowflakeRolesConfig) DataSnowflakeRoles {
 	_init_.Initialize()
 
@@ -314,7 +314,7 @@ func NewDataSnowflakeRoles(scope constructs.Construct, id *string, config *DataS
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.1/docs/data-sources/roles snowflake_roles} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.71.0/docs/data-sources/roles snowflake_roles} Data Source.
 func NewDataSnowflakeRoles_Override(d DataSnowflakeRoles, scope constructs.Construct, id *string, config *DataSnowflakeRolesConfig) {
 	_init_.Initialize()
 

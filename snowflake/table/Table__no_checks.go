@@ -107,6 +107,10 @@ func (j *jsiiProxy_Table) validateSetDataRetentionDaysParameters(val *float64) e
 	return nil
 }
 
+func (j *jsiiProxy_Table) validateSetDataRetentionTimeInDaysParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_Table) validateSetIdParameters(val *string) error {
 	return nil
 }

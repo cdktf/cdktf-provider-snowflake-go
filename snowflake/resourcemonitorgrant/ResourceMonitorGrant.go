@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.1/docs/resources/resource_monitor_grant snowflake_resource_monitor_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.71.0/docs/resources/resource_monitor_grant snowflake_resource_monitor_grant}.
 type ResourceMonitorGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -408,7 +408,7 @@ func (j *jsiiProxy_ResourceMonitorGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.1/docs/resources/resource_monitor_grant snowflake_resource_monitor_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.71.0/docs/resources/resource_monitor_grant snowflake_resource_monitor_grant} Resource.
 func NewResourceMonitorGrant(scope constructs.Construct, id *string, config *ResourceMonitorGrantConfig) ResourceMonitorGrant {
 	_init_.Initialize()
 
@@ -426,7 +426,7 @@ func NewResourceMonitorGrant(scope constructs.Construct, id *string, config *Res
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.1/docs/resources/resource_monitor_grant snowflake_resource_monitor_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.71.0/docs/resources/resource_monitor_grant snowflake_resource_monitor_grant} Resource.
 func NewResourceMonitorGrant_Override(r ResourceMonitorGrant, scope constructs.Construct, id *string, config *ResourceMonitorGrantConfig) {
 	_init_.Initialize()
 

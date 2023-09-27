@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.1/docs/resources/table snowflake_table}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.71.0/docs/resources/table snowflake_table}.
 type Table interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -44,6 +44,9 @@ type Table interface {
 	DataRetentionDays() *float64
 	SetDataRetentionDays(val *float64)
 	DataRetentionDaysInput() *float64
+	DataRetentionTimeInDays() *float64
+	SetDataRetentionTimeInDays(val *float64)
+	DataRetentionTimeInDaysInput() *float64
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -125,6 +128,7 @@ type Table interface {
 	ResetClusterBy()
 	ResetComment()
 	ResetDataRetentionDays()
+	ResetDataRetentionTimeInDays()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -301,6 +305,26 @@ func (j *jsiiProxy_Table) DataRetentionDaysInput() *float64 {
 	_jsii_.Get(
 		j,
 		"dataRetentionDaysInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Table) DataRetentionTimeInDays() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"dataRetentionTimeInDays",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Table) DataRetentionTimeInDaysInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"dataRetentionTimeInDaysInput",
 		&returns,
 	)
 	return returns
@@ -547,7 +571,7 @@ func (j *jsiiProxy_Table) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.1/docs/resources/table snowflake_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.71.0/docs/resources/table snowflake_table} Resource.
 func NewTable(scope constructs.Construct, id *string, config *TableConfig) Table {
 	_init_.Initialize()
 
@@ -565,7 +589,7 @@ func NewTable(scope constructs.Construct, id *string, config *TableConfig) Table
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.70.1/docs/resources/table snowflake_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.71.0/docs/resources/table snowflake_table} Resource.
 func NewTable_Override(t Table, scope constructs.Construct, id *string, config *TableConfig) {
 	_init_.Initialize()
 
@@ -649,6 +673,17 @@ func (j *jsiiProxy_Table)SetDataRetentionDays(val *float64) {
 	_jsii_.Set(
 		j,
 		"dataRetentionDays",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Table)SetDataRetentionTimeInDays(val *float64) {
+	if err := j.validateSetDataRetentionTimeInDaysParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"dataRetentionTimeInDays",
 		val,
 	)
 }
@@ -1059,6 +1094,14 @@ func (t *jsiiProxy_Table) ResetDataRetentionDays() {
 	_jsii_.InvokeVoid(
 		t,
 		"resetDataRetentionDays",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_Table) ResetDataRetentionTimeInDays() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetDataRetentionTimeInDays",
 		nil, // no parameters
 	)
 }
