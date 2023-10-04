@@ -284,6 +284,14 @@ func (j *jsiiProxy_Account) validateSetFirstNameParameters(val *string) error {
 	return nil
 }
 
+func (j *jsiiProxy_Account) validateSetGracePeriodInDaysParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_Account) validateSetIdParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

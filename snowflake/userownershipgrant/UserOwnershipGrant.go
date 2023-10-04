@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.71.0/docs/resources/user_ownership_grant snowflake_user_ownership_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.72.0/docs/resources/user_ownership_grant snowflake_user_ownership_grant}.
 type UserOwnershipGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -383,7 +383,7 @@ func (j *jsiiProxy_UserOwnershipGrant) ToRoleNameInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.71.0/docs/resources/user_ownership_grant snowflake_user_ownership_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.72.0/docs/resources/user_ownership_grant snowflake_user_ownership_grant} Resource.
 func NewUserOwnershipGrant(scope constructs.Construct, id *string, config *UserOwnershipGrantConfig) UserOwnershipGrant {
 	_init_.Initialize()
 
@@ -401,7 +401,7 @@ func NewUserOwnershipGrant(scope constructs.Construct, id *string, config *UserO
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.71.0/docs/resources/user_ownership_grant snowflake_user_ownership_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.72.0/docs/resources/user_ownership_grant snowflake_user_ownership_grant} Resource.
 func NewUserOwnershipGrant_Override(u UserOwnershipGrant, scope constructs.Construct, id *string, config *UserOwnershipGrantConfig) {
 	_init_.Initialize()
 

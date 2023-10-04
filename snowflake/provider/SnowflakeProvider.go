@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.71.0/docs snowflake}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.72.0/docs snowflake}.
 type SnowflakeProvider interface {
 	cdktf.TerraformProvider
 	Account() *string
@@ -60,6 +60,12 @@ type SnowflakeProvider interface {
 	OauthRefreshToken() *string
 	SetOauthRefreshToken(val *string)
 	OauthRefreshTokenInput() *string
+	Passcode() *string
+	SetPasscode(val *string)
+	PasscodeInPassword() interface{}
+	SetPasscodeInPassword(val interface{})
+	PasscodeInPasswordInput() interface{}
+	PasscodeInput() *string
 	Password() *string
 	SetPassword(val *string)
 	PasswordInput() *string
@@ -123,6 +129,8 @@ type SnowflakeProvider interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetPasscode()
+	ResetPasscodeInPassword()
 	ResetPassword()
 	ResetPort()
 	ResetPrivateKey()
@@ -430,6 +438,46 @@ func (j *jsiiProxy_SnowflakeProvider) OauthRefreshTokenInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_SnowflakeProvider) Passcode() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"passcode",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) PasscodeInPassword() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"passcodeInPassword",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) PasscodeInPasswordInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"passcodeInPasswordInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) PasscodeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"passcodeInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_SnowflakeProvider) Password() *string {
 	var returns *string
 	_jsii_.Get(
@@ -711,7 +759,7 @@ func (j *jsiiProxy_SnowflakeProvider) WarehouseInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.71.0/docs snowflake} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.72.0/docs snowflake} Resource.
 func NewSnowflakeProvider(scope constructs.Construct, id *string, config *SnowflakeProviderConfig) SnowflakeProvider {
 	_init_.Initialize()
 
@@ -729,7 +777,7 @@ func NewSnowflakeProvider(scope constructs.Construct, id *string, config *Snowfl
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.71.0/docs snowflake} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.72.0/docs snowflake} Resource.
 func NewSnowflakeProvider_Override(s SnowflakeProvider, scope constructs.Construct, id *string, config *SnowflakeProviderConfig) {
 	_init_.Initialize()
 
@@ -830,6 +878,25 @@ func (j *jsiiProxy_SnowflakeProvider)SetOauthRefreshToken(val *string) {
 	_jsii_.Set(
 		j,
 		"oauthRefreshToken",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetPasscode(val *string) {
+	_jsii_.Set(
+		j,
+		"passcode",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetPasscodeInPassword(val interface{}) {
+	if err := j.validateSetPasscodeInPasswordParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"passcodeInPassword",
 		val,
 	)
 }
@@ -1128,6 +1195,22 @@ func (s *jsiiProxy_SnowflakeProvider) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetPasscode() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetPasscode",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetPasscodeInPassword() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetPasscodeInPassword",
 		nil, // no parameters
 	)
 }

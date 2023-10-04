@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.71.0/docs/resources/account snowflake_account}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.72.0/docs/resources/account snowflake_account}.
 type Account interface {
 	cdktf.TerraformResource
 	AdminName() *string
@@ -60,6 +60,9 @@ type Account interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	GracePeriodInDays() *float64
+	SetGracePeriodInDays(val *float64)
+	GracePeriodInDaysInput() *float64
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -130,6 +133,7 @@ type Account interface {
 	ResetAdminRsaPublicKey()
 	ResetComment()
 	ResetFirstName()
+	ResetGracePeriodInDays()
 	ResetId()
 	ResetLastName()
 	ResetMustChangePassword()
@@ -373,6 +377,26 @@ func (j *jsiiProxy_Account) FriendlyUniqueId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Account) GracePeriodInDays() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"gracePeriodInDays",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Account) GracePeriodInDaysInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"gracePeriodInDaysInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Account) Id() *string {
 	var returns *string
 	_jsii_.Get(
@@ -584,7 +608,7 @@ func (j *jsiiProxy_Account) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.71.0/docs/resources/account snowflake_account} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.72.0/docs/resources/account snowflake_account} Resource.
 func NewAccount(scope constructs.Construct, id *string, config *AccountConfig) Account {
 	_init_.Initialize()
 
@@ -602,7 +626,7 @@ func NewAccount(scope constructs.Construct, id *string, config *AccountConfig) A
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.71.0/docs/resources/account snowflake_account} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.72.0/docs/resources/account snowflake_account} Resource.
 func NewAccount_Override(a Account, scope constructs.Construct, id *string, config *AccountConfig) {
 	_init_.Initialize()
 
@@ -724,6 +748,17 @@ func (j *jsiiProxy_Account)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Account)SetGracePeriodInDays(val *float64) {
+	if err := j.validateSetGracePeriodInDaysParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"gracePeriodInDays",
 		val,
 	)
 }
@@ -1118,6 +1153,14 @@ func (a *jsiiProxy_Account) ResetFirstName() {
 	_jsii_.InvokeVoid(
 		a,
 		"resetFirstName",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_Account) ResetGracePeriodInDays() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetGracePeriodInDays",
 		nil, // no parameters
 	)
 }

@@ -103,6 +103,10 @@ func (j *jsiiProxy_Account) validateSetFirstNameParameters(val *string) error {
 	return nil
 }
 
+func (j *jsiiProxy_Account) validateSetGracePeriodInDaysParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_Account) validateSetIdParameters(val *string) error {
 	return nil
 }

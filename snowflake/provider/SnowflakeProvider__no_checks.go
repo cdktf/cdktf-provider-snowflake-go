@@ -35,6 +35,10 @@ func (j *jsiiProxy_SnowflakeProvider) validateSetInsecureModeParameters(val inte
 	return nil
 }
 
+func (j *jsiiProxy_SnowflakeProvider) validateSetPasscodeInPasswordParameters(val interface{}) error {
+	return nil
+}
+
 func validateNewSnowflakeProviderParameters(scope constructs.Construct, id *string, config *SnowflakeProviderConfig) error {
 	return nil
 }

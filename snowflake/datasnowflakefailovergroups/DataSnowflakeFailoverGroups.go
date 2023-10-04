@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.71.0/docs/data-sources/failover_groups snowflake_failover_groups}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.72.0/docs/data-sources/failover_groups snowflake_failover_groups}.
 type DataSnowflakeFailoverGroups interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -296,7 +296,7 @@ func (j *jsiiProxy_DataSnowflakeFailoverGroups) TerraformResourceType() *string 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.71.0/docs/data-sources/failover_groups snowflake_failover_groups} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.72.0/docs/data-sources/failover_groups snowflake_failover_groups} Data Source.
 func NewDataSnowflakeFailoverGroups(scope constructs.Construct, id *string, config *DataSnowflakeFailoverGroupsConfig) DataSnowflakeFailoverGroups {
 	_init_.Initialize()
 
@@ -314,7 +314,7 @@ func NewDataSnowflakeFailoverGroups(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.71.0/docs/data-sources/failover_groups snowflake_failover_groups} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.72.0/docs/data-sources/failover_groups snowflake_failover_groups} Data Source.
 func NewDataSnowflakeFailoverGroups_Override(d DataSnowflakeFailoverGroups, scope constructs.Construct, id *string, config *DataSnowflakeFailoverGroupsConfig) {
 	_init_.Initialize()
 

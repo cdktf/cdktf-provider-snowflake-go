@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.71.0/docs/resources/view_grant snowflake_view_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.72.0/docs/resources/view_grant snowflake_view_grant}.
 type ViewGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -552,7 +552,7 @@ func (j *jsiiProxy_ViewGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.71.0/docs/resources/view_grant snowflake_view_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.72.0/docs/resources/view_grant snowflake_view_grant} Resource.
 func NewViewGrant(scope constructs.Construct, id *string, config *ViewGrantConfig) ViewGrant {
 	_init_.Initialize()
 
@@ -570,7 +570,7 @@ func NewViewGrant(scope constructs.Construct, id *string, config *ViewGrantConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.71.0/docs/resources/view_grant snowflake_view_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.72.0/docs/resources/view_grant snowflake_view_grant} Resource.
 func NewViewGrant_Override(v ViewGrant, scope constructs.Construct, id *string, config *ViewGrantConfig) {
 	_init_.Initialize()
 
