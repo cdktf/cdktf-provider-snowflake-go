@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.72.0/docs/resources/role_ownership_grant snowflake_role_ownership_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.73.0/docs/resources/role_ownership_grant snowflake_role_ownership_grant}.
 type RoleOwnershipGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -383,7 +383,7 @@ func (j *jsiiProxy_RoleOwnershipGrant) ToRoleNameInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.72.0/docs/resources/role_ownership_grant snowflake_role_ownership_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.73.0/docs/resources/role_ownership_grant snowflake_role_ownership_grant} Resource.
 func NewRoleOwnershipGrant(scope constructs.Construct, id *string, config *RoleOwnershipGrantConfig) RoleOwnershipGrant {
 	_init_.Initialize()
 
@@ -401,7 +401,7 @@ func NewRoleOwnershipGrant(scope constructs.Construct, id *string, config *RoleO
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.72.0/docs/resources/role_ownership_grant snowflake_role_ownership_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.73.0/docs/resources/role_ownership_grant snowflake_role_ownership_grant} Resource.
 func NewRoleOwnershipGrant_Override(r RoleOwnershipGrant, scope constructs.Construct, id *string, config *RoleOwnershipGrantConfig) {
 	_init_.Initialize()
 

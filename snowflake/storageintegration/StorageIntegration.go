@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.72.0/docs/resources/storage_integration snowflake_storage_integration}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.73.0/docs/resources/storage_integration snowflake_storage_integration}.
 type StorageIntegration interface {
 	cdktf.TerraformResource
 	AzureConsentUrl() *string
@@ -592,7 +592,7 @@ func (j *jsiiProxy_StorageIntegration) TypeInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.72.0/docs/resources/storage_integration snowflake_storage_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.73.0/docs/resources/storage_integration snowflake_storage_integration} Resource.
 func NewStorageIntegration(scope constructs.Construct, id *string, config *StorageIntegrationConfig) StorageIntegration {
 	_init_.Initialize()
 
@@ -610,7 +610,7 @@ func NewStorageIntegration(scope constructs.Construct, id *string, config *Stora
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.72.0/docs/resources/storage_integration snowflake_storage_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.73.0/docs/resources/storage_integration snowflake_storage_integration} Resource.
 func NewStorageIntegration_Override(s StorageIntegration, scope constructs.Construct, id *string, config *StorageIntegrationConfig) {
 	_init_.Initialize()
 
