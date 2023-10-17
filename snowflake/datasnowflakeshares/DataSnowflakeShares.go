@@ -5,10 +5,10 @@ package datasnowflakeshares
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v10/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/datasnowflakeshares/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v10/datasnowflakeshares/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -391,6 +391,25 @@ func (j *jsiiProxy_DataSnowflakeShares)SetProvider(val cdktf.TerraformProvider) 
 		"provider",
 		val,
 	)
+}
+
+// Generates CDKTF code for importing a DataSnowflakeShares resource upon running "cdktf plan <stack-name>".
+func DataSnowflakeShares_GenerateConfigForImport(scope constructs.Construct, importToId *string, importFromId *string, provider cdktf.TerraformProvider) cdktf.ImportableResource {
+	_init_.Initialize()
+
+	if err := validateDataSnowflakeShares_GenerateConfigForImportParameters(scope, importToId, importFromId); err != nil {
+		panic(err)
+	}
+	var returns cdktf.ImportableResource
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.dataSnowflakeShares.DataSnowflakeShares",
+		"generateConfigForImport",
+		[]interface{}{scope, importToId, importFromId, provider},
+		&returns,
+	)
+
+	return returns
 }
 
 // Checks if `x` is a construct.

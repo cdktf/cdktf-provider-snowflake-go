@@ -7,6 +7,10 @@ package streamgrant
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (s *jsiiProxy_StreamGrant) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_StreamGrant) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,11 +51,23 @@ func (s *jsiiProxy_StreamGrant) validateGetStringMapAttributeParameters(terrafor
 	return nil
 }
 
+func (s *jsiiProxy_StreamGrant) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_StreamGrant) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
+func (s *jsiiProxy_StreamGrant) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
 func (s *jsiiProxy_StreamGrant) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func validateStreamGrant_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

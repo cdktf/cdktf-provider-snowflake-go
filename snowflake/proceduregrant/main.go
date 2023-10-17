@@ -14,6 +14,7 @@ func init() {
 		"@cdktf/provider-snowflake.procedureGrant.ProcedureGrant",
 		reflect.TypeOf((*ProcedureGrant)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addMoveTarget", GoMethod: "AddMoveTarget"},
 			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
 			_jsii_.MemberProperty{JsiiProperty: "argumentDataTypes", GoGetter: "ArgumentDataTypes"},
 			_jsii_.MemberProperty{JsiiProperty: "argumentDataTypesInput", GoGetter: "ArgumentDataTypesInput"},
@@ -40,8 +41,10 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
 			_jsii_.MemberProperty{JsiiProperty: "idInput", GoGetter: "IdInput"},
+			_jsii_.MemberMethod{JsiiMethod: "importFrom", GoMethod: "ImportFrom"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "lifecycle", GoGetter: "Lifecycle"},
+			_jsii_.MemberMethod{JsiiMethod: "moveTo", GoMethod: "MoveTo"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberProperty{JsiiProperty: "onAll", GoGetter: "OnAll"},
 			_jsii_.MemberProperty{JsiiProperty: "onAllInput", GoGetter: "OnAllInput"},

@@ -7,6 +7,10 @@ package viewgrant
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (v *jsiiProxy_ViewGrant) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (v *jsiiProxy_ViewGrant) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,11 +51,23 @@ func (v *jsiiProxy_ViewGrant) validateGetStringMapAttributeParameters(terraformA
 	return nil
 }
 
+func (v *jsiiProxy_ViewGrant) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (v *jsiiProxy_ViewGrant) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
+func (v *jsiiProxy_ViewGrant) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
 func (v *jsiiProxy_ViewGrant) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func validateViewGrant_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

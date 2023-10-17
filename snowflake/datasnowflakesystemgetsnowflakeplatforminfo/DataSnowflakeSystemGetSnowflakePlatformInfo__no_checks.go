@@ -55,6 +55,10 @@ func (d *jsiiProxy_DataSnowflakeSystemGetSnowflakePlatformInfo) validateOverride
 	return nil
 }
 
+func validateDataSnowflakeSystemGetSnowflakePlatformInfo_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
+	return nil
+}
+
 func validateDataSnowflakeSystemGetSnowflakePlatformInfo_IsConstructParameters(x interface{}) error {
 	return nil
 }

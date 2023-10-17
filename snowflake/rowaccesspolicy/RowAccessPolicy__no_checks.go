@@ -7,6 +7,10 @@ package rowaccesspolicy
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (r *jsiiProxy_RowAccessPolicy) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RowAccessPolicy) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,11 +51,23 @@ func (r *jsiiProxy_RowAccessPolicy) validateGetStringMapAttributeParameters(terr
 	return nil
 }
 
+func (r *jsiiProxy_RowAccessPolicy) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RowAccessPolicy) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
+func (r *jsiiProxy_RowAccessPolicy) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
 func (r *jsiiProxy_RowAccessPolicy) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func validateRowAccessPolicy_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

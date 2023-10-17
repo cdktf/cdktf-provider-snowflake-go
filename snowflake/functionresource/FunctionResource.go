@@ -5,10 +5,10 @@ package functionresource
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v10/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/functionresource/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v10/functionresource/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -111,6 +111,9 @@ type FunctionResource interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+	// Experimental.
+	AddMoveTarget(moveTarget *string)
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -132,7 +135,12 @@ type FunctionResource interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	ImportFrom(id *string, provider cdktf.TerraformProvider)
+	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Moves this resource to the target resource given by moveTarget.
+	// Experimental.
+	MoveTo(moveTarget *string, index interface{})
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -941,6 +949,25 @@ func (j *jsiiProxy_FunctionResource)SetTargetPath(val *string) {
 	)
 }
 
+// Generates CDKTF code for importing a FunctionResource resource upon running "cdktf plan <stack-name>".
+func FunctionResource_GenerateConfigForImport(scope constructs.Construct, importToId *string, importFromId *string, provider cdktf.TerraformProvider) cdktf.ImportableResource {
+	_init_.Initialize()
+
+	if err := validateFunctionResource_GenerateConfigForImportParameters(scope, importToId, importFromId); err != nil {
+		panic(err)
+	}
+	var returns cdktf.ImportableResource
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.functionResource.FunctionResource",
+		"generateConfigForImport",
+		[]interface{}{scope, importToId, importFromId, provider},
+		&returns,
+	)
+
+	return returns
+}
+
 // Checks if `x` is a construct.
 //
 // Use this method instead of `instanceof` to properly detect `Construct`
@@ -1023,6 +1050,17 @@ func FunctionResource_TfResourceType() *string {
 		&returns,
 	)
 	return returns
+}
+
+func (f *jsiiProxy_FunctionResource) AddMoveTarget(moveTarget *string) {
+	if err := f.validateAddMoveTargetParameters(moveTarget); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"addMoveTarget",
+		[]interface{}{moveTarget},
+	)
 }
 
 func (f *jsiiProxy_FunctionResource) AddOverride(path *string, value interface{}) {
@@ -1180,6 +1218,17 @@ func (f *jsiiProxy_FunctionResource) GetStringMapAttribute(terraformAttribute *s
 	return returns
 }
 
+func (f *jsiiProxy_FunctionResource) ImportFrom(id *string, provider cdktf.TerraformProvider) {
+	if err := f.validateImportFromParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"importFrom",
+		[]interface{}{id, provider},
+	)
+}
+
 func (f *jsiiProxy_FunctionResource) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
 	if err := f.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
@@ -1194,6 +1243,17 @@ func (f *jsiiProxy_FunctionResource) InterpolationForAttribute(terraformAttribut
 	)
 
 	return returns
+}
+
+func (f *jsiiProxy_FunctionResource) MoveTo(moveTarget *string, index interface{}) {
+	if err := f.validateMoveToParameters(moveTarget, index); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"moveTo",
+		[]interface{}{moveTarget, index},
+	)
 }
 
 func (f *jsiiProxy_FunctionResource) OverrideLogicalId(newLogicalId *string) {

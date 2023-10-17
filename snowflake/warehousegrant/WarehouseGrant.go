@@ -5,10 +5,10 @@ package warehousegrant
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v10/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/warehousegrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v10/warehousegrant/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -82,6 +82,9 @@ type WarehouseGrant interface {
 	WithGrantOption() interface{}
 	SetWithGrantOption(val interface{})
 	WithGrantOptionInput() interface{}
+	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+	// Experimental.
+	AddMoveTarget(moveTarget *string)
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -103,7 +106,12 @@ type WarehouseGrant interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	ImportFrom(id *string, provider cdktf.TerraformProvider)
+	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Moves this resource to the target resource given by moveTarget.
+	// Experimental.
+	MoveTo(moveTarget *string, index interface{})
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -606,6 +614,25 @@ func (j *jsiiProxy_WarehouseGrant)SetWithGrantOption(val interface{}) {
 	)
 }
 
+// Generates CDKTF code for importing a WarehouseGrant resource upon running "cdktf plan <stack-name>".
+func WarehouseGrant_GenerateConfigForImport(scope constructs.Construct, importToId *string, importFromId *string, provider cdktf.TerraformProvider) cdktf.ImportableResource {
+	_init_.Initialize()
+
+	if err := validateWarehouseGrant_GenerateConfigForImportParameters(scope, importToId, importFromId); err != nil {
+		panic(err)
+	}
+	var returns cdktf.ImportableResource
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.warehouseGrant.WarehouseGrant",
+		"generateConfigForImport",
+		[]interface{}{scope, importToId, importFromId, provider},
+		&returns,
+	)
+
+	return returns
+}
+
 // Checks if `x` is a construct.
 //
 // Use this method instead of `instanceof` to properly detect `Construct`
@@ -688,6 +715,17 @@ func WarehouseGrant_TfResourceType() *string {
 		&returns,
 	)
 	return returns
+}
+
+func (w *jsiiProxy_WarehouseGrant) AddMoveTarget(moveTarget *string) {
+	if err := w.validateAddMoveTargetParameters(moveTarget); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		w,
+		"addMoveTarget",
+		[]interface{}{moveTarget},
+	)
 }
 
 func (w *jsiiProxy_WarehouseGrant) AddOverride(path *string, value interface{}) {
@@ -845,6 +883,17 @@ func (w *jsiiProxy_WarehouseGrant) GetStringMapAttribute(terraformAttribute *str
 	return returns
 }
 
+func (w *jsiiProxy_WarehouseGrant) ImportFrom(id *string, provider cdktf.TerraformProvider) {
+	if err := w.validateImportFromParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		w,
+		"importFrom",
+		[]interface{}{id, provider},
+	)
+}
+
 func (w *jsiiProxy_WarehouseGrant) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
 	if err := w.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
@@ -859,6 +908,17 @@ func (w *jsiiProxy_WarehouseGrant) InterpolationForAttribute(terraformAttribute 
 	)
 
 	return returns
+}
+
+func (w *jsiiProxy_WarehouseGrant) MoveTo(moveTarget *string, index interface{}) {
+	if err := w.validateMoveToParameters(moveTarget, index); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		w,
+		"moveTo",
+		[]interface{}{moveTarget, index},
+	)
 }
 
 func (w *jsiiProxy_WarehouseGrant) OverrideLogicalId(newLogicalId *string) {

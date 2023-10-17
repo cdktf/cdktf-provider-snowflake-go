@@ -14,6 +14,7 @@ func init() {
 		"@cdktf/provider-snowflake.fileFormat.FileFormat",
 		reflect.TypeOf((*FileFormat)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addMoveTarget", GoMethod: "AddMoveTarget"},
 			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
 			_jsii_.MemberProperty{JsiiProperty: "allowDuplicate", GoGetter: "AllowDuplicate"},
 			_jsii_.MemberProperty{JsiiProperty: "allowDuplicateInput", GoGetter: "AllowDuplicateInput"},
@@ -74,8 +75,10 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "idInput", GoGetter: "IdInput"},
 			_jsii_.MemberProperty{JsiiProperty: "ignoreUtf8Errors", GoGetter: "IgnoreUtf8Errors"},
 			_jsii_.MemberProperty{JsiiProperty: "ignoreUtf8ErrorsInput", GoGetter: "IgnoreUtf8ErrorsInput"},
+			_jsii_.MemberMethod{JsiiMethod: "importFrom", GoMethod: "ImportFrom"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "lifecycle", GoGetter: "Lifecycle"},
+			_jsii_.MemberMethod{JsiiMethod: "moveTo", GoMethod: "MoveTo"},
 			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
 			_jsii_.MemberProperty{JsiiProperty: "nameInput", GoGetter: "NameInput"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},

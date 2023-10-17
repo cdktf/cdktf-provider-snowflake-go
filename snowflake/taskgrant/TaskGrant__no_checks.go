@@ -7,6 +7,10 @@ package taskgrant
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (t *jsiiProxy_TaskGrant) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (t *jsiiProxy_TaskGrant) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,11 +51,23 @@ func (t *jsiiProxy_TaskGrant) validateGetStringMapAttributeParameters(terraformA
 	return nil
 }
 
+func (t *jsiiProxy_TaskGrant) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (t *jsiiProxy_TaskGrant) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
+func (t *jsiiProxy_TaskGrant) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
 func (t *jsiiProxy_TaskGrant) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func validateTaskGrant_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

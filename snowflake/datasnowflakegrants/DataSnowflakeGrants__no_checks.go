@@ -75,6 +75,10 @@ func (d *jsiiProxy_DataSnowflakeGrants) validatePutGrantsToParameters(value *Dat
 	return nil
 }
 
+func validateDataSnowflakeGrants_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
+	return nil
+}
+
 func validateDataSnowflakeGrants_IsConstructParameters(x interface{}) error {
 	return nil
 }

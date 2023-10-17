@@ -55,6 +55,10 @@ func (d *jsiiProxy_DataSnowflakeSystemGetAwsSnsIamPolicy) validateOverrideLogica
 	return nil
 }
 
+func validateDataSnowflakeSystemGetAwsSnsIamPolicy_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
+	return nil
+}
+
 func validateDataSnowflakeSystemGetAwsSnsIamPolicy_IsConstructParameters(x interface{}) error {
 	return nil
 }

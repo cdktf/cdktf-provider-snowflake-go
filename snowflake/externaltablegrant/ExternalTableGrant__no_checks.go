@@ -7,6 +7,10 @@ package externaltablegrant
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (e *jsiiProxy_ExternalTableGrant) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_ExternalTableGrant) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,11 +51,23 @@ func (e *jsiiProxy_ExternalTableGrant) validateGetStringMapAttributeParameters(t
 	return nil
 }
 
+func (e *jsiiProxy_ExternalTableGrant) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_ExternalTableGrant) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
+func (e *jsiiProxy_ExternalTableGrant) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
 func (e *jsiiProxy_ExternalTableGrant) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func validateExternalTableGrant_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

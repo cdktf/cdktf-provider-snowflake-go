@@ -7,6 +7,10 @@ package pipe
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (p *jsiiProxy_Pipe) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (p *jsiiProxy_Pipe) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,11 +51,23 @@ func (p *jsiiProxy_Pipe) validateGetStringMapAttributeParameters(terraformAttrib
 	return nil
 }
 
+func (p *jsiiProxy_Pipe) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (p *jsiiProxy_Pipe) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
+func (p *jsiiProxy_Pipe) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
 func (p *jsiiProxy_Pipe) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func validatePipe_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

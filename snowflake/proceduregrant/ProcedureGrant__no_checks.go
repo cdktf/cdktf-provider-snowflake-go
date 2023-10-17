@@ -7,6 +7,10 @@ package proceduregrant
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (p *jsiiProxy_ProcedureGrant) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (p *jsiiProxy_ProcedureGrant) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,11 +51,23 @@ func (p *jsiiProxy_ProcedureGrant) validateGetStringMapAttributeParameters(terra
 	return nil
 }
 
+func (p *jsiiProxy_ProcedureGrant) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (p *jsiiProxy_ProcedureGrant) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
+func (p *jsiiProxy_ProcedureGrant) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
 func (p *jsiiProxy_ProcedureGrant) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func validateProcedureGrant_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

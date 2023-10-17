@@ -7,6 +7,10 @@ package stage
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (s *jsiiProxy_Stage) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_Stage) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,7 +51,15 @@ func (s *jsiiProxy_Stage) validateGetStringMapAttributeParameters(terraformAttri
 	return nil
 }
 
+func (s *jsiiProxy_Stage) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_Stage) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (s *jsiiProxy_Stage) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
@@ -56,6 +68,10 @@ func (s *jsiiProxy_Stage) validateOverrideLogicalIdParameters(newLogicalId *stri
 }
 
 func (s *jsiiProxy_Stage) validatePutTagParameters(value interface{}) error {
+	return nil
+}
+
+func validateStage_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

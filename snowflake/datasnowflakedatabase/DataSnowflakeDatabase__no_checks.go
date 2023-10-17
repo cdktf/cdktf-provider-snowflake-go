@@ -55,6 +55,10 @@ func (d *jsiiProxy_DataSnowflakeDatabase) validateOverrideLogicalIdParameters(ne
 	return nil
 }
 
+func validateDataSnowflakeDatabase_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
+	return nil
+}
+
 func validateDataSnowflakeDatabase_IsConstructParameters(x interface{}) error {
 	return nil
 }

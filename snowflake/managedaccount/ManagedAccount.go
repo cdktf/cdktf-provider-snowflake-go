@@ -5,10 +5,10 @@ package managedaccount
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v10/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/managedaccount/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v10/managedaccount/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -84,6 +84,9 @@ type ManagedAccount interface {
 	SetType(val *string)
 	TypeInput() *string
 	Url() *string
+	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+	// Experimental.
+	AddMoveTarget(moveTarget *string)
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -105,7 +108,12 @@ type ManagedAccount interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	ImportFrom(id *string, provider cdktf.TerraformProvider)
+	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Moves this resource to the target resource given by moveTarget.
+	// Experimental.
+	MoveTo(moveTarget *string, index interface{})
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -624,6 +632,25 @@ func (j *jsiiProxy_ManagedAccount)SetType(val *string) {
 	)
 }
 
+// Generates CDKTF code for importing a ManagedAccount resource upon running "cdktf plan <stack-name>".
+func ManagedAccount_GenerateConfigForImport(scope constructs.Construct, importToId *string, importFromId *string, provider cdktf.TerraformProvider) cdktf.ImportableResource {
+	_init_.Initialize()
+
+	if err := validateManagedAccount_GenerateConfigForImportParameters(scope, importToId, importFromId); err != nil {
+		panic(err)
+	}
+	var returns cdktf.ImportableResource
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.managedAccount.ManagedAccount",
+		"generateConfigForImport",
+		[]interface{}{scope, importToId, importFromId, provider},
+		&returns,
+	)
+
+	return returns
+}
+
 // Checks if `x` is a construct.
 //
 // Use this method instead of `instanceof` to properly detect `Construct`
@@ -706,6 +733,17 @@ func ManagedAccount_TfResourceType() *string {
 		&returns,
 	)
 	return returns
+}
+
+func (m *jsiiProxy_ManagedAccount) AddMoveTarget(moveTarget *string) {
+	if err := m.validateAddMoveTargetParameters(moveTarget); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"addMoveTarget",
+		[]interface{}{moveTarget},
+	)
 }
 
 func (m *jsiiProxy_ManagedAccount) AddOverride(path *string, value interface{}) {
@@ -863,6 +901,17 @@ func (m *jsiiProxy_ManagedAccount) GetStringMapAttribute(terraformAttribute *str
 	return returns
 }
 
+func (m *jsiiProxy_ManagedAccount) ImportFrom(id *string, provider cdktf.TerraformProvider) {
+	if err := m.validateImportFromParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"importFrom",
+		[]interface{}{id, provider},
+	)
+}
+
 func (m *jsiiProxy_ManagedAccount) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
 	if err := m.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
@@ -877,6 +926,17 @@ func (m *jsiiProxy_ManagedAccount) InterpolationForAttribute(terraformAttribute 
 	)
 
 	return returns
+}
+
+func (m *jsiiProxy_ManagedAccount) MoveTo(moveTarget *string, index interface{}) {
+	if err := m.validateMoveToParameters(moveTarget, index); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveTo",
+		[]interface{}{moveTarget, index},
+	)
 }
 
 func (m *jsiiProxy_ManagedAccount) OverrideLogicalId(newLogicalId *string) {

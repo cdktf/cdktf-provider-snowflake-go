@@ -7,6 +7,10 @@ package externalfunction
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (e *jsiiProxy_ExternalFunction) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_ExternalFunction) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,7 +51,15 @@ func (e *jsiiProxy_ExternalFunction) validateGetStringMapAttributeParameters(ter
 	return nil
 }
 
+func (e *jsiiProxy_ExternalFunction) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_ExternalFunction) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (e *jsiiProxy_ExternalFunction) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
@@ -60,6 +72,10 @@ func (e *jsiiProxy_ExternalFunction) validatePutArgParameters(value interface{})
 }
 
 func (e *jsiiProxy_ExternalFunction) validatePutHeaderParameters(value interface{}) error {
+	return nil
+}
+
+func validateExternalFunction_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

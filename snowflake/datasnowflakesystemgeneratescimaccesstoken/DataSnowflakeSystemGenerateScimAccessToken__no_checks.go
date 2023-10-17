@@ -55,6 +55,10 @@ func (d *jsiiProxy_DataSnowflakeSystemGenerateScimAccessToken) validateOverrideL
 	return nil
 }
 
+func validateDataSnowflakeSystemGenerateScimAccessToken_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
+	return nil
+}
+
 func validateDataSnowflakeSystemGenerateScimAccessToken_IsConstructParameters(x interface{}) error {
 	return nil
 }

@@ -7,6 +7,10 @@ package table
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (t *jsiiProxy_Table) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (t *jsiiProxy_Table) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,7 +51,15 @@ func (t *jsiiProxy_Table) validateGetStringMapAttributeParameters(terraformAttri
 	return nil
 }
 
+func (t *jsiiProxy_Table) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (t *jsiiProxy_Table) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (t *jsiiProxy_Table) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
@@ -64,6 +76,10 @@ func (t *jsiiProxy_Table) validatePutPrimaryKeyParameters(value *TablePrimaryKey
 }
 
 func (t *jsiiProxy_Table) validatePutTagParameters(value interface{}) error {
+	return nil
+}
+
+func validateTable_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

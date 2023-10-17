@@ -55,6 +55,10 @@ func (d *jsiiProxy_DataSnowflakeSystemGetPrivatelinkConfig) validateOverrideLogi
 	return nil
 }
 
+func validateDataSnowflakeSystemGetPrivatelinkConfig_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
+	return nil
+}
+
 func validateDataSnowflakeSystemGetPrivatelinkConfig_IsConstructParameters(x interface{}) error {
 	return nil
 }

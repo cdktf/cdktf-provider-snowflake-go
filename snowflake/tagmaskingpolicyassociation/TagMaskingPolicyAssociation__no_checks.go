@@ -7,6 +7,10 @@ package tagmaskingpolicyassociation
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (t *jsiiProxy_TagMaskingPolicyAssociation) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (t *jsiiProxy_TagMaskingPolicyAssociation) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,11 +51,23 @@ func (t *jsiiProxy_TagMaskingPolicyAssociation) validateGetStringMapAttributePar
 	return nil
 }
 
+func (t *jsiiProxy_TagMaskingPolicyAssociation) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (t *jsiiProxy_TagMaskingPolicyAssociation) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
+func (t *jsiiProxy_TagMaskingPolicyAssociation) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
 func (t *jsiiProxy_TagMaskingPolicyAssociation) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func validateTagMaskingPolicyAssociation_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

@@ -7,6 +7,10 @@ package grantprivilegestorole
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (g *jsiiProxy_GrantPrivilegesToRole) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (g *jsiiProxy_GrantPrivilegesToRole) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,7 +51,15 @@ func (g *jsiiProxy_GrantPrivilegesToRole) validateGetStringMapAttributeParameter
 	return nil
 }
 
+func (g *jsiiProxy_GrantPrivilegesToRole) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (g *jsiiProxy_GrantPrivilegesToRole) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (g *jsiiProxy_GrantPrivilegesToRole) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
@@ -64,6 +76,10 @@ func (g *jsiiProxy_GrantPrivilegesToRole) validatePutOnSchemaParameters(value *G
 }
 
 func (g *jsiiProxy_GrantPrivilegesToRole) validatePutOnSchemaObjectParameters(value *GrantPrivilegesToRoleOnSchemaObject) error {
+	return nil
+}
+
+func validateGrantPrivilegesToRole_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

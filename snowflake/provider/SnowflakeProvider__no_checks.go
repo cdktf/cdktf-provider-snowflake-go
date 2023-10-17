@@ -15,6 +15,10 @@ func (s *jsiiProxy_SnowflakeProvider) validateOverrideLogicalIdParameters(newLog
 	return nil
 }
 
+func validateSnowflakeProvider_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
+	return nil
+}
+
 func validateSnowflakeProvider_IsConstructParameters(x interface{}) error {
 	return nil
 }

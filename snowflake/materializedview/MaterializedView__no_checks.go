@@ -7,6 +7,10 @@ package materializedview
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (m *jsiiProxy_MaterializedView) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_MaterializedView) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,7 +51,15 @@ func (m *jsiiProxy_MaterializedView) validateGetStringMapAttributeParameters(ter
 	return nil
 }
 
+func (m *jsiiProxy_MaterializedView) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_MaterializedView) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (m *jsiiProxy_MaterializedView) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
@@ -56,6 +68,10 @@ func (m *jsiiProxy_MaterializedView) validateOverrideLogicalIdParameters(newLogi
 }
 
 func (m *jsiiProxy_MaterializedView) validatePutTagParameters(value interface{}) error {
+	return nil
+}
+
+func validateMaterializedView_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

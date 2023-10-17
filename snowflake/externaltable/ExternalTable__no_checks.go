@@ -7,6 +7,10 @@ package externaltable
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (e *jsiiProxy_ExternalTable) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_ExternalTable) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,7 +51,15 @@ func (e *jsiiProxy_ExternalTable) validateGetStringMapAttributeParameters(terraf
 	return nil
 }
 
+func (e *jsiiProxy_ExternalTable) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_ExternalTable) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (e *jsiiProxy_ExternalTable) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
@@ -60,6 +72,10 @@ func (e *jsiiProxy_ExternalTable) validatePutColumnParameters(value interface{})
 }
 
 func (e *jsiiProxy_ExternalTable) validatePutTagParameters(value interface{}) error {
+	return nil
+}
+
+func validateExternalTable_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

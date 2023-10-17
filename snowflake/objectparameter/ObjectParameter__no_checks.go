@@ -7,6 +7,10 @@ package objectparameter
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (o *jsiiProxy_ObjectParameter) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (o *jsiiProxy_ObjectParameter) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,7 +51,15 @@ func (o *jsiiProxy_ObjectParameter) validateGetStringMapAttributeParameters(terr
 	return nil
 }
 
+func (o *jsiiProxy_ObjectParameter) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (o *jsiiProxy_ObjectParameter) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (o *jsiiProxy_ObjectParameter) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
@@ -56,6 +68,10 @@ func (o *jsiiProxy_ObjectParameter) validateOverrideLogicalIdParameters(newLogic
 }
 
 func (o *jsiiProxy_ObjectParameter) validatePutObjectIdentifierParameters(value interface{}) error {
+	return nil
+}
+
+func validateObjectParameter_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

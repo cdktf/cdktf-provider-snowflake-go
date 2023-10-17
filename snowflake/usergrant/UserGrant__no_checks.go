@@ -7,6 +7,10 @@ package usergrant
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (u *jsiiProxy_UserGrant) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (u *jsiiProxy_UserGrant) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,11 +51,23 @@ func (u *jsiiProxy_UserGrant) validateGetStringMapAttributeParameters(terraformA
 	return nil
 }
 
+func (u *jsiiProxy_UserGrant) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (u *jsiiProxy_UserGrant) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
+func (u *jsiiProxy_UserGrant) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
 func (u *jsiiProxy_UserGrant) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func validateUserGrant_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

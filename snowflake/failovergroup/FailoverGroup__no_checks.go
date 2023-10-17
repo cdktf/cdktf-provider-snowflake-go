@@ -7,6 +7,10 @@ package failovergroup
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (f *jsiiProxy_FailoverGroup) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (f *jsiiProxy_FailoverGroup) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,7 +51,15 @@ func (f *jsiiProxy_FailoverGroup) validateGetStringMapAttributeParameters(terraf
 	return nil
 }
 
+func (f *jsiiProxy_FailoverGroup) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (f *jsiiProxy_FailoverGroup) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (f *jsiiProxy_FailoverGroup) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
@@ -60,6 +72,10 @@ func (f *jsiiProxy_FailoverGroup) validatePutFromReplicaParameters(value *Failov
 }
 
 func (f *jsiiProxy_FailoverGroup) validatePutReplicationScheduleParameters(value *FailoverGroupReplicationSchedule) error {
+	return nil
+}
+
+func validateFailoverGroup_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

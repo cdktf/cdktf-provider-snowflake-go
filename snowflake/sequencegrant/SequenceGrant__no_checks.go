@@ -7,6 +7,10 @@ package sequencegrant
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (s *jsiiProxy_SequenceGrant) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_SequenceGrant) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,11 +51,23 @@ func (s *jsiiProxy_SequenceGrant) validateGetStringMapAttributeParameters(terraf
 	return nil
 }
 
+func (s *jsiiProxy_SequenceGrant) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_SequenceGrant) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
+func (s *jsiiProxy_SequenceGrant) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
 func (s *jsiiProxy_SequenceGrant) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func validateSequenceGrant_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

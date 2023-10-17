@@ -7,6 +7,10 @@ package alert
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (a *jsiiProxy_Alert) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (a *jsiiProxy_Alert) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,7 +51,15 @@ func (a *jsiiProxy_Alert) validateGetStringMapAttributeParameters(terraformAttri
 	return nil
 }
 
+func (a *jsiiProxy_Alert) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (a *jsiiProxy_Alert) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (a *jsiiProxy_Alert) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
@@ -56,6 +68,10 @@ func (a *jsiiProxy_Alert) validateOverrideLogicalIdParameters(newLogicalId *stri
 }
 
 func (a *jsiiProxy_Alert) validatePutAlertScheduleParameters(value *AlertAlertSchedule) error {
+	return nil
+}
+
+func validateAlert_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

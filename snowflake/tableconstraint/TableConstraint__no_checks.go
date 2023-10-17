@@ -7,6 +7,10 @@ package tableconstraint
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (t *jsiiProxy_TableConstraint) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (t *jsiiProxy_TableConstraint) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,7 +51,15 @@ func (t *jsiiProxy_TableConstraint) validateGetStringMapAttributeParameters(terr
 	return nil
 }
 
+func (t *jsiiProxy_TableConstraint) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (t *jsiiProxy_TableConstraint) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (t *jsiiProxy_TableConstraint) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
@@ -56,6 +68,10 @@ func (t *jsiiProxy_TableConstraint) validateOverrideLogicalIdParameters(newLogic
 }
 
 func (t *jsiiProxy_TableConstraint) validatePutForeignKeyPropertiesParameters(value *TableConstraintForeignKeyProperties) error {
+	return nil
+}
+
+func validateTableConstraint_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

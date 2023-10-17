@@ -5,10 +5,10 @@ package fileformatgrant
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v10/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v9/fileformatgrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v10/fileformatgrant/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -94,6 +94,9 @@ type FileFormatGrant interface {
 	WithGrantOption() interface{}
 	SetWithGrantOption(val interface{})
 	WithGrantOptionInput() interface{}
+	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+	// Experimental.
+	AddMoveTarget(moveTarget *string)
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -115,7 +118,12 @@ type FileFormatGrant interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	ImportFrom(id *string, provider cdktf.TerraformProvider)
+	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Moves this resource to the target resource given by moveTarget.
+	// Experimental.
+	MoveTo(moveTarget *string, index interface{})
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -745,6 +753,25 @@ func (j *jsiiProxy_FileFormatGrant)SetWithGrantOption(val interface{}) {
 	)
 }
 
+// Generates CDKTF code for importing a FileFormatGrant resource upon running "cdktf plan <stack-name>".
+func FileFormatGrant_GenerateConfigForImport(scope constructs.Construct, importToId *string, importFromId *string, provider cdktf.TerraformProvider) cdktf.ImportableResource {
+	_init_.Initialize()
+
+	if err := validateFileFormatGrant_GenerateConfigForImportParameters(scope, importToId, importFromId); err != nil {
+		panic(err)
+	}
+	var returns cdktf.ImportableResource
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-snowflake.fileFormatGrant.FileFormatGrant",
+		"generateConfigForImport",
+		[]interface{}{scope, importToId, importFromId, provider},
+		&returns,
+	)
+
+	return returns
+}
+
 // Checks if `x` is a construct.
 //
 // Use this method instead of `instanceof` to properly detect `Construct`
@@ -827,6 +854,17 @@ func FileFormatGrant_TfResourceType() *string {
 		&returns,
 	)
 	return returns
+}
+
+func (f *jsiiProxy_FileFormatGrant) AddMoveTarget(moveTarget *string) {
+	if err := f.validateAddMoveTargetParameters(moveTarget); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"addMoveTarget",
+		[]interface{}{moveTarget},
+	)
 }
 
 func (f *jsiiProxy_FileFormatGrant) AddOverride(path *string, value interface{}) {
@@ -984,6 +1022,17 @@ func (f *jsiiProxy_FileFormatGrant) GetStringMapAttribute(terraformAttribute *st
 	return returns
 }
 
+func (f *jsiiProxy_FileFormatGrant) ImportFrom(id *string, provider cdktf.TerraformProvider) {
+	if err := f.validateImportFromParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"importFrom",
+		[]interface{}{id, provider},
+	)
+}
+
 func (f *jsiiProxy_FileFormatGrant) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
 	if err := f.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
@@ -998,6 +1047,17 @@ func (f *jsiiProxy_FileFormatGrant) InterpolationForAttribute(terraformAttribute
 	)
 
 	return returns
+}
+
+func (f *jsiiProxy_FileFormatGrant) MoveTo(moveTarget *string, index interface{}) {
+	if err := f.validateMoveToParameters(moveTarget, index); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"moveTo",
+		[]interface{}{moveTarget, index},
+	)
 }
 
 func (f *jsiiProxy_FileFormatGrant) OverrideLogicalId(newLogicalId *string) {

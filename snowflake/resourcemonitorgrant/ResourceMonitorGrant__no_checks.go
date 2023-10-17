@@ -7,6 +7,10 @@ package resourcemonitorgrant
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (r *jsiiProxy_ResourceMonitorGrant) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_ResourceMonitorGrant) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,11 +51,23 @@ func (r *jsiiProxy_ResourceMonitorGrant) validateGetStringMapAttributeParameters
 	return nil
 }
 
+func (r *jsiiProxy_ResourceMonitorGrant) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_ResourceMonitorGrant) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
+func (r *jsiiProxy_ResourceMonitorGrant) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
 func (r *jsiiProxy_ResourceMonitorGrant) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func validateResourceMonitorGrant_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

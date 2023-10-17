@@ -7,6 +7,10 @@ package fileformatgrant
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (f *jsiiProxy_FileFormatGrant) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (f *jsiiProxy_FileFormatGrant) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,11 +51,23 @@ func (f *jsiiProxy_FileFormatGrant) validateGetStringMapAttributeParameters(terr
 	return nil
 }
 
+func (f *jsiiProxy_FileFormatGrant) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (f *jsiiProxy_FileFormatGrant) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
+func (f *jsiiProxy_FileFormatGrant) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
 func (f *jsiiProxy_FileFormatGrant) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func validateFileFormatGrant_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 
