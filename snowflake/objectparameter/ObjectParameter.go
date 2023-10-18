@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.73.0/docs/resources/object_parameter snowflake_object_parameter}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.74.0/docs/resources/object_parameter snowflake_object_parameter}.
 type ObjectParameter interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -415,7 +415,7 @@ func (j *jsiiProxy_ObjectParameter) ValueInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.73.0/docs/resources/object_parameter snowflake_object_parameter} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.74.0/docs/resources/object_parameter snowflake_object_parameter} Resource.
 func NewObjectParameter(scope constructs.Construct, id *string, config *ObjectParameterConfig) ObjectParameter {
 	_init_.Initialize()
 
@@ -433,7 +433,7 @@ func NewObjectParameter(scope constructs.Construct, id *string, config *ObjectPa
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.73.0/docs/resources/object_parameter snowflake_object_parameter} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.74.0/docs/resources/object_parameter snowflake_object_parameter} Resource.
 func NewObjectParameter_Override(o ObjectParameter, scope constructs.Construct, id *string, config *ObjectParameterConfig) {
 	_init_.Initialize()
 

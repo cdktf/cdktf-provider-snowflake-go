@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.73.0/docs/resources/sequence snowflake_sequence}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.74.0/docs/resources/sequence snowflake_sequence}.
 type Sequence interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -436,7 +436,7 @@ func (j *jsiiProxy_Sequence) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.73.0/docs/resources/sequence snowflake_sequence} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.74.0/docs/resources/sequence snowflake_sequence} Resource.
 func NewSequence(scope constructs.Construct, id *string, config *SequenceConfig) Sequence {
 	_init_.Initialize()
 
@@ -454,7 +454,7 @@ func NewSequence(scope constructs.Construct, id *string, config *SequenceConfig)
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.73.0/docs/resources/sequence snowflake_sequence} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.74.0/docs/resources/sequence snowflake_sequence} Resource.
 func NewSequence_Override(s Sequence, scope constructs.Construct, id *string, config *SequenceConfig) {
 	_init_.Initialize()
 

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.73.0/docs/resources/network_policy_attachment snowflake_network_policy_attachment}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.74.0/docs/resources/network_policy_attachment snowflake_network_policy_attachment}.
 type NetworkPolicyAttachment interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -368,7 +368,7 @@ func (j *jsiiProxy_NetworkPolicyAttachment) UsersInput() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.73.0/docs/resources/network_policy_attachment snowflake_network_policy_attachment} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.74.0/docs/resources/network_policy_attachment snowflake_network_policy_attachment} Resource.
 func NewNetworkPolicyAttachment(scope constructs.Construct, id *string, config *NetworkPolicyAttachmentConfig) NetworkPolicyAttachment {
 	_init_.Initialize()
 
@@ -386,7 +386,7 @@ func NewNetworkPolicyAttachment(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.73.0/docs/resources/network_policy_attachment snowflake_network_policy_attachment} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.74.0/docs/resources/network_policy_attachment snowflake_network_policy_attachment} Resource.
 func NewNetworkPolicyAttachment_Override(n NetworkPolicyAttachment, scope constructs.Construct, id *string, config *NetworkPolicyAttachmentConfig) {
 	_init_.Initialize()
 

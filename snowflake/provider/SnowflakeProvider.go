@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.73.0/docs snowflake}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.74.0/docs snowflake}.
 type SnowflakeProvider interface {
 	cdktf.TerraformProvider
 	Account() *string
@@ -29,8 +29,29 @@ type SnowflakeProvider interface {
 	BrowserAuthInput() interface{}
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	ClientIp() *string
+	SetClientIp(val *string)
+	ClientIpInput() *string
+	ClientRequestMfaToken() interface{}
+	SetClientRequestMfaToken(val interface{})
+	ClientRequestMfaTokenInput() interface{}
+	ClientStoreTemporaryCredential() interface{}
+	SetClientStoreTemporaryCredential(val interface{})
+	ClientStoreTemporaryCredentialInput() interface{}
+	ClientTimeout() *float64
+	SetClientTimeout(val *float64)
+	ClientTimeoutInput() *float64
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
+	DisableQueryContextCache() interface{}
+	SetDisableQueryContextCache(val interface{})
+	DisableQueryContextCacheInput() interface{}
+	DisableTelemetry() interface{}
+	SetDisableTelemetry(val interface{})
+	DisableTelemetryInput() interface{}
+	ExternalBrowserTimeout() *float64
+	SetExternalBrowserTimeout(val *float64)
+	ExternalBrowserTimeoutInput() *float64
 	// Experimental.
 	Fqn() *string
 	// Experimental.
@@ -41,6 +62,18 @@ type SnowflakeProvider interface {
 	InsecureMode() interface{}
 	SetInsecureMode(val interface{})
 	InsecureModeInput() interface{}
+	JwtClientTimeout() *float64
+	SetJwtClientTimeout(val *float64)
+	JwtClientTimeoutInput() *float64
+	JwtExpireTimeout() *float64
+	SetJwtExpireTimeout(val *float64)
+	JwtExpireTimeoutInput() *float64
+	KeepSessionAlive() interface{}
+	SetKeepSessionAlive(val interface{})
+	KeepSessionAliveInput() interface{}
+	LoginTimeout() *float64
+	SetLoginTimeout(val *float64)
+	LoginTimeoutInput() *float64
 	// Experimental.
 	MetaAttributes() *map[string]interface{}
 	// The tree node.
@@ -63,6 +96,15 @@ type SnowflakeProvider interface {
 	OauthRefreshToken() *string
 	SetOauthRefreshToken(val *string)
 	OauthRefreshTokenInput() *string
+	OktaUrl() *string
+	SetOktaUrl(val *string)
+	OktaUrlInput() *string
+	OscpFailOpen() interface{}
+	SetOscpFailOpen(val interface{})
+	OscpFailOpenInput() interface{}
+	Params() *map[string]*string
+	SetParams(val *map[string]*string)
+	ParamsInput() *map[string]*string
 	Passcode() *string
 	SetPasscode(val *string)
 	PasscodeInPassword() interface{}
@@ -95,6 +137,9 @@ type SnowflakeProvider interface {
 	Region() *string
 	SetRegion(val *string)
 	RegionInput() *string
+	RequestTimeout() *float64
+	SetRequestTimeout(val *float64)
+	RequestTimeoutInput() *float64
 	Role() *string
 	SetRole(val *string)
 	RoleInput() *string
@@ -107,9 +152,21 @@ type SnowflakeProvider interface {
 	TerraformProviderSource() *string
 	// Experimental.
 	TerraformResourceType() *string
+	Token() *string
+	SetToken(val *string)
+	TokenAccessor() *SnowflakeProviderTokenAccessor
+	SetTokenAccessor(val *SnowflakeProviderTokenAccessor)
+	TokenAccessorInput() *SnowflakeProviderTokenAccessor
+	TokenInput() *string
+	User() *string
+	SetUser(val *string)
+	UserInput() *string
 	Username() *string
 	SetUsername(val *string)
 	UsernameInput() *string
+	ValidateDefaultParameters() interface{}
+	SetValidateDefaultParameters(val interface{})
+	ValidateDefaultParametersInput() interface{}
 	Warehouse() *string
 	SetWarehouse(val *string)
 	WarehouseInput() *string
@@ -122,17 +179,31 @@ type SnowflakeProvider interface {
 	ResetAlias()
 	ResetAuthenticator()
 	ResetBrowserAuth()
+	ResetClientIp()
+	ResetClientRequestMfaToken()
+	ResetClientStoreTemporaryCredential()
+	ResetClientTimeout()
+	ResetDisableQueryContextCache()
+	ResetDisableTelemetry()
+	ResetExternalBrowserTimeout()
 	ResetHost()
 	ResetInsecureMode()
+	ResetJwtClientTimeout()
+	ResetJwtExpireTimeout()
+	ResetKeepSessionAlive()
+	ResetLoginTimeout()
 	ResetOauthAccessToken()
 	ResetOauthClientId()
 	ResetOauthClientSecret()
 	ResetOauthEndpoint()
 	ResetOauthRedirectUrl()
 	ResetOauthRefreshToken()
+	ResetOktaUrl()
+	ResetOscpFailOpen()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetParams()
 	ResetPasscode()
 	ResetPasscodeInPassword()
 	ResetPassword()
@@ -143,9 +214,14 @@ type SnowflakeProvider interface {
 	ResetProfile()
 	ResetProtocol()
 	ResetRegion()
+	ResetRequestTimeout()
 	ResetRole()
 	ResetSessionParams()
+	ResetToken()
+	ResetTokenAccessor()
+	ResetUser()
 	ResetUsername()
+	ResetValidateDefaultParameters()
 	ResetWarehouse()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
@@ -252,11 +328,151 @@ func (j *jsiiProxy_SnowflakeProvider) CdktfStack() cdktf.TerraformStack {
 	return returns
 }
 
+func (j *jsiiProxy_SnowflakeProvider) ClientIp() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"clientIp",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) ClientIpInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"clientIpInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) ClientRequestMfaToken() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"clientRequestMfaToken",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) ClientRequestMfaTokenInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"clientRequestMfaTokenInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) ClientStoreTemporaryCredential() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"clientStoreTemporaryCredential",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) ClientStoreTemporaryCredentialInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"clientStoreTemporaryCredentialInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) ClientTimeout() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"clientTimeout",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) ClientTimeoutInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"clientTimeoutInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_SnowflakeProvider) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
 		j,
 		"constructNodeMetadata",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) DisableQueryContextCache() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"disableQueryContextCache",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) DisableQueryContextCacheInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"disableQueryContextCacheInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) DisableTelemetry() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"disableTelemetry",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) DisableTelemetryInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"disableTelemetryInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) ExternalBrowserTimeout() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"externalBrowserTimeout",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) ExternalBrowserTimeoutInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"externalBrowserTimeoutInput",
 		&returns,
 	)
 	return returns
@@ -317,6 +533,86 @@ func (j *jsiiProxy_SnowflakeProvider) InsecureModeInput() interface{} {
 	_jsii_.Get(
 		j,
 		"insecureModeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) JwtClientTimeout() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"jwtClientTimeout",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) JwtClientTimeoutInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"jwtClientTimeoutInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) JwtExpireTimeout() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"jwtExpireTimeout",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) JwtExpireTimeoutInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"jwtExpireTimeoutInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) KeepSessionAlive() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"keepSessionAlive",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) KeepSessionAliveInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"keepSessionAliveInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) LoginTimeout() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"loginTimeout",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) LoginTimeoutInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"loginTimeoutInput",
 		&returns,
 	)
 	return returns
@@ -457,6 +753,66 @@ func (j *jsiiProxy_SnowflakeProvider) OauthRefreshTokenInput() *string {
 	_jsii_.Get(
 		j,
 		"oauthRefreshTokenInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) OktaUrl() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"oktaUrl",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) OktaUrlInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"oktaUrlInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) OscpFailOpen() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"oscpFailOpen",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) OscpFailOpenInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"oscpFailOpenInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) Params() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"params",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) ParamsInput() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"paramsInput",
 		&returns,
 	)
 	return returns
@@ -672,6 +1028,26 @@ func (j *jsiiProxy_SnowflakeProvider) RegionInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_SnowflakeProvider) RequestTimeout() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"requestTimeout",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) RequestTimeoutInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"requestTimeoutInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_SnowflakeProvider) Role() *string {
 	var returns *string
 	_jsii_.Get(
@@ -742,6 +1118,66 @@ func (j *jsiiProxy_SnowflakeProvider) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_SnowflakeProvider) Token() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"token",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) TokenAccessor() *SnowflakeProviderTokenAccessor {
+	var returns *SnowflakeProviderTokenAccessor
+	_jsii_.Get(
+		j,
+		"tokenAccessor",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) TokenAccessorInput() *SnowflakeProviderTokenAccessor {
+	var returns *SnowflakeProviderTokenAccessor
+	_jsii_.Get(
+		j,
+		"tokenAccessorInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) TokenInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"tokenInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) User() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"user",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) UserInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"userInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_SnowflakeProvider) Username() *string {
 	var returns *string
 	_jsii_.Get(
@@ -757,6 +1193,26 @@ func (j *jsiiProxy_SnowflakeProvider) UsernameInput() *string {
 	_jsii_.Get(
 		j,
 		"usernameInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) ValidateDefaultParameters() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"validateDefaultParameters",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) ValidateDefaultParametersInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"validateDefaultParametersInput",
 		&returns,
 	)
 	return returns
@@ -783,7 +1239,7 @@ func (j *jsiiProxy_SnowflakeProvider) WarehouseInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.73.0/docs snowflake} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.74.0/docs snowflake} Resource.
 func NewSnowflakeProvider(scope constructs.Construct, id *string, config *SnowflakeProviderConfig) SnowflakeProvider {
 	_init_.Initialize()
 
@@ -801,7 +1257,7 @@ func NewSnowflakeProvider(scope constructs.Construct, id *string, config *Snowfl
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.73.0/docs snowflake} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.74.0/docs snowflake} Resource.
 func NewSnowflakeProvider_Override(s SnowflakeProvider, scope constructs.Construct, id *string, config *SnowflakeProviderConfig) {
 	_init_.Initialize()
 
@@ -847,6 +1303,74 @@ func (j *jsiiProxy_SnowflakeProvider)SetBrowserAuth(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_SnowflakeProvider)SetClientIp(val *string) {
+	_jsii_.Set(
+		j,
+		"clientIp",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetClientRequestMfaToken(val interface{}) {
+	if err := j.validateSetClientRequestMfaTokenParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"clientRequestMfaToken",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetClientStoreTemporaryCredential(val interface{}) {
+	if err := j.validateSetClientStoreTemporaryCredentialParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"clientStoreTemporaryCredential",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetClientTimeout(val *float64) {
+	_jsii_.Set(
+		j,
+		"clientTimeout",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetDisableQueryContextCache(val interface{}) {
+	if err := j.validateSetDisableQueryContextCacheParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"disableQueryContextCache",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetDisableTelemetry(val interface{}) {
+	if err := j.validateSetDisableTelemetryParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"disableTelemetry",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetExternalBrowserTimeout(val *float64) {
+	_jsii_.Set(
+		j,
+		"externalBrowserTimeout",
+		val,
+	)
+}
+
 func (j *jsiiProxy_SnowflakeProvider)SetHost(val *string) {
 	_jsii_.Set(
 		j,
@@ -862,6 +1386,41 @@ func (j *jsiiProxy_SnowflakeProvider)SetInsecureMode(val interface{}) {
 	_jsii_.Set(
 		j,
 		"insecureMode",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetJwtClientTimeout(val *float64) {
+	_jsii_.Set(
+		j,
+		"jwtClientTimeout",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetJwtExpireTimeout(val *float64) {
+	_jsii_.Set(
+		j,
+		"jwtExpireTimeout",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetKeepSessionAlive(val interface{}) {
+	if err := j.validateSetKeepSessionAliveParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"keepSessionAlive",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetLoginTimeout(val *float64) {
+	_jsii_.Set(
+		j,
+		"loginTimeout",
 		val,
 	)
 }
@@ -910,6 +1469,33 @@ func (j *jsiiProxy_SnowflakeProvider)SetOauthRefreshToken(val *string) {
 	_jsii_.Set(
 		j,
 		"oauthRefreshToken",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetOktaUrl(val *string) {
+	_jsii_.Set(
+		j,
+		"oktaUrl",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetOscpFailOpen(val interface{}) {
+	if err := j.validateSetOscpFailOpenParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"oscpFailOpen",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetParams(val *map[string]*string) {
+	_jsii_.Set(
+		j,
+		"params",
 		val,
 	)
 }
@@ -997,6 +1583,14 @@ func (j *jsiiProxy_SnowflakeProvider)SetRegion(val *string) {
 	)
 }
 
+func (j *jsiiProxy_SnowflakeProvider)SetRequestTimeout(val *float64) {
+	_jsii_.Set(
+		j,
+		"requestTimeout",
+		val,
+	)
+}
+
 func (j *jsiiProxy_SnowflakeProvider)SetRole(val *string) {
 	_jsii_.Set(
 		j,
@@ -1013,10 +1607,48 @@ func (j *jsiiProxy_SnowflakeProvider)SetSessionParams(val *map[string]*string) {
 	)
 }
 
+func (j *jsiiProxy_SnowflakeProvider)SetToken(val *string) {
+	_jsii_.Set(
+		j,
+		"token",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetTokenAccessor(val *SnowflakeProviderTokenAccessor) {
+	if err := j.validateSetTokenAccessorParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"tokenAccessor",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetUser(val *string) {
+	_jsii_.Set(
+		j,
+		"user",
+		val,
+	)
+}
+
 func (j *jsiiProxy_SnowflakeProvider)SetUsername(val *string) {
 	_jsii_.Set(
 		j,
 		"username",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetValidateDefaultParameters(val interface{}) {
+	if err := j.validateSetValidateDefaultParametersParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"validateDefaultParameters",
 		val,
 	)
 }
@@ -1186,6 +1818,62 @@ func (s *jsiiProxy_SnowflakeProvider) ResetBrowserAuth() {
 	)
 }
 
+func (s *jsiiProxy_SnowflakeProvider) ResetClientIp() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetClientIp",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetClientRequestMfaToken() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetClientRequestMfaToken",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetClientStoreTemporaryCredential() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetClientStoreTemporaryCredential",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetClientTimeout() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetClientTimeout",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetDisableQueryContextCache() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDisableQueryContextCache",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetDisableTelemetry() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDisableTelemetry",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetExternalBrowserTimeout() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetExternalBrowserTimeout",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SnowflakeProvider) ResetHost() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1198,6 +1886,38 @@ func (s *jsiiProxy_SnowflakeProvider) ResetInsecureMode() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetInsecureMode",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetJwtClientTimeout() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetJwtClientTimeout",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetJwtExpireTimeout() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetJwtExpireTimeout",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetKeepSessionAlive() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetKeepSessionAlive",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetLoginTimeout() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetLoginTimeout",
 		nil, // no parameters
 	)
 }
@@ -1250,10 +1970,34 @@ func (s *jsiiProxy_SnowflakeProvider) ResetOauthRefreshToken() {
 	)
 }
 
+func (s *jsiiProxy_SnowflakeProvider) ResetOktaUrl() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetOktaUrl",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetOscpFailOpen() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetOscpFailOpen",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SnowflakeProvider) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetParams() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetParams",
 		nil, // no parameters
 	)
 }
@@ -1338,6 +2082,14 @@ func (s *jsiiProxy_SnowflakeProvider) ResetRegion() {
 	)
 }
 
+func (s *jsiiProxy_SnowflakeProvider) ResetRequestTimeout() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetRequestTimeout",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SnowflakeProvider) ResetRole() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1354,10 +2106,42 @@ func (s *jsiiProxy_SnowflakeProvider) ResetSessionParams() {
 	)
 }
 
+func (s *jsiiProxy_SnowflakeProvider) ResetToken() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetToken",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetTokenAccessor() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTokenAccessor",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetUser() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetUser",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SnowflakeProvider) ResetUsername() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetUsername",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetValidateDefaultParameters() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetValidateDefaultParameters",
 		nil, // no parameters
 	)
 }

@@ -35,11 +35,43 @@ func (j *jsiiProxy_SnowflakeProvider) validateSetBrowserAuthParameters(val inter
 	return nil
 }
 
+func (j *jsiiProxy_SnowflakeProvider) validateSetClientRequestMfaTokenParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_SnowflakeProvider) validateSetClientStoreTemporaryCredentialParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_SnowflakeProvider) validateSetDisableQueryContextCacheParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_SnowflakeProvider) validateSetDisableTelemetryParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_SnowflakeProvider) validateSetInsecureModeParameters(val interface{}) error {
 	return nil
 }
 
+func (j *jsiiProxy_SnowflakeProvider) validateSetKeepSessionAliveParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_SnowflakeProvider) validateSetOscpFailOpenParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_SnowflakeProvider) validateSetPasscodeInPasswordParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_SnowflakeProvider) validateSetTokenAccessorParameters(val *SnowflakeProviderTokenAccessor) error {
+	return nil
+}
+
+func (j *jsiiProxy_SnowflakeProvider) validateSetValidateDefaultParametersParameters(val interface{}) error {
 	return nil
 }
 
