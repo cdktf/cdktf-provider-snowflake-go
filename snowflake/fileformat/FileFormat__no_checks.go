@@ -187,6 +187,10 @@ func (j *jsiiProxy_FileFormat) validateSetNullIfParameters(val *[]*string) error
 	return nil
 }
 
+func (j *jsiiProxy_FileFormat) validateSetParseHeaderParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_FileFormat) validateSetPreserveSpaceParameters(val interface{}) error {
 	return nil
 }

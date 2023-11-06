@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.74.0/docs/resources/file_format snowflake_file_format}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.75.0/docs/resources/file_format snowflake_file_format}.
 type FileFormat interface {
 	cdktf.TerraformResource
 	AllowDuplicate() interface{}
@@ -114,6 +114,9 @@ type FileFormat interface {
 	NullIf() *[]*string
 	SetNullIf(val *[]*string)
 	NullIfInput() *[]*string
+	ParseHeader() interface{}
+	SetParseHeader(val interface{})
+	ParseHeaderInput() interface{}
 	PreserveSpace() interface{}
 	SetPreserveSpace(val interface{})
 	PreserveSpaceInput() interface{}
@@ -225,6 +228,7 @@ type FileFormat interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetParseHeader()
 	ResetPreserveSpace()
 	ResetRecordDelimiter()
 	ResetReplaceInvalidCharacters()
@@ -812,6 +816,26 @@ func (j *jsiiProxy_FileFormat) NullIfInput() *[]*string {
 	return returns
 }
 
+func (j *jsiiProxy_FileFormat) ParseHeader() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"parseHeader",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_FileFormat) ParseHeaderInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"parseHeaderInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_FileFormat) PreserveSpace() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -1133,7 +1157,7 @@ func (j *jsiiProxy_FileFormat) TrimSpaceInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.74.0/docs/resources/file_format snowflake_file_format} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.75.0/docs/resources/file_format snowflake_file_format} Resource.
 func NewFileFormat(scope constructs.Construct, id *string, config *FileFormatConfig) FileFormat {
 	_init_.Initialize()
 
@@ -1151,7 +1175,7 @@ func NewFileFormat(scope constructs.Construct, id *string, config *FileFormatCon
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.74.0/docs/resources/file_format snowflake_file_format} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.75.0/docs/resources/file_format snowflake_file_format} Resource.
 func NewFileFormat_Override(f FileFormat, scope constructs.Construct, id *string, config *FileFormatConfig) {
 	_init_.Initialize()
 
@@ -1460,6 +1484,17 @@ func (j *jsiiProxy_FileFormat)SetNullIf(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"nullIf",
+		val,
+	)
+}
+
+func (j *jsiiProxy_FileFormat)SetParseHeader(val interface{}) {
+	if err := j.validateSetParseHeaderParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"parseHeader",
 		val,
 	)
 }
@@ -2108,6 +2143,14 @@ func (f *jsiiProxy_FileFormat) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		f,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (f *jsiiProxy_FileFormat) ResetParseHeader() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetParseHeader",
 		nil, // no parameters
 	)
 }
