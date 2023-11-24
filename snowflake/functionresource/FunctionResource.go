@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.75.0/docs/resources/function snowflake_function}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/function snowflake_function}.
 type FunctionResource interface {
 	cdktf.TerraformResource
 	Arguments() FunctionResourceArgumentsList
@@ -676,7 +676,7 @@ func (j *jsiiProxy_FunctionResource) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.75.0/docs/resources/function snowflake_function} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/function snowflake_function} Resource.
 func NewFunctionResource(scope constructs.Construct, id *string, config *FunctionResourceConfig) FunctionResource {
 	_init_.Initialize()
 
@@ -694,7 +694,7 @@ func NewFunctionResource(scope constructs.Construct, id *string, config *Functio
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.75.0/docs/resources/function snowflake_function} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/function snowflake_function} Resource.
 func NewFunctionResource_Override(f FunctionResource, scope constructs.Construct, id *string, config *FunctionResourceConfig) {
 	_init_.Initialize()
 

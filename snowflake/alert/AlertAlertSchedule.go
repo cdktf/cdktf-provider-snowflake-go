@@ -7,13 +7,13 @@ package alert
 type AlertAlertSchedule struct {
 	// cron block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.75.0/docs/resources/alert#cron Alert#cron}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/alert#cron Alert#cron}
 	Cron *AlertAlertScheduleCron `field:"optional" json:"cron" yaml:"cron"`
 	// Specifies the interval in minutes for the alert schedule.
 	//
 	// The interval must be greater than 0 and less than 1440 (24 hours).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.75.0/docs/resources/alert#interval Alert#interval}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/alert#interval Alert#interval}
 	Interval *float64 `field:"optional" json:"interval" yaml:"interval"`
 }
 

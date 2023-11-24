@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.75.0/docs/resources/tag_grant snowflake_tag_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/tag_grant snowflake_tag_grant}.
 type TagGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -486,7 +486,7 @@ func (j *jsiiProxy_TagGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.75.0/docs/resources/tag_grant snowflake_tag_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/tag_grant snowflake_tag_grant} Resource.
 func NewTagGrant(scope constructs.Construct, id *string, config *TagGrantConfig) TagGrant {
 	_init_.Initialize()
 
@@ -504,7 +504,7 @@ func NewTagGrant(scope constructs.Construct, id *string, config *TagGrantConfig)
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.75.0/docs/resources/tag_grant snowflake_tag_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/tag_grant snowflake_tag_grant} Resource.
 func NewTagGrant_Override(t TagGrant, scope constructs.Construct, id *string, config *TagGrantConfig) {
 	_init_.Initialize()
 

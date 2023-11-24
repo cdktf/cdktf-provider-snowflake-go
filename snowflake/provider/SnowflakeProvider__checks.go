@@ -193,7 +193,7 @@ func (j *jsiiProxy_SnowflakeProvider) validateSetKeepSessionAliveParameters(val 
 	return nil
 }
 
-func (j *jsiiProxy_SnowflakeProvider) validateSetOscpFailOpenParameters(val interface{}) error {
+func (j *jsiiProxy_SnowflakeProvider) validateSetOcspFailOpenParameters(val interface{}) error {
 	switch val.(type) {
 	case *bool:
 		// ok

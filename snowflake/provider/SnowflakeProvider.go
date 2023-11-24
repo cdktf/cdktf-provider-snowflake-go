@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.75.0/docs snowflake}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs snowflake}.
 type SnowflakeProvider interface {
 	cdktf.TerraformProvider
 	Account() *string
@@ -96,12 +96,12 @@ type SnowflakeProvider interface {
 	OauthRefreshToken() *string
 	SetOauthRefreshToken(val *string)
 	OauthRefreshTokenInput() *string
+	OcspFailOpen() interface{}
+	SetOcspFailOpen(val interface{})
+	OcspFailOpenInput() interface{}
 	OktaUrl() *string
 	SetOktaUrl(val *string)
 	OktaUrlInput() *string
-	OscpFailOpen() interface{}
-	SetOscpFailOpen(val interface{})
-	OscpFailOpenInput() interface{}
 	Params() *map[string]*string
 	SetParams(val *map[string]*string)
 	ParamsInput() *map[string]*string
@@ -198,8 +198,8 @@ type SnowflakeProvider interface {
 	ResetOauthEndpoint()
 	ResetOauthRedirectUrl()
 	ResetOauthRefreshToken()
+	ResetOcspFailOpen()
 	ResetOktaUrl()
-	ResetOscpFailOpen()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -758,6 +758,26 @@ func (j *jsiiProxy_SnowflakeProvider) OauthRefreshTokenInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_SnowflakeProvider) OcspFailOpen() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"ocspFailOpen",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) OcspFailOpenInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"ocspFailOpenInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_SnowflakeProvider) OktaUrl() *string {
 	var returns *string
 	_jsii_.Get(
@@ -773,26 +793,6 @@ func (j *jsiiProxy_SnowflakeProvider) OktaUrlInput() *string {
 	_jsii_.Get(
 		j,
 		"oktaUrlInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_SnowflakeProvider) OscpFailOpen() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"oscpFailOpen",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_SnowflakeProvider) OscpFailOpenInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"oscpFailOpenInput",
 		&returns,
 	)
 	return returns
@@ -1239,7 +1239,7 @@ func (j *jsiiProxy_SnowflakeProvider) WarehouseInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.75.0/docs snowflake} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs snowflake} Resource.
 func NewSnowflakeProvider(scope constructs.Construct, id *string, config *SnowflakeProviderConfig) SnowflakeProvider {
 	_init_.Initialize()
 
@@ -1257,7 +1257,7 @@ func NewSnowflakeProvider(scope constructs.Construct, id *string, config *Snowfl
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.75.0/docs snowflake} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs snowflake} Resource.
 func NewSnowflakeProvider_Override(s SnowflakeProvider, scope constructs.Construct, id *string, config *SnowflakeProviderConfig) {
 	_init_.Initialize()
 
@@ -1473,21 +1473,21 @@ func (j *jsiiProxy_SnowflakeProvider)SetOauthRefreshToken(val *string) {
 	)
 }
 
-func (j *jsiiProxy_SnowflakeProvider)SetOktaUrl(val *string) {
-	_jsii_.Set(
-		j,
-		"oktaUrl",
-		val,
-	)
-}
-
-func (j *jsiiProxy_SnowflakeProvider)SetOscpFailOpen(val interface{}) {
-	if err := j.validateSetOscpFailOpenParameters(val); err != nil {
+func (j *jsiiProxy_SnowflakeProvider)SetOcspFailOpen(val interface{}) {
+	if err := j.validateSetOcspFailOpenParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
-		"oscpFailOpen",
+		"ocspFailOpen",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetOktaUrl(val *string) {
+	_jsii_.Set(
+		j,
+		"oktaUrl",
 		val,
 	)
 }
@@ -1970,18 +1970,18 @@ func (s *jsiiProxy_SnowflakeProvider) ResetOauthRefreshToken() {
 	)
 }
 
-func (s *jsiiProxy_SnowflakeProvider) ResetOktaUrl() {
+func (s *jsiiProxy_SnowflakeProvider) ResetOcspFailOpen() {
 	_jsii_.InvokeVoid(
 		s,
-		"resetOktaUrl",
+		"resetOcspFailOpen",
 		nil, // no parameters
 	)
 }
 
-func (s *jsiiProxy_SnowflakeProvider) ResetOscpFailOpen() {
+func (s *jsiiProxy_SnowflakeProvider) ResetOktaUrl() {
 	_jsii_.InvokeVoid(
 		s,
-		"resetOscpFailOpen",
+		"resetOktaUrl",
 		nil, // no parameters
 	)
 }
