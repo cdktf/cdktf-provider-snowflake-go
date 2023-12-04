@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/file_format_grant snowflake_file_format_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/file_format_grant snowflake_file_format_grant}.
 type FileFormatGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -118,12 +118,22 @@ type FileFormatGrant interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -535,7 +545,7 @@ func (j *jsiiProxy_FileFormatGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/file_format_grant snowflake_file_format_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/file_format_grant snowflake_file_format_grant} Resource.
 func NewFileFormatGrant(scope constructs.Construct, id *string, config *FileFormatGrantConfig) FileFormatGrant {
 	_init_.Initialize()
 
@@ -553,7 +563,7 @@ func NewFileFormatGrant(scope constructs.Construct, id *string, config *FileForm
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/file_format_grant snowflake_file_format_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/file_format_grant snowflake_file_format_grant} Resource.
 func NewFileFormatGrant_Override(f FileFormatGrant, scope constructs.Construct, id *string, config *FileFormatGrantConfig) {
 	_init_.Initialize()
 
@@ -1022,6 +1032,19 @@ func (f *jsiiProxy_FileFormatGrant) GetStringMapAttribute(terraformAttribute *st
 	return returns
 }
 
+func (f *jsiiProxy_FileFormatGrant) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		f,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (f *jsiiProxy_FileFormatGrant) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := f.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1049,6 +1072,17 @@ func (f *jsiiProxy_FileFormatGrant) InterpolationForAttribute(terraformAttribute
 	return returns
 }
 
+func (f *jsiiProxy_FileFormatGrant) MoveFromId(id *string) {
+	if err := f.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (f *jsiiProxy_FileFormatGrant) MoveTo(moveTarget *string, index interface{}) {
 	if err := f.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1057,6 +1091,17 @@ func (f *jsiiProxy_FileFormatGrant) MoveTo(moveTarget *string, index interface{}
 		f,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (f *jsiiProxy_FileFormatGrant) MoveToId(id *string) {
+	if err := f.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 

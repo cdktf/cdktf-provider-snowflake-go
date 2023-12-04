@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/database snowflake_database}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/database snowflake_database}.
 type Database interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -111,12 +111,22 @@ type Database interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -488,7 +498,7 @@ func (j *jsiiProxy_Database) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/database snowflake_database} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/database snowflake_database} Resource.
 func NewDatabase(scope constructs.Construct, id *string, config *DatabaseConfig) Database {
 	_init_.Initialize()
 
@@ -506,7 +516,7 @@ func NewDatabase(scope constructs.Construct, id *string, config *DatabaseConfig)
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/database snowflake_database} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/database snowflake_database} Resource.
 func NewDatabase_Override(d Database, scope constructs.Construct, id *string, config *DatabaseConfig) {
 	_init_.Initialize()
 
@@ -942,6 +952,19 @@ func (d *jsiiProxy_Database) GetStringMapAttribute(terraformAttribute *string) *
 	return returns
 }
 
+func (d *jsiiProxy_Database) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (d *jsiiProxy_Database) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := d.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -969,6 +992,17 @@ func (d *jsiiProxy_Database) InterpolationForAttribute(terraformAttribute *strin
 	return returns
 }
 
+func (d *jsiiProxy_Database) MoveFromId(id *string) {
+	if err := d.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (d *jsiiProxy_Database) MoveTo(moveTarget *string, index interface{}) {
 	if err := d.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -977,6 +1011,17 @@ func (d *jsiiProxy_Database) MoveTo(moveTarget *string, index interface{}) {
 		d,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (d *jsiiProxy_Database) MoveToId(id *string) {
+	if err := d.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 

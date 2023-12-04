@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/resource_monitor snowflake_resource_monitor}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/resource_monitor snowflake_resource_monitor}.
 type ResourceMonitor interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -127,12 +127,22 @@ type ResourceMonitor interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -608,7 +618,7 @@ func (j *jsiiProxy_ResourceMonitor) WarehousesInput() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/resource_monitor snowflake_resource_monitor} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/resource_monitor snowflake_resource_monitor} Resource.
 func NewResourceMonitor(scope constructs.Construct, id *string, config *ResourceMonitorConfig) ResourceMonitor {
 	_init_.Initialize()
 
@@ -626,7 +636,7 @@ func NewResourceMonitor(scope constructs.Construct, id *string, config *Resource
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/resource_monitor snowflake_resource_monitor} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/resource_monitor snowflake_resource_monitor} Resource.
 func NewResourceMonitor_Override(r ResourceMonitor, scope constructs.Construct, id *string, config *ResourceMonitorConfig) {
 	_init_.Initialize()
 
@@ -1128,6 +1138,19 @@ func (r *jsiiProxy_ResourceMonitor) GetStringMapAttribute(terraformAttribute *st
 	return returns
 }
 
+func (r *jsiiProxy_ResourceMonitor) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (r *jsiiProxy_ResourceMonitor) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := r.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1155,6 +1178,17 @@ func (r *jsiiProxy_ResourceMonitor) InterpolationForAttribute(terraformAttribute
 	return returns
 }
 
+func (r *jsiiProxy_ResourceMonitor) MoveFromId(id *string) {
+	if err := r.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (r *jsiiProxy_ResourceMonitor) MoveTo(moveTarget *string, index interface{}) {
 	if err := r.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1163,6 +1197,17 @@ func (r *jsiiProxy_ResourceMonitor) MoveTo(moveTarget *string, index interface{}
 		r,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (r *jsiiProxy_ResourceMonitor) MoveToId(id *string) {
+	if err := r.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 

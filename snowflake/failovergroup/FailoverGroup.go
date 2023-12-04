@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/failover_group snowflake_failover_group}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/failover_group snowflake_failover_group}.
 type FailoverGroup interface {
 	cdktf.TerraformResource
 	AllowedAccounts() *[]*string
@@ -113,12 +113,22 @@ type FailoverGroup interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -512,7 +522,7 @@ func (j *jsiiProxy_FailoverGroup) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/failover_group snowflake_failover_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/failover_group snowflake_failover_group} Resource.
 func NewFailoverGroup(scope constructs.Construct, id *string, config *FailoverGroupConfig) FailoverGroup {
 	_init_.Initialize()
 
@@ -530,7 +540,7 @@ func NewFailoverGroup(scope constructs.Construct, id *string, config *FailoverGr
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/failover_group snowflake_failover_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/failover_group snowflake_failover_group} Resource.
 func NewFailoverGroup_Override(f FailoverGroup, scope constructs.Construct, id *string, config *FailoverGroupConfig) {
 	_init_.Initialize()
 
@@ -966,6 +976,19 @@ func (f *jsiiProxy_FailoverGroup) GetStringMapAttribute(terraformAttribute *stri
 	return returns
 }
 
+func (f *jsiiProxy_FailoverGroup) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		f,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (f *jsiiProxy_FailoverGroup) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := f.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -993,6 +1016,17 @@ func (f *jsiiProxy_FailoverGroup) InterpolationForAttribute(terraformAttribute *
 	return returns
 }
 
+func (f *jsiiProxy_FailoverGroup) MoveFromId(id *string) {
+	if err := f.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (f *jsiiProxy_FailoverGroup) MoveTo(moveTarget *string, index interface{}) {
 	if err := f.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1001,6 +1035,17 @@ func (f *jsiiProxy_FailoverGroup) MoveTo(moveTarget *string, index interface{}) 
 		f,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (f *jsiiProxy_FailoverGroup) MoveToId(id *string) {
+	if err := f.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 

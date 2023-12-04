@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/stream snowflake_stream}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/stream snowflake_stream}.
 type Stream interface {
 	cdktf.TerraformResource
 	AppendOnly() interface{}
@@ -119,12 +119,22 @@ type Stream interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -545,7 +555,7 @@ func (j *jsiiProxy_Stream) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/stream snowflake_stream} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/stream snowflake_stream} Resource.
 func NewStream(scope constructs.Construct, id *string, config *StreamConfig) Stream {
 	_init_.Initialize()
 
@@ -563,7 +573,7 @@ func NewStream(scope constructs.Construct, id *string, config *StreamConfig) Str
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/stream snowflake_stream} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/stream snowflake_stream} Resource.
 func NewStream_Override(s Stream, scope constructs.Construct, id *string, config *StreamConfig) {
 	_init_.Initialize()
 
@@ -1032,6 +1042,19 @@ func (s *jsiiProxy_Stream) GetStringMapAttribute(terraformAttribute *string) *ma
 	return returns
 }
 
+func (s *jsiiProxy_Stream) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		s,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (s *jsiiProxy_Stream) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := s.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1059,6 +1082,17 @@ func (s *jsiiProxy_Stream) InterpolationForAttribute(terraformAttribute *string)
 	return returns
 }
 
+func (s *jsiiProxy_Stream) MoveFromId(id *string) {
+	if err := s.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (s *jsiiProxy_Stream) MoveTo(moveTarget *string, index interface{}) {
 	if err := s.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1067,6 +1101,17 @@ func (s *jsiiProxy_Stream) MoveTo(moveTarget *string, index interface{}) {
 		s,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (s *jsiiProxy_Stream) MoveToId(id *string) {
+	if err := s.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 

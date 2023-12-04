@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/integration_grant snowflake_integration_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/integration_grant snowflake_integration_grant}.
 type IntegrationGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -106,12 +106,22 @@ type IntegrationGrant interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -440,7 +450,7 @@ func (j *jsiiProxy_IntegrationGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/integration_grant snowflake_integration_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/integration_grant snowflake_integration_grant} Resource.
 func NewIntegrationGrant(scope constructs.Construct, id *string, config *IntegrationGrantConfig) IntegrationGrant {
 	_init_.Initialize()
 
@@ -458,7 +468,7 @@ func NewIntegrationGrant(scope constructs.Construct, id *string, config *Integra
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/integration_grant snowflake_integration_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/integration_grant snowflake_integration_grant} Resource.
 func NewIntegrationGrant_Override(i IntegrationGrant, scope constructs.Construct, id *string, config *IntegrationGrantConfig) {
 	_init_.Initialize()
 
@@ -883,6 +893,19 @@ func (i *jsiiProxy_IntegrationGrant) GetStringMapAttribute(terraformAttribute *s
 	return returns
 }
 
+func (i *jsiiProxy_IntegrationGrant) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		i,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (i *jsiiProxy_IntegrationGrant) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := i.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -910,6 +933,17 @@ func (i *jsiiProxy_IntegrationGrant) InterpolationForAttribute(terraformAttribut
 	return returns
 }
 
+func (i *jsiiProxy_IntegrationGrant) MoveFromId(id *string) {
+	if err := i.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (i *jsiiProxy_IntegrationGrant) MoveTo(moveTarget *string, index interface{}) {
 	if err := i.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -918,6 +952,17 @@ func (i *jsiiProxy_IntegrationGrant) MoveTo(moveTarget *string, index interface{
 		i,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (i *jsiiProxy_IntegrationGrant) MoveToId(id *string) {
+	if err := i.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		i,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 

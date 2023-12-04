@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/object_parameter snowflake_object_parameter}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/object_parameter snowflake_object_parameter}.
 type ObjectParameter interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -102,12 +102,22 @@ type ObjectParameter interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -415,7 +425,7 @@ func (j *jsiiProxy_ObjectParameter) ValueInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/object_parameter snowflake_object_parameter} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/object_parameter snowflake_object_parameter} Resource.
 func NewObjectParameter(scope constructs.Construct, id *string, config *ObjectParameterConfig) ObjectParameter {
 	_init_.Initialize()
 
@@ -433,7 +443,7 @@ func NewObjectParameter(scope constructs.Construct, id *string, config *ObjectPa
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/object_parameter snowflake_object_parameter} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/object_parameter snowflake_object_parameter} Resource.
 func NewObjectParameter_Override(o ObjectParameter, scope constructs.Construct, id *string, config *ObjectParameterConfig) {
 	_init_.Initialize()
 
@@ -836,6 +846,19 @@ func (o *jsiiProxy_ObjectParameter) GetStringMapAttribute(terraformAttribute *st
 	return returns
 }
 
+func (o *jsiiProxy_ObjectParameter) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		o,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (o *jsiiProxy_ObjectParameter) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := o.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -863,6 +886,17 @@ func (o *jsiiProxy_ObjectParameter) InterpolationForAttribute(terraformAttribute
 	return returns
 }
 
+func (o *jsiiProxy_ObjectParameter) MoveFromId(id *string) {
+	if err := o.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		o,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (o *jsiiProxy_ObjectParameter) MoveTo(moveTarget *string, index interface{}) {
 	if err := o.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -871,6 +905,17 @@ func (o *jsiiProxy_ObjectParameter) MoveTo(moveTarget *string, index interface{}
 		o,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (o *jsiiProxy_ObjectParameter) MoveToId(id *string) {
+	if err := o.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		o,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 

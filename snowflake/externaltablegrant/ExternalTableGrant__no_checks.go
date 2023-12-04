@@ -59,7 +59,15 @@ func (e *jsiiProxy_ExternalTableGrant) validateInterpolationForAttributeParamete
 	return nil
 }
 
+func (e *jsiiProxy_ExternalTableGrant) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_ExternalTableGrant) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_ExternalTableGrant) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

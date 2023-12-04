@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/tag_masking_policy_association snowflake_tag_masking_policy_association}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/tag_masking_policy_association snowflake_tag_masking_policy_association}.
 type TagMaskingPolicyAssociation interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -94,12 +94,22 @@ type TagMaskingPolicyAssociation interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -343,7 +353,7 @@ func (j *jsiiProxy_TagMaskingPolicyAssociation) TerraformResourceType() *string 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/tag_masking_policy_association snowflake_tag_masking_policy_association} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/tag_masking_policy_association snowflake_tag_masking_policy_association} Resource.
 func NewTagMaskingPolicyAssociation(scope constructs.Construct, id *string, config *TagMaskingPolicyAssociationConfig) TagMaskingPolicyAssociation {
 	_init_.Initialize()
 
@@ -361,7 +371,7 @@ func NewTagMaskingPolicyAssociation(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/tag_masking_policy_association snowflake_tag_masking_policy_association} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/tag_masking_policy_association snowflake_tag_masking_policy_association} Resource.
 func NewTagMaskingPolicyAssociation_Override(t TagMaskingPolicyAssociation, scope constructs.Construct, id *string, config *TagMaskingPolicyAssociationConfig) {
 	_init_.Initialize()
 
@@ -742,6 +752,19 @@ func (t *jsiiProxy_TagMaskingPolicyAssociation) GetStringMapAttribute(terraformA
 	return returns
 }
 
+func (t *jsiiProxy_TagMaskingPolicyAssociation) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		t,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (t *jsiiProxy_TagMaskingPolicyAssociation) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := t.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -769,6 +792,17 @@ func (t *jsiiProxy_TagMaskingPolicyAssociation) InterpolationForAttribute(terraf
 	return returns
 }
 
+func (t *jsiiProxy_TagMaskingPolicyAssociation) MoveFromId(id *string) {
+	if err := t.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		t,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (t *jsiiProxy_TagMaskingPolicyAssociation) MoveTo(moveTarget *string, index interface{}) {
 	if err := t.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -777,6 +811,17 @@ func (t *jsiiProxy_TagMaskingPolicyAssociation) MoveTo(moveTarget *string, index
 		t,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (t *jsiiProxy_TagMaskingPolicyAssociation) MoveToId(id *string) {
+	if err := t.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		t,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 

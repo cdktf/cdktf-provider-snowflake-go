@@ -59,7 +59,15 @@ func (r *jsiiProxy_RoleOwnershipGrant) validateInterpolationForAttributeParamete
 	return nil
 }
 
+func (r *jsiiProxy_RoleOwnershipGrant) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RoleOwnershipGrant) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (r *jsiiProxy_RoleOwnershipGrant) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

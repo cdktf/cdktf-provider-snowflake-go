@@ -59,7 +59,15 @@ func (e *jsiiProxy_ExternalOauthIntegration) validateInterpolationForAttributePa
 	return nil
 }
 
+func (e *jsiiProxy_ExternalOauthIntegration) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (e *jsiiProxy_ExternalOauthIntegration) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (e *jsiiProxy_ExternalOauthIntegration) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

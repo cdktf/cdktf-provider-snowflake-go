@@ -59,7 +59,15 @@ func (d *jsiiProxy_DynamicTable) validateInterpolationForAttributeParameters(ter
 	return nil
 }
 
+func (d *jsiiProxy_DynamicTable) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DynamicTable) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (d *jsiiProxy_DynamicTable) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

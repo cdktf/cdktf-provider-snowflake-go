@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/dynamic_table snowflake_dynamic_table}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/dynamic_table snowflake_dynamic_table}.
 type DynamicTable interface {
 	cdktf.TerraformResource
 	AutomaticClustering() cdktf.IResolvable
@@ -123,12 +123,22 @@ type DynamicTable interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -615,7 +625,7 @@ func (j *jsiiProxy_DynamicTable) WarehouseInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/dynamic_table snowflake_dynamic_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/dynamic_table snowflake_dynamic_table} Resource.
 func NewDynamicTable(scope constructs.Construct, id *string, config *DynamicTableConfig) DynamicTable {
 	_init_.Initialize()
 
@@ -633,7 +643,7 @@ func NewDynamicTable(scope constructs.Construct, id *string, config *DynamicTabl
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/dynamic_table snowflake_dynamic_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/dynamic_table snowflake_dynamic_table} Resource.
 func NewDynamicTable_Override(d DynamicTable, scope constructs.Construct, id *string, config *DynamicTableConfig) {
 	_init_.Initialize()
 
@@ -1069,6 +1079,19 @@ func (d *jsiiProxy_DynamicTable) GetStringMapAttribute(terraformAttribute *strin
 	return returns
 }
 
+func (d *jsiiProxy_DynamicTable) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		d,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (d *jsiiProxy_DynamicTable) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := d.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1096,6 +1119,17 @@ func (d *jsiiProxy_DynamicTable) InterpolationForAttribute(terraformAttribute *s
 	return returns
 }
 
+func (d *jsiiProxy_DynamicTable) MoveFromId(id *string) {
+	if err := d.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (d *jsiiProxy_DynamicTable) MoveTo(moveTarget *string, index interface{}) {
 	if err := d.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1104,6 +1138,17 @@ func (d *jsiiProxy_DynamicTable) MoveTo(moveTarget *string, index interface{}) {
 		d,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (d *jsiiProxy_DynamicTable) MoveToId(id *string) {
+	if err := d.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 

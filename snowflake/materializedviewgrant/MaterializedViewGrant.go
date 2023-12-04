@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/materialized_view_grant snowflake_materialized_view_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/materialized_view_grant snowflake_materialized_view_grant}.
 type MaterializedViewGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -121,12 +121,22 @@ type MaterializedViewGrant interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -560,7 +570,7 @@ func (j *jsiiProxy_MaterializedViewGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/materialized_view_grant snowflake_materialized_view_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/materialized_view_grant snowflake_materialized_view_grant} Resource.
 func NewMaterializedViewGrant(scope constructs.Construct, id *string, config *MaterializedViewGrantConfig) MaterializedViewGrant {
 	_init_.Initialize()
 
@@ -578,7 +588,7 @@ func NewMaterializedViewGrant(scope constructs.Construct, id *string, config *Ma
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/materialized_view_grant snowflake_materialized_view_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/materialized_view_grant snowflake_materialized_view_grant} Resource.
 func NewMaterializedViewGrant_Override(m MaterializedViewGrant, scope constructs.Construct, id *string, config *MaterializedViewGrantConfig) {
 	_init_.Initialize()
 
@@ -1058,6 +1068,19 @@ func (m *jsiiProxy_MaterializedViewGrant) GetStringMapAttribute(terraformAttribu
 	return returns
 }
 
+func (m *jsiiProxy_MaterializedViewGrant) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		m,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (m *jsiiProxy_MaterializedViewGrant) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := m.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -1085,6 +1108,17 @@ func (m *jsiiProxy_MaterializedViewGrant) InterpolationForAttribute(terraformAtt
 	return returns
 }
 
+func (m *jsiiProxy_MaterializedViewGrant) MoveFromId(id *string) {
+	if err := m.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (m *jsiiProxy_MaterializedViewGrant) MoveTo(moveTarget *string, index interface{}) {
 	if err := m.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -1093,6 +1127,17 @@ func (m *jsiiProxy_MaterializedViewGrant) MoveTo(moveTarget *string, index inter
 		m,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (m *jsiiProxy_MaterializedViewGrant) MoveToId(id *string) {
+	if err := m.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 

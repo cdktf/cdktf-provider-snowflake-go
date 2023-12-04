@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/row_access_policy snowflake_row_access_policy}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/row_access_policy snowflake_row_access_policy}.
 type RowAccessPolicy interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -106,12 +106,22 @@ type RowAccessPolicy interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -436,7 +446,7 @@ func (j *jsiiProxy_RowAccessPolicy) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/row_access_policy snowflake_row_access_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/row_access_policy snowflake_row_access_policy} Resource.
 func NewRowAccessPolicy(scope constructs.Construct, id *string, config *RowAccessPolicyConfig) RowAccessPolicy {
 	_init_.Initialize()
 
@@ -454,7 +464,7 @@ func NewRowAccessPolicy(scope constructs.Construct, id *string, config *RowAcces
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/row_access_policy snowflake_row_access_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/row_access_policy snowflake_row_access_policy} Resource.
 func NewRowAccessPolicy_Override(r RowAccessPolicy, scope constructs.Construct, id *string, config *RowAccessPolicyConfig) {
 	_init_.Initialize()
 
@@ -879,6 +889,19 @@ func (r *jsiiProxy_RowAccessPolicy) GetStringMapAttribute(terraformAttribute *st
 	return returns
 }
 
+func (r *jsiiProxy_RowAccessPolicy) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (r *jsiiProxy_RowAccessPolicy) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := r.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -906,6 +929,17 @@ func (r *jsiiProxy_RowAccessPolicy) InterpolationForAttribute(terraformAttribute
 	return returns
 }
 
+func (r *jsiiProxy_RowAccessPolicy) MoveFromId(id *string) {
+	if err := r.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (r *jsiiProxy_RowAccessPolicy) MoveTo(moveTarget *string, index interface{}) {
 	if err := r.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -914,6 +948,17 @@ func (r *jsiiProxy_RowAccessPolicy) MoveTo(moveTarget *string, index interface{}
 		r,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (r *jsiiProxy_RowAccessPolicy) MoveToId(id *string) {
+	if err := r.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 

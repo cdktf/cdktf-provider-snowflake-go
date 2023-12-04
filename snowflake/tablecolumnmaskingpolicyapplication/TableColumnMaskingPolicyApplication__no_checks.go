@@ -59,7 +59,15 @@ func (t *jsiiProxy_TableColumnMaskingPolicyApplication) validateInterpolationFor
 	return nil
 }
 
+func (t *jsiiProxy_TableColumnMaskingPolicyApplication) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (t *jsiiProxy_TableColumnMaskingPolicyApplication) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (t *jsiiProxy_TableColumnMaskingPolicyApplication) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

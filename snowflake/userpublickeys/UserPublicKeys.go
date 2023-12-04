@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/user_public_keys snowflake_user_public_keys}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/user_public_keys snowflake_user_public_keys}.
 type UserPublicKeys interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -97,12 +97,22 @@ type UserPublicKeys interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -368,7 +378,7 @@ func (j *jsiiProxy_UserPublicKeys) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/user_public_keys snowflake_user_public_keys} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/user_public_keys snowflake_user_public_keys} Resource.
 func NewUserPublicKeys(scope constructs.Construct, id *string, config *UserPublicKeysConfig) UserPublicKeys {
 	_init_.Initialize()
 
@@ -386,7 +396,7 @@ func NewUserPublicKeys(scope constructs.Construct, id *string, config *UserPubli
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.76.0/docs/resources/user_public_keys snowflake_user_public_keys} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/user_public_keys snowflake_user_public_keys} Resource.
 func NewUserPublicKeys_Override(u UserPublicKeys, scope constructs.Construct, id *string, config *UserPublicKeysConfig) {
 	_init_.Initialize()
 
@@ -778,6 +788,19 @@ func (u *jsiiProxy_UserPublicKeys) GetStringMapAttribute(terraformAttribute *str
 	return returns
 }
 
+func (u *jsiiProxy_UserPublicKeys) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		u,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (u *jsiiProxy_UserPublicKeys) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := u.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -805,6 +828,17 @@ func (u *jsiiProxy_UserPublicKeys) InterpolationForAttribute(terraformAttribute 
 	return returns
 }
 
+func (u *jsiiProxy_UserPublicKeys) MoveFromId(id *string) {
+	if err := u.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		u,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (u *jsiiProxy_UserPublicKeys) MoveTo(moveTarget *string, index interface{}) {
 	if err := u.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -813,6 +847,17 @@ func (u *jsiiProxy_UserPublicKeys) MoveTo(moveTarget *string, index interface{})
 		u,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (u *jsiiProxy_UserPublicKeys) MoveToId(id *string) {
+	if err := u.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		u,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 

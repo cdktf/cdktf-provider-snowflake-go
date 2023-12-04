@@ -59,7 +59,15 @@ func (m *jsiiProxy_MaskingPolicyGrant) validateInterpolationForAttributeParamete
 	return nil
 }
 
+func (m *jsiiProxy_MaskingPolicyGrant) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_MaskingPolicyGrant) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (m *jsiiProxy_MaskingPolicyGrant) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 
