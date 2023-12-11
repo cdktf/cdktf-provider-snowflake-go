@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/password_policy snowflake_password_policy}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.79.0/docs/resources/password_policy snowflake_password_policy}.
 type PasswordPolicy interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -45,6 +45,9 @@ type PasswordPolicy interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	History() *float64
+	SetHistory(val *float64)
+	HistoryInput() *float64
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -67,6 +70,9 @@ type PasswordPolicy interface {
 	MaxRetries() *float64
 	SetMaxRetries(val *float64)
 	MaxRetriesInput() *float64
+	MinAgeDays() *float64
+	SetMinAgeDays(val *float64)
+	MinAgeDaysInput() *float64
 	MinLength() *float64
 	SetMinLength(val *float64)
 	MinLengthInput() *float64
@@ -154,12 +160,14 @@ type PasswordPolicy interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	ResetComment()
+	ResetHistory()
 	ResetId()
 	ResetIfNotExists()
 	ResetLockoutTimeMins()
 	ResetMaxAgeDays()
 	ResetMaxLength()
 	ResetMaxRetries()
+	ResetMinAgeDays()
 	ResetMinLength()
 	ResetMinLowerCaseChars()
 	ResetMinNumericChars()
@@ -304,6 +312,26 @@ func (j *jsiiProxy_PasswordPolicy) FriendlyUniqueId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_PasswordPolicy) History() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"history",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_PasswordPolicy) HistoryInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"historyInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_PasswordPolicy) Id() *string {
 	var returns *string
 	_jsii_.Get(
@@ -429,6 +457,26 @@ func (j *jsiiProxy_PasswordPolicy) MaxRetriesInput() *float64 {
 	_jsii_.Get(
 		j,
 		"maxRetriesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_PasswordPolicy) MinAgeDays() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"minAgeDays",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_PasswordPolicy) MinAgeDaysInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"minAgeDaysInput",
 		&returns,
 	)
 	return returns
@@ -675,7 +723,7 @@ func (j *jsiiProxy_PasswordPolicy) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/password_policy snowflake_password_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.79.0/docs/resources/password_policy snowflake_password_policy} Resource.
 func NewPasswordPolicy(scope constructs.Construct, id *string, config *PasswordPolicyConfig) PasswordPolicy {
 	_init_.Initialize()
 
@@ -693,7 +741,7 @@ func NewPasswordPolicy(scope constructs.Construct, id *string, config *PasswordP
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/password_policy snowflake_password_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.79.0/docs/resources/password_policy snowflake_password_policy} Resource.
 func NewPasswordPolicy_Override(p PasswordPolicy, scope constructs.Construct, id *string, config *PasswordPolicyConfig) {
 	_init_.Initialize()
 
@@ -760,6 +808,17 @@ func (j *jsiiProxy_PasswordPolicy)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
+		val,
+	)
+}
+
+func (j *jsiiProxy_PasswordPolicy)SetHistory(val *float64) {
+	if err := j.validateSetHistoryParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"history",
 		val,
 	)
 }
@@ -837,6 +896,17 @@ func (j *jsiiProxy_PasswordPolicy)SetMaxRetries(val *float64) {
 	_jsii_.Set(
 		j,
 		"maxRetries",
+		val,
+	)
+}
+
+func (j *jsiiProxy_PasswordPolicy)SetMinAgeDays(val *float64) {
+	if err := j.validateSetMinAgeDaysParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"minAgeDays",
 		val,
 	)
 }
@@ -1309,6 +1379,14 @@ func (p *jsiiProxy_PasswordPolicy) ResetComment() {
 	)
 }
 
+func (p *jsiiProxy_PasswordPolicy) ResetHistory() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetHistory",
+		nil, // no parameters
+	)
+}
+
 func (p *jsiiProxy_PasswordPolicy) ResetId() {
 	_jsii_.InvokeVoid(
 		p,
@@ -1353,6 +1431,14 @@ func (p *jsiiProxy_PasswordPolicy) ResetMaxRetries() {
 	_jsii_.InvokeVoid(
 		p,
 		"resetMaxRetries",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PasswordPolicy) ResetMinAgeDays() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetMinAgeDays",
 		nil, // no parameters
 	)
 }

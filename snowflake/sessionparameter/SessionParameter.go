@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/session_parameter snowflake_session_parameter}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.79.0/docs/resources/session_parameter snowflake_session_parameter}.
 type SessionParameter interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -401,7 +401,7 @@ func (j *jsiiProxy_SessionParameter) ValueInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/session_parameter snowflake_session_parameter} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.79.0/docs/resources/session_parameter snowflake_session_parameter} Resource.
 func NewSessionParameter(scope constructs.Construct, id *string, config *SessionParameterConfig) SessionParameter {
 	_init_.Initialize()
 
@@ -419,7 +419,7 @@ func NewSessionParameter(scope constructs.Construct, id *string, config *Session
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/session_parameter snowflake_session_parameter} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.79.0/docs/resources/session_parameter snowflake_session_parameter} Resource.
 func NewSessionParameter_Override(s SessionParameter, scope constructs.Construct, id *string, config *SessionParameterConfig) {
 	_init_.Initialize()
 

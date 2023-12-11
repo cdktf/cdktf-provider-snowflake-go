@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/resource_monitor snowflake_resource_monitor}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.79.0/docs/resources/resource_monitor snowflake_resource_monitor}.
 type ResourceMonitor interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -618,7 +618,7 @@ func (j *jsiiProxy_ResourceMonitor) WarehousesInput() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/resource_monitor snowflake_resource_monitor} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.79.0/docs/resources/resource_monitor snowflake_resource_monitor} Resource.
 func NewResourceMonitor(scope constructs.Construct, id *string, config *ResourceMonitorConfig) ResourceMonitor {
 	_init_.Initialize()
 
@@ -636,7 +636,7 @@ func NewResourceMonitor(scope constructs.Construct, id *string, config *Resource
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.77.0/docs/resources/resource_monitor snowflake_resource_monitor} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.79.0/docs/resources/resource_monitor snowflake_resource_monitor} Resource.
 func NewResourceMonitor_Override(r ResourceMonitor, scope constructs.Construct, id *string, config *ResourceMonitorConfig) {
 	_init_.Initialize()
 

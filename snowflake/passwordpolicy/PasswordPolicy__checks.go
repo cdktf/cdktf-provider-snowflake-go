@@ -353,6 +353,14 @@ func (j *jsiiProxy_PasswordPolicy) validateSetDatabaseParameters(val *string) er
 	return nil
 }
 
+func (j *jsiiProxy_PasswordPolicy) validateSetHistoryParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_PasswordPolicy) validateSetIdParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -414,6 +422,14 @@ func (j *jsiiProxy_PasswordPolicy) validateSetMaxLengthParameters(val *float64) 
 }
 
 func (j *jsiiProxy_PasswordPolicy) validateSetMaxRetriesParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_PasswordPolicy) validateSetMinAgeDaysParameters(val *float64) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

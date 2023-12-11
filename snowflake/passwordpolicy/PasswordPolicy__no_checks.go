@@ -107,6 +107,10 @@ func (j *jsiiProxy_PasswordPolicy) validateSetDatabaseParameters(val *string) er
 	return nil
 }
 
+func (j *jsiiProxy_PasswordPolicy) validateSetHistoryParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_PasswordPolicy) validateSetIdParameters(val *string) error {
 	return nil
 }
@@ -132,6 +136,10 @@ func (j *jsiiProxy_PasswordPolicy) validateSetMaxLengthParameters(val *float64) 
 }
 
 func (j *jsiiProxy_PasswordPolicy) validateSetMaxRetriesParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_PasswordPolicy) validateSetMinAgeDaysParameters(val *float64) error {
 	return nil
 }
 
