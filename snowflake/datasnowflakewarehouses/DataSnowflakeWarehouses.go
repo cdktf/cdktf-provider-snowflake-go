@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.79.0/docs/data-sources/warehouses snowflake_warehouses}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.79.1/docs/data-sources/warehouses snowflake_warehouses}.
 type DataSnowflakeWarehouses interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -272,7 +272,7 @@ func (j *jsiiProxy_DataSnowflakeWarehouses) Warehouses() DataSnowflakeWarehouses
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.79.0/docs/data-sources/warehouses snowflake_warehouses} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.79.1/docs/data-sources/warehouses snowflake_warehouses} Data Source.
 func NewDataSnowflakeWarehouses(scope constructs.Construct, id *string, config *DataSnowflakeWarehousesConfig) DataSnowflakeWarehouses {
 	_init_.Initialize()
 
@@ -290,7 +290,7 @@ func NewDataSnowflakeWarehouses(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.79.0/docs/data-sources/warehouses snowflake_warehouses} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.79.1/docs/data-sources/warehouses snowflake_warehouses} Data Source.
 func NewDataSnowflakeWarehouses_Override(d DataSnowflakeWarehouses, scope constructs.Construct, id *string, config *DataSnowflakeWarehousesConfig) {
 	_init_.Initialize()
 

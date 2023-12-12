@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.79.0/docs/resources/table_grant snowflake_table_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.79.1/docs/resources/table_grant snowflake_table_grant}.
 type TableGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -570,7 +570,7 @@ func (j *jsiiProxy_TableGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.79.0/docs/resources/table_grant snowflake_table_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.79.1/docs/resources/table_grant snowflake_table_grant} Resource.
 func NewTableGrant(scope constructs.Construct, id *string, config *TableGrantConfig) TableGrant {
 	_init_.Initialize()
 
@@ -588,7 +588,7 @@ func NewTableGrant(scope constructs.Construct, id *string, config *TableGrantCon
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.79.0/docs/resources/table_grant snowflake_table_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.79.1/docs/resources/table_grant snowflake_table_grant} Resource.
 func NewTableGrant_Override(t TableGrant, scope constructs.Construct, id *string, config *TableGrantConfig) {
 	_init_.Initialize()
 
