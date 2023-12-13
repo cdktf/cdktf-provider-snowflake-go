@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.79.1/docs/resources/user_public_keys snowflake_user_public_keys}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.80.0/docs/resources/user_public_keys snowflake_user_public_keys}.
 type UserPublicKeys interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -378,7 +378,7 @@ func (j *jsiiProxy_UserPublicKeys) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.79.1/docs/resources/user_public_keys snowflake_user_public_keys} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.80.0/docs/resources/user_public_keys snowflake_user_public_keys} Resource.
 func NewUserPublicKeys(scope constructs.Construct, id *string, config *UserPublicKeysConfig) UserPublicKeys {
 	_init_.Initialize()
 
@@ -396,7 +396,7 @@ func NewUserPublicKeys(scope constructs.Construct, id *string, config *UserPubli
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.79.1/docs/resources/user_public_keys snowflake_user_public_keys} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.80.0/docs/resources/user_public_keys snowflake_user_public_keys} Resource.
 func NewUserPublicKeys_Override(u UserPublicKeys, scope constructs.Construct, id *string, config *UserPublicKeysConfig) {
 	_init_.Initialize()
 
