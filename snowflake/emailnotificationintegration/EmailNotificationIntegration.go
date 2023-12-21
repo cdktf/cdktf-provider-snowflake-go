@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.80.0/docs/resources/email_notification_integration snowflake_email_notification_integration}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.82.0/docs/resources/email_notification_integration snowflake_email_notification_integration}.
 type EmailNotificationIntegration interface {
 	cdktf.TerraformResource
 	AllowedRecipients() *[]*string
@@ -119,6 +119,7 @@ type EmailNotificationIntegration interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	ResetAllowedRecipients()
 	ResetComment()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -400,7 +401,7 @@ func (j *jsiiProxy_EmailNotificationIntegration) TerraformResourceType() *string
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.80.0/docs/resources/email_notification_integration snowflake_email_notification_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.82.0/docs/resources/email_notification_integration snowflake_email_notification_integration} Resource.
 func NewEmailNotificationIntegration(scope constructs.Construct, id *string, config *EmailNotificationIntegrationConfig) EmailNotificationIntegration {
 	_init_.Initialize()
 
@@ -418,7 +419,7 @@ func NewEmailNotificationIntegration(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.80.0/docs/resources/email_notification_integration snowflake_email_notification_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.82.0/docs/resources/email_notification_integration snowflake_email_notification_integration} Resource.
 func NewEmailNotificationIntegration_Override(e EmailNotificationIntegration, scope constructs.Construct, id *string, config *EmailNotificationIntegrationConfig) {
 	_init_.Initialize()
 
@@ -902,6 +903,14 @@ func (e *jsiiProxy_EmailNotificationIntegration) OverrideLogicalId(newLogicalId 
 		e,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (e *jsiiProxy_EmailNotificationIntegration) ResetAllowedRecipients() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetAllowedRecipients",
+		nil, // no parameters
 	)
 }
 

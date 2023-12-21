@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.80.0/docs/resources/external_function snowflake_external_function}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.82.0/docs/resources/external_function snowflake_external_function}.
 type ExternalFunction interface {
 	cdktf.TerraformResource
 	ApiIntegration() *string
@@ -719,7 +719,7 @@ func (j *jsiiProxy_ExternalFunction) UrlOfProxyAndResourceInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.80.0/docs/resources/external_function snowflake_external_function} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.82.0/docs/resources/external_function snowflake_external_function} Resource.
 func NewExternalFunction(scope constructs.Construct, id *string, config *ExternalFunctionConfig) ExternalFunction {
 	_init_.Initialize()
 
@@ -737,7 +737,7 @@ func NewExternalFunction(scope constructs.Construct, id *string, config *Externa
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.80.0/docs/resources/external_function snowflake_external_function} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.82.0/docs/resources/external_function snowflake_external_function} Resource.
 func NewExternalFunction_Override(e ExternalFunction, scope constructs.Construct, id *string, config *ExternalFunctionConfig) {
 	_init_.Initialize()
 
