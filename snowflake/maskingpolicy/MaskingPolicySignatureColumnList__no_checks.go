@@ -7,6 +7,10 @@ package maskingpolicy
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (m *jsiiProxy_MaskingPolicySignatureColumnList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (m *jsiiProxy_MaskingPolicySignatureColumnList) validateGetParameters(index *float64) error {
 	return nil
 }

@@ -7,6 +7,10 @@ package datasnowflakeusers
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataSnowflakeUsersUsersList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataSnowflakeUsersUsersList) validateGetParameters(index *float64) error {
 	return nil
 }

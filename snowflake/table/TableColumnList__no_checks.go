@@ -7,6 +7,10 @@ package table
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (t *jsiiProxy_TableColumnList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (t *jsiiProxy_TableColumnList) validateGetParameters(index *float64) error {
 	return nil
 }

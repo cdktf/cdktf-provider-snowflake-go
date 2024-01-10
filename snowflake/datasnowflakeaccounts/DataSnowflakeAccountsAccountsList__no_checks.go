@@ -7,6 +7,10 @@ package datasnowflakeaccounts
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataSnowflakeAccountsAccountsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataSnowflakeAccountsAccountsList) validateGetParameters(index *float64) error {
 	return nil
 }

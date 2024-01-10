@@ -5,10 +5,10 @@ package userownershipgrant
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v10/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v10/userownershipgrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/userownershipgrant/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -126,6 +126,9 @@ type UserOwnershipGrant interface {
 	ResetOverrideLogicalId()
 	ResetRevertOwnershipToRoleName()
 	SynthesizeAttributes() *map[string]interface{}
+	SynthesizeHclAttributes() *map[string]interface{}
+	// Experimental.
+	ToHclTerraform() interface{}
 	// Experimental.
 	ToMetadata() interface{}
 	// Returns a string representation of this construct.
@@ -944,6 +947,32 @@ func (u *jsiiProxy_UserOwnershipGrant) SynthesizeAttributes() *map[string]interf
 	_jsii_.Invoke(
 		u,
 		"synthesizeAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (u *jsiiProxy_UserOwnershipGrant) SynthesizeHclAttributes() *map[string]interface{} {
+	var returns *map[string]interface{}
+
+	_jsii_.Invoke(
+		u,
+		"synthesizeHclAttributes",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
+func (u *jsiiProxy_UserOwnershipGrant) ToHclTerraform() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		u,
+		"toHclTerraform",
 		nil, // no parameters
 		&returns,
 	)

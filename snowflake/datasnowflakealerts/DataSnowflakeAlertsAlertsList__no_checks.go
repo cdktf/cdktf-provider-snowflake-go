@@ -7,6 +7,10 @@ package datasnowflakealerts
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataSnowflakeAlertsAlertsList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataSnowflakeAlertsAlertsList) validateGetParameters(index *float64) error {
 	return nil
 }

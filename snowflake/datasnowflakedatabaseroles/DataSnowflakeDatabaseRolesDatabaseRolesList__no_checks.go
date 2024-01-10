@@ -7,6 +7,10 @@ package datasnowflakedatabaseroles
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataSnowflakeDatabaseRolesDatabaseRolesList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataSnowflakeDatabaseRolesDatabaseRolesList) validateGetParameters(index *float64) error {
 	return nil
 }
