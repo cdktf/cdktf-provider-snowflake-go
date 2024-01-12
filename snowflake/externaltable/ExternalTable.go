@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.82.0/docs/resources/external_table snowflake_external_table}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.83.1/docs/resources/external_table snowflake_external_table}.
 type ExternalTable interface {
 	cdktf.TerraformResource
 	AutoRefresh() interface{}
@@ -97,6 +97,9 @@ type ExternalTable interface {
 	Schema() *string
 	SetSchema(val *string)
 	SchemaInput() *string
+	TableFormat() *string
+	SetTableFormat(val *string)
+	TableFormatInput() *string
 	Tag() ExternalTableTagList
 	TagInput() interface{}
 	// Experimental.
@@ -161,6 +164,7 @@ type ExternalTable interface {
 	ResetPartitionBy()
 	ResetPattern()
 	ResetRefreshOnCreate()
+	ResetTableFormat()
 	ResetTag()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -600,6 +604,26 @@ func (j *jsiiProxy_ExternalTable) SchemaInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ExternalTable) TableFormat() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"tableFormat",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalTable) TableFormatInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"tableFormatInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ExternalTable) Tag() ExternalTableTagList {
 	var returns ExternalTableTagList
 	_jsii_.Get(
@@ -651,7 +675,7 @@ func (j *jsiiProxy_ExternalTable) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.82.0/docs/resources/external_table snowflake_external_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.83.1/docs/resources/external_table snowflake_external_table} Resource.
 func NewExternalTable(scope constructs.Construct, id *string, config *ExternalTableConfig) ExternalTable {
 	_init_.Initialize()
 
@@ -669,7 +693,7 @@ func NewExternalTable(scope constructs.Construct, id *string, config *ExternalTa
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.82.0/docs/resources/external_table snowflake_external_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.83.1/docs/resources/external_table snowflake_external_table} Resource.
 func NewExternalTable_Override(e ExternalTable, scope constructs.Construct, id *string, config *ExternalTableConfig) {
 	_init_.Initialize()
 
@@ -887,6 +911,17 @@ func (j *jsiiProxy_ExternalTable)SetSchema(val *string) {
 	_jsii_.Set(
 		j,
 		"schema",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ExternalTable)SetTableFormat(val *string) {
+	if err := j.validateSetTableFormatParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"tableFormat",
 		val,
 	)
 }
@@ -1334,6 +1369,14 @@ func (e *jsiiProxy_ExternalTable) ResetRefreshOnCreate() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetRefreshOnCreate",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_ExternalTable) ResetTableFormat() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetTableFormat",
 		nil, // no parameters
 	)
 }

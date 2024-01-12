@@ -24,30 +24,30 @@ type UserGrantConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The privilege to grant on the user. To grant all privileges, use the value `ALL PRIVILEGES`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.82.0/docs/resources/user_grant#privilege UserGrant#privilege}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.83.1/docs/resources/user_grant#privilege UserGrant#privilege}
 	Privilege *string `field:"required" json:"privilege" yaml:"privilege"`
 	// The name of the user on which to grant privileges.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.82.0/docs/resources/user_grant#user_name UserGrant#user_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.83.1/docs/resources/user_grant#user_name UserGrant#user_name}
 	UserName *string `field:"required" json:"userName" yaml:"userName"`
 	// When this is set to true, multiple grants of the same type can be created.
 	//
 	// This will cause Terraform to not revoke grants applied to roles and objects outside Terraform.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.82.0/docs/resources/user_grant#enable_multiple_grants UserGrant#enable_multiple_grants}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.83.1/docs/resources/user_grant#enable_multiple_grants UserGrant#enable_multiple_grants}
 	EnableMultipleGrants interface{} `field:"optional" json:"enableMultipleGrants" yaml:"enableMultipleGrants"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.82.0/docs/resources/user_grant#id UserGrant#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.83.1/docs/resources/user_grant#id UserGrant#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
 	// Grants privilege to these roles.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.82.0/docs/resources/user_grant#roles UserGrant#roles}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.83.1/docs/resources/user_grant#roles UserGrant#roles}
 	Roles *[]*string `field:"optional" json:"roles" yaml:"roles"`
 	// When this is set to true, allows the recipient role to grant the privileges to other roles.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.82.0/docs/resources/user_grant#with_grant_option UserGrant#with_grant_option}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.83.1/docs/resources/user_grant#with_grant_option UserGrant#with_grant_option}
 	WithGrantOption interface{} `field:"optional" json:"withGrantOption" yaml:"withGrantOption"`
 }
 

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.82.0/docs/resources/table_column_masking_policy_application snowflake_table_column_masking_policy_application}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.83.1/docs/resources/table_column_masking_policy_application snowflake_table_column_masking_policy_application}.
 type TableColumnMaskingPolicyApplication interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -379,7 +379,7 @@ func (j *jsiiProxy_TableColumnMaskingPolicyApplication) TerraformResourceType() 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.82.0/docs/resources/table_column_masking_policy_application snowflake_table_column_masking_policy_application} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.83.1/docs/resources/table_column_masking_policy_application snowflake_table_column_masking_policy_application} Resource.
 func NewTableColumnMaskingPolicyApplication(scope constructs.Construct, id *string, config *TableColumnMaskingPolicyApplicationConfig) TableColumnMaskingPolicyApplication {
 	_init_.Initialize()
 
@@ -397,7 +397,7 @@ func NewTableColumnMaskingPolicyApplication(scope constructs.Construct, id *stri
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.82.0/docs/resources/table_column_masking_policy_application snowflake_table_column_masking_policy_application} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.83.1/docs/resources/table_column_masking_policy_application snowflake_table_column_masking_policy_application} Resource.
 func NewTableColumnMaskingPolicyApplication_Override(t TableColumnMaskingPolicyApplication, scope constructs.Construct, id *string, config *TableColumnMaskingPolicyApplicationConfig) {
 	_init_.Initialize()
 

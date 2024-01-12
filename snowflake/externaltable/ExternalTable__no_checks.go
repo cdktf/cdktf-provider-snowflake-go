@@ -167,6 +167,10 @@ func (j *jsiiProxy_ExternalTable) validateSetSchemaParameters(val *string) error
 	return nil
 }
 
+func (j *jsiiProxy_ExternalTable) validateSetTableFormatParameters(val *string) error {
+	return nil
+}
+
 func validateNewExternalTableParameters(scope constructs.Construct, id *string, config *ExternalTableConfig) error {
 	return nil
 }

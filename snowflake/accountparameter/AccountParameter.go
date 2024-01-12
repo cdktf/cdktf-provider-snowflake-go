@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.82.0/docs/resources/account_parameter snowflake_account_parameter}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.83.1/docs/resources/account_parameter snowflake_account_parameter}.
 type AccountParameter interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -356,7 +356,7 @@ func (j *jsiiProxy_AccountParameter) ValueInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.82.0/docs/resources/account_parameter snowflake_account_parameter} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.83.1/docs/resources/account_parameter snowflake_account_parameter} Resource.
 func NewAccountParameter(scope constructs.Construct, id *string, config *AccountParameterConfig) AccountParameter {
 	_init_.Initialize()
 
@@ -374,7 +374,7 @@ func NewAccountParameter(scope constructs.Construct, id *string, config *Account
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.82.0/docs/resources/account_parameter snowflake_account_parameter} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.83.1/docs/resources/account_parameter snowflake_account_parameter} Resource.
 func NewAccountParameter_Override(a AccountParameter, scope constructs.Construct, id *string, config *AccountParameterConfig) {
 	_init_.Initialize()
 
