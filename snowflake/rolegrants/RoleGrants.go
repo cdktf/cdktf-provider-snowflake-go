@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.84.0/docs/resources/role_grants snowflake_role_grants}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.84.1/docs/resources/role_grants snowflake_role_grants}.
 type RoleGrants interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -405,7 +405,7 @@ func (j *jsiiProxy_RoleGrants) UsersInput() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.84.0/docs/resources/role_grants snowflake_role_grants} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.84.1/docs/resources/role_grants snowflake_role_grants} Resource.
 func NewRoleGrants(scope constructs.Construct, id *string, config *RoleGrantsConfig) RoleGrants {
 	_init_.Initialize()
 
@@ -423,7 +423,7 @@ func NewRoleGrants(scope constructs.Construct, id *string, config *RoleGrantsCon
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.84.0/docs/resources/role_grants snowflake_role_grants} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.84.1/docs/resources/role_grants snowflake_role_grants} Resource.
 func NewRoleGrants_Override(r RoleGrants, scope constructs.Construct, id *string, config *RoleGrantsConfig) {
 	_init_.Initialize()
 

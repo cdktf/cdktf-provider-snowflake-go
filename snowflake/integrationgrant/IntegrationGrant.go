@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.84.0/docs/resources/integration_grant snowflake_integration_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.84.1/docs/resources/integration_grant snowflake_integration_grant}.
 type IntegrationGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -453,7 +453,7 @@ func (j *jsiiProxy_IntegrationGrant) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.84.0/docs/resources/integration_grant snowflake_integration_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.84.1/docs/resources/integration_grant snowflake_integration_grant} Resource.
 func NewIntegrationGrant(scope constructs.Construct, id *string, config *IntegrationGrantConfig) IntegrationGrant {
 	_init_.Initialize()
 
@@ -471,7 +471,7 @@ func NewIntegrationGrant(scope constructs.Construct, id *string, config *Integra
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.84.0/docs/resources/integration_grant snowflake_integration_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.84.1/docs/resources/integration_grant snowflake_integration_grant} Resource.
 func NewIntegrationGrant_Override(i IntegrationGrant, scope constructs.Construct, id *string, config *IntegrationGrantConfig) {
 	_init_.Initialize()
 
