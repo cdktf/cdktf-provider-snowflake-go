@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.84.1/docs/resources/grant_privileges_to_role snowflake_grant_privileges_to_role}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.85.0/docs/resources/grant_privileges_to_role snowflake_grant_privileges_to_role}.
 type GrantPrivilegesToRole interface {
 	cdktf.TerraformResource
 	AllPrivileges() interface{}
@@ -501,7 +501,7 @@ func (j *jsiiProxy_GrantPrivilegesToRole) WithGrantOptionInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.84.1/docs/resources/grant_privileges_to_role snowflake_grant_privileges_to_role} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.85.0/docs/resources/grant_privileges_to_role snowflake_grant_privileges_to_role} Resource.
 func NewGrantPrivilegesToRole(scope constructs.Construct, id *string, config *GrantPrivilegesToRoleConfig) GrantPrivilegesToRole {
 	_init_.Initialize()
 
@@ -519,7 +519,7 @@ func NewGrantPrivilegesToRole(scope constructs.Construct, id *string, config *Gr
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.84.1/docs/resources/grant_privileges_to_role snowflake_grant_privileges_to_role} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.85.0/docs/resources/grant_privileges_to_role snowflake_grant_privileges_to_role} Resource.
 func NewGrantPrivilegesToRole_Override(g GrantPrivilegesToRole, scope constructs.Construct, id *string, config *GrantPrivilegesToRoleConfig) {
 	_init_.Initialize()
 

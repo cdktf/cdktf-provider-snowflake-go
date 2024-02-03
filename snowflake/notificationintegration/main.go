@@ -91,7 +91,6 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetGcpPubsubSubscriptionName", GoMethod: "ResetGcpPubsubSubscriptionName"},
 			_jsii_.MemberMethod{JsiiMethod: "resetGcpPubsubTopicName", GoMethod: "ResetGcpPubsubTopicName"},
 			_jsii_.MemberMethod{JsiiMethod: "resetId", GoMethod: "ResetId"},
-			_jsii_.MemberMethod{JsiiMethod: "resetNotificationProvider", GoMethod: "ResetNotificationProvider"},
 			_jsii_.MemberMethod{JsiiMethod: "resetOverrideLogicalId", GoMethod: "ResetOverrideLogicalId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetType", GoMethod: "ResetType"},
 			_jsii_.MemberMethod{JsiiMethod: "synthesizeAttributes", GoMethod: "SynthesizeAttributes"},

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.84.1/docs/resources/sequence snowflake_sequence}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.85.0/docs/resources/sequence snowflake_sequence}.
 type Sequence interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -62,6 +62,9 @@ type Sequence interface {
 	NextValue() *float64
 	// The tree node.
 	Node() constructs.Node
+	Ordering() *string
+	SetOrdering(val *string)
+	OrderingInput() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -127,6 +130,7 @@ type Sequence interface {
 	ResetComment()
 	ResetId()
 	ResetIncrement()
+	ResetOrdering()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -368,6 +372,26 @@ func (j *jsiiProxy_Sequence) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_Sequence) Ordering() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"ordering",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Sequence) OrderingInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"orderingInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Sequence) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -449,7 +473,7 @@ func (j *jsiiProxy_Sequence) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.84.1/docs/resources/sequence snowflake_sequence} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.85.0/docs/resources/sequence snowflake_sequence} Resource.
 func NewSequence(scope constructs.Construct, id *string, config *SequenceConfig) Sequence {
 	_init_.Initialize()
 
@@ -467,7 +491,7 @@ func NewSequence(scope constructs.Construct, id *string, config *SequenceConfig)
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.84.1/docs/resources/sequence snowflake_sequence} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.85.0/docs/resources/sequence snowflake_sequence} Resource.
 func NewSequence_Override(s Sequence, scope constructs.Construct, id *string, config *SequenceConfig) {
 	_init_.Initialize()
 
@@ -578,6 +602,17 @@ func (j *jsiiProxy_Sequence)SetName(val *string) {
 	_jsii_.Set(
 		j,
 		"name",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Sequence)SetOrdering(val *string) {
+	if err := j.validateSetOrderingParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"ordering",
 		val,
 	)
 }
@@ -985,6 +1020,14 @@ func (s *jsiiProxy_Sequence) ResetIncrement() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetIncrement",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Sequence) ResetOrdering() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetOrdering",
 		nil, // no parameters
 	)
 }
