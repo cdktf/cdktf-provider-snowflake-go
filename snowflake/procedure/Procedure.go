@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.85.0/docs/resources/procedure snowflake_procedure}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.86.0/docs/resources/procedure snowflake_procedure}.
 type Procedure interface {
 	cdktf.TerraformResource
 	Arguments() ProcedureArgumentsList
@@ -99,6 +99,9 @@ type Procedure interface {
 	Schema() *string
 	SetSchema(val *string)
 	SchemaInput() *string
+	Secure() interface{}
+	SetSecure(val interface{})
+	SecureInput() interface{}
 	Statement() *string
 	SetStatement(val *string)
 	StatementInput() *string
@@ -166,6 +169,7 @@ type Procedure interface {
 	ResetPackages()
 	ResetReturnBehavior()
 	ResetRuntimeVersion()
+	ResetSecure()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -614,6 +618,26 @@ func (j *jsiiProxy_Procedure) SchemaInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Procedure) Secure() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"secure",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Procedure) SecureInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"secureInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Procedure) Statement() *string {
 	var returns *string
 	_jsii_.Get(
@@ -665,7 +689,7 @@ func (j *jsiiProxy_Procedure) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.85.0/docs/resources/procedure snowflake_procedure} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.86.0/docs/resources/procedure snowflake_procedure} Resource.
 func NewProcedure(scope constructs.Construct, id *string, config *ProcedureConfig) Procedure {
 	_init_.Initialize()
 
@@ -683,7 +707,7 @@ func NewProcedure(scope constructs.Construct, id *string, config *ProcedureConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.85.0/docs/resources/procedure snowflake_procedure} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.86.0/docs/resources/procedure snowflake_procedure} Resource.
 func NewProcedure_Override(p Procedure, scope constructs.Construct, id *string, config *ProcedureConfig) {
 	_init_.Initialize()
 
@@ -912,6 +936,17 @@ func (j *jsiiProxy_Procedure)SetSchema(val *string) {
 	_jsii_.Set(
 		j,
 		"schema",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Procedure)SetSecure(val interface{}) {
+	if err := j.validateSetSecureParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"secure",
 		val,
 	)
 }
@@ -1383,6 +1418,14 @@ func (p *jsiiProxy_Procedure) ResetRuntimeVersion() {
 	_jsii_.InvokeVoid(
 		p,
 		"resetRuntimeVersion",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_Procedure) ResetSecure() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetSecure",
 		nil, // no parameters
 	)
 }

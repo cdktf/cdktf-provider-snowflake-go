@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.85.0/docs/data-sources/external_functions snowflake_external_functions}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.86.0/docs/data-sources/external_functions snowflake_external_functions}.
 type DataSnowflakeExternalFunctions interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -88,10 +88,12 @@ type DataSnowflakeExternalFunctions interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	ResetDatabase()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetSchema()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Adds this resource to the terraform JSON output.
@@ -322,7 +324,7 @@ func (j *jsiiProxy_DataSnowflakeExternalFunctions) TerraformResourceType() *stri
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.85.0/docs/data-sources/external_functions snowflake_external_functions} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.86.0/docs/data-sources/external_functions snowflake_external_functions} Data Source.
 func NewDataSnowflakeExternalFunctions(scope constructs.Construct, id *string, config *DataSnowflakeExternalFunctionsConfig) DataSnowflakeExternalFunctions {
 	_init_.Initialize()
 
@@ -340,7 +342,7 @@ func NewDataSnowflakeExternalFunctions(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.85.0/docs/data-sources/external_functions snowflake_external_functions} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.86.0/docs/data-sources/external_functions snowflake_external_functions} Data Source.
 func NewDataSnowflakeExternalFunctions_Override(d DataSnowflakeExternalFunctions, scope constructs.Construct, id *string, config *DataSnowflakeExternalFunctionsConfig) {
 	_init_.Initialize()
 
@@ -715,6 +717,14 @@ func (d *jsiiProxy_DataSnowflakeExternalFunctions) OverrideLogicalId(newLogicalI
 	)
 }
 
+func (d *jsiiProxy_DataSnowflakeExternalFunctions) ResetDatabase() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetDatabase",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DataSnowflakeExternalFunctions) ResetId() {
 	_jsii_.InvokeVoid(
 		d,
@@ -727,6 +737,14 @@ func (d *jsiiProxy_DataSnowflakeExternalFunctions) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataSnowflakeExternalFunctions) ResetSchema() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetSchema",
 		nil, // no parameters
 	)
 }

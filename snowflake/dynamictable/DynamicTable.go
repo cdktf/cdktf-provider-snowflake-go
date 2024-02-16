@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.85.0/docs/resources/dynamic_table snowflake_dynamic_table}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.86.0/docs/resources/dynamic_table snowflake_dynamic_table}.
 type DynamicTable interface {
 	cdktf.TerraformResource
 	AutomaticClustering() cdktf.IResolvable
@@ -33,6 +33,7 @@ type DynamicTable interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
+	CreatedOn() *string
 	Database() *string
 	SetDatabase(val *string)
 	DatabaseInput() *string
@@ -52,6 +53,9 @@ type DynamicTable interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	Initialize() *string
+	SetInitialize(val *string)
+	InitializeInput() *string
 	IsClone() cdktf.IResolvable
 	IsReplica() cdktf.IResolvable
 	LastSuspendedOn() *string
@@ -82,6 +86,8 @@ type DynamicTable interface {
 	// Experimental.
 	RawOverrides() interface{}
 	RefreshMode() *string
+	SetRefreshMode(val *string)
+	RefreshModeInput() *string
 	RefreshModeReason() *string
 	Rows() *float64
 	SchedulingState() *string
@@ -145,10 +151,12 @@ type DynamicTable interface {
 	PutTargetLag(value *DynamicTableTargetLag)
 	ResetComment()
 	ResetId()
+	ResetInitialize()
 	ResetOrReplace()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetRefreshMode()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -257,6 +265,16 @@ func (j *jsiiProxy_DynamicTable) Count() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DynamicTable) CreatedOn() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"createdOn",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DynamicTable) Database() *string {
 	var returns *string
 	_jsii_.Get(
@@ -342,6 +360,26 @@ func (j *jsiiProxy_DynamicTable) IdInput() *string {
 	_jsii_.Get(
 		j,
 		"idInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamicTable) Initialize() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"initialize",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamicTable) InitializeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"initializeInput",
 		&returns,
 	)
 	return returns
@@ -507,6 +545,16 @@ func (j *jsiiProxy_DynamicTable) RefreshMode() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DynamicTable) RefreshModeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"refreshModeInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DynamicTable) RefreshModeReason() *string {
 	var returns *string
 	_jsii_.Get(
@@ -628,7 +676,7 @@ func (j *jsiiProxy_DynamicTable) WarehouseInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.85.0/docs/resources/dynamic_table snowflake_dynamic_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.86.0/docs/resources/dynamic_table snowflake_dynamic_table} Resource.
 func NewDynamicTable(scope constructs.Construct, id *string, config *DynamicTableConfig) DynamicTable {
 	_init_.Initialize()
 
@@ -646,7 +694,7 @@ func NewDynamicTable(scope constructs.Construct, id *string, config *DynamicTabl
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.85.0/docs/resources/dynamic_table snowflake_dynamic_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.86.0/docs/resources/dynamic_table snowflake_dynamic_table} Resource.
 func NewDynamicTable_Override(d DynamicTable, scope constructs.Construct, id *string, config *DynamicTableConfig) {
 	_init_.Initialize()
 
@@ -728,6 +776,17 @@ func (j *jsiiProxy_DynamicTable)SetId(val *string) {
 	)
 }
 
+func (j *jsiiProxy_DynamicTable)SetInitialize(val *string) {
+	if err := j.validateSetInitializeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"initialize",
+		val,
+	)
+}
+
 func (j *jsiiProxy_DynamicTable)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
 	if err := j.validateSetLifecycleParameters(val); err != nil {
 		panic(err)
@@ -787,6 +846,17 @@ func (j *jsiiProxy_DynamicTable)SetQuery(val *string) {
 	_jsii_.Set(
 		j,
 		"query",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DynamicTable)SetRefreshMode(val *string) {
+	if err := j.validateSetRefreshModeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"refreshMode",
 		val,
 	)
 }
@@ -1193,6 +1263,14 @@ func (d *jsiiProxy_DynamicTable) ResetId() {
 	)
 }
 
+func (d *jsiiProxy_DynamicTable) ResetInitialize() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetInitialize",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DynamicTable) ResetOrReplace() {
 	_jsii_.InvokeVoid(
 		d,
@@ -1205,6 +1283,14 @@ func (d *jsiiProxy_DynamicTable) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamicTable) ResetRefreshMode() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetRefreshMode",
 		nil, // no parameters
 	)
 }

@@ -167,6 +167,10 @@ func (j *jsiiProxy_Procedure) validateSetSchemaParameters(val *string) error {
 	return nil
 }
 
+func (j *jsiiProxy_Procedure) validateSetSecureParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Procedure) validateSetStatementParameters(val *string) error {
 	return nil
 }

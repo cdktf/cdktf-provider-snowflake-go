@@ -115,6 +115,10 @@ func (j *jsiiProxy_DynamicTable) validateSetIdParameters(val *string) error {
 	return nil
 }
 
+func (j *jsiiProxy_DynamicTable) validateSetInitializeParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_DynamicTable) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }
@@ -132,6 +136,10 @@ func (j *jsiiProxy_DynamicTable) validateSetProvisionersParameters(val *[]interf
 }
 
 func (j *jsiiProxy_DynamicTable) validateSetQueryParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DynamicTable) validateSetRefreshModeParameters(val *string) error {
 	return nil
 }
 
