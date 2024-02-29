@@ -454,14 +454,6 @@ func (j *jsiiProxy_Table) validateSetDatabaseParameters(val *string) error {
 	return nil
 }
 
-func (j *jsiiProxy_Table) validateSetDataRetentionDaysParameters(val *float64) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
 func (j *jsiiProxy_Table) validateSetDataRetentionTimeInDaysParameters(val *float64) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

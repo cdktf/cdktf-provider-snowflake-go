@@ -7,11 +7,11 @@ package maskingpolicy
 type MaskingPolicySignatureColumn struct {
 	// Specifies the column name to mask.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.86.0/docs/resources/masking_policy#name MaskingPolicy#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.0/docs/resources/masking_policy#name MaskingPolicy#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// Specifies the column type to mask.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.86.0/docs/resources/masking_policy#type MaskingPolicy#type}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.0/docs/resources/masking_policy#type MaskingPolicy#type}
 	Type *string `field:"required" json:"type" yaml:"type"`
 }
 

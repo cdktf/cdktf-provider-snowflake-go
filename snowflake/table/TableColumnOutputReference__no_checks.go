@@ -59,6 +59,10 @@ func (t *jsiiProxy_TableColumnOutputReference) validateResolveParameters(_contex
 	return nil
 }
 
+func (j *jsiiProxy_TableColumnOutputReference) validateSetCollateParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_TableColumnOutputReference) validateSetCommentParameters(val *string) error {
 	return nil
 }

@@ -26,9 +26,9 @@ type AccountGrantConfig struct {
 	//
 	// This will cause Terraform to not revoke grants applied to roles and objects outside Terraform.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.86.0/docs/resources/account_grant#enable_multiple_grants AccountGrant#enable_multiple_grants}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.0/docs/resources/account_grant#enable_multiple_grants AccountGrant#enable_multiple_grants}
 	EnableMultipleGrants interface{} `field:"optional" json:"enableMultipleGrants" yaml:"enableMultipleGrants"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.86.0/docs/resources/account_grant#id AccountGrant#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.0/docs/resources/account_grant#id AccountGrant#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -37,15 +37,15 @@ type AccountGrantConfig struct {
 	//
 	// Valid privileges are those in [globalPrivileges](https://docs.snowflake.com/en/sql-reference/sql/grant-privilege.html). To grant all privileges, use the value `ALL PRIVILEGES`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.86.0/docs/resources/account_grant#privilege AccountGrant#privilege}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.0/docs/resources/account_grant#privilege AccountGrant#privilege}
 	Privilege *string `field:"optional" json:"privilege" yaml:"privilege"`
 	// Grants privilege to these roles.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.86.0/docs/resources/account_grant#roles AccountGrant#roles}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.0/docs/resources/account_grant#roles AccountGrant#roles}
 	Roles *[]*string `field:"optional" json:"roles" yaml:"roles"`
 	// When this is set to true, allows the recipient role to grant the privileges to other roles.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.86.0/docs/resources/account_grant#with_grant_option AccountGrant#with_grant_option}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.0/docs/resources/account_grant#with_grant_option AccountGrant#with_grant_option}
 	WithGrantOption interface{} `field:"optional" json:"withGrantOption" yaml:"withGrantOption"`
 }
 

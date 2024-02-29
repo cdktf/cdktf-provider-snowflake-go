@@ -13,6 +13,9 @@ import (
 
 type TableColumnOutputReference interface {
 	cdktf.ComplexObject
+	Collate() *string
+	SetCollate(val *string)
+	CollateInput() *string
 	Comment() *string
 	SetComment(val *string)
 	CommentInput() *string
@@ -85,6 +88,7 @@ type TableColumnOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	PutDefault(value *TableColumnDefault)
 	PutIdentity(value *TableColumnIdentity)
+	ResetCollate()
 	ResetComment()
 	ResetDefault()
 	ResetIdentity()
@@ -103,6 +107,26 @@ type TableColumnOutputReference interface {
 // The jsii proxy struct for TableColumnOutputReference
 type jsiiProxy_TableColumnOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_TableColumnOutputReference) Collate() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"collate",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TableColumnOutputReference) CollateInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"collateInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_TableColumnOutputReference) Comment() *string {
@@ -340,6 +364,17 @@ func NewTableColumnOutputReference_Override(t TableColumnOutputReference, terraf
 		"@cdktf/provider-snowflake.table.TableColumnOutputReference",
 		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		t,
+	)
+}
+
+func (j *jsiiProxy_TableColumnOutputReference)SetCollate(val *string) {
+	if err := j.validateSetCollateParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"collate",
+		val,
 	)
 }
 
@@ -658,6 +693,14 @@ func (t *jsiiProxy_TableColumnOutputReference) PutIdentity(value *TableColumnIde
 		t,
 		"putIdentity",
 		[]interface{}{value},
+	)
+}
+
+func (t *jsiiProxy_TableColumnOutputReference) ResetCollate() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetCollate",
+		nil, // no parameters
 	)
 }
 
