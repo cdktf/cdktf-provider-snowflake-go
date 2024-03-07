@@ -24,25 +24,25 @@ type DataSnowflakeGrantsConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// future_grants_in block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.0/docs/data-sources/grants#future_grants_in DataSnowflakeGrants#future_grants_in}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.1/docs/data-sources/grants#future_grants_in DataSnowflakeGrants#future_grants_in}
 	FutureGrantsIn *DataSnowflakeGrantsFutureGrantsIn `field:"optional" json:"futureGrantsIn" yaml:"futureGrantsIn"`
 	// future_grants_to block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.0/docs/data-sources/grants#future_grants_to DataSnowflakeGrants#future_grants_to}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.1/docs/data-sources/grants#future_grants_to DataSnowflakeGrants#future_grants_to}
 	FutureGrantsTo *DataSnowflakeGrantsFutureGrantsTo `field:"optional" json:"futureGrantsTo" yaml:"futureGrantsTo"`
 	// grants_of block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.0/docs/data-sources/grants#grants_of DataSnowflakeGrants#grants_of}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.1/docs/data-sources/grants#grants_of DataSnowflakeGrants#grants_of}
 	GrantsOf *DataSnowflakeGrantsGrantsOf `field:"optional" json:"grantsOf" yaml:"grantsOf"`
 	// grants_on block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.0/docs/data-sources/grants#grants_on DataSnowflakeGrants#grants_on}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.1/docs/data-sources/grants#grants_on DataSnowflakeGrants#grants_on}
 	GrantsOn *DataSnowflakeGrantsGrantsOn `field:"optional" json:"grantsOn" yaml:"grantsOn"`
 	// grants_to block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.0/docs/data-sources/grants#grants_to DataSnowflakeGrants#grants_to}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.1/docs/data-sources/grants#grants_to DataSnowflakeGrants#grants_to}
 	GrantsTo *DataSnowflakeGrantsGrantsTo `field:"optional" json:"grantsTo" yaml:"grantsTo"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.0/docs/data-sources/grants#id DataSnowflakeGrants#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.1/docs/data-sources/grants#id DataSnowflakeGrants#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
