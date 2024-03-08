@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.1/docs/data-sources/sequences snowflake_sequences}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.2/docs/data-sources/sequences snowflake_sequences}.
 type DataSnowflakeSequences interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -322,7 +322,7 @@ func (j *jsiiProxy_DataSnowflakeSequences) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.1/docs/data-sources/sequences snowflake_sequences} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.2/docs/data-sources/sequences snowflake_sequences} Data Source.
 func NewDataSnowflakeSequences(scope constructs.Construct, id *string, config *DataSnowflakeSequencesConfig) DataSnowflakeSequences {
 	_init_.Initialize()
 
@@ -340,7 +340,7 @@ func NewDataSnowflakeSequences(scope constructs.Construct, id *string, config *D
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.1/docs/data-sources/sequences snowflake_sequences} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.2/docs/data-sources/sequences snowflake_sequences} Data Source.
 func NewDataSnowflakeSequences_Override(d DataSnowflakeSequences, scope constructs.Construct, id *string, config *DataSnowflakeSequencesConfig) {
 	_init_.Initialize()
 

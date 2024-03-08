@@ -24,16 +24,16 @@ type DataSnowflakeExternalFunctionsConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The database from which to return the schemas from.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.1/docs/data-sources/external_functions#database DataSnowflakeExternalFunctions#database}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.2/docs/data-sources/external_functions#database DataSnowflakeExternalFunctions#database}
 	Database *string `field:"optional" json:"database" yaml:"database"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.1/docs/data-sources/external_functions#id DataSnowflakeExternalFunctions#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.2/docs/data-sources/external_functions#id DataSnowflakeExternalFunctions#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
 	// The schema from which to return the external functions from.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.1/docs/data-sources/external_functions#schema DataSnowflakeExternalFunctions#schema}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.87.2/docs/data-sources/external_functions#schema DataSnowflakeExternalFunctions#schema}
 	Schema *string `field:"optional" json:"schema" yaml:"schema"`
 }
 
