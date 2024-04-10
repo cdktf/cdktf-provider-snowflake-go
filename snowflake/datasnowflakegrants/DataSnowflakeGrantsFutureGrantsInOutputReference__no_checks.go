@@ -47,10 +47,6 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInOutputReference) validateInt
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInOutputReference) validatePutSchemaParameters(value *DataSnowflakeGrantsFutureGrantsInSchema) error {
-	return nil
-}
-
 func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	return nil
 }
@@ -68,6 +64,10 @@ func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInOutputReference) validateSet
 }
 
 func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInOutputReference) validateSetInternalValueParameters(val *DataSnowflakeGrantsFutureGrantsIn) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInOutputReference) validateSetSchemaParameters(val *string) error {
 	return nil
 }
 

@@ -51,6 +51,14 @@ func (d *jsiiProxy_DataSnowflakeGrantsGrantsOfOutputReference) validateResolvePa
 	return nil
 }
 
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsOfOutputReference) validateSetAccountRoleParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsOfOutputReference) validateSetApplicationRoleParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataSnowflakeGrantsGrantsOfOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
 	return nil
 }
@@ -59,11 +67,11 @@ func (j *jsiiProxy_DataSnowflakeGrantsGrantsOfOutputReference) validateSetComple
 	return nil
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsGrantsOfOutputReference) validateSetInternalValueParameters(val *DataSnowflakeGrantsGrantsOf) error {
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsOfOutputReference) validateSetDatabaseRoleParameters(val *string) error {
 	return nil
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsGrantsOfOutputReference) validateSetRoleParameters(val *string) error {
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsOfOutputReference) validateSetInternalValueParameters(val *DataSnowflakeGrantsGrantsOf) error {
 	return nil
 }
 

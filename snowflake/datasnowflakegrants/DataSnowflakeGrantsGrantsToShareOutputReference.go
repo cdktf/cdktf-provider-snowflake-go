@@ -11,7 +11,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-type DataSnowflakeGrantsFutureGrantsInSchemaOutputReference interface {
+type DataSnowflakeGrantsGrantsToShareOutputReference interface {
 	cdktf.ComplexObject
 	// the index of the complex object in a list.
 	// Experimental.
@@ -28,16 +28,13 @@ type DataSnowflakeGrantsFutureGrantsInSchemaOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
-	DatabaseName() *string
-	SetDatabaseName(val *string)
-	DatabaseNameInput() *string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *DataSnowflakeGrantsFutureGrantsInSchema
-	SetInternalValue(val *DataSnowflakeGrantsFutureGrantsInSchema)
-	SchemaName() *string
-	SetSchemaName(val *string)
-	SchemaNameInput() *string
+	InternalValue() *DataSnowflakeGrantsGrantsToShare
+	SetInternalValue(val *DataSnowflakeGrantsGrantsToShare)
+	ShareName() *string
+	SetShareName(val *string)
+	ShareNameInput() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -70,7 +67,6 @@ type DataSnowflakeGrantsFutureGrantsInSchemaOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
-	ResetDatabaseName()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -81,12 +77,12 @@ type DataSnowflakeGrantsFutureGrantsInSchemaOutputReference interface {
 	ToString() *string
 }
 
-// The jsii proxy struct for DataSnowflakeGrantsFutureGrantsInSchemaOutputReference
-type jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference struct {
+// The jsii proxy struct for DataSnowflakeGrantsGrantsToShareOutputReference
+type jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference struct {
 	internal.Type__cdktfComplexObject
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) ComplexObjectIndex() interface{} {
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference) ComplexObjectIndex() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
@@ -96,7 +92,7 @@ func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) Compl
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) ComplexObjectIsFromSet() *bool {
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference) ComplexObjectIsFromSet() *bool {
 	var returns *bool
 	_jsii_.Get(
 		j,
@@ -106,7 +102,7 @@ func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) Compl
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) CreationStack() *[]*string {
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference) CreationStack() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
@@ -116,27 +112,7 @@ func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) Creat
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) DatabaseName() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"databaseName",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) DatabaseNameInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"databaseNameInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) Fqn() *string {
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -146,8 +122,8 @@ func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) Fqn()
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) InternalValue() *DataSnowflakeGrantsFutureGrantsInSchema {
-	var returns *DataSnowflakeGrantsFutureGrantsInSchema
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference) InternalValue() *DataSnowflakeGrantsGrantsToShare {
+	var returns *DataSnowflakeGrantsGrantsToShare
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -156,27 +132,27 @@ func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) Inter
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) SchemaName() *string {
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference) ShareName() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
-		"schemaName",
+		"shareName",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) SchemaNameInput() *string {
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference) ShareNameInput() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
-		"schemaNameInput",
+		"shareNameInput",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) TerraformAttribute() *string {
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -186,7 +162,7 @@ func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) Terra
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) TerraformResource() cdktf.IInterpolatingParent {
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference) TerraformResource() cdktf.IInterpolatingParent {
 	var returns cdktf.IInterpolatingParent
 	_jsii_.Get(
 		j,
@@ -197,16 +173,16 @@ func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) Terra
 }
 
 
-func NewDataSnowflakeGrantsFutureGrantsInSchemaOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) DataSnowflakeGrantsFutureGrantsInSchemaOutputReference {
+func NewDataSnowflakeGrantsGrantsToShareOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) DataSnowflakeGrantsGrantsToShareOutputReference {
 	_init_.Initialize()
 
-	if err := validateNewDataSnowflakeGrantsFutureGrantsInSchemaOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+	if err := validateNewDataSnowflakeGrantsGrantsToShareOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
 		panic(err)
 	}
-	j := jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference{}
+	j := jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference{}
 
 	_jsii_.Create(
-		"@cdktf/provider-snowflake.dataSnowflakeGrants.DataSnowflakeGrantsFutureGrantsInSchemaOutputReference",
+		"@cdktf/provider-snowflake.dataSnowflakeGrants.DataSnowflakeGrantsGrantsToShareOutputReference",
 		[]interface{}{terraformResource, terraformAttribute},
 		&j,
 	)
@@ -214,17 +190,17 @@ func NewDataSnowflakeGrantsFutureGrantsInSchemaOutputReference(terraformResource
 	return &j
 }
 
-func NewDataSnowflakeGrantsFutureGrantsInSchemaOutputReference_Override(d DataSnowflakeGrantsFutureGrantsInSchemaOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) {
+func NewDataSnowflakeGrantsGrantsToShareOutputReference_Override(d DataSnowflakeGrantsGrantsToShareOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@cdktf/provider-snowflake.dataSnowflakeGrants.DataSnowflakeGrantsFutureGrantsInSchemaOutputReference",
+		"@cdktf/provider-snowflake.dataSnowflakeGrants.DataSnowflakeGrantsGrantsToShareOutputReference",
 		[]interface{}{terraformResource, terraformAttribute},
 		d,
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference)SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference)SetComplexObjectIndex(val interface{}) {
 	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
 		panic(err)
 	}
@@ -235,7 +211,7 @@ func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference)SetCom
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference)SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference)SetComplexObjectIsFromSet(val *bool) {
 	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
 		panic(err)
 	}
@@ -246,18 +222,7 @@ func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference)SetCom
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference)SetDatabaseName(val *string) {
-	if err := j.validateSetDatabaseNameParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"databaseName",
-		val,
-	)
-}
-
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference)SetInternalValue(val *DataSnowflakeGrantsFutureGrantsInSchema) {
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference)SetInternalValue(val *DataSnowflakeGrantsGrantsToShare) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}
@@ -268,18 +233,18 @@ func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference)SetInt
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference)SetSchemaName(val *string) {
-	if err := j.validateSetSchemaNameParameters(val); err != nil {
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference)SetShareName(val *string) {
+	if err := j.validateSetShareNameParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
-		"schemaName",
+		"shareName",
 		val,
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference)SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference)SetTerraformAttribute(val *string) {
 	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
 		panic(err)
 	}
@@ -290,7 +255,7 @@ func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference)SetTer
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
 	if err := j.validateSetTerraformResourceParameters(val); err != nil {
 		panic(err)
 	}
@@ -301,7 +266,7 @@ func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference)SetTer
 	)
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) ComputeFqn() *string {
+func (d *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference) ComputeFqn() *string {
 	var returns *string
 
 	_jsii_.Invoke(
@@ -314,7 +279,7 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) Compu
 	return returns
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+func (d *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
 	if err := d.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -330,7 +295,7 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) GetAn
 	return returns
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+func (d *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
 	if err := d.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -346,7 +311,7 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) GetBo
 	return returns
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+func (d *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
 	if err := d.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -362,7 +327,7 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) GetBo
 	return returns
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+func (d *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
 	if err := d.validateGetListAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -378,7 +343,7 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) GetLi
 	return returns
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+func (d *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
 	if err := d.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -394,7 +359,7 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) GetNu
 	return returns
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+func (d *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
 	if err := d.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -410,7 +375,7 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) GetNu
 	return returns
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+func (d *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
 	if err := d.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -426,7 +391,7 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) GetNu
 	return returns
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+func (d *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference) GetStringAttribute(terraformAttribute *string) *string {
 	if err := d.validateGetStringAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -442,7 +407,7 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) GetSt
 	return returns
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+func (d *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
 	if err := d.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
@@ -458,7 +423,7 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) GetSt
 	return returns
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) InterpolationAsList() cdktf.IResolvable {
+func (d *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference) InterpolationAsList() cdktf.IResolvable {
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -471,7 +436,7 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) Inter
 	return returns
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+func (d *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
 	if err := d.validateInterpolationForAttributeParameters(property); err != nil {
 		panic(err)
 	}
@@ -487,15 +452,7 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) Inter
 	return returns
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) ResetDatabaseName() {
-	_jsii_.InvokeVoid(
-		d,
-		"resetDatabaseName",
-		nil, // no parameters
-	)
-}
-
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+func (d *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
 	if err := d.validateResolveParameters(_context); err != nil {
 		panic(err)
 	}
@@ -511,7 +468,7 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) Resol
 	return returns
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) ToString() *string {
+func (d *jsiiProxy_DataSnowflakeGrantsGrantsToShareOutputReference) ToString() *string {
 	var returns *string
 
 	_jsii_.Invoke(

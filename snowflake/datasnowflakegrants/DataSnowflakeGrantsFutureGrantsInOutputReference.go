@@ -35,8 +35,9 @@ type DataSnowflakeGrantsFutureGrantsInOutputReference interface {
 	Fqn() *string
 	InternalValue() *DataSnowflakeGrantsFutureGrantsIn
 	SetInternalValue(val *DataSnowflakeGrantsFutureGrantsIn)
-	Schema() DataSnowflakeGrantsFutureGrantsInSchemaOutputReference
-	SchemaInput() *DataSnowflakeGrantsFutureGrantsInSchema
+	Schema() *string
+	SetSchema(val *string)
+	SchemaInput() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -69,7 +70,6 @@ type DataSnowflakeGrantsFutureGrantsInOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
-	PutSchema(value *DataSnowflakeGrantsFutureGrantsInSchema)
 	ResetDatabase()
 	ResetSchema()
 	// Produce the Token's value at resolution time.
@@ -157,8 +157,8 @@ func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInOutputReference) InternalVal
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInOutputReference) Schema() DataSnowflakeGrantsFutureGrantsInSchemaOutputReference {
-	var returns DataSnowflakeGrantsFutureGrantsInSchemaOutputReference
+func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInOutputReference) Schema() *string {
+	var returns *string
 	_jsii_.Get(
 		j,
 		"schema",
@@ -167,8 +167,8 @@ func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInOutputReference) Schema() Da
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInOutputReference) SchemaInput() *DataSnowflakeGrantsFutureGrantsInSchema {
-	var returns *DataSnowflakeGrantsFutureGrantsInSchema
+func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInOutputReference) SchemaInput() *string {
+	var returns *string
 	_jsii_.Get(
 		j,
 		"schemaInput",
@@ -265,6 +265,17 @@ func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInOutputReference)SetInternalV
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInOutputReference)SetSchema(val *string) {
+	if err := j.validateSetSchemaParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"schema",
 		val,
 	)
 }
@@ -475,17 +486,6 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInOutputReference) Interpolati
 	)
 
 	return returns
-}
-
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInOutputReference) PutSchema(value *DataSnowflakeGrantsFutureGrantsInSchema) {
-	if err := d.validatePutSchemaParameters(value); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		d,
-		"putSchema",
-		[]interface{}{value},
-	)
 }
 
 func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInOutputReference) ResetDatabase() {

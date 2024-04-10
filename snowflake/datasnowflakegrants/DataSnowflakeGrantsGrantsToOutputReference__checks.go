@@ -93,9 +93,44 @@ func (d *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) validateInterpola
 	return nil
 }
 
+func (d *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) validatePutShareParameters(value *DataSnowflakeGrantsGrantsToShare) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func (d *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	if _context == nil {
 		return fmt.Errorf("parameter _context is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) validateSetAccountRoleParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) validateSetApplicationParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) validateSetApplicationRoleParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil
@@ -166,25 +201,17 @@ func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) validateSetComple
 	return nil
 }
 
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) validateSetDatabaseRoleParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) validateSetInternalValueParameters(val *DataSnowflakeGrantsGrantsTo) error {
 	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 		return err
-	}
-
-	return nil
-}
-
-func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) validateSetRoleParameters(val *string) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
-func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) validateSetShareParameters(val *string) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil

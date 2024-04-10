@@ -47,7 +47,23 @@ func (d *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) validateInterpola
 	return nil
 }
 
+func (d *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) validatePutShareParameters(value *DataSnowflakeGrantsGrantsToShare) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) validateSetAccountRoleParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) validateSetApplicationParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) validateSetApplicationRoleParameters(val *string) error {
 	return nil
 }
 
@@ -59,15 +75,11 @@ func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) validateSetComple
 	return nil
 }
 
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) validateSetDatabaseRoleParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) validateSetInternalValueParameters(val *DataSnowflakeGrantsGrantsTo) error {
-	return nil
-}
-
-func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) validateSetRoleParameters(val *string) error {
-	return nil
-}
-
-func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) validateSetShareParameters(val *string) error {
 	return nil
 }
 

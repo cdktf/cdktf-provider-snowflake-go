@@ -3,7 +3,7 @@
 
 //go:build !no_runtime_type_checking
 
-package datasnowflakegrants
+package grantownership
 
 import (
 	"fmt"
@@ -13,7 +13,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
+func (g *jsiiProxy_GrantOwnershipOnAllOutputReference) validateGetAnyMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -21,7 +21,7 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) valid
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
+func (g *jsiiProxy_GrantOwnershipOnAllOutputReference) validateGetBooleanAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -29,7 +29,7 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) valid
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
+func (g *jsiiProxy_GrantOwnershipOnAllOutputReference) validateGetBooleanMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -37,7 +37,7 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) valid
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
+func (g *jsiiProxy_GrantOwnershipOnAllOutputReference) validateGetListAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -45,7 +45,7 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) valid
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
+func (g *jsiiProxy_GrantOwnershipOnAllOutputReference) validateGetNumberAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -53,7 +53,7 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) valid
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
+func (g *jsiiProxy_GrantOwnershipOnAllOutputReference) validateGetNumberListAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -61,7 +61,7 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) valid
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
+func (g *jsiiProxy_GrantOwnershipOnAllOutputReference) validateGetNumberMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -69,7 +69,7 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) valid
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
+func (g *jsiiProxy_GrantOwnershipOnAllOutputReference) validateGetStringAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -77,7 +77,7 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) valid
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
+func (g *jsiiProxy_GrantOwnershipOnAllOutputReference) validateGetStringMapAttributeParameters(terraformAttribute *string) error {
 	if terraformAttribute == nil {
 		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
@@ -85,7 +85,7 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) valid
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (g *jsiiProxy_GrantOwnershipOnAllOutputReference) validateInterpolationForAttributeParameters(property *string) error {
 	if property == nil {
 		return fmt.Errorf("parameter property is required, but nil was provided")
 	}
@@ -93,7 +93,7 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) valid
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (g *jsiiProxy_GrantOwnershipOnAllOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
 	if _context == nil {
 		return fmt.Errorf("parameter _context is required, but nil was provided")
 	}
@@ -101,7 +101,7 @@ func (d *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) valid
 	return nil
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
+func (j *jsiiProxy_GrantOwnershipOnAllOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
 	switch val.(type) {
 	case *string:
 		// ok
@@ -158,7 +158,7 @@ func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) valid
 	return nil
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
+func (j *jsiiProxy_GrantOwnershipOnAllOutputReference) validateSetComplexObjectIsFromSetParameters(val *bool) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -166,7 +166,7 @@ func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) valid
 	return nil
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) validateSetDatabaseNameParameters(val *string) error {
+func (j *jsiiProxy_GrantOwnershipOnAllOutputReference) validateSetInDatabaseParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -174,7 +174,15 @@ func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) valid
 	return nil
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) validateSetInternalValueParameters(val *DataSnowflakeGrantsFutureGrantsInSchema) error {
+func (j *jsiiProxy_GrantOwnershipOnAllOutputReference) validateSetInSchemaParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_GrantOwnershipOnAllOutputReference) validateSetInternalValueParameters(val *GrantOwnershipOnAll) error {
 	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 		return err
 	}
@@ -182,7 +190,7 @@ func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) valid
 	return nil
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) validateSetSchemaNameParameters(val *string) error {
+func (j *jsiiProxy_GrantOwnershipOnAllOutputReference) validateSetObjectTypePluralParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -190,7 +198,7 @@ func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) valid
 	return nil
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) validateSetTerraformAttributeParameters(val *string) error {
+func (j *jsiiProxy_GrantOwnershipOnAllOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -198,7 +206,7 @@ func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) valid
 	return nil
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+func (j *jsiiProxy_GrantOwnershipOnAllOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -206,7 +214,7 @@ func (j *jsiiProxy_DataSnowflakeGrantsFutureGrantsInSchemaOutputReference) valid
 	return nil
 }
 
-func validateNewDataSnowflakeGrantsFutureGrantsInSchemaOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+func validateNewGrantOwnershipOnAllOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
 	if terraformResource == nil {
 		return fmt.Errorf("parameter terraformResource is required, but nil was provided")
 	}

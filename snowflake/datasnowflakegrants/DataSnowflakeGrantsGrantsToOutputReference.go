@@ -13,6 +13,15 @@ import (
 
 type DataSnowflakeGrantsGrantsToOutputReference interface {
 	cdktf.ComplexObject
+	AccountRole() *string
+	SetAccountRole(val *string)
+	AccountRoleInput() *string
+	Application() *string
+	SetApplication(val *string)
+	ApplicationInput() *string
+	ApplicationRole() *string
+	SetApplicationRole(val *string)
+	ApplicationRoleInput() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -28,16 +37,15 @@ type DataSnowflakeGrantsGrantsToOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	DatabaseRole() *string
+	SetDatabaseRole(val *string)
+	DatabaseRoleInput() *string
 	// Experimental.
 	Fqn() *string
 	InternalValue() *DataSnowflakeGrantsGrantsTo
 	SetInternalValue(val *DataSnowflakeGrantsGrantsTo)
-	Role() *string
-	SetRole(val *string)
-	RoleInput() *string
-	Share() *string
-	SetShare(val *string)
-	ShareInput() *string
+	Share() DataSnowflakeGrantsGrantsToShareOutputReference
+	ShareInput() *DataSnowflakeGrantsGrantsToShare
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -73,7 +81,11 @@ type DataSnowflakeGrantsGrantsToOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
-	ResetRole()
+	PutShare(value *DataSnowflakeGrantsGrantsToShare)
+	ResetAccountRole()
+	ResetApplication()
+	ResetApplicationRole()
+	ResetDatabaseRole()
 	ResetShare()
 	ResetUser()
 	// Produce the Token's value at resolution time.
@@ -89,6 +101,66 @@ type DataSnowflakeGrantsGrantsToOutputReference interface {
 // The jsii proxy struct for DataSnowflakeGrantsGrantsToOutputReference
 type jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) AccountRole() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"accountRole",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) AccountRoleInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"accountRoleInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) Application() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"application",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) ApplicationInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"applicationInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) ApplicationRole() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"applicationRole",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) ApplicationRoleInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"applicationRoleInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) ComplexObjectIndex() interface{} {
@@ -121,6 +193,26 @@ func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) CreationStack() *
 	return returns
 }
 
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) DatabaseRole() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"databaseRole",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) DatabaseRoleInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"databaseRoleInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -141,28 +233,8 @@ func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) InternalValue() *
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) Role() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"role",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) RoleInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"roleInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) Share() *string {
-	var returns *string
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) Share() DataSnowflakeGrantsGrantsToShareOutputReference {
+	var returns DataSnowflakeGrantsGrantsToShareOutputReference
 	_jsii_.Get(
 		j,
 		"share",
@@ -171,8 +243,8 @@ func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) Share() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) ShareInput() *string {
-	var returns *string
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) ShareInput() *DataSnowflakeGrantsGrantsToShare {
+	var returns *DataSnowflakeGrantsGrantsToShare
 	_jsii_.Get(
 		j,
 		"shareInput",
@@ -249,6 +321,39 @@ func NewDataSnowflakeGrantsGrantsToOutputReference_Override(d DataSnowflakeGrant
 	)
 }
 
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference)SetAccountRole(val *string) {
+	if err := j.validateSetAccountRoleParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"accountRole",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference)SetApplication(val *string) {
+	if err := j.validateSetApplicationParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"application",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference)SetApplicationRole(val *string) {
+	if err := j.validateSetApplicationRoleParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"applicationRole",
+		val,
+	)
+}
+
 func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference)SetComplexObjectIndex(val interface{}) {
 	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
 		panic(err)
@@ -271,6 +376,17 @@ func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference)SetComplexObjectIs
 	)
 }
 
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference)SetDatabaseRole(val *string) {
+	if err := j.validateSetDatabaseRoleParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"databaseRole",
+		val,
+	)
+}
+
 func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference)SetInternalValue(val *DataSnowflakeGrantsGrantsTo) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
@@ -278,28 +394,6 @@ func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference)SetInternalValue(v
 	_jsii_.Set(
 		j,
 		"internalValue",
-		val,
-	)
-}
-
-func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference)SetRole(val *string) {
-	if err := j.validateSetRoleParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"role",
-		val,
-	)
-}
-
-func (j *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference)SetShare(val *string) {
-	if err := j.validateSetShareParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"share",
 		val,
 	)
 }
@@ -523,10 +617,45 @@ func (d *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) InterpolationForA
 	return returns
 }
 
-func (d *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) ResetRole() {
+func (d *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) PutShare(value *DataSnowflakeGrantsGrantsToShare) {
+	if err := d.validatePutShareParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		d,
-		"resetRole",
+		"putShare",
+		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) ResetAccountRole() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetAccountRole",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) ResetApplication() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetApplication",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) ResetApplicationRole() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetApplicationRole",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataSnowflakeGrantsGrantsToOutputReference) ResetDatabaseRole() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetDatabaseRole",
 		nil, // no parameters
 	)
 }

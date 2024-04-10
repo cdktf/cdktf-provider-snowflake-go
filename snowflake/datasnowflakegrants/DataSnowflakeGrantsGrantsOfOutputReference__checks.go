@@ -101,6 +101,22 @@ func (d *jsiiProxy_DataSnowflakeGrantsGrantsOfOutputReference) validateResolvePa
 	return nil
 }
 
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsOfOutputReference) validateSetAccountRoleParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsOfOutputReference) validateSetApplicationRoleParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_DataSnowflakeGrantsGrantsOfOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
 	switch val.(type) {
 	case *string:
@@ -166,17 +182,17 @@ func (j *jsiiProxy_DataSnowflakeGrantsGrantsOfOutputReference) validateSetComple
 	return nil
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsGrantsOfOutputReference) validateSetInternalValueParameters(val *DataSnowflakeGrantsGrantsOf) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsOfOutputReference) validateSetDatabaseRoleParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil
 }
 
-func (j *jsiiProxy_DataSnowflakeGrantsGrantsOfOutputReference) validateSetRoleParameters(val *string) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
+func (j *jsiiProxy_DataSnowflakeGrantsGrantsOfOutputReference) validateSetInternalValueParameters(val *DataSnowflakeGrantsGrantsOf) error {
+	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
+		return err
 	}
 
 	return nil
