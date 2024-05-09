@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.89.0/docs/resources/row_access_policy snowflake_row_access_policy}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.90.0/docs/resources/row_access_policy snowflake_row_access_policy}.
 type RowAccessPolicy interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -449,7 +449,7 @@ func (j *jsiiProxy_RowAccessPolicy) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.89.0/docs/resources/row_access_policy snowflake_row_access_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.90.0/docs/resources/row_access_policy snowflake_row_access_policy} Resource.
 func NewRowAccessPolicy(scope constructs.Construct, id *string, config *RowAccessPolicyConfig) RowAccessPolicy {
 	_init_.Initialize()
 
@@ -467,7 +467,7 @@ func NewRowAccessPolicy(scope constructs.Construct, id *string, config *RowAcces
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.89.0/docs/resources/row_access_policy snowflake_row_access_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.90.0/docs/resources/row_access_policy snowflake_row_access_policy} Resource.
 func NewRowAccessPolicy_Override(r RowAccessPolicy, scope constructs.Construct, id *string, config *RowAccessPolicyConfig) {
 	_init_.Initialize()
 

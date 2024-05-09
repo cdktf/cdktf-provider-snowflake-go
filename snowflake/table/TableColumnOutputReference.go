@@ -51,6 +51,7 @@ type TableColumnOutputReference interface {
 	Nullable() interface{}
 	SetNullable(val interface{})
 	NullableInput() interface{}
+	SchemaEvolutionRecord() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -294,6 +295,16 @@ func (j *jsiiProxy_TableColumnOutputReference) NullableInput() interface{} {
 	_jsii_.Get(
 		j,
 		"nullableInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TableColumnOutputReference) SchemaEvolutionRecord() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"schemaEvolutionRecord",
 		&returns,
 	)
 	return returns

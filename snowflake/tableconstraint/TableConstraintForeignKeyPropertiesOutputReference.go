@@ -79,7 +79,6 @@ type TableConstraintForeignKeyPropertiesOutputReference interface {
 	ResetMatch()
 	ResetOnDelete()
 	ResetOnUpdate()
-	ResetReferences()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -578,14 +577,6 @@ func (t *jsiiProxy_TableConstraintForeignKeyPropertiesOutputReference) ResetOnUp
 	_jsii_.InvokeVoid(
 		t,
 		"resetOnUpdate",
-		nil, // no parameters
-	)
-}
-
-func (t *jsiiProxy_TableConstraintForeignKeyPropertiesOutputReference) ResetReferences() {
-	_jsii_.InvokeVoid(
-		t,
-		"resetReferences",
 		nil, // no parameters
 	)
 }

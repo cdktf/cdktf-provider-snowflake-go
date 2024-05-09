@@ -139,7 +139,6 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetMatch", GoMethod: "ResetMatch"},
 			_jsii_.MemberMethod{JsiiMethod: "resetOnDelete", GoMethod: "ResetOnDelete"},
 			_jsii_.MemberMethod{JsiiMethod: "resetOnUpdate", GoMethod: "ResetOnUpdate"},
-			_jsii_.MemberMethod{JsiiMethod: "resetReferences", GoMethod: "ResetReferences"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
