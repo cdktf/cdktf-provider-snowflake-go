@@ -9,15 +9,15 @@ type GrantPrivilegesToRoleOnSchemaObjectFuture struct {
 	//
 	// Valid values are: ALERTS | AUTHENTICATION POLICIES | DATA METRIC FUNCTIONS | DYNAMIC TABLES | EVENT TABLES | EXTERNAL TABLES | FILE FORMATS | FUNCTIONS | GIT REPOSITORIES | HYBRID TABLES | ICEBERG TABLES | MATERIALIZED VIEWS | MODELS | NETWORK RULES | PASSWORD POLICIES | PIPES | PROCEDURES | SECRETS | SERVICES | SEQUENCES | STAGES | STREAMS | TABLES | TASKS | VIEWS
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.90.0/docs/resources/grant_privileges_to_role#object_type_plural GrantPrivilegesToRole#object_type_plural}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.91.0/docs/resources/grant_privileges_to_role#object_type_plural GrantPrivilegesToRole#object_type_plural}
 	ObjectTypePlural *string `field:"required" json:"objectTypePlural" yaml:"objectTypePlural"`
 	// The fully qualified name of the database.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.90.0/docs/resources/grant_privileges_to_role#in_database GrantPrivilegesToRole#in_database}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.91.0/docs/resources/grant_privileges_to_role#in_database GrantPrivilegesToRole#in_database}
 	InDatabase *string `field:"optional" json:"inDatabase" yaml:"inDatabase"`
 	// The fully qualified name of the schema.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.90.0/docs/resources/grant_privileges_to_role#in_schema GrantPrivilegesToRole#in_schema}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.91.0/docs/resources/grant_privileges_to_role#in_schema GrantPrivilegesToRole#in_schema}
 	InSchema *string `field:"optional" json:"inSchema" yaml:"inSchema"`
 }
 
