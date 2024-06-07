@@ -12,15 +12,21 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.91.0/docs/resources/network_policy snowflake_network_policy}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/network_policy snowflake_network_policy}.
 type NetworkPolicy interface {
 	cdktf.TerraformResource
 	AllowedIpList() *[]*string
 	SetAllowedIpList(val *[]*string)
 	AllowedIpListInput() *[]*string
+	AllowedNetworkRuleList() *[]*string
+	SetAllowedNetworkRuleList(val *[]*string)
+	AllowedNetworkRuleListInput() *[]*string
 	BlockedIpList() *[]*string
 	SetBlockedIpList(val *[]*string)
 	BlockedIpListInput() *[]*string
+	BlockedNetworkRuleList() *[]*string
+	SetBlockedNetworkRuleList(val *[]*string)
+	BlockedNetworkRuleListInput() *[]*string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	Comment() *string
@@ -119,7 +125,10 @@ type NetworkPolicy interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	ResetAllowedIpList()
+	ResetAllowedNetworkRuleList()
 	ResetBlockedIpList()
+	ResetBlockedNetworkRuleList()
 	ResetComment()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -163,6 +172,26 @@ func (j *jsiiProxy_NetworkPolicy) AllowedIpListInput() *[]*string {
 	return returns
 }
 
+func (j *jsiiProxy_NetworkPolicy) AllowedNetworkRuleList() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"allowedNetworkRuleList",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_NetworkPolicy) AllowedNetworkRuleListInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"allowedNetworkRuleListInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_NetworkPolicy) BlockedIpList() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -178,6 +207,26 @@ func (j *jsiiProxy_NetworkPolicy) BlockedIpListInput() *[]*string {
 	_jsii_.Get(
 		j,
 		"blockedIpListInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_NetworkPolicy) BlockedNetworkRuleList() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"blockedNetworkRuleList",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_NetworkPolicy) BlockedNetworkRuleListInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"blockedNetworkRuleListInput",
 		&returns,
 	)
 	return returns
@@ -404,7 +453,7 @@ func (j *jsiiProxy_NetworkPolicy) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.91.0/docs/resources/network_policy snowflake_network_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/network_policy snowflake_network_policy} Resource.
 func NewNetworkPolicy(scope constructs.Construct, id *string, config *NetworkPolicyConfig) NetworkPolicy {
 	_init_.Initialize()
 
@@ -422,7 +471,7 @@ func NewNetworkPolicy(scope constructs.Construct, id *string, config *NetworkPol
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.91.0/docs/resources/network_policy snowflake_network_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/network_policy snowflake_network_policy} Resource.
 func NewNetworkPolicy_Override(n NetworkPolicy, scope constructs.Construct, id *string, config *NetworkPolicyConfig) {
 	_init_.Initialize()
 
@@ -444,6 +493,17 @@ func (j *jsiiProxy_NetworkPolicy)SetAllowedIpList(val *[]*string) {
 	)
 }
 
+func (j *jsiiProxy_NetworkPolicy)SetAllowedNetworkRuleList(val *[]*string) {
+	if err := j.validateSetAllowedNetworkRuleListParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"allowedNetworkRuleList",
+		val,
+	)
+}
+
 func (j *jsiiProxy_NetworkPolicy)SetBlockedIpList(val *[]*string) {
 	if err := j.validateSetBlockedIpListParameters(val); err != nil {
 		panic(err)
@@ -451,6 +511,17 @@ func (j *jsiiProxy_NetworkPolicy)SetBlockedIpList(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"blockedIpList",
+		val,
+	)
+}
+
+func (j *jsiiProxy_NetworkPolicy)SetBlockedNetworkRuleList(val *[]*string) {
+	if err := j.validateSetBlockedNetworkRuleListParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"blockedNetworkRuleList",
 		val,
 	)
 }
@@ -909,10 +980,34 @@ func (n *jsiiProxy_NetworkPolicy) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (n *jsiiProxy_NetworkPolicy) ResetAllowedIpList() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetAllowedIpList",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NetworkPolicy) ResetAllowedNetworkRuleList() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetAllowedNetworkRuleList",
+		nil, // no parameters
+	)
+}
+
 func (n *jsiiProxy_NetworkPolicy) ResetBlockedIpList() {
 	_jsii_.InvokeVoid(
 		n,
 		"resetBlockedIpList",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NetworkPolicy) ResetBlockedNetworkRuleList() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetBlockedNetworkRuleList",
 		nil, // no parameters
 	)
 }

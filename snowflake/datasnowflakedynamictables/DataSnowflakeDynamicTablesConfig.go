@@ -22,28 +22,28 @@ type DataSnowflakeDynamicTablesConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.91.0/docs/data-sources/dynamic_tables#id DataSnowflakeDynamicTables#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/data-sources/dynamic_tables#id DataSnowflakeDynamicTables#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
 	// in block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.91.0/docs/data-sources/dynamic_tables#in DataSnowflakeDynamicTables#in}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/data-sources/dynamic_tables#in DataSnowflakeDynamicTables#in}
 	In *DataSnowflakeDynamicTablesIn `field:"optional" json:"in" yaml:"in"`
 	// like block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.91.0/docs/data-sources/dynamic_tables#like DataSnowflakeDynamicTables#like}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/data-sources/dynamic_tables#like DataSnowflakeDynamicTables#like}
 	Like *DataSnowflakeDynamicTablesLike `field:"optional" json:"like" yaml:"like"`
 	// limit block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.91.0/docs/data-sources/dynamic_tables#limit DataSnowflakeDynamicTables#limit}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/data-sources/dynamic_tables#limit DataSnowflakeDynamicTables#limit}
 	Limit *DataSnowflakeDynamicTablesLimit `field:"optional" json:"limit" yaml:"limit"`
 	// Optionally filters the command output based on the characters that appear at the beginning of the object name.
 	//
 	// The string is case-sensitive.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.91.0/docs/data-sources/dynamic_tables#starts_with DataSnowflakeDynamicTables#starts_with}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/data-sources/dynamic_tables#starts_with DataSnowflakeDynamicTables#starts_with}
 	StartsWith *string `field:"optional" json:"startsWith" yaml:"startsWith"`
 }
 

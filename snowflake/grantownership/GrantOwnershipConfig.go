@@ -24,17 +24,17 @@ type GrantOwnershipConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// on block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.91.0/docs/resources/grant_ownership#on GrantOwnership#on}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/grant_ownership#on GrantOwnership#on}
 	On *GrantOwnershipOn `field:"required" json:"on" yaml:"on"`
 	// The fully qualified name of the account role to which privileges will be granted.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.91.0/docs/resources/grant_ownership#account_role_name GrantOwnership#account_role_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/grant_ownership#account_role_name GrantOwnership#account_role_name}
 	AccountRoleName *string `field:"optional" json:"accountRoleName" yaml:"accountRoleName"`
 	// The fully qualified name of the database role to which privileges will be granted.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.91.0/docs/resources/grant_ownership#database_role_name GrantOwnership#database_role_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/grant_ownership#database_role_name GrantOwnership#database_role_name}
 	DatabaseRoleName *string `field:"optional" json:"databaseRoleName" yaml:"databaseRoleName"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.91.0/docs/resources/grant_ownership#id GrantOwnership#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/grant_ownership#id GrantOwnership#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -43,7 +43,7 @@ type GrantOwnershipConfig struct {
 	//
 	// Available options are: REVOKE for removing existing privileges and COPY to transfer them with ownership. For more information head over to [Snowflake documentation](https://docs.snowflake.com/en/sql-reference/sql/grant-ownership#optional-parameters).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.91.0/docs/resources/grant_ownership#outbound_privileges GrantOwnership#outbound_privileges}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/grant_ownership#outbound_privileges GrantOwnership#outbound_privileges}
 	OutboundPrivileges *string `field:"optional" json:"outboundPrivileges" yaml:"outboundPrivileges"`
 }
 

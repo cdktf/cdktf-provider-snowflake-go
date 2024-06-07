@@ -95,7 +95,15 @@ func (j *jsiiProxy_NetworkPolicy) validateSetAllowedIpListParameters(val *[]*str
 	return nil
 }
 
+func (j *jsiiProxy_NetworkPolicy) validateSetAllowedNetworkRuleListParameters(val *[]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_NetworkPolicy) validateSetBlockedIpListParameters(val *[]*string) error {
+	return nil
+}
+
+func (j *jsiiProxy_NetworkPolicy) validateSetBlockedNetworkRuleListParameters(val *[]*string) error {
 	return nil
 }
 

@@ -24,24 +24,24 @@ type SessionParameterConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Name of session parameter. Valid values are those in [session parameters](https://docs.snowflake.com/en/sql-reference/parameters.html#session-parameters).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.91.0/docs/resources/session_parameter#key SessionParameter#key}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/session_parameter#key SessionParameter#key}
 	Key *string `field:"required" json:"key" yaml:"key"`
 	// Value of session parameter, as a string. Constraints are the same as those for the parameters in Snowflake documentation.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.91.0/docs/resources/session_parameter#value SessionParameter#value}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/session_parameter#value SessionParameter#value}
 	Value *string `field:"required" json:"value" yaml:"value"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.91.0/docs/resources/session_parameter#id SessionParameter#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/session_parameter#id SessionParameter#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
 	// If true, the session parameter will be set on the account level.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.91.0/docs/resources/session_parameter#on_account SessionParameter#on_account}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/session_parameter#on_account SessionParameter#on_account}
 	OnAccount interface{} `field:"optional" json:"onAccount" yaml:"onAccount"`
 	// The user to set the session parameter for. Required if on_account is false.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.91.0/docs/resources/session_parameter#user SessionParameter#user}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/session_parameter#user SessionParameter#user}
 	User *string `field:"optional" json:"user" yaml:"user"`
 }
 
