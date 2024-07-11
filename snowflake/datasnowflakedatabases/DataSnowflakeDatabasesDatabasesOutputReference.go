@@ -13,7 +13,6 @@ import (
 
 type DataSnowflakeDatabasesDatabasesOutputReference interface {
 	cdktf.ComplexObject
-	Comment() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -24,24 +23,18 @@ type DataSnowflakeDatabasesDatabasesOutputReference interface {
 	ComplexObjectIsFromSet() *bool
 	// Experimental.
 	SetComplexObjectIsFromSet(val *bool)
-	CreatedOn() *string
 	// The creation stack of this resolvable which will be appended to errors thrown during resolution.
 	//
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	DescribeOutput() DataSnowflakeDatabasesDatabasesDescribeOutputList
 	// Experimental.
 	Fqn() *string
 	InternalValue() *DataSnowflakeDatabasesDatabases
 	SetInternalValue(val *DataSnowflakeDatabasesDatabases)
-	IsCurrent() cdktf.IResolvable
-	IsDefault() cdktf.IResolvable
-	Name() *string
-	Options() *string
-	Origin() *string
-	Owner() *string
-	ReplicationConfiguration() DataSnowflakeDatabasesDatabasesReplicationConfigurationList
-	RetentionTime() *float64
+	Parameters() DataSnowflakeDatabasesDatabasesParametersList
+	ShowOutput() DataSnowflakeDatabasesDatabasesShowOutputList
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -89,16 +82,6 @@ type jsiiProxy_DataSnowflakeDatabasesDatabasesOutputReference struct {
 	internal.Type__cdktfComplexObject
 }
 
-func (j *jsiiProxy_DataSnowflakeDatabasesDatabasesOutputReference) Comment() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"comment",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataSnowflakeDatabasesDatabasesOutputReference) ComplexObjectIndex() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -119,21 +102,21 @@ func (j *jsiiProxy_DataSnowflakeDatabasesDatabasesOutputReference) ComplexObject
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeDatabasesDatabasesOutputReference) CreatedOn() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"createdOn",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataSnowflakeDatabasesDatabasesOutputReference) CreationStack() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
 		"creationStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeDatabasesDatabasesOutputReference) DescribeOutput() DataSnowflakeDatabasesDatabasesDescribeOutputList {
+	var returns DataSnowflakeDatabasesDatabasesDescribeOutputList
+	_jsii_.Get(
+		j,
+		"describeOutput",
 		&returns,
 	)
 	return returns
@@ -159,81 +142,21 @@ func (j *jsiiProxy_DataSnowflakeDatabasesDatabasesOutputReference) InternalValue
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeDatabasesDatabasesOutputReference) IsCurrent() cdktf.IResolvable {
-	var returns cdktf.IResolvable
+func (j *jsiiProxy_DataSnowflakeDatabasesDatabasesOutputReference) Parameters() DataSnowflakeDatabasesDatabasesParametersList {
+	var returns DataSnowflakeDatabasesDatabasesParametersList
 	_jsii_.Get(
 		j,
-		"isCurrent",
+		"parameters",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeDatabasesDatabasesOutputReference) IsDefault() cdktf.IResolvable {
-	var returns cdktf.IResolvable
+func (j *jsiiProxy_DataSnowflakeDatabasesDatabasesOutputReference) ShowOutput() DataSnowflakeDatabasesDatabasesShowOutputList {
+	var returns DataSnowflakeDatabasesDatabasesShowOutputList
 	_jsii_.Get(
 		j,
-		"isDefault",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeDatabasesDatabasesOutputReference) Name() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"name",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeDatabasesDatabasesOutputReference) Options() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"options",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeDatabasesDatabasesOutputReference) Origin() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"origin",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeDatabasesDatabasesOutputReference) Owner() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"owner",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeDatabasesDatabasesOutputReference) ReplicationConfiguration() DataSnowflakeDatabasesDatabasesReplicationConfigurationList {
-	var returns DataSnowflakeDatabasesDatabasesReplicationConfigurationList
-	_jsii_.Get(
-		j,
-		"replicationConfiguration",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeDatabasesDatabasesOutputReference) RetentionTime() *float64 {
-	var returns *float64
-	_jsii_.Get(
-		j,
-		"retentionTime",
+		"showOutput",
 		&returns,
 	)
 	return returns

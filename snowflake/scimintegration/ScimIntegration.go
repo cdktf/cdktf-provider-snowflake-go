@@ -12,11 +12,14 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/scim_integration snowflake_scim_integration}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/scim_integration snowflake_scim_integration}.
 type ScimIntegration interface {
 	cdktf.TerraformResource
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	Comment() *string
+	SetComment(val *string)
+	CommentInput() *string
 	// Experimental.
 	Connection() interface{}
 	// Experimental.
@@ -27,11 +30,14 @@ type ScimIntegration interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
-	CreatedOn() *string
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	DescribeOutput() ScimIntegrationDescribeOutputList
+	Enabled() interface{}
+	SetEnabled(val interface{})
+	EnabledInput() interface{}
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -59,18 +65,22 @@ type ScimIntegration interface {
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
-	ProvisionerRole() *string
-	SetProvisionerRole(val *string)
-	ProvisionerRoleInput() *string
 	// Experimental.
 	Provisioners() *[]interface{}
 	// Experimental.
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	RunAsRole() *string
+	SetRunAsRole(val *string)
+	RunAsRoleInput() *string
 	ScimClient() *string
 	SetScimClient(val *string)
 	ScimClientInput() *string
+	ShowOutput() ScimIntegrationShowOutputList
+	SyncPassword() *string
+	SetSyncPassword(val *string)
+	SyncPasswordInput() *string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -120,11 +130,13 @@ type ScimIntegration interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	ResetComment()
 	ResetId()
 	ResetNetworkPolicy()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetSyncPassword()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -148,6 +160,26 @@ func (j *jsiiProxy_ScimIntegration) CdktfStack() cdktf.TerraformStack {
 	_jsii_.Get(
 		j,
 		"cdktfStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ScimIntegration) Comment() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"comment",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ScimIntegration) CommentInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"commentInput",
 		&returns,
 	)
 	return returns
@@ -183,21 +215,41 @@ func (j *jsiiProxy_ScimIntegration) Count() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_ScimIntegration) CreatedOn() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"createdOn",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_ScimIntegration) DependsOn() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ScimIntegration) DescribeOutput() ScimIntegrationDescribeOutputList {
+	var returns ScimIntegrationDescribeOutputList
+	_jsii_.Get(
+		j,
+		"describeOutput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ScimIntegration) Enabled() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enabled",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ScimIntegration) EnabledInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enabledInput",
 		&returns,
 	)
 	return returns
@@ -323,26 +375,6 @@ func (j *jsiiProxy_ScimIntegration) Provider() cdktf.TerraformProvider {
 	return returns
 }
 
-func (j *jsiiProxy_ScimIntegration) ProvisionerRole() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"provisionerRole",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ScimIntegration) ProvisionerRoleInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"provisionerRoleInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_ScimIntegration) Provisioners() *[]interface{} {
 	var returns *[]interface{}
 	_jsii_.Get(
@@ -363,6 +395,26 @@ func (j *jsiiProxy_ScimIntegration) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_ScimIntegration) RunAsRole() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"runAsRole",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ScimIntegration) RunAsRoleInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"runAsRoleInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ScimIntegration) ScimClient() *string {
 	var returns *string
 	_jsii_.Get(
@@ -378,6 +430,36 @@ func (j *jsiiProxy_ScimIntegration) ScimClientInput() *string {
 	_jsii_.Get(
 		j,
 		"scimClientInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ScimIntegration) ShowOutput() ScimIntegrationShowOutputList {
+	var returns ScimIntegrationShowOutputList
+	_jsii_.Get(
+		j,
+		"showOutput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ScimIntegration) SyncPassword() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"syncPassword",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ScimIntegration) SyncPasswordInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"syncPasswordInput",
 		&returns,
 	)
 	return returns
@@ -414,7 +496,7 @@ func (j *jsiiProxy_ScimIntegration) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/scim_integration snowflake_scim_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/scim_integration snowflake_scim_integration} Resource.
 func NewScimIntegration(scope constructs.Construct, id *string, config *ScimIntegrationConfig) ScimIntegration {
 	_init_.Initialize()
 
@@ -432,7 +514,7 @@ func NewScimIntegration(scope constructs.Construct, id *string, config *ScimInte
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/scim_integration snowflake_scim_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/scim_integration snowflake_scim_integration} Resource.
 func NewScimIntegration_Override(s ScimIntegration, scope constructs.Construct, id *string, config *ScimIntegrationConfig) {
 	_init_.Initialize()
 
@@ -440,6 +522,17 @@ func NewScimIntegration_Override(s ScimIntegration, scope constructs.Construct, 
 		"@cdktf/provider-snowflake.scimIntegration.ScimIntegration",
 		[]interface{}{scope, id, config},
 		s,
+	)
+}
+
+func (j *jsiiProxy_ScimIntegration)SetComment(val *string) {
+	if err := j.validateSetCommentParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"comment",
+		val,
 	)
 }
 
@@ -469,6 +562,17 @@ func (j *jsiiProxy_ScimIntegration)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ScimIntegration)SetEnabled(val interface{}) {
+	if err := j.validateSetEnabledParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"enabled",
 		val,
 	)
 }
@@ -533,17 +637,6 @@ func (j *jsiiProxy_ScimIntegration)SetProvider(val cdktf.TerraformProvider) {
 	)
 }
 
-func (j *jsiiProxy_ScimIntegration)SetProvisionerRole(val *string) {
-	if err := j.validateSetProvisionerRoleParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"provisionerRole",
-		val,
-	)
-}
-
 func (j *jsiiProxy_ScimIntegration)SetProvisioners(val *[]interface{}) {
 	if err := j.validateSetProvisionersParameters(val); err != nil {
 		panic(err)
@@ -555,6 +648,17 @@ func (j *jsiiProxy_ScimIntegration)SetProvisioners(val *[]interface{}) {
 	)
 }
 
+func (j *jsiiProxy_ScimIntegration)SetRunAsRole(val *string) {
+	if err := j.validateSetRunAsRoleParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"runAsRole",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ScimIntegration)SetScimClient(val *string) {
 	if err := j.validateSetScimClientParameters(val); err != nil {
 		panic(err)
@@ -562,6 +666,17 @@ func (j *jsiiProxy_ScimIntegration)SetScimClient(val *string) {
 	_jsii_.Set(
 		j,
 		"scimClient",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ScimIntegration)SetSyncPassword(val *string) {
+	if err := j.validateSetSyncPasswordParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"syncPassword",
 		val,
 	)
 }
@@ -919,6 +1034,14 @@ func (s *jsiiProxy_ScimIntegration) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (s *jsiiProxy_ScimIntegration) ResetComment() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetComment",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_ScimIntegration) ResetId() {
 	_jsii_.InvokeVoid(
 		s,
@@ -939,6 +1062,14 @@ func (s *jsiiProxy_ScimIntegration) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_ScimIntegration) ResetSyncPassword() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetSyncPassword",
 		nil, // no parameters
 	)
 }

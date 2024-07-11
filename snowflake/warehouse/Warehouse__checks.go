@@ -247,21 +247,9 @@ func validateWarehouse_IsTerraformResourceParameters(x interface{}) error {
 	return nil
 }
 
-func (j *jsiiProxy_Warehouse) validateSetAutoResumeParameters(val interface{}) error {
+func (j *jsiiProxy_Warehouse) validateSetAutoResumeParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-	switch val.(type) {
-	case *bool:
-		// ok
-	case bool:
-		// ok
-	case cdktf.IResolvable:
-		// ok
-	default:
-		if !_jsii_.IsAnonymousProxy(val) {
-			return fmt.Errorf("parameter val must be one of the allowed types: *bool, cdktf.IResolvable; received %#v (a %T)", val, val)
-		}
 	}
 
 	return nil
@@ -373,21 +361,9 @@ func (j *jsiiProxy_Warehouse) validateSetCountParameters(val interface{}) error 
 	return nil
 }
 
-func (j *jsiiProxy_Warehouse) validateSetEnableQueryAccelerationParameters(val interface{}) error {
+func (j *jsiiProxy_Warehouse) validateSetEnableQueryAccelerationParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-	switch val.(type) {
-	case *bool:
-		// ok
-	case bool:
-		// ok
-	case cdktf.IResolvable:
-		// ok
-	default:
-		if !_jsii_.IsAnonymousProxy(val) {
-			return fmt.Errorf("parameter val must be one of the allowed types: *bool, cdktf.IResolvable; received %#v (a %T)", val, val)
-		}
 	}
 
 	return nil
@@ -542,26 +518,6 @@ func (j *jsiiProxy_Warehouse) validateSetStatementQueuedTimeoutInSecondsParamete
 func (j *jsiiProxy_Warehouse) validateSetStatementTimeoutInSecondsParameters(val *float64) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
-func (j *jsiiProxy_Warehouse) validateSetWaitForProvisioningParameters(val interface{}) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-	switch val.(type) {
-	case *bool:
-		// ok
-	case bool:
-		// ok
-	case cdktf.IResolvable:
-		// ok
-	default:
-		if !_jsii_.IsAnonymousProxy(val) {
-			return fmt.Errorf("parameter val must be one of the allowed types: *bool, cdktf.IResolvable; received %#v (a %T)", val, val)
-		}
 	}
 
 	return nil

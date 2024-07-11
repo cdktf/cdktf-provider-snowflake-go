@@ -12,12 +12,12 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/warehouse snowflake_warehouse}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/warehouse snowflake_warehouse}.
 type Warehouse interface {
 	cdktf.TerraformResource
-	AutoResume() interface{}
-	SetAutoResume(val interface{})
-	AutoResumeInput() interface{}
+	AutoResume() *string
+	SetAutoResume(val *string)
+	AutoResumeInput() *string
 	AutoSuspend() *float64
 	SetAutoSuspend(val *float64)
 	AutoSuspendInput() *float64
@@ -40,9 +40,9 @@ type Warehouse interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
-	EnableQueryAcceleration() interface{}
-	SetEnableQueryAcceleration(val interface{})
-	EnableQueryAccelerationInput() interface{}
+	EnableQueryAcceleration() *string
+	SetEnableQueryAcceleration(val *string)
+	EnableQueryAccelerationInput() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -75,6 +75,7 @@ type Warehouse interface {
 	NameInput() *string
 	// The tree node.
 	Node() constructs.Node
+	Parameters() WarehouseParametersList
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -94,6 +95,7 @@ type Warehouse interface {
 	ScalingPolicy() *string
 	SetScalingPolicy(val *string)
 	ScalingPolicyInput() *string
+	ShowOutput() WarehouseShowOutputList
 	StatementQueuedTimeoutInSeconds() *float64
 	SetStatementQueuedTimeoutInSeconds(val *float64)
 	StatementQueuedTimeoutInSecondsInput() *float64
@@ -106,9 +108,6 @@ type Warehouse interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
-	WaitForProvisioning() interface{}
-	SetWaitForProvisioning(val interface{})
-	WaitForProvisioningInput() interface{}
 	WarehouseSize() *string
 	SetWarehouseSize(val *string)
 	WarehouseSizeInput() *string
@@ -175,7 +174,6 @@ type Warehouse interface {
 	ResetScalingPolicy()
 	ResetStatementQueuedTimeoutInSeconds()
 	ResetStatementTimeoutInSeconds()
-	ResetWaitForProvisioning()
 	ResetWarehouseSize()
 	ResetWarehouseType()
 	SynthesizeAttributes() *map[string]interface{}
@@ -196,8 +194,8 @@ type jsiiProxy_Warehouse struct {
 	internal.Type__cdktfTerraformResource
 }
 
-func (j *jsiiProxy_Warehouse) AutoResume() interface{} {
-	var returns interface{}
+func (j *jsiiProxy_Warehouse) AutoResume() *string {
+	var returns *string
 	_jsii_.Get(
 		j,
 		"autoResume",
@@ -206,8 +204,8 @@ func (j *jsiiProxy_Warehouse) AutoResume() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Warehouse) AutoResumeInput() interface{} {
-	var returns interface{}
+func (j *jsiiProxy_Warehouse) AutoResumeInput() *string {
+	var returns *string
 	_jsii_.Get(
 		j,
 		"autoResumeInput",
@@ -306,8 +304,8 @@ func (j *jsiiProxy_Warehouse) DependsOn() *[]*string {
 	return returns
 }
 
-func (j *jsiiProxy_Warehouse) EnableQueryAcceleration() interface{} {
-	var returns interface{}
+func (j *jsiiProxy_Warehouse) EnableQueryAcceleration() *string {
+	var returns *string
 	_jsii_.Get(
 		j,
 		"enableQueryAcceleration",
@@ -316,8 +314,8 @@ func (j *jsiiProxy_Warehouse) EnableQueryAcceleration() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Warehouse) EnableQueryAccelerationInput() interface{} {
-	var returns interface{}
+func (j *jsiiProxy_Warehouse) EnableQueryAccelerationInput() *string {
+	var returns *string
 	_jsii_.Get(
 		j,
 		"enableQueryAccelerationInput",
@@ -496,6 +494,16 @@ func (j *jsiiProxy_Warehouse) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_Warehouse) Parameters() WarehouseParametersList {
+	var returns WarehouseParametersList
+	_jsii_.Get(
+		j,
+		"parameters",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Warehouse) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -586,6 +594,16 @@ func (j *jsiiProxy_Warehouse) ScalingPolicyInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Warehouse) ShowOutput() WarehouseShowOutputList {
+	var returns WarehouseShowOutputList
+	_jsii_.Get(
+		j,
+		"showOutput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Warehouse) StatementQueuedTimeoutInSeconds() *float64 {
 	var returns *float64
 	_jsii_.Get(
@@ -656,26 +674,6 @@ func (j *jsiiProxy_Warehouse) TerraformResourceType() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Warehouse) WaitForProvisioning() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"waitForProvisioning",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Warehouse) WaitForProvisioningInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"waitForProvisioningInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_Warehouse) WarehouseSize() *string {
 	var returns *string
 	_jsii_.Get(
@@ -717,7 +715,7 @@ func (j *jsiiProxy_Warehouse) WarehouseTypeInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/warehouse snowflake_warehouse} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/warehouse snowflake_warehouse} Resource.
 func NewWarehouse(scope constructs.Construct, id *string, config *WarehouseConfig) Warehouse {
 	_init_.Initialize()
 
@@ -735,7 +733,7 @@ func NewWarehouse(scope constructs.Construct, id *string, config *WarehouseConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/warehouse snowflake_warehouse} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/warehouse snowflake_warehouse} Resource.
 func NewWarehouse_Override(w Warehouse, scope constructs.Construct, id *string, config *WarehouseConfig) {
 	_init_.Initialize()
 
@@ -746,7 +744,7 @@ func NewWarehouse_Override(w Warehouse, scope constructs.Construct, id *string, 
 	)
 }
 
-func (j *jsiiProxy_Warehouse)SetAutoResume(val interface{}) {
+func (j *jsiiProxy_Warehouse)SetAutoResume(val *string) {
 	if err := j.validateSetAutoResumeParameters(val); err != nil {
 		panic(err)
 	}
@@ -809,7 +807,7 @@ func (j *jsiiProxy_Warehouse)SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_Warehouse)SetEnableQueryAcceleration(val interface{}) {
+func (j *jsiiProxy_Warehouse)SetEnableQueryAcceleration(val *string) {
 	if err := j.validateSetEnableQueryAccelerationParameters(val); err != nil {
 		panic(err)
 	}
@@ -975,17 +973,6 @@ func (j *jsiiProxy_Warehouse)SetStatementTimeoutInSeconds(val *float64) {
 	_jsii_.Set(
 		j,
 		"statementTimeoutInSeconds",
-		val,
-	)
-}
-
-func (j *jsiiProxy_Warehouse)SetWaitForProvisioning(val interface{}) {
-	if err := j.validateSetWaitForProvisioningParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"waitForProvisioning",
 		val,
 	)
 }
@@ -1481,14 +1468,6 @@ func (w *jsiiProxy_Warehouse) ResetStatementTimeoutInSeconds() {
 	_jsii_.InvokeVoid(
 		w,
 		"resetStatementTimeoutInSeconds",
-		nil, // no parameters
-	)
-}
-
-func (w *jsiiProxy_Warehouse) ResetWaitForProvisioning() {
-	_jsii_.InvokeVoid(
-		w,
-		"resetWaitForProvisioning",
 		nil, // no parameters
 	)
 }

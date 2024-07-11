@@ -22,30 +22,42 @@ type ScimIntegrationConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// Specifies the name of the SCIM integration.
+	// Specify whether the security integration is enabled.
 	//
-	// This name follows the rules for Object Identifiers. The name should be unique among security integrations in your account.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/scim_integration#enabled ScimIntegration#enabled}
+	Enabled interface{} `field:"required" json:"enabled" yaml:"enabled"`
+	// String that specifies the identifier (i.e. name) for the integration; must be unique in your account.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/scim_integration#name ScimIntegration#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/scim_integration#name ScimIntegration#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// Specify the SCIM role in Snowflake that owns any users and roles that are imported from the identity provider into Snowflake using SCIM.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/scim_integration#provisioner_role ScimIntegration#provisioner_role}
-	ProvisionerRole *string `field:"required" json:"provisionerRole" yaml:"provisionerRole"`
-	// Specifies the client type for the scim integration.
+	// Provider assumes that the specified role is already provided. Valid options are: [OKTA_PROVISIONER AAD_PROVISIONER GENERIC_SCIM_PROVISIONER].
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/scim_integration#scim_client ScimIntegration#scim_client}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/scim_integration#run_as_role ScimIntegration#run_as_role}
+	RunAsRole *string `field:"required" json:"runAsRole" yaml:"runAsRole"`
+	// Specifies the client type for the scim integration. Valid options are: [OKTA AZURE GENERIC].
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/scim_integration#scim_client ScimIntegration#scim_client}
 	ScimClient *string `field:"required" json:"scimClient" yaml:"scimClient"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/scim_integration#id ScimIntegration#id}.
+	// Specifies a comment for the integration.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/scim_integration#comment ScimIntegration#comment}
+	Comment *string `field:"optional" json:"comment" yaml:"comment"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/scim_integration#id ScimIntegration#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
-	// Specifies an existing network policy active for your account.
+	// Specifies an existing network policy that controls SCIM network traffic.
 	//
-	// The network policy restricts the list of user IP addresses when exchanging an authorization code for an access or refresh token and when using a refresh token to obtain a new access token. If this parameter is not set, the network policy for the account (if any) is used instead.
-	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/scim_integration#network_policy ScimIntegration#network_policy}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/scim_integration#network_policy ScimIntegration#network_policy}
 	NetworkPolicy *string `field:"optional" json:"networkPolicy" yaml:"networkPolicy"`
+	// Specifies whether to enable or disable the synchronization of a user password from an Okta SCIM client as part of the API request to Snowflake.
+	//
+	// Available options are: "true" or "false". When the value is not set in the configuration the provider will put "default" there which means to use the Snowflake default for this value.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/scim_integration#sync_password ScimIntegration#sync_password}
+	SyncPassword *string `field:"optional" json:"syncPassword" yaml:"syncPassword"`
 }
 

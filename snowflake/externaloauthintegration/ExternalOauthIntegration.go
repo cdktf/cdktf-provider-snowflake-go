@@ -12,21 +12,9 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/external_oauth_integration snowflake_external_oauth_integration}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/external_oauth_integration snowflake_external_oauth_integration}.
 type ExternalOauthIntegration interface {
 	cdktf.TerraformResource
-	AllowedRoles() *[]*string
-	SetAllowedRoles(val *[]*string)
-	AllowedRolesInput() *[]*string
-	AnyRoleMode() *string
-	SetAnyRoleMode(val *string)
-	AnyRoleModeInput() *string
-	AudienceUrls() *[]*string
-	SetAudienceUrls(val *[]*string)
-	AudienceUrlsInput() *[]*string
-	BlockedRoles() *[]*string
-	SetBlockedRoles(val *[]*string)
-	BlockedRolesInput() *[]*string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	Comment() *string
@@ -42,14 +30,53 @@ type ExternalOauthIntegration interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
-	CreatedOn() *string
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	DescribeOutput() ExternalOauthIntegrationDescribeOutputList
 	Enabled() interface{}
 	SetEnabled(val interface{})
 	EnabledInput() interface{}
+	ExternalOauthAllowedRolesList() *[]*string
+	SetExternalOauthAllowedRolesList(val *[]*string)
+	ExternalOauthAllowedRolesListInput() *[]*string
+	ExternalOauthAnyRoleMode() *string
+	SetExternalOauthAnyRoleMode(val *string)
+	ExternalOauthAnyRoleModeInput() *string
+	ExternalOauthAudienceList() *[]*string
+	SetExternalOauthAudienceList(val *[]*string)
+	ExternalOauthAudienceListInput() *[]*string
+	ExternalOauthBlockedRolesList() *[]*string
+	SetExternalOauthBlockedRolesList(val *[]*string)
+	ExternalOauthBlockedRolesListInput() *[]*string
+	ExternalOauthIssuer() *string
+	SetExternalOauthIssuer(val *string)
+	ExternalOauthIssuerInput() *string
+	ExternalOauthJwsKeysUrl() *[]*string
+	SetExternalOauthJwsKeysUrl(val *[]*string)
+	ExternalOauthJwsKeysUrlInput() *[]*string
+	ExternalOauthRsaPublicKey() *string
+	SetExternalOauthRsaPublicKey(val *string)
+	ExternalOauthRsaPublicKey2() *string
+	SetExternalOauthRsaPublicKey2(val *string)
+	ExternalOauthRsaPublicKey2Input() *string
+	ExternalOauthRsaPublicKeyInput() *string
+	ExternalOauthScopeDelimiter() *string
+	SetExternalOauthScopeDelimiter(val *string)
+	ExternalOauthScopeDelimiterInput() *string
+	ExternalOauthScopeMappingAttribute() *string
+	SetExternalOauthScopeMappingAttribute(val *string)
+	ExternalOauthScopeMappingAttributeInput() *string
+	ExternalOauthSnowflakeUserMappingAttribute() *string
+	SetExternalOauthSnowflakeUserMappingAttribute(val *string)
+	ExternalOauthSnowflakeUserMappingAttributeInput() *string
+	ExternalOauthTokenUserMappingClaim() *[]*string
+	SetExternalOauthTokenUserMappingClaim(val *[]*string)
+	ExternalOauthTokenUserMappingClaimInput() *[]*string
+	ExternalOauthType() *string
+	SetExternalOauthType(val *string)
+	ExternalOauthTypeInput() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -61,12 +88,6 @@ type ExternalOauthIntegration interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
-	Issuer() *string
-	SetIssuer(val *string)
-	IssuerInput() *string
-	JwsKeysUrls() *[]*string
-	SetJwsKeysUrls(val *[]*string)
-	JwsKeysUrlsInput() *[]*string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -86,33 +107,14 @@ type ExternalOauthIntegration interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
-	RsaPublicKey() *string
-	SetRsaPublicKey(val *string)
-	RsaPublicKey2() *string
-	SetRsaPublicKey2(val *string)
-	RsaPublicKey2Input() *string
-	RsaPublicKeyInput() *string
-	ScopeDelimiter() *string
-	SetScopeDelimiter(val *string)
-	ScopeDelimiterInput() *string
-	ScopeMappingAttribute() *string
-	SetScopeMappingAttribute(val *string)
-	ScopeMappingAttributeInput() *string
-	SnowflakeUserMappingAttribute() *string
-	SetSnowflakeUserMappingAttribute(val *string)
-	SnowflakeUserMappingAttributeInput() *string
+	RelatedParameters() ExternalOauthIntegrationRelatedParametersList
+	ShowOutput() ExternalOauthIntegrationShowOutputList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
-	TokenUserMappingClaims() *[]*string
-	SetTokenUserMappingClaims(val *[]*string)
-	TokenUserMappingClaimsInput() *[]*string
-	Type() *string
-	SetType(val *string)
-	TypeInput() *string
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -156,20 +158,20 @@ type ExternalOauthIntegration interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	ResetAllowedRoles()
-	ResetAnyRoleMode()
-	ResetAudienceUrls()
-	ResetBlockedRoles()
 	ResetComment()
+	ResetExternalOauthAllowedRolesList()
+	ResetExternalOauthAnyRoleMode()
+	ResetExternalOauthAudienceList()
+	ResetExternalOauthBlockedRolesList()
+	ResetExternalOauthJwsKeysUrl()
+	ResetExternalOauthRsaPublicKey()
+	ResetExternalOauthRsaPublicKey2()
+	ResetExternalOauthScopeDelimiter()
+	ResetExternalOauthScopeMappingAttribute()
 	ResetId()
-	ResetJwsKeysUrls()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
-	ResetRsaPublicKey()
-	ResetRsaPublicKey2()
-	ResetScopeDelimiter()
-	ResetScopeMappingAttribute()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -186,86 +188,6 @@ type ExternalOauthIntegration interface {
 // The jsii proxy struct for ExternalOauthIntegration
 type jsiiProxy_ExternalOauthIntegration struct {
 	internal.Type__cdktfTerraformResource
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) AllowedRoles() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"allowedRoles",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) AllowedRolesInput() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"allowedRolesInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) AnyRoleMode() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"anyRoleMode",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) AnyRoleModeInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"anyRoleModeInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) AudienceUrls() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"audienceUrls",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) AudienceUrlsInput() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"audienceUrlsInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) BlockedRoles() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"blockedRoles",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) BlockedRolesInput() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"blockedRolesInput",
-		&returns,
-	)
-	return returns
 }
 
 func (j *jsiiProxy_ExternalOauthIntegration) CdktfStack() cdktf.TerraformStack {
@@ -328,21 +250,21 @@ func (j *jsiiProxy_ExternalOauthIntegration) Count() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) CreatedOn() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"createdOn",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_ExternalOauthIntegration) DependsOn() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) DescribeOutput() ExternalOauthIntegrationDescribeOutputList {
+	var returns ExternalOauthIntegrationDescribeOutputList
+	_jsii_.Get(
+		j,
+		"describeOutput",
 		&returns,
 	)
 	return returns
@@ -363,6 +285,266 @@ func (j *jsiiProxy_ExternalOauthIntegration) EnabledInput() interface{} {
 	_jsii_.Get(
 		j,
 		"enabledInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthAllowedRolesList() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"externalOauthAllowedRolesList",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthAllowedRolesListInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"externalOauthAllowedRolesListInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthAnyRoleMode() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalOauthAnyRoleMode",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthAnyRoleModeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalOauthAnyRoleModeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthAudienceList() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"externalOauthAudienceList",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthAudienceListInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"externalOauthAudienceListInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthBlockedRolesList() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"externalOauthBlockedRolesList",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthBlockedRolesListInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"externalOauthBlockedRolesListInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthIssuer() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalOauthIssuer",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthIssuerInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalOauthIssuerInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthJwsKeysUrl() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"externalOauthJwsKeysUrl",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthJwsKeysUrlInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"externalOauthJwsKeysUrlInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthRsaPublicKey() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalOauthRsaPublicKey",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthRsaPublicKey2() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalOauthRsaPublicKey2",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthRsaPublicKey2Input() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalOauthRsaPublicKey2Input",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthRsaPublicKeyInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalOauthRsaPublicKeyInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthScopeDelimiter() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalOauthScopeDelimiter",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthScopeDelimiterInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalOauthScopeDelimiterInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthScopeMappingAttribute() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalOauthScopeMappingAttribute",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthScopeMappingAttributeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalOauthScopeMappingAttributeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthSnowflakeUserMappingAttribute() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalOauthSnowflakeUserMappingAttribute",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthSnowflakeUserMappingAttributeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalOauthSnowflakeUserMappingAttributeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthTokenUserMappingClaim() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"externalOauthTokenUserMappingClaim",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthTokenUserMappingClaimInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"externalOauthTokenUserMappingClaimInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalOauthType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) ExternalOauthTypeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalOauthTypeInput",
 		&returns,
 	)
 	return returns
@@ -413,46 +595,6 @@ func (j *jsiiProxy_ExternalOauthIntegration) IdInput() *string {
 	_jsii_.Get(
 		j,
 		"idInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) Issuer() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"issuer",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) IssuerInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"issuerInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) JwsKeysUrls() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"jwsKeysUrls",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) JwsKeysUrlsInput() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"jwsKeysUrlsInput",
 		&returns,
 	)
 	return returns
@@ -528,101 +670,21 @@ func (j *jsiiProxy_ExternalOauthIntegration) RawOverrides() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) RsaPublicKey() *string {
-	var returns *string
+func (j *jsiiProxy_ExternalOauthIntegration) RelatedParameters() ExternalOauthIntegrationRelatedParametersList {
+	var returns ExternalOauthIntegrationRelatedParametersList
 	_jsii_.Get(
 		j,
-		"rsaPublicKey",
+		"relatedParameters",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) RsaPublicKey2() *string {
-	var returns *string
+func (j *jsiiProxy_ExternalOauthIntegration) ShowOutput() ExternalOauthIntegrationShowOutputList {
+	var returns ExternalOauthIntegrationShowOutputList
 	_jsii_.Get(
 		j,
-		"rsaPublicKey2",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) RsaPublicKey2Input() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"rsaPublicKey2Input",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) RsaPublicKeyInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"rsaPublicKeyInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) ScopeDelimiter() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"scopeDelimiter",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) ScopeDelimiterInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"scopeDelimiterInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) ScopeMappingAttribute() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"scopeMappingAttribute",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) ScopeMappingAttributeInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"scopeMappingAttributeInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) SnowflakeUserMappingAttribute() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"snowflakeUserMappingAttribute",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) SnowflakeUserMappingAttributeInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"snowflakeUserMappingAttributeInput",
+		"showOutput",
 		&returns,
 	)
 	return returns
@@ -658,48 +720,8 @@ func (j *jsiiProxy_ExternalOauthIntegration) TerraformResourceType() *string {
 	return returns
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) TokenUserMappingClaims() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"tokenUserMappingClaims",
-		&returns,
-	)
-	return returns
-}
 
-func (j *jsiiProxy_ExternalOauthIntegration) TokenUserMappingClaimsInput() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"tokenUserMappingClaimsInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) Type() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"type",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) TypeInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"typeInput",
-		&returns,
-	)
-	return returns
-}
-
-
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/external_oauth_integration snowflake_external_oauth_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/external_oauth_integration snowflake_external_oauth_integration} Resource.
 func NewExternalOauthIntegration(scope constructs.Construct, id *string, config *ExternalOauthIntegrationConfig) ExternalOauthIntegration {
 	_init_.Initialize()
 
@@ -717,7 +739,7 @@ func NewExternalOauthIntegration(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/external_oauth_integration snowflake_external_oauth_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/external_oauth_integration snowflake_external_oauth_integration} Resource.
 func NewExternalOauthIntegration_Override(e ExternalOauthIntegration, scope constructs.Construct, id *string, config *ExternalOauthIntegrationConfig) {
 	_init_.Initialize()
 
@@ -725,50 +747,6 @@ func NewExternalOauthIntegration_Override(e ExternalOauthIntegration, scope cons
 		"@cdktf/provider-snowflake.externalOauthIntegration.ExternalOauthIntegration",
 		[]interface{}{scope, id, config},
 		e,
-	)
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration)SetAllowedRoles(val *[]*string) {
-	if err := j.validateSetAllowedRolesParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"allowedRoles",
-		val,
-	)
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration)SetAnyRoleMode(val *string) {
-	if err := j.validateSetAnyRoleModeParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"anyRoleMode",
-		val,
-	)
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration)SetAudienceUrls(val *[]*string) {
-	if err := j.validateSetAudienceUrlsParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"audienceUrls",
-		val,
-	)
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration)SetBlockedRoles(val *[]*string) {
-	if err := j.validateSetBlockedRolesParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"blockedRoles",
-		val,
 	)
 }
 
@@ -824,6 +802,149 @@ func (j *jsiiProxy_ExternalOauthIntegration)SetEnabled(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_ExternalOauthIntegration)SetExternalOauthAllowedRolesList(val *[]*string) {
+	if err := j.validateSetExternalOauthAllowedRolesListParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"externalOauthAllowedRolesList",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration)SetExternalOauthAnyRoleMode(val *string) {
+	if err := j.validateSetExternalOauthAnyRoleModeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"externalOauthAnyRoleMode",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration)SetExternalOauthAudienceList(val *[]*string) {
+	if err := j.validateSetExternalOauthAudienceListParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"externalOauthAudienceList",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration)SetExternalOauthBlockedRolesList(val *[]*string) {
+	if err := j.validateSetExternalOauthBlockedRolesListParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"externalOauthBlockedRolesList",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration)SetExternalOauthIssuer(val *string) {
+	if err := j.validateSetExternalOauthIssuerParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"externalOauthIssuer",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration)SetExternalOauthJwsKeysUrl(val *[]*string) {
+	if err := j.validateSetExternalOauthJwsKeysUrlParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"externalOauthJwsKeysUrl",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration)SetExternalOauthRsaPublicKey(val *string) {
+	if err := j.validateSetExternalOauthRsaPublicKeyParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"externalOauthRsaPublicKey",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration)SetExternalOauthRsaPublicKey2(val *string) {
+	if err := j.validateSetExternalOauthRsaPublicKey2Parameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"externalOauthRsaPublicKey2",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration)SetExternalOauthScopeDelimiter(val *string) {
+	if err := j.validateSetExternalOauthScopeDelimiterParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"externalOauthScopeDelimiter",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration)SetExternalOauthScopeMappingAttribute(val *string) {
+	if err := j.validateSetExternalOauthScopeMappingAttributeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"externalOauthScopeMappingAttribute",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration)SetExternalOauthSnowflakeUserMappingAttribute(val *string) {
+	if err := j.validateSetExternalOauthSnowflakeUserMappingAttributeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"externalOauthSnowflakeUserMappingAttribute",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration)SetExternalOauthTokenUserMappingClaim(val *[]*string) {
+	if err := j.validateSetExternalOauthTokenUserMappingClaimParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"externalOauthTokenUserMappingClaim",
+		val,
+	)
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration)SetExternalOauthType(val *string) {
+	if err := j.validateSetExternalOauthTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"externalOauthType",
+		val,
+	)
+}
+
 func (j *jsiiProxy_ExternalOauthIntegration)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
@@ -839,28 +960,6 @@ func (j *jsiiProxy_ExternalOauthIntegration)SetId(val *string) {
 	_jsii_.Set(
 		j,
 		"id",
-		val,
-	)
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration)SetIssuer(val *string) {
-	if err := j.validateSetIssuerParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"issuer",
-		val,
-	)
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration)SetJwsKeysUrls(val *[]*string) {
-	if err := j.validateSetJwsKeysUrlsParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"jwsKeysUrls",
 		val,
 	)
 }
@@ -902,83 +1001,6 @@ func (j *jsiiProxy_ExternalOauthIntegration)SetProvisioners(val *[]interface{}) 
 	_jsii_.Set(
 		j,
 		"provisioners",
-		val,
-	)
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration)SetRsaPublicKey(val *string) {
-	if err := j.validateSetRsaPublicKeyParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"rsaPublicKey",
-		val,
-	)
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration)SetRsaPublicKey2(val *string) {
-	if err := j.validateSetRsaPublicKey2Parameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"rsaPublicKey2",
-		val,
-	)
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration)SetScopeDelimiter(val *string) {
-	if err := j.validateSetScopeDelimiterParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"scopeDelimiter",
-		val,
-	)
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration)SetScopeMappingAttribute(val *string) {
-	if err := j.validateSetScopeMappingAttributeParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"scopeMappingAttribute",
-		val,
-	)
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration)SetSnowflakeUserMappingAttribute(val *string) {
-	if err := j.validateSetSnowflakeUserMappingAttributeParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"snowflakeUserMappingAttribute",
-		val,
-	)
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration)SetTokenUserMappingClaims(val *[]*string) {
-	if err := j.validateSetTokenUserMappingClaimsParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"tokenUserMappingClaims",
-		val,
-	)
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration)SetType(val *string) {
-	if err := j.validateSetTypeParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"type",
 		val,
 	)
 }
@@ -1336,42 +1358,82 @@ func (e *jsiiProxy_ExternalOauthIntegration) OverrideLogicalId(newLogicalId *str
 	)
 }
 
-func (e *jsiiProxy_ExternalOauthIntegration) ResetAllowedRoles() {
-	_jsii_.InvokeVoid(
-		e,
-		"resetAllowedRoles",
-		nil, // no parameters
-	)
-}
-
-func (e *jsiiProxy_ExternalOauthIntegration) ResetAnyRoleMode() {
-	_jsii_.InvokeVoid(
-		e,
-		"resetAnyRoleMode",
-		nil, // no parameters
-	)
-}
-
-func (e *jsiiProxy_ExternalOauthIntegration) ResetAudienceUrls() {
-	_jsii_.InvokeVoid(
-		e,
-		"resetAudienceUrls",
-		nil, // no parameters
-	)
-}
-
-func (e *jsiiProxy_ExternalOauthIntegration) ResetBlockedRoles() {
-	_jsii_.InvokeVoid(
-		e,
-		"resetBlockedRoles",
-		nil, // no parameters
-	)
-}
-
 func (e *jsiiProxy_ExternalOauthIntegration) ResetComment() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetComment",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_ExternalOauthIntegration) ResetExternalOauthAllowedRolesList() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetExternalOauthAllowedRolesList",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_ExternalOauthIntegration) ResetExternalOauthAnyRoleMode() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetExternalOauthAnyRoleMode",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_ExternalOauthIntegration) ResetExternalOauthAudienceList() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetExternalOauthAudienceList",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_ExternalOauthIntegration) ResetExternalOauthBlockedRolesList() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetExternalOauthBlockedRolesList",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_ExternalOauthIntegration) ResetExternalOauthJwsKeysUrl() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetExternalOauthJwsKeysUrl",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_ExternalOauthIntegration) ResetExternalOauthRsaPublicKey() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetExternalOauthRsaPublicKey",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_ExternalOauthIntegration) ResetExternalOauthRsaPublicKey2() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetExternalOauthRsaPublicKey2",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_ExternalOauthIntegration) ResetExternalOauthScopeDelimiter() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetExternalOauthScopeDelimiter",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_ExternalOauthIntegration) ResetExternalOauthScopeMappingAttribute() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetExternalOauthScopeMappingAttribute",
 		nil, // no parameters
 	)
 }
@@ -1384,50 +1446,10 @@ func (e *jsiiProxy_ExternalOauthIntegration) ResetId() {
 	)
 }
 
-func (e *jsiiProxy_ExternalOauthIntegration) ResetJwsKeysUrls() {
-	_jsii_.InvokeVoid(
-		e,
-		"resetJwsKeysUrls",
-		nil, // no parameters
-	)
-}
-
 func (e *jsiiProxy_ExternalOauthIntegration) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetOverrideLogicalId",
-		nil, // no parameters
-	)
-}
-
-func (e *jsiiProxy_ExternalOauthIntegration) ResetRsaPublicKey() {
-	_jsii_.InvokeVoid(
-		e,
-		"resetRsaPublicKey",
-		nil, // no parameters
-	)
-}
-
-func (e *jsiiProxy_ExternalOauthIntegration) ResetRsaPublicKey2() {
-	_jsii_.InvokeVoid(
-		e,
-		"resetRsaPublicKey2",
-		nil, // no parameters
-	)
-}
-
-func (e *jsiiProxy_ExternalOauthIntegration) ResetScopeDelimiter() {
-	_jsii_.InvokeVoid(
-		e,
-		"resetScopeDelimiter",
-		nil, // no parameters
-	)
-}
-
-func (e *jsiiProxy_ExternalOauthIntegration) ResetScopeMappingAttribute() {
-	_jsii_.InvokeVoid(
-		e,
-		"resetScopeMappingAttribute",
 		nil, // no parameters
 	)
 }

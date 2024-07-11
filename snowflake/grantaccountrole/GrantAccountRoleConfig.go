@@ -24,20 +24,20 @@ type GrantAccountRoleConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The fully qualified name of the role which will be granted to the user or parent role.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/grant_account_role#role_name GrantAccountRole#role_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/grant_account_role#role_name GrantAccountRole#role_name}
 	RoleName *string `field:"required" json:"roleName" yaml:"roleName"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/grant_account_role#id GrantAccountRole#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/grant_account_role#id GrantAccountRole#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
 	// The fully qualified name of the parent role which will create a parent-child relationship between the roles.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/grant_account_role#parent_role_name GrantAccountRole#parent_role_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/grant_account_role#parent_role_name GrantAccountRole#parent_role_name}
 	ParentRoleName *string `field:"optional" json:"parentRoleName" yaml:"parentRoleName"`
 	// The fully qualified name of the user on which specified role will be granted.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/grant_account_role#user_name GrantAccountRole#user_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/grant_account_role#user_name GrantAccountRole#user_name}
 	UserName *string `field:"optional" json:"userName" yaml:"userName"`
 }
 

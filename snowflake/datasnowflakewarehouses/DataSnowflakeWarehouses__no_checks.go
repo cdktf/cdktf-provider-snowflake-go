@@ -83,6 +83,18 @@ func (j *jsiiProxy_DataSnowflakeWarehouses) validateSetLifecycleParameters(val *
 	return nil
 }
 
+func (j *jsiiProxy_DataSnowflakeWarehouses) validateSetLikeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataSnowflakeWarehouses) validateSetWithDescribeParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataSnowflakeWarehouses) validateSetWithParametersParameters(val interface{}) error {
+	return nil
+}
+
 func validateNewDataSnowflakeWarehousesParameters(scope constructs.Construct, id *string, config *DataSnowflakeWarehousesConfig) error {
 	return nil
 }

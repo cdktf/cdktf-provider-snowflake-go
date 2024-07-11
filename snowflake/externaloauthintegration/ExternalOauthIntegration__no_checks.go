@@ -91,22 +91,6 @@ func validateExternalOauthIntegration_IsTerraformResourceParameters(x interface{
 	return nil
 }
 
-func (j *jsiiProxy_ExternalOauthIntegration) validateSetAllowedRolesParameters(val *[]*string) error {
-	return nil
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) validateSetAnyRoleModeParameters(val *string) error {
-	return nil
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) validateSetAudienceUrlsParameters(val *[]*string) error {
-	return nil
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) validateSetBlockedRolesParameters(val *[]*string) error {
-	return nil
-}
-
 func (j *jsiiProxy_ExternalOauthIntegration) validateSetCommentParameters(val *string) error {
 	return nil
 }
@@ -123,15 +107,59 @@ func (j *jsiiProxy_ExternalOauthIntegration) validateSetEnabledParameters(val in
 	return nil
 }
 
+func (j *jsiiProxy_ExternalOauthIntegration) validateSetExternalOauthAllowedRolesListParameters(val *[]*string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) validateSetExternalOauthAnyRoleModeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) validateSetExternalOauthAudienceListParameters(val *[]*string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) validateSetExternalOauthBlockedRolesListParameters(val *[]*string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) validateSetExternalOauthIssuerParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) validateSetExternalOauthJwsKeysUrlParameters(val *[]*string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) validateSetExternalOauthRsaPublicKeyParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) validateSetExternalOauthRsaPublicKey2Parameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) validateSetExternalOauthScopeDelimiterParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) validateSetExternalOauthScopeMappingAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) validateSetExternalOauthSnowflakeUserMappingAttributeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) validateSetExternalOauthTokenUserMappingClaimParameters(val *[]*string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ExternalOauthIntegration) validateSetExternalOauthTypeParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ExternalOauthIntegration) validateSetIdParameters(val *string) error {
-	return nil
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) validateSetIssuerParameters(val *string) error {
-	return nil
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) validateSetJwsKeysUrlsParameters(val *[]*string) error {
 	return nil
 }
 
@@ -144,34 +172,6 @@ func (j *jsiiProxy_ExternalOauthIntegration) validateSetNameParameters(val *stri
 }
 
 func (j *jsiiProxy_ExternalOauthIntegration) validateSetProvisionersParameters(val *[]interface{}) error {
-	return nil
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) validateSetRsaPublicKeyParameters(val *string) error {
-	return nil
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) validateSetRsaPublicKey2Parameters(val *string) error {
-	return nil
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) validateSetScopeDelimiterParameters(val *string) error {
-	return nil
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) validateSetScopeMappingAttributeParameters(val *string) error {
-	return nil
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) validateSetSnowflakeUserMappingAttributeParameters(val *string) error {
-	return nil
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) validateSetTokenUserMappingClaimsParameters(val *[]*string) error {
-	return nil
-}
-
-func (j *jsiiProxy_ExternalOauthIntegration) validateSetTypeParameters(val *string) error {
 	return nil
 }
 

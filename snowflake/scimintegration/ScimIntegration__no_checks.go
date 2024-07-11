@@ -91,11 +91,19 @@ func validateScimIntegration_IsTerraformResourceParameters(x interface{}) error 
 	return nil
 }
 
+func (j *jsiiProxy_ScimIntegration) validateSetCommentParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ScimIntegration) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }
 
 func (j *jsiiProxy_ScimIntegration) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_ScimIntegration) validateSetEnabledParameters(val interface{}) error {
 	return nil
 }
 
@@ -115,15 +123,19 @@ func (j *jsiiProxy_ScimIntegration) validateSetNetworkPolicyParameters(val *stri
 	return nil
 }
 
-func (j *jsiiProxy_ScimIntegration) validateSetProvisionerRoleParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_ScimIntegration) validateSetProvisionersParameters(val *[]interface{}) error {
 	return nil
 }
 
+func (j *jsiiProxy_ScimIntegration) validateSetRunAsRoleParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_ScimIntegration) validateSetScimClientParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_ScimIntegration) validateSetSyncPasswordParameters(val *string) error {
 	return nil
 }
 

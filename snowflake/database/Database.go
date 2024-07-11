@@ -12,9 +12,12 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/database snowflake_database}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/database snowflake_database}.
 type Database interface {
 	cdktf.TerraformResource
+	Catalog() *string
+	SetCatalog(val *string)
+	CatalogInput() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	Comment() *string
@@ -33,10 +36,19 @@ type Database interface {
 	DataRetentionTimeInDays() *float64
 	SetDataRetentionTimeInDays(val *float64)
 	DataRetentionTimeInDaysInput() *float64
+	DefaultDdlCollation() *string
+	SetDefaultDdlCollation(val *string)
+	DefaultDdlCollationInput() *string
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	EnableConsoleOutput() interface{}
+	SetEnableConsoleOutput(val interface{})
+	EnableConsoleOutputInput() interface{}
+	ExternalVolume() *string
+	SetExternalVolume(val *string)
+	ExternalVolumeInput() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -45,15 +57,6 @@ type Database interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
-	FromDatabase() *string
-	SetFromDatabase(val *string)
-	FromDatabaseInput() *string
-	FromReplica() *string
-	SetFromReplica(val *string)
-	FromReplicaInput() *string
-	FromShare() *map[string]*string
-	SetFromShare(val *map[string]*string)
-	FromShareInput() *map[string]*string
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -64,6 +67,12 @@ type Database interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	LogLevel() *string
+	SetLogLevel(val *string)
+	LogLevelInput() *string
+	MaxDataExtensionTimeInDays() *float64
+	SetMaxDataExtensionTimeInDays(val *float64)
+	MaxDataExtensionTimeInDaysInput() *float64
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
@@ -77,16 +86,43 @@ type Database interface {
 	Provisioners() *[]interface{}
 	// Experimental.
 	SetProvisioners(val *[]interface{})
+	QuotedIdentifiersIgnoreCase() interface{}
+	SetQuotedIdentifiersIgnoreCase(val interface{})
+	QuotedIdentifiersIgnoreCaseInput() interface{}
 	// Experimental.
 	RawOverrides() interface{}
-	ReplicationConfiguration() DatabaseReplicationConfigurationOutputReference
-	ReplicationConfigurationInput() *DatabaseReplicationConfiguration
+	ReplaceInvalidCharacters() interface{}
+	SetReplaceInvalidCharacters(val interface{})
+	ReplaceInvalidCharactersInput() interface{}
+	Replication() DatabaseReplicationOutputReference
+	ReplicationInput() *DatabaseReplication
+	StorageSerializationPolicy() *string
+	SetStorageSerializationPolicy(val *string)
+	StorageSerializationPolicyInput() *string
+	SuspendTaskAfterNumFailures() *float64
+	SetSuspendTaskAfterNumFailures(val *float64)
+	SuspendTaskAfterNumFailuresInput() *float64
+	TaskAutoRetryAttempts() *float64
+	SetTaskAutoRetryAttempts(val *float64)
+	TaskAutoRetryAttemptsInput() *float64
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	TraceLevel() *string
+	SetTraceLevel(val *string)
+	TraceLevelInput() *string
+	UserTaskManagedInitialWarehouseSize() *string
+	SetUserTaskManagedInitialWarehouseSize(val *string)
+	UserTaskManagedInitialWarehouseSizeInput() *string
+	UserTaskMinimumTriggerIntervalInSeconds() *float64
+	SetUserTaskMinimumTriggerIntervalInSeconds(val *float64)
+	UserTaskMinimumTriggerIntervalInSecondsInput() *float64
+	UserTaskTimeoutMs() *float64
+	SetUserTaskTimeoutMs(val *float64)
+	UserTaskTimeoutMsInput() *float64
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -130,18 +166,30 @@ type Database interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	PutReplicationConfiguration(value *DatabaseReplicationConfiguration)
+	PutReplication(value *DatabaseReplication)
+	ResetCatalog()
 	ResetComment()
 	ResetDataRetentionTimeInDays()
-	ResetFromDatabase()
-	ResetFromReplica()
-	ResetFromShare()
+	ResetDefaultDdlCollation()
+	ResetEnableConsoleOutput()
+	ResetExternalVolume()
 	ResetId()
 	ResetIsTransient()
+	ResetLogLevel()
+	ResetMaxDataExtensionTimeInDays()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
-	ResetReplicationConfiguration()
+	ResetQuotedIdentifiersIgnoreCase()
+	ResetReplaceInvalidCharacters()
+	ResetReplication()
+	ResetStorageSerializationPolicy()
+	ResetSuspendTaskAfterNumFailures()
+	ResetTaskAutoRetryAttempts()
+	ResetTraceLevel()
+	ResetUserTaskManagedInitialWarehouseSize()
+	ResetUserTaskMinimumTriggerIntervalInSeconds()
+	ResetUserTaskTimeoutMs()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -158,6 +206,26 @@ type Database interface {
 // The jsii proxy struct for Database
 type jsiiProxy_Database struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_Database) Catalog() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"catalog",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) CatalogInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"catalogInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_Database) CdktfStack() cdktf.TerraformStack {
@@ -240,11 +308,71 @@ func (j *jsiiProxy_Database) DataRetentionTimeInDaysInput() *float64 {
 	return returns
 }
 
+func (j *jsiiProxy_Database) DefaultDdlCollation() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"defaultDdlCollation",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) DefaultDdlCollationInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"defaultDdlCollationInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Database) DependsOn() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) EnableConsoleOutput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableConsoleOutput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) EnableConsoleOutputInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableConsoleOutputInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) ExternalVolume() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalVolume",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) ExternalVolumeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalVolumeInput",
 		&returns,
 	)
 	return returns
@@ -275,66 +403,6 @@ func (j *jsiiProxy_Database) FriendlyUniqueId() *string {
 	_jsii_.Get(
 		j,
 		"friendlyUniqueId",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Database) FromDatabase() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"fromDatabase",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Database) FromDatabaseInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"fromDatabaseInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Database) FromReplica() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"fromReplica",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Database) FromReplicaInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"fromReplicaInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Database) FromShare() *map[string]*string {
-	var returns *map[string]*string
-	_jsii_.Get(
-		j,
-		"fromShare",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Database) FromShareInput() *map[string]*string {
-	var returns *map[string]*string
-	_jsii_.Get(
-		j,
-		"fromShareInput",
 		&returns,
 	)
 	return returns
@@ -390,6 +458,46 @@ func (j *jsiiProxy_Database) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	return returns
 }
 
+func (j *jsiiProxy_Database) LogLevel() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"logLevel",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) LogLevelInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"logLevelInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) MaxDataExtensionTimeInDays() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxDataExtensionTimeInDays",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) MaxDataExtensionTimeInDaysInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxDataExtensionTimeInDaysInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Database) Name() *string {
 	var returns *string
 	_jsii_.Get(
@@ -440,6 +548,26 @@ func (j *jsiiProxy_Database) Provisioners() *[]interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_Database) QuotedIdentifiersIgnoreCase() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"quotedIdentifiersIgnoreCase",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) QuotedIdentifiersIgnoreCaseInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"quotedIdentifiersIgnoreCaseInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Database) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -450,21 +578,101 @@ func (j *jsiiProxy_Database) RawOverrides() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Database) ReplicationConfiguration() DatabaseReplicationConfigurationOutputReference {
-	var returns DatabaseReplicationConfigurationOutputReference
+func (j *jsiiProxy_Database) ReplaceInvalidCharacters() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
-		"replicationConfiguration",
+		"replaceInvalidCharacters",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_Database) ReplicationConfigurationInput() *DatabaseReplicationConfiguration {
-	var returns *DatabaseReplicationConfiguration
+func (j *jsiiProxy_Database) ReplaceInvalidCharactersInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
-		"replicationConfigurationInput",
+		"replaceInvalidCharactersInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) Replication() DatabaseReplicationOutputReference {
+	var returns DatabaseReplicationOutputReference
+	_jsii_.Get(
+		j,
+		"replication",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) ReplicationInput() *DatabaseReplication {
+	var returns *DatabaseReplication
+	_jsii_.Get(
+		j,
+		"replicationInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) StorageSerializationPolicy() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"storageSerializationPolicy",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) StorageSerializationPolicyInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"storageSerializationPolicyInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) SuspendTaskAfterNumFailures() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"suspendTaskAfterNumFailures",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) SuspendTaskAfterNumFailuresInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"suspendTaskAfterNumFailuresInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) TaskAutoRetryAttempts() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"taskAutoRetryAttempts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) TaskAutoRetryAttemptsInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"taskAutoRetryAttemptsInput",
 		&returns,
 	)
 	return returns
@@ -500,8 +708,88 @@ func (j *jsiiProxy_Database) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Database) TraceLevel() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"traceLevel",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/database snowflake_database} Resource.
+func (j *jsiiProxy_Database) TraceLevelInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"traceLevelInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) UserTaskManagedInitialWarehouseSize() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"userTaskManagedInitialWarehouseSize",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) UserTaskManagedInitialWarehouseSizeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"userTaskManagedInitialWarehouseSizeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) UserTaskMinimumTriggerIntervalInSeconds() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"userTaskMinimumTriggerIntervalInSeconds",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) UserTaskMinimumTriggerIntervalInSecondsInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"userTaskMinimumTriggerIntervalInSecondsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) UserTaskTimeoutMs() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"userTaskTimeoutMs",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) UserTaskTimeoutMsInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"userTaskTimeoutMsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/database snowflake_database} Resource.
 func NewDatabase(scope constructs.Construct, id *string, config *DatabaseConfig) Database {
 	_init_.Initialize()
 
@@ -519,7 +807,7 @@ func NewDatabase(scope constructs.Construct, id *string, config *DatabaseConfig)
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/database snowflake_database} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/database snowflake_database} Resource.
 func NewDatabase_Override(d Database, scope constructs.Construct, id *string, config *DatabaseConfig) {
 	_init_.Initialize()
 
@@ -527,6 +815,17 @@ func NewDatabase_Override(d Database, scope constructs.Construct, id *string, co
 		"@cdktf/provider-snowflake.database.Database",
 		[]interface{}{scope, id, config},
 		d,
+	)
+}
+
+func (j *jsiiProxy_Database)SetCatalog(val *string) {
+	if err := j.validateSetCatalogParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"catalog",
+		val,
 	)
 }
 
@@ -574,6 +873,17 @@ func (j *jsiiProxy_Database)SetDataRetentionTimeInDays(val *float64) {
 	)
 }
 
+func (j *jsiiProxy_Database)SetDefaultDdlCollation(val *string) {
+	if err := j.validateSetDefaultDdlCollationParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"defaultDdlCollation",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Database)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
@@ -582,43 +892,32 @@ func (j *jsiiProxy_Database)SetDependsOn(val *[]*string) {
 	)
 }
 
+func (j *jsiiProxy_Database)SetEnableConsoleOutput(val interface{}) {
+	if err := j.validateSetEnableConsoleOutputParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"enableConsoleOutput",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Database)SetExternalVolume(val *string) {
+	if err := j.validateSetExternalVolumeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"externalVolume",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Database)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
-		val,
-	)
-}
-
-func (j *jsiiProxy_Database)SetFromDatabase(val *string) {
-	if err := j.validateSetFromDatabaseParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"fromDatabase",
-		val,
-	)
-}
-
-func (j *jsiiProxy_Database)SetFromReplica(val *string) {
-	if err := j.validateSetFromReplicaParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"fromReplica",
-		val,
-	)
-}
-
-func (j *jsiiProxy_Database)SetFromShare(val *map[string]*string) {
-	if err := j.validateSetFromShareParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"fromShare",
 		val,
 	)
 }
@@ -656,6 +955,28 @@ func (j *jsiiProxy_Database)SetLifecycle(val *cdktf.TerraformResourceLifecycle) 
 	)
 }
 
+func (j *jsiiProxy_Database)SetLogLevel(val *string) {
+	if err := j.validateSetLogLevelParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"logLevel",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Database)SetMaxDataExtensionTimeInDays(val *float64) {
+	if err := j.validateSetMaxDataExtensionTimeInDaysParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"maxDataExtensionTimeInDays",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Database)SetName(val *string) {
 	if err := j.validateSetNameParameters(val); err != nil {
 		panic(err)
@@ -682,6 +1003,105 @@ func (j *jsiiProxy_Database)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Database)SetQuotedIdentifiersIgnoreCase(val interface{}) {
+	if err := j.validateSetQuotedIdentifiersIgnoreCaseParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"quotedIdentifiersIgnoreCase",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Database)SetReplaceInvalidCharacters(val interface{}) {
+	if err := j.validateSetReplaceInvalidCharactersParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"replaceInvalidCharacters",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Database)SetStorageSerializationPolicy(val *string) {
+	if err := j.validateSetStorageSerializationPolicyParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"storageSerializationPolicy",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Database)SetSuspendTaskAfterNumFailures(val *float64) {
+	if err := j.validateSetSuspendTaskAfterNumFailuresParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"suspendTaskAfterNumFailures",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Database)SetTaskAutoRetryAttempts(val *float64) {
+	if err := j.validateSetTaskAutoRetryAttemptsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"taskAutoRetryAttempts",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Database)SetTraceLevel(val *string) {
+	if err := j.validateSetTraceLevelParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"traceLevel",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Database)SetUserTaskManagedInitialWarehouseSize(val *string) {
+	if err := j.validateSetUserTaskManagedInitialWarehouseSizeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"userTaskManagedInitialWarehouseSize",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Database)SetUserTaskMinimumTriggerIntervalInSeconds(val *float64) {
+	if err := j.validateSetUserTaskMinimumTriggerIntervalInSecondsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"userTaskMinimumTriggerIntervalInSeconds",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Database)SetUserTaskTimeoutMs(val *float64) {
+	if err := j.validateSetUserTaskTimeoutMsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"userTaskTimeoutMs",
 		val,
 	)
 }
@@ -1039,14 +1459,22 @@ func (d *jsiiProxy_Database) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
-func (d *jsiiProxy_Database) PutReplicationConfiguration(value *DatabaseReplicationConfiguration) {
-	if err := d.validatePutReplicationConfigurationParameters(value); err != nil {
+func (d *jsiiProxy_Database) PutReplication(value *DatabaseReplication) {
+	if err := d.validatePutReplicationParameters(value); err != nil {
 		panic(err)
 	}
 	_jsii_.InvokeVoid(
 		d,
-		"putReplicationConfiguration",
+		"putReplication",
 		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_Database) ResetCatalog() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetCatalog",
+		nil, // no parameters
 	)
 }
 
@@ -1066,26 +1494,26 @@ func (d *jsiiProxy_Database) ResetDataRetentionTimeInDays() {
 	)
 }
 
-func (d *jsiiProxy_Database) ResetFromDatabase() {
+func (d *jsiiProxy_Database) ResetDefaultDdlCollation() {
 	_jsii_.InvokeVoid(
 		d,
-		"resetFromDatabase",
+		"resetDefaultDdlCollation",
 		nil, // no parameters
 	)
 }
 
-func (d *jsiiProxy_Database) ResetFromReplica() {
+func (d *jsiiProxy_Database) ResetEnableConsoleOutput() {
 	_jsii_.InvokeVoid(
 		d,
-		"resetFromReplica",
+		"resetEnableConsoleOutput",
 		nil, // no parameters
 	)
 }
 
-func (d *jsiiProxy_Database) ResetFromShare() {
+func (d *jsiiProxy_Database) ResetExternalVolume() {
 	_jsii_.InvokeVoid(
 		d,
-		"resetFromShare",
+		"resetExternalVolume",
 		nil, // no parameters
 	)
 }
@@ -1106,6 +1534,22 @@ func (d *jsiiProxy_Database) ResetIsTransient() {
 	)
 }
 
+func (d *jsiiProxy_Database) ResetLogLevel() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetLogLevel",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_Database) ResetMaxDataExtensionTimeInDays() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetMaxDataExtensionTimeInDays",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_Database) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		d,
@@ -1114,10 +1558,82 @@ func (d *jsiiProxy_Database) ResetOverrideLogicalId() {
 	)
 }
 
-func (d *jsiiProxy_Database) ResetReplicationConfiguration() {
+func (d *jsiiProxy_Database) ResetQuotedIdentifiersIgnoreCase() {
 	_jsii_.InvokeVoid(
 		d,
-		"resetReplicationConfiguration",
+		"resetQuotedIdentifiersIgnoreCase",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_Database) ResetReplaceInvalidCharacters() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetReplaceInvalidCharacters",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_Database) ResetReplication() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetReplication",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_Database) ResetStorageSerializationPolicy() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetStorageSerializationPolicy",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_Database) ResetSuspendTaskAfterNumFailures() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetSuspendTaskAfterNumFailures",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_Database) ResetTaskAutoRetryAttempts() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetTaskAutoRetryAttempts",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_Database) ResetTraceLevel() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetTraceLevel",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_Database) ResetUserTaskManagedInitialWarehouseSize() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetUserTaskManagedInitialWarehouseSize",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_Database) ResetUserTaskMinimumTriggerIntervalInSeconds() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetUserTaskMinimumTriggerIntervalInSeconds",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_Database) ResetUserTaskTimeoutMs() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetUserTaskTimeoutMs",
 		nil, // no parameters
 	)
 }

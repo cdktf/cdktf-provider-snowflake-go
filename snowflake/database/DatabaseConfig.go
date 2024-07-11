@@ -22,50 +22,108 @@ type DatabaseConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// Specifies the identifier for the database; must be unique for your account.
+	// Specifies the identifier for the database;
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/database#name Database#name}
+	// must be unique for your account. As a best practice for [Database Replication and Failover](https://docs.snowflake.com/en/user-guide/db-replication-intro), it is recommended to give each secondary database the same name as its primary database. This practice supports referencing fully-qualified objects (i.e. '<db>.<schema>.<object>') by other objects in the same database, such as querying a fully-qualified table name in a view. If a secondary database has a different name from the primary database, then these object references would break in the secondary database.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/database#name Database#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
+	// The database parameter that specifies the default catalog to use for Iceberg tables.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/database#catalog Database#catalog}
+	Catalog *string `field:"optional" json:"catalog" yaml:"catalog"`
 	// Specifies a comment for the database.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/database#comment Database#comment}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/database#comment Database#comment}
 	Comment *string `field:"optional" json:"comment" yaml:"comment"`
-	// Number of days for which Snowflake retains historical data for performing Time Travel actions (SELECT, CLONE, UNDROP) on the object.
+	// Specifies the number of days for which Time Travel actions (CLONE and UNDROP) can be performed on the database, as well as specifying the default Time Travel retention time for all schemas created in the database.
 	//
-	// A value of 0 effectively disables Time Travel for the specified database. Default value for this field is set to -1, which is a fallback to use Snowflake default. For more information, see [Understanding & Using Time Travel](https://docs.snowflake.com/en/user-guide/data-time-travel).
+	// For more details, see [Understanding & Using Time Travel](https://docs.snowflake.com/en/user-guide/data-time-travel).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/database#data_retention_time_in_days Database#data_retention_time_in_days}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/database#data_retention_time_in_days Database#data_retention_time_in_days}
 	DataRetentionTimeInDays *float64 `field:"optional" json:"dataRetentionTimeInDays" yaml:"dataRetentionTimeInDays"`
-	// Specify a database to create a clone from.
+	// Specifies a default collation specification for all schemas and tables added to the database.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/database#from_database Database#from_database}
-	FromDatabase *string `field:"optional" json:"fromDatabase" yaml:"fromDatabase"`
-	// Specify a fully-qualified path to a database to create a replica from.
+	// It can be overridden on schema or table level. For more information, see [collation specification](https://docs.snowflake.com/en/sql-reference/collation#label-collation-specification).
 	//
-	// A fully qualified path follows the format of `"<organization_name>"."<account_name>"."<db_name>"`. An example would be: `"myorg1"."account1"."db1"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/database#default_ddl_collation Database#default_ddl_collation}
+	DefaultDdlCollation *string `field:"optional" json:"defaultDdlCollation" yaml:"defaultDdlCollation"`
+	// If true, enables stdout/stderr fast path logging for anonymous stored procedures.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/database#from_replica Database#from_replica}
-	FromReplica *string `field:"optional" json:"fromReplica" yaml:"fromReplica"`
-	// Specify a provider and a share in this map to create a database from a share.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/database#enable_console_output Database#enable_console_output}
+	EnableConsoleOutput interface{} `field:"optional" json:"enableConsoleOutput" yaml:"enableConsoleOutput"`
+	// The database parameter that specifies the default external volume to use for Iceberg tables.
 	//
-	// As of version 0.87.0, the provider field is the account locator.
-	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/database#from_share Database#from_share}
-	FromShare *map[string]*string `field:"optional" json:"fromShare" yaml:"fromShare"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/database#id Database#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/database#external_volume Database#external_volume}
+	ExternalVolume *string `field:"optional" json:"externalVolume" yaml:"externalVolume"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/database#id Database#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
-	// Specifies a database as transient.
+	// Specifies the database as transient.
 	//
 	// Transient databases do not have a Fail-safe period so they do not incur additional storage costs once they leave Time Travel; however, this means they are also not protected by Fail-safe in the event of a data loss.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/database#is_transient Database#is_transient}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/database#is_transient Database#is_transient}
 	IsTransient interface{} `field:"optional" json:"isTransient" yaml:"isTransient"`
-	// replication_configuration block.
+	// Specifies the severity level of messages that should be ingested and made available in the active event table.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/database#replication_configuration Database#replication_configuration}
-	ReplicationConfiguration *DatabaseReplicationConfiguration `field:"optional" json:"replicationConfiguration" yaml:"replicationConfiguration"`
+	// Valid options are: [TRACE DEBUG INFO WARN ERROR FATAL OFF]. Messages at the specified level (and at more severe levels) are ingested. For more information, see [LOG_LEVEL](https://docs.snowflake.com/en/sql-reference/parameters.html#label-log-level).
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/database#log_level Database#log_level}
+	LogLevel *string `field:"optional" json:"logLevel" yaml:"logLevel"`
+	// Object parameter that specifies the maximum number of days for which Snowflake can extend the data retention period for tables in the database to prevent streams on the tables from becoming stale.
+	//
+	// For a detailed description of this parameter, see [MAX_DATA_EXTENSION_TIME_IN_DAYS](https://docs.snowflake.com/en/sql-reference/parameters.html#label-max-data-extension-time-in-days).
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/database#max_data_extension_time_in_days Database#max_data_extension_time_in_days}
+	MaxDataExtensionTimeInDays *float64 `field:"optional" json:"maxDataExtensionTimeInDays" yaml:"maxDataExtensionTimeInDays"`
+	// If true, the case of quoted identifiers is ignored.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/database#quoted_identifiers_ignore_case Database#quoted_identifiers_ignore_case}
+	QuotedIdentifiersIgnoreCase interface{} `field:"optional" json:"quotedIdentifiersIgnoreCase" yaml:"quotedIdentifiersIgnoreCase"`
+	// Specifies whether to replace invalid UTF-8 characters with the Unicode replacement character (�) in query results for an Iceberg table.
+	//
+	// You can only set this parameter for tables that use an external Iceberg catalog.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/database#replace_invalid_characters Database#replace_invalid_characters}
+	ReplaceInvalidCharacters interface{} `field:"optional" json:"replaceInvalidCharacters" yaml:"replaceInvalidCharacters"`
+	// replication block.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/database#replication Database#replication}
+	Replication *DatabaseReplication `field:"optional" json:"replication" yaml:"replication"`
+	// The storage serialization policy for Iceberg tables that use Snowflake as the catalog.
+	//
+	// Valid options are: [COMPATIBLE OPTIMIZED]. COMPATIBLE: Snowflake performs encoding and compression of data files that ensures interoperability with third-party compute engines. OPTIMIZED: Snowflake performs encoding and compression of data files that ensures the best table performance within Snowflake.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/database#storage_serialization_policy Database#storage_serialization_policy}
+	StorageSerializationPolicy *string `field:"optional" json:"storageSerializationPolicy" yaml:"storageSerializationPolicy"`
+	// How many times a task must fail in a row before it is automatically suspended. 0 disables auto-suspending.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/database#suspend_task_after_num_failures Database#suspend_task_after_num_failures}
+	SuspendTaskAfterNumFailures *float64 `field:"optional" json:"suspendTaskAfterNumFailures" yaml:"suspendTaskAfterNumFailures"`
+	// Maximum automatic retries allowed for a user task.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/database#task_auto_retry_attempts Database#task_auto_retry_attempts}
+	TaskAutoRetryAttempts *float64 `field:"optional" json:"taskAutoRetryAttempts" yaml:"taskAutoRetryAttempts"`
+	// Controls how trace events are ingested into the event table.
+	//
+	// Valid options are: [ALWAYS ON_EVENT OFF]. For information about levels, see [TRACE_LEVEL](https://docs.snowflake.com/en/sql-reference/parameters.html#label-trace-level).
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/database#trace_level Database#trace_level}
+	TraceLevel *string `field:"optional" json:"traceLevel" yaml:"traceLevel"`
+	// The initial size of warehouse to use for managed warehouses in the absence of history.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/database#user_task_managed_initial_warehouse_size Database#user_task_managed_initial_warehouse_size}
+	UserTaskManagedInitialWarehouseSize *string `field:"optional" json:"userTaskManagedInitialWarehouseSize" yaml:"userTaskManagedInitialWarehouseSize"`
+	// Minimum amount of time between Triggered Task executions in seconds.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/database#user_task_minimum_trigger_interval_in_seconds Database#user_task_minimum_trigger_interval_in_seconds}
+	UserTaskMinimumTriggerIntervalInSeconds *float64 `field:"optional" json:"userTaskMinimumTriggerIntervalInSeconds" yaml:"userTaskMinimumTriggerIntervalInSeconds"`
+	// User task execution timeout in milliseconds.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/database#user_task_timeout_ms Database#user_task_timeout_ms}
+	UserTaskTimeoutMs *float64 `field:"optional" json:"userTaskTimeoutMs" yaml:"userTaskTimeoutMs"`
 }
 

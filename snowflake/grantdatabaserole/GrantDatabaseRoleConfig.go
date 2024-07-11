@@ -24,24 +24,24 @@ type GrantDatabaseRoleConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The fully qualified name of the database role which will be granted to share or parent role.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/grant_database_role#database_role_name GrantDatabaseRole#database_role_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/grant_database_role#database_role_name GrantDatabaseRole#database_role_name}
 	DatabaseRoleName *string `field:"required" json:"databaseRoleName" yaml:"databaseRoleName"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/grant_database_role#id GrantDatabaseRole#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/grant_database_role#id GrantDatabaseRole#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
 	// The fully qualified name of the parent database role which will create a parent-child relationship between the roles.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/grant_database_role#parent_database_role_name GrantDatabaseRole#parent_database_role_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/grant_database_role#parent_database_role_name GrantDatabaseRole#parent_database_role_name}
 	ParentDatabaseRoleName *string `field:"optional" json:"parentDatabaseRoleName" yaml:"parentDatabaseRoleName"`
 	// The fully qualified name of the parent account role which will create a parent-child relationship between the roles.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/grant_database_role#parent_role_name GrantDatabaseRole#parent_role_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/grant_database_role#parent_role_name GrantDatabaseRole#parent_role_name}
 	ParentRoleName *string `field:"optional" json:"parentRoleName" yaml:"parentRoleName"`
 	// The fully qualified name of the share on which privileges will be granted.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/resources/grant_database_role#share_name GrantDatabaseRole#share_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/grant_database_role#share_name GrantDatabaseRole#share_name}
 	ShareName *string `field:"optional" json:"shareName" yaml:"shareName"`
 }
 

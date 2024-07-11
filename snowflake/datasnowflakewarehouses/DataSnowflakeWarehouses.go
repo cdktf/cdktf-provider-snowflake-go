@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/data-sources/warehouses snowflake_warehouses}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/data-sources/warehouses snowflake_warehouses}.
 type DataSnowflakeWarehouses interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -42,6 +42,9 @@ type DataSnowflakeWarehouses interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	Like() *string
+	SetLike(val *string)
+	LikeInput() *string
 	// The tree node.
 	Node() constructs.Node
 	// Experimental.
@@ -57,6 +60,12 @@ type DataSnowflakeWarehouses interface {
 	// Experimental.
 	TerraformResourceType() *string
 	Warehouses() DataSnowflakeWarehousesWarehousesList
+	WithDescribe() interface{}
+	SetWithDescribe(val interface{})
+	WithDescribeInput() interface{}
+	WithParameters() interface{}
+	SetWithParameters(val interface{})
+	WithParametersInput() interface{}
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -83,9 +92,12 @@ type DataSnowflakeWarehouses interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	ResetId()
+	ResetLike()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetWithDescribe()
+	ResetWithParameters()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Adds this resource to the terraform JSON output.
@@ -205,6 +217,26 @@ func (j *jsiiProxy_DataSnowflakeWarehouses) Lifecycle() *cdktf.TerraformResource
 	return returns
 }
 
+func (j *jsiiProxy_DataSnowflakeWarehouses) Like() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"like",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeWarehouses) LikeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"likeInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataSnowflakeWarehouses) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
@@ -275,8 +307,48 @@ func (j *jsiiProxy_DataSnowflakeWarehouses) Warehouses() DataSnowflakeWarehouses
 	return returns
 }
 
+func (j *jsiiProxy_DataSnowflakeWarehouses) WithDescribe() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"withDescribe",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/data-sources/warehouses snowflake_warehouses} Data Source.
+func (j *jsiiProxy_DataSnowflakeWarehouses) WithDescribeInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"withDescribeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeWarehouses) WithParameters() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"withParameters",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeWarehouses) WithParametersInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"withParametersInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/data-sources/warehouses snowflake_warehouses} Data Source.
 func NewDataSnowflakeWarehouses(scope constructs.Construct, id *string, config *DataSnowflakeWarehousesConfig) DataSnowflakeWarehouses {
 	_init_.Initialize()
 
@@ -294,7 +366,7 @@ func NewDataSnowflakeWarehouses(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.92.0/docs/data-sources/warehouses snowflake_warehouses} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/data-sources/warehouses snowflake_warehouses} Data Source.
 func NewDataSnowflakeWarehouses_Override(d DataSnowflakeWarehouses, scope constructs.Construct, id *string, config *DataSnowflakeWarehousesConfig) {
 	_init_.Initialize()
 
@@ -354,10 +426,43 @@ func (j *jsiiProxy_DataSnowflakeWarehouses)SetLifecycle(val *cdktf.TerraformReso
 	)
 }
 
+func (j *jsiiProxy_DataSnowflakeWarehouses)SetLike(val *string) {
+	if err := j.validateSetLikeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"like",
+		val,
+	)
+}
+
 func (j *jsiiProxy_DataSnowflakeWarehouses)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataSnowflakeWarehouses)SetWithDescribe(val interface{}) {
+	if err := j.validateSetWithDescribeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"withDescribe",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataSnowflakeWarehouses)SetWithParameters(val interface{}) {
+	if err := j.validateSetWithParametersParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"withParameters",
 		val,
 	)
 }
@@ -655,10 +760,34 @@ func (d *jsiiProxy_DataSnowflakeWarehouses) ResetId() {
 	)
 }
 
+func (d *jsiiProxy_DataSnowflakeWarehouses) ResetLike() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetLike",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DataSnowflakeWarehouses) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataSnowflakeWarehouses) ResetWithDescribe() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetWithDescribe",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataSnowflakeWarehouses) ResetWithParameters() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetWithParameters",
 		nil, // no parameters
 	)
 }

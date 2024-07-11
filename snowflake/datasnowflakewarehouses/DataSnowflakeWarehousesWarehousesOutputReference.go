@@ -13,7 +13,6 @@ import (
 
 type DataSnowflakeWarehousesWarehousesOutputReference interface {
 	cdktf.ComplexObject
-	Comment() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -29,14 +28,13 @@ type DataSnowflakeWarehousesWarehousesOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	DescribeOutput() DataSnowflakeWarehousesWarehousesDescribeOutputList
 	// Experimental.
 	Fqn() *string
 	InternalValue() *DataSnowflakeWarehousesWarehouses
 	SetInternalValue(val *DataSnowflakeWarehousesWarehouses)
-	Name() *string
-	ScalingPolicy() *string
-	Size() *string
-	State() *string
+	Parameters() DataSnowflakeWarehousesWarehousesParametersList
+	ShowOutput() DataSnowflakeWarehousesWarehousesShowOutputList
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -45,7 +43,6 @@ type DataSnowflakeWarehousesWarehousesOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
-	Type() *string
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -85,16 +82,6 @@ type jsiiProxy_DataSnowflakeWarehousesWarehousesOutputReference struct {
 	internal.Type__cdktfComplexObject
 }
 
-func (j *jsiiProxy_DataSnowflakeWarehousesWarehousesOutputReference) Comment() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"comment",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataSnowflakeWarehousesWarehousesOutputReference) ComplexObjectIndex() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -125,6 +112,16 @@ func (j *jsiiProxy_DataSnowflakeWarehousesWarehousesOutputReference) CreationSta
 	return returns
 }
 
+func (j *jsiiProxy_DataSnowflakeWarehousesWarehousesOutputReference) DescribeOutput() DataSnowflakeWarehousesWarehousesDescribeOutputList {
+	var returns DataSnowflakeWarehousesWarehousesDescribeOutputList
+	_jsii_.Get(
+		j,
+		"describeOutput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataSnowflakeWarehousesWarehousesOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -145,41 +142,21 @@ func (j *jsiiProxy_DataSnowflakeWarehousesWarehousesOutputReference) InternalVal
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeWarehousesWarehousesOutputReference) Name() *string {
-	var returns *string
+func (j *jsiiProxy_DataSnowflakeWarehousesWarehousesOutputReference) Parameters() DataSnowflakeWarehousesWarehousesParametersList {
+	var returns DataSnowflakeWarehousesWarehousesParametersList
 	_jsii_.Get(
 		j,
-		"name",
+		"parameters",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeWarehousesWarehousesOutputReference) ScalingPolicy() *string {
-	var returns *string
+func (j *jsiiProxy_DataSnowflakeWarehousesWarehousesOutputReference) ShowOutput() DataSnowflakeWarehousesWarehousesShowOutputList {
+	var returns DataSnowflakeWarehousesWarehousesShowOutputList
 	_jsii_.Get(
 		j,
-		"scalingPolicy",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeWarehousesWarehousesOutputReference) Size() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"size",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeWarehousesWarehousesOutputReference) State() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"state",
+		"showOutput",
 		&returns,
 	)
 	return returns
@@ -200,16 +177,6 @@ func (j *jsiiProxy_DataSnowflakeWarehousesWarehousesOutputReference) TerraformRe
 	_jsii_.Get(
 		j,
 		"terraformResource",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeWarehousesWarehousesOutputReference) Type() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"type",
 		&returns,
 	)
 	return returns

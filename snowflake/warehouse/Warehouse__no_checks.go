@@ -91,7 +91,7 @@ func validateWarehouse_IsTerraformResourceParameters(x interface{}) error {
 	return nil
 }
 
-func (j *jsiiProxy_Warehouse) validateSetAutoResumeParameters(val interface{}) error {
+func (j *jsiiProxy_Warehouse) validateSetAutoResumeParameters(val *string) error {
 	return nil
 }
 
@@ -111,7 +111,7 @@ func (j *jsiiProxy_Warehouse) validateSetCountParameters(val interface{}) error 
 	return nil
 }
 
-func (j *jsiiProxy_Warehouse) validateSetEnableQueryAccelerationParameters(val interface{}) error {
+func (j *jsiiProxy_Warehouse) validateSetEnableQueryAccelerationParameters(val *string) error {
 	return nil
 }
 
@@ -164,10 +164,6 @@ func (j *jsiiProxy_Warehouse) validateSetStatementQueuedTimeoutInSecondsParamete
 }
 
 func (j *jsiiProxy_Warehouse) validateSetStatementTimeoutInSecondsParameters(val *float64) error {
-	return nil
-}
-
-func (j *jsiiProxy_Warehouse) validateSetWaitForProvisioningParameters(val interface{}) error {
 	return nil
 }
 

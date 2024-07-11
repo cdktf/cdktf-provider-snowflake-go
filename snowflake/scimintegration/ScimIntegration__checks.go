@@ -247,6 +247,14 @@ func validateScimIntegration_IsTerraformResourceParameters(x interface{}) error 
 	return nil
 }
 
+func (j *jsiiProxy_ScimIntegration) validateSetCommentParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_ScimIntegration) validateSetConnectionParameters(val interface{}) error {
 	switch val.(type) {
 	case *cdktf.SSHProvisionerConnection:
@@ -337,6 +345,26 @@ func (j *jsiiProxy_ScimIntegration) validateSetCountParameters(val interface{}) 
 	return nil
 }
 
+func (j *jsiiProxy_ScimIntegration) validateSetEnabledParameters(val interface{}) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+	switch val.(type) {
+	case *bool:
+		// ok
+	case bool:
+		// ok
+	case cdktf.IResolvable:
+		// ok
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: *bool, cdktf.IResolvable; received %#v (a %T)", val, val)
+		}
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_ScimIntegration) validateSetIdParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -362,14 +390,6 @@ func (j *jsiiProxy_ScimIntegration) validateSetNameParameters(val *string) error
 }
 
 func (j *jsiiProxy_ScimIntegration) validateSetNetworkPolicyParameters(val *string) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
-func (j *jsiiProxy_ScimIntegration) validateSetProvisionerRoleParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
@@ -423,7 +443,23 @@ func (j *jsiiProxy_ScimIntegration) validateSetProvisionersParameters(val *[]int
 	return nil
 }
 
+func (j *jsiiProxy_ScimIntegration) validateSetRunAsRoleParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_ScimIntegration) validateSetScimClientParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_ScimIntegration) validateSetSyncPasswordParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
