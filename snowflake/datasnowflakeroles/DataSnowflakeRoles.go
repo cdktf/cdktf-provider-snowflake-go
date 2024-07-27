@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/data-sources/roles snowflake_roles}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.0/docs/data-sources/roles snowflake_roles}.
 type DataSnowflakeRoles interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -38,15 +38,18 @@ type DataSnowflakeRoles interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	InClass() *string
+	SetInClass(val *string)
+	InClassInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	Like() *string
+	SetLike(val *string)
+	LikeInput() *string
 	// The tree node.
 	Node() constructs.Node
-	Pattern() *string
-	SetPattern(val *string)
-	PatternInput() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -86,10 +89,11 @@ type DataSnowflakeRoles interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	ResetId()
+	ResetInClass()
+	ResetLike()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
-	ResetPattern()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Adds this resource to the terraform JSON output.
@@ -199,6 +203,26 @@ func (j *jsiiProxy_DataSnowflakeRoles) IdInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataSnowflakeRoles) InClass() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"inClass",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeRoles) InClassInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"inClassInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataSnowflakeRoles) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -209,31 +233,31 @@ func (j *jsiiProxy_DataSnowflakeRoles) Lifecycle() *cdktf.TerraformResourceLifec
 	return returns
 }
 
+func (j *jsiiProxy_DataSnowflakeRoles) Like() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"like",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeRoles) LikeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"likeInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataSnowflakeRoles) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
 		j,
 		"node",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeRoles) Pattern() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"pattern",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeRoles) PatternInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"patternInput",
 		&returns,
 	)
 	return returns
@@ -300,7 +324,7 @@ func (j *jsiiProxy_DataSnowflakeRoles) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/data-sources/roles snowflake_roles} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.0/docs/data-sources/roles snowflake_roles} Data Source.
 func NewDataSnowflakeRoles(scope constructs.Construct, id *string, config *DataSnowflakeRolesConfig) DataSnowflakeRoles {
 	_init_.Initialize()
 
@@ -318,7 +342,7 @@ func NewDataSnowflakeRoles(scope constructs.Construct, id *string, config *DataS
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/data-sources/roles snowflake_roles} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.0/docs/data-sources/roles snowflake_roles} Data Source.
 func NewDataSnowflakeRoles_Override(d DataSnowflakeRoles, scope constructs.Construct, id *string, config *DataSnowflakeRolesConfig) {
 	_init_.Initialize()
 
@@ -367,6 +391,17 @@ func (j *jsiiProxy_DataSnowflakeRoles)SetId(val *string) {
 	)
 }
 
+func (j *jsiiProxy_DataSnowflakeRoles)SetInClass(val *string) {
+	if err := j.validateSetInClassParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"inClass",
+		val,
+	)
+}
+
 func (j *jsiiProxy_DataSnowflakeRoles)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
 	if err := j.validateSetLifecycleParameters(val); err != nil {
 		panic(err)
@@ -378,13 +413,13 @@ func (j *jsiiProxy_DataSnowflakeRoles)SetLifecycle(val *cdktf.TerraformResourceL
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeRoles)SetPattern(val *string) {
-	if err := j.validateSetPatternParameters(val); err != nil {
+func (j *jsiiProxy_DataSnowflakeRoles)SetLike(val *string) {
+	if err := j.validateSetLikeParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
-		"pattern",
+		"like",
 		val,
 	)
 }
@@ -690,18 +725,26 @@ func (d *jsiiProxy_DataSnowflakeRoles) ResetId() {
 	)
 }
 
-func (d *jsiiProxy_DataSnowflakeRoles) ResetOverrideLogicalId() {
+func (d *jsiiProxy_DataSnowflakeRoles) ResetInClass() {
 	_jsii_.InvokeVoid(
 		d,
-		"resetOverrideLogicalId",
+		"resetInClass",
 		nil, // no parameters
 	)
 }
 
-func (d *jsiiProxy_DataSnowflakeRoles) ResetPattern() {
+func (d *jsiiProxy_DataSnowflakeRoles) ResetLike() {
 	_jsii_.InvokeVoid(
 		d,
-		"resetPattern",
+		"resetLike",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataSnowflakeRoles) ResetOverrideLogicalId() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetOverrideLogicalId",
 		nil, // no parameters
 	)
 }

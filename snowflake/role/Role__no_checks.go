@@ -75,10 +75,6 @@ func (r *jsiiProxy_Role) validateOverrideLogicalIdParameters(newLogicalId *strin
 	return nil
 }
 
-func (r *jsiiProxy_Role) validatePutTagParameters(value interface{}) error {
-	return nil
-}
-
 func validateRole_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/network_policy snowflake_network_policy}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.0/docs/resources/network_policy snowflake_network_policy}.
 type NetworkPolicy interface {
 	cdktf.TerraformResource
 	AllowedIpList() *[]*string
@@ -46,6 +46,7 @@ type NetworkPolicy interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	DescribeOutput() NetworkPolicyDescribeOutputList
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -76,6 +77,7 @@ type NetworkPolicy interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	ShowOutput() NetworkPolicyShowOutputList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -302,6 +304,16 @@ func (j *jsiiProxy_NetworkPolicy) DependsOn() *[]*string {
 	return returns
 }
 
+func (j *jsiiProxy_NetworkPolicy) DescribeOutput() NetworkPolicyDescribeOutputList {
+	var returns NetworkPolicyDescribeOutputList
+	_jsii_.Get(
+		j,
+		"describeOutput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_NetworkPolicy) ForEach() cdktf.ITerraformIterator {
 	var returns cdktf.ITerraformIterator
 	_jsii_.Get(
@@ -422,6 +434,16 @@ func (j *jsiiProxy_NetworkPolicy) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_NetworkPolicy) ShowOutput() NetworkPolicyShowOutputList {
+	var returns NetworkPolicyShowOutputList
+	_jsii_.Get(
+		j,
+		"showOutput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_NetworkPolicy) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -453,7 +475,7 @@ func (j *jsiiProxy_NetworkPolicy) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/network_policy snowflake_network_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.0/docs/resources/network_policy snowflake_network_policy} Resource.
 func NewNetworkPolicy(scope constructs.Construct, id *string, config *NetworkPolicyConfig) NetworkPolicy {
 	_init_.Initialize()
 
@@ -471,7 +493,7 @@ func NewNetworkPolicy(scope constructs.Construct, id *string, config *NetworkPol
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/network_policy snowflake_network_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.0/docs/resources/network_policy snowflake_network_policy} Resource.
 func NewNetworkPolicy_Override(n NetworkPolicy, scope constructs.Construct, id *string, config *NetworkPolicyConfig) {
 	_init_.Initialize()
 

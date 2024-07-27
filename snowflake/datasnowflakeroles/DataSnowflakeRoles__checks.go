@@ -219,6 +219,14 @@ func (j *jsiiProxy_DataSnowflakeRoles) validateSetIdParameters(val *string) erro
 	return nil
 }
 
+func (j *jsiiProxy_DataSnowflakeRoles) validateSetInClassParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_DataSnowflakeRoles) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 		return err
@@ -227,7 +235,7 @@ func (j *jsiiProxy_DataSnowflakeRoles) validateSetLifecycleParameters(val *cdktf
 	return nil
 }
 
-func (j *jsiiProxy_DataSnowflakeRoles) validateSetPatternParameters(val *string) error {
+func (j *jsiiProxy_DataSnowflakeRoles) validateSetLikeParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

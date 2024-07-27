@@ -75,10 +75,6 @@ func (s *jsiiProxy_Schema) validateOverrideLogicalIdParameters(newLogicalId *str
 	return nil
 }
 
-func (s *jsiiProxy_Schema) validatePutTagParameters(value interface{}) error {
-	return nil
-}
-
 func validateSchema_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
@@ -92,6 +88,10 @@ func validateSchema_IsTerraformElementParameters(x interface{}) error {
 }
 
 func validateSchema_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_Schema) validateSetCatalogParameters(val *string) error {
 	return nil
 }
 
@@ -111,7 +111,19 @@ func (j *jsiiProxy_Schema) validateSetDatabaseParameters(val *string) error {
 	return nil
 }
 
-func (j *jsiiProxy_Schema) validateSetDataRetentionDaysParameters(val *float64) error {
+func (j *jsiiProxy_Schema) validateSetDataRetentionTimeInDaysParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_Schema) validateSetDefaultDdlCollationParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Schema) validateSetEnableConsoleOutputParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_Schema) validateSetExternalVolumeParameters(val *string) error {
 	return nil
 }
 
@@ -119,11 +131,7 @@ func (j *jsiiProxy_Schema) validateSetIdParameters(val *string) error {
 	return nil
 }
 
-func (j *jsiiProxy_Schema) validateSetIsManagedParameters(val interface{}) error {
-	return nil
-}
-
-func (j *jsiiProxy_Schema) validateSetIsTransientParameters(val interface{}) error {
+func (j *jsiiProxy_Schema) validateSetIsTransientParameters(val *string) error {
 	return nil
 }
 
@@ -131,11 +139,63 @@ func (j *jsiiProxy_Schema) validateSetLifecycleParameters(val *cdktf.TerraformRe
 	return nil
 }
 
+func (j *jsiiProxy_Schema) validateSetLogLevelParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Schema) validateSetMaxDataExtensionTimeInDaysParameters(val *float64) error {
+	return nil
+}
+
 func (j *jsiiProxy_Schema) validateSetNameParameters(val *string) error {
 	return nil
 }
 
+func (j *jsiiProxy_Schema) validateSetPipeExecutionPausedParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Schema) validateSetProvisionersParameters(val *[]interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_Schema) validateSetQuotedIdentifiersIgnoreCaseParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_Schema) validateSetReplaceInvalidCharactersParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_Schema) validateSetStorageSerializationPolicyParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Schema) validateSetSuspendTaskAfterNumFailuresParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_Schema) validateSetTaskAutoRetryAttemptsParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_Schema) validateSetTraceLevelParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Schema) validateSetUserTaskManagedInitialWarehouseSizeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_Schema) validateSetUserTaskMinimumTriggerIntervalInSecondsParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_Schema) validateSetUserTaskTimeoutMsParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_Schema) validateSetWithManagedAccessParameters(val *string) error {
 	return nil
 }
 

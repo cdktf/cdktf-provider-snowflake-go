@@ -13,7 +13,6 @@ import (
 
 type DataSnowflakeRolesRolesOutputReference interface {
 	cdktf.ComplexObject
-	Comment() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -33,8 +32,7 @@ type DataSnowflakeRolesRolesOutputReference interface {
 	Fqn() *string
 	InternalValue() *DataSnowflakeRolesRoles
 	SetInternalValue(val *DataSnowflakeRolesRoles)
-	Name() *string
-	Owner() *string
+	ShowOutput() DataSnowflakeRolesRolesShowOutputList
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -80,16 +78,6 @@ type DataSnowflakeRolesRolesOutputReference interface {
 // The jsii proxy struct for DataSnowflakeRolesRolesOutputReference
 type jsiiProxy_DataSnowflakeRolesRolesOutputReference struct {
 	internal.Type__cdktfComplexObject
-}
-
-func (j *jsiiProxy_DataSnowflakeRolesRolesOutputReference) Comment() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"comment",
-		&returns,
-	)
-	return returns
 }
 
 func (j *jsiiProxy_DataSnowflakeRolesRolesOutputReference) ComplexObjectIndex() interface{} {
@@ -142,21 +130,11 @@ func (j *jsiiProxy_DataSnowflakeRolesRolesOutputReference) InternalValue() *Data
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeRolesRolesOutputReference) Name() *string {
-	var returns *string
+func (j *jsiiProxy_DataSnowflakeRolesRolesOutputReference) ShowOutput() DataSnowflakeRolesRolesShowOutputList {
+	var returns DataSnowflakeRolesRolesShowOutputList
 	_jsii_.Get(
 		j,
-		"name",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeRolesRolesOutputReference) Owner() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"owner",
+		"showOutput",
 		&returns,
 	)
 	return returns

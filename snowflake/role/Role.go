@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/role snowflake_role}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.0/docs/resources/role snowflake_role}.
 type Role interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -64,8 +64,7 @@ type Role interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
-	Tag() RoleTagList
-	TagInput() interface{}
+	ShowOutput() RoleShowOutputList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -115,13 +114,11 @@ type Role interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	PutTag(value interface{})
 	ResetComment()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
-	ResetTag()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -330,21 +327,11 @@ func (j *jsiiProxy_Role) RawOverrides() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Role) Tag() RoleTagList {
-	var returns RoleTagList
+func (j *jsiiProxy_Role) ShowOutput() RoleShowOutputList {
+	var returns RoleShowOutputList
 	_jsii_.Get(
 		j,
-		"tag",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Role) TagInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"tagInput",
+		"showOutput",
 		&returns,
 	)
 	return returns
@@ -381,7 +368,7 @@ func (j *jsiiProxy_Role) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/role snowflake_role} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.0/docs/resources/role snowflake_role} Resource.
 func NewRole(scope constructs.Construct, id *string, config *RoleConfig) Role {
 	_init_.Initialize()
 
@@ -399,7 +386,7 @@ func NewRole(scope constructs.Construct, id *string, config *RoleConfig) Role {
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/role snowflake_role} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.0/docs/resources/role snowflake_role} Resource.
 func NewRole_Override(r Role, scope constructs.Construct, id *string, config *RoleConfig) {
 	_init_.Initialize()
 
@@ -864,17 +851,6 @@ func (r *jsiiProxy_Role) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
-func (r *jsiiProxy_Role) PutTag(value interface{}) {
-	if err := r.validatePutTagParameters(value); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		r,
-		"putTag",
-		[]interface{}{value},
-	)
-}
-
 func (r *jsiiProxy_Role) ResetComment() {
 	_jsii_.InvokeVoid(
 		r,
@@ -895,14 +871,6 @@ func (r *jsiiProxy_Role) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetOverrideLogicalId",
-		nil, // no parameters
-	)
-}
-
-func (r *jsiiProxy_Role) ResetTag() {
-	_jsii_.InvokeVoid(
-		r,
-		"resetTag",
 		nil, // no parameters
 	)
 }

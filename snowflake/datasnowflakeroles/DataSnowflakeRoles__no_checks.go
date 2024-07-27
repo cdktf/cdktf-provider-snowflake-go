@@ -79,11 +79,15 @@ func (j *jsiiProxy_DataSnowflakeRoles) validateSetIdParameters(val *string) erro
 	return nil
 }
 
+func (j *jsiiProxy_DataSnowflakeRoles) validateSetInClassParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataSnowflakeRoles) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }
 
-func (j *jsiiProxy_DataSnowflakeRoles) validateSetPatternParameters(val *string) error {
+func (j *jsiiProxy_DataSnowflakeRoles) validateSetLikeParameters(val *string) error {
 	return nil
 }
 

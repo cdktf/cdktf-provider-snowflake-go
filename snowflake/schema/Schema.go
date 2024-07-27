@@ -12,9 +12,12 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/schema snowflake_schema}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.0/docs/resources/schema snowflake_schema}.
 type Schema interface {
 	cdktf.TerraformResource
+	Catalog() *string
+	SetCatalog(val *string)
+	CatalogInput() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	Comment() *string
@@ -33,13 +36,23 @@ type Schema interface {
 	Database() *string
 	SetDatabase(val *string)
 	DatabaseInput() *string
-	DataRetentionDays() *float64
-	SetDataRetentionDays(val *float64)
-	DataRetentionDaysInput() *float64
+	DataRetentionTimeInDays() *float64
+	SetDataRetentionTimeInDays(val *float64)
+	DataRetentionTimeInDaysInput() *float64
+	DefaultDdlCollation() *string
+	SetDefaultDdlCollation(val *string)
+	DefaultDdlCollationInput() *string
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	DescribeOutput() SchemaDescribeOutputList
+	EnableConsoleOutput() interface{}
+	SetEnableConsoleOutput(val interface{})
+	EnableConsoleOutputInput() interface{}
+	ExternalVolume() *string
+	SetExternalVolume(val *string)
+	ExternalVolumeInput() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -51,21 +64,28 @@ type Schema interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
-	IsManaged() interface{}
-	SetIsManaged(val interface{})
-	IsManagedInput() interface{}
-	IsTransient() interface{}
-	SetIsTransient(val interface{})
-	IsTransientInput() interface{}
+	IsTransient() *string
+	SetIsTransient(val *string)
+	IsTransientInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	LogLevel() *string
+	SetLogLevel(val *string)
+	LogLevelInput() *string
+	MaxDataExtensionTimeInDays() *float64
+	SetMaxDataExtensionTimeInDays(val *float64)
+	MaxDataExtensionTimeInDaysInput() *float64
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
 	// The tree node.
 	Node() constructs.Node
+	Parameters() SchemaParametersList
+	PipeExecutionPaused() interface{}
+	SetPipeExecutionPaused(val interface{})
+	PipeExecutionPausedInput() interface{}
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -74,16 +94,45 @@ type Schema interface {
 	Provisioners() *[]interface{}
 	// Experimental.
 	SetProvisioners(val *[]interface{})
+	QuotedIdentifiersIgnoreCase() interface{}
+	SetQuotedIdentifiersIgnoreCase(val interface{})
+	QuotedIdentifiersIgnoreCaseInput() interface{}
 	// Experimental.
 	RawOverrides() interface{}
-	Tag() SchemaTagList
-	TagInput() interface{}
+	ReplaceInvalidCharacters() interface{}
+	SetReplaceInvalidCharacters(val interface{})
+	ReplaceInvalidCharactersInput() interface{}
+	ShowOutput() SchemaShowOutputList
+	StorageSerializationPolicy() *string
+	SetStorageSerializationPolicy(val *string)
+	StorageSerializationPolicyInput() *string
+	SuspendTaskAfterNumFailures() *float64
+	SetSuspendTaskAfterNumFailures(val *float64)
+	SuspendTaskAfterNumFailuresInput() *float64
+	TaskAutoRetryAttempts() *float64
+	SetTaskAutoRetryAttempts(val *float64)
+	TaskAutoRetryAttemptsInput() *float64
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	TraceLevel() *string
+	SetTraceLevel(val *string)
+	TraceLevelInput() *string
+	UserTaskManagedInitialWarehouseSize() *string
+	SetUserTaskManagedInitialWarehouseSize(val *string)
+	UserTaskManagedInitialWarehouseSizeInput() *string
+	UserTaskMinimumTriggerIntervalInSeconds() *float64
+	SetUserTaskMinimumTriggerIntervalInSeconds(val *float64)
+	UserTaskMinimumTriggerIntervalInSecondsInput() *float64
+	UserTaskTimeoutMs() *float64
+	SetUserTaskTimeoutMs(val *float64)
+	UserTaskTimeoutMsInput() *float64
+	WithManagedAccess() *string
+	SetWithManagedAccess(val *string)
+	WithManagedAccessInput() *string
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -127,16 +176,30 @@ type Schema interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	PutTag(value interface{})
+	ResetCatalog()
 	ResetComment()
-	ResetDataRetentionDays()
+	ResetDataRetentionTimeInDays()
+	ResetDefaultDdlCollation()
+	ResetEnableConsoleOutput()
+	ResetExternalVolume()
 	ResetId()
-	ResetIsManaged()
 	ResetIsTransient()
+	ResetLogLevel()
+	ResetMaxDataExtensionTimeInDays()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
-	ResetTag()
+	ResetPipeExecutionPaused()
+	ResetQuotedIdentifiersIgnoreCase()
+	ResetReplaceInvalidCharacters()
+	ResetStorageSerializationPolicy()
+	ResetSuspendTaskAfterNumFailures()
+	ResetTaskAutoRetryAttempts()
+	ResetTraceLevel()
+	ResetUserTaskManagedInitialWarehouseSize()
+	ResetUserTaskMinimumTriggerIntervalInSeconds()
+	ResetUserTaskTimeoutMs()
+	ResetWithManagedAccess()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -153,6 +216,26 @@ type Schema interface {
 // The jsii proxy struct for Schema
 type jsiiProxy_Schema struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_Schema) Catalog() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"catalog",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) CatalogInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"catalogInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_Schema) CdktfStack() cdktf.TerraformStack {
@@ -235,21 +318,41 @@ func (j *jsiiProxy_Schema) DatabaseInput() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Schema) DataRetentionDays() *float64 {
+func (j *jsiiProxy_Schema) DataRetentionTimeInDays() *float64 {
 	var returns *float64
 	_jsii_.Get(
 		j,
-		"dataRetentionDays",
+		"dataRetentionTimeInDays",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_Schema) DataRetentionDaysInput() *float64 {
+func (j *jsiiProxy_Schema) DataRetentionTimeInDaysInput() *float64 {
 	var returns *float64
 	_jsii_.Get(
 		j,
-		"dataRetentionDaysInput",
+		"dataRetentionTimeInDaysInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) DefaultDdlCollation() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"defaultDdlCollation",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) DefaultDdlCollationInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"defaultDdlCollationInput",
 		&returns,
 	)
 	return returns
@@ -260,6 +363,56 @@ func (j *jsiiProxy_Schema) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) DescribeOutput() SchemaDescribeOutputList {
+	var returns SchemaDescribeOutputList
+	_jsii_.Get(
+		j,
+		"describeOutput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) EnableConsoleOutput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableConsoleOutput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) EnableConsoleOutputInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableConsoleOutputInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) ExternalVolume() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalVolume",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) ExternalVolumeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"externalVolumeInput",
 		&returns,
 	)
 	return returns
@@ -315,28 +468,8 @@ func (j *jsiiProxy_Schema) IdInput() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Schema) IsManaged() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"isManaged",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Schema) IsManagedInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"isManagedInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Schema) IsTransient() interface{} {
-	var returns interface{}
+func (j *jsiiProxy_Schema) IsTransient() *string {
+	var returns *string
 	_jsii_.Get(
 		j,
 		"isTransient",
@@ -345,8 +478,8 @@ func (j *jsiiProxy_Schema) IsTransient() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Schema) IsTransientInput() interface{} {
-	var returns interface{}
+func (j *jsiiProxy_Schema) IsTransientInput() *string {
+	var returns *string
 	_jsii_.Get(
 		j,
 		"isTransientInput",
@@ -360,6 +493,46 @@ func (j *jsiiProxy_Schema) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	_jsii_.Get(
 		j,
 		"lifecycle",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) LogLevel() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"logLevel",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) LogLevelInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"logLevelInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) MaxDataExtensionTimeInDays() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxDataExtensionTimeInDays",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) MaxDataExtensionTimeInDaysInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"maxDataExtensionTimeInDaysInput",
 		&returns,
 	)
 	return returns
@@ -395,6 +568,36 @@ func (j *jsiiProxy_Schema) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_Schema) Parameters() SchemaParametersList {
+	var returns SchemaParametersList
+	_jsii_.Get(
+		j,
+		"parameters",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) PipeExecutionPaused() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"pipeExecutionPaused",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) PipeExecutionPausedInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"pipeExecutionPausedInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Schema) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -415,6 +618,26 @@ func (j *jsiiProxy_Schema) Provisioners() *[]interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_Schema) QuotedIdentifiersIgnoreCase() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"quotedIdentifiersIgnoreCase",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) QuotedIdentifiersIgnoreCaseInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"quotedIdentifiersIgnoreCaseInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Schema) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -425,21 +648,91 @@ func (j *jsiiProxy_Schema) RawOverrides() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Schema) Tag() SchemaTagList {
-	var returns SchemaTagList
+func (j *jsiiProxy_Schema) ReplaceInvalidCharacters() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
-		"tag",
+		"replaceInvalidCharacters",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_Schema) TagInput() interface{} {
+func (j *jsiiProxy_Schema) ReplaceInvalidCharactersInput() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
-		"tagInput",
+		"replaceInvalidCharactersInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) ShowOutput() SchemaShowOutputList {
+	var returns SchemaShowOutputList
+	_jsii_.Get(
+		j,
+		"showOutput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) StorageSerializationPolicy() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"storageSerializationPolicy",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) StorageSerializationPolicyInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"storageSerializationPolicyInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) SuspendTaskAfterNumFailures() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"suspendTaskAfterNumFailures",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) SuspendTaskAfterNumFailuresInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"suspendTaskAfterNumFailuresInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) TaskAutoRetryAttempts() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"taskAutoRetryAttempts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) TaskAutoRetryAttemptsInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"taskAutoRetryAttemptsInput",
 		&returns,
 	)
 	return returns
@@ -475,8 +768,108 @@ func (j *jsiiProxy_Schema) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Schema) TraceLevel() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"traceLevel",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/schema snowflake_schema} Resource.
+func (j *jsiiProxy_Schema) TraceLevelInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"traceLevelInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) UserTaskManagedInitialWarehouseSize() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"userTaskManagedInitialWarehouseSize",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) UserTaskManagedInitialWarehouseSizeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"userTaskManagedInitialWarehouseSizeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) UserTaskMinimumTriggerIntervalInSeconds() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"userTaskMinimumTriggerIntervalInSeconds",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) UserTaskMinimumTriggerIntervalInSecondsInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"userTaskMinimumTriggerIntervalInSecondsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) UserTaskTimeoutMs() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"userTaskTimeoutMs",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) UserTaskTimeoutMsInput() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"userTaskTimeoutMsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) WithManagedAccess() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"withManagedAccess",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) WithManagedAccessInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"withManagedAccessInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.0/docs/resources/schema snowflake_schema} Resource.
 func NewSchema(scope constructs.Construct, id *string, config *SchemaConfig) Schema {
 	_init_.Initialize()
 
@@ -494,7 +887,7 @@ func NewSchema(scope constructs.Construct, id *string, config *SchemaConfig) Sch
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.93.0/docs/resources/schema snowflake_schema} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.0/docs/resources/schema snowflake_schema} Resource.
 func NewSchema_Override(s Schema, scope constructs.Construct, id *string, config *SchemaConfig) {
 	_init_.Initialize()
 
@@ -502,6 +895,17 @@ func NewSchema_Override(s Schema, scope constructs.Construct, id *string, config
 		"@cdktf/provider-snowflake.schema.Schema",
 		[]interface{}{scope, id, config},
 		s,
+	)
+}
+
+func (j *jsiiProxy_Schema)SetCatalog(val *string) {
+	if err := j.validateSetCatalogParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"catalog",
+		val,
 	)
 }
 
@@ -549,13 +953,24 @@ func (j *jsiiProxy_Schema)SetDatabase(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Schema)SetDataRetentionDays(val *float64) {
-	if err := j.validateSetDataRetentionDaysParameters(val); err != nil {
+func (j *jsiiProxy_Schema)SetDataRetentionTimeInDays(val *float64) {
+	if err := j.validateSetDataRetentionTimeInDaysParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
-		"dataRetentionDays",
+		"dataRetentionTimeInDays",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Schema)SetDefaultDdlCollation(val *string) {
+	if err := j.validateSetDefaultDdlCollationParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"defaultDdlCollation",
 		val,
 	)
 }
@@ -564,6 +979,28 @@ func (j *jsiiProxy_Schema)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Schema)SetEnableConsoleOutput(val interface{}) {
+	if err := j.validateSetEnableConsoleOutputParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"enableConsoleOutput",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Schema)SetExternalVolume(val *string) {
+	if err := j.validateSetExternalVolumeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"externalVolume",
 		val,
 	)
 }
@@ -587,18 +1024,7 @@ func (j *jsiiProxy_Schema)SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Schema)SetIsManaged(val interface{}) {
-	if err := j.validateSetIsManagedParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"isManaged",
-		val,
-	)
-}
-
-func (j *jsiiProxy_Schema)SetIsTransient(val interface{}) {
+func (j *jsiiProxy_Schema)SetIsTransient(val *string) {
 	if err := j.validateSetIsTransientParameters(val); err != nil {
 		panic(err)
 	}
@@ -620,6 +1046,28 @@ func (j *jsiiProxy_Schema)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
 	)
 }
 
+func (j *jsiiProxy_Schema)SetLogLevel(val *string) {
+	if err := j.validateSetLogLevelParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"logLevel",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Schema)SetMaxDataExtensionTimeInDays(val *float64) {
+	if err := j.validateSetMaxDataExtensionTimeInDaysParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"maxDataExtensionTimeInDays",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Schema)SetName(val *string) {
 	if err := j.validateSetNameParameters(val); err != nil {
 		panic(err)
@@ -627,6 +1075,17 @@ func (j *jsiiProxy_Schema)SetName(val *string) {
 	_jsii_.Set(
 		j,
 		"name",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Schema)SetPipeExecutionPaused(val interface{}) {
+	if err := j.validateSetPipeExecutionPausedParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"pipeExecutionPaused",
 		val,
 	)
 }
@@ -646,6 +1105,116 @@ func (j *jsiiProxy_Schema)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Schema)SetQuotedIdentifiersIgnoreCase(val interface{}) {
+	if err := j.validateSetQuotedIdentifiersIgnoreCaseParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"quotedIdentifiersIgnoreCase",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Schema)SetReplaceInvalidCharacters(val interface{}) {
+	if err := j.validateSetReplaceInvalidCharactersParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"replaceInvalidCharacters",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Schema)SetStorageSerializationPolicy(val *string) {
+	if err := j.validateSetStorageSerializationPolicyParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"storageSerializationPolicy",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Schema)SetSuspendTaskAfterNumFailures(val *float64) {
+	if err := j.validateSetSuspendTaskAfterNumFailuresParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"suspendTaskAfterNumFailures",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Schema)SetTaskAutoRetryAttempts(val *float64) {
+	if err := j.validateSetTaskAutoRetryAttemptsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"taskAutoRetryAttempts",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Schema)SetTraceLevel(val *string) {
+	if err := j.validateSetTraceLevelParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"traceLevel",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Schema)SetUserTaskManagedInitialWarehouseSize(val *string) {
+	if err := j.validateSetUserTaskManagedInitialWarehouseSizeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"userTaskManagedInitialWarehouseSize",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Schema)SetUserTaskMinimumTriggerIntervalInSeconds(val *float64) {
+	if err := j.validateSetUserTaskMinimumTriggerIntervalInSecondsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"userTaskMinimumTriggerIntervalInSeconds",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Schema)SetUserTaskTimeoutMs(val *float64) {
+	if err := j.validateSetUserTaskTimeoutMsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"userTaskTimeoutMs",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Schema)SetWithManagedAccess(val *string) {
+	if err := j.validateSetWithManagedAccessParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"withManagedAccess",
 		val,
 	)
 }
@@ -1003,14 +1572,11 @@ func (s *jsiiProxy_Schema) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
-func (s *jsiiProxy_Schema) PutTag(value interface{}) {
-	if err := s.validatePutTagParameters(value); err != nil {
-		panic(err)
-	}
+func (s *jsiiProxy_Schema) ResetCatalog() {
 	_jsii_.InvokeVoid(
 		s,
-		"putTag",
-		[]interface{}{value},
+		"resetCatalog",
+		nil, // no parameters
 	)
 }
 
@@ -1022,10 +1588,34 @@ func (s *jsiiProxy_Schema) ResetComment() {
 	)
 }
 
-func (s *jsiiProxy_Schema) ResetDataRetentionDays() {
+func (s *jsiiProxy_Schema) ResetDataRetentionTimeInDays() {
 	_jsii_.InvokeVoid(
 		s,
-		"resetDataRetentionDays",
+		"resetDataRetentionTimeInDays",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Schema) ResetDefaultDdlCollation() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetDefaultDdlCollation",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Schema) ResetEnableConsoleOutput() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetEnableConsoleOutput",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Schema) ResetExternalVolume() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetExternalVolume",
 		nil, // no parameters
 	)
 }
@@ -1038,18 +1628,26 @@ func (s *jsiiProxy_Schema) ResetId() {
 	)
 }
 
-func (s *jsiiProxy_Schema) ResetIsManaged() {
-	_jsii_.InvokeVoid(
-		s,
-		"resetIsManaged",
-		nil, // no parameters
-	)
-}
-
 func (s *jsiiProxy_Schema) ResetIsTransient() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetIsTransient",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Schema) ResetLogLevel() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetLogLevel",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Schema) ResetMaxDataExtensionTimeInDays() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetMaxDataExtensionTimeInDays",
 		nil, // no parameters
 	)
 }
@@ -1062,10 +1660,90 @@ func (s *jsiiProxy_Schema) ResetOverrideLogicalId() {
 	)
 }
 
-func (s *jsiiProxy_Schema) ResetTag() {
+func (s *jsiiProxy_Schema) ResetPipeExecutionPaused() {
 	_jsii_.InvokeVoid(
 		s,
-		"resetTag",
+		"resetPipeExecutionPaused",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Schema) ResetQuotedIdentifiersIgnoreCase() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetQuotedIdentifiersIgnoreCase",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Schema) ResetReplaceInvalidCharacters() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetReplaceInvalidCharacters",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Schema) ResetStorageSerializationPolicy() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetStorageSerializationPolicy",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Schema) ResetSuspendTaskAfterNumFailures() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetSuspendTaskAfterNumFailures",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Schema) ResetTaskAutoRetryAttempts() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTaskAutoRetryAttempts",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Schema) ResetTraceLevel() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTraceLevel",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Schema) ResetUserTaskManagedInitialWarehouseSize() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetUserTaskManagedInitialWarehouseSize",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Schema) ResetUserTaskMinimumTriggerIntervalInSeconds() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetUserTaskMinimumTriggerIntervalInSeconds",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Schema) ResetUserTaskTimeoutMs() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetUserTaskTimeoutMs",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Schema) ResetWithManagedAccess() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetWithManagedAccess",
 		nil, // no parameters
 	)
 }

@@ -13,7 +13,6 @@ import (
 
 type DataSnowflakeSchemasSchemasOutputReference interface {
 	cdktf.ComplexObject
-	Comment() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -29,12 +28,13 @@ type DataSnowflakeSchemasSchemasOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
-	Database() *string
+	DescribeOutput() DataSnowflakeSchemasSchemasDescribeOutputList
 	// Experimental.
 	Fqn() *string
 	InternalValue() *DataSnowflakeSchemasSchemas
 	SetInternalValue(val *DataSnowflakeSchemasSchemas)
-	Name() *string
+	Parameters() DataSnowflakeSchemasSchemasParametersList
+	ShowOutput() DataSnowflakeSchemasSchemasShowOutputList
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -82,16 +82,6 @@ type jsiiProxy_DataSnowflakeSchemasSchemasOutputReference struct {
 	internal.Type__cdktfComplexObject
 }
 
-func (j *jsiiProxy_DataSnowflakeSchemasSchemasOutputReference) Comment() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"comment",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataSnowflakeSchemasSchemasOutputReference) ComplexObjectIndex() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -122,11 +112,11 @@ func (j *jsiiProxy_DataSnowflakeSchemasSchemasOutputReference) CreationStack() *
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeSchemasSchemasOutputReference) Database() *string {
-	var returns *string
+func (j *jsiiProxy_DataSnowflakeSchemasSchemasOutputReference) DescribeOutput() DataSnowflakeSchemasSchemasDescribeOutputList {
+	var returns DataSnowflakeSchemasSchemasDescribeOutputList
 	_jsii_.Get(
 		j,
-		"database",
+		"describeOutput",
 		&returns,
 	)
 	return returns
@@ -152,11 +142,21 @@ func (j *jsiiProxy_DataSnowflakeSchemasSchemasOutputReference) InternalValue() *
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeSchemasSchemasOutputReference) Name() *string {
-	var returns *string
+func (j *jsiiProxy_DataSnowflakeSchemasSchemasOutputReference) Parameters() DataSnowflakeSchemasSchemasParametersList {
+	var returns DataSnowflakeSchemasSchemasParametersList
 	_jsii_.Get(
 		j,
-		"name",
+		"parameters",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeSchemasSchemasOutputReference) ShowOutput() DataSnowflakeSchemasSchemasShowOutputList {
+	var returns DataSnowflakeSchemasSchemasShowOutputList
+	_jsii_.Get(
+		j,
+		"showOutput",
 		&returns,
 	)
 	return returns
