@@ -24,9 +24,9 @@ type AccountPasswordPolicyAttachmentConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Qualified name (`"db"."schema"."policy_name"`) of the password policy to apply to the current account.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.0/docs/resources/account_password_policy_attachment#password_policy AccountPasswordPolicyAttachment#password_policy}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/account_password_policy_attachment#password_policy AccountPasswordPolicyAttachment#password_policy}
 	PasswordPolicy *string `field:"required" json:"passwordPolicy" yaml:"passwordPolicy"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.0/docs/resources/account_password_policy_attachment#id AccountPasswordPolicyAttachment#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/account_password_policy_attachment#id AccountPasswordPolicyAttachment#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
