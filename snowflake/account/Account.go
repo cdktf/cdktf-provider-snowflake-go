@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/account snowflake_account}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/account snowflake_account}.
 type Account interface {
 	cdktf.TerraformResource
 	AdminName() *string
@@ -60,6 +60,7 @@ type Account interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	FullyQualifiedName() *string
 	GracePeriodInDays() *float64
 	SetGracePeriodInDays(val *float64)
 	GracePeriodInDaysInput() *float64
@@ -398,6 +399,16 @@ func (j *jsiiProxy_Account) FriendlyUniqueId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Account) FullyQualifiedName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fullyQualifiedName",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Account) GracePeriodInDays() *float64 {
 	var returns *float64
 	_jsii_.Get(
@@ -629,7 +640,7 @@ func (j *jsiiProxy_Account) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/account snowflake_account} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/account snowflake_account} Resource.
 func NewAccount(scope constructs.Construct, id *string, config *AccountConfig) Account {
 	_init_.Initialize()
 
@@ -647,7 +658,7 @@ func NewAccount(scope constructs.Construct, id *string, config *AccountConfig) A
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/account snowflake_account} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/account snowflake_account} Resource.
 func NewAccount_Override(a Account, scope constructs.Construct, id *string, config *AccountConfig) {
 	_init_.Initialize()
 

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/alert snowflake_alert}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/alert snowflake_alert}.
 type Alert interface {
 	cdktf.TerraformResource
 	Action() *string
@@ -56,6 +56,7 @@ type Alert interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	FullyQualifiedName() *string
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -359,6 +360,16 @@ func (j *jsiiProxy_Alert) FriendlyUniqueId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Alert) FullyQualifiedName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fullyQualifiedName",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Alert) Id() *string {
 	var returns *string
 	_jsii_.Get(
@@ -520,7 +531,7 @@ func (j *jsiiProxy_Alert) WarehouseInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/alert snowflake_alert} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/alert snowflake_alert} Resource.
 func NewAlert(scope constructs.Construct, id *string, config *AlertConfig) Alert {
 	_init_.Initialize()
 
@@ -538,7 +549,7 @@ func NewAlert(scope constructs.Construct, id *string, config *AlertConfig) Alert
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/alert snowflake_alert} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/alert snowflake_alert} Resource.
 func NewAlert_Override(a Alert, scope constructs.Construct, id *string, config *AlertConfig) {
 	_init_.Initialize()
 

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/database snowflake_database}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/database snowflake_database}.
 type Database interface {
 	cdktf.TerraformResource
 	Catalog() *string
@@ -43,6 +43,9 @@ type Database interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	DropPublicSchemaOnCreation() interface{}
+	SetDropPublicSchemaOnCreation(val interface{})
+	DropPublicSchemaOnCreationInput() interface{}
 	EnableConsoleOutput() interface{}
 	SetEnableConsoleOutput(val interface{})
 	EnableConsoleOutputInput() interface{}
@@ -57,6 +60,7 @@ type Database interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	FullyQualifiedName() *string
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -171,6 +175,7 @@ type Database interface {
 	ResetComment()
 	ResetDataRetentionTimeInDays()
 	ResetDefaultDdlCollation()
+	ResetDropPublicSchemaOnCreation()
 	ResetEnableConsoleOutput()
 	ResetExternalVolume()
 	ResetId()
@@ -338,6 +343,26 @@ func (j *jsiiProxy_Database) DependsOn() *[]*string {
 	return returns
 }
 
+func (j *jsiiProxy_Database) DropPublicSchemaOnCreation() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"dropPublicSchemaOnCreation",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) DropPublicSchemaOnCreationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"dropPublicSchemaOnCreationInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Database) EnableConsoleOutput() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -403,6 +428,16 @@ func (j *jsiiProxy_Database) FriendlyUniqueId() *string {
 	_jsii_.Get(
 		j,
 		"friendlyUniqueId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Database) FullyQualifiedName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fullyQualifiedName",
 		&returns,
 	)
 	return returns
@@ -789,7 +824,7 @@ func (j *jsiiProxy_Database) UserTaskTimeoutMsInput() *float64 {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/database snowflake_database} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/database snowflake_database} Resource.
 func NewDatabase(scope constructs.Construct, id *string, config *DatabaseConfig) Database {
 	_init_.Initialize()
 
@@ -807,7 +842,7 @@ func NewDatabase(scope constructs.Construct, id *string, config *DatabaseConfig)
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/database snowflake_database} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/database snowflake_database} Resource.
 func NewDatabase_Override(d Database, scope constructs.Construct, id *string, config *DatabaseConfig) {
 	_init_.Initialize()
 
@@ -888,6 +923,17 @@ func (j *jsiiProxy_Database)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Database)SetDropPublicSchemaOnCreation(val interface{}) {
+	if err := j.validateSetDropPublicSchemaOnCreationParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"dropPublicSchemaOnCreation",
 		val,
 	)
 }
@@ -1498,6 +1544,14 @@ func (d *jsiiProxy_Database) ResetDefaultDdlCollation() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetDefaultDdlCollation",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_Database) ResetDropPublicSchemaOnCreation() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetDropPublicSchemaOnCreation",
 		nil, // no parameters
 	)
 }

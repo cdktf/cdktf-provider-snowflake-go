@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/database_role snowflake_database_role}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/database_role snowflake_database_role}.
 type DatabaseRole interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -45,6 +45,7 @@ type DatabaseRole interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	FullyQualifiedName() *string
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -67,6 +68,7 @@ type DatabaseRole interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	ShowOutput() DatabaseRoleShowOutputList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -259,6 +261,16 @@ func (j *jsiiProxy_DatabaseRole) FriendlyUniqueId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DatabaseRole) FullyQualifiedName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fullyQualifiedName",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DatabaseRole) Id() *string {
 	var returns *string
 	_jsii_.Get(
@@ -349,6 +361,16 @@ func (j *jsiiProxy_DatabaseRole) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DatabaseRole) ShowOutput() DatabaseRoleShowOutputList {
+	var returns DatabaseRoleShowOutputList
+	_jsii_.Get(
+		j,
+		"showOutput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DatabaseRole) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -380,7 +402,7 @@ func (j *jsiiProxy_DatabaseRole) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/database_role snowflake_database_role} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/database_role snowflake_database_role} Resource.
 func NewDatabaseRole(scope constructs.Construct, id *string, config *DatabaseRoleConfig) DatabaseRole {
 	_init_.Initialize()
 
@@ -398,7 +420,7 @@ func NewDatabaseRole(scope constructs.Construct, id *string, config *DatabaseRol
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/database_role snowflake_database_role} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/database_role snowflake_database_role} Resource.
 func NewDatabaseRole_Override(d DatabaseRole, scope constructs.Construct, id *string, config *DatabaseRoleConfig) {
 	_init_.Initialize()
 

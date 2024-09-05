@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/failover_group snowflake_failover_group}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/failover_group snowflake_failover_group}.
 type FailoverGroup interface {
 	cdktf.TerraformResource
 	AllowedAccounts() *[]*string
@@ -53,6 +53,7 @@ type FailoverGroup interface {
 	FriendlyUniqueId() *string
 	FromReplica() FailoverGroupFromReplicaOutputReference
 	FromReplicaInput() *FailoverGroupFromReplica
+	FullyQualifiedName() *string
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -344,6 +345,16 @@ func (j *jsiiProxy_FailoverGroup) FromReplicaInput() *FailoverGroupFromReplica {
 	return returns
 }
 
+func (j *jsiiProxy_FailoverGroup) FullyQualifiedName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fullyQualifiedName",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_FailoverGroup) Id() *string {
 	var returns *string
 	_jsii_.Get(
@@ -525,7 +536,7 @@ func (j *jsiiProxy_FailoverGroup) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/failover_group snowflake_failover_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/failover_group snowflake_failover_group} Resource.
 func NewFailoverGroup(scope constructs.Construct, id *string, config *FailoverGroupConfig) FailoverGroup {
 	_init_.Initialize()
 
@@ -543,7 +554,7 @@ func NewFailoverGroup(scope constructs.Construct, id *string, config *FailoverGr
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/failover_group snowflake_failover_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/failover_group snowflake_failover_group} Resource.
 func NewFailoverGroup_Override(f FailoverGroup, scope constructs.Construct, id *string, config *FailoverGroupConfig) {
 	_init_.Initialize()
 

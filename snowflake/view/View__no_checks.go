@@ -75,7 +75,23 @@ func (v *jsiiProxy_View) validateOverrideLogicalIdParameters(newLogicalId *strin
 	return nil
 }
 
-func (v *jsiiProxy_View) validatePutTagParameters(value interface{}) error {
+func (v *jsiiProxy_View) validatePutAggregationPolicyParameters(value *ViewAggregationPolicy) error {
+	return nil
+}
+
+func (v *jsiiProxy_View) validatePutColumnParameters(value interface{}) error {
+	return nil
+}
+
+func (v *jsiiProxy_View) validatePutDataMetricFunctionParameters(value interface{}) error {
+	return nil
+}
+
+func (v *jsiiProxy_View) validatePutDataMetricScheduleParameters(value *ViewDataMetricSchedule) error {
+	return nil
+}
+
+func (v *jsiiProxy_View) validatePutRowAccessPolicyParameters(value *ViewRowAccessPolicy) error {
 	return nil
 }
 
@@ -92,6 +108,10 @@ func validateView_IsTerraformElementParameters(x interface{}) error {
 }
 
 func validateView_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_View) validateSetChangeTrackingParameters(val *string) error {
 	return nil
 }
 
@@ -119,7 +139,15 @@ func (j *jsiiProxy_View) validateSetIdParameters(val *string) error {
 	return nil
 }
 
-func (j *jsiiProxy_View) validateSetIsSecureParameters(val interface{}) error {
+func (j *jsiiProxy_View) validateSetIsRecursiveParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_View) validateSetIsSecureParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_View) validateSetIsTemporaryParameters(val *string) error {
 	return nil
 }
 
@@ -128,10 +156,6 @@ func (j *jsiiProxy_View) validateSetLifecycleParameters(val *cdktf.TerraformReso
 }
 
 func (j *jsiiProxy_View) validateSetNameParameters(val *string) error {
-	return nil
-}
-
-func (j *jsiiProxy_View) validateSetOrReplaceParameters(val interface{}) error {
 	return nil
 }
 

@@ -13,7 +13,6 @@ import (
 
 type DataSnowflakeViewsViewsOutputReference interface {
 	cdktf.ComplexObject
-	Comment() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -29,13 +28,12 @@ type DataSnowflakeViewsViewsOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
-	Database() *string
+	DescribeOutput() DataSnowflakeViewsViewsDescribeOutputList
 	// Experimental.
 	Fqn() *string
 	InternalValue() *DataSnowflakeViewsViews
 	SetInternalValue(val *DataSnowflakeViewsViews)
-	Name() *string
-	Schema() *string
+	ShowOutput() DataSnowflakeViewsViewsShowOutputList
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -83,16 +81,6 @@ type jsiiProxy_DataSnowflakeViewsViewsOutputReference struct {
 	internal.Type__cdktfComplexObject
 }
 
-func (j *jsiiProxy_DataSnowflakeViewsViewsOutputReference) Comment() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"comment",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataSnowflakeViewsViewsOutputReference) ComplexObjectIndex() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -123,11 +111,11 @@ func (j *jsiiProxy_DataSnowflakeViewsViewsOutputReference) CreationStack() *[]*s
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeViewsViewsOutputReference) Database() *string {
-	var returns *string
+func (j *jsiiProxy_DataSnowflakeViewsViewsOutputReference) DescribeOutput() DataSnowflakeViewsViewsDescribeOutputList {
+	var returns DataSnowflakeViewsViewsDescribeOutputList
 	_jsii_.Get(
 		j,
-		"database",
+		"describeOutput",
 		&returns,
 	)
 	return returns
@@ -153,21 +141,11 @@ func (j *jsiiProxy_DataSnowflakeViewsViewsOutputReference) InternalValue() *Data
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeViewsViewsOutputReference) Name() *string {
-	var returns *string
+func (j *jsiiProxy_DataSnowflakeViewsViewsOutputReference) ShowOutput() DataSnowflakeViewsViewsShowOutputList {
+	var returns DataSnowflakeViewsViewsShowOutputList
 	_jsii_.Get(
 		j,
-		"name",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeViewsViewsOutputReference) Schema() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"schema",
+		"showOutput",
 		&returns,
 	)
 	return returns

@@ -12,11 +12,18 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/view snowflake_view}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/view snowflake_view}.
 type View interface {
 	cdktf.TerraformResource
+	AggregationPolicy() ViewAggregationPolicyOutputReference
+	AggregationPolicyInput() *ViewAggregationPolicy
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	ChangeTracking() *string
+	SetChangeTracking(val *string)
+	ChangeTrackingInput() *string
+	Column() ViewColumnList
+	ColumnInput() interface{}
 	Comment() *string
 	SetComment(val *string)
 	CommentInput() *string
@@ -33,14 +40,18 @@ type View interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
-	CreatedOn() *string
 	Database() *string
 	SetDatabase(val *string)
 	DatabaseInput() *string
+	DataMetricFunction() ViewDataMetricFunctionList
+	DataMetricFunctionInput() interface{}
+	DataMetricSchedule() ViewDataMetricScheduleOutputReference
+	DataMetricScheduleInput() *ViewDataMetricSchedule
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	DescribeOutput() ViewDescribeOutputList
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -49,12 +60,19 @@ type View interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	FullyQualifiedName() *string
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
-	IsSecure() interface{}
-	SetIsSecure(val interface{})
-	IsSecureInput() interface{}
+	IsRecursive() *string
+	SetIsRecursive(val *string)
+	IsRecursiveInput() *string
+	IsSecure() *string
+	SetIsSecure(val *string)
+	IsSecureInput() *string
+	IsTemporary() *string
+	SetIsTemporary(val *string)
+	IsTemporaryInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -64,9 +82,6 @@ type View interface {
 	NameInput() *string
 	// The tree node.
 	Node() constructs.Node
-	OrReplace() interface{}
-	SetOrReplace(val interface{})
-	OrReplaceInput() interface{}
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -77,14 +92,15 @@ type View interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	RowAccessPolicy() ViewRowAccessPolicyOutputReference
+	RowAccessPolicyInput() *ViewRowAccessPolicy
 	Schema() *string
 	SetSchema(val *string)
 	SchemaInput() *string
+	ShowOutput() ViewShowOutputList
 	Statement() *string
 	SetStatement(val *string)
 	StatementInput() *string
-	Tag() ViewTagList
-	TagInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -134,16 +150,26 @@ type View interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	PutTag(value interface{})
+	PutAggregationPolicy(value *ViewAggregationPolicy)
+	PutColumn(value interface{})
+	PutDataMetricFunction(value interface{})
+	PutDataMetricSchedule(value *ViewDataMetricSchedule)
+	PutRowAccessPolicy(value *ViewRowAccessPolicy)
+	ResetAggregationPolicy()
+	ResetChangeTracking()
+	ResetColumn()
 	ResetComment()
 	ResetCopyGrants()
+	ResetDataMetricFunction()
+	ResetDataMetricSchedule()
 	ResetId()
+	ResetIsRecursive()
 	ResetIsSecure()
-	ResetOrReplace()
+	ResetIsTemporary()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
-	ResetTag()
+	ResetRowAccessPolicy()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -162,11 +188,71 @@ type jsiiProxy_View struct {
 	internal.Type__cdktfTerraformResource
 }
 
+func (j *jsiiProxy_View) AggregationPolicy() ViewAggregationPolicyOutputReference {
+	var returns ViewAggregationPolicyOutputReference
+	_jsii_.Get(
+		j,
+		"aggregationPolicy",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_View) AggregationPolicyInput() *ViewAggregationPolicy {
+	var returns *ViewAggregationPolicy
+	_jsii_.Get(
+		j,
+		"aggregationPolicyInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_View) CdktfStack() cdktf.TerraformStack {
 	var returns cdktf.TerraformStack
 	_jsii_.Get(
 		j,
 		"cdktfStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_View) ChangeTracking() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"changeTracking",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_View) ChangeTrackingInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"changeTrackingInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_View) Column() ViewColumnList {
+	var returns ViewColumnList
+	_jsii_.Get(
+		j,
+		"column",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_View) ColumnInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"columnInput",
 		&returns,
 	)
 	return returns
@@ -242,16 +328,6 @@ func (j *jsiiProxy_View) Count() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_View) CreatedOn() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"createdOn",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_View) Database() *string {
 	var returns *string
 	_jsii_.Get(
@@ -272,11 +348,61 @@ func (j *jsiiProxy_View) DatabaseInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_View) DataMetricFunction() ViewDataMetricFunctionList {
+	var returns ViewDataMetricFunctionList
+	_jsii_.Get(
+		j,
+		"dataMetricFunction",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_View) DataMetricFunctionInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"dataMetricFunctionInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_View) DataMetricSchedule() ViewDataMetricScheduleOutputReference {
+	var returns ViewDataMetricScheduleOutputReference
+	_jsii_.Get(
+		j,
+		"dataMetricSchedule",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_View) DataMetricScheduleInput() *ViewDataMetricSchedule {
+	var returns *ViewDataMetricSchedule
+	_jsii_.Get(
+		j,
+		"dataMetricScheduleInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_View) DependsOn() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_View) DescribeOutput() ViewDescribeOutputList {
+	var returns ViewDescribeOutputList
+	_jsii_.Get(
+		j,
+		"describeOutput",
 		&returns,
 	)
 	return returns
@@ -312,6 +438,16 @@ func (j *jsiiProxy_View) FriendlyUniqueId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_View) FullyQualifiedName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fullyQualifiedName",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_View) Id() *string {
 	var returns *string
 	_jsii_.Get(
@@ -332,8 +468,28 @@ func (j *jsiiProxy_View) IdInput() *string {
 	return returns
 }
 
-func (j *jsiiProxy_View) IsSecure() interface{} {
-	var returns interface{}
+func (j *jsiiProxy_View) IsRecursive() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"isRecursive",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_View) IsRecursiveInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"isRecursiveInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_View) IsSecure() *string {
+	var returns *string
 	_jsii_.Get(
 		j,
 		"isSecure",
@@ -342,11 +498,31 @@ func (j *jsiiProxy_View) IsSecure() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_View) IsSecureInput() interface{} {
-	var returns interface{}
+func (j *jsiiProxy_View) IsSecureInput() *string {
+	var returns *string
 	_jsii_.Get(
 		j,
 		"isSecureInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_View) IsTemporary() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"isTemporary",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_View) IsTemporaryInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"isTemporaryInput",
 		&returns,
 	)
 	return returns
@@ -392,26 +568,6 @@ func (j *jsiiProxy_View) Node() constructs.Node {
 	return returns
 }
 
-func (j *jsiiProxy_View) OrReplace() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"orReplace",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_View) OrReplaceInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"orReplaceInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_View) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -442,6 +598,26 @@ func (j *jsiiProxy_View) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_View) RowAccessPolicy() ViewRowAccessPolicyOutputReference {
+	var returns ViewRowAccessPolicyOutputReference
+	_jsii_.Get(
+		j,
+		"rowAccessPolicy",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_View) RowAccessPolicyInput() *ViewRowAccessPolicy {
+	var returns *ViewRowAccessPolicy
+	_jsii_.Get(
+		j,
+		"rowAccessPolicyInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_View) Schema() *string {
 	var returns *string
 	_jsii_.Get(
@@ -462,6 +638,16 @@ func (j *jsiiProxy_View) SchemaInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_View) ShowOutput() ViewShowOutputList {
+	var returns ViewShowOutputList
+	_jsii_.Get(
+		j,
+		"showOutput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_View) Statement() *string {
 	var returns *string
 	_jsii_.Get(
@@ -477,26 +663,6 @@ func (j *jsiiProxy_View) StatementInput() *string {
 	_jsii_.Get(
 		j,
 		"statementInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_View) Tag() ViewTagList {
-	var returns ViewTagList
-	_jsii_.Get(
-		j,
-		"tag",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_View) TagInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"tagInput",
 		&returns,
 	)
 	return returns
@@ -533,7 +699,7 @@ func (j *jsiiProxy_View) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/view snowflake_view} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/view snowflake_view} Resource.
 func NewView(scope constructs.Construct, id *string, config *ViewConfig) View {
 	_init_.Initialize()
 
@@ -551,7 +717,7 @@ func NewView(scope constructs.Construct, id *string, config *ViewConfig) View {
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/view snowflake_view} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/view snowflake_view} Resource.
 func NewView_Override(v View, scope constructs.Construct, id *string, config *ViewConfig) {
 	_init_.Initialize()
 
@@ -559,6 +725,17 @@ func NewView_Override(v View, scope constructs.Construct, id *string, config *Vi
 		"@cdktf/provider-snowflake.view.View",
 		[]interface{}{scope, id, config},
 		v,
+	)
+}
+
+func (j *jsiiProxy_View)SetChangeTracking(val *string) {
+	if err := j.validateSetChangeTrackingParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"changeTracking",
+		val,
 	)
 }
 
@@ -644,13 +821,35 @@ func (j *jsiiProxy_View)SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_View)SetIsSecure(val interface{}) {
+func (j *jsiiProxy_View)SetIsRecursive(val *string) {
+	if err := j.validateSetIsRecursiveParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"isRecursive",
+		val,
+	)
+}
+
+func (j *jsiiProxy_View)SetIsSecure(val *string) {
 	if err := j.validateSetIsSecureParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
 		"isSecure",
+		val,
+	)
+}
+
+func (j *jsiiProxy_View)SetIsTemporary(val *string) {
+	if err := j.validateSetIsTemporaryParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"isTemporary",
 		val,
 	)
 }
@@ -673,17 +872,6 @@ func (j *jsiiProxy_View)SetName(val *string) {
 	_jsii_.Set(
 		j,
 		"name",
-		val,
-	)
-}
-
-func (j *jsiiProxy_View)SetOrReplace(val interface{}) {
-	if err := j.validateSetOrReplaceParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"orReplace",
 		val,
 	)
 }
@@ -1082,14 +1270,82 @@ func (v *jsiiProxy_View) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
-func (v *jsiiProxy_View) PutTag(value interface{}) {
-	if err := v.validatePutTagParameters(value); err != nil {
+func (v *jsiiProxy_View) PutAggregationPolicy(value *ViewAggregationPolicy) {
+	if err := v.validatePutAggregationPolicyParameters(value); err != nil {
 		panic(err)
 	}
 	_jsii_.InvokeVoid(
 		v,
-		"putTag",
+		"putAggregationPolicy",
 		[]interface{}{value},
+	)
+}
+
+func (v *jsiiProxy_View) PutColumn(value interface{}) {
+	if err := v.validatePutColumnParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		v,
+		"putColumn",
+		[]interface{}{value},
+	)
+}
+
+func (v *jsiiProxy_View) PutDataMetricFunction(value interface{}) {
+	if err := v.validatePutDataMetricFunctionParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		v,
+		"putDataMetricFunction",
+		[]interface{}{value},
+	)
+}
+
+func (v *jsiiProxy_View) PutDataMetricSchedule(value *ViewDataMetricSchedule) {
+	if err := v.validatePutDataMetricScheduleParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		v,
+		"putDataMetricSchedule",
+		[]interface{}{value},
+	)
+}
+
+func (v *jsiiProxy_View) PutRowAccessPolicy(value *ViewRowAccessPolicy) {
+	if err := v.validatePutRowAccessPolicyParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		v,
+		"putRowAccessPolicy",
+		[]interface{}{value},
+	)
+}
+
+func (v *jsiiProxy_View) ResetAggregationPolicy() {
+	_jsii_.InvokeVoid(
+		v,
+		"resetAggregationPolicy",
+		nil, // no parameters
+	)
+}
+
+func (v *jsiiProxy_View) ResetChangeTracking() {
+	_jsii_.InvokeVoid(
+		v,
+		"resetChangeTracking",
+		nil, // no parameters
+	)
+}
+
+func (v *jsiiProxy_View) ResetColumn() {
+	_jsii_.InvokeVoid(
+		v,
+		"resetColumn",
+		nil, // no parameters
 	)
 }
 
@@ -1109,10 +1365,34 @@ func (v *jsiiProxy_View) ResetCopyGrants() {
 	)
 }
 
+func (v *jsiiProxy_View) ResetDataMetricFunction() {
+	_jsii_.InvokeVoid(
+		v,
+		"resetDataMetricFunction",
+		nil, // no parameters
+	)
+}
+
+func (v *jsiiProxy_View) ResetDataMetricSchedule() {
+	_jsii_.InvokeVoid(
+		v,
+		"resetDataMetricSchedule",
+		nil, // no parameters
+	)
+}
+
 func (v *jsiiProxy_View) ResetId() {
 	_jsii_.InvokeVoid(
 		v,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (v *jsiiProxy_View) ResetIsRecursive() {
+	_jsii_.InvokeVoid(
+		v,
+		"resetIsRecursive",
 		nil, // no parameters
 	)
 }
@@ -1125,10 +1405,10 @@ func (v *jsiiProxy_View) ResetIsSecure() {
 	)
 }
 
-func (v *jsiiProxy_View) ResetOrReplace() {
+func (v *jsiiProxy_View) ResetIsTemporary() {
 	_jsii_.InvokeVoid(
 		v,
-		"resetOrReplace",
+		"resetIsTemporary",
 		nil, // no parameters
 	)
 }
@@ -1141,10 +1421,10 @@ func (v *jsiiProxy_View) ResetOverrideLogicalId() {
 	)
 }
 
-func (v *jsiiProxy_View) ResetTag() {
+func (v *jsiiProxy_View) ResetRowAccessPolicy() {
 	_jsii_.InvokeVoid(
 		v,
-		"resetTag",
+		"resetRowAccessPolicy",
 		nil, // no parameters
 	)
 }

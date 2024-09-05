@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/masking_policy snowflake_masking_policy}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/masking_policy snowflake_masking_policy}.
 type MaskingPolicy interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -48,6 +48,7 @@ type MaskingPolicy interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	FullyQualifiedName() *string
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -77,7 +78,6 @@ type MaskingPolicy interface {
 	Provisioners() *[]interface{}
 	// Experimental.
 	SetProvisioners(val *[]interface{})
-	QualifiedName() *string
 	// Experimental.
 	RawOverrides() interface{}
 	ReturnDataType() *string
@@ -304,6 +304,16 @@ func (j *jsiiProxy_MaskingPolicy) FriendlyUniqueId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_MaskingPolicy) FullyQualifiedName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fullyQualifiedName",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_MaskingPolicy) Id() *string {
 	var returns *string
 	_jsii_.Get(
@@ -444,16 +454,6 @@ func (j *jsiiProxy_MaskingPolicy) Provisioners() *[]interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_MaskingPolicy) QualifiedName() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"qualifiedName",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_MaskingPolicy) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -555,7 +555,7 @@ func (j *jsiiProxy_MaskingPolicy) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/masking_policy snowflake_masking_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/masking_policy snowflake_masking_policy} Resource.
 func NewMaskingPolicy(scope constructs.Construct, id *string, config *MaskingPolicyConfig) MaskingPolicy {
 	_init_.Initialize()
 
@@ -573,7 +573,7 @@ func NewMaskingPolicy(scope constructs.Construct, id *string, config *MaskingPol
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/masking_policy snowflake_masking_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/masking_policy snowflake_masking_policy} Resource.
 func NewMaskingPolicy_Override(m MaskingPolicy, scope constructs.Construct, id *string, config *MaskingPolicyConfig) {
 	_init_.Initialize()
 

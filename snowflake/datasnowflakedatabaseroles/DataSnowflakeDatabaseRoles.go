@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/data-sources/database_roles snowflake_database_roles}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/data-sources/database_roles snowflake_database_roles}.
 type DataSnowflakeDatabaseRoles interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -23,9 +23,6 @@ type DataSnowflakeDatabaseRoles interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
-	Database() *string
-	SetDatabase(val *string)
-	DatabaseInput() *string
 	DatabaseRoles() DataSnowflakeDatabaseRolesDatabaseRolesList
 	// Experimental.
 	DependsOn() *[]*string
@@ -42,10 +39,18 @@ type DataSnowflakeDatabaseRoles interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	InDatabase() *string
+	SetInDatabase(val *string)
+	InDatabaseInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	Like() *string
+	SetLike(val *string)
+	LikeInput() *string
+	Limit() DataSnowflakeDatabaseRolesLimitOutputReference
+	LimitInput() *DataSnowflakeDatabaseRolesLimit
 	// The tree node.
 	Node() constructs.Node
 	// Experimental.
@@ -85,7 +90,10 @@ type DataSnowflakeDatabaseRoles interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutLimit(value *DataSnowflakeDatabaseRolesLimit)
 	ResetId()
+	ResetLike()
+	ResetLimit()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -133,26 +141,6 @@ func (j *jsiiProxy_DataSnowflakeDatabaseRoles) Count() interface{} {
 	_jsii_.Get(
 		j,
 		"count",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeDatabaseRoles) Database() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"database",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeDatabaseRoles) DatabaseInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"databaseInput",
 		&returns,
 	)
 	return returns
@@ -228,11 +216,71 @@ func (j *jsiiProxy_DataSnowflakeDatabaseRoles) IdInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataSnowflakeDatabaseRoles) InDatabase() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"inDatabase",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeDatabaseRoles) InDatabaseInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"inDatabaseInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataSnowflakeDatabaseRoles) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
 		j,
 		"lifecycle",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeDatabaseRoles) Like() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"like",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeDatabaseRoles) LikeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"likeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeDatabaseRoles) Limit() DataSnowflakeDatabaseRolesLimitOutputReference {
+	var returns DataSnowflakeDatabaseRolesLimitOutputReference
+	_jsii_.Get(
+		j,
+		"limit",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeDatabaseRoles) LimitInput() *DataSnowflakeDatabaseRolesLimit {
+	var returns *DataSnowflakeDatabaseRolesLimit
+	_jsii_.Get(
+		j,
+		"limitInput",
 		&returns,
 	)
 	return returns
@@ -299,7 +347,7 @@ func (j *jsiiProxy_DataSnowflakeDatabaseRoles) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/data-sources/database_roles snowflake_database_roles} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/data-sources/database_roles snowflake_database_roles} Data Source.
 func NewDataSnowflakeDatabaseRoles(scope constructs.Construct, id *string, config *DataSnowflakeDatabaseRolesConfig) DataSnowflakeDatabaseRoles {
 	_init_.Initialize()
 
@@ -317,7 +365,7 @@ func NewDataSnowflakeDatabaseRoles(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/data-sources/database_roles snowflake_database_roles} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/data-sources/database_roles snowflake_database_roles} Data Source.
 func NewDataSnowflakeDatabaseRoles_Override(d DataSnowflakeDatabaseRoles, scope constructs.Construct, id *string, config *DataSnowflakeDatabaseRolesConfig) {
 	_init_.Initialize()
 
@@ -335,17 +383,6 @@ func (j *jsiiProxy_DataSnowflakeDatabaseRoles)SetCount(val interface{}) {
 	_jsii_.Set(
 		j,
 		"count",
-		val,
-	)
-}
-
-func (j *jsiiProxy_DataSnowflakeDatabaseRoles)SetDatabase(val *string) {
-	if err := j.validateSetDatabaseParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"database",
 		val,
 	)
 }
@@ -377,6 +414,17 @@ func (j *jsiiProxy_DataSnowflakeDatabaseRoles)SetId(val *string) {
 	)
 }
 
+func (j *jsiiProxy_DataSnowflakeDatabaseRoles)SetInDatabase(val *string) {
+	if err := j.validateSetInDatabaseParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"inDatabase",
+		val,
+	)
+}
+
 func (j *jsiiProxy_DataSnowflakeDatabaseRoles)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
 	if err := j.validateSetLifecycleParameters(val); err != nil {
 		panic(err)
@@ -384,6 +432,17 @@ func (j *jsiiProxy_DataSnowflakeDatabaseRoles)SetLifecycle(val *cdktf.TerraformR
 	_jsii_.Set(
 		j,
 		"lifecycle",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataSnowflakeDatabaseRoles)SetLike(val *string) {
+	if err := j.validateSetLikeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"like",
 		val,
 	)
 }
@@ -681,10 +740,37 @@ func (d *jsiiProxy_DataSnowflakeDatabaseRoles) OverrideLogicalId(newLogicalId *s
 	)
 }
 
+func (d *jsiiProxy_DataSnowflakeDatabaseRoles) PutLimit(value *DataSnowflakeDatabaseRolesLimit) {
+	if err := d.validatePutLimitParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putLimit",
+		[]interface{}{value},
+	)
+}
+
 func (d *jsiiProxy_DataSnowflakeDatabaseRoles) ResetId() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataSnowflakeDatabaseRoles) ResetLike() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetLike",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataSnowflakeDatabaseRoles) ResetLimit() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetLimit",
 		nil, // no parameters
 	)
 }

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/external_function snowflake_external_function}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/external_function snowflake_external_function}.
 type ExternalFunction interface {
 	cdktf.TerraformResource
 	ApiIntegration() *string
@@ -57,6 +57,7 @@ type ExternalFunction interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	FullyQualifiedName() *string
 	Header() ExternalFunctionHeaderList
 	HeaderInput() interface{}
 	Id() *string
@@ -401,6 +402,16 @@ func (j *jsiiProxy_ExternalFunction) FriendlyUniqueId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ExternalFunction) FullyQualifiedName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fullyQualifiedName",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ExternalFunction) Header() ExternalFunctionHeaderList {
 	var returns ExternalFunctionHeaderList
 	_jsii_.Get(
@@ -722,7 +733,7 @@ func (j *jsiiProxy_ExternalFunction) UrlOfProxyAndResourceInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/external_function snowflake_external_function} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/external_function snowflake_external_function} Resource.
 func NewExternalFunction(scope constructs.Construct, id *string, config *ExternalFunctionConfig) ExternalFunction {
 	_init_.Initialize()
 
@@ -740,7 +751,7 @@ func NewExternalFunction(scope constructs.Construct, id *string, config *Externa
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/external_function snowflake_external_function} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/external_function snowflake_external_function} Resource.
 func NewExternalFunction_Override(e ExternalFunction, scope constructs.Construct, id *string, config *ExternalFunctionConfig) {
 	_init_.Initialize()
 

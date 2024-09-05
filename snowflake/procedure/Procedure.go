@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/procedure snowflake_procedure}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/procedure snowflake_procedure}.
 type Procedure interface {
 	cdktf.TerraformResource
 	Arguments() ProcedureArgumentsList
@@ -50,6 +50,7 @@ type Procedure interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	FullyQualifiedName() *string
 	Handler() *string
 	SetHandler(val *string)
 	HandlerInput() *string
@@ -343,6 +344,16 @@ func (j *jsiiProxy_Procedure) FriendlyUniqueId() *string {
 	_jsii_.Get(
 		j,
 		"friendlyUniqueId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Procedure) FullyQualifiedName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fullyQualifiedName",
 		&returns,
 	)
 	return returns
@@ -689,7 +700,7 @@ func (j *jsiiProxy_Procedure) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/procedure snowflake_procedure} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/procedure snowflake_procedure} Resource.
 func NewProcedure(scope constructs.Construct, id *string, config *ProcedureConfig) Procedure {
 	_init_.Initialize()
 
@@ -707,7 +718,7 @@ func NewProcedure(scope constructs.Construct, id *string, config *ProcedureConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/procedure snowflake_procedure} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/procedure snowflake_procedure} Resource.
 func NewProcedure_Override(p Procedure, scope constructs.Construct, id *string, config *ProcedureConfig) {
 	_init_.Initialize()
 

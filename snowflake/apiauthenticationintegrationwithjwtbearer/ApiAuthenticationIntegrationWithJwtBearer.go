@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/api_authentication_integration_with_jwt_bearer snowflake_api_authentication_integration_with_jwt_bearer}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/api_authentication_integration_with_jwt_bearer snowflake_api_authentication_integration_with_jwt_bearer}.
 type ApiAuthenticationIntegrationWithJwtBearer interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -46,6 +46,7 @@ type ApiAuthenticationIntegrationWithJwtBearer interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	FullyQualifiedName() *string
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -295,6 +296,16 @@ func (j *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearer) FriendlyUniqueId()
 	_jsii_.Get(
 		j,
 		"friendlyUniqueId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearer) FullyQualifiedName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fullyQualifiedName",
 		&returns,
 	)
 	return returns
@@ -591,7 +602,7 @@ func (j *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearer) TerraformResourceT
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/api_authentication_integration_with_jwt_bearer snowflake_api_authentication_integration_with_jwt_bearer} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/api_authentication_integration_with_jwt_bearer snowflake_api_authentication_integration_with_jwt_bearer} Resource.
 func NewApiAuthenticationIntegrationWithJwtBearer(scope constructs.Construct, id *string, config *ApiAuthenticationIntegrationWithJwtBearerConfig) ApiAuthenticationIntegrationWithJwtBearer {
 	_init_.Initialize()
 
@@ -609,7 +620,7 @@ func NewApiAuthenticationIntegrationWithJwtBearer(scope constructs.Construct, id
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/api_authentication_integration_with_jwt_bearer snowflake_api_authentication_integration_with_jwt_bearer} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/api_authentication_integration_with_jwt_bearer snowflake_api_authentication_integration_with_jwt_bearer} Resource.
 func NewApiAuthenticationIntegrationWithJwtBearer_Override(a ApiAuthenticationIntegrationWithJwtBearer, scope constructs.Construct, id *string, config *ApiAuthenticationIntegrationWithJwtBearerConfig) {
 	_init_.Initialize()
 

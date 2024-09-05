@@ -34,6 +34,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "friendlyUniqueId", GoGetter: "FriendlyUniqueId"},
 			_jsii_.MemberProperty{JsiiProperty: "fromReplica", GoGetter: "FromReplica"},
 			_jsii_.MemberProperty{JsiiProperty: "fromReplicaInput", GoGetter: "FromReplicaInput"},
+			_jsii_.MemberProperty{JsiiProperty: "fullyQualifiedName", GoGetter: "FullyQualifiedName"},
 			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
 			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
 			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},

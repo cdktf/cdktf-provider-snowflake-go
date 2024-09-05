@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/streamlit snowflake_streamlit}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/streamlit snowflake_streamlit}.
 type Streamlit interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -52,6 +52,7 @@ type Streamlit interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	FullyQualifiedName() *string
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -336,6 +337,16 @@ func (j *jsiiProxy_Streamlit) FriendlyUniqueId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Streamlit) FullyQualifiedName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fullyQualifiedName",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Streamlit) Id() *string {
 	var returns *string
 	_jsii_.Get(
@@ -567,7 +578,7 @@ func (j *jsiiProxy_Streamlit) TitleInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/streamlit snowflake_streamlit} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/streamlit snowflake_streamlit} Resource.
 func NewStreamlit(scope constructs.Construct, id *string, config *StreamlitConfig) Streamlit {
 	_init_.Initialize()
 
@@ -585,7 +596,7 @@ func NewStreamlit(scope constructs.Construct, id *string, config *StreamlitConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/streamlit snowflake_streamlit} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/streamlit snowflake_streamlit} Resource.
 func NewStreamlit_Override(s Streamlit, scope constructs.Construct, id *string, config *StreamlitConfig) {
 	_init_.Initialize()
 

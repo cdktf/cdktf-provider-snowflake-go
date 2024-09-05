@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/password_policy snowflake_password_policy}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/password_policy snowflake_password_policy}.
 type PasswordPolicy interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -45,6 +45,7 @@ type PasswordPolicy interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	FullyQualifiedName() *string
 	History() *float64
 	SetHistory(val *float64)
 	HistoryInput() *float64
@@ -104,7 +105,6 @@ type PasswordPolicy interface {
 	Provisioners() *[]interface{}
 	// Experimental.
 	SetProvisioners(val *[]interface{})
-	QualifiedName() *string
 	// Experimental.
 	RawOverrides() interface{}
 	Schema() *string
@@ -310,6 +310,16 @@ func (j *jsiiProxy_PasswordPolicy) FriendlyUniqueId() *string {
 	_jsii_.Get(
 		j,
 		"friendlyUniqueId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_PasswordPolicy) FullyQualifiedName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fullyQualifiedName",
 		&returns,
 	)
 	return returns
@@ -655,16 +665,6 @@ func (j *jsiiProxy_PasswordPolicy) Provisioners() *[]interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_PasswordPolicy) QualifiedName() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"qualifiedName",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_PasswordPolicy) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -726,7 +726,7 @@ func (j *jsiiProxy_PasswordPolicy) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/password_policy snowflake_password_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/password_policy snowflake_password_policy} Resource.
 func NewPasswordPolicy(scope constructs.Construct, id *string, config *PasswordPolicyConfig) PasswordPolicy {
 	_init_.Initialize()
 
@@ -744,7 +744,7 @@ func NewPasswordPolicy(scope constructs.Construct, id *string, config *PasswordP
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/password_policy snowflake_password_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/password_policy snowflake_password_policy} Resource.
 func NewPasswordPolicy_Override(p PasswordPolicy, scope constructs.Construct, id *string, config *PasswordPolicyConfig) {
 	_init_.Initialize()
 

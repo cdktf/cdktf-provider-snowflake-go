@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/notification_integration snowflake_notification_integration}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/notification_integration snowflake_notification_integration}.
 type NotificationIntegration interface {
 	cdktf.TerraformResource
 	AwsSnsExternalId() *string
@@ -71,6 +71,7 @@ type NotificationIntegration interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	FullyQualifiedName() *string
 	GcpPubsubServiceAccount() *string
 	GcpPubsubSubscriptionName() *string
 	SetGcpPubsubSubscriptionName(val *string)
@@ -499,6 +500,16 @@ func (j *jsiiProxy_NotificationIntegration) FriendlyUniqueId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_NotificationIntegration) FullyQualifiedName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fullyQualifiedName",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_NotificationIntegration) GcpPubsubServiceAccount() *string {
 	var returns *string
 	_jsii_.Get(
@@ -710,7 +721,7 @@ func (j *jsiiProxy_NotificationIntegration) TypeInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/notification_integration snowflake_notification_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/notification_integration snowflake_notification_integration} Resource.
 func NewNotificationIntegration(scope constructs.Construct, id *string, config *NotificationIntegrationConfig) NotificationIntegration {
 	_init_.Initialize()
 
@@ -728,7 +739,7 @@ func NewNotificationIntegration(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/notification_integration snowflake_notification_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/notification_integration snowflake_notification_integration} Resource.
 func NewNotificationIntegration_Override(n NotificationIntegration, scope constructs.Construct, id *string, config *NotificationIntegrationConfig) {
 	_init_.Initialize()
 

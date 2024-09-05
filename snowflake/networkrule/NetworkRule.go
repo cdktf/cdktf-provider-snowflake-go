@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/network_rule snowflake_network_rule}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/network_rule snowflake_network_rule}.
 type NetworkRule interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -45,6 +45,7 @@ type NetworkRule interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	FullyQualifiedName() *string
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -68,7 +69,6 @@ type NetworkRule interface {
 	Provisioners() *[]interface{}
 	// Experimental.
 	SetProvisioners(val *[]interface{})
-	QualifiedName() *string
 	// Experimental.
 	RawOverrides() interface{}
 	Schema() *string
@@ -272,6 +272,16 @@ func (j *jsiiProxy_NetworkRule) FriendlyUniqueId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_NetworkRule) FullyQualifiedName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fullyQualifiedName",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_NetworkRule) Id() *string {
 	var returns *string
 	_jsii_.Get(
@@ -367,16 +377,6 @@ func (j *jsiiProxy_NetworkRule) Provisioners() *[]interface{} {
 	_jsii_.Get(
 		j,
 		"provisioners",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_NetworkRule) QualifiedName() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"qualifiedName",
 		&returns,
 	)
 	return returns
@@ -483,7 +483,7 @@ func (j *jsiiProxy_NetworkRule) ValueListInput() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/network_rule snowflake_network_rule} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/network_rule snowflake_network_rule} Resource.
 func NewNetworkRule(scope constructs.Construct, id *string, config *NetworkRuleConfig) NetworkRule {
 	_init_.Initialize()
 
@@ -501,7 +501,7 @@ func NewNetworkRule(scope constructs.Construct, id *string, config *NetworkRuleC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/network_rule snowflake_network_rule} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/network_rule snowflake_network_rule} Resource.
 func NewNetworkRule_Override(n NetworkRule, scope constructs.Construct, id *string, config *NetworkRuleConfig) {
 	_init_.Initialize()
 

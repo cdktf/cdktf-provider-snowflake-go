@@ -55,6 +55,10 @@ func (d *jsiiProxy_DataSnowflakeUsers) validateOverrideLogicalIdParameters(newLo
 	return nil
 }
 
+func (d *jsiiProxy_DataSnowflakeUsers) validatePutLimitParameters(value *DataSnowflakeUsersLimit) error {
+	return nil
+}
+
 func validateDataSnowflakeUsers_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
@@ -83,7 +87,19 @@ func (j *jsiiProxy_DataSnowflakeUsers) validateSetLifecycleParameters(val *cdktf
 	return nil
 }
 
-func (j *jsiiProxy_DataSnowflakeUsers) validateSetPatternParameters(val *string) error {
+func (j *jsiiProxy_DataSnowflakeUsers) validateSetLikeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataSnowflakeUsers) validateSetStartsWithParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataSnowflakeUsers) validateSetWithDescribeParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataSnowflakeUsers) validateSetWithParametersParameters(val interface{}) error {
 	return nil
 }
 

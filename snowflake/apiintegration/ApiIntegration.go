@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/api_integration snowflake_api_integration}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/api_integration snowflake_api_integration}.
 type ApiIntegration interface {
 	cdktf.TerraformResource
 	ApiAllowedPrefixes() *[]*string
@@ -74,6 +74,7 @@ type ApiIntegration interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	FullyQualifiedName() *string
 	GoogleAudience() *string
 	SetGoogleAudience(val *string)
 	GoogleAudienceInput() *string
@@ -509,6 +510,16 @@ func (j *jsiiProxy_ApiIntegration) FriendlyUniqueId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ApiIntegration) FullyQualifiedName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fullyQualifiedName",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ApiIntegration) GoogleAudience() *string {
 	var returns *string
 	_jsii_.Get(
@@ -650,7 +661,7 @@ func (j *jsiiProxy_ApiIntegration) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/api_integration snowflake_api_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/api_integration snowflake_api_integration} Resource.
 func NewApiIntegration(scope constructs.Construct, id *string, config *ApiIntegrationConfig) ApiIntegration {
 	_init_.Initialize()
 
@@ -668,7 +679,7 @@ func NewApiIntegration(scope constructs.Construct, id *string, config *ApiIntegr
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/api_integration snowflake_api_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/api_integration snowflake_api_integration} Resource.
 func NewApiIntegration_Override(a ApiIntegration, scope constructs.Construct, id *string, config *ApiIntegrationConfig) {
 	_init_.Initialize()
 

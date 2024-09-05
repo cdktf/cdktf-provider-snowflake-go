@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/file_format snowflake_file_format}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/file_format snowflake_file_format}.
 type FileFormat interface {
 	cdktf.TerraformResource
 	AllowDuplicate() interface{}
@@ -96,6 +96,7 @@ type FileFormat interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	FullyQualifiedName() *string
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -729,6 +730,16 @@ func (j *jsiiProxy_FileFormat) FriendlyUniqueId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_FileFormat) FullyQualifiedName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fullyQualifiedName",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_FileFormat) Id() *string {
 	var returns *string
 	_jsii_.Get(
@@ -1170,7 +1181,7 @@ func (j *jsiiProxy_FileFormat) TrimSpaceInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/file_format snowflake_file_format} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/file_format snowflake_file_format} Resource.
 func NewFileFormat(scope constructs.Construct, id *string, config *FileFormatConfig) FileFormat {
 	_init_.Initialize()
 
@@ -1188,7 +1199,7 @@ func NewFileFormat(scope constructs.Construct, id *string, config *FileFormatCon
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/file_format snowflake_file_format} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/file_format snowflake_file_format} Resource.
 func NewFileFormat_Override(f FileFormat, scope constructs.Construct, id *string, config *FileFormatConfig) {
 	_init_.Initialize()
 

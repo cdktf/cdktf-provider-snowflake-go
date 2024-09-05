@@ -47,6 +47,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "forEach", GoGetter: "ForEach"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
 			_jsii_.MemberProperty{JsiiProperty: "friendlyUniqueId", GoGetter: "FriendlyUniqueId"},
+			_jsii_.MemberProperty{JsiiProperty: "fullyQualifiedName", GoGetter: "FullyQualifiedName"},
 			_jsii_.MemberProperty{JsiiProperty: "gcpPubsubServiceAccount", GoGetter: "GcpPubsubServiceAccount"},
 			_jsii_.MemberProperty{JsiiProperty: "gcpPubsubSubscriptionName", GoGetter: "GcpPubsubSubscriptionName"},
 			_jsii_.MemberProperty{JsiiProperty: "gcpPubsubSubscriptionNameInput", GoGetter: "GcpPubsubSubscriptionNameInput"},

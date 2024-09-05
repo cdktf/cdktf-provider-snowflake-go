@@ -119,6 +119,10 @@ func (j *jsiiProxy_Database) validateSetDefaultDdlCollationParameters(val *strin
 	return nil
 }
 
+func (j *jsiiProxy_Database) validateSetDropPublicSchemaOnCreationParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Database) validateSetEnableConsoleOutputParameters(val interface{}) error {
 	return nil
 }

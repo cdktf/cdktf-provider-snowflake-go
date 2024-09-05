@@ -75,6 +75,10 @@ func (c *jsiiProxy_CortexSearchService) validateOverrideLogicalIdParameters(newL
 	return nil
 }
 
+func (c *jsiiProxy_CortexSearchService) validatePutTimeoutsParameters(value *CortexSearchServiceTimeouts) error {
+	return nil
+}
+
 func validateCortexSearchService_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

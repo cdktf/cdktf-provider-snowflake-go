@@ -13,7 +13,6 @@ import (
 
 type DataSnowflakeUsersUsersOutputReference interface {
 	cdktf.ComplexObject
-	Comment() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -29,22 +28,13 @@ type DataSnowflakeUsersUsersOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
-	DefaultNamespace() *string
-	DefaultRole() *string
-	DefaultSecondaryRoles() *[]*string
-	DefaultWarehouse() *string
-	Disabled() cdktf.IResolvable
-	DisplayName() *string
-	Email() *string
-	FirstName() *string
+	DescribeOutput() DataSnowflakeUsersUsersDescribeOutputList
 	// Experimental.
 	Fqn() *string
-	HasRsaPublicKey() cdktf.IResolvable
 	InternalValue() *DataSnowflakeUsersUsers
 	SetInternalValue(val *DataSnowflakeUsersUsers)
-	LastName() *string
-	LoginName() *string
-	Name() *string
+	Parameters() DataSnowflakeUsersUsersParametersList
+	ShowOutput() DataSnowflakeUsersUsersShowOutputList
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -92,16 +82,6 @@ type jsiiProxy_DataSnowflakeUsersUsersOutputReference struct {
 	internal.Type__cdktfComplexObject
 }
 
-func (j *jsiiProxy_DataSnowflakeUsersUsersOutputReference) Comment() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"comment",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataSnowflakeUsersUsersOutputReference) ComplexObjectIndex() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -132,81 +112,11 @@ func (j *jsiiProxy_DataSnowflakeUsersUsersOutputReference) CreationStack() *[]*s
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeUsersUsersOutputReference) DefaultNamespace() *string {
-	var returns *string
+func (j *jsiiProxy_DataSnowflakeUsersUsersOutputReference) DescribeOutput() DataSnowflakeUsersUsersDescribeOutputList {
+	var returns DataSnowflakeUsersUsersDescribeOutputList
 	_jsii_.Get(
 		j,
-		"defaultNamespace",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeUsersUsersOutputReference) DefaultRole() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"defaultRole",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeUsersUsersOutputReference) DefaultSecondaryRoles() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"defaultSecondaryRoles",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeUsersUsersOutputReference) DefaultWarehouse() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"defaultWarehouse",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeUsersUsersOutputReference) Disabled() cdktf.IResolvable {
-	var returns cdktf.IResolvable
-	_jsii_.Get(
-		j,
-		"disabled",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeUsersUsersOutputReference) DisplayName() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"displayName",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeUsersUsersOutputReference) Email() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"email",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeUsersUsersOutputReference) FirstName() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"firstName",
+		"describeOutput",
 		&returns,
 	)
 	return returns
@@ -222,16 +132,6 @@ func (j *jsiiProxy_DataSnowflakeUsersUsersOutputReference) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeUsersUsersOutputReference) HasRsaPublicKey() cdktf.IResolvable {
-	var returns cdktf.IResolvable
-	_jsii_.Get(
-		j,
-		"hasRsaPublicKey",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataSnowflakeUsersUsersOutputReference) InternalValue() *DataSnowflakeUsersUsers {
 	var returns *DataSnowflakeUsersUsers
 	_jsii_.Get(
@@ -242,31 +142,21 @@ func (j *jsiiProxy_DataSnowflakeUsersUsersOutputReference) InternalValue() *Data
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeUsersUsersOutputReference) LastName() *string {
-	var returns *string
+func (j *jsiiProxy_DataSnowflakeUsersUsersOutputReference) Parameters() DataSnowflakeUsersUsersParametersList {
+	var returns DataSnowflakeUsersUsersParametersList
 	_jsii_.Get(
 		j,
-		"lastName",
+		"parameters",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeUsersUsersOutputReference) LoginName() *string {
-	var returns *string
+func (j *jsiiProxy_DataSnowflakeUsersUsersOutputReference) ShowOutput() DataSnowflakeUsersUsersShowOutputList {
+	var returns DataSnowflakeUsersUsersShowOutputList
 	_jsii_.Get(
 		j,
-		"loginName",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeUsersUsersOutputReference) Name() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"name",
+		"showOutput",
 		&returns,
 	)
 	return returns

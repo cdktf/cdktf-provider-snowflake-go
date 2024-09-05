@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/cortex_search_service snowflake_cortex_search_service}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/cortex_search_service snowflake_cortex_search_service}.
 type CortexSearchService interface {
 	cdktf.TerraformResource
 	Attributes() *[]*string
@@ -49,6 +49,7 @@ type CortexSearchService interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
+	FullyQualifiedName() *string
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -89,6 +90,8 @@ type CortexSearchService interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() CortexSearchServiceTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	Warehouse() *string
 	SetWarehouse(val *string)
 	WarehouseInput() *string
@@ -135,12 +138,14 @@ type CortexSearchService interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *CortexSearchServiceTimeouts)
 	ResetAttributes()
 	ResetComment()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -304,6 +309,16 @@ func (j *jsiiProxy_CortexSearchService) FriendlyUniqueId() *string {
 	_jsii_.Get(
 		j,
 		"friendlyUniqueId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CortexSearchService) FullyQualifiedName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"fullyQualifiedName",
 		&returns,
 	)
 	return returns
@@ -509,6 +524,26 @@ func (j *jsiiProxy_CortexSearchService) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_CortexSearchService) Timeouts() CortexSearchServiceTimeoutsOutputReference {
+	var returns CortexSearchServiceTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CortexSearchService) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_CortexSearchService) Warehouse() *string {
 	var returns *string
 	_jsii_.Get(
@@ -530,7 +565,7 @@ func (j *jsiiProxy_CortexSearchService) WarehouseInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/cortex_search_service snowflake_cortex_search_service} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/cortex_search_service snowflake_cortex_search_service} Resource.
 func NewCortexSearchService(scope constructs.Construct, id *string, config *CortexSearchServiceConfig) CortexSearchService {
 	_init_.Initialize()
 
@@ -548,7 +583,7 @@ func NewCortexSearchService(scope constructs.Construct, id *string, config *Cort
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/cortex_search_service snowflake_cortex_search_service} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/cortex_search_service snowflake_cortex_search_service} Resource.
 func NewCortexSearchService_Override(c CortexSearchService, scope constructs.Construct, id *string, config *CortexSearchServiceConfig) {
 	_init_.Initialize()
 
@@ -1090,6 +1125,17 @@ func (c *jsiiProxy_CortexSearchService) OverrideLogicalId(newLogicalId *string) 
 	)
 }
 
+func (c *jsiiProxy_CortexSearchService) PutTimeouts(value *CortexSearchServiceTimeouts) {
+	if err := c.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		c,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (c *jsiiProxy_CortexSearchService) ResetAttributes() {
 	_jsii_.InvokeVoid(
 		c,
@@ -1118,6 +1164,14 @@ func (c *jsiiProxy_CortexSearchService) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CortexSearchService) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

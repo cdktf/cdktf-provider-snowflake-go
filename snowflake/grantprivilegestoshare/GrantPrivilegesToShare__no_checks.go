@@ -115,6 +115,10 @@ func (j *jsiiProxy_GrantPrivilegesToShare) validateSetOnDatabaseParameters(val *
 	return nil
 }
 
+func (j *jsiiProxy_GrantPrivilegesToShare) validateSetOnFunctionParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_GrantPrivilegesToShare) validateSetOnSchemaParameters(val *string) error {
 	return nil
 }

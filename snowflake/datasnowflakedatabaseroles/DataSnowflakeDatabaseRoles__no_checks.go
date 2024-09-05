@@ -55,6 +55,10 @@ func (d *jsiiProxy_DataSnowflakeDatabaseRoles) validateOverrideLogicalIdParamete
 	return nil
 }
 
+func (d *jsiiProxy_DataSnowflakeDatabaseRoles) validatePutLimitParameters(value *DataSnowflakeDatabaseRolesLimit) error {
+	return nil
+}
+
 func validateDataSnowflakeDatabaseRoles_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
@@ -75,15 +79,19 @@ func (j *jsiiProxy_DataSnowflakeDatabaseRoles) validateSetCountParameters(val in
 	return nil
 }
 
-func (j *jsiiProxy_DataSnowflakeDatabaseRoles) validateSetDatabaseParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_DataSnowflakeDatabaseRoles) validateSetIdParameters(val *string) error {
 	return nil
 }
 
+func (j *jsiiProxy_DataSnowflakeDatabaseRoles) validateSetInDatabaseParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataSnowflakeDatabaseRoles) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataSnowflakeDatabaseRoles) validateSetLikeParameters(val *string) error {
 	return nil
 }
 

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/grant_privileges_to_share snowflake_grant_privileges_to_share}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/grant_privileges_to_share snowflake_grant_privileges_to_share}.
 type GrantPrivilegesToShare interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -54,6 +54,9 @@ type GrantPrivilegesToShare interface {
 	OnDatabase() *string
 	SetOnDatabase(val *string)
 	OnDatabaseInput() *string
+	OnFunction() *string
+	SetOnFunction(val *string)
+	OnFunctionInput() *string
 	OnSchema() *string
 	SetOnSchema(val *string)
 	OnSchemaInput() *string
@@ -134,6 +137,7 @@ type GrantPrivilegesToShare interface {
 	ResetId()
 	ResetOnAllTablesInSchema()
 	ResetOnDatabase()
+	ResetOnFunction()
 	ResetOnSchema()
 	ResetOnTable()
 	ResetOnTag()
@@ -314,6 +318,26 @@ func (j *jsiiProxy_GrantPrivilegesToShare) OnDatabaseInput() *string {
 	_jsii_.Get(
 		j,
 		"onDatabaseInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_GrantPrivilegesToShare) OnFunction() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"onFunction",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_GrantPrivilegesToShare) OnFunctionInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"onFunctionInput",
 		&returns,
 	)
 	return returns
@@ -500,7 +524,7 @@ func (j *jsiiProxy_GrantPrivilegesToShare) ToShareInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/grant_privileges_to_share snowflake_grant_privileges_to_share} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/grant_privileges_to_share snowflake_grant_privileges_to_share} Resource.
 func NewGrantPrivilegesToShare(scope constructs.Construct, id *string, config *GrantPrivilegesToShareConfig) GrantPrivilegesToShare {
 	_init_.Initialize()
 
@@ -518,7 +542,7 @@ func NewGrantPrivilegesToShare(scope constructs.Construct, id *string, config *G
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.94.1/docs/resources/grant_privileges_to_share snowflake_grant_privileges_to_share} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/grant_privileges_to_share snowflake_grant_privileges_to_share} Resource.
 func NewGrantPrivilegesToShare_Override(g GrantPrivilegesToShare, scope constructs.Construct, id *string, config *GrantPrivilegesToShareConfig) {
 	_init_.Initialize()
 
@@ -607,6 +631,17 @@ func (j *jsiiProxy_GrantPrivilegesToShare)SetOnDatabase(val *string) {
 	_jsii_.Set(
 		j,
 		"onDatabase",
+		val,
+	)
+}
+
+func (j *jsiiProxy_GrantPrivilegesToShare)SetOnFunction(val *string) {
+	if err := j.validateSetOnFunctionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"onFunction",
 		val,
 	)
 }
@@ -1069,6 +1104,14 @@ func (g *jsiiProxy_GrantPrivilegesToShare) ResetOnDatabase() {
 	_jsii_.InvokeVoid(
 		g,
 		"resetOnDatabase",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_GrantPrivilegesToShare) ResetOnFunction() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetOnFunction",
 		nil, // no parameters
 	)
 }
