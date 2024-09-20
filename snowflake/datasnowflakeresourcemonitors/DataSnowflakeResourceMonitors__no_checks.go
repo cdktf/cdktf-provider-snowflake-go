@@ -83,6 +83,10 @@ func (j *jsiiProxy_DataSnowflakeResourceMonitors) validateSetLifecycleParameters
 	return nil
 }
 
+func (j *jsiiProxy_DataSnowflakeResourceMonitors) validateSetLikeParameters(val *string) error {
+	return nil
+}
+
 func validateNewDataSnowflakeResourceMonitorsParameters(scope constructs.Construct, id *string, config *DataSnowflakeResourceMonitorsConfig) error {
 	return nil
 }

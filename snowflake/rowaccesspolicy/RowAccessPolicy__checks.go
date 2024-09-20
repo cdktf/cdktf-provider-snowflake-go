@@ -207,6 +207,37 @@ func (r *jsiiProxy_RowAccessPolicy) validateOverrideLogicalIdParameters(newLogic
 	return nil
 }
 
+func (r *jsiiProxy_RowAccessPolicy) validatePutArgumentParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*RowAccessPolicyArgument:
+		value := value.(*[]*RowAccessPolicyArgument)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*RowAccessPolicyArgument:
+		value_ := value.([]*RowAccessPolicyArgument)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*RowAccessPolicyArgument; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
 func validateRowAccessPolicy_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	if scope == nil {
 		return fmt.Errorf("parameter scope is required, but nil was provided")
@@ -242,6 +273,14 @@ func validateRowAccessPolicy_IsTerraformElementParameters(x interface{}) error {
 func validateRowAccessPolicy_IsTerraformResourceParameters(x interface{}) error {
 	if x == nil {
 		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_RowAccessPolicy) validateSetBodyParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
 	}
 
 	return nil
@@ -423,23 +462,7 @@ func (j *jsiiProxy_RowAccessPolicy) validateSetProvisionersParameters(val *[]int
 	return nil
 }
 
-func (j *jsiiProxy_RowAccessPolicy) validateSetRowAccessExpressionParameters(val *string) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
 func (j *jsiiProxy_RowAccessPolicy) validateSetSchemaParameters(val *string) error {
-	if val == nil {
-		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-
-	return nil
-}
-
-func (j *jsiiProxy_RowAccessPolicy) validateSetSignatureParameters(val *map[string]*string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

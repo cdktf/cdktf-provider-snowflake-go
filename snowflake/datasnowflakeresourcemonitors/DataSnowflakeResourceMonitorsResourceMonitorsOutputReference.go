@@ -13,7 +13,6 @@ import (
 
 type DataSnowflakeResourceMonitorsResourceMonitorsOutputReference interface {
 	cdktf.ComplexObject
-	Comment() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -29,13 +28,11 @@ type DataSnowflakeResourceMonitorsResourceMonitorsOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
-	CreditQuota() *string
 	// Experimental.
 	Fqn() *string
-	Frequency() *string
 	InternalValue() *DataSnowflakeResourceMonitorsResourceMonitors
 	SetInternalValue(val *DataSnowflakeResourceMonitorsResourceMonitors)
-	Name() *string
+	ShowOutput() DataSnowflakeResourceMonitorsResourceMonitorsShowOutputList
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -83,16 +80,6 @@ type jsiiProxy_DataSnowflakeResourceMonitorsResourceMonitorsOutputReference stru
 	internal.Type__cdktfComplexObject
 }
 
-func (j *jsiiProxy_DataSnowflakeResourceMonitorsResourceMonitorsOutputReference) Comment() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"comment",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataSnowflakeResourceMonitorsResourceMonitorsOutputReference) ComplexObjectIndex() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -123,31 +110,11 @@ func (j *jsiiProxy_DataSnowflakeResourceMonitorsResourceMonitorsOutputReference)
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeResourceMonitorsResourceMonitorsOutputReference) CreditQuota() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"creditQuota",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataSnowflakeResourceMonitorsResourceMonitorsOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
 		"fqn",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeResourceMonitorsResourceMonitorsOutputReference) Frequency() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"frequency",
 		&returns,
 	)
 	return returns
@@ -163,11 +130,11 @@ func (j *jsiiProxy_DataSnowflakeResourceMonitorsResourceMonitorsOutputReference)
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeResourceMonitorsResourceMonitorsOutputReference) Name() *string {
-	var returns *string
+func (j *jsiiProxy_DataSnowflakeResourceMonitorsResourceMonitorsOutputReference) ShowOutput() DataSnowflakeResourceMonitorsResourceMonitorsShowOutputList {
+	var returns DataSnowflakeResourceMonitorsResourceMonitorsShowOutputList
 	_jsii_.Get(
 		j,
-		"name",
+		"showOutput",
 		&returns,
 	)
 	return returns

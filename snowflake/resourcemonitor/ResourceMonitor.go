@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/resource_monitor snowflake_resource_monitor}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.96.0/docs/resources/resource_monitor snowflake_resource_monitor}.
 type ResourceMonitor interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -77,33 +77,22 @@ type ResourceMonitor interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
-	SetForAccount() interface{}
-	SetSetForAccount(val interface{})
-	SetForAccountInput() interface{}
+	ShowOutput() ResourceMonitorShowOutputList
 	StartTimestamp() *string
 	SetStartTimestamp(val *string)
 	StartTimestampInput() *string
 	SuspendImmediateTrigger() *float64
 	SetSuspendImmediateTrigger(val *float64)
 	SuspendImmediateTriggerInput() *float64
-	SuspendImmediateTriggers() *[]*float64
-	SetSuspendImmediateTriggers(val *[]*float64)
-	SuspendImmediateTriggersInput() *[]*float64
 	SuspendTrigger() *float64
 	SetSuspendTrigger(val *float64)
 	SuspendTriggerInput() *float64
-	SuspendTriggers() *[]*float64
-	SetSuspendTriggers(val *[]*float64)
-	SuspendTriggersInput() *[]*float64
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
-	Warehouses() *[]*string
-	SetWarehouses(val *[]*string)
-	WarehousesInput() *[]*string
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -156,13 +145,9 @@ type ResourceMonitor interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
-	ResetSetForAccount()
 	ResetStartTimestamp()
 	ResetSuspendImmediateTrigger()
-	ResetSuspendImmediateTriggers()
 	ResetSuspendTrigger()
-	ResetSuspendTriggers()
-	ResetWarehouses()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -461,21 +446,11 @@ func (j *jsiiProxy_ResourceMonitor) RawOverrides() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_ResourceMonitor) SetForAccount() interface{} {
-	var returns interface{}
+func (j *jsiiProxy_ResourceMonitor) ShowOutput() ResourceMonitorShowOutputList {
+	var returns ResourceMonitorShowOutputList
 	_jsii_.Get(
 		j,
-		"setForAccount",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ResourceMonitor) SetForAccountInput() interface{} {
-	var returns interface{}
-	_jsii_.Get(
-		j,
-		"setForAccountInput",
+		"showOutput",
 		&returns,
 	)
 	return returns
@@ -521,26 +496,6 @@ func (j *jsiiProxy_ResourceMonitor) SuspendImmediateTriggerInput() *float64 {
 	return returns
 }
 
-func (j *jsiiProxy_ResourceMonitor) SuspendImmediateTriggers() *[]*float64 {
-	var returns *[]*float64
-	_jsii_.Get(
-		j,
-		"suspendImmediateTriggers",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ResourceMonitor) SuspendImmediateTriggersInput() *[]*float64 {
-	var returns *[]*float64
-	_jsii_.Get(
-		j,
-		"suspendImmediateTriggersInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_ResourceMonitor) SuspendTrigger() *float64 {
 	var returns *float64
 	_jsii_.Get(
@@ -556,26 +511,6 @@ func (j *jsiiProxy_ResourceMonitor) SuspendTriggerInput() *float64 {
 	_jsii_.Get(
 		j,
 		"suspendTriggerInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ResourceMonitor) SuspendTriggers() *[]*float64 {
-	var returns *[]*float64
-	_jsii_.Get(
-		j,
-		"suspendTriggers",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ResourceMonitor) SuspendTriggersInput() *[]*float64 {
-	var returns *[]*float64
-	_jsii_.Get(
-		j,
-		"suspendTriggersInput",
 		&returns,
 	)
 	return returns
@@ -611,28 +546,8 @@ func (j *jsiiProxy_ResourceMonitor) TerraformResourceType() *string {
 	return returns
 }
 
-func (j *jsiiProxy_ResourceMonitor) Warehouses() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"warehouses",
-		&returns,
-	)
-	return returns
-}
 
-func (j *jsiiProxy_ResourceMonitor) WarehousesInput() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"warehousesInput",
-		&returns,
-	)
-	return returns
-}
-
-
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/resource_monitor snowflake_resource_monitor} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.96.0/docs/resources/resource_monitor snowflake_resource_monitor} Resource.
 func NewResourceMonitor(scope constructs.Construct, id *string, config *ResourceMonitorConfig) ResourceMonitor {
 	_init_.Initialize()
 
@@ -650,7 +565,7 @@ func NewResourceMonitor(scope constructs.Construct, id *string, config *Resource
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/resource_monitor snowflake_resource_monitor} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.96.0/docs/resources/resource_monitor snowflake_resource_monitor} Resource.
 func NewResourceMonitor_Override(r ResourceMonitor, scope constructs.Construct, id *string, config *ResourceMonitorConfig) {
 	_init_.Initialize()
 
@@ -806,17 +721,6 @@ func (j *jsiiProxy_ResourceMonitor)SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ResourceMonitor)SetSetForAccount(val interface{}) {
-	if err := j.validateSetSetForAccountParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"setForAccount",
-		val,
-	)
-}
-
 func (j *jsiiProxy_ResourceMonitor)SetStartTimestamp(val *string) {
 	if err := j.validateSetStartTimestampParameters(val); err != nil {
 		panic(err)
@@ -839,17 +743,6 @@ func (j *jsiiProxy_ResourceMonitor)SetSuspendImmediateTrigger(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_ResourceMonitor)SetSuspendImmediateTriggers(val *[]*float64) {
-	if err := j.validateSetSuspendImmediateTriggersParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"suspendImmediateTriggers",
-		val,
-	)
-}
-
 func (j *jsiiProxy_ResourceMonitor)SetSuspendTrigger(val *float64) {
 	if err := j.validateSetSuspendTriggerParameters(val); err != nil {
 		panic(err)
@@ -857,28 +750,6 @@ func (j *jsiiProxy_ResourceMonitor)SetSuspendTrigger(val *float64) {
 	_jsii_.Set(
 		j,
 		"suspendTrigger",
-		val,
-	)
-}
-
-func (j *jsiiProxy_ResourceMonitor)SetSuspendTriggers(val *[]*float64) {
-	if err := j.validateSetSuspendTriggersParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"suspendTriggers",
-		val,
-	)
-}
-
-func (j *jsiiProxy_ResourceMonitor)SetWarehouses(val *[]*string) {
-	if err := j.validateSetWarehousesParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"warehouses",
 		val,
 	)
 }
@@ -1292,14 +1163,6 @@ func (r *jsiiProxy_ResourceMonitor) ResetOverrideLogicalId() {
 	)
 }
 
-func (r *jsiiProxy_ResourceMonitor) ResetSetForAccount() {
-	_jsii_.InvokeVoid(
-		r,
-		"resetSetForAccount",
-		nil, // no parameters
-	)
-}
-
 func (r *jsiiProxy_ResourceMonitor) ResetStartTimestamp() {
 	_jsii_.InvokeVoid(
 		r,
@@ -1316,34 +1179,10 @@ func (r *jsiiProxy_ResourceMonitor) ResetSuspendImmediateTrigger() {
 	)
 }
 
-func (r *jsiiProxy_ResourceMonitor) ResetSuspendImmediateTriggers() {
-	_jsii_.InvokeVoid(
-		r,
-		"resetSuspendImmediateTriggers",
-		nil, // no parameters
-	)
-}
-
 func (r *jsiiProxy_ResourceMonitor) ResetSuspendTrigger() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetSuspendTrigger",
-		nil, // no parameters
-	)
-}
-
-func (r *jsiiProxy_ResourceMonitor) ResetSuspendTriggers() {
-	_jsii_.InvokeVoid(
-		r,
-		"resetSuspendTriggers",
-		nil, // no parameters
-	)
-}
-
-func (r *jsiiProxy_ResourceMonitor) ResetWarehouses() {
-	_jsii_.InvokeVoid(
-		r,
-		"resetWarehouses",
 		nil, // no parameters
 	)
 }

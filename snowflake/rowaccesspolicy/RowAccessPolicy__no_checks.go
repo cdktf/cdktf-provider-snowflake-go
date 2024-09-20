@@ -75,6 +75,10 @@ func (r *jsiiProxy_RowAccessPolicy) validateOverrideLogicalIdParameters(newLogic
 	return nil
 }
 
+func (r *jsiiProxy_RowAccessPolicy) validatePutArgumentParameters(value interface{}) error {
+	return nil
+}
+
 func validateRowAccessPolicy_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
@@ -88,6 +92,10 @@ func validateRowAccessPolicy_IsTerraformElementParameters(x interface{}) error {
 }
 
 func validateRowAccessPolicy_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_RowAccessPolicy) validateSetBodyParameters(val *string) error {
 	return nil
 }
 
@@ -123,15 +131,7 @@ func (j *jsiiProxy_RowAccessPolicy) validateSetProvisionersParameters(val *[]int
 	return nil
 }
 
-func (j *jsiiProxy_RowAccessPolicy) validateSetRowAccessExpressionParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_RowAccessPolicy) validateSetSchemaParameters(val *string) error {
-	return nil
-}
-
-func (j *jsiiProxy_RowAccessPolicy) validateSetSignatureParameters(val *map[string]*string) error {
 	return nil
 }
 

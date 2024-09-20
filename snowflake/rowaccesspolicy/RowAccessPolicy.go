@@ -12,9 +12,14 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/row_access_policy snowflake_row_access_policy}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.96.0/docs/resources/row_access_policy snowflake_row_access_policy}.
 type RowAccessPolicy interface {
 	cdktf.TerraformResource
+	Argument() RowAccessPolicyArgumentList
+	ArgumentInput() interface{}
+	Body() *string
+	SetBody(val *string)
+	BodyInput() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	Comment() *string
@@ -37,6 +42,7 @@ type RowAccessPolicy interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	DescribeOutput() RowAccessPolicyDescribeOutputList
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -68,15 +74,10 @@ type RowAccessPolicy interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
-	RowAccessExpression() *string
-	SetRowAccessExpression(val *string)
-	RowAccessExpressionInput() *string
 	Schema() *string
 	SetSchema(val *string)
 	SchemaInput() *string
-	Signature() *map[string]*string
-	SetSignature(val *map[string]*string)
-	SignatureInput() *map[string]*string
+	ShowOutput() RowAccessPolicyShowOutputList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -126,6 +127,7 @@ type RowAccessPolicy interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutArgument(value interface{})
 	ResetComment()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -147,6 +149,46 @@ type RowAccessPolicy interface {
 // The jsii proxy struct for RowAccessPolicy
 type jsiiProxy_RowAccessPolicy struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_RowAccessPolicy) Argument() RowAccessPolicyArgumentList {
+	var returns RowAccessPolicyArgumentList
+	_jsii_.Get(
+		j,
+		"argument",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RowAccessPolicy) ArgumentInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"argumentInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RowAccessPolicy) Body() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"body",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RowAccessPolicy) BodyInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"bodyInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_RowAccessPolicy) CdktfStack() cdktf.TerraformStack {
@@ -234,6 +276,16 @@ func (j *jsiiProxy_RowAccessPolicy) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RowAccessPolicy) DescribeOutput() RowAccessPolicyDescribeOutputList {
+	var returns RowAccessPolicyDescribeOutputList
+	_jsii_.Get(
+		j,
+		"describeOutput",
 		&returns,
 	)
 	return returns
@@ -369,26 +421,6 @@ func (j *jsiiProxy_RowAccessPolicy) RawOverrides() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_RowAccessPolicy) RowAccessExpression() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"rowAccessExpression",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_RowAccessPolicy) RowAccessExpressionInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"rowAccessExpressionInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_RowAccessPolicy) Schema() *string {
 	var returns *string
 	_jsii_.Get(
@@ -409,21 +441,11 @@ func (j *jsiiProxy_RowAccessPolicy) SchemaInput() *string {
 	return returns
 }
 
-func (j *jsiiProxy_RowAccessPolicy) Signature() *map[string]*string {
-	var returns *map[string]*string
+func (j *jsiiProxy_RowAccessPolicy) ShowOutput() RowAccessPolicyShowOutputList {
+	var returns RowAccessPolicyShowOutputList
 	_jsii_.Get(
 		j,
-		"signature",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_RowAccessPolicy) SignatureInput() *map[string]*string {
-	var returns *map[string]*string
-	_jsii_.Get(
-		j,
-		"signatureInput",
+		"showOutput",
 		&returns,
 	)
 	return returns
@@ -460,7 +482,7 @@ func (j *jsiiProxy_RowAccessPolicy) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/row_access_policy snowflake_row_access_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.96.0/docs/resources/row_access_policy snowflake_row_access_policy} Resource.
 func NewRowAccessPolicy(scope constructs.Construct, id *string, config *RowAccessPolicyConfig) RowAccessPolicy {
 	_init_.Initialize()
 
@@ -478,7 +500,7 @@ func NewRowAccessPolicy(scope constructs.Construct, id *string, config *RowAcces
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/resources/row_access_policy snowflake_row_access_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.96.0/docs/resources/row_access_policy snowflake_row_access_policy} Resource.
 func NewRowAccessPolicy_Override(r RowAccessPolicy, scope constructs.Construct, id *string, config *RowAccessPolicyConfig) {
 	_init_.Initialize()
 
@@ -486,6 +508,17 @@ func NewRowAccessPolicy_Override(r RowAccessPolicy, scope constructs.Construct, 
 		"@cdktf/provider-snowflake.rowAccessPolicy.RowAccessPolicy",
 		[]interface{}{scope, id, config},
 		r,
+	)
+}
+
+func (j *jsiiProxy_RowAccessPolicy)SetBody(val *string) {
+	if err := j.validateSetBodyParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"body",
+		val,
 	)
 }
 
@@ -601,17 +634,6 @@ func (j *jsiiProxy_RowAccessPolicy)SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_RowAccessPolicy)SetRowAccessExpression(val *string) {
-	if err := j.validateSetRowAccessExpressionParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"rowAccessExpression",
-		val,
-	)
-}
-
 func (j *jsiiProxy_RowAccessPolicy)SetSchema(val *string) {
 	if err := j.validateSetSchemaParameters(val); err != nil {
 		panic(err)
@@ -619,17 +641,6 @@ func (j *jsiiProxy_RowAccessPolicy)SetSchema(val *string) {
 	_jsii_.Set(
 		j,
 		"schema",
-		val,
-	)
-}
-
-func (j *jsiiProxy_RowAccessPolicy)SetSignature(val *map[string]*string) {
-	if err := j.validateSetSignatureParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"signature",
 		val,
 	)
 }
@@ -984,6 +995,17 @@ func (r *jsiiProxy_RowAccessPolicy) OverrideLogicalId(newLogicalId *string) {
 		r,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (r *jsiiProxy_RowAccessPolicy) PutArgument(value interface{}) {
+	if err := r.validatePutArgumentParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"putArgument",
+		[]interface{}{value},
 	)
 }
 

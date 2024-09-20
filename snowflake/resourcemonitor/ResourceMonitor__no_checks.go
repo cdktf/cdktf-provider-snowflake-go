@@ -135,10 +135,6 @@ func (j *jsiiProxy_ResourceMonitor) validateSetProvisionersParameters(val *[]int
 	return nil
 }
 
-func (j *jsiiProxy_ResourceMonitor) validateSetSetForAccountParameters(val interface{}) error {
-	return nil
-}
-
 func (j *jsiiProxy_ResourceMonitor) validateSetStartTimestampParameters(val *string) error {
 	return nil
 }
@@ -147,19 +143,7 @@ func (j *jsiiProxy_ResourceMonitor) validateSetSuspendImmediateTriggerParameters
 	return nil
 }
 
-func (j *jsiiProxy_ResourceMonitor) validateSetSuspendImmediateTriggersParameters(val *[]*float64) error {
-	return nil
-}
-
 func (j *jsiiProxy_ResourceMonitor) validateSetSuspendTriggerParameters(val *float64) error {
-	return nil
-}
-
-func (j *jsiiProxy_ResourceMonitor) validateSetSuspendTriggersParameters(val *[]*float64) error {
-	return nil
-}
-
-func (j *jsiiProxy_ResourceMonitor) validateSetWarehousesParameters(val *[]*string) error {
 	return nil
 }
 

@@ -13,7 +13,6 @@ import (
 
 type DataSnowflakeMaskingPoliciesMaskingPoliciesOutputReference interface {
 	cdktf.ComplexObject
-	Comment() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -29,14 +28,12 @@ type DataSnowflakeMaskingPoliciesMaskingPoliciesOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
-	Database() *string
+	DescribeOutput() DataSnowflakeMaskingPoliciesMaskingPoliciesDescribeOutputList
 	// Experimental.
 	Fqn() *string
 	InternalValue() *DataSnowflakeMaskingPoliciesMaskingPolicies
 	SetInternalValue(val *DataSnowflakeMaskingPoliciesMaskingPolicies)
-	Kind() *string
-	Name() *string
-	Schema() *string
+	ShowOutput() DataSnowflakeMaskingPoliciesMaskingPoliciesShowOutputList
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -84,16 +81,6 @@ type jsiiProxy_DataSnowflakeMaskingPoliciesMaskingPoliciesOutputReference struct
 	internal.Type__cdktfComplexObject
 }
 
-func (j *jsiiProxy_DataSnowflakeMaskingPoliciesMaskingPoliciesOutputReference) Comment() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"comment",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataSnowflakeMaskingPoliciesMaskingPoliciesOutputReference) ComplexObjectIndex() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -124,11 +111,11 @@ func (j *jsiiProxy_DataSnowflakeMaskingPoliciesMaskingPoliciesOutputReference) C
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeMaskingPoliciesMaskingPoliciesOutputReference) Database() *string {
-	var returns *string
+func (j *jsiiProxy_DataSnowflakeMaskingPoliciesMaskingPoliciesOutputReference) DescribeOutput() DataSnowflakeMaskingPoliciesMaskingPoliciesDescribeOutputList {
+	var returns DataSnowflakeMaskingPoliciesMaskingPoliciesDescribeOutputList
 	_jsii_.Get(
 		j,
-		"database",
+		"describeOutput",
 		&returns,
 	)
 	return returns
@@ -154,31 +141,11 @@ func (j *jsiiProxy_DataSnowflakeMaskingPoliciesMaskingPoliciesOutputReference) I
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeMaskingPoliciesMaskingPoliciesOutputReference) Kind() *string {
-	var returns *string
+func (j *jsiiProxy_DataSnowflakeMaskingPoliciesMaskingPoliciesOutputReference) ShowOutput() DataSnowflakeMaskingPoliciesMaskingPoliciesShowOutputList {
+	var returns DataSnowflakeMaskingPoliciesMaskingPoliciesShowOutputList
 	_jsii_.Get(
 		j,
-		"kind",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeMaskingPoliciesMaskingPoliciesOutputReference) Name() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"name",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeMaskingPoliciesMaskingPoliciesOutputReference) Schema() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"schema",
+		"showOutput",
 		&returns,
 	)
 	return returns

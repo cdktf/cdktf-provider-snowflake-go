@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/data-sources/resource_monitors snowflake_resource_monitors}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.96.0/docs/data-sources/resource_monitors snowflake_resource_monitors}.
 type DataSnowflakeResourceMonitors interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -42,6 +42,9 @@ type DataSnowflakeResourceMonitors interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	Like() *string
+	SetLike(val *string)
+	LikeInput() *string
 	// The tree node.
 	Node() constructs.Node
 	// Experimental.
@@ -83,6 +86,7 @@ type DataSnowflakeResourceMonitors interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	ResetId()
+	ResetLike()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -205,6 +209,26 @@ func (j *jsiiProxy_DataSnowflakeResourceMonitors) Lifecycle() *cdktf.TerraformRe
 	return returns
 }
 
+func (j *jsiiProxy_DataSnowflakeResourceMonitors) Like() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"like",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeResourceMonitors) LikeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"likeInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataSnowflakeResourceMonitors) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
@@ -276,7 +300,7 @@ func (j *jsiiProxy_DataSnowflakeResourceMonitors) TerraformResourceType() *strin
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/data-sources/resource_monitors snowflake_resource_monitors} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.96.0/docs/data-sources/resource_monitors snowflake_resource_monitors} Data Source.
 func NewDataSnowflakeResourceMonitors(scope constructs.Construct, id *string, config *DataSnowflakeResourceMonitorsConfig) DataSnowflakeResourceMonitors {
 	_init_.Initialize()
 
@@ -294,7 +318,7 @@ func NewDataSnowflakeResourceMonitors(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/data-sources/resource_monitors snowflake_resource_monitors} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.96.0/docs/data-sources/resource_monitors snowflake_resource_monitors} Data Source.
 func NewDataSnowflakeResourceMonitors_Override(d DataSnowflakeResourceMonitors, scope constructs.Construct, id *string, config *DataSnowflakeResourceMonitorsConfig) {
 	_init_.Initialize()
 
@@ -350,6 +374,17 @@ func (j *jsiiProxy_DataSnowflakeResourceMonitors)SetLifecycle(val *cdktf.Terrafo
 	_jsii_.Set(
 		j,
 		"lifecycle",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataSnowflakeResourceMonitors)SetLike(val *string) {
+	if err := j.validateSetLikeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"like",
 		val,
 	)
 }
@@ -651,6 +686,14 @@ func (d *jsiiProxy_DataSnowflakeResourceMonitors) ResetId() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataSnowflakeResourceMonitors) ResetLike() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetLike",
 		nil, // no parameters
 	)
 }

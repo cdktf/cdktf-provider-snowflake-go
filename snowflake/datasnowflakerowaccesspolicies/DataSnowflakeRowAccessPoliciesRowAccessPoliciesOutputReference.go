@@ -13,7 +13,6 @@ import (
 
 type DataSnowflakeRowAccessPoliciesRowAccessPoliciesOutputReference interface {
 	cdktf.ComplexObject
-	Comment() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -29,13 +28,12 @@ type DataSnowflakeRowAccessPoliciesRowAccessPoliciesOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
-	Database() *string
+	DescribeOutput() DataSnowflakeRowAccessPoliciesRowAccessPoliciesDescribeOutputList
 	// Experimental.
 	Fqn() *string
 	InternalValue() *DataSnowflakeRowAccessPoliciesRowAccessPolicies
 	SetInternalValue(val *DataSnowflakeRowAccessPoliciesRowAccessPolicies)
-	Name() *string
-	Schema() *string
+	ShowOutput() DataSnowflakeRowAccessPoliciesRowAccessPoliciesShowOutputList
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -83,16 +81,6 @@ type jsiiProxy_DataSnowflakeRowAccessPoliciesRowAccessPoliciesOutputReference st
 	internal.Type__cdktfComplexObject
 }
 
-func (j *jsiiProxy_DataSnowflakeRowAccessPoliciesRowAccessPoliciesOutputReference) Comment() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"comment",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataSnowflakeRowAccessPoliciesRowAccessPoliciesOutputReference) ComplexObjectIndex() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -123,11 +111,11 @@ func (j *jsiiProxy_DataSnowflakeRowAccessPoliciesRowAccessPoliciesOutputReferenc
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeRowAccessPoliciesRowAccessPoliciesOutputReference) Database() *string {
-	var returns *string
+func (j *jsiiProxy_DataSnowflakeRowAccessPoliciesRowAccessPoliciesOutputReference) DescribeOutput() DataSnowflakeRowAccessPoliciesRowAccessPoliciesDescribeOutputList {
+	var returns DataSnowflakeRowAccessPoliciesRowAccessPoliciesDescribeOutputList
 	_jsii_.Get(
 		j,
-		"database",
+		"describeOutput",
 		&returns,
 	)
 	return returns
@@ -153,21 +141,11 @@ func (j *jsiiProxy_DataSnowflakeRowAccessPoliciesRowAccessPoliciesOutputReferenc
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeRowAccessPoliciesRowAccessPoliciesOutputReference) Name() *string {
-	var returns *string
+func (j *jsiiProxy_DataSnowflakeRowAccessPoliciesRowAccessPoliciesOutputReference) ShowOutput() DataSnowflakeRowAccessPoliciesRowAccessPoliciesShowOutputList {
+	var returns DataSnowflakeRowAccessPoliciesRowAccessPoliciesShowOutputList
 	_jsii_.Get(
 		j,
-		"name",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeRowAccessPoliciesRowAccessPoliciesOutputReference) Schema() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"schema",
+		"showOutput",
 		&returns,
 	)
 	return returns

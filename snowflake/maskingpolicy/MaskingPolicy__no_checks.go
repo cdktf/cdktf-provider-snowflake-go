@@ -75,7 +75,7 @@ func (m *jsiiProxy_MaskingPolicy) validateOverrideLogicalIdParameters(newLogical
 	return nil
 }
 
-func (m *jsiiProxy_MaskingPolicy) validatePutSignatureParameters(value *MaskingPolicySignature) error {
+func (m *jsiiProxy_MaskingPolicy) validatePutArgumentParameters(value interface{}) error {
 	return nil
 }
 
@@ -95,6 +95,10 @@ func validateMaskingPolicy_IsTerraformResourceParameters(x interface{}) error {
 	return nil
 }
 
+func (j *jsiiProxy_MaskingPolicy) validateSetBodyParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_MaskingPolicy) validateSetCommentParameters(val *string) error {
 	return nil
 }
@@ -111,7 +115,7 @@ func (j *jsiiProxy_MaskingPolicy) validateSetDatabaseParameters(val *string) err
 	return nil
 }
 
-func (j *jsiiProxy_MaskingPolicy) validateSetExemptOtherPoliciesParameters(val interface{}) error {
+func (j *jsiiProxy_MaskingPolicy) validateSetExemptOtherPoliciesParameters(val *string) error {
 	return nil
 }
 
@@ -119,23 +123,11 @@ func (j *jsiiProxy_MaskingPolicy) validateSetIdParameters(val *string) error {
 	return nil
 }
 
-func (j *jsiiProxy_MaskingPolicy) validateSetIfNotExistsParameters(val interface{}) error {
-	return nil
-}
-
 func (j *jsiiProxy_MaskingPolicy) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }
 
-func (j *jsiiProxy_MaskingPolicy) validateSetMaskingExpressionParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_MaskingPolicy) validateSetNameParameters(val *string) error {
-	return nil
-}
-
-func (j *jsiiProxy_MaskingPolicy) validateSetOrReplaceParameters(val interface{}) error {
 	return nil
 }
 

@@ -55,6 +55,14 @@ func (d *jsiiProxy_DataSnowflakeMaskingPolicies) validateOverrideLogicalIdParame
 	return nil
 }
 
+func (d *jsiiProxy_DataSnowflakeMaskingPolicies) validatePutInParameters(value *DataSnowflakeMaskingPoliciesIn) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataSnowflakeMaskingPolicies) validatePutLimitParameters(value *DataSnowflakeMaskingPoliciesLimit) error {
+	return nil
+}
+
 func validateDataSnowflakeMaskingPolicies_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
@@ -75,10 +83,6 @@ func (j *jsiiProxy_DataSnowflakeMaskingPolicies) validateSetCountParameters(val 
 	return nil
 }
 
-func (j *jsiiProxy_DataSnowflakeMaskingPolicies) validateSetDatabaseParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_DataSnowflakeMaskingPolicies) validateSetIdParameters(val *string) error {
 	return nil
 }
@@ -87,7 +91,11 @@ func (j *jsiiProxy_DataSnowflakeMaskingPolicies) validateSetLifecycleParameters(
 	return nil
 }
 
-func (j *jsiiProxy_DataSnowflakeMaskingPolicies) validateSetSchemaParameters(val *string) error {
+func (j *jsiiProxy_DataSnowflakeMaskingPolicies) validateSetLikeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataSnowflakeMaskingPolicies) validateSetWithDescribeParameters(val interface{}) error {
 	return nil
 }
 

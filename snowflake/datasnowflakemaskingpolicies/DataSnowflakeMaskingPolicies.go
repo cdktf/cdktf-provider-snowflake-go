@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/data-sources/masking_policies snowflake_masking_policies}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.96.0/docs/data-sources/masking_policies snowflake_masking_policies}.
 type DataSnowflakeMaskingPolicies interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -23,9 +23,6 @@ type DataSnowflakeMaskingPolicies interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
-	Database() *string
-	SetDatabase(val *string)
-	DatabaseInput() *string
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -41,10 +38,17 @@ type DataSnowflakeMaskingPolicies interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	In() DataSnowflakeMaskingPoliciesInOutputReference
+	InInput() *DataSnowflakeMaskingPoliciesIn
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	Like() *string
+	SetLike(val *string)
+	LikeInput() *string
+	Limit() DataSnowflakeMaskingPoliciesLimitOutputReference
+	LimitInput() *DataSnowflakeMaskingPoliciesLimit
 	MaskingPolicies() DataSnowflakeMaskingPoliciesMaskingPoliciesList
 	// The tree node.
 	Node() constructs.Node
@@ -54,15 +58,15 @@ type DataSnowflakeMaskingPolicies interface {
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
-	Schema() *string
-	SetSchema(val *string)
-	SchemaInput() *string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	WithDescribe() interface{}
+	SetWithDescribe(val interface{})
+	WithDescribeInput() interface{}
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -88,10 +92,16 @@ type DataSnowflakeMaskingPolicies interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutIn(value *DataSnowflakeMaskingPoliciesIn)
+	PutLimit(value *DataSnowflakeMaskingPoliciesLimit)
 	ResetId()
+	ResetIn()
+	ResetLike()
+	ResetLimit()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetWithDescribe()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Adds this resource to the terraform JSON output.
@@ -136,26 +146,6 @@ func (j *jsiiProxy_DataSnowflakeMaskingPolicies) Count() interface{} {
 	_jsii_.Get(
 		j,
 		"count",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeMaskingPolicies) Database() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"database",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeMaskingPolicies) DatabaseInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"databaseInput",
 		&returns,
 	)
 	return returns
@@ -221,11 +211,71 @@ func (j *jsiiProxy_DataSnowflakeMaskingPolicies) IdInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataSnowflakeMaskingPolicies) In() DataSnowflakeMaskingPoliciesInOutputReference {
+	var returns DataSnowflakeMaskingPoliciesInOutputReference
+	_jsii_.Get(
+		j,
+		"in",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeMaskingPolicies) InInput() *DataSnowflakeMaskingPoliciesIn {
+	var returns *DataSnowflakeMaskingPoliciesIn
+	_jsii_.Get(
+		j,
+		"inInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataSnowflakeMaskingPolicies) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
 		j,
 		"lifecycle",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeMaskingPolicies) Like() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"like",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeMaskingPolicies) LikeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"likeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeMaskingPolicies) Limit() DataSnowflakeMaskingPoliciesLimitOutputReference {
+	var returns DataSnowflakeMaskingPoliciesLimitOutputReference
+	_jsii_.Get(
+		j,
+		"limit",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeMaskingPolicies) LimitInput() *DataSnowflakeMaskingPoliciesLimit {
+	var returns *DataSnowflakeMaskingPoliciesLimit
+	_jsii_.Get(
+		j,
+		"limitInput",
 		&returns,
 	)
 	return returns
@@ -271,26 +321,6 @@ func (j *jsiiProxy_DataSnowflakeMaskingPolicies) RawOverrides() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeMaskingPolicies) Schema() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"schema",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeMaskingPolicies) SchemaInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"schemaInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataSnowflakeMaskingPolicies) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -321,8 +351,28 @@ func (j *jsiiProxy_DataSnowflakeMaskingPolicies) TerraformResourceType() *string
 	return returns
 }
 
+func (j *jsiiProxy_DataSnowflakeMaskingPolicies) WithDescribe() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"withDescribe",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/data-sources/masking_policies snowflake_masking_policies} Data Source.
+func (j *jsiiProxy_DataSnowflakeMaskingPolicies) WithDescribeInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"withDescribeInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.96.0/docs/data-sources/masking_policies snowflake_masking_policies} Data Source.
 func NewDataSnowflakeMaskingPolicies(scope constructs.Construct, id *string, config *DataSnowflakeMaskingPoliciesConfig) DataSnowflakeMaskingPolicies {
 	_init_.Initialize()
 
@@ -340,7 +390,7 @@ func NewDataSnowflakeMaskingPolicies(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.95.0/docs/data-sources/masking_policies snowflake_masking_policies} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.96.0/docs/data-sources/masking_policies snowflake_masking_policies} Data Source.
 func NewDataSnowflakeMaskingPolicies_Override(d DataSnowflakeMaskingPolicies, scope constructs.Construct, id *string, config *DataSnowflakeMaskingPoliciesConfig) {
 	_init_.Initialize()
 
@@ -358,17 +408,6 @@ func (j *jsiiProxy_DataSnowflakeMaskingPolicies)SetCount(val interface{}) {
 	_jsii_.Set(
 		j,
 		"count",
-		val,
-	)
-}
-
-func (j *jsiiProxy_DataSnowflakeMaskingPolicies)SetDatabase(val *string) {
-	if err := j.validateSetDatabaseParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"database",
 		val,
 	)
 }
@@ -411,6 +450,17 @@ func (j *jsiiProxy_DataSnowflakeMaskingPolicies)SetLifecycle(val *cdktf.Terrafor
 	)
 }
 
+func (j *jsiiProxy_DataSnowflakeMaskingPolicies)SetLike(val *string) {
+	if err := j.validateSetLikeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"like",
+		val,
+	)
+}
+
 func (j *jsiiProxy_DataSnowflakeMaskingPolicies)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
@@ -419,13 +469,13 @@ func (j *jsiiProxy_DataSnowflakeMaskingPolicies)SetProvider(val cdktf.TerraformP
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeMaskingPolicies)SetSchema(val *string) {
-	if err := j.validateSetSchemaParameters(val); err != nil {
+func (j *jsiiProxy_DataSnowflakeMaskingPolicies)SetWithDescribe(val interface{}) {
+	if err := j.validateSetWithDescribeParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
-		"schema",
+		"withDescribe",
 		val,
 	)
 }
@@ -715,6 +765,28 @@ func (d *jsiiProxy_DataSnowflakeMaskingPolicies) OverrideLogicalId(newLogicalId 
 	)
 }
 
+func (d *jsiiProxy_DataSnowflakeMaskingPolicies) PutIn(value *DataSnowflakeMaskingPoliciesIn) {
+	if err := d.validatePutInParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putIn",
+		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DataSnowflakeMaskingPolicies) PutLimit(value *DataSnowflakeMaskingPoliciesLimit) {
+	if err := d.validatePutLimitParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putLimit",
+		[]interface{}{value},
+	)
+}
+
 func (d *jsiiProxy_DataSnowflakeMaskingPolicies) ResetId() {
 	_jsii_.InvokeVoid(
 		d,
@@ -723,10 +795,42 @@ func (d *jsiiProxy_DataSnowflakeMaskingPolicies) ResetId() {
 	)
 }
 
+func (d *jsiiProxy_DataSnowflakeMaskingPolicies) ResetIn() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetIn",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataSnowflakeMaskingPolicies) ResetLike() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetLike",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataSnowflakeMaskingPolicies) ResetLimit() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetLimit",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DataSnowflakeMaskingPolicies) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataSnowflakeMaskingPolicies) ResetWithDescribe() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetWithDescribe",
 		nil, // no parameters
 	)
 }
