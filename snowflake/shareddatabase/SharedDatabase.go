@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.96.0/docs/resources/shared_database snowflake_shared_database}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.97.0/docs/resources/shared_database snowflake_shared_database}.
 type SharedDatabase interface {
 	cdktf.TerraformResource
 	Catalog() *string
@@ -727,7 +727,7 @@ func (j *jsiiProxy_SharedDatabase) UserTaskTimeoutMsInput() *float64 {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.96.0/docs/resources/shared_database snowflake_shared_database} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.97.0/docs/resources/shared_database snowflake_shared_database} Resource.
 func NewSharedDatabase(scope constructs.Construct, id *string, config *SharedDatabaseConfig) SharedDatabase {
 	_init_.Initialize()
 
@@ -745,7 +745,7 @@ func NewSharedDatabase(scope constructs.Construct, id *string, config *SharedDat
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.96.0/docs/resources/shared_database snowflake_shared_database} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.97.0/docs/resources/shared_database snowflake_shared_database} Resource.
 func NewSharedDatabase_Override(s SharedDatabase, scope constructs.Construct, id *string, config *SharedDatabaseConfig) {
 	_init_.Initialize()
 

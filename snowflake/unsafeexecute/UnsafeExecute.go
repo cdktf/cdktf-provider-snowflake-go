@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.96.0/docs/resources/unsafe_execute snowflake_unsafe_execute}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.97.0/docs/resources/unsafe_execute snowflake_unsafe_execute}.
 type UnsafeExecute interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -391,7 +391,7 @@ func (j *jsiiProxy_UnsafeExecute) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.96.0/docs/resources/unsafe_execute snowflake_unsafe_execute} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.97.0/docs/resources/unsafe_execute snowflake_unsafe_execute} Resource.
 func NewUnsafeExecute(scope constructs.Construct, id *string, config *UnsafeExecuteConfig) UnsafeExecute {
 	_init_.Initialize()
 
@@ -409,7 +409,7 @@ func NewUnsafeExecute(scope constructs.Construct, id *string, config *UnsafeExec
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.96.0/docs/resources/unsafe_execute snowflake_unsafe_execute} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.97.0/docs/resources/unsafe_execute snowflake_unsafe_execute} Resource.
 func NewUnsafeExecute_Override(u UnsafeExecute, scope constructs.Construct, id *string, config *UnsafeExecuteConfig) {
 	_init_.Initialize()
 

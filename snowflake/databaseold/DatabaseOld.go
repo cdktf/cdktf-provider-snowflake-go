@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.96.0/docs/resources/database_old snowflake_database_old}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.97.0/docs/resources/database_old snowflake_database_old}.
 type DatabaseOld interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -501,7 +501,7 @@ func (j *jsiiProxy_DatabaseOld) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.96.0/docs/resources/database_old snowflake_database_old} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.97.0/docs/resources/database_old snowflake_database_old} Resource.
 func NewDatabaseOld(scope constructs.Construct, id *string, config *DatabaseOldConfig) DatabaseOld {
 	_init_.Initialize()
 
@@ -519,7 +519,7 @@ func NewDatabaseOld(scope constructs.Construct, id *string, config *DatabaseOldC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.96.0/docs/resources/database_old snowflake_database_old} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.97.0/docs/resources/database_old snowflake_database_old} Resource.
 func NewDatabaseOld_Override(d DatabaseOld, scope constructs.Construct, id *string, config *DatabaseOldConfig) {
 	_init_.Initialize()
 
