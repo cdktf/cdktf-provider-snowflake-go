@@ -78,6 +78,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "showInitialRows", GoGetter: "ShowInitialRows"},
 			_jsii_.MemberProperty{JsiiProperty: "showInitialRowsInput", GoGetter: "ShowInitialRowsInput"},
 			_jsii_.MemberProperty{JsiiProperty: "showOutput", GoGetter: "ShowOutput"},
+			_jsii_.MemberProperty{JsiiProperty: "stale", GoGetter: "Stale"},
+			_jsii_.MemberProperty{JsiiProperty: "streamType", GoGetter: "StreamType"},
 			_jsii_.MemberMethod{JsiiMethod: "synthesizeAttributes", GoMethod: "SynthesizeAttributes"},
 			_jsii_.MemberMethod{JsiiMethod: "synthesizeHclAttributes", GoMethod: "SynthesizeHclAttributes"},
 			_jsii_.MemberProperty{JsiiProperty: "table", GoGetter: "Table"},

@@ -43,7 +43,7 @@ type StreamOnTableDescribeOutputOutputReference interface {
 	OwnerRoleType() *string
 	SchemaName() *string
 	SourceType() *string
-	Stale() *string
+	Stale() cdktf.IResolvable
 	StaleAfter() *string
 	TableName() *string
 	// Experimental.
@@ -254,8 +254,8 @@ func (j *jsiiProxy_StreamOnTableDescribeOutputOutputReference) SourceType() *str
 	return returns
 }
 
-func (j *jsiiProxy_StreamOnTableDescribeOutputOutputReference) Stale() *string {
-	var returns *string
+func (j *jsiiProxy_StreamOnTableDescribeOutputOutputReference) Stale() cdktf.IResolvable {
+	var returns cdktf.IResolvable
 	_jsii_.Get(
 		j,
 		"stale",

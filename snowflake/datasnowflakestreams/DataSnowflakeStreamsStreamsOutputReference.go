@@ -13,7 +13,6 @@ import (
 
 type DataSnowflakeStreamsStreamsOutputReference interface {
 	cdktf.ComplexObject
-	Comment() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -29,14 +28,12 @@ type DataSnowflakeStreamsStreamsOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
-	Database() *string
+	DescribeOutput() DataSnowflakeStreamsStreamsDescribeOutputList
 	// Experimental.
 	Fqn() *string
 	InternalValue() *DataSnowflakeStreamsStreams
 	SetInternalValue(val *DataSnowflakeStreamsStreams)
-	Name() *string
-	Schema() *string
-	Table() *string
+	ShowOutput() DataSnowflakeStreamsStreamsShowOutputList
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -84,16 +81,6 @@ type jsiiProxy_DataSnowflakeStreamsStreamsOutputReference struct {
 	internal.Type__cdktfComplexObject
 }
 
-func (j *jsiiProxy_DataSnowflakeStreamsStreamsOutputReference) Comment() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"comment",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataSnowflakeStreamsStreamsOutputReference) ComplexObjectIndex() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -124,11 +111,11 @@ func (j *jsiiProxy_DataSnowflakeStreamsStreamsOutputReference) CreationStack() *
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeStreamsStreamsOutputReference) Database() *string {
-	var returns *string
+func (j *jsiiProxy_DataSnowflakeStreamsStreamsOutputReference) DescribeOutput() DataSnowflakeStreamsStreamsDescribeOutputList {
+	var returns DataSnowflakeStreamsStreamsDescribeOutputList
 	_jsii_.Get(
 		j,
-		"database",
+		"describeOutput",
 		&returns,
 	)
 	return returns
@@ -154,31 +141,11 @@ func (j *jsiiProxy_DataSnowflakeStreamsStreamsOutputReference) InternalValue() *
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeStreamsStreamsOutputReference) Name() *string {
-	var returns *string
+func (j *jsiiProxy_DataSnowflakeStreamsStreamsOutputReference) ShowOutput() DataSnowflakeStreamsStreamsShowOutputList {
+	var returns DataSnowflakeStreamsStreamsShowOutputList
 	_jsii_.Get(
 		j,
-		"name",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeStreamsStreamsOutputReference) Schema() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"schema",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeStreamsStreamsOutputReference) Table() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"table",
+		"showOutput",
 		&returns,
 	)
 	return returns
