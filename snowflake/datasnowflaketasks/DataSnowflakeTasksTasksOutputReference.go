@@ -13,7 +13,6 @@ import (
 
 type DataSnowflakeTasksTasksOutputReference interface {
 	cdktf.ComplexObject
-	Comment() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -29,13 +28,12 @@ type DataSnowflakeTasksTasksOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
-	Database() *string
 	// Experimental.
 	Fqn() *string
 	InternalValue() *DataSnowflakeTasksTasks
 	SetInternalValue(val *DataSnowflakeTasksTasks)
-	Name() *string
-	Schema() *string
+	Parameters() DataSnowflakeTasksTasksParametersList
+	ShowOutput() DataSnowflakeTasksTasksShowOutputList
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -44,7 +42,6 @@ type DataSnowflakeTasksTasksOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
-	Warehouse() *string
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -84,16 +81,6 @@ type jsiiProxy_DataSnowflakeTasksTasksOutputReference struct {
 	internal.Type__cdktfComplexObject
 }
 
-func (j *jsiiProxy_DataSnowflakeTasksTasksOutputReference) Comment() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"comment",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataSnowflakeTasksTasksOutputReference) ComplexObjectIndex() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -124,16 +111,6 @@ func (j *jsiiProxy_DataSnowflakeTasksTasksOutputReference) CreationStack() *[]*s
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeTasksTasksOutputReference) Database() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"database",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataSnowflakeTasksTasksOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -154,21 +131,21 @@ func (j *jsiiProxy_DataSnowflakeTasksTasksOutputReference) InternalValue() *Data
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeTasksTasksOutputReference) Name() *string {
-	var returns *string
+func (j *jsiiProxy_DataSnowflakeTasksTasksOutputReference) Parameters() DataSnowflakeTasksTasksParametersList {
+	var returns DataSnowflakeTasksTasksParametersList
 	_jsii_.Get(
 		j,
-		"name",
+		"parameters",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeTasksTasksOutputReference) Schema() *string {
-	var returns *string
+func (j *jsiiProxy_DataSnowflakeTasksTasksOutputReference) ShowOutput() DataSnowflakeTasksTasksShowOutputList {
+	var returns DataSnowflakeTasksTasksShowOutputList
 	_jsii_.Get(
 		j,
-		"schema",
+		"showOutput",
 		&returns,
 	)
 	return returns
@@ -189,16 +166,6 @@ func (j *jsiiProxy_DataSnowflakeTasksTasksOutputReference) TerraformResource() c
 	_jsii_.Get(
 		j,
 		"terraformResource",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeTasksTasksOutputReference) Warehouse() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"warehouse",
 		&returns,
 	)
 	return returns

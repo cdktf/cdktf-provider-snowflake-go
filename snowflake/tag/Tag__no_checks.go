@@ -119,6 +119,10 @@ func (j *jsiiProxy_Tag) validateSetLifecycleParameters(val *cdktf.TerraformResou
 	return nil
 }
 
+func (j *jsiiProxy_Tag) validateSetMaskingPoliciesParameters(val *[]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Tag) validateSetNameParameters(val *string) error {
 	return nil
 }

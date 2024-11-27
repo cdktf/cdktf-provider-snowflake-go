@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.98.0/docs/resources/oauth_integration_for_custom_clients snowflake_oauth_integration_for_custom_clients}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/resources/oauth_integration_for_custom_clients snowflake_oauth_integration_for_custom_clients}.
 type OauthIntegrationForCustomClients interface {
 	cdktf.TerraformResource
 	BlockedRolesList() *[]*string
@@ -699,7 +699,7 @@ func (j *jsiiProxy_OauthIntegrationForCustomClients) TerraformResourceType() *st
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.98.0/docs/resources/oauth_integration_for_custom_clients snowflake_oauth_integration_for_custom_clients} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/resources/oauth_integration_for_custom_clients snowflake_oauth_integration_for_custom_clients} Resource.
 func NewOauthIntegrationForCustomClients(scope constructs.Construct, id *string, config *OauthIntegrationForCustomClientsConfig) OauthIntegrationForCustomClients {
 	_init_.Initialize()
 
@@ -717,7 +717,7 @@ func NewOauthIntegrationForCustomClients(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.98.0/docs/resources/oauth_integration_for_custom_clients snowflake_oauth_integration_for_custom_clients} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/resources/oauth_integration_for_custom_clients snowflake_oauth_integration_for_custom_clients} Resource.
 func NewOauthIntegrationForCustomClients_Override(o OauthIntegrationForCustomClients, scope constructs.Construct, id *string, config *OauthIntegrationForCustomClientsConfig) {
 	_init_.Initialize()
 

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.98.0/docs/resources/tag snowflake_tag}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/resources/tag snowflake_tag}.
 type Tag interface {
 	cdktf.TerraformResource
 	AllowedValues() *[]*string
@@ -56,6 +56,9 @@ type Tag interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	MaskingPolicies() *[]*string
+	SetMaskingPolicies(val *[]*string)
+	MaskingPoliciesInput() *[]*string
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
@@ -74,6 +77,7 @@ type Tag interface {
 	Schema() *string
 	SetSchema(val *string)
 	SchemaInput() *string
+	ShowOutput() TagShowOutputList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -126,6 +130,7 @@ type Tag interface {
 	ResetAllowedValues()
 	ResetComment()
 	ResetId()
+	ResetMaskingPolicies()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -327,6 +332,26 @@ func (j *jsiiProxy_Tag) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	return returns
 }
 
+func (j *jsiiProxy_Tag) MaskingPolicies() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"maskingPolicies",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Tag) MaskingPoliciesInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"maskingPoliciesInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Tag) Name() *string {
 	var returns *string
 	_jsii_.Get(
@@ -407,6 +432,16 @@ func (j *jsiiProxy_Tag) SchemaInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Tag) ShowOutput() TagShowOutputList {
+	var returns TagShowOutputList
+	_jsii_.Get(
+		j,
+		"showOutput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Tag) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -438,7 +473,7 @@ func (j *jsiiProxy_Tag) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.98.0/docs/resources/tag snowflake_tag} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/resources/tag snowflake_tag} Resource.
 func NewTag(scope constructs.Construct, id *string, config *TagConfig) Tag {
 	_init_.Initialize()
 
@@ -456,7 +491,7 @@ func NewTag(scope constructs.Construct, id *string, config *TagConfig) Tag {
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.98.0/docs/resources/tag snowflake_tag} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/resources/tag snowflake_tag} Resource.
 func NewTag_Override(t Tag, scope constructs.Construct, id *string, config *TagConfig) {
 	_init_.Initialize()
 
@@ -556,6 +591,17 @@ func (j *jsiiProxy_Tag)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
 	_jsii_.Set(
 		j,
 		"lifecycle",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Tag)SetMaskingPolicies(val *[]*string) {
+	if err := j.validateSetMaskingPoliciesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"maskingPolicies",
 		val,
 	)
 }
@@ -974,6 +1020,14 @@ func (t *jsiiProxy_Tag) ResetId() {
 	_jsii_.InvokeVoid(
 		t,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_Tag) ResetMaskingPolicies() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetMaskingPolicies",
 		nil, // no parameters
 	)
 }

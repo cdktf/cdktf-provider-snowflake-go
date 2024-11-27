@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.98.0/docs/data-sources/materialized_views snowflake_materialized_views}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/data-sources/materialized_views snowflake_materialized_views}.
 type DataSnowflakeMaterializedViews interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -322,7 +322,7 @@ func (j *jsiiProxy_DataSnowflakeMaterializedViews) TerraformResourceType() *stri
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.98.0/docs/data-sources/materialized_views snowflake_materialized_views} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/data-sources/materialized_views snowflake_materialized_views} Data Source.
 func NewDataSnowflakeMaterializedViews(scope constructs.Construct, id *string, config *DataSnowflakeMaterializedViewsConfig) DataSnowflakeMaterializedViews {
 	_init_.Initialize()
 
@@ -340,7 +340,7 @@ func NewDataSnowflakeMaterializedViews(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.98.0/docs/data-sources/materialized_views snowflake_materialized_views} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/data-sources/materialized_views snowflake_materialized_views} Data Source.
 func NewDataSnowflakeMaterializedViews_Override(d DataSnowflakeMaterializedViews, scope constructs.Construct, id *string, config *DataSnowflakeMaterializedViewsConfig) {
 	_init_.Initialize()
 

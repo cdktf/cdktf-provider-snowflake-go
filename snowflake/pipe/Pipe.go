@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.98.0/docs/resources/pipe snowflake_pipe}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/resources/pipe snowflake_pipe}.
 type Pipe interface {
 	cdktf.TerraformResource
 	AutoIngest() interface{}
@@ -555,7 +555,7 @@ func (j *jsiiProxy_Pipe) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.98.0/docs/resources/pipe snowflake_pipe} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/resources/pipe snowflake_pipe} Resource.
 func NewPipe(scope constructs.Construct, id *string, config *PipeConfig) Pipe {
 	_init_.Initialize()
 
@@ -573,7 +573,7 @@ func NewPipe(scope constructs.Construct, id *string, config *PipeConfig) Pipe {
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.98.0/docs/resources/pipe snowflake_pipe} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/resources/pipe snowflake_pipe} Resource.
 func NewPipe_Override(p Pipe, scope constructs.Construct, id *string, config *PipeConfig) {
 	_init_.Initialize()
 

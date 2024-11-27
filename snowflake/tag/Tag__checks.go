@@ -377,6 +377,14 @@ func (j *jsiiProxy_Tag) validateSetLifecycleParameters(val *cdktf.TerraformResou
 	return nil
 }
 
+func (j *jsiiProxy_Tag) validateSetMaskingPoliciesParameters(val *[]*string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_Tag) validateSetNameParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
