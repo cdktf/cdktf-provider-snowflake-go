@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/resources/account snowflake_account}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/account snowflake_account}.
 type Account interface {
 	cdktf.TerraformResource
 	AdminName() *string
@@ -24,6 +24,9 @@ type Account interface {
 	AdminRsaPublicKey() *string
 	SetAdminRsaPublicKey(val *string)
 	AdminRsaPublicKeyInput() *string
+	AdminUserType() *string
+	SetAdminUserType(val *string)
+	AdminUserTypeInput() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	Comment() *string
@@ -67,7 +70,9 @@ type Account interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
-	IsOrgAdmin() cdktf.IResolvable
+	IsOrgAdmin() *string
+	SetIsOrgAdmin(val *string)
+	IsOrgAdminInput() *string
 	LastName() *string
 	SetLastName(val *string)
 	LastNameInput() *string
@@ -75,9 +80,9 @@ type Account interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
-	MustChangePassword() interface{}
-	SetMustChangePassword(val interface{})
-	MustChangePasswordInput() interface{}
+	MustChangePassword() *string
+	SetMustChangePassword(val *string)
+	MustChangePasswordInput() *string
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
@@ -99,6 +104,7 @@ type Account interface {
 	SetRegionGroup(val *string)
 	RegionGroupInput() *string
 	RegionInput() *string
+	ShowOutput() AccountShowOutputList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -150,10 +156,11 @@ type Account interface {
 	OverrideLogicalId(newLogicalId *string)
 	ResetAdminPassword()
 	ResetAdminRsaPublicKey()
+	ResetAdminUserType()
 	ResetComment()
 	ResetFirstName()
-	ResetGracePeriodInDays()
 	ResetId()
+	ResetIsOrgAdmin()
 	ResetLastName()
 	ResetMustChangePassword()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -234,6 +241,26 @@ func (j *jsiiProxy_Account) AdminRsaPublicKeyInput() *string {
 	_jsii_.Get(
 		j,
 		"adminRsaPublicKeyInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Account) AdminUserType() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"adminUserType",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Account) AdminUserTypeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"adminUserTypeInput",
 		&returns,
 	)
 	return returns
@@ -449,11 +476,21 @@ func (j *jsiiProxy_Account) IdInput() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Account) IsOrgAdmin() cdktf.IResolvable {
-	var returns cdktf.IResolvable
+func (j *jsiiProxy_Account) IsOrgAdmin() *string {
+	var returns *string
 	_jsii_.Get(
 		j,
 		"isOrgAdmin",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Account) IsOrgAdminInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"isOrgAdminInput",
 		&returns,
 	)
 	return returns
@@ -489,8 +526,8 @@ func (j *jsiiProxy_Account) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	return returns
 }
 
-func (j *jsiiProxy_Account) MustChangePassword() interface{} {
-	var returns interface{}
+func (j *jsiiProxy_Account) MustChangePassword() *string {
+	var returns *string
 	_jsii_.Get(
 		j,
 		"mustChangePassword",
@@ -499,8 +536,8 @@ func (j *jsiiProxy_Account) MustChangePassword() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_Account) MustChangePasswordInput() interface{} {
-	var returns interface{}
+func (j *jsiiProxy_Account) MustChangePasswordInput() *string {
+	var returns *string
 	_jsii_.Get(
 		j,
 		"mustChangePasswordInput",
@@ -609,6 +646,16 @@ func (j *jsiiProxy_Account) RegionInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Account) ShowOutput() AccountShowOutputList {
+	var returns AccountShowOutputList
+	_jsii_.Get(
+		j,
+		"showOutput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Account) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -640,7 +687,7 @@ func (j *jsiiProxy_Account) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/resources/account snowflake_account} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/account snowflake_account} Resource.
 func NewAccount(scope constructs.Construct, id *string, config *AccountConfig) Account {
 	_init_.Initialize()
 
@@ -658,7 +705,7 @@ func NewAccount(scope constructs.Construct, id *string, config *AccountConfig) A
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/resources/account snowflake_account} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/account snowflake_account} Resource.
 func NewAccount_Override(a Account, scope constructs.Construct, id *string, config *AccountConfig) {
 	_init_.Initialize()
 
@@ -698,6 +745,17 @@ func (j *jsiiProxy_Account)SetAdminRsaPublicKey(val *string) {
 	_jsii_.Set(
 		j,
 		"adminRsaPublicKey",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Account)SetAdminUserType(val *string) {
+	if err := j.validateSetAdminUserTypeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"adminUserType",
 		val,
 	)
 }
@@ -806,6 +864,17 @@ func (j *jsiiProxy_Account)SetId(val *string) {
 	)
 }
 
+func (j *jsiiProxy_Account)SetIsOrgAdmin(val *string) {
+	if err := j.validateSetIsOrgAdminParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"isOrgAdmin",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Account)SetLastName(val *string) {
 	if err := j.validateSetLastNameParameters(val); err != nil {
 		panic(err)
@@ -828,7 +897,7 @@ func (j *jsiiProxy_Account)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
 	)
 }
 
-func (j *jsiiProxy_Account)SetMustChangePassword(val interface{}) {
+func (j *jsiiProxy_Account)SetMustChangePassword(val *string) {
 	if err := j.validateSetMustChangePasswordParameters(val); err != nil {
 		panic(err)
 	}
@@ -1260,6 +1329,14 @@ func (a *jsiiProxy_Account) ResetAdminRsaPublicKey() {
 	)
 }
 
+func (a *jsiiProxy_Account) ResetAdminUserType() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetAdminUserType",
+		nil, // no parameters
+	)
+}
+
 func (a *jsiiProxy_Account) ResetComment() {
 	_jsii_.InvokeVoid(
 		a,
@@ -1276,18 +1353,18 @@ func (a *jsiiProxy_Account) ResetFirstName() {
 	)
 }
 
-func (a *jsiiProxy_Account) ResetGracePeriodInDays() {
-	_jsii_.InvokeVoid(
-		a,
-		"resetGracePeriodInDays",
-		nil, // no parameters
-	)
-}
-
 func (a *jsiiProxy_Account) ResetId() {
 	_jsii_.InvokeVoid(
 		a,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_Account) ResetIsOrgAdmin() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetIsOrgAdmin",
 		nil, // no parameters
 	)
 }

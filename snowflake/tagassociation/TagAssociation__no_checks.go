@@ -75,10 +75,6 @@ func (t *jsiiProxy_TagAssociation) validateOverrideLogicalIdParameters(newLogica
 	return nil
 }
 
-func (t *jsiiProxy_TagAssociation) validatePutObjectIdentifierParameters(value interface{}) error {
-	return nil
-}
-
 func (t *jsiiProxy_TagAssociation) validatePutTimeoutsParameters(value *TagAssociationTimeouts) error {
 	return nil
 }
@@ -112,6 +108,10 @@ func (j *jsiiProxy_TagAssociation) validateSetIdParameters(val *string) error {
 }
 
 func (j *jsiiProxy_TagAssociation) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
+	return nil
+}
+
+func (j *jsiiProxy_TagAssociation) validateSetObjectIdentifiersParameters(val *[]*string) error {
 	return nil
 }
 

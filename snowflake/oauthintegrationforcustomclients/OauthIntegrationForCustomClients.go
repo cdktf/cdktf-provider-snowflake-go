@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/resources/oauth_integration_for_custom_clients snowflake_oauth_integration_for_custom_clients}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/oauth_integration_for_custom_clients snowflake_oauth_integration_for_custom_clients}.
 type OauthIntegrationForCustomClients interface {
 	cdktf.TerraformResource
 	BlockedRolesList() *[]*string
@@ -105,6 +105,7 @@ type OauthIntegrationForCustomClients interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	RelatedParameters() OauthIntegrationForCustomClientsRelatedParametersList
 	ShowOutput() OauthIntegrationForCustomClientsShowOutputList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
@@ -155,6 +156,7 @@ type OauthIntegrationForCustomClients interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	ResetBlockedRolesList()
 	ResetComment()
 	ResetEnabled()
 	ResetId()
@@ -658,6 +660,16 @@ func (j *jsiiProxy_OauthIntegrationForCustomClients) RawOverrides() interface{} 
 	return returns
 }
 
+func (j *jsiiProxy_OauthIntegrationForCustomClients) RelatedParameters() OauthIntegrationForCustomClientsRelatedParametersList {
+	var returns OauthIntegrationForCustomClientsRelatedParametersList
+	_jsii_.Get(
+		j,
+		"relatedParameters",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_OauthIntegrationForCustomClients) ShowOutput() OauthIntegrationForCustomClientsShowOutputList {
 	var returns OauthIntegrationForCustomClientsShowOutputList
 	_jsii_.Get(
@@ -699,7 +711,7 @@ func (j *jsiiProxy_OauthIntegrationForCustomClients) TerraformResourceType() *st
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/resources/oauth_integration_for_custom_clients snowflake_oauth_integration_for_custom_clients} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/oauth_integration_for_custom_clients snowflake_oauth_integration_for_custom_clients} Resource.
 func NewOauthIntegrationForCustomClients(scope constructs.Construct, id *string, config *OauthIntegrationForCustomClientsConfig) OauthIntegrationForCustomClients {
 	_init_.Initialize()
 
@@ -717,7 +729,7 @@ func NewOauthIntegrationForCustomClients(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/resources/oauth_integration_for_custom_clients snowflake_oauth_integration_for_custom_clients} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/oauth_integration_for_custom_clients snowflake_oauth_integration_for_custom_clients} Resource.
 func NewOauthIntegrationForCustomClients_Override(o OauthIntegrationForCustomClients, scope constructs.Construct, id *string, config *OauthIntegrationForCustomClientsConfig) {
 	_init_.Initialize()
 
@@ -1322,6 +1334,14 @@ func (o *jsiiProxy_OauthIntegrationForCustomClients) OverrideLogicalId(newLogica
 		o,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (o *jsiiProxy_OauthIntegrationForCustomClients) ResetBlockedRolesList() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetBlockedRolesList",
+		nil, // no parameters
 	)
 }
 

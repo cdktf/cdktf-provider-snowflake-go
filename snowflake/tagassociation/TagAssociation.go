@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/resources/tag_association snowflake_tag_association}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/tag_association snowflake_tag_association}.
 type TagAssociation interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -48,8 +48,9 @@ type TagAssociation interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
-	ObjectIdentifier() TagAssociationObjectIdentifierList
-	ObjectIdentifierInput() interface{}
+	ObjectIdentifiers() *[]*string
+	SetObjectIdentifiers(val *[]*string)
+	ObjectIdentifiersInput() *[]*string
 	ObjectName() *string
 	SetObjectName(val *string)
 	ObjectNameInput() *string
@@ -126,7 +127,6 @@ type TagAssociation interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	PutObjectIdentifier(value interface{})
 	PutTimeouts(value *TagAssociationTimeouts)
 	ResetId()
 	ResetObjectName()
@@ -273,21 +273,21 @@ func (j *jsiiProxy_TagAssociation) Node() constructs.Node {
 	return returns
 }
 
-func (j *jsiiProxy_TagAssociation) ObjectIdentifier() TagAssociationObjectIdentifierList {
-	var returns TagAssociationObjectIdentifierList
+func (j *jsiiProxy_TagAssociation) ObjectIdentifiers() *[]*string {
+	var returns *[]*string
 	_jsii_.Get(
 		j,
-		"objectIdentifier",
+		"objectIdentifiers",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_TagAssociation) ObjectIdentifierInput() interface{} {
-	var returns interface{}
+func (j *jsiiProxy_TagAssociation) ObjectIdentifiersInput() *[]*string {
+	var returns *[]*string
 	_jsii_.Get(
 		j,
-		"objectIdentifierInput",
+		"objectIdentifiersInput",
 		&returns,
 	)
 	return returns
@@ -474,7 +474,7 @@ func (j *jsiiProxy_TagAssociation) TimeoutsInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/resources/tag_association snowflake_tag_association} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/tag_association snowflake_tag_association} Resource.
 func NewTagAssociation(scope constructs.Construct, id *string, config *TagAssociationConfig) TagAssociation {
 	_init_.Initialize()
 
@@ -492,7 +492,7 @@ func NewTagAssociation(scope constructs.Construct, id *string, config *TagAssoci
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/resources/tag_association snowflake_tag_association} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/tag_association snowflake_tag_association} Resource.
 func NewTagAssociation_Override(t TagAssociation, scope constructs.Construct, id *string, config *TagAssociationConfig) {
 	_init_.Initialize()
 
@@ -559,6 +559,17 @@ func (j *jsiiProxy_TagAssociation)SetLifecycle(val *cdktf.TerraformResourceLifec
 	_jsii_.Set(
 		j,
 		"lifecycle",
+		val,
+	)
+}
+
+func (j *jsiiProxy_TagAssociation)SetObjectIdentifiers(val *[]*string) {
+	if err := j.validateSetObjectIdentifiersParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"objectIdentifiers",
 		val,
 	)
 }
@@ -987,17 +998,6 @@ func (t *jsiiProxy_TagAssociation) OverrideLogicalId(newLogicalId *string) {
 		t,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
-	)
-}
-
-func (t *jsiiProxy_TagAssociation) PutObjectIdentifier(value interface{}) {
-	if err := t.validatePutObjectIdentifierParameters(value); err != nil {
-		panic(err)
-	}
-	_jsii_.InvokeVoid(
-		t,
-		"putObjectIdentifier",
-		[]interface{}{value},
 	)
 }
 

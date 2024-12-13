@@ -103,6 +103,10 @@ func (j *jsiiProxy_Account) validateSetAdminRsaPublicKeyParameters(val *string) 
 	return nil
 }
 
+func (j *jsiiProxy_Account) validateSetAdminUserTypeParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Account) validateSetCommentParameters(val *string) error {
 	return nil
 }
@@ -135,6 +139,10 @@ func (j *jsiiProxy_Account) validateSetIdParameters(val *string) error {
 	return nil
 }
 
+func (j *jsiiProxy_Account) validateSetIsOrgAdminParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Account) validateSetLastNameParameters(val *string) error {
 	return nil
 }
@@ -143,7 +151,7 @@ func (j *jsiiProxy_Account) validateSetLifecycleParameters(val *cdktf.TerraformR
 	return nil
 }
 
-func (j *jsiiProxy_Account) validateSetMustChangePasswordParameters(val interface{}) error {
+func (j *jsiiProxy_Account) validateSetMustChangePasswordParameters(val *string) error {
 	return nil
 }
 

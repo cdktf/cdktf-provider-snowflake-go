@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/resources/user_authentication_policy_attachment snowflake_user_authentication_policy_attachment}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/user_authentication_policy_attachment snowflake_user_authentication_policy_attachment}.
 type UserAuthenticationPolicyAttachment interface {
 	cdktf.TerraformResource
 	AuthenticationPolicyName() *string
@@ -356,7 +356,7 @@ func (j *jsiiProxy_UserAuthenticationPolicyAttachment) UserNameInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/resources/user_authentication_policy_attachment snowflake_user_authentication_policy_attachment} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/user_authentication_policy_attachment snowflake_user_authentication_policy_attachment} Resource.
 func NewUserAuthenticationPolicyAttachment(scope constructs.Construct, id *string, config *UserAuthenticationPolicyAttachmentConfig) UserAuthenticationPolicyAttachment {
 	_init_.Initialize()
 
@@ -374,7 +374,7 @@ func NewUserAuthenticationPolicyAttachment(scope constructs.Construct, id *strin
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/resources/user_authentication_policy_attachment snowflake_user_authentication_policy_attachment} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/user_authentication_policy_attachment snowflake_user_authentication_policy_attachment} Resource.
 func NewUserAuthenticationPolicyAttachment_Override(u UserAuthenticationPolicyAttachment, scope constructs.Construct, id *string, config *UserAuthenticationPolicyAttachmentConfig) {
 	_init_.Initialize()
 

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/data-sources/accounts snowflake_accounts}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/data-sources/accounts snowflake_accounts}.
 type DataSnowflakeAccounts interface {
 	cdktf.TerraformDataSource
 	Accounts() DataSnowflakeAccountsAccountsList
@@ -43,11 +43,11 @@ type DataSnowflakeAccounts interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	Like() *string
+	SetLike(val *string)
+	LikeInput() *string
 	// The tree node.
 	Node() constructs.Node
-	Pattern() *string
-	SetPattern(val *string)
-	PatternInput() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -60,6 +60,9 @@ type DataSnowflakeAccounts interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	WithHistory() interface{}
+	SetWithHistory(val interface{})
+	WithHistoryInput() interface{}
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -86,10 +89,11 @@ type DataSnowflakeAccounts interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	ResetId()
+	ResetLike()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
-	ResetPattern()
+	ResetWithHistory()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Adds this resource to the terraform JSON output.
@@ -219,31 +223,31 @@ func (j *jsiiProxy_DataSnowflakeAccounts) Lifecycle() *cdktf.TerraformResourceLi
 	return returns
 }
 
+func (j *jsiiProxy_DataSnowflakeAccounts) Like() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"like",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeAccounts) LikeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"likeInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataSnowflakeAccounts) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
 		j,
 		"node",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeAccounts) Pattern() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"pattern",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeAccounts) PatternInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"patternInput",
 		&returns,
 	)
 	return returns
@@ -299,8 +303,28 @@ func (j *jsiiProxy_DataSnowflakeAccounts) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataSnowflakeAccounts) WithHistory() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"withHistory",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/data-sources/accounts snowflake_accounts} Data Source.
+func (j *jsiiProxy_DataSnowflakeAccounts) WithHistoryInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"withHistoryInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/data-sources/accounts snowflake_accounts} Data Source.
 func NewDataSnowflakeAccounts(scope constructs.Construct, id *string, config *DataSnowflakeAccountsConfig) DataSnowflakeAccounts {
 	_init_.Initialize()
 
@@ -318,7 +342,7 @@ func NewDataSnowflakeAccounts(scope constructs.Construct, id *string, config *Da
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/data-sources/accounts snowflake_accounts} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/data-sources/accounts snowflake_accounts} Data Source.
 func NewDataSnowflakeAccounts_Override(d DataSnowflakeAccounts, scope constructs.Construct, id *string, config *DataSnowflakeAccountsConfig) {
 	_init_.Initialize()
 
@@ -378,13 +402,13 @@ func (j *jsiiProxy_DataSnowflakeAccounts)SetLifecycle(val *cdktf.TerraformResour
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeAccounts)SetPattern(val *string) {
-	if err := j.validateSetPatternParameters(val); err != nil {
+func (j *jsiiProxy_DataSnowflakeAccounts)SetLike(val *string) {
+	if err := j.validateSetLikeParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
-		"pattern",
+		"like",
 		val,
 	)
 }
@@ -393,6 +417,17 @@ func (j *jsiiProxy_DataSnowflakeAccounts)SetProvider(val cdktf.TerraformProvider
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataSnowflakeAccounts)SetWithHistory(val interface{}) {
+	if err := j.validateSetWithHistoryParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"withHistory",
 		val,
 	)
 }
@@ -690,6 +725,14 @@ func (d *jsiiProxy_DataSnowflakeAccounts) ResetId() {
 	)
 }
 
+func (d *jsiiProxy_DataSnowflakeAccounts) ResetLike() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetLike",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DataSnowflakeAccounts) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		d,
@@ -698,10 +741,10 @@ func (d *jsiiProxy_DataSnowflakeAccounts) ResetOverrideLogicalId() {
 	)
 }
 
-func (d *jsiiProxy_DataSnowflakeAccounts) ResetPattern() {
+func (d *jsiiProxy_DataSnowflakeAccounts) ResetWithHistory() {
 	_jsii_.InvokeVoid(
 		d,
-		"resetPattern",
+		"resetWithHistory",
 		nil, // no parameters
 	)
 }

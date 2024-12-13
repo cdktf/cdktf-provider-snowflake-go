@@ -271,6 +271,14 @@ func (j *jsiiProxy_Account) validateSetAdminRsaPublicKeyParameters(val *string) 
 	return nil
 }
 
+func (j *jsiiProxy_Account) validateSetAdminUserTypeParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_Account) validateSetCommentParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -409,6 +417,14 @@ func (j *jsiiProxy_Account) validateSetIdParameters(val *string) error {
 	return nil
 }
 
+func (j *jsiiProxy_Account) validateSetIsOrgAdminParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_Account) validateSetLastNameParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -425,21 +441,9 @@ func (j *jsiiProxy_Account) validateSetLifecycleParameters(val *cdktf.TerraformR
 	return nil
 }
 
-func (j *jsiiProxy_Account) validateSetMustChangePasswordParameters(val interface{}) error {
+func (j *jsiiProxy_Account) validateSetMustChangePasswordParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
-	}
-	switch val.(type) {
-	case *bool:
-		// ok
-	case bool:
-		// ok
-	case cdktf.IResolvable:
-		// ok
-	default:
-		if !_jsii_.IsAnonymousProxy(val) {
-			return fmt.Errorf("parameter val must be one of the allowed types: *bool, cdktf.IResolvable; received %#v (a %T)", val, val)
-		}
 	}
 
 	return nil

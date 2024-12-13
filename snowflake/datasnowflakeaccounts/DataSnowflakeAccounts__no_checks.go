@@ -83,7 +83,11 @@ func (j *jsiiProxy_DataSnowflakeAccounts) validateSetLifecycleParameters(val *cd
 	return nil
 }
 
-func (j *jsiiProxy_DataSnowflakeAccounts) validateSetPatternParameters(val *string) error {
+func (j *jsiiProxy_DataSnowflakeAccounts) validateSetLikeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataSnowflakeAccounts) validateSetWithHistoryParameters(val interface{}) error {
 	return nil
 }
 

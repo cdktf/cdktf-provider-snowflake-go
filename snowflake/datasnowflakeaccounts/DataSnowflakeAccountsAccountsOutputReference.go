@@ -13,11 +13,6 @@ import (
 
 type DataSnowflakeAccountsAccountsOutputReference interface {
 	cdktf.ComplexObject
-	AccountLocator() *string
-	AccountLocatorUrl() *string
-	AccountName() *string
-	AccountUrl() *string
-	Comment() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -28,26 +23,16 @@ type DataSnowflakeAccountsAccountsOutputReference interface {
 	ComplexObjectIsFromSet() *bool
 	// Experimental.
 	SetComplexObjectIsFromSet(val *bool)
-	ConsumptionBillingEntityName() *string
-	CreatedOn() *string
 	// The creation stack of this resolvable which will be appended to errors thrown during resolution.
 	//
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
-	Edition() *string
 	// Experimental.
 	Fqn() *string
 	InternalValue() *DataSnowflakeAccountsAccounts
 	SetInternalValue(val *DataSnowflakeAccountsAccounts)
-	IsOrgAdmin() cdktf.IResolvable
-	ManagedAccounts() *float64
-	MarketplaceConsumerBillingEntityName() *string
-	MarketplaceProviderBillingEntityName() *string
-	OldAccountUrl() *string
-	OrganizationName() *string
-	RegionGroup() *string
-	SnowflakeRegion() *string
+	ShowOutput() DataSnowflakeAccountsAccountsShowOutputList
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -95,56 +80,6 @@ type jsiiProxy_DataSnowflakeAccountsAccountsOutputReference struct {
 	internal.Type__cdktfComplexObject
 }
 
-func (j *jsiiProxy_DataSnowflakeAccountsAccountsOutputReference) AccountLocator() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"accountLocator",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeAccountsAccountsOutputReference) AccountLocatorUrl() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"accountLocatorUrl",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeAccountsAccountsOutputReference) AccountName() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"accountName",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeAccountsAccountsOutputReference) AccountUrl() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"accountUrl",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeAccountsAccountsOutputReference) Comment() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"comment",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataSnowflakeAccountsAccountsOutputReference) ComplexObjectIndex() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -165,41 +100,11 @@ func (j *jsiiProxy_DataSnowflakeAccountsAccountsOutputReference) ComplexObjectIs
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeAccountsAccountsOutputReference) ConsumptionBillingEntityName() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"consumptionBillingEntityName",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeAccountsAccountsOutputReference) CreatedOn() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"createdOn",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataSnowflakeAccountsAccountsOutputReference) CreationStack() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
 		"creationStack",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeAccountsAccountsOutputReference) Edition() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"edition",
 		&returns,
 	)
 	return returns
@@ -225,81 +130,11 @@ func (j *jsiiProxy_DataSnowflakeAccountsAccountsOutputReference) InternalValue()
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeAccountsAccountsOutputReference) IsOrgAdmin() cdktf.IResolvable {
-	var returns cdktf.IResolvable
+func (j *jsiiProxy_DataSnowflakeAccountsAccountsOutputReference) ShowOutput() DataSnowflakeAccountsAccountsShowOutputList {
+	var returns DataSnowflakeAccountsAccountsShowOutputList
 	_jsii_.Get(
 		j,
-		"isOrgAdmin",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeAccountsAccountsOutputReference) ManagedAccounts() *float64 {
-	var returns *float64
-	_jsii_.Get(
-		j,
-		"managedAccounts",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeAccountsAccountsOutputReference) MarketplaceConsumerBillingEntityName() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"marketplaceConsumerBillingEntityName",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeAccountsAccountsOutputReference) MarketplaceProviderBillingEntityName() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"marketplaceProviderBillingEntityName",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeAccountsAccountsOutputReference) OldAccountUrl() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"oldAccountUrl",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeAccountsAccountsOutputReference) OrganizationName() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"organizationName",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeAccountsAccountsOutputReference) RegionGroup() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"regionGroup",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeAccountsAccountsOutputReference) SnowflakeRegion() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"snowflakeRegion",
+		"showOutput",
 		&returns,
 	)
 	return returns

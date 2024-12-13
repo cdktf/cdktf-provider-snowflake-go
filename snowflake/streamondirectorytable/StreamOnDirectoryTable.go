@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/resources/stream_on_directory_table snowflake_stream_on_directory_table}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/stream_on_directory_table snowflake_stream_on_directory_table}.
 type StreamOnDirectoryTable interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -505,7 +505,7 @@ func (j *jsiiProxy_StreamOnDirectoryTable) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/resources/stream_on_directory_table snowflake_stream_on_directory_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/stream_on_directory_table snowflake_stream_on_directory_table} Resource.
 func NewStreamOnDirectoryTable(scope constructs.Construct, id *string, config *StreamOnDirectoryTableConfig) StreamOnDirectoryTable {
 	_init_.Initialize()
 
@@ -523,7 +523,7 @@ func NewStreamOnDirectoryTable(scope constructs.Construct, id *string, config *S
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.99.0/docs/resources/stream_on_directory_table snowflake_stream_on_directory_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/stream_on_directory_table snowflake_stream_on_directory_table} Resource.
 func NewStreamOnDirectoryTable_Override(s StreamOnDirectoryTable, scope constructs.Construct, id *string, config *StreamOnDirectoryTableConfig) {
 	_init_.Initialize()
 
