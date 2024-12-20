@@ -5,14 +5,14 @@ package dynamictable
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/dynamictable/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/dynamictable/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/dynamic_table snowflake_dynamic_table}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/dynamic_table snowflake_dynamic_table}.
 type DynamicTable interface {
 	cdktf.TerraformResource
 	AutomaticClustering() cdktf.IResolvable
@@ -687,7 +687,7 @@ func (j *jsiiProxy_DynamicTable) WarehouseInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/dynamic_table snowflake_dynamic_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/dynamic_table snowflake_dynamic_table} Resource.
 func NewDynamicTable(scope constructs.Construct, id *string, config *DynamicTableConfig) DynamicTable {
 	_init_.Initialize()
 
@@ -705,7 +705,7 @@ func NewDynamicTable(scope constructs.Construct, id *string, config *DynamicTabl
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/dynamic_table snowflake_dynamic_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/dynamic_table snowflake_dynamic_table} Resource.
 func NewDynamicTable_Override(d DynamicTable, scope constructs.Construct, id *string, config *DynamicTableConfig) {
 	_init_.Initialize()
 

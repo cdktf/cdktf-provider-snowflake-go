@@ -24,13 +24,13 @@ type GrantApplicationRoleConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Specifies the identifier for the application role to grant.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/grant_application_role#application_role_name GrantApplicationRole#application_role_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/grant_application_role#application_role_name GrantApplicationRole#application_role_name}
 	ApplicationRoleName *string `field:"required" json:"applicationRoleName" yaml:"applicationRoleName"`
 	// The fully qualified name of the application on which application role will be granted.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/grant_application_role#application_name GrantApplicationRole#application_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/grant_application_role#application_name GrantApplicationRole#application_name}
 	ApplicationName *string `field:"optional" json:"applicationName" yaml:"applicationName"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/grant_application_role#id GrantApplicationRole#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/grant_application_role#id GrantApplicationRole#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -39,7 +39,7 @@ type GrantApplicationRoleConfig struct {
 	//
 	// For more information about this resource, see [docs](./account_role).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/grant_application_role#parent_account_role_name GrantApplicationRole#parent_account_role_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/grant_application_role#parent_account_role_name GrantApplicationRole#parent_account_role_name}
 	ParentAccountRoleName *string `field:"optional" json:"parentAccountRoleName" yaml:"parentAccountRoleName"`
 }
 

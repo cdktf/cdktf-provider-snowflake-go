@@ -115,10 +115,6 @@ func (j *jsiiProxy_TagAssociation) validateSetObjectIdentifiersParameters(val *[
 	return nil
 }
 
-func (j *jsiiProxy_TagAssociation) validateSetObjectNameParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_TagAssociation) validateSetObjectTypeParameters(val *string) error {
 	return nil
 }

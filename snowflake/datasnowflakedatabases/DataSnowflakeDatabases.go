@@ -5,14 +5,14 @@ package datasnowflakedatabases
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/datasnowflakedatabases/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/datasnowflakedatabases/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/data-sources/databases snowflake_databases}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/data-sources/databases snowflake_databases}.
 type DataSnowflakeDatabases interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -396,7 +396,7 @@ func (j *jsiiProxy_DataSnowflakeDatabases) WithParametersInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/data-sources/databases snowflake_databases} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/data-sources/databases snowflake_databases} Data Source.
 func NewDataSnowflakeDatabases(scope constructs.Construct, id *string, config *DataSnowflakeDatabasesConfig) DataSnowflakeDatabases {
 	_init_.Initialize()
 
@@ -414,7 +414,7 @@ func NewDataSnowflakeDatabases(scope constructs.Construct, id *string, config *D
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/data-sources/databases snowflake_databases} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/data-sources/databases snowflake_databases} Data Source.
 func NewDataSnowflakeDatabases_Override(d DataSnowflakeDatabases, scope constructs.Construct, id *string, config *DataSnowflakeDatabasesConfig) {
 	_init_.Initialize()
 

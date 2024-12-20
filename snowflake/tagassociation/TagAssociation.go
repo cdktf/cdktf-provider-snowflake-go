@@ -5,14 +5,14 @@ package tagassociation
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/tagassociation/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/tagassociation/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/tag_association snowflake_tag_association}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/tag_association snowflake_tag_association}.
 type TagAssociation interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -51,9 +51,6 @@ type TagAssociation interface {
 	ObjectIdentifiers() *[]*string
 	SetObjectIdentifiers(val *[]*string)
 	ObjectIdentifiersInput() *[]*string
-	ObjectName() *string
-	SetObjectName(val *string)
-	ObjectNameInput() *string
 	ObjectType() *string
 	SetObjectType(val *string)
 	ObjectTypeInput() *string
@@ -129,7 +126,6 @@ type TagAssociation interface {
 	OverrideLogicalId(newLogicalId *string)
 	PutTimeouts(value *TagAssociationTimeouts)
 	ResetId()
-	ResetObjectName()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -288,26 +284,6 @@ func (j *jsiiProxy_TagAssociation) ObjectIdentifiersInput() *[]*string {
 	_jsii_.Get(
 		j,
 		"objectIdentifiersInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_TagAssociation) ObjectName() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"objectName",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_TagAssociation) ObjectNameInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"objectNameInput",
 		&returns,
 	)
 	return returns
@@ -474,7 +450,7 @@ func (j *jsiiProxy_TagAssociation) TimeoutsInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/tag_association snowflake_tag_association} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/tag_association snowflake_tag_association} Resource.
 func NewTagAssociation(scope constructs.Construct, id *string, config *TagAssociationConfig) TagAssociation {
 	_init_.Initialize()
 
@@ -492,7 +468,7 @@ func NewTagAssociation(scope constructs.Construct, id *string, config *TagAssoci
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/tag_association snowflake_tag_association} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/tag_association snowflake_tag_association} Resource.
 func NewTagAssociation_Override(t TagAssociation, scope constructs.Construct, id *string, config *TagAssociationConfig) {
 	_init_.Initialize()
 
@@ -570,17 +546,6 @@ func (j *jsiiProxy_TagAssociation)SetObjectIdentifiers(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"objectIdentifiers",
-		val,
-	)
-}
-
-func (j *jsiiProxy_TagAssociation)SetObjectName(val *string) {
-	if err := j.validateSetObjectNameParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"objectName",
 		val,
 	)
 }
@@ -1016,14 +981,6 @@ func (t *jsiiProxy_TagAssociation) ResetId() {
 	_jsii_.InvokeVoid(
 		t,
 		"resetId",
-		nil, // no parameters
-	)
-}
-
-func (t *jsiiProxy_TagAssociation) ResetObjectName() {
-	_jsii_.InvokeVoid(
-		t,
-		"resetObjectName",
 		nil, // no parameters
 	)
 }

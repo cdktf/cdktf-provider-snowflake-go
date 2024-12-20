@@ -5,14 +5,14 @@ package procedurejava
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/procedurejava/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/procedurejava/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/procedure_java snowflake_procedure_java}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/procedure_java snowflake_procedure_java}.
 type ProcedureJava interface {
 	cdktf.TerraformResource
 	Arguments() ProcedureJavaArgumentsList
@@ -875,7 +875,7 @@ func (j *jsiiProxy_ProcedureJava) TraceLevelInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/procedure_java snowflake_procedure_java} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/procedure_java snowflake_procedure_java} Resource.
 func NewProcedureJava(scope constructs.Construct, id *string, config *ProcedureJavaConfig) ProcedureJava {
 	_init_.Initialize()
 
@@ -893,7 +893,7 @@ func NewProcedureJava(scope constructs.Construct, id *string, config *ProcedureJ
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/procedure_java snowflake_procedure_java} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/procedure_java snowflake_procedure_java} Resource.
 func NewProcedureJava_Override(p ProcedureJava, scope constructs.Construct, id *string, config *ProcedureJavaConfig) {
 	_init_.Initialize()
 

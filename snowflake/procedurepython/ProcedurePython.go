@@ -5,14 +5,14 @@ package procedurepython
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/procedurepython/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/procedurepython/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/procedure_python snowflake_procedure_python}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/procedure_python snowflake_procedure_python}.
 type ProcedurePython interface {
 	cdktf.TerraformResource
 	Arguments() ProcedurePythonArgumentsList
@@ -851,7 +851,7 @@ func (j *jsiiProxy_ProcedurePython) TraceLevelInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/procedure_python snowflake_procedure_python} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/procedure_python snowflake_procedure_python} Resource.
 func NewProcedurePython(scope constructs.Construct, id *string, config *ProcedurePythonConfig) ProcedurePython {
 	_init_.Initialize()
 
@@ -869,7 +869,7 @@ func NewProcedurePython(scope constructs.Construct, id *string, config *Procedur
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/procedure_python snowflake_procedure_python} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/procedure_python snowflake_procedure_python} Resource.
 func NewProcedurePython_Override(p ProcedurePython, scope constructs.Construct, id *string, config *ProcedurePythonConfig) {
 	_init_.Initialize()
 

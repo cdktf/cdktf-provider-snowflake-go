@@ -5,14 +5,14 @@ package functionjavascript
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/functionjavascript/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/functionjavascript/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/function_javascript snowflake_function_javascript}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/function_javascript snowflake_function_javascript}.
 type FunctionJavascript interface {
 	cdktf.TerraformResource
 	Arguments() FunctionJavascriptArgumentsList
@@ -685,7 +685,7 @@ func (j *jsiiProxy_FunctionJavascript) TraceLevelInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/function_javascript snowflake_function_javascript} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/function_javascript snowflake_function_javascript} Resource.
 func NewFunctionJavascript(scope constructs.Construct, id *string, config *FunctionJavascriptConfig) FunctionJavascript {
 	_init_.Initialize()
 
@@ -703,7 +703,7 @@ func NewFunctionJavascript(scope constructs.Construct, id *string, config *Funct
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/function_javascript snowflake_function_javascript} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/function_javascript snowflake_function_javascript} Resource.
 func NewFunctionJavascript_Override(f FunctionJavascript, scope constructs.Construct, id *string, config *FunctionJavascriptConfig) {
 	_init_.Initialize()
 

@@ -5,14 +5,14 @@ package datasnowflakeaccountroles
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/datasnowflakeaccountroles/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/datasnowflakeaccountroles/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/data-sources/account_roles snowflake_account_roles}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/data-sources/account_roles snowflake_account_roles}.
 type DataSnowflakeAccountRoles interface {
 	cdktf.TerraformDataSource
 	AccountRoles() DataSnowflakeAccountRolesAccountRolesList
@@ -324,7 +324,7 @@ func (j *jsiiProxy_DataSnowflakeAccountRoles) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/data-sources/account_roles snowflake_account_roles} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/data-sources/account_roles snowflake_account_roles} Data Source.
 func NewDataSnowflakeAccountRoles(scope constructs.Construct, id *string, config *DataSnowflakeAccountRolesConfig) DataSnowflakeAccountRoles {
 	_init_.Initialize()
 
@@ -342,7 +342,7 @@ func NewDataSnowflakeAccountRoles(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/data-sources/account_roles snowflake_account_roles} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/data-sources/account_roles snowflake_account_roles} Data Source.
 func NewDataSnowflakeAccountRoles_Override(d DataSnowflakeAccountRoles, scope constructs.Construct, id *string, config *DataSnowflakeAccountRolesConfig) {
 	_init_.Initialize()
 

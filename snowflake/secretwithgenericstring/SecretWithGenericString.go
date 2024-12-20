@@ -5,14 +5,14 @@ package secretwithgenericstring
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/secretwithgenericstring/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/secretwithgenericstring/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/secret_with_generic_string snowflake_secret_with_generic_string}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/secret_with_generic_string snowflake_secret_with_generic_string}.
 type SecretWithGenericString interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -470,7 +470,7 @@ func (j *jsiiProxy_SecretWithGenericString) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/secret_with_generic_string snowflake_secret_with_generic_string} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/secret_with_generic_string snowflake_secret_with_generic_string} Resource.
 func NewSecretWithGenericString(scope constructs.Construct, id *string, config *SecretWithGenericStringConfig) SecretWithGenericString {
 	_init_.Initialize()
 
@@ -488,7 +488,7 @@ func NewSecretWithGenericString(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/secret_with_generic_string snowflake_secret_with_generic_string} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/secret_with_generic_string snowflake_secret_with_generic_string} Resource.
 func NewSecretWithGenericString_Override(s SecretWithGenericString, scope constructs.Construct, id *string, config *SecretWithGenericStringConfig) {
 	_init_.Initialize()
 

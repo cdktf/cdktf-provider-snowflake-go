@@ -5,14 +5,14 @@ package streamlit
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/streamlit/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/streamlit/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/streamlit snowflake_streamlit}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/streamlit snowflake_streamlit}.
 type Streamlit interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -578,7 +578,7 @@ func (j *jsiiProxy_Streamlit) TitleInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/streamlit snowflake_streamlit} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/streamlit snowflake_streamlit} Resource.
 func NewStreamlit(scope constructs.Construct, id *string, config *StreamlitConfig) Streamlit {
 	_init_.Initialize()
 
@@ -596,7 +596,7 @@ func NewStreamlit(scope constructs.Construct, id *string, config *StreamlitConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/streamlit snowflake_streamlit} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/streamlit snowflake_streamlit} Resource.
 func NewStreamlit_Override(s Streamlit, scope constructs.Construct, id *string, config *StreamlitConfig) {
 	_init_.Initialize()
 

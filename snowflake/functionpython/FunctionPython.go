@@ -5,14 +5,14 @@ package functionpython
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/functionpython/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/functionpython/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/function_python snowflake_function_python}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/function_python snowflake_function_python}.
 type FunctionPython interface {
 	cdktf.TerraformResource
 	Arguments() FunctionPythonArgumentsList
@@ -852,7 +852,7 @@ func (j *jsiiProxy_FunctionPython) TraceLevelInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/function_python snowflake_function_python} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/function_python snowflake_function_python} Resource.
 func NewFunctionPython(scope constructs.Construct, id *string, config *FunctionPythonConfig) FunctionPython {
 	_init_.Initialize()
 
@@ -870,7 +870,7 @@ func NewFunctionPython(scope constructs.Construct, id *string, config *FunctionP
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/function_python snowflake_function_python} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/function_python snowflake_function_python} Resource.
 func NewFunctionPython_Override(f FunctionPython, scope constructs.Construct, id *string, config *FunctionPythonConfig) {
 	_init_.Initialize()
 

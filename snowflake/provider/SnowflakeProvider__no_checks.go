@@ -31,10 +31,6 @@ func validateSnowflakeProvider_IsTerraformProviderParameters(x interface{}) erro
 	return nil
 }
 
-func (j *jsiiProxy_SnowflakeProvider) validateSetBrowserAuthParameters(val interface{}) error {
-	return nil
-}
-
 func (j *jsiiProxy_SnowflakeProvider) validateSetDisableQueryContextCacheParameters(val interface{}) error {
 	return nil
 }

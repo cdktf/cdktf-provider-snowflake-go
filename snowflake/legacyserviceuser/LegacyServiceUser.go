@@ -5,14 +5,14 @@ package legacyserviceuser
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/legacyserviceuser/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/legacyserviceuser/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/legacy_service_user snowflake_legacy_service_user}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/legacy_service_user snowflake_legacy_service_user}.
 type LegacyServiceUser interface {
 	cdktf.TerraformResource
 	AbortDetachedQuery() interface{}
@@ -2129,7 +2129,7 @@ func (j *jsiiProxy_LegacyServiceUser) WeekStartInput() *float64 {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/legacy_service_user snowflake_legacy_service_user} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/legacy_service_user snowflake_legacy_service_user} Resource.
 func NewLegacyServiceUser(scope constructs.Construct, id *string, config *LegacyServiceUserConfig) LegacyServiceUser {
 	_init_.Initialize()
 
@@ -2147,7 +2147,7 @@ func NewLegacyServiceUser(scope constructs.Construct, id *string, config *Legacy
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/legacy_service_user snowflake_legacy_service_user} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/legacy_service_user snowflake_legacy_service_user} Resource.
 func NewLegacyServiceUser_Override(l LegacyServiceUser, scope constructs.Construct, id *string, config *LegacyServiceUserConfig) {
 	_init_.Initialize()
 

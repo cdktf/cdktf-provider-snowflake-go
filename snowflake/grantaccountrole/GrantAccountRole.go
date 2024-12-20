@@ -5,14 +5,14 @@ package grantaccountrole
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/grantaccountrole/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/grantaccountrole/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/grant_account_role snowflake_grant_account_role}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/grant_account_role snowflake_grant_account_role}.
 type GrantAccountRole interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -381,7 +381,7 @@ func (j *jsiiProxy_GrantAccountRole) UserNameInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/grant_account_role snowflake_grant_account_role} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/grant_account_role snowflake_grant_account_role} Resource.
 func NewGrantAccountRole(scope constructs.Construct, id *string, config *GrantAccountRoleConfig) GrantAccountRole {
 	_init_.Initialize()
 
@@ -399,7 +399,7 @@ func NewGrantAccountRole(scope constructs.Construct, id *string, config *GrantAc
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/grant_account_role snowflake_grant_account_role} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/grant_account_role snowflake_grant_account_role} Resource.
 func NewGrantAccountRole_Override(g GrantAccountRole, scope constructs.Construct, id *string, config *GrantAccountRoleConfig) {
 	_init_.Initialize()
 

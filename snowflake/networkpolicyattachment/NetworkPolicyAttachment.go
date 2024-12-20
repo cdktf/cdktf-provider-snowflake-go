@@ -5,14 +5,14 @@ package networkpolicyattachment
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/networkpolicyattachment/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/networkpolicyattachment/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/network_policy_attachment snowflake_network_policy_attachment}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/network_policy_attachment snowflake_network_policy_attachment}.
 type NetworkPolicyAttachment interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -381,7 +381,7 @@ func (j *jsiiProxy_NetworkPolicyAttachment) UsersInput() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/network_policy_attachment snowflake_network_policy_attachment} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/network_policy_attachment snowflake_network_policy_attachment} Resource.
 func NewNetworkPolicyAttachment(scope constructs.Construct, id *string, config *NetworkPolicyAttachmentConfig) NetworkPolicyAttachment {
 	_init_.Initialize()
 
@@ -399,7 +399,7 @@ func NewNetworkPolicyAttachment(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/network_policy_attachment snowflake_network_policy_attachment} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/network_policy_attachment snowflake_network_policy_attachment} Resource.
 func NewNetworkPolicyAttachment_Override(n NetworkPolicyAttachment, scope constructs.Construct, id *string, config *NetworkPolicyAttachmentConfig) {
 	_init_.Initialize()
 

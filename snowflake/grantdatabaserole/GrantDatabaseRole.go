@@ -5,14 +5,14 @@ package grantdatabaserole
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/grantdatabaserole/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/grantdatabaserole/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/grant_database_role snowflake_grant_database_role}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/grant_database_role snowflake_grant_database_role}.
 type GrantDatabaseRole interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -405,7 +405,7 @@ func (j *jsiiProxy_GrantDatabaseRole) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/grant_database_role snowflake_grant_database_role} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/grant_database_role snowflake_grant_database_role} Resource.
 func NewGrantDatabaseRole(scope constructs.Construct, id *string, config *GrantDatabaseRoleConfig) GrantDatabaseRole {
 	_init_.Initialize()
 
@@ -423,7 +423,7 @@ func NewGrantDatabaseRole(scope constructs.Construct, id *string, config *GrantD
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/grant_database_role snowflake_grant_database_role} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/grant_database_role snowflake_grant_database_role} Resource.
 func NewGrantDatabaseRole_Override(g GrantDatabaseRole, scope constructs.Construct, id *string, config *GrantDatabaseRoleConfig) {
 	_init_.Initialize()
 

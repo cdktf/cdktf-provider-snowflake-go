@@ -5,14 +5,14 @@ package authenticationpolicy
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/authenticationpolicy/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/authenticationpolicy/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/authentication_policy snowflake_authentication_policy}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/authentication_policy snowflake_authentication_policy}.
 type AuthenticationPolicy interface {
 	cdktf.TerraformResource
 	AuthenticationMethods() *[]*string
@@ -556,7 +556,7 @@ func (j *jsiiProxy_AuthenticationPolicy) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/authentication_policy snowflake_authentication_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/authentication_policy snowflake_authentication_policy} Resource.
 func NewAuthenticationPolicy(scope constructs.Construct, id *string, config *AuthenticationPolicyConfig) AuthenticationPolicy {
 	_init_.Initialize()
 
@@ -574,7 +574,7 @@ func NewAuthenticationPolicy(scope constructs.Construct, id *string, config *Aut
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/authentication_policy snowflake_authentication_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/authentication_policy snowflake_authentication_policy} Resource.
 func NewAuthenticationPolicy_Override(a AuthenticationPolicy, scope constructs.Construct, id *string, config *AuthenticationPolicyConfig) {
 	_init_.Initialize()
 

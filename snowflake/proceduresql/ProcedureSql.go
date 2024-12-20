@@ -5,14 +5,14 @@ package proceduresql
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/proceduresql/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/proceduresql/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/procedure_sql snowflake_procedure_sql}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/procedure_sql snowflake_procedure_sql}.
 type ProcedureSql interface {
 	cdktf.TerraformResource
 	Arguments() ProcedureSqlArgumentsList
@@ -685,7 +685,7 @@ func (j *jsiiProxy_ProcedureSql) TraceLevelInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/procedure_sql snowflake_procedure_sql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/procedure_sql snowflake_procedure_sql} Resource.
 func NewProcedureSql(scope constructs.Construct, id *string, config *ProcedureSqlConfig) ProcedureSql {
 	_init_.Initialize()
 
@@ -703,7 +703,7 @@ func NewProcedureSql(scope constructs.Construct, id *string, config *ProcedureSq
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/procedure_sql snowflake_procedure_sql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/procedure_sql snowflake_procedure_sql} Resource.
 func NewProcedureSql_Override(p ProcedureSql, scope constructs.Construct, id *string, config *ProcedureSqlConfig) {
 	_init_.Initialize()
 

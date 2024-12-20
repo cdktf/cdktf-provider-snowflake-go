@@ -5,14 +5,14 @@ package primaryconnection
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/primaryconnection/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/primaryconnection/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/primary_connection snowflake_primary_connection}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/primary_connection snowflake_primary_connection}.
 type PrimaryConnection interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -414,7 +414,7 @@ func (j *jsiiProxy_PrimaryConnection) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/primary_connection snowflake_primary_connection} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/primary_connection snowflake_primary_connection} Resource.
 func NewPrimaryConnection(scope constructs.Construct, id *string, config *PrimaryConnectionConfig) PrimaryConnection {
 	_init_.Initialize()
 
@@ -432,7 +432,7 @@ func NewPrimaryConnection(scope constructs.Construct, id *string, config *Primar
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/primary_connection snowflake_primary_connection} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/primary_connection snowflake_primary_connection} Resource.
 func NewPrimaryConnection_Override(p PrimaryConnection, scope constructs.Construct, id *string, config *PrimaryConnectionConfig) {
 	_init_.Initialize()
 

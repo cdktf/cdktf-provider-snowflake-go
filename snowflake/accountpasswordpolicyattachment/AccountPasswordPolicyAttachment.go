@@ -5,14 +5,14 @@ package accountpasswordpolicyattachment
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v11/accountpasswordpolicyattachment/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/accountpasswordpolicyattachment/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/account_password_policy_attachment snowflake_account_password_policy_attachment}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/account_password_policy_attachment snowflake_account_password_policy_attachment}.
 type AccountPasswordPolicyAttachment interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -333,7 +333,7 @@ func (j *jsiiProxy_AccountPasswordPolicyAttachment) TerraformResourceType() *str
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/account_password_policy_attachment snowflake_account_password_policy_attachment} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/account_password_policy_attachment snowflake_account_password_policy_attachment} Resource.
 func NewAccountPasswordPolicyAttachment(scope constructs.Construct, id *string, config *AccountPasswordPolicyAttachmentConfig) AccountPasswordPolicyAttachment {
 	_init_.Initialize()
 
@@ -351,7 +351,7 @@ func NewAccountPasswordPolicyAttachment(scope constructs.Construct, id *string, 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/0.100.0/docs/resources/account_password_policy_attachment snowflake_account_password_policy_attachment} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/account_password_policy_attachment snowflake_account_password_policy_attachment} Resource.
 func NewAccountPasswordPolicyAttachment_Override(a AccountPasswordPolicyAttachment, scope constructs.Construct, id *string, config *AccountPasswordPolicyAttachmentConfig) {
 	_init_.Initialize()
 
