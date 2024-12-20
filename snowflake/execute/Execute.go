@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/execute snowflake_execute}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.1/docs/resources/execute snowflake_execute}.
 type Execute interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -391,7 +391,7 @@ func (j *jsiiProxy_Execute) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/execute snowflake_execute} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.1/docs/resources/execute snowflake_execute} Resource.
 func NewExecute(scope constructs.Construct, id *string, config *ExecuteConfig) Execute {
 	_init_.Initialize()
 
@@ -409,7 +409,7 @@ func NewExecute(scope constructs.Construct, id *string, config *ExecuteConfig) E
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/execute snowflake_execute} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.1/docs/resources/execute snowflake_execute} Resource.
 func NewExecute_Override(e Execute, scope constructs.Construct, id *string, config *ExecuteConfig) {
 	_init_.Initialize()
 

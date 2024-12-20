@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/stream_on_table snowflake_stream_on_table}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.1/docs/resources/stream_on_table snowflake_stream_on_table}.
 type StreamOnTable interface {
 	cdktf.TerraformResource
 	AppendOnly() *string
@@ -601,7 +601,7 @@ func (j *jsiiProxy_StreamOnTable) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/stream_on_table snowflake_stream_on_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.1/docs/resources/stream_on_table snowflake_stream_on_table} Resource.
 func NewStreamOnTable(scope constructs.Construct, id *string, config *StreamOnTableConfig) StreamOnTable {
 	_init_.Initialize()
 
@@ -619,7 +619,7 @@ func NewStreamOnTable(scope constructs.Construct, id *string, config *StreamOnTa
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.0/docs/resources/stream_on_table snowflake_stream_on_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.1/docs/resources/stream_on_table snowflake_stream_on_table} Resource.
 func NewStreamOnTable_Override(s StreamOnTable, scope constructs.Construct, id *string, config *StreamOnTableConfig) {
 	_init_.Initialize()
 
