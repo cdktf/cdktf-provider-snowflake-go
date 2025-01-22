@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.1/docs/resources/external_volume snowflake_external_volume}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.2/docs/resources/external_volume snowflake_external_volume}.
 type ExternalVolume interface {
 	cdktf.TerraformResource
 	AllowWrites() *string
@@ -437,7 +437,7 @@ func (j *jsiiProxy_ExternalVolume) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.1/docs/resources/external_volume snowflake_external_volume} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.2/docs/resources/external_volume snowflake_external_volume} Resource.
 func NewExternalVolume(scope constructs.Construct, id *string, config *ExternalVolumeConfig) ExternalVolume {
 	_init_.Initialize()
 
@@ -455,7 +455,7 @@ func NewExternalVolume(scope constructs.Construct, id *string, config *ExternalV
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.1/docs/resources/external_volume snowflake_external_volume} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.2/docs/resources/external_volume snowflake_external_volume} Resource.
 func NewExternalVolume_Override(e ExternalVolume, scope constructs.Construct, id *string, config *ExternalVolumeConfig) {
 	_init_.Initialize()
 

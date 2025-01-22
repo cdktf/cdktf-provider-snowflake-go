@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.1/docs/resources/execute snowflake_execute}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.2/docs/resources/execute snowflake_execute}.
 type Execute interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -74,6 +74,8 @@ type Execute interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() ExecuteTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -117,11 +119,13 @@ type Execute interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *ExecuteTimeouts)
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetQuery()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -390,8 +394,28 @@ func (j *jsiiProxy_Execute) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Execute) Timeouts() ExecuteTimeoutsOutputReference {
+	var returns ExecuteTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.1/docs/resources/execute snowflake_execute} Resource.
+func (j *jsiiProxy_Execute) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.2/docs/resources/execute snowflake_execute} Resource.
 func NewExecute(scope constructs.Construct, id *string, config *ExecuteConfig) Execute {
 	_init_.Initialize()
 
@@ -409,7 +433,7 @@ func NewExecute(scope constructs.Construct, id *string, config *ExecuteConfig) E
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.1/docs/resources/execute snowflake_execute} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.2/docs/resources/execute snowflake_execute} Resource.
 func NewExecute_Override(e Execute, scope constructs.Construct, id *string, config *ExecuteConfig) {
 	_init_.Initialize()
 
@@ -885,6 +909,17 @@ func (e *jsiiProxy_Execute) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (e *jsiiProxy_Execute) PutTimeouts(value *ExecuteTimeouts) {
+	if err := e.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (e *jsiiProxy_Execute) ResetId() {
 	_jsii_.InvokeVoid(
 		e,
@@ -905,6 +940,14 @@ func (e *jsiiProxy_Execute) ResetQuery() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetQuery",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_Execute) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }
