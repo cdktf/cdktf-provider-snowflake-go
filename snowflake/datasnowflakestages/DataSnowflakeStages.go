@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.3/docs/data-sources/stages snowflake_stages}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/data-sources/stages snowflake_stages}.
 type DataSnowflakeStages interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -322,7 +322,7 @@ func (j *jsiiProxy_DataSnowflakeStages) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.3/docs/data-sources/stages snowflake_stages} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/data-sources/stages snowflake_stages} Data Source.
 func NewDataSnowflakeStages(scope constructs.Construct, id *string, config *DataSnowflakeStagesConfig) DataSnowflakeStages {
 	_init_.Initialize()
 
@@ -340,7 +340,7 @@ func NewDataSnowflakeStages(scope constructs.Construct, id *string, config *Data
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.3/docs/data-sources/stages snowflake_stages} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/data-sources/stages snowflake_stages} Data Source.
 func NewDataSnowflakeStages_Override(d DataSnowflakeStages, scope constructs.Construct, id *string, config *DataSnowflakeStagesConfig) {
 	_init_.Initialize()
 

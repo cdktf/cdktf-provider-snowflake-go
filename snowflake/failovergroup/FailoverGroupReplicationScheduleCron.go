@@ -9,11 +9,11 @@ type FailoverGroupReplicationScheduleCron struct {
 	//
 	// The cron expression must be in the following format: "minute hour day-of-month month day-of-week". The following values are supported: minute: 0-59 hour: 0-23 day-of-month: 1-31 month: 1-12 day-of-week: 0-6 (0 is Sunday)
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.3/docs/resources/failover_group#expression FailoverGroup#expression}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/resources/failover_group#expression FailoverGroup#expression}
 	Expression *string `field:"required" json:"expression" yaml:"expression"`
 	// Specifies the time zone for secondary group refresh.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.3/docs/resources/failover_group#time_zone FailoverGroup#time_zone}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/resources/failover_group#time_zone FailoverGroup#time_zone}
 	TimeZone *string `field:"required" json:"timeZone" yaml:"timeZone"`
 }
 

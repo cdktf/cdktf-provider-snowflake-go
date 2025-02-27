@@ -7,7 +7,7 @@ package datasnowflakegrants
 type DataSnowflakeGrantsGrantsToShare struct {
 	// Lists all of the privileges and roles granted to the specified share.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.3/docs/data-sources/grants#share_name DataSnowflakeGrants#share_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/data-sources/grants#share_name DataSnowflakeGrants#share_name}
 	ShareName *string `field:"required" json:"shareName" yaml:"shareName"`
 }
 

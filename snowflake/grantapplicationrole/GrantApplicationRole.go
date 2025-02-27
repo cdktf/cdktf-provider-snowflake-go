@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.3/docs/resources/grant_application_role snowflake_grant_application_role}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/resources/grant_application_role snowflake_grant_application_role}.
 type GrantApplicationRole interface {
 	cdktf.TerraformResource
 	ApplicationName() *string
@@ -381,7 +381,7 @@ func (j *jsiiProxy_GrantApplicationRole) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.3/docs/resources/grant_application_role snowflake_grant_application_role} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/resources/grant_application_role snowflake_grant_application_role} Resource.
 func NewGrantApplicationRole(scope constructs.Construct, id *string, config *GrantApplicationRoleConfig) GrantApplicationRole {
 	_init_.Initialize()
 
@@ -399,7 +399,7 @@ func NewGrantApplicationRole(scope constructs.Construct, id *string, config *Gra
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.3/docs/resources/grant_application_role snowflake_grant_application_role} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/resources/grant_application_role snowflake_grant_application_role} Resource.
 func NewGrantApplicationRole_Override(g GrantApplicationRole, scope constructs.Construct, id *string, config *GrantApplicationRoleConfig) {
 	_init_.Initialize()
 

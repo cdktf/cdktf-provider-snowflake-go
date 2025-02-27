@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.3/docs/resources/account_authentication_policy_attachment snowflake_account_authentication_policy_attachment}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/resources/account_authentication_policy_attachment snowflake_account_authentication_policy_attachment}.
 type AccountAuthenticationPolicyAttachment interface {
 	cdktf.TerraformResource
 	AuthenticationPolicy() *string
@@ -333,7 +333,7 @@ func (j *jsiiProxy_AccountAuthenticationPolicyAttachment) TerraformResourceType(
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.3/docs/resources/account_authentication_policy_attachment snowflake_account_authentication_policy_attachment} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/resources/account_authentication_policy_attachment snowflake_account_authentication_policy_attachment} Resource.
 func NewAccountAuthenticationPolicyAttachment(scope constructs.Construct, id *string, config *AccountAuthenticationPolicyAttachmentConfig) AccountAuthenticationPolicyAttachment {
 	_init_.Initialize()
 
@@ -351,7 +351,7 @@ func NewAccountAuthenticationPolicyAttachment(scope constructs.Construct, id *st
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.3/docs/resources/account_authentication_policy_attachment snowflake_account_authentication_policy_attachment} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/resources/account_authentication_policy_attachment snowflake_account_authentication_policy_attachment} Resource.
 func NewAccountAuthenticationPolicyAttachment_Override(a AccountAuthenticationPolicyAttachment, scope constructs.Construct, id *string, config *AccountAuthenticationPolicyAttachmentConfig) {
 	_init_.Initialize()
 
