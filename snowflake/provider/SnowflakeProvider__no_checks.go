@@ -51,6 +51,10 @@ func (j *jsiiProxy_SnowflakeProvider) validateSetPasscodeInPasswordParameters(va
 	return nil
 }
 
+func (j *jsiiProxy_SnowflakeProvider) validateSetSkipTomlFilePermissionVerificationParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_SnowflakeProvider) validateSetTokenAccessorParameters(val *SnowflakeProviderTokenAccessor) error {
 	return nil
 }

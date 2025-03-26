@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/resources/saml2_integration snowflake_saml2_integration}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/saml2_integration snowflake_saml2_integration}.
 type Saml2Integration interface {
 	cdktf.TerraformResource
 	AllowedEmailPatterns() *[]*string
@@ -746,7 +746,7 @@ func (j *jsiiProxy_Saml2Integration) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/resources/saml2_integration snowflake_saml2_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/saml2_integration snowflake_saml2_integration} Resource.
 func NewSaml2Integration(scope constructs.Construct, id *string, config *Saml2IntegrationConfig) Saml2Integration {
 	_init_.Initialize()
 
@@ -764,7 +764,7 @@ func NewSaml2Integration(scope constructs.Construct, id *string, config *Saml2In
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/resources/saml2_integration snowflake_saml2_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/saml2_integration snowflake_saml2_integration} Resource.
 func NewSaml2Integration_Override(s Saml2Integration, scope constructs.Construct, id *string, config *Saml2IntegrationConfig) {
 	_init_.Initialize()
 

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/resources/oauth_integration_for_partner_applications snowflake_oauth_integration_for_partner_applications}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/oauth_integration_for_partner_applications snowflake_oauth_integration_for_partner_applications}.
 type OauthIntegrationForPartnerApplications interface {
 	cdktf.TerraformResource
 	BlockedRolesList() *[]*string
@@ -568,7 +568,7 @@ func (j *jsiiProxy_OauthIntegrationForPartnerApplications) TerraformResourceType
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/resources/oauth_integration_for_partner_applications snowflake_oauth_integration_for_partner_applications} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/oauth_integration_for_partner_applications snowflake_oauth_integration_for_partner_applications} Resource.
 func NewOauthIntegrationForPartnerApplications(scope constructs.Construct, id *string, config *OauthIntegrationForPartnerApplicationsConfig) OauthIntegrationForPartnerApplications {
 	_init_.Initialize()
 
@@ -586,7 +586,7 @@ func NewOauthIntegrationForPartnerApplications(scope constructs.Construct, id *s
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/resources/oauth_integration_for_partner_applications snowflake_oauth_integration_for_partner_applications} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/oauth_integration_for_partner_applications snowflake_oauth_integration_for_partner_applications} Resource.
 func NewOauthIntegrationForPartnerApplications_Override(o OauthIntegrationForPartnerApplications, scope constructs.Construct, id *string, config *OauthIntegrationForPartnerApplicationsConfig) {
 	_init_.Initialize()
 

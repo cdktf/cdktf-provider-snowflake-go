@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs snowflake}.
+// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs snowflake}.
 type SnowflakeProvider interface {
 	cdktf.TerraformProvider
 	AccountName() *string
@@ -134,6 +134,9 @@ type SnowflakeProvider interface {
 	Role() *string
 	SetRole(val *string)
 	RoleInput() *string
+	SkipTomlFilePermissionVerification() interface{}
+	SetSkipTomlFilePermissionVerification(val interface{})
+	SkipTomlFilePermissionVerificationInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -201,6 +204,7 @@ type SnowflakeProvider interface {
 	ResetProtocol()
 	ResetRequestTimeout()
 	ResetRole()
+	ResetSkipTomlFilePermissionVerification()
 	ResetTmpDirectoryPath()
 	ResetToken()
 	ResetTokenAccessor()
@@ -995,6 +999,26 @@ func (j *jsiiProxy_SnowflakeProvider) RoleInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_SnowflakeProvider) SkipTomlFilePermissionVerification() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"skipTomlFilePermissionVerification",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) SkipTomlFilePermissionVerificationInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"skipTomlFilePermissionVerificationInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_SnowflakeProvider) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -1146,7 +1170,7 @@ func (j *jsiiProxy_SnowflakeProvider) WarehouseInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs snowflake} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs snowflake} Resource.
 func NewSnowflakeProvider(scope constructs.Construct, id *string, config *SnowflakeProviderConfig) SnowflakeProvider {
 	_init_.Initialize()
 
@@ -1164,7 +1188,7 @@ func NewSnowflakeProvider(scope constructs.Construct, id *string, config *Snowfl
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs snowflake} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs snowflake} Resource.
 func NewSnowflakeProvider_Override(s SnowflakeProvider, scope constructs.Construct, id *string, config *SnowflakeProviderConfig) {
 	_init_.Initialize()
 
@@ -1466,6 +1490,17 @@ func (j *jsiiProxy_SnowflakeProvider)SetRole(val *string) {
 	_jsii_.Set(
 		j,
 		"role",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetSkipTomlFilePermissionVerification(val interface{}) {
+	if err := j.validateSetSkipTomlFilePermissionVerificationParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"skipTomlFilePermissionVerification",
 		val,
 	)
 }
@@ -1930,6 +1965,14 @@ func (s *jsiiProxy_SnowflakeProvider) ResetRole() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetRole",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetSkipTomlFilePermissionVerification() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetSkipTomlFilePermissionVerification",
 		nil, // no parameters
 	)
 }

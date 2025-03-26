@@ -24,39 +24,39 @@ type StreamlitConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The database in which to create the streamlit Due to technical limitations (read more [here](../guides/identifiers_rework_design_decisions#known-limitations-and-identifier-recommendations)), avoid using the following characters: `|`, `.`, `"`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/resources/streamlit#database Streamlit#database}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/streamlit#database Streamlit#database}
 	Database *string `field:"required" json:"database" yaml:"database"`
 	// Specifies the filename of the Streamlit Python application. This filename is relative to the value of `directory_location`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/resources/streamlit#main_file Streamlit#main_file}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/streamlit#main_file Streamlit#main_file}
 	MainFile *string `field:"required" json:"mainFile" yaml:"mainFile"`
 	// String that specifies the identifier (i.e. name) for the streamlit; must be unique in your account. Due to technical limitations (read more [here](../guides/identifiers_rework_design_decisions#known-limitations-and-identifier-recommendations)), avoid using the following characters: `|`, `.`, `"`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/resources/streamlit#name Streamlit#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/streamlit#name Streamlit#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// The schema in which to create the streamlit.
 	//
 	// Due to technical limitations (read more [here](../guides/identifiers_rework_design_decisions#known-limitations-and-identifier-recommendations)), avoid using the following characters: `|`, `.`, `"`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/resources/streamlit#schema Streamlit#schema}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/streamlit#schema Streamlit#schema}
 	Schema *string `field:"required" json:"schema" yaml:"schema"`
 	// The stage in which streamlit files are located. For more information about this resource, see [docs](./stage).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/resources/streamlit#stage Streamlit#stage}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/streamlit#stage Streamlit#stage}
 	Stage *string `field:"required" json:"stage" yaml:"stage"`
 	// Specifies a comment for the streamlit.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/resources/streamlit#comment Streamlit#comment}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/streamlit#comment Streamlit#comment}
 	Comment *string `field:"optional" json:"comment" yaml:"comment"`
 	// Specifies the full path to the named stage containing the Streamlit Python files, media files, and the environment.yml file.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/resources/streamlit#directory_location Streamlit#directory_location}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/streamlit#directory_location Streamlit#directory_location}
 	DirectoryLocation *string `field:"optional" json:"directoryLocation" yaml:"directoryLocation"`
 	// External access integrations connected to the Streamlit.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/resources/streamlit#external_access_integrations Streamlit#external_access_integrations}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/streamlit#external_access_integrations Streamlit#external_access_integrations}
 	ExternalAccessIntegrations *[]*string `field:"optional" json:"externalAccessIntegrations" yaml:"externalAccessIntegrations"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/resources/streamlit#id Streamlit#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/streamlit#id Streamlit#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -65,11 +65,11 @@ type StreamlitConfig struct {
 	//
 	// Due to Snowflake limitations warehouse identifier can consist of only upper-cased letters. For more information about this resource, see [docs](./warehouse).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/resources/streamlit#query_warehouse Streamlit#query_warehouse}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/streamlit#query_warehouse Streamlit#query_warehouse}
 	QueryWarehouse *string `field:"optional" json:"queryWarehouse" yaml:"queryWarehouse"`
 	// Specifies a title for the Streamlit app to display in Snowsight.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.4/docs/resources/streamlit#title Streamlit#title}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/streamlit#title Streamlit#title}
 	Title *string `field:"optional" json:"title" yaml:"title"`
 }
 
