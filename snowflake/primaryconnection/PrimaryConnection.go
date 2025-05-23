@@ -5,14 +5,14 @@ package primaryconnection
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/primaryconnection/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/primaryconnection/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/primary_connection snowflake_primary_connection}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/primary_connection snowflake_primary_connection}.
 type PrimaryConnection interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -76,6 +76,8 @@ type PrimaryConnection interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() PrimaryConnectionTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -119,12 +121,14 @@ type PrimaryConnection interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *PrimaryConnectionTimeouts)
 	ResetComment()
 	ResetEnableFailoverToAccounts()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -413,8 +417,28 @@ func (j *jsiiProxy_PrimaryConnection) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_PrimaryConnection) Timeouts() PrimaryConnectionTimeoutsOutputReference {
+	var returns PrimaryConnectionTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/primary_connection snowflake_primary_connection} Resource.
+func (j *jsiiProxy_PrimaryConnection) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/primary_connection snowflake_primary_connection} Resource.
 func NewPrimaryConnection(scope constructs.Construct, id *string, config *PrimaryConnectionConfig) PrimaryConnection {
 	_init_.Initialize()
 
@@ -432,7 +456,7 @@ func NewPrimaryConnection(scope constructs.Construct, id *string, config *Primar
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/primary_connection snowflake_primary_connection} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/primary_connection snowflake_primary_connection} Resource.
 func NewPrimaryConnection_Override(p PrimaryConnection, scope constructs.Construct, id *string, config *PrimaryConnectionConfig) {
 	_init_.Initialize()
 
@@ -908,6 +932,17 @@ func (p *jsiiProxy_PrimaryConnection) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (p *jsiiProxy_PrimaryConnection) PutTimeouts(value *PrimaryConnectionTimeouts) {
+	if err := p.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		p,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (p *jsiiProxy_PrimaryConnection) ResetComment() {
 	_jsii_.InvokeVoid(
 		p,
@@ -936,6 +971,14 @@ func (p *jsiiProxy_PrimaryConnection) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		p,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PrimaryConnection) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

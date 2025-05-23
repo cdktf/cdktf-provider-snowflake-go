@@ -75,6 +75,10 @@ func (s *jsiiProxy_SecretWithBasicAuthentication) validateOverrideLogicalIdParam
 	return nil
 }
 
+func (s *jsiiProxy_SecretWithBasicAuthentication) validatePutTimeoutsParameters(value *SecretWithBasicAuthenticationTimeouts) error {
+	return nil
+}
+
 func validateSecretWithBasicAuthentication_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

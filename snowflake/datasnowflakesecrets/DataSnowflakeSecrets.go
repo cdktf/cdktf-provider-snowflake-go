@@ -5,14 +5,14 @@ package datasnowflakesecrets
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/datasnowflakesecrets/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/datasnowflakesecrets/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/data-sources/secrets snowflake_secrets}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/data-sources/secrets snowflake_secrets}.
 type DataSnowflakeSecrets interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -348,7 +348,7 @@ func (j *jsiiProxy_DataSnowflakeSecrets) WithDescribeInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/data-sources/secrets snowflake_secrets} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/data-sources/secrets snowflake_secrets} Data Source.
 func NewDataSnowflakeSecrets(scope constructs.Construct, id *string, config *DataSnowflakeSecretsConfig) DataSnowflakeSecrets {
 	_init_.Initialize()
 
@@ -366,7 +366,7 @@ func NewDataSnowflakeSecrets(scope constructs.Construct, id *string, config *Dat
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/data-sources/secrets snowflake_secrets} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/data-sources/secrets snowflake_secrets} Data Source.
 func NewDataSnowflakeSecrets_Override(d DataSnowflakeSecrets, scope constructs.Construct, id *string, config *DataSnowflakeSecretsConfig) {
 	_init_.Initialize()
 

@@ -5,14 +5,14 @@ package managedaccount
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/managedaccount/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/managedaccount/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/managed_account snowflake_managed_account}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/managed_account snowflake_managed_account}.
 type ManagedAccount interface {
 	cdktf.TerraformResource
 	AdminName() *string
@@ -81,6 +81,8 @@ type ManagedAccount interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() ManagedAccountTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	Type() *string
 	SetType(val *string)
 	TypeInput() *string
@@ -128,11 +130,13 @@ type ManagedAccount interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *ManagedAccountTimeouts)
 	ResetComment()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	ResetType()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -462,6 +466,26 @@ func (j *jsiiProxy_ManagedAccount) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ManagedAccount) Timeouts() ManagedAccountTimeoutsOutputReference {
+	var returns ManagedAccountTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ManagedAccount) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ManagedAccount) Type() *string {
 	var returns *string
 	_jsii_.Get(
@@ -493,7 +517,7 @@ func (j *jsiiProxy_ManagedAccount) Url() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/managed_account snowflake_managed_account} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/managed_account snowflake_managed_account} Resource.
 func NewManagedAccount(scope constructs.Construct, id *string, config *ManagedAccountConfig) ManagedAccount {
 	_init_.Initialize()
 
@@ -511,7 +535,7 @@ func NewManagedAccount(scope constructs.Construct, id *string, config *ManagedAc
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/managed_account snowflake_managed_account} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/managed_account snowflake_managed_account} Resource.
 func NewManagedAccount_Override(m ManagedAccount, scope constructs.Construct, id *string, config *ManagedAccountConfig) {
 	_init_.Initialize()
 
@@ -1009,6 +1033,17 @@ func (m *jsiiProxy_ManagedAccount) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (m *jsiiProxy_ManagedAccount) PutTimeouts(value *ManagedAccountTimeouts) {
+	if err := m.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (m *jsiiProxy_ManagedAccount) ResetComment() {
 	_jsii_.InvokeVoid(
 		m,
@@ -1029,6 +1064,14 @@ func (m *jsiiProxy_ManagedAccount) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_ManagedAccount) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

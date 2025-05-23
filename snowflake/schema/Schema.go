@@ -5,14 +5,14 @@ package schema
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/schema/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/schema/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/schema snowflake_schema}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/schema snowflake_schema}.
 type Schema interface {
 	cdktf.TerraformResource
 	Catalog() *string
@@ -119,6 +119,8 @@ type Schema interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() SchemaTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	TraceLevel() *string
 	SetTraceLevel(val *string)
 	TraceLevelInput() *string
@@ -177,6 +179,7 @@ type Schema interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *SchemaTimeouts)
 	ResetCatalog()
 	ResetComment()
 	ResetDataRetentionTimeInDays()
@@ -196,6 +199,7 @@ type Schema interface {
 	ResetStorageSerializationPolicy()
 	ResetSuspendTaskAfterNumFailures()
 	ResetTaskAutoRetryAttempts()
+	ResetTimeouts()
 	ResetTraceLevel()
 	ResetUserTaskManagedInitialWarehouseSize()
 	ResetUserTaskMinimumTriggerIntervalInSeconds()
@@ -779,6 +783,26 @@ func (j *jsiiProxy_Schema) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Schema) Timeouts() SchemaTimeoutsOutputReference {
+	var returns SchemaTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Schema) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Schema) TraceLevel() *string {
 	var returns *string
 	_jsii_.Get(
@@ -880,7 +904,7 @@ func (j *jsiiProxy_Schema) WithManagedAccessInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/schema snowflake_schema} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/schema snowflake_schema} Resource.
 func NewSchema(scope constructs.Construct, id *string, config *SchemaConfig) Schema {
 	_init_.Initialize()
 
@@ -898,7 +922,7 @@ func NewSchema(scope constructs.Construct, id *string, config *SchemaConfig) Sch
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/schema snowflake_schema} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/schema snowflake_schema} Resource.
 func NewSchema_Override(s Schema, scope constructs.Construct, id *string, config *SchemaConfig) {
 	_init_.Initialize()
 
@@ -1583,6 +1607,17 @@ func (s *jsiiProxy_Schema) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (s *jsiiProxy_Schema) PutTimeouts(value *SchemaTimeouts) {
+	if err := s.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_Schema) ResetCatalog() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1715,6 +1750,14 @@ func (s *jsiiProxy_Schema) ResetTaskAutoRetryAttempts() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetTaskAutoRetryAttempts",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Schema) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

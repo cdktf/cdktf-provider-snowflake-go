@@ -79,6 +79,10 @@ func (r *jsiiProxy_RowAccessPolicy) validatePutArgumentParameters(value interfac
 	return nil
 }
 
+func (r *jsiiProxy_RowAccessPolicy) validatePutTimeoutsParameters(value *RowAccessPolicyTimeouts) error {
+	return nil
+}
+
 func validateRowAccessPolicy_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

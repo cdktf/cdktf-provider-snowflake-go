@@ -79,6 +79,10 @@ func (s *jsiiProxy_Stage) validatePutTagParameters(value interface{}) error {
 	return nil
 }
 
+func (s *jsiiProxy_Stage) validatePutTimeoutsParameters(value *StageTimeouts) error {
+	return nil
+}
+
 func validateStage_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

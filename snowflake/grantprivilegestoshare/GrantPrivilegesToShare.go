@@ -5,14 +5,14 @@ package grantprivilegestoshare
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/grantprivilegestoshare/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/grantprivilegestoshare/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/grant_privileges_to_share snowflake_grant_privileges_to_share}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/grant_privileges_to_share snowflake_grant_privileges_to_share}.
 type GrantPrivilegesToShare interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -88,6 +88,8 @@ type GrantPrivilegesToShare interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() GrantPrivilegesToShareTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	ToShare() *string
 	SetToShare(val *string)
 	ToShareInput() *string
@@ -134,6 +136,7 @@ type GrantPrivilegesToShare interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *GrantPrivilegesToShareTimeouts)
 	ResetId()
 	ResetOnAllTablesInSchema()
 	ResetOnDatabase()
@@ -145,6 +148,7 @@ type GrantPrivilegesToShare interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -503,6 +507,26 @@ func (j *jsiiProxy_GrantPrivilegesToShare) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_GrantPrivilegesToShare) Timeouts() GrantPrivilegesToShareTimeoutsOutputReference {
+	var returns GrantPrivilegesToShareTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_GrantPrivilegesToShare) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_GrantPrivilegesToShare) ToShare() *string {
 	var returns *string
 	_jsii_.Get(
@@ -524,7 +548,7 @@ func (j *jsiiProxy_GrantPrivilegesToShare) ToShareInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/grant_privileges_to_share snowflake_grant_privileges_to_share} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/grant_privileges_to_share snowflake_grant_privileges_to_share} Resource.
 func NewGrantPrivilegesToShare(scope constructs.Construct, id *string, config *GrantPrivilegesToShareConfig) GrantPrivilegesToShare {
 	_init_.Initialize()
 
@@ -542,7 +566,7 @@ func NewGrantPrivilegesToShare(scope constructs.Construct, id *string, config *G
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/grant_privileges_to_share snowflake_grant_privileges_to_share} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/grant_privileges_to_share snowflake_grant_privileges_to_share} Resource.
 func NewGrantPrivilegesToShare_Override(g GrantPrivilegesToShare, scope constructs.Construct, id *string, config *GrantPrivilegesToShareConfig) {
 	_init_.Initialize()
 
@@ -1084,6 +1108,17 @@ func (g *jsiiProxy_GrantPrivilegesToShare) OverrideLogicalId(newLogicalId *strin
 	)
 }
 
+func (g *jsiiProxy_GrantPrivilegesToShare) PutTimeouts(value *GrantPrivilegesToShareTimeouts) {
+	if err := g.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		g,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (g *jsiiProxy_GrantPrivilegesToShare) ResetId() {
 	_jsii_.InvokeVoid(
 		g,
@@ -1152,6 +1187,14 @@ func (g *jsiiProxy_GrantPrivilegesToShare) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		g,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_GrantPrivilegesToShare) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

@@ -79,6 +79,10 @@ func (o *jsiiProxy_ObjectParameter) validatePutObjectIdentifierParameters(value 
 	return nil
 }
 
+func (o *jsiiProxy_ObjectParameter) validatePutTimeoutsParameters(value *ObjectParameterTimeouts) error {
+	return nil
+}
+
 func validateObjectParameter_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

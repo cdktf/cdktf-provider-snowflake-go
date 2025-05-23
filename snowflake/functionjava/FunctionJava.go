@@ -5,14 +5,14 @@ package functionjava
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/functionjava/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/functionjava/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/function_java snowflake_function_java}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/function_java snowflake_function_java}.
 type FunctionJava interface {
 	cdktf.TerraformResource
 	Arguments() FunctionJavaArgumentsList
@@ -124,6 +124,8 @@ type FunctionJava interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() FunctionJavaTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	TraceLevel() *string
 	SetTraceLevel(val *string)
 	TraceLevelInput() *string
@@ -174,6 +176,7 @@ type FunctionJava interface {
 	PutImports(value interface{})
 	PutSecrets(value interface{})
 	PutTargetPath(value *FunctionJavaTargetPath)
+	PutTimeouts(value *FunctionJavaTimeouts)
 	ResetArguments()
 	ResetComment()
 	ResetEnableConsoleOutput()
@@ -193,6 +196,7 @@ type FunctionJava interface {
 	ResetRuntimeVersion()
 	ResetSecrets()
 	ResetTargetPath()
+	ResetTimeouts()
 	ResetTraceLevel()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -832,6 +836,26 @@ func (j *jsiiProxy_FunctionJava) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_FunctionJava) Timeouts() FunctionJavaTimeoutsOutputReference {
+	var returns FunctionJavaTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_FunctionJava) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_FunctionJava) TraceLevel() *string {
 	var returns *string
 	_jsii_.Get(
@@ -853,7 +877,7 @@ func (j *jsiiProxy_FunctionJava) TraceLevelInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/function_java snowflake_function_java} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/function_java snowflake_function_java} Resource.
 func NewFunctionJava(scope constructs.Construct, id *string, config *FunctionJavaConfig) FunctionJava {
 	_init_.Initialize()
 
@@ -871,7 +895,7 @@ func NewFunctionJava(scope constructs.Construct, id *string, config *FunctionJav
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/function_java snowflake_function_java} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/function_java snowflake_function_java} Resource.
 func NewFunctionJava_Override(f FunctionJava, scope constructs.Construct, id *string, config *FunctionJavaConfig) {
 	_init_.Initialize()
 
@@ -1545,6 +1569,17 @@ func (f *jsiiProxy_FunctionJava) PutTargetPath(value *FunctionJavaTargetPath) {
 	)
 }
 
+func (f *jsiiProxy_FunctionJava) PutTimeouts(value *FunctionJavaTimeouts) {
+	if err := f.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (f *jsiiProxy_FunctionJava) ResetArguments() {
 	_jsii_.InvokeVoid(
 		f,
@@ -1677,6 +1712,14 @@ func (f *jsiiProxy_FunctionJava) ResetTargetPath() {
 	_jsii_.InvokeVoid(
 		f,
 		"resetTargetPath",
+		nil, // no parameters
+	)
+}
+
+func (f *jsiiProxy_FunctionJava) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

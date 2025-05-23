@@ -79,6 +79,10 @@ func (d *jsiiProxy_DynamicTable) validatePutTargetLagParameters(value *DynamicTa
 	return nil
 }
 
+func (d *jsiiProxy_DynamicTable) validatePutTimeoutsParameters(value *DynamicTableTimeouts) error {
+	return nil
+}
+
 func validateDynamicTable_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

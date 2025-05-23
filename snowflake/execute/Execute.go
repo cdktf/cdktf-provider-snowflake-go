@@ -5,14 +5,14 @@ package execute
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/execute/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/execute/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/execute snowflake_execute}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/execute snowflake_execute}.
 type Execute interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -415,7 +415,7 @@ func (j *jsiiProxy_Execute) TimeoutsInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/execute snowflake_execute} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/execute snowflake_execute} Resource.
 func NewExecute(scope constructs.Construct, id *string, config *ExecuteConfig) Execute {
 	_init_.Initialize()
 
@@ -433,7 +433,7 @@ func NewExecute(scope constructs.Construct, id *string, config *ExecuteConfig) E
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/execute snowflake_execute} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/execute snowflake_execute} Resource.
 func NewExecute_Override(e Execute, scope constructs.Construct, id *string, config *ExecuteConfig) {
 	_init_.Initialize()
 

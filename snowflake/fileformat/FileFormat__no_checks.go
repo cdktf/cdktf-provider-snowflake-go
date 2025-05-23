@@ -75,6 +75,10 @@ func (f *jsiiProxy_FileFormat) validateOverrideLogicalIdParameters(newLogicalId 
 	return nil
 }
 
+func (f *jsiiProxy_FileFormat) validatePutTimeoutsParameters(value *FileFormatTimeouts) error {
+	return nil
+}
+
 func validateFileFormat_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

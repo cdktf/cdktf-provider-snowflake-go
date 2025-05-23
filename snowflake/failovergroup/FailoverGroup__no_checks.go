@@ -83,6 +83,10 @@ func (f *jsiiProxy_FailoverGroup) validatePutReplicationScheduleParameters(value
 	return nil
 }
 
+func (f *jsiiProxy_FailoverGroup) validatePutTimeoutsParameters(value *FailoverGroupTimeouts) error {
+	return nil
+}
+
 func validateFailoverGroup_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

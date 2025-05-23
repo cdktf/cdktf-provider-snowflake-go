@@ -5,14 +5,14 @@ package apiauthenticationintegrationwithclientcredentials
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/apiauthenticationintegrationwithclientcredentials/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/apiauthenticationintegrationwithclientcredentials/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/api_authentication_integration_with_client_credentials snowflake_api_authentication_integration_with_client_credentials}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/api_authentication_integration_with_client_credentials snowflake_api_authentication_integration_with_client_credentials}.
 type ApiAuthenticationIntegrationWithClientCredentials interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -97,6 +97,8 @@ type ApiAuthenticationIntegrationWithClientCredentials interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() ApiAuthenticationIntegrationWithClientCredentialsTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -140,6 +142,7 @@ type ApiAuthenticationIntegrationWithClientCredentials interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *ApiAuthenticationIntegrationWithClientCredentialsTimeouts)
 	ResetComment()
 	ResetId()
 	ResetOauthAccessTokenValidity()
@@ -150,6 +153,7 @@ type ApiAuthenticationIntegrationWithClientCredentials interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -578,8 +582,28 @@ func (j *jsiiProxy_ApiAuthenticationIntegrationWithClientCredentials) TerraformR
 	return returns
 }
 
+func (j *jsiiProxy_ApiAuthenticationIntegrationWithClientCredentials) Timeouts() ApiAuthenticationIntegrationWithClientCredentialsTimeoutsOutputReference {
+	var returns ApiAuthenticationIntegrationWithClientCredentialsTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/api_authentication_integration_with_client_credentials snowflake_api_authentication_integration_with_client_credentials} Resource.
+func (j *jsiiProxy_ApiAuthenticationIntegrationWithClientCredentials) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/api_authentication_integration_with_client_credentials snowflake_api_authentication_integration_with_client_credentials} Resource.
 func NewApiAuthenticationIntegrationWithClientCredentials(scope constructs.Construct, id *string, config *ApiAuthenticationIntegrationWithClientCredentialsConfig) ApiAuthenticationIntegrationWithClientCredentials {
 	_init_.Initialize()
 
@@ -597,7 +621,7 @@ func NewApiAuthenticationIntegrationWithClientCredentials(scope constructs.Const
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/api_authentication_integration_with_client_credentials snowflake_api_authentication_integration_with_client_credentials} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/api_authentication_integration_with_client_credentials snowflake_api_authentication_integration_with_client_credentials} Resource.
 func NewApiAuthenticationIntegrationWithClientCredentials_Override(a ApiAuthenticationIntegrationWithClientCredentials, scope constructs.Construct, id *string, config *ApiAuthenticationIntegrationWithClientCredentialsConfig) {
 	_init_.Initialize()
 
@@ -1150,6 +1174,17 @@ func (a *jsiiProxy_ApiAuthenticationIntegrationWithClientCredentials) OverrideLo
 	)
 }
 
+func (a *jsiiProxy_ApiAuthenticationIntegrationWithClientCredentials) PutTimeouts(value *ApiAuthenticationIntegrationWithClientCredentialsTimeouts) {
+	if err := a.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (a *jsiiProxy_ApiAuthenticationIntegrationWithClientCredentials) ResetComment() {
 	_jsii_.InvokeVoid(
 		a,
@@ -1210,6 +1245,14 @@ func (a *jsiiProxy_ApiAuthenticationIntegrationWithClientCredentials) ResetOverr
 	_jsii_.InvokeVoid(
 		a,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApiAuthenticationIntegrationWithClientCredentials) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

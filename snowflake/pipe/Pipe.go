@@ -5,14 +5,14 @@ package pipe
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/pipe/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/pipe/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/pipe snowflake_pipe}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/pipe snowflake_pipe}.
 type Pipe interface {
 	cdktf.TerraformResource
 	AutoIngest() interface{}
@@ -94,6 +94,8 @@ type Pipe interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() PipeTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -137,6 +139,7 @@ type Pipe interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *PipeTimeouts)
 	ResetAutoIngest()
 	ResetAwsSnsTopicArn()
 	ResetComment()
@@ -146,6 +149,7 @@ type Pipe interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -554,8 +558,28 @@ func (j *jsiiProxy_Pipe) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Pipe) Timeouts() PipeTimeoutsOutputReference {
+	var returns PipeTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/pipe snowflake_pipe} Resource.
+func (j *jsiiProxy_Pipe) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/pipe snowflake_pipe} Resource.
 func NewPipe(scope constructs.Construct, id *string, config *PipeConfig) Pipe {
 	_init_.Initialize()
 
@@ -573,7 +597,7 @@ func NewPipe(scope constructs.Construct, id *string, config *PipeConfig) Pipe {
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/pipe snowflake_pipe} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/pipe snowflake_pipe} Resource.
 func NewPipe_Override(p Pipe, scope constructs.Construct, id *string, config *PipeConfig) {
 	_init_.Initialize()
 
@@ -1115,6 +1139,17 @@ func (p *jsiiProxy_Pipe) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (p *jsiiProxy_Pipe) PutTimeouts(value *PipeTimeouts) {
+	if err := p.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		p,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (p *jsiiProxy_Pipe) ResetAutoIngest() {
 	_jsii_.InvokeVoid(
 		p,
@@ -1167,6 +1202,14 @@ func (p *jsiiProxy_Pipe) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		p,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_Pipe) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

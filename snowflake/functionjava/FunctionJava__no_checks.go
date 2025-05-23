@@ -91,6 +91,10 @@ func (f *jsiiProxy_FunctionJava) validatePutTargetPathParameters(value *Function
 	return nil
 }
 
+func (f *jsiiProxy_FunctionJava) validatePutTimeoutsParameters(value *FunctionJavaTimeouts) error {
+	return nil
+}
+
 func validateFunctionJava_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

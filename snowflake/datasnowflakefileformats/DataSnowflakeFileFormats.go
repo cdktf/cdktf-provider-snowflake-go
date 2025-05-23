@@ -5,14 +5,14 @@ package datasnowflakefileformats
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/datasnowflakefileformats/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/datasnowflakefileformats/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/data-sources/file_formats snowflake_file_formats}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/data-sources/file_formats snowflake_file_formats}.
 type DataSnowflakeFileFormats interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -322,7 +322,7 @@ func (j *jsiiProxy_DataSnowflakeFileFormats) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/data-sources/file_formats snowflake_file_formats} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/data-sources/file_formats snowflake_file_formats} Data Source.
 func NewDataSnowflakeFileFormats(scope constructs.Construct, id *string, config *DataSnowflakeFileFormatsConfig) DataSnowflakeFileFormats {
 	_init_.Initialize()
 
@@ -340,7 +340,7 @@ func NewDataSnowflakeFileFormats(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/data-sources/file_formats snowflake_file_formats} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/data-sources/file_formats snowflake_file_formats} Data Source.
 func NewDataSnowflakeFileFormats_Override(d DataSnowflakeFileFormats, scope constructs.Construct, id *string, config *DataSnowflakeFileFormatsConfig) {
 	_init_.Initialize()
 

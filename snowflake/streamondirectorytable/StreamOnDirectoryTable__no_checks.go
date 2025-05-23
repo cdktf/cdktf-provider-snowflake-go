@@ -75,6 +75,10 @@ func (s *jsiiProxy_StreamOnDirectoryTable) validateOverrideLogicalIdParameters(n
 	return nil
 }
 
+func (s *jsiiProxy_StreamOnDirectoryTable) validatePutTimeoutsParameters(value *StreamOnDirectoryTableTimeouts) error {
+	return nil
+}
+
 func validateStreamOnDirectoryTable_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

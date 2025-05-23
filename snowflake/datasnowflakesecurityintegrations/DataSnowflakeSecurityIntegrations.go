@@ -5,14 +5,14 @@ package datasnowflakesecurityintegrations
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/datasnowflakesecurityintegrations/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/datasnowflakesecurityintegrations/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/data-sources/security_integrations snowflake_security_integrations}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/data-sources/security_integrations snowflake_security_integrations}.
 type DataSnowflakeSecurityIntegrations interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -324,7 +324,7 @@ func (j *jsiiProxy_DataSnowflakeSecurityIntegrations) WithDescribeInput() interf
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/data-sources/security_integrations snowflake_security_integrations} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/data-sources/security_integrations snowflake_security_integrations} Data Source.
 func NewDataSnowflakeSecurityIntegrations(scope constructs.Construct, id *string, config *DataSnowflakeSecurityIntegrationsConfig) DataSnowflakeSecurityIntegrations {
 	_init_.Initialize()
 
@@ -342,7 +342,7 @@ func NewDataSnowflakeSecurityIntegrations(scope constructs.Construct, id *string
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/data-sources/security_integrations snowflake_security_integrations} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/data-sources/security_integrations snowflake_security_integrations} Data Source.
 func NewDataSnowflakeSecurityIntegrations_Override(d DataSnowflakeSecurityIntegrations, scope constructs.Construct, id *string, config *DataSnowflakeSecurityIntegrationsConfig) {
 	_init_.Initialize()
 

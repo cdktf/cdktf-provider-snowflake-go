@@ -5,14 +5,14 @@ package storageintegration
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/storageintegration/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/storageintegration/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/storage_integration snowflake_storage_integration}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/storage_integration snowflake_storage_integration}.
 type StorageIntegration interface {
 	cdktf.TerraformResource
 	AzureConsentUrl() *string
@@ -98,6 +98,8 @@ type StorageIntegration interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() StorageIntegrationTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	Type() *string
 	SetType(val *string)
 	TypeInput() *string
@@ -144,6 +146,7 @@ type StorageIntegration interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *StorageIntegrationTimeouts)
 	ResetAzureTenantId()
 	ResetComment()
 	ResetEnabled()
@@ -154,6 +157,7 @@ type StorageIntegration interface {
 	ResetStorageAwsObjectAcl()
 	ResetStorageAwsRoleArn()
 	ResetStorageBlockedLocations()
+	ResetTimeouts()
 	ResetType()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -603,6 +607,26 @@ func (j *jsiiProxy_StorageIntegration) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_StorageIntegration) Timeouts() StorageIntegrationTimeoutsOutputReference {
+	var returns StorageIntegrationTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_StorageIntegration) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_StorageIntegration) Type() *string {
 	var returns *string
 	_jsii_.Get(
@@ -624,7 +648,7 @@ func (j *jsiiProxy_StorageIntegration) TypeInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/storage_integration snowflake_storage_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/storage_integration snowflake_storage_integration} Resource.
 func NewStorageIntegration(scope constructs.Construct, id *string, config *StorageIntegrationConfig) StorageIntegration {
 	_init_.Initialize()
 
@@ -642,7 +666,7 @@ func NewStorageIntegration(scope constructs.Construct, id *string, config *Stora
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/storage_integration snowflake_storage_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/storage_integration snowflake_storage_integration} Resource.
 func NewStorageIntegration_Override(s StorageIntegration, scope constructs.Construct, id *string, config *StorageIntegrationConfig) {
 	_init_.Initialize()
 
@@ -1195,6 +1219,17 @@ func (s *jsiiProxy_StorageIntegration) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (s *jsiiProxy_StorageIntegration) PutTimeouts(value *StorageIntegrationTimeouts) {
+	if err := s.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_StorageIntegration) ResetAzureTenantId() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1255,6 +1290,14 @@ func (s *jsiiProxy_StorageIntegration) ResetStorageBlockedLocations() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetStorageBlockedLocations",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_StorageIntegration) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

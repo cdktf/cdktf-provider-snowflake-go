@@ -79,6 +79,10 @@ func (e *jsiiProxy_ExternalVolume) validatePutStorageLocationParameters(value in
 	return nil
 }
 
+func (e *jsiiProxy_ExternalVolume) validatePutTimeoutsParameters(value *ExternalVolumeTimeouts) error {
+	return nil
+}
+
 func validateExternalVolume_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

@@ -5,14 +5,14 @@ package alert
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/alert/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/alert/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/alert snowflake_alert}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/alert snowflake_alert}.
 type Alert interface {
 	cdktf.TerraformResource
 	Action() *string
@@ -88,6 +88,8 @@ type Alert interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() AlertTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	Warehouse() *string
 	SetWarehouse(val *string)
 	WarehouseInput() *string
@@ -135,6 +137,7 @@ type Alert interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutAlertSchedule(value *AlertAlertSchedule)
+	PutTimeouts(value *AlertTimeouts)
 	ResetAlertSchedule()
 	ResetComment()
 	ResetEnabled()
@@ -142,6 +145,7 @@ type Alert interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -510,6 +514,26 @@ func (j *jsiiProxy_Alert) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Alert) Timeouts() AlertTimeoutsOutputReference {
+	var returns AlertTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Alert) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Alert) Warehouse() *string {
 	var returns *string
 	_jsii_.Get(
@@ -531,7 +555,7 @@ func (j *jsiiProxy_Alert) WarehouseInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/alert snowflake_alert} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/alert snowflake_alert} Resource.
 func NewAlert(scope constructs.Construct, id *string, config *AlertConfig) Alert {
 	_init_.Initialize()
 
@@ -549,7 +573,7 @@ func NewAlert(scope constructs.Construct, id *string, config *AlertConfig) Alert
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/alert snowflake_alert} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/alert snowflake_alert} Resource.
 func NewAlert_Override(a Alert, scope constructs.Construct, id *string, config *AlertConfig) {
 	_init_.Initialize()
 
@@ -1091,6 +1115,17 @@ func (a *jsiiProxy_Alert) PutAlertSchedule(value *AlertAlertSchedule) {
 	)
 }
 
+func (a *jsiiProxy_Alert) PutTimeouts(value *AlertTimeouts) {
+	if err := a.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (a *jsiiProxy_Alert) ResetAlertSchedule() {
 	_jsii_.InvokeVoid(
 		a,
@@ -1127,6 +1162,14 @@ func (a *jsiiProxy_Alert) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		a,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_Alert) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

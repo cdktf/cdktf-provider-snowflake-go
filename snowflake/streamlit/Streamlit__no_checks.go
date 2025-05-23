@@ -75,6 +75,10 @@ func (s *jsiiProxy_Streamlit) validateOverrideLogicalIdParameters(newLogicalId *
 	return nil
 }
 
+func (s *jsiiProxy_Streamlit) validatePutTimeoutsParameters(value *StreamlitTimeouts) error {
+	return nil
+}
+
 func validateStreamlit_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

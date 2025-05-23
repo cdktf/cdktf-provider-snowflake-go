@@ -75,6 +75,10 @@ func (s *jsiiProxy_SharedDatabase) validateOverrideLogicalIdParameters(newLogica
 	return nil
 }
 
+func (s *jsiiProxy_SharedDatabase) validatePutTimeoutsParameters(value *SharedDatabaseTimeouts) error {
+	return nil
+}
+
 func validateSharedDatabase_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

@@ -5,14 +5,14 @@ package emailnotificationintegration
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/emailnotificationintegration/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/emailnotificationintegration/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/email_notification_integration snowflake_email_notification_integration}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/email_notification_integration snowflake_email_notification_integration}.
 type EmailNotificationIntegration interface {
 	cdktf.TerraformResource
 	AllowedRecipients() *[]*string
@@ -77,6 +77,8 @@ type EmailNotificationIntegration interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() EmailNotificationIntegrationTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -120,12 +122,14 @@ type EmailNotificationIntegration interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *EmailNotificationIntegrationTimeouts)
 	ResetAllowedRecipients()
 	ResetComment()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -414,8 +418,28 @@ func (j *jsiiProxy_EmailNotificationIntegration) TerraformResourceType() *string
 	return returns
 }
 
+func (j *jsiiProxy_EmailNotificationIntegration) Timeouts() EmailNotificationIntegrationTimeoutsOutputReference {
+	var returns EmailNotificationIntegrationTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/email_notification_integration snowflake_email_notification_integration} Resource.
+func (j *jsiiProxy_EmailNotificationIntegration) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/email_notification_integration snowflake_email_notification_integration} Resource.
 func NewEmailNotificationIntegration(scope constructs.Construct, id *string, config *EmailNotificationIntegrationConfig) EmailNotificationIntegration {
 	_init_.Initialize()
 
@@ -433,7 +457,7 @@ func NewEmailNotificationIntegration(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/email_notification_integration snowflake_email_notification_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/email_notification_integration snowflake_email_notification_integration} Resource.
 func NewEmailNotificationIntegration_Override(e EmailNotificationIntegration, scope constructs.Construct, id *string, config *EmailNotificationIntegrationConfig) {
 	_init_.Initialize()
 
@@ -920,6 +944,17 @@ func (e *jsiiProxy_EmailNotificationIntegration) OverrideLogicalId(newLogicalId 
 	)
 }
 
+func (e *jsiiProxy_EmailNotificationIntegration) PutTimeouts(value *EmailNotificationIntegrationTimeouts) {
+	if err := e.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (e *jsiiProxy_EmailNotificationIntegration) ResetAllowedRecipients() {
 	_jsii_.InvokeVoid(
 		e,
@@ -948,6 +983,14 @@ func (e *jsiiProxy_EmailNotificationIntegration) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_EmailNotificationIntegration) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

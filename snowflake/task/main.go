@@ -119,6 +119,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "provider", GoGetter: "Provider"},
 			_jsii_.MemberProperty{JsiiProperty: "provisioners", GoGetter: "Provisioners"},
 			_jsii_.MemberMethod{JsiiMethod: "putSchedule", GoMethod: "PutSchedule"},
+			_jsii_.MemberMethod{JsiiMethod: "putTimeouts", GoMethod: "PutTimeouts"},
 			_jsii_.MemberProperty{JsiiProperty: "queryTag", GoGetter: "QueryTag"},
 			_jsii_.MemberProperty{JsiiProperty: "queryTagInput", GoGetter: "QueryTagInput"},
 			_jsii_.MemberProperty{JsiiProperty: "quotedIdentifiersIgnoreCase", GoGetter: "QuotedIdentifiersIgnoreCase"},
@@ -172,6 +173,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetTaskAutoRetryAttempts", GoMethod: "ResetTaskAutoRetryAttempts"},
 			_jsii_.MemberMethod{JsiiMethod: "resetTimeInputFormat", GoMethod: "ResetTimeInputFormat"},
 			_jsii_.MemberMethod{JsiiMethod: "resetTimeOutputFormat", GoMethod: "ResetTimeOutputFormat"},
+			_jsii_.MemberMethod{JsiiMethod: "resetTimeouts", GoMethod: "ResetTimeouts"},
 			_jsii_.MemberMethod{JsiiMethod: "resetTimestampDayIsAlways24H", GoMethod: "ResetTimestampDayIsAlways24H"},
 			_jsii_.MemberMethod{JsiiMethod: "resetTimestampInputFormat", GoMethod: "ResetTimestampInputFormat"},
 			_jsii_.MemberMethod{JsiiMethod: "resetTimestampLtzOutputFormat", GoMethod: "ResetTimestampLtzOutputFormat"},
@@ -227,6 +229,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "timeInputFormatInput", GoGetter: "TimeInputFormatInput"},
 			_jsii_.MemberProperty{JsiiProperty: "timeOutputFormat", GoGetter: "TimeOutputFormat"},
 			_jsii_.MemberProperty{JsiiProperty: "timeOutputFormatInput", GoGetter: "TimeOutputFormatInput"},
+			_jsii_.MemberProperty{JsiiProperty: "timeouts", GoGetter: "Timeouts"},
+			_jsii_.MemberProperty{JsiiProperty: "timeoutsInput", GoGetter: "TimeoutsInput"},
 			_jsii_.MemberProperty{JsiiProperty: "timestampDayIsAlways24H", GoGetter: "TimestampDayIsAlways24H"},
 			_jsii_.MemberProperty{JsiiProperty: "timestampDayIsAlways24HInput", GoGetter: "TimestampDayIsAlways24HInput"},
 			_jsii_.MemberProperty{JsiiProperty: "timestampInputFormat", GoGetter: "TimestampInputFormat"},
@@ -4172,6 +4176,54 @@ func init() {
 		},
 		func() interface{} {
 			j := jsiiProxy_TaskShowOutputTaskRelationsOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdktf/provider-snowflake.task.TaskTimeouts",
+		reflect.TypeOf((*TaskTimeouts)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdktf/provider-snowflake.task.TaskTimeoutsOutputReference",
+		reflect.TypeOf((*TaskTimeoutsOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "create", GoGetter: "Create"},
+			_jsii_.MemberProperty{JsiiProperty: "createInput", GoGetter: "CreateInput"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "delete", GoGetter: "Delete"},
+			_jsii_.MemberProperty{JsiiProperty: "deleteInput", GoGetter: "DeleteInput"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "read", GoGetter: "Read"},
+			_jsii_.MemberProperty{JsiiProperty: "readInput", GoGetter: "ReadInput"},
+			_jsii_.MemberMethod{JsiiMethod: "resetCreate", GoMethod: "ResetCreate"},
+			_jsii_.MemberMethod{JsiiMethod: "resetDelete", GoMethod: "ResetDelete"},
+			_jsii_.MemberMethod{JsiiMethod: "resetRead", GoMethod: "ResetRead"},
+			_jsii_.MemberMethod{JsiiMethod: "resetUpdate", GoMethod: "ResetUpdate"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "update", GoGetter: "Update"},
+			_jsii_.MemberProperty{JsiiProperty: "updateInput", GoGetter: "UpdateInput"},
+		},
+		func() interface{} {
+			j := jsiiProxy_TaskTimeoutsOutputReference{}
 			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
 			return &j
 		},

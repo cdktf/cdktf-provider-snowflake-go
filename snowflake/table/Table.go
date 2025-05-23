@@ -5,14 +5,14 @@ package table
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/table/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/table/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/table snowflake_table}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/table snowflake_table}.
 type Table interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -93,6 +93,8 @@ type Table interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() TableTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -139,6 +141,7 @@ type Table interface {
 	PutColumn(value interface{})
 	PutPrimaryKey(value *TablePrimaryKey)
 	PutTag(value interface{})
+	PutTimeouts(value *TableTimeouts)
 	ResetChangeTracking()
 	ResetClusterBy()
 	ResetComment()
@@ -149,6 +152,7 @@ type Table interface {
 	ResetOverrideLogicalId()
 	ResetPrimaryKey()
 	ResetTag()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -567,8 +571,28 @@ func (j *jsiiProxy_Table) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Table) Timeouts() TableTimeoutsOutputReference {
+	var returns TableTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/table snowflake_table} Resource.
+func (j *jsiiProxy_Table) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/table snowflake_table} Resource.
 func NewTable(scope constructs.Construct, id *string, config *TableConfig) Table {
 	_init_.Initialize()
 
@@ -586,7 +610,7 @@ func NewTable(scope constructs.Construct, id *string, config *TableConfig) Table
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/table snowflake_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/table snowflake_table} Resource.
 func NewTable_Override(t Table, scope constructs.Construct, id *string, config *TableConfig) {
 	_init_.Initialize()
 
@@ -1139,6 +1163,17 @@ func (t *jsiiProxy_Table) PutTag(value interface{}) {
 	)
 }
 
+func (t *jsiiProxy_Table) PutTimeouts(value *TableTimeouts) {
+	if err := t.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		t,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (t *jsiiProxy_Table) ResetChangeTracking() {
 	_jsii_.InvokeVoid(
 		t,
@@ -1199,6 +1234,14 @@ func (t *jsiiProxy_Table) ResetTag() {
 	_jsii_.InvokeVoid(
 		t,
 		"resetTag",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_Table) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

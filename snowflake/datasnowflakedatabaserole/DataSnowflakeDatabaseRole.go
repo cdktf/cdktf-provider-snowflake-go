@@ -5,14 +5,14 @@ package datasnowflakedatabaserole
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/datasnowflakedatabaserole/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/datasnowflakedatabaserole/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/data-sources/database_role snowflake_database_role}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/data-sources/database_role snowflake_database_role}.
 type DataSnowflakeDatabaseRole interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -333,7 +333,7 @@ func (j *jsiiProxy_DataSnowflakeDatabaseRole) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/data-sources/database_role snowflake_database_role} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/data-sources/database_role snowflake_database_role} Data Source.
 func NewDataSnowflakeDatabaseRole(scope constructs.Construct, id *string, config *DataSnowflakeDatabaseRoleConfig) DataSnowflakeDatabaseRole {
 	_init_.Initialize()
 
@@ -351,7 +351,7 @@ func NewDataSnowflakeDatabaseRole(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/data-sources/database_role snowflake_database_role} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/data-sources/database_role snowflake_database_role} Data Source.
 func NewDataSnowflakeDatabaseRole_Override(d DataSnowflakeDatabaseRole, scope constructs.Construct, id *string, config *DataSnowflakeDatabaseRoleConfig) {
 	_init_.Initialize()
 

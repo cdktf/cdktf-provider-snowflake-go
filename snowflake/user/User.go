@@ -5,14 +5,14 @@ package user
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/user/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/user/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/user snowflake_user}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/user snowflake_user}.
 type User interface {
 	cdktf.TerraformResource
 	AbortDetachedQuery() interface{}
@@ -256,6 +256,8 @@ type User interface {
 	TimeOutputFormat() *string
 	SetTimeOutputFormat(val *string)
 	TimeOutputFormatInput() *string
+	Timeouts() UserTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	TimestampDayIsAlways24H() interface{}
 	SetTimestampDayIsAlways24H(val interface{})
 	TimestampDayIsAlways24HInput() interface{}
@@ -348,6 +350,7 @@ type User interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *UserTimeouts)
 	ResetAbortDetachedQuery()
 	ResetAutocommit()
 	ResetBinaryInputFormat()
@@ -414,6 +417,7 @@ type User interface {
 	ResetStrictJsonOutput()
 	ResetTimeInputFormat()
 	ResetTimeOutputFormat()
+	ResetTimeouts()
 	ResetTimestampDayIsAlways24H()
 	ResetTimestampInputFormat()
 	ResetTimestampLtzOutputFormat()
@@ -1918,6 +1922,26 @@ func (j *jsiiProxy_User) TimeOutputFormatInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_User) Timeouts() UserTimeoutsOutputReference {
+	var returns UserTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_User) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_User) TimestampDayIsAlways24H() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -2249,7 +2273,7 @@ func (j *jsiiProxy_User) WeekStartInput() *float64 {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/user snowflake_user} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/user snowflake_user} Resource.
 func NewUser(scope constructs.Construct, id *string, config *UserConfig) User {
 	_init_.Initialize()
 
@@ -2267,7 +2291,7 @@ func NewUser(scope constructs.Construct, id *string, config *UserConfig) User {
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/user snowflake_user} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/user snowflake_user} Resource.
 func NewUser_Override(u User, scope constructs.Construct, id *string, config *UserConfig) {
 	_init_.Initialize()
 
@@ -3579,6 +3603,17 @@ func (u *jsiiProxy_User) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (u *jsiiProxy_User) PutTimeouts(value *UserTimeouts) {
+	if err := u.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		u,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (u *jsiiProxy_User) ResetAbortDetachedQuery() {
 	_jsii_.InvokeVoid(
 		u,
@@ -4087,6 +4122,14 @@ func (u *jsiiProxy_User) ResetTimeOutputFormat() {
 	_jsii_.InvokeVoid(
 		u,
 		"resetTimeOutputFormat",
+		nil, // no parameters
+	)
+}
+
+func (u *jsiiProxy_User) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		u,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

@@ -5,14 +5,14 @@ package failovergroup
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/failovergroup/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/failovergroup/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/failover_group snowflake_failover_group}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/failover_group snowflake_failover_group}.
 type FailoverGroup interface {
 	cdktf.TerraformResource
 	AllowedAccounts() *[]*string
@@ -90,6 +90,8 @@ type FailoverGroup interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() FailoverGroupTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -135,6 +137,7 @@ type FailoverGroup interface {
 	OverrideLogicalId(newLogicalId *string)
 	PutFromReplica(value *FailoverGroupFromReplica)
 	PutReplicationSchedule(value *FailoverGroupReplicationSchedule)
+	PutTimeouts(value *FailoverGroupTimeouts)
 	ResetAllowedAccounts()
 	ResetAllowedDatabases()
 	ResetAllowedIntegrationTypes()
@@ -147,6 +150,7 @@ type FailoverGroup interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetReplicationSchedule()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -535,8 +539,28 @@ func (j *jsiiProxy_FailoverGroup) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_FailoverGroup) Timeouts() FailoverGroupTimeoutsOutputReference {
+	var returns FailoverGroupTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/failover_group snowflake_failover_group} Resource.
+func (j *jsiiProxy_FailoverGroup) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/failover_group snowflake_failover_group} Resource.
 func NewFailoverGroup(scope constructs.Construct, id *string, config *FailoverGroupConfig) FailoverGroup {
 	_init_.Initialize()
 
@@ -554,7 +578,7 @@ func NewFailoverGroup(scope constructs.Construct, id *string, config *FailoverGr
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/failover_group snowflake_failover_group} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/failover_group snowflake_failover_group} Resource.
 func NewFailoverGroup_Override(f FailoverGroup, scope constructs.Construct, id *string, config *FailoverGroupConfig) {
 	_init_.Initialize()
 
@@ -1096,6 +1120,17 @@ func (f *jsiiProxy_FailoverGroup) PutReplicationSchedule(value *FailoverGroupRep
 	)
 }
 
+func (f *jsiiProxy_FailoverGroup) PutTimeouts(value *FailoverGroupTimeouts) {
+	if err := f.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (f *jsiiProxy_FailoverGroup) ResetAllowedAccounts() {
 	_jsii_.InvokeVoid(
 		f,
@@ -1172,6 +1207,14 @@ func (f *jsiiProxy_FailoverGroup) ResetReplicationSchedule() {
 	_jsii_.InvokeVoid(
 		f,
 		"resetReplicationSchedule",
+		nil, // no parameters
+	)
+}
+
+func (f *jsiiProxy_FailoverGroup) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

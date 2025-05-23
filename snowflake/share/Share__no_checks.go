@@ -75,6 +75,10 @@ func (s *jsiiProxy_Share) validateOverrideLogicalIdParameters(newLogicalId *stri
 	return nil
 }
 
+func (s *jsiiProxy_Share) validatePutTimeoutsParameters(value *ShareTimeouts) error {
+	return nil
+}
+
 func validateShare_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

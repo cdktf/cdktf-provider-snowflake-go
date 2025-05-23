@@ -5,14 +5,14 @@ package oauthintegrationforcustomclients
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/oauthintegrationforcustomclients/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/oauthintegrationforcustomclients/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/oauth_integration_for_custom_clients snowflake_oauth_integration_for_custom_clients}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/oauth_integration_for_custom_clients snowflake_oauth_integration_for_custom_clients}.
 type OauthIntegrationForCustomClients interface {
 	cdktf.TerraformResource
 	BlockedRolesList() *[]*string
@@ -113,6 +113,8 @@ type OauthIntegrationForCustomClients interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() OauthIntegrationForCustomClientsTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -156,6 +158,7 @@ type OauthIntegrationForCustomClients interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *OauthIntegrationForCustomClientsTimeouts)
 	ResetBlockedRolesList()
 	ResetComment()
 	ResetEnabled()
@@ -172,6 +175,7 @@ type OauthIntegrationForCustomClients interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPreAuthorizedRolesList()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -710,8 +714,28 @@ func (j *jsiiProxy_OauthIntegrationForCustomClients) TerraformResourceType() *st
 	return returns
 }
 
+func (j *jsiiProxy_OauthIntegrationForCustomClients) Timeouts() OauthIntegrationForCustomClientsTimeoutsOutputReference {
+	var returns OauthIntegrationForCustomClientsTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/oauth_integration_for_custom_clients snowflake_oauth_integration_for_custom_clients} Resource.
+func (j *jsiiProxy_OauthIntegrationForCustomClients) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/oauth_integration_for_custom_clients snowflake_oauth_integration_for_custom_clients} Resource.
 func NewOauthIntegrationForCustomClients(scope constructs.Construct, id *string, config *OauthIntegrationForCustomClientsConfig) OauthIntegrationForCustomClients {
 	_init_.Initialize()
 
@@ -729,7 +753,7 @@ func NewOauthIntegrationForCustomClients(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/oauth_integration_for_custom_clients snowflake_oauth_integration_for_custom_clients} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/oauth_integration_for_custom_clients snowflake_oauth_integration_for_custom_clients} Resource.
 func NewOauthIntegrationForCustomClients_Override(o OauthIntegrationForCustomClients, scope constructs.Construct, id *string, config *OauthIntegrationForCustomClientsConfig) {
 	_init_.Initialize()
 
@@ -1337,6 +1361,17 @@ func (o *jsiiProxy_OauthIntegrationForCustomClients) OverrideLogicalId(newLogica
 	)
 }
 
+func (o *jsiiProxy_OauthIntegrationForCustomClients) PutTimeouts(value *OauthIntegrationForCustomClientsTimeouts) {
+	if err := o.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		o,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (o *jsiiProxy_OauthIntegrationForCustomClients) ResetBlockedRolesList() {
 	_jsii_.InvokeVoid(
 		o,
@@ -1445,6 +1480,14 @@ func (o *jsiiProxy_OauthIntegrationForCustomClients) ResetPreAuthorizedRolesList
 	_jsii_.InvokeVoid(
 		o,
 		"resetPreAuthorizedRolesList",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_OauthIntegrationForCustomClients) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

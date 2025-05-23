@@ -63,7 +63,15 @@ func (j *jsiiProxy_CortexSearchServiceTimeoutsOutputReference) validateSetCreate
 	return nil
 }
 
+func (j *jsiiProxy_CortexSearchServiceTimeoutsOutputReference) validateSetDeleteParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_CortexSearchServiceTimeoutsOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_CortexSearchServiceTimeoutsOutputReference) validateSetReadParameters(val *string) error {
 	return nil
 }
 

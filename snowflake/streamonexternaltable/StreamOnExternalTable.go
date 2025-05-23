@@ -5,14 +5,14 @@ package streamonexternaltable
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/streamonexternaltable/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/streamonexternaltable/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/stream_on_external_table snowflake_stream_on_external_table}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/stream_on_external_table snowflake_stream_on_external_table}.
 type StreamOnExternalTable interface {
 	cdktf.TerraformResource
 	At() StreamOnExternalTableAtOutputReference
@@ -94,6 +94,8 @@ type StreamOnExternalTable interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() StreamOnExternalTableTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -139,6 +141,7 @@ type StreamOnExternalTable interface {
 	OverrideLogicalId(newLogicalId *string)
 	PutAt(value *StreamOnExternalTableAt)
 	PutBefore(value *StreamOnExternalTableBefore)
+	PutTimeouts(value *StreamOnExternalTableTimeouts)
 	ResetAt()
 	ResetBefore()
 	ResetComment()
@@ -148,6 +151,7 @@ type StreamOnExternalTable interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -576,8 +580,28 @@ func (j *jsiiProxy_StreamOnExternalTable) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_StreamOnExternalTable) Timeouts() StreamOnExternalTableTimeoutsOutputReference {
+	var returns StreamOnExternalTableTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/stream_on_external_table snowflake_stream_on_external_table} Resource.
+func (j *jsiiProxy_StreamOnExternalTable) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/stream_on_external_table snowflake_stream_on_external_table} Resource.
 func NewStreamOnExternalTable(scope constructs.Construct, id *string, config *StreamOnExternalTableConfig) StreamOnExternalTable {
 	_init_.Initialize()
 
@@ -595,7 +619,7 @@ func NewStreamOnExternalTable(scope constructs.Construct, id *string, config *St
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/stream_on_external_table snowflake_stream_on_external_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/stream_on_external_table snowflake_stream_on_external_table} Resource.
 func NewStreamOnExternalTable_Override(s StreamOnExternalTable, scope constructs.Construct, id *string, config *StreamOnExternalTableConfig) {
 	_init_.Initialize()
 
@@ -1137,6 +1161,17 @@ func (s *jsiiProxy_StreamOnExternalTable) PutBefore(value *StreamOnExternalTable
 	)
 }
 
+func (s *jsiiProxy_StreamOnExternalTable) PutTimeouts(value *StreamOnExternalTableTimeouts) {
+	if err := s.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_StreamOnExternalTable) ResetAt() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1189,6 +1224,14 @@ func (s *jsiiProxy_StreamOnExternalTable) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_StreamOnExternalTable) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

@@ -75,6 +75,10 @@ func (a *jsiiProxy_ApiIntegration) validateOverrideLogicalIdParameters(newLogica
 	return nil
 }
 
+func (a *jsiiProxy_ApiIntegration) validatePutTimeoutsParameters(value *ApiIntegrationTimeouts) error {
+	return nil
+}
+
 func validateApiIntegration_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

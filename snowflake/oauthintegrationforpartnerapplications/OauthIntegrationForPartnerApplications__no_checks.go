@@ -75,6 +75,10 @@ func (o *jsiiProxy_OauthIntegrationForPartnerApplications) validateOverrideLogic
 	return nil
 }
 
+func (o *jsiiProxy_OauthIntegrationForPartnerApplications) validatePutTimeoutsParameters(value *OauthIntegrationForPartnerApplicationsTimeouts) error {
+	return nil
+}
+
 func validateOauthIntegrationForPartnerApplications_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

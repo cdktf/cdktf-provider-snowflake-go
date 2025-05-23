@@ -75,6 +75,10 @@ func (s *jsiiProxy_Saml2Integration) validateOverrideLogicalIdParameters(newLogi
 	return nil
 }
 
+func (s *jsiiProxy_Saml2Integration) validatePutTimeoutsParameters(value *Saml2IntegrationTimeouts) error {
+	return nil
+}
+
 func validateSaml2Integration_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

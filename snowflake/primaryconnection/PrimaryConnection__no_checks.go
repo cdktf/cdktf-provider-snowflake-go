@@ -75,6 +75,10 @@ func (p *jsiiProxy_PrimaryConnection) validateOverrideLogicalIdParameters(newLog
 	return nil
 }
 
+func (p *jsiiProxy_PrimaryConnection) validatePutTimeoutsParameters(value *PrimaryConnectionTimeouts) error {
+	return nil
+}
+
 func validatePrimaryConnection_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

@@ -79,6 +79,10 @@ func (t *jsiiProxy_TableConstraint) validatePutForeignKeyPropertiesParameters(va
 	return nil
 }
 
+func (t *jsiiProxy_TableConstraint) validatePutTimeoutsParameters(value *TableConstraintTimeouts) error {
+	return nil
+}
+
 func validateTableConstraint_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

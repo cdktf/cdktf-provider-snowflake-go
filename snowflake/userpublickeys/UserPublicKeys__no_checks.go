@@ -75,6 +75,10 @@ func (u *jsiiProxy_UserPublicKeys) validateOverrideLogicalIdParameters(newLogica
 	return nil
 }
 
+func (u *jsiiProxy_UserPublicKeys) validatePutTimeoutsParameters(value *UserPublicKeysTimeouts) error {
+	return nil
+}
+
 func validateUserPublicKeys_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

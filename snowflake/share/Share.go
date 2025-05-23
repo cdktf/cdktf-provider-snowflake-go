@@ -5,14 +5,14 @@ package share
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/share/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/share/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/share snowflake_share}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/share snowflake_share}.
 type Share interface {
 	cdktf.TerraformResource
 	Accounts() *[]*string
@@ -74,6 +74,8 @@ type Share interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() ShareTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -117,12 +119,14 @@ type Share interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *ShareTimeouts)
 	ResetAccounts()
 	ResetComment()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -391,8 +395,28 @@ func (j *jsiiProxy_Share) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Share) Timeouts() ShareTimeoutsOutputReference {
+	var returns ShareTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/share snowflake_share} Resource.
+func (j *jsiiProxy_Share) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/share snowflake_share} Resource.
 func NewShare(scope constructs.Construct, id *string, config *ShareConfig) Share {
 	_init_.Initialize()
 
@@ -410,7 +434,7 @@ func NewShare(scope constructs.Construct, id *string, config *ShareConfig) Share
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/share snowflake_share} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/share snowflake_share} Resource.
 func NewShare_Override(s Share, scope constructs.Construct, id *string, config *ShareConfig) {
 	_init_.Initialize()
 
@@ -886,6 +910,17 @@ func (s *jsiiProxy_Share) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (s *jsiiProxy_Share) PutTimeouts(value *ShareTimeouts) {
+	if err := s.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_Share) ResetAccounts() {
 	_jsii_.InvokeVoid(
 		s,
@@ -914,6 +949,14 @@ func (s *jsiiProxy_Share) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Share) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

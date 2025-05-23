@@ -5,14 +5,14 @@ package functionsql
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/functionsql/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/functionsql/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/function_sql snowflake_function_sql}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/function_sql snowflake_function_sql}.
 type FunctionSql interface {
 	cdktf.TerraformResource
 	Arguments() FunctionSqlArgumentsList
@@ -103,6 +103,8 @@ type FunctionSql interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() FunctionSqlTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	TraceLevel() *string
 	SetTraceLevel(val *string)
 	TraceLevelInput() *string
@@ -150,6 +152,7 @@ type FunctionSql interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutArguments(value interface{})
+	PutTimeouts(value *FunctionSqlTimeouts)
 	ResetArguments()
 	ResetComment()
 	ResetEnableConsoleOutput()
@@ -161,6 +164,7 @@ type FunctionSql interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetReturnResultsBehavior()
+	ResetTimeouts()
 	ResetTraceLevel()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -640,6 +644,26 @@ func (j *jsiiProxy_FunctionSql) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_FunctionSql) Timeouts() FunctionSqlTimeoutsOutputReference {
+	var returns FunctionSqlTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_FunctionSql) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_FunctionSql) TraceLevel() *string {
 	var returns *string
 	_jsii_.Get(
@@ -661,7 +685,7 @@ func (j *jsiiProxy_FunctionSql) TraceLevelInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/function_sql snowflake_function_sql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/function_sql snowflake_function_sql} Resource.
 func NewFunctionSql(scope constructs.Construct, id *string, config *FunctionSqlConfig) FunctionSql {
 	_init_.Initialize()
 
@@ -679,7 +703,7 @@ func NewFunctionSql(scope constructs.Construct, id *string, config *FunctionSqlC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/function_sql snowflake_function_sql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/function_sql snowflake_function_sql} Resource.
 func NewFunctionSql_Override(f FunctionSql, scope constructs.Construct, id *string, config *FunctionSqlConfig) {
 	_init_.Initialize()
 
@@ -1265,6 +1289,17 @@ func (f *jsiiProxy_FunctionSql) PutArguments(value interface{}) {
 	)
 }
 
+func (f *jsiiProxy_FunctionSql) PutTimeouts(value *FunctionSqlTimeouts) {
+	if err := f.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (f *jsiiProxy_FunctionSql) ResetArguments() {
 	_jsii_.InvokeVoid(
 		f,
@@ -1333,6 +1368,14 @@ func (f *jsiiProxy_FunctionSql) ResetReturnResultsBehavior() {
 	_jsii_.InvokeVoid(
 		f,
 		"resetReturnResultsBehavior",
+		nil, // no parameters
+	)
+}
+
+func (f *jsiiProxy_FunctionSql) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

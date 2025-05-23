@@ -5,14 +5,14 @@ package tablecolumnmaskingpolicyapplication
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/tablecolumnmaskingpolicyapplication/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/tablecolumnmaskingpolicyapplication/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/table_column_masking_policy_application snowflake_table_column_masking_policy_application}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/table_column_masking_policy_application snowflake_table_column_masking_policy_application}.
 type TableColumnMaskingPolicyApplication interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -73,6 +73,8 @@ type TableColumnMaskingPolicyApplication interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() TableColumnMaskingPolicyApplicationTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -116,10 +118,12 @@ type TableColumnMaskingPolicyApplication interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *TableColumnMaskingPolicyApplicationTimeouts)
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -378,8 +382,28 @@ func (j *jsiiProxy_TableColumnMaskingPolicyApplication) TerraformResourceType() 
 	return returns
 }
 
+func (j *jsiiProxy_TableColumnMaskingPolicyApplication) Timeouts() TableColumnMaskingPolicyApplicationTimeoutsOutputReference {
+	var returns TableColumnMaskingPolicyApplicationTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/table_column_masking_policy_application snowflake_table_column_masking_policy_application} Resource.
+func (j *jsiiProxy_TableColumnMaskingPolicyApplication) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/table_column_masking_policy_application snowflake_table_column_masking_policy_application} Resource.
 func NewTableColumnMaskingPolicyApplication(scope constructs.Construct, id *string, config *TableColumnMaskingPolicyApplicationConfig) TableColumnMaskingPolicyApplication {
 	_init_.Initialize()
 
@@ -397,7 +421,7 @@ func NewTableColumnMaskingPolicyApplication(scope constructs.Construct, id *stri
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/table_column_masking_policy_application snowflake_table_column_masking_policy_application} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/table_column_masking_policy_application snowflake_table_column_masking_policy_application} Resource.
 func NewTableColumnMaskingPolicyApplication_Override(t TableColumnMaskingPolicyApplication, scope constructs.Construct, id *string, config *TableColumnMaskingPolicyApplicationConfig) {
 	_init_.Initialize()
 
@@ -873,6 +897,17 @@ func (t *jsiiProxy_TableColumnMaskingPolicyApplication) OverrideLogicalId(newLog
 	)
 }
 
+func (t *jsiiProxy_TableColumnMaskingPolicyApplication) PutTimeouts(value *TableColumnMaskingPolicyApplicationTimeouts) {
+	if err := t.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		t,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (t *jsiiProxy_TableColumnMaskingPolicyApplication) ResetId() {
 	_jsii_.InvokeVoid(
 		t,
@@ -885,6 +920,14 @@ func (t *jsiiProxy_TableColumnMaskingPolicyApplication) ResetOverrideLogicalId()
 	_jsii_.InvokeVoid(
 		t,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TableColumnMaskingPolicyApplication) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

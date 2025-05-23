@@ -75,6 +75,10 @@ func (s *jsiiProxy_ScimIntegration) validateOverrideLogicalIdParameters(newLogic
 	return nil
 }
 
+func (s *jsiiProxy_ScimIntegration) validatePutTimeoutsParameters(value *ScimIntegrationTimeouts) error {
+	return nil
+}
+
 func validateScimIntegration_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

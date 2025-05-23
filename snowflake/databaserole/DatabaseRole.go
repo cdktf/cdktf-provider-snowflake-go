@@ -5,14 +5,14 @@ package databaserole
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/databaserole/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/databaserole/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/database_role snowflake_database_role}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/database_role snowflake_database_role}.
 type DatabaseRole interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -75,6 +75,8 @@ type DatabaseRole interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() DatabaseRoleTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -118,11 +120,13 @@ type DatabaseRole interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *DatabaseRoleTimeouts)
 	ResetComment()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -401,8 +405,28 @@ func (j *jsiiProxy_DatabaseRole) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DatabaseRole) Timeouts() DatabaseRoleTimeoutsOutputReference {
+	var returns DatabaseRoleTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/database_role snowflake_database_role} Resource.
+func (j *jsiiProxy_DatabaseRole) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/database_role snowflake_database_role} Resource.
 func NewDatabaseRole(scope constructs.Construct, id *string, config *DatabaseRoleConfig) DatabaseRole {
 	_init_.Initialize()
 
@@ -420,7 +444,7 @@ func NewDatabaseRole(scope constructs.Construct, id *string, config *DatabaseRol
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/database_role snowflake_database_role} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/database_role snowflake_database_role} Resource.
 func NewDatabaseRole_Override(d DatabaseRole, scope constructs.Construct, id *string, config *DatabaseRoleConfig) {
 	_init_.Initialize()
 
@@ -896,6 +920,17 @@ func (d *jsiiProxy_DatabaseRole) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (d *jsiiProxy_DatabaseRole) PutTimeouts(value *DatabaseRoleTimeouts) {
+	if err := d.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (d *jsiiProxy_DatabaseRole) ResetComment() {
 	_jsii_.InvokeVoid(
 		d,
@@ -916,6 +951,14 @@ func (d *jsiiProxy_DatabaseRole) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DatabaseRole) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

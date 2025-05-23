@@ -79,6 +79,10 @@ func (g *jsiiProxy_GrantOwnership) validatePutOnParameters(value *GrantOwnership
 	return nil
 }
 
+func (g *jsiiProxy_GrantOwnership) validatePutTimeoutsParameters(value *GrantOwnershipTimeouts) error {
+	return nil
+}
+
 func validateGrantOwnership_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

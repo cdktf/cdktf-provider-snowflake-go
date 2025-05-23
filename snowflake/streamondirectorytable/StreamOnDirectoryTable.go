@@ -5,14 +5,14 @@ package streamondirectorytable
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/streamondirectorytable/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/streamondirectorytable/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/stream_on_directory_table snowflake_stream_on_directory_table}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/stream_on_directory_table snowflake_stream_on_directory_table}.
 type StreamOnDirectoryTable interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -87,6 +87,8 @@ type StreamOnDirectoryTable interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() StreamOnDirectoryTableTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -130,12 +132,14 @@ type StreamOnDirectoryTable interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *StreamOnDirectoryTableTimeouts)
 	ResetComment()
 	ResetCopyGrants()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -504,8 +508,28 @@ func (j *jsiiProxy_StreamOnDirectoryTable) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_StreamOnDirectoryTable) Timeouts() StreamOnDirectoryTableTimeoutsOutputReference {
+	var returns StreamOnDirectoryTableTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/stream_on_directory_table snowflake_stream_on_directory_table} Resource.
+func (j *jsiiProxy_StreamOnDirectoryTable) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/stream_on_directory_table snowflake_stream_on_directory_table} Resource.
 func NewStreamOnDirectoryTable(scope constructs.Construct, id *string, config *StreamOnDirectoryTableConfig) StreamOnDirectoryTable {
 	_init_.Initialize()
 
@@ -523,7 +547,7 @@ func NewStreamOnDirectoryTable(scope constructs.Construct, id *string, config *S
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/stream_on_directory_table snowflake_stream_on_directory_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/stream_on_directory_table snowflake_stream_on_directory_table} Resource.
 func NewStreamOnDirectoryTable_Override(s StreamOnDirectoryTable, scope constructs.Construct, id *string, config *StreamOnDirectoryTableConfig) {
 	_init_.Initialize()
 
@@ -1032,6 +1056,17 @@ func (s *jsiiProxy_StreamOnDirectoryTable) OverrideLogicalId(newLogicalId *strin
 	)
 }
 
+func (s *jsiiProxy_StreamOnDirectoryTable) PutTimeouts(value *StreamOnDirectoryTableTimeouts) {
+	if err := s.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_StreamOnDirectoryTable) ResetComment() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1060,6 +1095,14 @@ func (s *jsiiProxy_StreamOnDirectoryTable) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_StreamOnDirectoryTable) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

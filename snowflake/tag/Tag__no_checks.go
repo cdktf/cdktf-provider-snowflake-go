@@ -75,6 +75,10 @@ func (t *jsiiProxy_Tag) validateOverrideLogicalIdParameters(newLogicalId *string
 	return nil
 }
 
+func (t *jsiiProxy_Tag) validatePutTimeoutsParameters(value *TagTimeouts) error {
+	return nil
+}
+
 func validateTag_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

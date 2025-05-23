@@ -91,6 +91,10 @@ func (p *jsiiProxy_ProcedureScala) validatePutTargetPathParameters(value *Proced
 	return nil
 }
 
+func (p *jsiiProxy_ProcedureScala) validatePutTimeoutsParameters(value *ProcedureScalaTimeouts) error {
+	return nil
+}
+
 func validateProcedureScala_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

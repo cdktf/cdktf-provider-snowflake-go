@@ -5,14 +5,14 @@ package secretwithclientcredentials
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/secretwithclientcredentials/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/secretwithclientcredentials/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/secret_with_client_credentials snowflake_secret_with_client_credentials}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/secret_with_client_credentials snowflake_secret_with_client_credentials}.
 type SecretWithClientCredentials interface {
 	cdktf.TerraformResource
 	ApiAuthentication() *string
@@ -86,6 +86,8 @@ type SecretWithClientCredentials interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() SecretWithClientCredentialsTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -129,11 +131,13 @@ type SecretWithClientCredentials interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *SecretWithClientCredentialsTimeouts)
 	ResetComment()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -492,8 +496,28 @@ func (j *jsiiProxy_SecretWithClientCredentials) TerraformResourceType() *string 
 	return returns
 }
 
+func (j *jsiiProxy_SecretWithClientCredentials) Timeouts() SecretWithClientCredentialsTimeoutsOutputReference {
+	var returns SecretWithClientCredentialsTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/secret_with_client_credentials snowflake_secret_with_client_credentials} Resource.
+func (j *jsiiProxy_SecretWithClientCredentials) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/secret_with_client_credentials snowflake_secret_with_client_credentials} Resource.
 func NewSecretWithClientCredentials(scope constructs.Construct, id *string, config *SecretWithClientCredentialsConfig) SecretWithClientCredentials {
 	_init_.Initialize()
 
@@ -511,7 +535,7 @@ func NewSecretWithClientCredentials(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/secret_with_client_credentials snowflake_secret_with_client_credentials} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/secret_with_client_credentials snowflake_secret_with_client_credentials} Resource.
 func NewSecretWithClientCredentials_Override(s SecretWithClientCredentials, scope constructs.Construct, id *string, config *SecretWithClientCredentialsConfig) {
 	_init_.Initialize()
 
@@ -1020,6 +1044,17 @@ func (s *jsiiProxy_SecretWithClientCredentials) OverrideLogicalId(newLogicalId *
 	)
 }
 
+func (s *jsiiProxy_SecretWithClientCredentials) PutTimeouts(value *SecretWithClientCredentialsTimeouts) {
+	if err := s.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_SecretWithClientCredentials) ResetComment() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1040,6 +1075,14 @@ func (s *jsiiProxy_SecretWithClientCredentials) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SecretWithClientCredentials) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

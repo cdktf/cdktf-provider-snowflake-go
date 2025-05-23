@@ -75,6 +75,10 @@ func (w *jsiiProxy_Warehouse) validateOverrideLogicalIdParameters(newLogicalId *
 	return nil
 }
 
+func (w *jsiiProxy_Warehouse) validatePutTimeoutsParameters(value *WarehouseTimeouts) error {
+	return nil
+}
+
 func validateWarehouse_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

@@ -5,14 +5,14 @@ package secretwithauthorizationcodegrant
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/secretwithauthorizationcodegrant/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/secretwithauthorizationcodegrant/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/secret_with_authorization_code_grant snowflake_secret_with_authorization_code_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/secret_with_authorization_code_grant snowflake_secret_with_authorization_code_grant}.
 type SecretWithAuthorizationCodeGrant interface {
 	cdktf.TerraformResource
 	ApiAuthentication() *string
@@ -89,6 +89,8 @@ type SecretWithAuthorizationCodeGrant interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() SecretWithAuthorizationCodeGrantTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -132,11 +134,13 @@ type SecretWithAuthorizationCodeGrant interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *SecretWithAuthorizationCodeGrantTimeouts)
 	ResetComment()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -515,8 +519,28 @@ func (j *jsiiProxy_SecretWithAuthorizationCodeGrant) TerraformResourceType() *st
 	return returns
 }
 
+func (j *jsiiProxy_SecretWithAuthorizationCodeGrant) Timeouts() SecretWithAuthorizationCodeGrantTimeoutsOutputReference {
+	var returns SecretWithAuthorizationCodeGrantTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/secret_with_authorization_code_grant snowflake_secret_with_authorization_code_grant} Resource.
+func (j *jsiiProxy_SecretWithAuthorizationCodeGrant) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/secret_with_authorization_code_grant snowflake_secret_with_authorization_code_grant} Resource.
 func NewSecretWithAuthorizationCodeGrant(scope constructs.Construct, id *string, config *SecretWithAuthorizationCodeGrantConfig) SecretWithAuthorizationCodeGrant {
 	_init_.Initialize()
 
@@ -534,7 +558,7 @@ func NewSecretWithAuthorizationCodeGrant(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/secret_with_authorization_code_grant snowflake_secret_with_authorization_code_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/secret_with_authorization_code_grant snowflake_secret_with_authorization_code_grant} Resource.
 func NewSecretWithAuthorizationCodeGrant_Override(s SecretWithAuthorizationCodeGrant, scope constructs.Construct, id *string, config *SecretWithAuthorizationCodeGrantConfig) {
 	_init_.Initialize()
 
@@ -1054,6 +1078,17 @@ func (s *jsiiProxy_SecretWithAuthorizationCodeGrant) OverrideLogicalId(newLogica
 	)
 }
 
+func (s *jsiiProxy_SecretWithAuthorizationCodeGrant) PutTimeouts(value *SecretWithAuthorizationCodeGrantTimeouts) {
+	if err := s.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_SecretWithAuthorizationCodeGrant) ResetComment() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1074,6 +1109,14 @@ func (s *jsiiProxy_SecretWithAuthorizationCodeGrant) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SecretWithAuthorizationCodeGrant) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

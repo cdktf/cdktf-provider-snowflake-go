@@ -5,14 +5,14 @@ package streamontable
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/streamontable/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/streamontable/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/stream_on_table snowflake_stream_on_table}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/stream_on_table snowflake_stream_on_table}.
 type StreamOnTable interface {
 	cdktf.TerraformResource
 	AppendOnly() *string
@@ -97,6 +97,8 @@ type StreamOnTable interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() StreamOnTableTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -142,6 +144,7 @@ type StreamOnTable interface {
 	OverrideLogicalId(newLogicalId *string)
 	PutAt(value *StreamOnTableAt)
 	PutBefore(value *StreamOnTableBefore)
+	PutTimeouts(value *StreamOnTableTimeouts)
 	ResetAppendOnly()
 	ResetAt()
 	ResetBefore()
@@ -152,6 +155,7 @@ type StreamOnTable interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetShowInitialRows()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -600,8 +604,28 @@ func (j *jsiiProxy_StreamOnTable) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_StreamOnTable) Timeouts() StreamOnTableTimeoutsOutputReference {
+	var returns StreamOnTableTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/stream_on_table snowflake_stream_on_table} Resource.
+func (j *jsiiProxy_StreamOnTable) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/stream_on_table snowflake_stream_on_table} Resource.
 func NewStreamOnTable(scope constructs.Construct, id *string, config *StreamOnTableConfig) StreamOnTable {
 	_init_.Initialize()
 
@@ -619,7 +643,7 @@ func NewStreamOnTable(scope constructs.Construct, id *string, config *StreamOnTa
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/stream_on_table snowflake_stream_on_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/stream_on_table snowflake_stream_on_table} Resource.
 func NewStreamOnTable_Override(s StreamOnTable, scope constructs.Construct, id *string, config *StreamOnTableConfig) {
 	_init_.Initialize()
 
@@ -1172,6 +1196,17 @@ func (s *jsiiProxy_StreamOnTable) PutBefore(value *StreamOnTableBefore) {
 	)
 }
 
+func (s *jsiiProxy_StreamOnTable) PutTimeouts(value *StreamOnTableTimeouts) {
+	if err := s.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_StreamOnTable) ResetAppendOnly() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1232,6 +1267,14 @@ func (s *jsiiProxy_StreamOnTable) ResetShowInitialRows() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetShowInitialRows",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_StreamOnTable) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

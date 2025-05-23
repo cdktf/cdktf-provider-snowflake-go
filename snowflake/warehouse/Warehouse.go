@@ -5,14 +5,14 @@ package warehouse
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/warehouse/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/warehouse/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/warehouse snowflake_warehouse}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/warehouse snowflake_warehouse}.
 type Warehouse interface {
 	cdktf.TerraformResource
 	AutoResume() *string
@@ -109,6 +109,8 @@ type Warehouse interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() WarehouseTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	WarehouseSize() *string
 	SetWarehouseSize(val *string)
 	WarehouseSizeInput() *string
@@ -158,6 +160,7 @@ type Warehouse interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *WarehouseTimeouts)
 	ResetAutoResume()
 	ResetAutoSuspend()
 	ResetComment()
@@ -175,6 +178,7 @@ type Warehouse interface {
 	ResetScalingPolicy()
 	ResetStatementQueuedTimeoutInSeconds()
 	ResetStatementTimeoutInSeconds()
+	ResetTimeouts()
 	ResetWarehouseSize()
 	ResetWarehouseType()
 	SynthesizeAttributes() *map[string]interface{}
@@ -685,6 +689,26 @@ func (j *jsiiProxy_Warehouse) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Warehouse) Timeouts() WarehouseTimeoutsOutputReference {
+	var returns WarehouseTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Warehouse) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Warehouse) WarehouseSize() *string {
 	var returns *string
 	_jsii_.Get(
@@ -726,7 +750,7 @@ func (j *jsiiProxy_Warehouse) WarehouseTypeInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/warehouse snowflake_warehouse} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/warehouse snowflake_warehouse} Resource.
 func NewWarehouse(scope constructs.Construct, id *string, config *WarehouseConfig) Warehouse {
 	_init_.Initialize()
 
@@ -744,7 +768,7 @@ func NewWarehouse(scope constructs.Construct, id *string, config *WarehouseConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/warehouse snowflake_warehouse} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/warehouse snowflake_warehouse} Resource.
 func NewWarehouse_Override(w Warehouse, scope constructs.Construct, id *string, config *WarehouseConfig) {
 	_init_.Initialize()
 
@@ -1363,6 +1387,17 @@ func (w *jsiiProxy_Warehouse) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (w *jsiiProxy_Warehouse) PutTimeouts(value *WarehouseTimeouts) {
+	if err := w.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		w,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (w *jsiiProxy_Warehouse) ResetAutoResume() {
 	_jsii_.InvokeVoid(
 		w,
@@ -1479,6 +1514,14 @@ func (w *jsiiProxy_Warehouse) ResetStatementTimeoutInSeconds() {
 	_jsii_.InvokeVoid(
 		w,
 		"resetStatementTimeoutInSeconds",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_Warehouse) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

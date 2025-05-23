@@ -5,14 +5,14 @@ package streamlit
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/streamlit/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/streamlit/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/streamlit snowflake_streamlit}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/streamlit snowflake_streamlit}.
 type Streamlit interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -94,6 +94,8 @@ type Streamlit interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() StreamlitTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	Title() *string
 	SetTitle(val *string)
 	TitleInput() *string
@@ -140,6 +142,7 @@ type Streamlit interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *StreamlitTimeouts)
 	ResetComment()
 	ResetDirectoryLocation()
 	ResetExternalAccessIntegrations()
@@ -148,6 +151,7 @@ type Streamlit interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetQueryWarehouse()
+	ResetTimeouts()
 	ResetTitle()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -557,6 +561,26 @@ func (j *jsiiProxy_Streamlit) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Streamlit) Timeouts() StreamlitTimeoutsOutputReference {
+	var returns StreamlitTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Streamlit) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Streamlit) Title() *string {
 	var returns *string
 	_jsii_.Get(
@@ -578,7 +602,7 @@ func (j *jsiiProxy_Streamlit) TitleInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/streamlit snowflake_streamlit} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/streamlit snowflake_streamlit} Resource.
 func NewStreamlit(scope constructs.Construct, id *string, config *StreamlitConfig) Streamlit {
 	_init_.Initialize()
 
@@ -596,7 +620,7 @@ func NewStreamlit(scope constructs.Construct, id *string, config *StreamlitConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/streamlit snowflake_streamlit} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/streamlit snowflake_streamlit} Resource.
 func NewStreamlit_Override(s Streamlit, scope constructs.Construct, id *string, config *StreamlitConfig) {
 	_init_.Initialize()
 
@@ -1149,6 +1173,17 @@ func (s *jsiiProxy_Streamlit) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (s *jsiiProxy_Streamlit) PutTimeouts(value *StreamlitTimeouts) {
+	if err := s.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_Streamlit) ResetComment() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1193,6 +1228,14 @@ func (s *jsiiProxy_Streamlit) ResetQueryWarehouse() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetQueryWarehouse",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Streamlit) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

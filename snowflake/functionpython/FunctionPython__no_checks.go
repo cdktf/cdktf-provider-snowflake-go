@@ -87,6 +87,10 @@ func (f *jsiiProxy_FunctionPython) validatePutSecretsParameters(value interface{
 	return nil
 }
 
+func (f *jsiiProxy_FunctionPython) validatePutTimeoutsParameters(value *FunctionPythonTimeouts) error {
+	return nil
+}
+
 func validateFunctionPython_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

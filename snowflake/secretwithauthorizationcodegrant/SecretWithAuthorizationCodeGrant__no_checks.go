@@ -75,6 +75,10 @@ func (s *jsiiProxy_SecretWithAuthorizationCodeGrant) validateOverrideLogicalIdPa
 	return nil
 }
 
+func (s *jsiiProxy_SecretWithAuthorizationCodeGrant) validatePutTimeoutsParameters(value *SecretWithAuthorizationCodeGrantTimeouts) error {
+	return nil
+}
+
 func validateSecretWithAuthorizationCodeGrant_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

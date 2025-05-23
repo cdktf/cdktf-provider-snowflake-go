@@ -75,6 +75,10 @@ func (s *jsiiProxy_StorageIntegration) validateOverrideLogicalIdParameters(newLo
 	return nil
 }
 
+func (s *jsiiProxy_StorageIntegration) validatePutTimeoutsParameters(value *StorageIntegrationTimeouts) error {
+	return nil
+}
+
 func validateStorageIntegration_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

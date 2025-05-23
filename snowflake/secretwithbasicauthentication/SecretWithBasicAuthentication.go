@@ -5,14 +5,14 @@ package secretwithbasicauthentication
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/secretwithbasicauthentication/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/secretwithbasicauthentication/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/secret_with_basic_authentication snowflake_secret_with_basic_authentication}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/secret_with_basic_authentication snowflake_secret_with_basic_authentication}.
 type SecretWithBasicAuthentication interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -83,6 +83,8 @@ type SecretWithBasicAuthentication interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() SecretWithBasicAuthenticationTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	Username() *string
 	SetUsername(val *string)
 	UsernameInput() *string
@@ -129,11 +131,13 @@ type SecretWithBasicAuthentication interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *SecretWithBasicAuthenticationTimeouts)
 	ResetComment()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -472,6 +476,26 @@ func (j *jsiiProxy_SecretWithBasicAuthentication) TerraformResourceType() *strin
 	return returns
 }
 
+func (j *jsiiProxy_SecretWithBasicAuthentication) Timeouts() SecretWithBasicAuthenticationTimeoutsOutputReference {
+	var returns SecretWithBasicAuthenticationTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SecretWithBasicAuthentication) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_SecretWithBasicAuthentication) Username() *string {
 	var returns *string
 	_jsii_.Get(
@@ -493,7 +517,7 @@ func (j *jsiiProxy_SecretWithBasicAuthentication) UsernameInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/secret_with_basic_authentication snowflake_secret_with_basic_authentication} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/secret_with_basic_authentication snowflake_secret_with_basic_authentication} Resource.
 func NewSecretWithBasicAuthentication(scope constructs.Construct, id *string, config *SecretWithBasicAuthenticationConfig) SecretWithBasicAuthentication {
 	_init_.Initialize()
 
@@ -511,7 +535,7 @@ func NewSecretWithBasicAuthentication(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/secret_with_basic_authentication snowflake_secret_with_basic_authentication} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/secret_with_basic_authentication snowflake_secret_with_basic_authentication} Resource.
 func NewSecretWithBasicAuthentication_Override(s SecretWithBasicAuthentication, scope constructs.Construct, id *string, config *SecretWithBasicAuthenticationConfig) {
 	_init_.Initialize()
 
@@ -1020,6 +1044,17 @@ func (s *jsiiProxy_SecretWithBasicAuthentication) OverrideLogicalId(newLogicalId
 	)
 }
 
+func (s *jsiiProxy_SecretWithBasicAuthentication) PutTimeouts(value *SecretWithBasicAuthenticationTimeouts) {
+	if err := s.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_SecretWithBasicAuthentication) ResetComment() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1040,6 +1075,14 @@ func (s *jsiiProxy_SecretWithBasicAuthentication) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SecretWithBasicAuthentication) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

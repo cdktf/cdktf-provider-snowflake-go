@@ -5,14 +5,14 @@ package passwordpolicy
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/passwordpolicy/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/passwordpolicy/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/password_policy snowflake_password_policy}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/password_policy snowflake_password_policy}.
 type PasswordPolicy interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -116,6 +116,8 @@ type PasswordPolicy interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() PasswordPolicyTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -159,6 +161,7 @@ type PasswordPolicy interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *PasswordPolicyTimeouts)
 	ResetComment()
 	ResetHistory()
 	ResetId()
@@ -177,6 +180,7 @@ type PasswordPolicy interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -725,8 +729,28 @@ func (j *jsiiProxy_PasswordPolicy) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_PasswordPolicy) Timeouts() PasswordPolicyTimeoutsOutputReference {
+	var returns PasswordPolicyTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/password_policy snowflake_password_policy} Resource.
+func (j *jsiiProxy_PasswordPolicy) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/password_policy snowflake_password_policy} Resource.
 func NewPasswordPolicy(scope constructs.Construct, id *string, config *PasswordPolicyConfig) PasswordPolicy {
 	_init_.Initialize()
 
@@ -744,7 +768,7 @@ func NewPasswordPolicy(scope constructs.Construct, id *string, config *PasswordP
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/password_policy snowflake_password_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/password_policy snowflake_password_policy} Resource.
 func NewPasswordPolicy_Override(p PasswordPolicy, scope constructs.Construct, id *string, config *PasswordPolicyConfig) {
 	_init_.Initialize()
 
@@ -1374,6 +1398,17 @@ func (p *jsiiProxy_PasswordPolicy) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (p *jsiiProxy_PasswordPolicy) PutTimeouts(value *PasswordPolicyTimeouts) {
+	if err := p.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		p,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (p *jsiiProxy_PasswordPolicy) ResetComment() {
 	_jsii_.InvokeVoid(
 		p,
@@ -1498,6 +1533,14 @@ func (p *jsiiProxy_PasswordPolicy) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		p,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PasswordPolicy) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

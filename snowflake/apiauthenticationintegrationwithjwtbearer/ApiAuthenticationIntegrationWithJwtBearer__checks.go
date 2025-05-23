@@ -207,6 +207,17 @@ func (a *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearer) validateOverrideLo
 	return nil
 }
 
+func (a *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearer) validatePutTimeoutsParameters(value *ApiAuthenticationIntegrationWithJwtBearerTimeouts) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func validateApiAuthenticationIntegrationWithJwtBearer_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	if scope == nil {
 		return fmt.Errorf("parameter scope is required, but nil was provided")

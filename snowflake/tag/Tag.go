@@ -5,14 +5,14 @@ package tag
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/tag/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/tag/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/tag snowflake_tag}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/tag snowflake_tag}.
 type Tag interface {
 	cdktf.TerraformResource
 	AllowedValues() *[]*string
@@ -84,6 +84,8 @@ type Tag interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() TagTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -127,6 +129,7 @@ type Tag interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *TagTimeouts)
 	ResetAllowedValues()
 	ResetComment()
 	ResetId()
@@ -134,6 +137,7 @@ type Tag interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -472,8 +476,28 @@ func (j *jsiiProxy_Tag) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Tag) Timeouts() TagTimeoutsOutputReference {
+	var returns TagTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/tag snowflake_tag} Resource.
+func (j *jsiiProxy_Tag) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/tag snowflake_tag} Resource.
 func NewTag(scope constructs.Construct, id *string, config *TagConfig) Tag {
 	_init_.Initialize()
 
@@ -491,7 +515,7 @@ func NewTag(scope constructs.Construct, id *string, config *TagConfig) Tag {
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/tag snowflake_tag} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/tag snowflake_tag} Resource.
 func NewTag_Override(t Tag, scope constructs.Construct, id *string, config *TagConfig) {
 	_init_.Initialize()
 
@@ -1000,6 +1024,17 @@ func (t *jsiiProxy_Tag) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (t *jsiiProxy_Tag) PutTimeouts(value *TagTimeouts) {
+	if err := t.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		t,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (t *jsiiProxy_Tag) ResetAllowedValues() {
 	_jsii_.InvokeVoid(
 		t,
@@ -1036,6 +1071,14 @@ func (t *jsiiProxy_Tag) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		t,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_Tag) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

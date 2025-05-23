@@ -95,6 +95,10 @@ func (v *jsiiProxy_View) validatePutRowAccessPolicyParameters(value *ViewRowAcce
 	return nil
 }
 
+func (v *jsiiProxy_View) validatePutTimeoutsParameters(value *ViewTimeouts) error {
+	return nil
+}
+
 func validateView_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

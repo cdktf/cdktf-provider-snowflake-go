@@ -59,6 +59,10 @@ func (j *jsiiProxy_SnowflakeProvider) validateSetTokenAccessorParameters(val *Sn
 	return nil
 }
 
+func (j *jsiiProxy_SnowflakeProvider) validateSetUseLegacyTomlFileParameters(val interface{}) error {
+	return nil
+}
+
 func validateNewSnowflakeProviderParameters(scope constructs.Construct, id *string, config *SnowflakeProviderConfig) error {
 	return nil
 }

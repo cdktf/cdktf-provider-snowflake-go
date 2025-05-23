@@ -5,14 +5,14 @@ package datasnowflakestreamlits
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/datasnowflakestreamlits/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/datasnowflakestreamlits/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/data-sources/streamlits snowflake_streamlits}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/data-sources/streamlits snowflake_streamlits}.
 type DataSnowflakeStreamlits interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -372,7 +372,7 @@ func (j *jsiiProxy_DataSnowflakeStreamlits) WithDescribeInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/data-sources/streamlits snowflake_streamlits} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/data-sources/streamlits snowflake_streamlits} Data Source.
 func NewDataSnowflakeStreamlits(scope constructs.Construct, id *string, config *DataSnowflakeStreamlitsConfig) DataSnowflakeStreamlits {
 	_init_.Initialize()
 
@@ -390,7 +390,7 @@ func NewDataSnowflakeStreamlits(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/data-sources/streamlits snowflake_streamlits} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/data-sources/streamlits snowflake_streamlits} Data Source.
 func NewDataSnowflakeStreamlits_Override(d DataSnowflakeStreamlits, scope constructs.Construct, id *string, config *DataSnowflakeStreamlitsConfig) {
 	_init_.Initialize()
 

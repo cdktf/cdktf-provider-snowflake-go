@@ -75,6 +75,10 @@ func (a *jsiiProxy_ApiAuthenticationIntegrationWithClientCredentials) validateOv
 	return nil
 }
 
+func (a *jsiiProxy_ApiAuthenticationIntegrationWithClientCredentials) validatePutTimeoutsParameters(value *ApiAuthenticationIntegrationWithClientCredentialsTimeouts) error {
+	return nil
+}
+
 func validateApiAuthenticationIntegrationWithClientCredentials_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

@@ -5,14 +5,14 @@ package externalvolume
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/externalvolume/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/externalvolume/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/external_volume snowflake_external_volume}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/external_volume snowflake_external_volume}.
 type ExternalVolume interface {
 	cdktf.TerraformResource
 	AllowWrites() *string
@@ -78,6 +78,8 @@ type ExternalVolume interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() ExternalVolumeTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -122,12 +124,14 @@ type ExternalVolume interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutStorageLocation(value interface{})
+	PutTimeouts(value *ExternalVolumeTimeouts)
 	ResetAllowWrites()
 	ResetComment()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -436,8 +440,28 @@ func (j *jsiiProxy_ExternalVolume) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ExternalVolume) Timeouts() ExternalVolumeTimeoutsOutputReference {
+	var returns ExternalVolumeTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/external_volume snowflake_external_volume} Resource.
+func (j *jsiiProxy_ExternalVolume) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/external_volume snowflake_external_volume} Resource.
 func NewExternalVolume(scope constructs.Construct, id *string, config *ExternalVolumeConfig) ExternalVolume {
 	_init_.Initialize()
 
@@ -455,7 +479,7 @@ func NewExternalVolume(scope constructs.Construct, id *string, config *ExternalV
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/external_volume snowflake_external_volume} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/external_volume snowflake_external_volume} Resource.
 func NewExternalVolume_Override(e ExternalVolume, scope constructs.Construct, id *string, config *ExternalVolumeConfig) {
 	_init_.Initialize()
 
@@ -942,6 +966,17 @@ func (e *jsiiProxy_ExternalVolume) PutStorageLocation(value interface{}) {
 	)
 }
 
+func (e *jsiiProxy_ExternalVolume) PutTimeouts(value *ExternalVolumeTimeouts) {
+	if err := e.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (e *jsiiProxy_ExternalVolume) ResetAllowWrites() {
 	_jsii_.InvokeVoid(
 		e,
@@ -970,6 +1005,14 @@ func (e *jsiiProxy_ExternalVolume) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_ExternalVolume) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

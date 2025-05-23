@@ -75,6 +75,10 @@ func (e *jsiiProxy_ExternalOauthIntegration) validateOverrideLogicalIdParameters
 	return nil
 }
 
+func (e *jsiiProxy_ExternalOauthIntegration) validatePutTimeoutsParameters(value *ExternalOauthIntegrationTimeouts) error {
+	return nil
+}
+
 func validateExternalOauthIntegration_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

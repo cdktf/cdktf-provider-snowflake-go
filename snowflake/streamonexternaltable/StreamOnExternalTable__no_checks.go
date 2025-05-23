@@ -83,6 +83,10 @@ func (s *jsiiProxy_StreamOnExternalTable) validatePutBeforeParameters(value *Str
 	return nil
 }
 
+func (s *jsiiProxy_StreamOnExternalTable) validatePutTimeoutsParameters(value *StreamOnExternalTableTimeouts) error {
+	return nil
+}
+
 func validateStreamOnExternalTable_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

@@ -5,14 +5,14 @@ package procedurejava
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/procedurejava/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/procedurejava/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/procedure_java snowflake_procedure_java}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/procedure_java snowflake_procedure_java}.
 type ProcedureJava interface {
 	cdktf.TerraformResource
 	Arguments() ProcedureJavaArgumentsList
@@ -127,6 +127,8 @@ type ProcedureJava interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() ProcedureJavaTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	TraceLevel() *string
 	SetTraceLevel(val *string)
 	TraceLevelInput() *string
@@ -177,6 +179,7 @@ type ProcedureJava interface {
 	PutImports(value interface{})
 	PutSecrets(value interface{})
 	PutTargetPath(value *ProcedureJavaTargetPath)
+	PutTimeouts(value *ProcedureJavaTimeouts)
 	ResetArguments()
 	ResetComment()
 	ResetEnableConsoleOutput()
@@ -195,6 +198,7 @@ type ProcedureJava interface {
 	ResetProcedureDefinition()
 	ResetSecrets()
 	ResetTargetPath()
+	ResetTimeouts()
 	ResetTraceLevel()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -854,6 +858,26 @@ func (j *jsiiProxy_ProcedureJava) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ProcedureJava) Timeouts() ProcedureJavaTimeoutsOutputReference {
+	var returns ProcedureJavaTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ProcedureJava) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ProcedureJava) TraceLevel() *string {
 	var returns *string
 	_jsii_.Get(
@@ -875,7 +899,7 @@ func (j *jsiiProxy_ProcedureJava) TraceLevelInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/procedure_java snowflake_procedure_java} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/procedure_java snowflake_procedure_java} Resource.
 func NewProcedureJava(scope constructs.Construct, id *string, config *ProcedureJavaConfig) ProcedureJava {
 	_init_.Initialize()
 
@@ -893,7 +917,7 @@ func NewProcedureJava(scope constructs.Construct, id *string, config *ProcedureJ
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/procedure_java snowflake_procedure_java} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/procedure_java snowflake_procedure_java} Resource.
 func NewProcedureJava_Override(p ProcedureJava, scope constructs.Construct, id *string, config *ProcedureJavaConfig) {
 	_init_.Initialize()
 
@@ -1578,6 +1602,17 @@ func (p *jsiiProxy_ProcedureJava) PutTargetPath(value *ProcedureJavaTargetPath) 
 	)
 }
 
+func (p *jsiiProxy_ProcedureJava) PutTimeouts(value *ProcedureJavaTimeouts) {
+	if err := p.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		p,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (p *jsiiProxy_ProcedureJava) ResetArguments() {
 	_jsii_.InvokeVoid(
 		p,
@@ -1702,6 +1737,14 @@ func (p *jsiiProxy_ProcedureJava) ResetTargetPath() {
 	_jsii_.InvokeVoid(
 		p,
 		"resetTargetPath",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_ProcedureJava) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

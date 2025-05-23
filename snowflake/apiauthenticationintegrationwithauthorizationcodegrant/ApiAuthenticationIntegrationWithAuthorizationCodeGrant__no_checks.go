@@ -75,6 +75,10 @@ func (a *jsiiProxy_ApiAuthenticationIntegrationWithAuthorizationCodeGrant) valid
 	return nil
 }
 
+func (a *jsiiProxy_ApiAuthenticationIntegrationWithAuthorizationCodeGrant) validatePutTimeoutsParameters(value *ApiAuthenticationIntegrationWithAuthorizationCodeGrantTimeouts) error {
+	return nil
+}
+
 func validateApiAuthenticationIntegrationWithAuthorizationCodeGrant_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

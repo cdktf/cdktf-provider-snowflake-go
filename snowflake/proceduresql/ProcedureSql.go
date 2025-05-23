@@ -5,14 +5,14 @@ package proceduresql
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/proceduresql/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/proceduresql/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/procedure_sql snowflake_procedure_sql}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/procedure_sql snowflake_procedure_sql}.
 type ProcedureSql interface {
 	cdktf.TerraformResource
 	Arguments() ProcedureSqlArgumentsList
@@ -106,6 +106,8 @@ type ProcedureSql interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() ProcedureSqlTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	TraceLevel() *string
 	SetTraceLevel(val *string)
 	TraceLevelInput() *string
@@ -153,6 +155,7 @@ type ProcedureSql interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutArguments(value interface{})
+	PutTimeouts(value *ProcedureSqlTimeouts)
 	ResetArguments()
 	ResetComment()
 	ResetEnableConsoleOutput()
@@ -165,6 +168,7 @@ type ProcedureSql interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	ResetTraceLevel()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -664,6 +668,26 @@ func (j *jsiiProxy_ProcedureSql) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ProcedureSql) Timeouts() ProcedureSqlTimeoutsOutputReference {
+	var returns ProcedureSqlTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ProcedureSql) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ProcedureSql) TraceLevel() *string {
 	var returns *string
 	_jsii_.Get(
@@ -685,7 +709,7 @@ func (j *jsiiProxy_ProcedureSql) TraceLevelInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/procedure_sql snowflake_procedure_sql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/procedure_sql snowflake_procedure_sql} Resource.
 func NewProcedureSql(scope constructs.Construct, id *string, config *ProcedureSqlConfig) ProcedureSql {
 	_init_.Initialize()
 
@@ -703,7 +727,7 @@ func NewProcedureSql(scope constructs.Construct, id *string, config *ProcedureSq
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/procedure_sql snowflake_procedure_sql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/procedure_sql snowflake_procedure_sql} Resource.
 func NewProcedureSql_Override(p ProcedureSql, scope constructs.Construct, id *string, config *ProcedureSqlConfig) {
 	_init_.Initialize()
 
@@ -1300,6 +1324,17 @@ func (p *jsiiProxy_ProcedureSql) PutArguments(value interface{}) {
 	)
 }
 
+func (p *jsiiProxy_ProcedureSql) PutTimeouts(value *ProcedureSqlTimeouts) {
+	if err := p.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		p,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (p *jsiiProxy_ProcedureSql) ResetArguments() {
 	_jsii_.InvokeVoid(
 		p,
@@ -1376,6 +1411,14 @@ func (p *jsiiProxy_ProcedureSql) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		p,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_ProcedureSql) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

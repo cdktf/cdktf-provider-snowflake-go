@@ -5,14 +5,14 @@ package procedurescala
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/procedurescala/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/procedurescala/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/procedure_scala snowflake_procedure_scala}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/procedure_scala snowflake_procedure_scala}.
 type ProcedureScala interface {
 	cdktf.TerraformResource
 	Arguments() ProcedureScalaArgumentsList
@@ -127,6 +127,8 @@ type ProcedureScala interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() ProcedureScalaTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	TraceLevel() *string
 	SetTraceLevel(val *string)
 	TraceLevelInput() *string
@@ -177,6 +179,7 @@ type ProcedureScala interface {
 	PutImports(value interface{})
 	PutSecrets(value interface{})
 	PutTargetPath(value *ProcedureScalaTargetPath)
+	PutTimeouts(value *ProcedureScalaTimeouts)
 	ResetArguments()
 	ResetComment()
 	ResetEnableConsoleOutput()
@@ -195,6 +198,7 @@ type ProcedureScala interface {
 	ResetProcedureDefinition()
 	ResetSecrets()
 	ResetTargetPath()
+	ResetTimeouts()
 	ResetTraceLevel()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -854,6 +858,26 @@ func (j *jsiiProxy_ProcedureScala) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ProcedureScala) Timeouts() ProcedureScalaTimeoutsOutputReference {
+	var returns ProcedureScalaTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ProcedureScala) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ProcedureScala) TraceLevel() *string {
 	var returns *string
 	_jsii_.Get(
@@ -875,7 +899,7 @@ func (j *jsiiProxy_ProcedureScala) TraceLevelInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/procedure_scala snowflake_procedure_scala} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/procedure_scala snowflake_procedure_scala} Resource.
 func NewProcedureScala(scope constructs.Construct, id *string, config *ProcedureScalaConfig) ProcedureScala {
 	_init_.Initialize()
 
@@ -893,7 +917,7 @@ func NewProcedureScala(scope constructs.Construct, id *string, config *Procedure
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/procedure_scala snowflake_procedure_scala} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/procedure_scala snowflake_procedure_scala} Resource.
 func NewProcedureScala_Override(p ProcedureScala, scope constructs.Construct, id *string, config *ProcedureScalaConfig) {
 	_init_.Initialize()
 
@@ -1578,6 +1602,17 @@ func (p *jsiiProxy_ProcedureScala) PutTargetPath(value *ProcedureScalaTargetPath
 	)
 }
 
+func (p *jsiiProxy_ProcedureScala) PutTimeouts(value *ProcedureScalaTimeouts) {
+	if err := p.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		p,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (p *jsiiProxy_ProcedureScala) ResetArguments() {
 	_jsii_.InvokeVoid(
 		p,
@@ -1702,6 +1737,14 @@ func (p *jsiiProxy_ProcedureScala) ResetTargetPath() {
 	_jsii_.InvokeVoid(
 		p,
 		"resetTargetPath",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_ProcedureScala) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

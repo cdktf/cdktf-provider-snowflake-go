@@ -5,14 +5,14 @@ package userpublickeys
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/userpublickeys/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/userpublickeys/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/user_public_keys snowflake_user_public_keys}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/user_public_keys snowflake_user_public_keys}.
 type UserPublicKeys interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -73,6 +73,8 @@ type UserPublicKeys interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() UserPublicKeysTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -116,12 +118,14 @@ type UserPublicKeys interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *UserPublicKeysTimeouts)
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetRsaPublicKey()
 	ResetRsaPublicKey2()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -380,8 +384,28 @@ func (j *jsiiProxy_UserPublicKeys) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_UserPublicKeys) Timeouts() UserPublicKeysTimeoutsOutputReference {
+	var returns UserPublicKeysTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/user_public_keys snowflake_user_public_keys} Resource.
+func (j *jsiiProxy_UserPublicKeys) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/user_public_keys snowflake_user_public_keys} Resource.
 func NewUserPublicKeys(scope constructs.Construct, id *string, config *UserPublicKeysConfig) UserPublicKeys {
 	_init_.Initialize()
 
@@ -399,7 +423,7 @@ func NewUserPublicKeys(scope constructs.Construct, id *string, config *UserPubli
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/user_public_keys snowflake_user_public_keys} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/user_public_keys snowflake_user_public_keys} Resource.
 func NewUserPublicKeys_Override(u UserPublicKeys, scope constructs.Construct, id *string, config *UserPublicKeysConfig) {
 	_init_.Initialize()
 
@@ -875,6 +899,17 @@ func (u *jsiiProxy_UserPublicKeys) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (u *jsiiProxy_UserPublicKeys) PutTimeouts(value *UserPublicKeysTimeouts) {
+	if err := u.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		u,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (u *jsiiProxy_UserPublicKeys) ResetId() {
 	_jsii_.InvokeVoid(
 		u,
@@ -903,6 +938,14 @@ func (u *jsiiProxy_UserPublicKeys) ResetRsaPublicKey2() {
 	_jsii_.InvokeVoid(
 		u,
 		"resetRsaPublicKey2",
+		nil, // no parameters
+	)
+}
+
+func (u *jsiiProxy_UserPublicKeys) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		u,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

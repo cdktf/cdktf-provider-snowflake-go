@@ -5,14 +5,14 @@ package secondarydatabase
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/secondarydatabase/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/secondarydatabase/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/secondary_database snowflake_secondary_database}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/secondary_database snowflake_secondary_database}.
 type SecondaryDatabase interface {
 	cdktf.TerraformResource
 	AsReplicaOf() *string
@@ -113,6 +113,8 @@ type SecondaryDatabase interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() SecondaryDatabaseTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	TraceLevel() *string
 	SetTraceLevel(val *string)
 	TraceLevelInput() *string
@@ -168,6 +170,7 @@ type SecondaryDatabase interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *SecondaryDatabaseTimeouts)
 	ResetCatalog()
 	ResetComment()
 	ResetDataRetentionTimeInDays()
@@ -186,6 +189,7 @@ type SecondaryDatabase interface {
 	ResetStorageSerializationPolicy()
 	ResetSuspendTaskAfterNumFailures()
 	ResetTaskAutoRetryAttempts()
+	ResetTimeouts()
 	ResetTraceLevel()
 	ResetUserTaskManagedInitialWarehouseSize()
 	ResetUserTaskMinimumTriggerIntervalInSeconds()
@@ -718,6 +722,26 @@ func (j *jsiiProxy_SecondaryDatabase) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_SecondaryDatabase) Timeouts() SecondaryDatabaseTimeoutsOutputReference {
+	var returns SecondaryDatabaseTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SecondaryDatabase) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_SecondaryDatabase) TraceLevel() *string {
 	var returns *string
 	_jsii_.Get(
@@ -799,7 +823,7 @@ func (j *jsiiProxy_SecondaryDatabase) UserTaskTimeoutMsInput() *float64 {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/secondary_database snowflake_secondary_database} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/secondary_database snowflake_secondary_database} Resource.
 func NewSecondaryDatabase(scope constructs.Construct, id *string, config *SecondaryDatabaseConfig) SecondaryDatabase {
 	_init_.Initialize()
 
@@ -817,7 +841,7 @@ func NewSecondaryDatabase(scope constructs.Construct, id *string, config *Second
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/secondary_database snowflake_secondary_database} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/secondary_database snowflake_secondary_database} Resource.
 func NewSecondaryDatabase_Override(s SecondaryDatabase, scope constructs.Construct, id *string, config *SecondaryDatabaseConfig) {
 	_init_.Initialize()
 
@@ -1480,6 +1504,17 @@ func (s *jsiiProxy_SecondaryDatabase) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (s *jsiiProxy_SecondaryDatabase) PutTimeouts(value *SecondaryDatabaseTimeouts) {
+	if err := s.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_SecondaryDatabase) ResetCatalog() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1604,6 +1639,14 @@ func (s *jsiiProxy_SecondaryDatabase) ResetTaskAutoRetryAttempts() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetTaskAutoRetryAttempts",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SecondaryDatabase) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

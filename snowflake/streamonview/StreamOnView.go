@@ -5,14 +5,14 @@ package streamonview
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/streamonview/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/streamonview/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/stream_on_view snowflake_stream_on_view}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/stream_on_view snowflake_stream_on_view}.
 type StreamOnView interface {
 	cdktf.TerraformResource
 	AppendOnly() *string
@@ -94,6 +94,8 @@ type StreamOnView interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() StreamOnViewTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	View() *string
 	SetView(val *string)
 	ViewInput() *string
@@ -142,6 +144,7 @@ type StreamOnView interface {
 	OverrideLogicalId(newLogicalId *string)
 	PutAt(value *StreamOnViewAt)
 	PutBefore(value *StreamOnViewBefore)
+	PutTimeouts(value *StreamOnViewTimeouts)
 	ResetAppendOnly()
 	ResetAt()
 	ResetBefore()
@@ -152,6 +155,7 @@ type StreamOnView interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetShowInitialRows()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -580,6 +584,26 @@ func (j *jsiiProxy_StreamOnView) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_StreamOnView) Timeouts() StreamOnViewTimeoutsOutputReference {
+	var returns StreamOnViewTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_StreamOnView) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_StreamOnView) View() *string {
 	var returns *string
 	_jsii_.Get(
@@ -601,7 +625,7 @@ func (j *jsiiProxy_StreamOnView) ViewInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/stream_on_view snowflake_stream_on_view} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/stream_on_view snowflake_stream_on_view} Resource.
 func NewStreamOnView(scope constructs.Construct, id *string, config *StreamOnViewConfig) StreamOnView {
 	_init_.Initialize()
 
@@ -619,7 +643,7 @@ func NewStreamOnView(scope constructs.Construct, id *string, config *StreamOnVie
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/stream_on_view snowflake_stream_on_view} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/stream_on_view snowflake_stream_on_view} Resource.
 func NewStreamOnView_Override(s StreamOnView, scope constructs.Construct, id *string, config *StreamOnViewConfig) {
 	_init_.Initialize()
 
@@ -1172,6 +1196,17 @@ func (s *jsiiProxy_StreamOnView) PutBefore(value *StreamOnViewBefore) {
 	)
 }
 
+func (s *jsiiProxy_StreamOnView) PutTimeouts(value *StreamOnViewTimeouts) {
+	if err := s.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_StreamOnView) ResetAppendOnly() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1232,6 +1267,14 @@ func (s *jsiiProxy_StreamOnView) ResetShowInitialRows() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetShowInitialRows",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_StreamOnView) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

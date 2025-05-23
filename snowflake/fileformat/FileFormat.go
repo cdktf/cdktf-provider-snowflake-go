@@ -5,14 +5,14 @@ package fileformat
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/fileformat/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/fileformat/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/file_format snowflake_file_format}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/file_format snowflake_file_format}.
 type FileFormat interface {
 	cdktf.TerraformResource
 	AllowDuplicate() interface{}
@@ -167,6 +167,8 @@ type FileFormat interface {
 	TimeFormat() *string
 	SetTimeFormat(val *string)
 	TimeFormatInput() *string
+	Timeouts() FileFormatTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	TimestampFormat() *string
 	SetTimestampFormat(val *string)
 	TimestampFormatInput() *string
@@ -216,6 +218,7 @@ type FileFormat interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *FileFormatTimeouts)
 	ResetAllowDuplicate()
 	ResetBinaryAsText()
 	ResetBinaryFormat()
@@ -250,6 +253,7 @@ type FileFormat interface {
 	ResetStripOuterArray()
 	ResetStripOuterElement()
 	ResetTimeFormat()
+	ResetTimeouts()
 	ResetTimestampFormat()
 	ResetTrimSpace()
 	SynthesizeAttributes() *map[string]interface{}
@@ -1140,6 +1144,26 @@ func (j *jsiiProxy_FileFormat) TimeFormatInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_FileFormat) Timeouts() FileFormatTimeoutsOutputReference {
+	var returns FileFormatTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_FileFormat) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_FileFormat) TimestampFormat() *string {
 	var returns *string
 	_jsii_.Get(
@@ -1181,7 +1205,7 @@ func (j *jsiiProxy_FileFormat) TrimSpaceInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/file_format snowflake_file_format} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/file_format snowflake_file_format} Resource.
 func NewFileFormat(scope constructs.Construct, id *string, config *FileFormatConfig) FileFormat {
 	_init_.Initialize()
 
@@ -1199,7 +1223,7 @@ func NewFileFormat(scope constructs.Construct, id *string, config *FileFormatCon
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/file_format snowflake_file_format} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/file_format snowflake_file_format} Resource.
 func NewFileFormat_Override(f FileFormat, scope constructs.Construct, id *string, config *FileFormatConfig) {
 	_init_.Initialize()
 
@@ -2038,6 +2062,17 @@ func (f *jsiiProxy_FileFormat) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (f *jsiiProxy_FileFormat) PutTimeouts(value *FileFormatTimeouts) {
+	if err := f.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (f *jsiiProxy_FileFormat) ResetAllowDuplicate() {
 	_jsii_.InvokeVoid(
 		f,
@@ -2290,6 +2325,14 @@ func (f *jsiiProxy_FileFormat) ResetTimeFormat() {
 	_jsii_.InvokeVoid(
 		f,
 		"resetTimeFormat",
+		nil, // no parameters
+	)
+}
+
+func (f *jsiiProxy_FileFormat) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

@@ -5,14 +5,14 @@ package datasnowflakecurrentrole
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/datasnowflakecurrentrole/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/datasnowflakecurrentrole/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/data-sources/current_role snowflake_current_role}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/data-sources/current_role snowflake_current_role}.
 type DataSnowflakeCurrentRole interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -276,7 +276,7 @@ func (j *jsiiProxy_DataSnowflakeCurrentRole) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/data-sources/current_role snowflake_current_role} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/data-sources/current_role snowflake_current_role} Data Source.
 func NewDataSnowflakeCurrentRole(scope constructs.Construct, id *string, config *DataSnowflakeCurrentRoleConfig) DataSnowflakeCurrentRole {
 	_init_.Initialize()
 
@@ -294,7 +294,7 @@ func NewDataSnowflakeCurrentRole(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/data-sources/current_role snowflake_current_role} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/data-sources/current_role snowflake_current_role} Data Source.
 func NewDataSnowflakeCurrentRole_Override(d DataSnowflakeCurrentRole, scope constructs.Construct, id *string, config *DataSnowflakeCurrentRoleConfig) {
 	_init_.Initialize()
 

@@ -5,14 +5,14 @@ package externaltable
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/externaltable/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/externaltable/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/external_table snowflake_external_table}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/external_table snowflake_external_table}.
 type ExternalTable interface {
 	cdktf.TerraformResource
 	AutoRefresh() interface{}
@@ -109,6 +109,8 @@ type ExternalTable interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() ExternalTableTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -154,6 +156,7 @@ type ExternalTable interface {
 	OverrideLogicalId(newLogicalId *string)
 	PutColumn(value interface{})
 	PutTag(value interface{})
+	PutTimeouts(value *ExternalTableTimeouts)
 	ResetAutoRefresh()
 	ResetAwsSnsTopic()
 	ResetComment()
@@ -167,6 +170,7 @@ type ExternalTable interface {
 	ResetRefreshOnCreate()
 	ResetTableFormat()
 	ResetTag()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -685,8 +689,28 @@ func (j *jsiiProxy_ExternalTable) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ExternalTable) Timeouts() ExternalTableTimeoutsOutputReference {
+	var returns ExternalTableTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/external_table snowflake_external_table} Resource.
+func (j *jsiiProxy_ExternalTable) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/external_table snowflake_external_table} Resource.
 func NewExternalTable(scope constructs.Construct, id *string, config *ExternalTableConfig) ExternalTable {
 	_init_.Initialize()
 
@@ -704,7 +728,7 @@ func NewExternalTable(scope constructs.Construct, id *string, config *ExternalTa
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/external_table snowflake_external_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/external_table snowflake_external_table} Resource.
 func NewExternalTable_Override(e ExternalTable, scope constructs.Construct, id *string, config *ExternalTableConfig) {
 	_init_.Initialize()
 
@@ -1312,6 +1336,17 @@ func (e *jsiiProxy_ExternalTable) PutTag(value interface{}) {
 	)
 }
 
+func (e *jsiiProxy_ExternalTable) PutTimeouts(value *ExternalTableTimeouts) {
+	if err := e.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (e *jsiiProxy_ExternalTable) ResetAutoRefresh() {
 	_jsii_.InvokeVoid(
 		e,
@@ -1396,6 +1431,14 @@ func (e *jsiiProxy_ExternalTable) ResetTag() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetTag",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_ExternalTable) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

@@ -75,6 +75,10 @@ func (r *jsiiProxy_ResourceMonitor) validateOverrideLogicalIdParameters(newLogic
 	return nil
 }
 
+func (r *jsiiProxy_ResourceMonitor) validatePutTimeoutsParameters(value *ResourceMonitorTimeouts) error {
+	return nil
+}
+
 func validateResourceMonitor_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

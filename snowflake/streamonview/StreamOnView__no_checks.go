@@ -83,6 +83,10 @@ func (s *jsiiProxy_StreamOnView) validatePutBeforeParameters(value *StreamOnView
 	return nil
 }
 
+func (s *jsiiProxy_StreamOnView) validatePutTimeoutsParameters(value *StreamOnViewTimeouts) error {
+	return nil
+}
+
 func validateStreamOnView_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

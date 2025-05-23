@@ -5,14 +5,14 @@ package apiauthenticationintegrationwithjwtbearer
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/apiauthenticationintegrationwithjwtbearer/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/apiauthenticationintegrationwithjwtbearer/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/api_authentication_integration_with_jwt_bearer snowflake_api_authentication_integration_with_jwt_bearer}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/api_authentication_integration_with_jwt_bearer snowflake_api_authentication_integration_with_jwt_bearer}.
 type ApiAuthenticationIntegrationWithJwtBearer interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -100,6 +100,8 @@ type ApiAuthenticationIntegrationWithJwtBearer interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() ApiAuthenticationIntegrationWithJwtBearerTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -143,6 +145,7 @@ type ApiAuthenticationIntegrationWithJwtBearer interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *ApiAuthenticationIntegrationWithJwtBearerTimeouts)
 	ResetComment()
 	ResetId()
 	ResetOauthAccessTokenValidity()
@@ -153,6 +156,7 @@ type ApiAuthenticationIntegrationWithJwtBearer interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -601,8 +605,28 @@ func (j *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearer) TerraformResourceT
 	return returns
 }
 
+func (j *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearer) Timeouts() ApiAuthenticationIntegrationWithJwtBearerTimeoutsOutputReference {
+	var returns ApiAuthenticationIntegrationWithJwtBearerTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/api_authentication_integration_with_jwt_bearer snowflake_api_authentication_integration_with_jwt_bearer} Resource.
+func (j *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearer) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/api_authentication_integration_with_jwt_bearer snowflake_api_authentication_integration_with_jwt_bearer} Resource.
 func NewApiAuthenticationIntegrationWithJwtBearer(scope constructs.Construct, id *string, config *ApiAuthenticationIntegrationWithJwtBearerConfig) ApiAuthenticationIntegrationWithJwtBearer {
 	_init_.Initialize()
 
@@ -620,7 +644,7 @@ func NewApiAuthenticationIntegrationWithJwtBearer(scope constructs.Construct, id
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/api_authentication_integration_with_jwt_bearer snowflake_api_authentication_integration_with_jwt_bearer} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/api_authentication_integration_with_jwt_bearer snowflake_api_authentication_integration_with_jwt_bearer} Resource.
 func NewApiAuthenticationIntegrationWithJwtBearer_Override(a ApiAuthenticationIntegrationWithJwtBearer, scope constructs.Construct, id *string, config *ApiAuthenticationIntegrationWithJwtBearerConfig) {
 	_init_.Initialize()
 
@@ -1184,6 +1208,17 @@ func (a *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearer) OverrideLogicalId(
 	)
 }
 
+func (a *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearer) PutTimeouts(value *ApiAuthenticationIntegrationWithJwtBearerTimeouts) {
+	if err := a.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (a *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearer) ResetComment() {
 	_jsii_.InvokeVoid(
 		a,
@@ -1244,6 +1279,14 @@ func (a *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearer) ResetOverrideLogic
 	_jsii_.InvokeVoid(
 		a,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearer) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

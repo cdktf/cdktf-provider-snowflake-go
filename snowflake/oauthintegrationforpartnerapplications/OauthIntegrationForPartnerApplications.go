@@ -5,14 +5,14 @@ package oauthintegrationforpartnerapplications
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/oauthintegrationforpartnerapplications/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/oauthintegrationforpartnerapplications/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/oauth_integration_for_partner_applications snowflake_oauth_integration_for_partner_applications}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/oauth_integration_for_partner_applications snowflake_oauth_integration_for_partner_applications}.
 type OauthIntegrationForPartnerApplications interface {
 	cdktf.TerraformResource
 	BlockedRolesList() *[]*string
@@ -95,6 +95,8 @@ type OauthIntegrationForPartnerApplications interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() OauthIntegrationForPartnerApplicationsTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -138,6 +140,7 @@ type OauthIntegrationForPartnerApplications interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *OauthIntegrationForPartnerApplicationsTimeouts)
 	ResetBlockedRolesList()
 	ResetComment()
 	ResetEnabled()
@@ -149,6 +152,7 @@ type OauthIntegrationForPartnerApplications interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -567,8 +571,28 @@ func (j *jsiiProxy_OauthIntegrationForPartnerApplications) TerraformResourceType
 	return returns
 }
 
+func (j *jsiiProxy_OauthIntegrationForPartnerApplications) Timeouts() OauthIntegrationForPartnerApplicationsTimeoutsOutputReference {
+	var returns OauthIntegrationForPartnerApplicationsTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/oauth_integration_for_partner_applications snowflake_oauth_integration_for_partner_applications} Resource.
+func (j *jsiiProxy_OauthIntegrationForPartnerApplications) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/oauth_integration_for_partner_applications snowflake_oauth_integration_for_partner_applications} Resource.
 func NewOauthIntegrationForPartnerApplications(scope constructs.Construct, id *string, config *OauthIntegrationForPartnerApplicationsConfig) OauthIntegrationForPartnerApplications {
 	_init_.Initialize()
 
@@ -586,7 +610,7 @@ func NewOauthIntegrationForPartnerApplications(scope constructs.Construct, id *s
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/oauth_integration_for_partner_applications snowflake_oauth_integration_for_partner_applications} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/oauth_integration_for_partner_applications snowflake_oauth_integration_for_partner_applications} Resource.
 func NewOauthIntegrationForPartnerApplications_Override(o OauthIntegrationForPartnerApplications, scope constructs.Construct, id *string, config *OauthIntegrationForPartnerApplicationsConfig) {
 	_init_.Initialize()
 
@@ -1128,6 +1152,17 @@ func (o *jsiiProxy_OauthIntegrationForPartnerApplications) OverrideLogicalId(new
 	)
 }
 
+func (o *jsiiProxy_OauthIntegrationForPartnerApplications) PutTimeouts(value *OauthIntegrationForPartnerApplicationsTimeouts) {
+	if err := o.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		o,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (o *jsiiProxy_OauthIntegrationForPartnerApplications) ResetBlockedRolesList() {
 	_jsii_.InvokeVoid(
 		o,
@@ -1196,6 +1231,14 @@ func (o *jsiiProxy_OauthIntegrationForPartnerApplications) ResetOverrideLogicalI
 	_jsii_.InvokeVoid(
 		o,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_OauthIntegrationForPartnerApplications) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

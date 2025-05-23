@@ -75,6 +75,10 @@ func (d *jsiiProxy_DatabaseRole) validateOverrideLogicalIdParameters(newLogicalI
 	return nil
 }
 
+func (d *jsiiProxy_DatabaseRole) validatePutTimeoutsParameters(value *DatabaseRoleTimeouts) error {
+	return nil
+}
+
 func validateDatabaseRole_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

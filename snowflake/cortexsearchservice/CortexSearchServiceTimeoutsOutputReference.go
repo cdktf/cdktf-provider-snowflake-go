@@ -5,9 +5,9 @@ package cortexsearchservice
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/cortexsearchservice/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/cortexsearchservice/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -31,10 +31,16 @@ type CortexSearchServiceTimeoutsOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	Delete() *string
+	SetDelete(val *string)
+	DeleteInput() *string
 	// Experimental.
 	Fqn() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	Read() *string
+	SetRead(val *string)
+	ReadInput() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -71,6 +77,8 @@ type CortexSearchServiceTimeoutsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetCreate()
+	ResetDelete()
+	ResetRead()
 	ResetUpdate()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -137,6 +145,26 @@ func (j *jsiiProxy_CortexSearchServiceTimeoutsOutputReference) CreationStack() *
 	return returns
 }
 
+func (j *jsiiProxy_CortexSearchServiceTimeoutsOutputReference) Delete() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"delete",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CortexSearchServiceTimeoutsOutputReference) DeleteInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"deleteInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_CortexSearchServiceTimeoutsOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -152,6 +180,26 @@ func (j *jsiiProxy_CortexSearchServiceTimeoutsOutputReference) InternalValue() i
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CortexSearchServiceTimeoutsOutputReference) Read() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"read",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CortexSearchServiceTimeoutsOutputReference) ReadInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"readInput",
 		&returns,
 	)
 	return returns
@@ -258,6 +306,17 @@ func (j *jsiiProxy_CortexSearchServiceTimeoutsOutputReference)SetCreate(val *str
 	)
 }
 
+func (j *jsiiProxy_CortexSearchServiceTimeoutsOutputReference)SetDelete(val *string) {
+	if err := j.validateSetDeleteParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"delete",
+		val,
+	)
+}
+
 func (j *jsiiProxy_CortexSearchServiceTimeoutsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
@@ -265,6 +324,17 @@ func (j *jsiiProxy_CortexSearchServiceTimeoutsOutputReference)SetInternalValue(v
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_CortexSearchServiceTimeoutsOutputReference)SetRead(val *string) {
+	if err := j.validateSetReadParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"read",
 		val,
 	)
 }
@@ -492,6 +562,22 @@ func (c *jsiiProxy_CortexSearchServiceTimeoutsOutputReference) ResetCreate() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetCreate",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CortexSearchServiceTimeoutsOutputReference) ResetDelete() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetDelete",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CortexSearchServiceTimeoutsOutputReference) ResetRead() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetRead",
 		nil, // no parameters
 	)
 }

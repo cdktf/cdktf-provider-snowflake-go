@@ -5,14 +5,14 @@ package secretwithgenericstring
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/secretwithgenericstring/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/secretwithgenericstring/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/secret_with_generic_string snowflake_secret_with_generic_string}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/secret_with_generic_string snowflake_secret_with_generic_string}.
 type SecretWithGenericString interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -83,6 +83,8 @@ type SecretWithGenericString interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() SecretWithGenericStringTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -126,11 +128,13 @@ type SecretWithGenericString interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *SecretWithGenericStringTimeouts)
 	ResetComment()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -469,8 +473,28 @@ func (j *jsiiProxy_SecretWithGenericString) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_SecretWithGenericString) Timeouts() SecretWithGenericStringTimeoutsOutputReference {
+	var returns SecretWithGenericStringTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/secret_with_generic_string snowflake_secret_with_generic_string} Resource.
+func (j *jsiiProxy_SecretWithGenericString) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/secret_with_generic_string snowflake_secret_with_generic_string} Resource.
 func NewSecretWithGenericString(scope constructs.Construct, id *string, config *SecretWithGenericStringConfig) SecretWithGenericString {
 	_init_.Initialize()
 
@@ -488,7 +512,7 @@ func NewSecretWithGenericString(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/secret_with_generic_string snowflake_secret_with_generic_string} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/secret_with_generic_string snowflake_secret_with_generic_string} Resource.
 func NewSecretWithGenericString_Override(s SecretWithGenericString, scope constructs.Construct, id *string, config *SecretWithGenericStringConfig) {
 	_init_.Initialize()
 
@@ -986,6 +1010,17 @@ func (s *jsiiProxy_SecretWithGenericString) OverrideLogicalId(newLogicalId *stri
 	)
 }
 
+func (s *jsiiProxy_SecretWithGenericString) PutTimeouts(value *SecretWithGenericStringTimeouts) {
+	if err := s.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_SecretWithGenericString) ResetComment() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1006,6 +1041,14 @@ func (s *jsiiProxy_SecretWithGenericString) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SecretWithGenericString) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

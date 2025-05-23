@@ -5,14 +5,14 @@ package notificationintegration
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/notificationintegration/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/notificationintegration/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/notification_integration snowflake_notification_integration}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/notification_integration snowflake_notification_integration}.
 type NotificationIntegration interface {
 	cdktf.TerraformResource
 	AwsSnsExternalId() *string
@@ -110,6 +110,8 @@ type NotificationIntegration interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() NotificationIntegrationTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	Type() *string
 	SetType(val *string)
 	TypeInput() *string
@@ -156,6 +158,7 @@ type NotificationIntegration interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *NotificationIntegrationTimeouts)
 	ResetAwsSnsRoleArn()
 	ResetAwsSnsTopicArn()
 	ResetAwsSqsArn()
@@ -171,6 +174,7 @@ type NotificationIntegration interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	ResetType()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -700,6 +704,26 @@ func (j *jsiiProxy_NotificationIntegration) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_NotificationIntegration) Timeouts() NotificationIntegrationTimeoutsOutputReference {
+	var returns NotificationIntegrationTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_NotificationIntegration) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_NotificationIntegration) Type() *string {
 	var returns *string
 	_jsii_.Get(
@@ -721,7 +745,7 @@ func (j *jsiiProxy_NotificationIntegration) TypeInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/notification_integration snowflake_notification_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/notification_integration snowflake_notification_integration} Resource.
 func NewNotificationIntegration(scope constructs.Construct, id *string, config *NotificationIntegrationConfig) NotificationIntegration {
 	_init_.Initialize()
 
@@ -739,7 +763,7 @@ func NewNotificationIntegration(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/notification_integration snowflake_notification_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/notification_integration snowflake_notification_integration} Resource.
 func NewNotificationIntegration_Override(n NotificationIntegration, scope constructs.Construct, id *string, config *NotificationIntegrationConfig) {
 	_init_.Initialize()
 
@@ -1336,6 +1360,17 @@ func (n *jsiiProxy_NotificationIntegration) OverrideLogicalId(newLogicalId *stri
 	)
 }
 
+func (n *jsiiProxy_NotificationIntegration) PutTimeouts(value *NotificationIntegrationTimeouts) {
+	if err := n.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		n,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (n *jsiiProxy_NotificationIntegration) ResetAwsSnsRoleArn() {
 	_jsii_.InvokeVoid(
 		n,
@@ -1436,6 +1471,14 @@ func (n *jsiiProxy_NotificationIntegration) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		n,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NotificationIntegration) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

@@ -75,6 +75,10 @@ func (n *jsiiProxy_NotificationIntegration) validateOverrideLogicalIdParameters(
 	return nil
 }
 
+func (n *jsiiProxy_NotificationIntegration) validatePutTimeoutsParameters(value *NotificationIntegrationTimeouts) error {
+	return nil
+}
+
 func validateNotificationIntegration_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

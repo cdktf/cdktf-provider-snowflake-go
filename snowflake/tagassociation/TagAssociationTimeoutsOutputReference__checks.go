@@ -174,6 +174,14 @@ func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) validateSetCreateParam
 	return nil
 }
 
+func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) validateSetDeleteParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	switch val.(type) {
 	case cdktf.IResolvable:
@@ -198,6 +206,14 @@ func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) validateSetInternalVal
 	return nil
 }
 
+func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) validateSetReadParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) validateSetTerraformAttributeParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -207,6 +223,14 @@ func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) validateSetTerraformAt
 }
 
 func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) validateSetUpdateParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

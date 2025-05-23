@@ -75,6 +75,10 @@ func (s *jsiiProxy_SecretWithGenericString) validateOverrideLogicalIdParameters(
 	return nil
 }
 
+func (s *jsiiProxy_SecretWithGenericString) validatePutTimeoutsParameters(value *SecretWithGenericStringTimeouts) error {
+	return nil
+}
+
 func validateSecretWithGenericString_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

@@ -5,14 +5,14 @@ package grantownership
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/grantownership/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/grantownership/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/grant_ownership snowflake_grant_ownership}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/grant_ownership snowflake_grant_ownership}.
 type GrantOwnership interface {
 	cdktf.TerraformResource
 	AccountRoleName() *string
@@ -75,6 +75,8 @@ type GrantOwnership interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() GrantOwnershipTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -119,6 +121,7 @@ type GrantOwnership interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutOn(value *GrantOwnershipOn)
+	PutTimeouts(value *GrantOwnershipTimeouts)
 	ResetAccountRoleName()
 	ResetDatabaseRoleName()
 	ResetId()
@@ -126,6 +129,7 @@ type GrantOwnership interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -404,8 +408,28 @@ func (j *jsiiProxy_GrantOwnership) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_GrantOwnership) Timeouts() GrantOwnershipTimeoutsOutputReference {
+	var returns GrantOwnershipTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/grant_ownership snowflake_grant_ownership} Resource.
+func (j *jsiiProxy_GrantOwnership) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/grant_ownership snowflake_grant_ownership} Resource.
 func NewGrantOwnership(scope constructs.Construct, id *string, config *GrantOwnershipConfig) GrantOwnership {
 	_init_.Initialize()
 
@@ -423,7 +447,7 @@ func NewGrantOwnership(scope constructs.Construct, id *string, config *GrantOwne
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/grant_ownership snowflake_grant_ownership} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/grant_ownership snowflake_grant_ownership} Resource.
 func NewGrantOwnership_Override(g GrantOwnership, scope constructs.Construct, id *string, config *GrantOwnershipConfig) {
 	_init_.Initialize()
 
@@ -910,6 +934,17 @@ func (g *jsiiProxy_GrantOwnership) PutOn(value *GrantOwnershipOn) {
 	)
 }
 
+func (g *jsiiProxy_GrantOwnership) PutTimeouts(value *GrantOwnershipTimeouts) {
+	if err := g.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		g,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (g *jsiiProxy_GrantOwnership) ResetAccountRoleName() {
 	_jsii_.InvokeVoid(
 		g,
@@ -946,6 +981,14 @@ func (g *jsiiProxy_GrantOwnership) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		g,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_GrantOwnership) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

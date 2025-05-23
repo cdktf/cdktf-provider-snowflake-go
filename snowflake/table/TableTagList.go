@@ -5,9 +5,9 @@ package table
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/table/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/table/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 

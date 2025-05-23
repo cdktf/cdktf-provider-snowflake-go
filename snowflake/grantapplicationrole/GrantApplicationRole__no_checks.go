@@ -75,6 +75,10 @@ func (g *jsiiProxy_GrantApplicationRole) validateOverrideLogicalIdParameters(new
 	return nil
 }
 
+func (g *jsiiProxy_GrantApplicationRole) validatePutTimeoutsParameters(value *GrantApplicationRoleTimeouts) error {
+	return nil
+}
+
 func validateGrantApplicationRole_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

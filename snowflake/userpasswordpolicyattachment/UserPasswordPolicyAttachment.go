@@ -5,14 +5,14 @@ package userpasswordpolicyattachment
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/userpasswordpolicyattachment/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/userpasswordpolicyattachment/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/user_password_policy_attachment snowflake_user_password_policy_attachment}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/user_password_policy_attachment snowflake_user_password_policy_attachment}.
 type UserPasswordPolicyAttachment interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -67,6 +67,8 @@ type UserPasswordPolicyAttachment interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() UserPasswordPolicyAttachmentTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	UserName() *string
 	SetUserName(val *string)
 	UserNameInput() *string
@@ -113,10 +115,12 @@ type UserPasswordPolicyAttachment interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *UserPasswordPolicyAttachmentTimeouts)
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -335,6 +339,26 @@ func (j *jsiiProxy_UserPasswordPolicyAttachment) TerraformResourceType() *string
 	return returns
 }
 
+func (j *jsiiProxy_UserPasswordPolicyAttachment) Timeouts() UserPasswordPolicyAttachmentTimeoutsOutputReference {
+	var returns UserPasswordPolicyAttachmentTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_UserPasswordPolicyAttachment) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_UserPasswordPolicyAttachment) UserName() *string {
 	var returns *string
 	_jsii_.Get(
@@ -356,7 +380,7 @@ func (j *jsiiProxy_UserPasswordPolicyAttachment) UserNameInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/user_password_policy_attachment snowflake_user_password_policy_attachment} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/user_password_policy_attachment snowflake_user_password_policy_attachment} Resource.
 func NewUserPasswordPolicyAttachment(scope constructs.Construct, id *string, config *UserPasswordPolicyAttachmentConfig) UserPasswordPolicyAttachment {
 	_init_.Initialize()
 
@@ -374,7 +398,7 @@ func NewUserPasswordPolicyAttachment(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/user_password_policy_attachment snowflake_user_password_policy_attachment} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/user_password_policy_attachment snowflake_user_password_policy_attachment} Resource.
 func NewUserPasswordPolicyAttachment_Override(u UserPasswordPolicyAttachment, scope constructs.Construct, id *string, config *UserPasswordPolicyAttachmentConfig) {
 	_init_.Initialize()
 
@@ -839,6 +863,17 @@ func (u *jsiiProxy_UserPasswordPolicyAttachment) OverrideLogicalId(newLogicalId 
 	)
 }
 
+func (u *jsiiProxy_UserPasswordPolicyAttachment) PutTimeouts(value *UserPasswordPolicyAttachmentTimeouts) {
+	if err := u.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		u,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (u *jsiiProxy_UserPasswordPolicyAttachment) ResetId() {
 	_jsii_.InvokeVoid(
 		u,
@@ -851,6 +886,14 @@ func (u *jsiiProxy_UserPasswordPolicyAttachment) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		u,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (u *jsiiProxy_UserPasswordPolicyAttachment) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		u,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

@@ -5,14 +5,14 @@ package grantprivilegestoaccountrole
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/grantprivilegestoaccountrole/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/grantprivilegestoaccountrole/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/grant_privileges_to_account_role snowflake_grant_privileges_to_account_role}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/grant_privileges_to_account_role snowflake_grant_privileges_to_account_role}.
 type GrantPrivilegesToAccountRole interface {
 	cdktf.TerraformResource
 	AccountRoleName() *string
@@ -88,6 +88,8 @@ type GrantPrivilegesToAccountRole interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() GrantPrivilegesToAccountRoleTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	WithGrantOption() interface{}
 	SetWithGrantOption(val interface{})
 	WithGrantOptionInput() interface{}
@@ -137,6 +139,7 @@ type GrantPrivilegesToAccountRole interface {
 	PutOnAccountObject(value *GrantPrivilegesToAccountRoleOnAccountObject)
 	PutOnSchema(value *GrantPrivilegesToAccountRoleOnSchema)
 	PutOnSchemaObject(value *GrantPrivilegesToAccountRoleOnSchemaObject)
+	PutTimeouts(value *GrantPrivilegesToAccountRoleTimeouts)
 	ResetAllPrivileges()
 	ResetAlwaysApply()
 	ResetAlwaysApplyTrigger()
@@ -149,6 +152,7 @@ type GrantPrivilegesToAccountRole interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPrivileges()
+	ResetTimeouts()
 	ResetWithGrantOption()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -528,6 +532,26 @@ func (j *jsiiProxy_GrantPrivilegesToAccountRole) TerraformResourceType() *string
 	return returns
 }
 
+func (j *jsiiProxy_GrantPrivilegesToAccountRole) Timeouts() GrantPrivilegesToAccountRoleTimeoutsOutputReference {
+	var returns GrantPrivilegesToAccountRoleTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_GrantPrivilegesToAccountRole) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_GrantPrivilegesToAccountRole) WithGrantOption() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -549,7 +573,7 @@ func (j *jsiiProxy_GrantPrivilegesToAccountRole) WithGrantOptionInput() interfac
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/grant_privileges_to_account_role snowflake_grant_privileges_to_account_role} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/grant_privileges_to_account_role snowflake_grant_privileges_to_account_role} Resource.
 func NewGrantPrivilegesToAccountRole(scope constructs.Construct, id *string, config *GrantPrivilegesToAccountRoleConfig) GrantPrivilegesToAccountRole {
 	_init_.Initialize()
 
@@ -567,7 +591,7 @@ func NewGrantPrivilegesToAccountRole(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/grant_privileges_to_account_role snowflake_grant_privileges_to_account_role} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/grant_privileges_to_account_role snowflake_grant_privileges_to_account_role} Resource.
 func NewGrantPrivilegesToAccountRole_Override(g GrantPrivilegesToAccountRole, scope constructs.Construct, id *string, config *GrantPrivilegesToAccountRoleConfig) {
 	_init_.Initialize()
 
@@ -1120,6 +1144,17 @@ func (g *jsiiProxy_GrantPrivilegesToAccountRole) PutOnSchemaObject(value *GrantP
 	)
 }
 
+func (g *jsiiProxy_GrantPrivilegesToAccountRole) PutTimeouts(value *GrantPrivilegesToAccountRoleTimeouts) {
+	if err := g.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		g,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (g *jsiiProxy_GrantPrivilegesToAccountRole) ResetAllPrivileges() {
 	_jsii_.InvokeVoid(
 		g,
@@ -1196,6 +1231,14 @@ func (g *jsiiProxy_GrantPrivilegesToAccountRole) ResetPrivileges() {
 	_jsii_.InvokeVoid(
 		g,
 		"resetPrivileges",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_GrantPrivilegesToAccountRole) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

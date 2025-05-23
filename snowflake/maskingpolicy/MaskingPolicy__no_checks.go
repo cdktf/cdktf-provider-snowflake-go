@@ -79,6 +79,10 @@ func (m *jsiiProxy_MaskingPolicy) validatePutArgumentParameters(value interface{
 	return nil
 }
 
+func (m *jsiiProxy_MaskingPolicy) validatePutTimeoutsParameters(value *MaskingPolicyTimeouts) error {
+	return nil
+}
+
 func validateMaskingPolicy_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

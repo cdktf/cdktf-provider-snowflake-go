@@ -207,6 +207,17 @@ func (u *jsiiProxy_UserPasswordPolicyAttachment) validateOverrideLogicalIdParame
 	return nil
 }
 
+func (u *jsiiProxy_UserPasswordPolicyAttachment) validatePutTimeoutsParameters(value *UserPasswordPolicyAttachmentTimeouts) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func validateUserPasswordPolicyAttachment_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	if scope == nil {
 		return fmt.Errorf("parameter scope is required, but nil was provided")

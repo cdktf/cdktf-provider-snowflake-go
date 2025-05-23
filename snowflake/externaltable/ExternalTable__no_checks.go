@@ -83,6 +83,10 @@ func (e *jsiiProxy_ExternalTable) validatePutTagParameters(value interface{}) er
 	return nil
 }
 
+func (e *jsiiProxy_ExternalTable) validatePutTimeoutsParameters(value *ExternalTableTimeouts) error {
+	return nil
+}
+
 func validateExternalTable_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

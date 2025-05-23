@@ -75,6 +75,10 @@ func (s *jsiiProxy_SecondaryDatabase) validateOverrideLogicalIdParameters(newLog
 	return nil
 }
 
+func (s *jsiiProxy_SecondaryDatabase) validatePutTimeoutsParameters(value *SecondaryDatabaseTimeouts) error {
+	return nil
+}
+
 func validateSecondaryDatabase_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

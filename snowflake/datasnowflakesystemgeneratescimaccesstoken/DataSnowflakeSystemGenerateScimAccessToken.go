@@ -5,14 +5,14 @@ package datasnowflakesystemgeneratescimaccesstoken
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/datasnowflakesystemgeneratescimaccesstoken/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/datasnowflakesystemgeneratescimaccesstoken/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/data-sources/system_generate_scim_access_token snowflake_system_generate_scim_access_token}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/data-sources/system_generate_scim_access_token snowflake_system_generate_scim_access_token}.
 type DataSnowflakeSystemGenerateScimAccessToken interface {
 	cdktf.TerraformDataSource
 	AccessToken() *string
@@ -299,7 +299,7 @@ func (j *jsiiProxy_DataSnowflakeSystemGenerateScimAccessToken) TerraformResource
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/data-sources/system_generate_scim_access_token snowflake_system_generate_scim_access_token} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/data-sources/system_generate_scim_access_token snowflake_system_generate_scim_access_token} Data Source.
 func NewDataSnowflakeSystemGenerateScimAccessToken(scope constructs.Construct, id *string, config *DataSnowflakeSystemGenerateScimAccessTokenConfig) DataSnowflakeSystemGenerateScimAccessToken {
 	_init_.Initialize()
 
@@ -317,7 +317,7 @@ func NewDataSnowflakeSystemGenerateScimAccessToken(scope constructs.Construct, i
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/data-sources/system_generate_scim_access_token snowflake_system_generate_scim_access_token} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/data-sources/system_generate_scim_access_token snowflake_system_generate_scim_access_token} Data Source.
 func NewDataSnowflakeSystemGenerateScimAccessToken_Override(d DataSnowflakeSystemGenerateScimAccessToken, scope constructs.Construct, id *string, config *DataSnowflakeSystemGenerateScimAccessTokenConfig) {
 	_init_.Initialize()
 

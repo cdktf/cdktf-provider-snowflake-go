@@ -75,6 +75,10 @@ func (p *jsiiProxy_Pipe) validateOverrideLogicalIdParameters(newLogicalId *strin
 	return nil
 }
 
+func (p *jsiiProxy_Pipe) validatePutTimeoutsParameters(value *PipeTimeouts) error {
+	return nil
+}
+
 func validatePipe_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

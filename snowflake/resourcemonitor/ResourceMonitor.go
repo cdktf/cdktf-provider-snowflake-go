@@ -5,14 +5,14 @@ package resourcemonitor
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/resourcemonitor/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/resourcemonitor/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/resource_monitor snowflake_resource_monitor}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/resource_monitor snowflake_resource_monitor}.
 type ResourceMonitor interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -93,6 +93,8 @@ type ResourceMonitor interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() ResourceMonitorTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -136,6 +138,7 @@ type ResourceMonitor interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *ResourceMonitorTimeouts)
 	ResetCreditQuota()
 	ResetEndTimestamp()
 	ResetFrequency()
@@ -148,6 +151,7 @@ type ResourceMonitor interface {
 	ResetStartTimestamp()
 	ResetSuspendImmediateTrigger()
 	ResetSuspendTrigger()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -546,8 +550,28 @@ func (j *jsiiProxy_ResourceMonitor) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ResourceMonitor) Timeouts() ResourceMonitorTimeoutsOutputReference {
+	var returns ResourceMonitorTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/resource_monitor snowflake_resource_monitor} Resource.
+func (j *jsiiProxy_ResourceMonitor) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/resource_monitor snowflake_resource_monitor} Resource.
 func NewResourceMonitor(scope constructs.Construct, id *string, config *ResourceMonitorConfig) ResourceMonitor {
 	_init_.Initialize()
 
@@ -565,7 +589,7 @@ func NewResourceMonitor(scope constructs.Construct, id *string, config *Resource
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/resource_monitor snowflake_resource_monitor} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/resource_monitor snowflake_resource_monitor} Resource.
 func NewResourceMonitor_Override(r ResourceMonitor, scope constructs.Construct, id *string, config *ResourceMonitorConfig) {
 	_init_.Initialize()
 
@@ -1107,6 +1131,17 @@ func (r *jsiiProxy_ResourceMonitor) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (r *jsiiProxy_ResourceMonitor) PutTimeouts(value *ResourceMonitorTimeouts) {
+	if err := r.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (r *jsiiProxy_ResourceMonitor) ResetCreditQuota() {
 	_jsii_.InvokeVoid(
 		r,
@@ -1183,6 +1218,14 @@ func (r *jsiiProxy_ResourceMonitor) ResetSuspendTrigger() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetSuspendTrigger",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_ResourceMonitor) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

@@ -5,14 +5,14 @@ package networkpolicy
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/networkpolicy/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/networkpolicy/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/network_policy snowflake_network_policy}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/network_policy snowflake_network_policy}.
 type NetworkPolicy interface {
 	cdktf.TerraformResource
 	AllowedIpList() *[]*string
@@ -85,6 +85,8 @@ type NetworkPolicy interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() NetworkPolicyTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -128,6 +130,7 @@ type NetworkPolicy interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *NetworkPolicyTimeouts)
 	ResetAllowedIpList()
 	ResetAllowedNetworkRuleList()
 	ResetBlockedIpList()
@@ -137,6 +140,7 @@ type NetworkPolicy interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -485,8 +489,28 @@ func (j *jsiiProxy_NetworkPolicy) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_NetworkPolicy) Timeouts() NetworkPolicyTimeoutsOutputReference {
+	var returns NetworkPolicyTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/network_policy snowflake_network_policy} Resource.
+func (j *jsiiProxy_NetworkPolicy) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/network_policy snowflake_network_policy} Resource.
 func NewNetworkPolicy(scope constructs.Construct, id *string, config *NetworkPolicyConfig) NetworkPolicy {
 	_init_.Initialize()
 
@@ -504,7 +528,7 @@ func NewNetworkPolicy(scope constructs.Construct, id *string, config *NetworkPol
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/network_policy snowflake_network_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/network_policy snowflake_network_policy} Resource.
 func NewNetworkPolicy_Override(n NetworkPolicy, scope constructs.Construct, id *string, config *NetworkPolicyConfig) {
 	_init_.Initialize()
 
@@ -1013,6 +1037,17 @@ func (n *jsiiProxy_NetworkPolicy) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (n *jsiiProxy_NetworkPolicy) PutTimeouts(value *NetworkPolicyTimeouts) {
+	if err := n.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		n,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (n *jsiiProxy_NetworkPolicy) ResetAllowedIpList() {
 	_jsii_.InvokeVoid(
 		n,
@@ -1065,6 +1100,14 @@ func (n *jsiiProxy_NetworkPolicy) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		n,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NetworkPolicy) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

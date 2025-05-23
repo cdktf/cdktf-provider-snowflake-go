@@ -5,14 +5,14 @@ package scimintegration
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/scimintegration/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/scimintegration/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/scim_integration snowflake_scim_integration}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/scim_integration snowflake_scim_integration}.
 type ScimIntegration interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -88,6 +88,8 @@ type ScimIntegration interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() ScimIntegrationTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -131,6 +133,7 @@ type ScimIntegration interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *ScimIntegrationTimeouts)
 	ResetComment()
 	ResetId()
 	ResetNetworkPolicy()
@@ -138,6 +141,7 @@ type ScimIntegration interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetSyncPassword()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -506,8 +510,28 @@ func (j *jsiiProxy_ScimIntegration) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ScimIntegration) Timeouts() ScimIntegrationTimeoutsOutputReference {
+	var returns ScimIntegrationTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/scim_integration snowflake_scim_integration} Resource.
+func (j *jsiiProxy_ScimIntegration) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/scim_integration snowflake_scim_integration} Resource.
 func NewScimIntegration(scope constructs.Construct, id *string, config *ScimIntegrationConfig) ScimIntegration {
 	_init_.Initialize()
 
@@ -525,7 +549,7 @@ func NewScimIntegration(scope constructs.Construct, id *string, config *ScimInte
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/scim_integration snowflake_scim_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/scim_integration snowflake_scim_integration} Resource.
 func NewScimIntegration_Override(s ScimIntegration, scope constructs.Construct, id *string, config *ScimIntegrationConfig) {
 	_init_.Initialize()
 
@@ -1045,6 +1069,17 @@ func (s *jsiiProxy_ScimIntegration) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (s *jsiiProxy_ScimIntegration) PutTimeouts(value *ScimIntegrationTimeouts) {
+	if err := s.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_ScimIntegration) ResetComment() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1081,6 +1116,14 @@ func (s *jsiiProxy_ScimIntegration) ResetSyncPassword() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetSyncPassword",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_ScimIntegration) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

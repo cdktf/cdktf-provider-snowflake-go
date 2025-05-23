@@ -26,9 +26,9 @@ type GrantAccountRoleConfig struct {
 	//
 	// For more information about this resource, see [docs](./account_role).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/grant_account_role#role_name GrantAccountRole#role_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/grant_account_role#role_name GrantAccountRole#role_name}
 	RoleName *string `field:"required" json:"roleName" yaml:"roleName"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/grant_account_role#id GrantAccountRole#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/grant_account_role#id GrantAccountRole#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -37,13 +37,17 @@ type GrantAccountRoleConfig struct {
 	//
 	// For more information about this resource, see [docs](./account_role).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/grant_account_role#parent_role_name GrantAccountRole#parent_role_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/grant_account_role#parent_role_name GrantAccountRole#parent_role_name}
 	ParentRoleName *string `field:"optional" json:"parentRoleName" yaml:"parentRoleName"`
+	// timeouts block.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/grant_account_role#timeouts GrantAccountRole#timeouts}
+	Timeouts *GrantAccountRoleTimeouts `field:"optional" json:"timeouts" yaml:"timeouts"`
 	// The fully qualified name of the user on which specified role will be granted.
 	//
 	// For more information about this resource, see [docs](./user).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/grant_account_role#user_name GrantAccountRole#user_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/grant_account_role#user_name GrantAccountRole#user_name}
 	UserName *string `field:"optional" json:"userName" yaml:"userName"`
 }
 

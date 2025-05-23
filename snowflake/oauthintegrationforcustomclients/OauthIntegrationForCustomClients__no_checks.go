@@ -75,6 +75,10 @@ func (o *jsiiProxy_OauthIntegrationForCustomClients) validateOverrideLogicalIdPa
 	return nil
 }
 
+func (o *jsiiProxy_OauthIntegrationForCustomClients) validatePutTimeoutsParameters(value *OauthIntegrationForCustomClientsTimeouts) error {
+	return nil
+}
+
 func validateOauthIntegrationForCustomClients_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

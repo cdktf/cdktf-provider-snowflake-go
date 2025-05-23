@@ -5,14 +5,14 @@ package objectparameter
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/objectparameter/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/objectparameter/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/object_parameter snowflake_object_parameter}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/object_parameter snowflake_object_parameter}.
 type ObjectParameter interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -75,6 +75,8 @@ type ObjectParameter interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() ObjectParameterTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	Value() *string
 	SetValue(val *string)
 	ValueInput() *string
@@ -122,6 +124,7 @@ type ObjectParameter interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutObjectIdentifier(value interface{})
+	PutTimeouts(value *ObjectParameterTimeouts)
 	ResetId()
 	ResetObjectIdentifier()
 	ResetObjectType()
@@ -129,6 +132,7 @@ type ObjectParameter interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -407,6 +411,26 @@ func (j *jsiiProxy_ObjectParameter) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ObjectParameter) Timeouts() ObjectParameterTimeoutsOutputReference {
+	var returns ObjectParameterTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ObjectParameter) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ObjectParameter) Value() *string {
 	var returns *string
 	_jsii_.Get(
@@ -428,7 +452,7 @@ func (j *jsiiProxy_ObjectParameter) ValueInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/object_parameter snowflake_object_parameter} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/object_parameter snowflake_object_parameter} Resource.
 func NewObjectParameter(scope constructs.Construct, id *string, config *ObjectParameterConfig) ObjectParameter {
 	_init_.Initialize()
 
@@ -446,7 +470,7 @@ func NewObjectParameter(scope constructs.Construct, id *string, config *ObjectPa
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/object_parameter snowflake_object_parameter} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/object_parameter snowflake_object_parameter} Resource.
 func NewObjectParameter_Override(o ObjectParameter, scope constructs.Construct, id *string, config *ObjectParameterConfig) {
 	_init_.Initialize()
 
@@ -944,6 +968,17 @@ func (o *jsiiProxy_ObjectParameter) PutObjectIdentifier(value interface{}) {
 	)
 }
 
+func (o *jsiiProxy_ObjectParameter) PutTimeouts(value *ObjectParameterTimeouts) {
+	if err := o.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		o,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (o *jsiiProxy_ObjectParameter) ResetId() {
 	_jsii_.InvokeVoid(
 		o,
@@ -980,6 +1015,14 @@ func (o *jsiiProxy_ObjectParameter) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		o,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_ObjectParameter) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

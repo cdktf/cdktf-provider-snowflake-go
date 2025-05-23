@@ -5,14 +5,14 @@ package grantapplicationrole
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/grantapplicationrole/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/grantapplicationrole/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/grant_application_role snowflake_grant_application_role}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/grant_application_role snowflake_grant_application_role}.
 type GrantApplicationRole interface {
 	cdktf.TerraformResource
 	ApplicationName() *string
@@ -73,6 +73,8 @@ type GrantApplicationRole interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() GrantApplicationRoleTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -116,12 +118,14 @@ type GrantApplicationRole interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *GrantApplicationRoleTimeouts)
 	ResetApplicationName()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetParentAccountRoleName()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -380,8 +384,28 @@ func (j *jsiiProxy_GrantApplicationRole) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_GrantApplicationRole) Timeouts() GrantApplicationRoleTimeoutsOutputReference {
+	var returns GrantApplicationRoleTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/grant_application_role snowflake_grant_application_role} Resource.
+func (j *jsiiProxy_GrantApplicationRole) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/grant_application_role snowflake_grant_application_role} Resource.
 func NewGrantApplicationRole(scope constructs.Construct, id *string, config *GrantApplicationRoleConfig) GrantApplicationRole {
 	_init_.Initialize()
 
@@ -399,7 +423,7 @@ func NewGrantApplicationRole(scope constructs.Construct, id *string, config *Gra
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/grant_application_role snowflake_grant_application_role} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/grant_application_role snowflake_grant_application_role} Resource.
 func NewGrantApplicationRole_Override(g GrantApplicationRole, scope constructs.Construct, id *string, config *GrantApplicationRoleConfig) {
 	_init_.Initialize()
 
@@ -875,6 +899,17 @@ func (g *jsiiProxy_GrantApplicationRole) OverrideLogicalId(newLogicalId *string)
 	)
 }
 
+func (g *jsiiProxy_GrantApplicationRole) PutTimeouts(value *GrantApplicationRoleTimeouts) {
+	if err := g.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		g,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (g *jsiiProxy_GrantApplicationRole) ResetApplicationName() {
 	_jsii_.InvokeVoid(
 		g,
@@ -903,6 +938,14 @@ func (g *jsiiProxy_GrantApplicationRole) ResetParentAccountRoleName() {
 	_jsii_.InvokeVoid(
 		g,
 		"resetParentAccountRoleName",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_GrantApplicationRole) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

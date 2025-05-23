@@ -79,6 +79,10 @@ func (t *jsiiProxy_Task) validatePutScheduleParameters(value *TaskSchedule) erro
 	return nil
 }
 
+func (t *jsiiProxy_Task) validatePutTimeoutsParameters(value *TaskTimeouts) error {
+	return nil
+}
+
 func validateTask_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

@@ -5,14 +5,14 @@ package materializedview
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/materializedview/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/materializedview/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/materialized_view snowflake_materialized_view}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/materialized_view snowflake_materialized_view}.
 type MaterializedView interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -88,6 +88,8 @@ type MaterializedView interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() MaterializedViewTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	Warehouse() *string
 	SetWarehouse(val *string)
 	WarehouseInput() *string
@@ -135,6 +137,7 @@ type MaterializedView interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutTag(value interface{})
+	PutTimeouts(value *MaterializedViewTimeouts)
 	ResetComment()
 	ResetId()
 	ResetIsSecure()
@@ -143,6 +146,7 @@ type MaterializedView interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetTag()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -511,6 +515,26 @@ func (j *jsiiProxy_MaterializedView) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_MaterializedView) Timeouts() MaterializedViewTimeoutsOutputReference {
+	var returns MaterializedViewTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_MaterializedView) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_MaterializedView) Warehouse() *string {
 	var returns *string
 	_jsii_.Get(
@@ -532,7 +556,7 @@ func (j *jsiiProxy_MaterializedView) WarehouseInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/materialized_view snowflake_materialized_view} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/materialized_view snowflake_materialized_view} Resource.
 func NewMaterializedView(scope constructs.Construct, id *string, config *MaterializedViewConfig) MaterializedView {
 	_init_.Initialize()
 
@@ -550,7 +574,7 @@ func NewMaterializedView(scope constructs.Construct, id *string, config *Materia
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/materialized_view snowflake_materialized_view} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/materialized_view snowflake_materialized_view} Resource.
 func NewMaterializedView_Override(m MaterializedView, scope constructs.Construct, id *string, config *MaterializedViewConfig) {
 	_init_.Initialize()
 
@@ -1092,6 +1116,17 @@ func (m *jsiiProxy_MaterializedView) PutTag(value interface{}) {
 	)
 }
 
+func (m *jsiiProxy_MaterializedView) PutTimeouts(value *MaterializedViewTimeouts) {
+	if err := m.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (m *jsiiProxy_MaterializedView) ResetComment() {
 	_jsii_.InvokeVoid(
 		m,
@@ -1136,6 +1171,14 @@ func (m *jsiiProxy_MaterializedView) ResetTag() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetTag",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MaterializedView) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

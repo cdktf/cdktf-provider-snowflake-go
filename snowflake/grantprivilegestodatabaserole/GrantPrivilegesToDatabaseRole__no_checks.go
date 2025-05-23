@@ -83,6 +83,10 @@ func (g *jsiiProxy_GrantPrivilegesToDatabaseRole) validatePutOnSchemaObjectParam
 	return nil
 }
 
+func (g *jsiiProxy_GrantPrivilegesToDatabaseRole) validatePutTimeoutsParameters(value *GrantPrivilegesToDatabaseRoleTimeouts) error {
+	return nil
+}
+
 func validateGrantPrivilegesToDatabaseRole_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

@@ -75,6 +75,10 @@ func (p *jsiiProxy_PasswordPolicy) validateOverrideLogicalIdParameters(newLogica
 	return nil
 }
 
+func (p *jsiiProxy_PasswordPolicy) validatePutTimeoutsParameters(value *PasswordPolicyTimeouts) error {
+	return nil
+}
+
 func validatePasswordPolicy_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

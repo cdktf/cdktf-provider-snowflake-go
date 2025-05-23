@@ -5,14 +5,14 @@ package stage
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/stage/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/stage/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/stage snowflake_stage}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/stage snowflake_stage}.
 type Stage interface {
 	cdktf.TerraformResource
 	AwsExternalId() *string
@@ -103,6 +103,8 @@ type Stage interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() StageTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	Url() *string
 	SetUrl(val *string)
 	UrlInput() *string
@@ -150,6 +152,7 @@ type Stage interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutTag(value interface{})
+	PutTimeouts(value *StageTimeouts)
 	ResetAwsExternalId()
 	ResetComment()
 	ResetCopyOptions()
@@ -164,6 +167,7 @@ type Stage interface {
 	ResetSnowflakeIamUser()
 	ResetStorageIntegration()
 	ResetTag()
+	ResetTimeouts()
 	ResetUrl()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -633,6 +637,26 @@ func (j *jsiiProxy_Stage) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Stage) Timeouts() StageTimeoutsOutputReference {
+	var returns StageTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stage) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Stage) Url() *string {
 	var returns *string
 	_jsii_.Get(
@@ -654,7 +678,7 @@ func (j *jsiiProxy_Stage) UrlInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/stage snowflake_stage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/stage snowflake_stage} Resource.
 func NewStage(scope constructs.Construct, id *string, config *StageConfig) Stage {
 	_init_.Initialize()
 
@@ -672,7 +696,7 @@ func NewStage(scope constructs.Construct, id *string, config *StageConfig) Stage
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/stage snowflake_stage} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/stage snowflake_stage} Resource.
 func NewStage_Override(s Stage, scope constructs.Construct, id *string, config *StageConfig) {
 	_init_.Initialize()
 
@@ -1269,6 +1293,17 @@ func (s *jsiiProxy_Stage) PutTag(value interface{}) {
 	)
 }
 
+func (s *jsiiProxy_Stage) PutTimeouts(value *StageTimeouts) {
+	if err := s.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_Stage) ResetAwsExternalId() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1361,6 +1396,14 @@ func (s *jsiiProxy_Stage) ResetTag() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetTag",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Stage) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

@@ -5,14 +5,14 @@ package rowaccesspolicy
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/rowaccesspolicy/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/rowaccesspolicy/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/row_access_policy snowflake_row_access_policy}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/row_access_policy snowflake_row_access_policy}.
 type RowAccessPolicy interface {
 	cdktf.TerraformResource
 	Argument() RowAccessPolicyArgumentList
@@ -84,6 +84,8 @@ type RowAccessPolicy interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() RowAccessPolicyTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -128,11 +130,13 @@ type RowAccessPolicy interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutArgument(value interface{})
+	PutTimeouts(value *RowAccessPolicyTimeouts)
 	ResetComment()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -481,8 +485,28 @@ func (j *jsiiProxy_RowAccessPolicy) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_RowAccessPolicy) Timeouts() RowAccessPolicyTimeoutsOutputReference {
+	var returns RowAccessPolicyTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/row_access_policy snowflake_row_access_policy} Resource.
+func (j *jsiiProxy_RowAccessPolicy) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/row_access_policy snowflake_row_access_policy} Resource.
 func NewRowAccessPolicy(scope constructs.Construct, id *string, config *RowAccessPolicyConfig) RowAccessPolicy {
 	_init_.Initialize()
 
@@ -500,7 +524,7 @@ func NewRowAccessPolicy(scope constructs.Construct, id *string, config *RowAcces
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/row_access_policy snowflake_row_access_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/row_access_policy snowflake_row_access_policy} Resource.
 func NewRowAccessPolicy_Override(r RowAccessPolicy, scope constructs.Construct, id *string, config *RowAccessPolicyConfig) {
 	_init_.Initialize()
 
@@ -1009,6 +1033,17 @@ func (r *jsiiProxy_RowAccessPolicy) PutArgument(value interface{}) {
 	)
 }
 
+func (r *jsiiProxy_RowAccessPolicy) PutTimeouts(value *RowAccessPolicyTimeouts) {
+	if err := r.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (r *jsiiProxy_RowAccessPolicy) ResetComment() {
 	_jsii_.InvokeVoid(
 		r,
@@ -1029,6 +1064,14 @@ func (r *jsiiProxy_RowAccessPolicy) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RowAccessPolicy) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

@@ -5,14 +5,14 @@ package saml2integration
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/saml2integration/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/saml2integration/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/saml2_integration snowflake_saml2_integration}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/saml2_integration snowflake_saml2_integration}.
 type Saml2Integration interface {
 	cdktf.TerraformResource
 	AllowedEmailPatterns() *[]*string
@@ -118,6 +118,8 @@ type Saml2Integration interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() Saml2IntegrationTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -161,6 +163,7 @@ type Saml2Integration interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *Saml2IntegrationTimeouts)
 	ResetAllowedEmailPatterns()
 	ResetAllowedUserDomains()
 	ResetComment()
@@ -177,6 +180,7 @@ type Saml2Integration interface {
 	ResetSaml2SnowflakeAcsUrl()
 	ResetSaml2SnowflakeIssuerUrl()
 	ResetSaml2SpInitiatedLoginPageLabel()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -745,8 +749,28 @@ func (j *jsiiProxy_Saml2Integration) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Saml2Integration) Timeouts() Saml2IntegrationTimeoutsOutputReference {
+	var returns Saml2IntegrationTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/saml2_integration snowflake_saml2_integration} Resource.
+func (j *jsiiProxy_Saml2Integration) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/saml2_integration snowflake_saml2_integration} Resource.
 func NewSaml2Integration(scope constructs.Construct, id *string, config *Saml2IntegrationConfig) Saml2Integration {
 	_init_.Initialize()
 
@@ -764,7 +788,7 @@ func NewSaml2Integration(scope constructs.Construct, id *string, config *Saml2In
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/saml2_integration snowflake_saml2_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/saml2_integration snowflake_saml2_integration} Resource.
 func NewSaml2Integration_Override(s Saml2Integration, scope constructs.Construct, id *string, config *Saml2IntegrationConfig) {
 	_init_.Initialize()
 
@@ -1394,6 +1418,17 @@ func (s *jsiiProxy_Saml2Integration) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (s *jsiiProxy_Saml2Integration) PutTimeouts(value *Saml2IntegrationTimeouts) {
+	if err := s.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		s,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (s *jsiiProxy_Saml2Integration) ResetAllowedEmailPatterns() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1502,6 +1537,14 @@ func (s *jsiiProxy_Saml2Integration) ResetSaml2SpInitiatedLoginPageLabel() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetSaml2SpInitiatedLoginPageLabel",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_Saml2Integration) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

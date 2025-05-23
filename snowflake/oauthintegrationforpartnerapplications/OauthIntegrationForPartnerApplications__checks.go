@@ -207,6 +207,17 @@ func (o *jsiiProxy_OauthIntegrationForPartnerApplications) validateOverrideLogic
 	return nil
 }
 
+func (o *jsiiProxy_OauthIntegrationForPartnerApplications) validatePutTimeoutsParameters(value *OauthIntegrationForPartnerApplicationsTimeouts) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	if err := _jsii_.ValidateStruct(value, func() string { return "parameter value" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func validateOauthIntegrationForPartnerApplications_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	if scope == nil {
 		return fmt.Errorf("parameter scope is required, but nil was provided")

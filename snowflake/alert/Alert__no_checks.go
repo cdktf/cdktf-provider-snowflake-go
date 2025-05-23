@@ -79,6 +79,10 @@ func (a *jsiiProxy_Alert) validatePutAlertScheduleParameters(value *AlertAlertSc
 	return nil
 }
 
+func (a *jsiiProxy_Alert) validatePutTimeoutsParameters(value *AlertTimeouts) error {
+	return nil
+}
+
 func validateAlert_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

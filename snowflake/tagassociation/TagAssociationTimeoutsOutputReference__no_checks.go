@@ -63,7 +63,15 @@ func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) validateSetCreateParam
 	return nil
 }
 
+func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) validateSetDeleteParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) validateSetInternalValueParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) validateSetReadParameters(val *string) error {
 	return nil
 }
 
@@ -72,6 +80,10 @@ func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) validateSetTerraformAt
 }
 
 func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) validateSetTerraformResourceParameters(val cdktf.IInterpolatingParent) error {
+	return nil
+}
+
+func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) validateSetUpdateParameters(val *string) error {
 	return nil
 }
 

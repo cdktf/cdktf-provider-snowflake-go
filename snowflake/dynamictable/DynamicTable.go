@@ -5,14 +5,14 @@ package dynamictable
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/dynamictable/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/dynamictable/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/dynamic_table snowflake_dynamic_table}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/dynamic_table snowflake_dynamic_table}.
 type DynamicTable interface {
 	cdktf.TerraformResource
 	AutomaticClustering() cdktf.IResolvable
@@ -103,6 +103,8 @@ type DynamicTable interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() DynamicTableTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	Warehouse() *string
 	SetWarehouse(val *string)
 	WarehouseInput() *string
@@ -150,6 +152,7 @@ type DynamicTable interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutTargetLag(value *DynamicTableTargetLag)
+	PutTimeouts(value *DynamicTableTimeouts)
 	ResetComment()
 	ResetId()
 	ResetInitialize()
@@ -158,6 +161,7 @@ type DynamicTable interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetRefreshMode()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -666,6 +670,26 @@ func (j *jsiiProxy_DynamicTable) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DynamicTable) Timeouts() DynamicTableTimeoutsOutputReference {
+	var returns DynamicTableTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DynamicTable) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DynamicTable) Warehouse() *string {
 	var returns *string
 	_jsii_.Get(
@@ -687,7 +711,7 @@ func (j *jsiiProxy_DynamicTable) WarehouseInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/dynamic_table snowflake_dynamic_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/dynamic_table snowflake_dynamic_table} Resource.
 func NewDynamicTable(scope constructs.Construct, id *string, config *DynamicTableConfig) DynamicTable {
 	_init_.Initialize()
 
@@ -705,7 +729,7 @@ func NewDynamicTable(scope constructs.Construct, id *string, config *DynamicTabl
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/dynamic_table snowflake_dynamic_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/dynamic_table snowflake_dynamic_table} Resource.
 func NewDynamicTable_Override(d DynamicTable, scope constructs.Construct, id *string, config *DynamicTableConfig) {
 	_init_.Initialize()
 
@@ -1258,6 +1282,17 @@ func (d *jsiiProxy_DynamicTable) PutTargetLag(value *DynamicTableTargetLag) {
 	)
 }
 
+func (d *jsiiProxy_DynamicTable) PutTimeouts(value *DynamicTableTimeouts) {
+	if err := d.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (d *jsiiProxy_DynamicTable) ResetComment() {
 	_jsii_.InvokeVoid(
 		d,
@@ -1302,6 +1337,14 @@ func (d *jsiiProxy_DynamicTable) ResetRefreshMode() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetRefreshMode",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DynamicTable) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

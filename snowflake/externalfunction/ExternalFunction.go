@@ -5,14 +5,14 @@ package externalfunction
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/externalfunction/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/externalfunction/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/external_function snowflake_external_function}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/external_function snowflake_external_function}.
 type ExternalFunction interface {
 	cdktf.TerraformResource
 	ApiIntegration() *string
@@ -112,6 +112,8 @@ type ExternalFunction interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() ExternalFunctionTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	UrlOfProxyAndResource() *string
 	SetUrlOfProxyAndResource(val *string)
 	UrlOfProxyAndResourceInput() *string
@@ -160,6 +162,7 @@ type ExternalFunction interface {
 	OverrideLogicalId(newLogicalId *string)
 	PutArg(value interface{})
 	PutHeader(value interface{})
+	PutTimeouts(value *ExternalFunctionTimeouts)
 	ResetArg()
 	ResetComment()
 	ResetCompression()
@@ -174,6 +177,7 @@ type ExternalFunction interface {
 	ResetRequestTranslator()
 	ResetResponseTranslator()
 	ResetReturnNullAllowed()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -712,6 +716,26 @@ func (j *jsiiProxy_ExternalFunction) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ExternalFunction) Timeouts() ExternalFunctionTimeoutsOutputReference {
+	var returns ExternalFunctionTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ExternalFunction) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ExternalFunction) UrlOfProxyAndResource() *string {
 	var returns *string
 	_jsii_.Get(
@@ -733,7 +757,7 @@ func (j *jsiiProxy_ExternalFunction) UrlOfProxyAndResourceInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/external_function snowflake_external_function} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/external_function snowflake_external_function} Resource.
 func NewExternalFunction(scope constructs.Construct, id *string, config *ExternalFunctionConfig) ExternalFunction {
 	_init_.Initialize()
 
@@ -751,7 +775,7 @@ func NewExternalFunction(scope constructs.Construct, id *string, config *Externa
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/external_function snowflake_external_function} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/external_function snowflake_external_function} Resource.
 func NewExternalFunction_Override(e ExternalFunction, scope constructs.Construct, id *string, config *ExternalFunctionConfig) {
 	_init_.Initialize()
 
@@ -1381,6 +1405,17 @@ func (e *jsiiProxy_ExternalFunction) PutHeader(value interface{}) {
 	)
 }
 
+func (e *jsiiProxy_ExternalFunction) PutTimeouts(value *ExternalFunctionTimeouts) {
+	if err := e.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		e,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (e *jsiiProxy_ExternalFunction) ResetArg() {
 	_jsii_.InvokeVoid(
 		e,
@@ -1473,6 +1508,14 @@ func (e *jsiiProxy_ExternalFunction) ResetReturnNullAllowed() {
 	_jsii_.InvokeVoid(
 		e,
 		"resetReturnNullAllowed",
+		nil, // no parameters
+	)
+}
+
+func (e *jsiiProxy_ExternalFunction) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		e,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

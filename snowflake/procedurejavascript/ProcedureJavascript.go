@@ -5,14 +5,14 @@ package procedurejavascript
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/procedurejavascript/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/procedurejavascript/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/procedure_javascript snowflake_procedure_javascript}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/procedure_javascript snowflake_procedure_javascript}.
 type ProcedureJavascript interface {
 	cdktf.TerraformResource
 	Arguments() ProcedureJavascriptArgumentsList
@@ -106,6 +106,8 @@ type ProcedureJavascript interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() ProcedureJavascriptTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	TraceLevel() *string
 	SetTraceLevel(val *string)
 	TraceLevelInput() *string
@@ -153,6 +155,7 @@ type ProcedureJavascript interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutArguments(value interface{})
+	PutTimeouts(value *ProcedureJavascriptTimeouts)
 	ResetArguments()
 	ResetComment()
 	ResetEnableConsoleOutput()
@@ -165,6 +168,7 @@ type ProcedureJavascript interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	ResetTraceLevel()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -664,6 +668,26 @@ func (j *jsiiProxy_ProcedureJavascript) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ProcedureJavascript) Timeouts() ProcedureJavascriptTimeoutsOutputReference {
+	var returns ProcedureJavascriptTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ProcedureJavascript) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ProcedureJavascript) TraceLevel() *string {
 	var returns *string
 	_jsii_.Get(
@@ -685,7 +709,7 @@ func (j *jsiiProxy_ProcedureJavascript) TraceLevelInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/procedure_javascript snowflake_procedure_javascript} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/procedure_javascript snowflake_procedure_javascript} Resource.
 func NewProcedureJavascript(scope constructs.Construct, id *string, config *ProcedureJavascriptConfig) ProcedureJavascript {
 	_init_.Initialize()
 
@@ -703,7 +727,7 @@ func NewProcedureJavascript(scope constructs.Construct, id *string, config *Proc
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/procedure_javascript snowflake_procedure_javascript} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/procedure_javascript snowflake_procedure_javascript} Resource.
 func NewProcedureJavascript_Override(p ProcedureJavascript, scope constructs.Construct, id *string, config *ProcedureJavascriptConfig) {
 	_init_.Initialize()
 
@@ -1300,6 +1324,17 @@ func (p *jsiiProxy_ProcedureJavascript) PutArguments(value interface{}) {
 	)
 }
 
+func (p *jsiiProxy_ProcedureJavascript) PutTimeouts(value *ProcedureJavascriptTimeouts) {
+	if err := p.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		p,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (p *jsiiProxy_ProcedureJavascript) ResetArguments() {
 	_jsii_.InvokeVoid(
 		p,
@@ -1376,6 +1411,14 @@ func (p *jsiiProxy_ProcedureJavascript) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		p,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_ProcedureJavascript) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

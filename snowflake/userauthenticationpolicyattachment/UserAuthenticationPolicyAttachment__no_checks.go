@@ -75,6 +75,10 @@ func (u *jsiiProxy_UserAuthenticationPolicyAttachment) validateOverrideLogicalId
 	return nil
 }
 
+func (u *jsiiProxy_UserAuthenticationPolicyAttachment) validatePutTimeoutsParameters(value *UserAuthenticationPolicyAttachmentTimeouts) error {
+	return nil
+}
+
 func validateUserAuthenticationPolicyAttachment_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

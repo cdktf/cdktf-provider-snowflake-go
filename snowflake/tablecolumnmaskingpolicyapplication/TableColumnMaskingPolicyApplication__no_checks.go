@@ -75,6 +75,10 @@ func (t *jsiiProxy_TableColumnMaskingPolicyApplication) validateOverrideLogicalI
 	return nil
 }
 
+func (t *jsiiProxy_TableColumnMaskingPolicyApplication) validatePutTimeoutsParameters(value *TableColumnMaskingPolicyApplicationTimeouts) error {
+	return nil
+}
+
 func validateTableColumnMaskingPolicyApplication_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

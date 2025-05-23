@@ -5,14 +5,14 @@ package tableconstraint
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/tableconstraint/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/tableconstraint/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/table_constraint snowflake_table_constraint}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/table_constraint snowflake_table_constraint}.
 type TableConstraint interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -93,6 +93,8 @@ type TableConstraint interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() TableConstraintTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	Type() *string
 	SetType(val *string)
 	TypeInput() *string
@@ -143,6 +145,7 @@ type TableConstraint interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutForeignKeyProperties(value *TableConstraintForeignKeyProperties)
+	PutTimeouts(value *TableConstraintTimeouts)
 	ResetComment()
 	ResetDeferrable()
 	ResetEnable()
@@ -154,6 +157,7 @@ type TableConstraint interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetRely()
+	ResetTimeouts()
 	ResetValidate()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -553,6 +557,26 @@ func (j *jsiiProxy_TableConstraint) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_TableConstraint) Timeouts() TableConstraintTimeoutsOutputReference {
+	var returns TableConstraintTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TableConstraint) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_TableConstraint) Type() *string {
 	var returns *string
 	_jsii_.Get(
@@ -594,7 +618,7 @@ func (j *jsiiProxy_TableConstraint) ValidateInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/table_constraint snowflake_table_constraint} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/table_constraint snowflake_table_constraint} Resource.
 func NewTableConstraint(scope constructs.Construct, id *string, config *TableConstraintConfig) TableConstraint {
 	_init_.Initialize()
 
@@ -612,7 +636,7 @@ func NewTableConstraint(scope constructs.Construct, id *string, config *TableCon
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/table_constraint snowflake_table_constraint} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/table_constraint snowflake_table_constraint} Resource.
 func NewTableConstraint_Override(t TableConstraint, scope constructs.Construct, id *string, config *TableConstraintConfig) {
 	_init_.Initialize()
 
@@ -1187,6 +1211,17 @@ func (t *jsiiProxy_TableConstraint) PutForeignKeyProperties(value *TableConstrai
 	)
 }
 
+func (t *jsiiProxy_TableConstraint) PutTimeouts(value *TableConstraintTimeouts) {
+	if err := t.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		t,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (t *jsiiProxy_TableConstraint) ResetComment() {
 	_jsii_.InvokeVoid(
 		t,
@@ -1255,6 +1290,14 @@ func (t *jsiiProxy_TableConstraint) ResetRely() {
 	_jsii_.InvokeVoid(
 		t,
 		"resetRely",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TableConstraint) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

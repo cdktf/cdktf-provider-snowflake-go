@@ -5,14 +5,14 @@ package serviceuser
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/serviceuser/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/serviceuser/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/service_user snowflake_service_user}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/service_user snowflake_service_user}.
 type ServiceUser interface {
 	cdktf.TerraformResource
 	AbortDetachedQuery() interface{}
@@ -2081,7 +2081,7 @@ func (j *jsiiProxy_ServiceUser) WeekStartInput() *float64 {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/service_user snowflake_service_user} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/service_user snowflake_service_user} Resource.
 func NewServiceUser(scope constructs.Construct, id *string, config *ServiceUserConfig) ServiceUser {
 	_init_.Initialize()
 
@@ -2099,7 +2099,7 @@ func NewServiceUser(scope constructs.Construct, id *string, config *ServiceUserC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/service_user snowflake_service_user} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/service_user snowflake_service_user} Resource.
 func NewServiceUser_Override(s ServiceUser, scope constructs.Construct, id *string, config *ServiceUserConfig) {
 	_init_.Initialize()
 

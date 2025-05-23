@@ -75,6 +75,10 @@ func (a *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearer) validateOverrideLo
 	return nil
 }
 
+func (a *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearer) validatePutTimeoutsParameters(value *ApiAuthenticationIntegrationWithJwtBearerTimeouts) error {
+	return nil
+}
+
 func validateApiAuthenticationIntegrationWithJwtBearer_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

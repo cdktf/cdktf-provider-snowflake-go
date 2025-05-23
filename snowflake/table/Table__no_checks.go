@@ -87,6 +87,10 @@ func (t *jsiiProxy_Table) validatePutTagParameters(value interface{}) error {
 	return nil
 }
 
+func (t *jsiiProxy_Table) validatePutTimeoutsParameters(value *TableTimeouts) error {
+	return nil
+}
+
 func validateTable_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

@@ -5,14 +5,14 @@ package functionscala
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/functionscala/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/functionscala/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/function_scala snowflake_function_scala}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/function_scala snowflake_function_scala}.
 type FunctionScala interface {
 	cdktf.TerraformResource
 	Arguments() FunctionScalaArgumentsList
@@ -124,6 +124,8 @@ type FunctionScala interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() FunctionScalaTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	TraceLevel() *string
 	SetTraceLevel(val *string)
 	TraceLevelInput() *string
@@ -174,6 +176,7 @@ type FunctionScala interface {
 	PutImports(value interface{})
 	PutSecrets(value interface{})
 	PutTargetPath(value *FunctionScalaTargetPath)
+	PutTimeouts(value *FunctionScalaTimeouts)
 	ResetArguments()
 	ResetComment()
 	ResetEnableConsoleOutput()
@@ -192,6 +195,7 @@ type FunctionScala interface {
 	ResetReturnResultsBehavior()
 	ResetSecrets()
 	ResetTargetPath()
+	ResetTimeouts()
 	ResetTraceLevel()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -831,6 +835,26 @@ func (j *jsiiProxy_FunctionScala) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_FunctionScala) Timeouts() FunctionScalaTimeoutsOutputReference {
+	var returns FunctionScalaTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_FunctionScala) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_FunctionScala) TraceLevel() *string {
 	var returns *string
 	_jsii_.Get(
@@ -852,7 +876,7 @@ func (j *jsiiProxy_FunctionScala) TraceLevelInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/function_scala snowflake_function_scala} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/function_scala snowflake_function_scala} Resource.
 func NewFunctionScala(scope constructs.Construct, id *string, config *FunctionScalaConfig) FunctionScala {
 	_init_.Initialize()
 
@@ -870,7 +894,7 @@ func NewFunctionScala(scope constructs.Construct, id *string, config *FunctionSc
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/function_scala snowflake_function_scala} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/function_scala snowflake_function_scala} Resource.
 func NewFunctionScala_Override(f FunctionScala, scope constructs.Construct, id *string, config *FunctionScalaConfig) {
 	_init_.Initialize()
 
@@ -1544,6 +1568,17 @@ func (f *jsiiProxy_FunctionScala) PutTargetPath(value *FunctionScalaTargetPath) 
 	)
 }
 
+func (f *jsiiProxy_FunctionScala) PutTimeouts(value *FunctionScalaTimeouts) {
+	if err := f.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (f *jsiiProxy_FunctionScala) ResetArguments() {
 	_jsii_.InvokeVoid(
 		f,
@@ -1668,6 +1703,14 @@ func (f *jsiiProxy_FunctionScala) ResetTargetPath() {
 	_jsii_.InvokeVoid(
 		f,
 		"resetTargetPath",
+		nil, // no parameters
+	)
+}
+
+func (f *jsiiProxy_FunctionScala) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

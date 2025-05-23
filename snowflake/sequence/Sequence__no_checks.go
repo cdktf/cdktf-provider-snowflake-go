@@ -75,6 +75,10 @@ func (s *jsiiProxy_Sequence) validateOverrideLogicalIdParameters(newLogicalId *s
 	return nil
 }
 
+func (s *jsiiProxy_Sequence) validatePutTimeoutsParameters(value *SequenceTimeouts) error {
+	return nil
+}
+
 func validateSequence_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

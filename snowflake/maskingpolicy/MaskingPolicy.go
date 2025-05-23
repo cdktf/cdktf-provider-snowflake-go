@@ -5,14 +5,14 @@ package maskingpolicy
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/maskingpolicy/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/maskingpolicy/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/masking_policy snowflake_masking_policy}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/masking_policy snowflake_masking_policy}.
 type MaskingPolicy interface {
 	cdktf.TerraformResource
 	Argument() MaskingPolicyArgumentList
@@ -90,6 +90,8 @@ type MaskingPolicy interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() MaskingPolicyTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -134,12 +136,14 @@ type MaskingPolicy interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutArgument(value interface{})
+	PutTimeouts(value *MaskingPolicyTimeouts)
 	ResetComment()
 	ResetExemptOtherPolicies()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -528,8 +532,28 @@ func (j *jsiiProxy_MaskingPolicy) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_MaskingPolicy) Timeouts() MaskingPolicyTimeoutsOutputReference {
+	var returns MaskingPolicyTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/masking_policy snowflake_masking_policy} Resource.
+func (j *jsiiProxy_MaskingPolicy) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/masking_policy snowflake_masking_policy} Resource.
 func NewMaskingPolicy(scope constructs.Construct, id *string, config *MaskingPolicyConfig) MaskingPolicy {
 	_init_.Initialize()
 
@@ -547,7 +571,7 @@ func NewMaskingPolicy(scope constructs.Construct, id *string, config *MaskingPol
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/masking_policy snowflake_masking_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/masking_policy snowflake_masking_policy} Resource.
 func NewMaskingPolicy_Override(m MaskingPolicy, scope constructs.Construct, id *string, config *MaskingPolicyConfig) {
 	_init_.Initialize()
 
@@ -1078,6 +1102,17 @@ func (m *jsiiProxy_MaskingPolicy) PutArgument(value interface{}) {
 	)
 }
 
+func (m *jsiiProxy_MaskingPolicy) PutTimeouts(value *MaskingPolicyTimeouts) {
+	if err := m.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		m,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (m *jsiiProxy_MaskingPolicy) ResetComment() {
 	_jsii_.InvokeVoid(
 		m,
@@ -1106,6 +1141,14 @@ func (m *jsiiProxy_MaskingPolicy) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		m,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (m *jsiiProxy_MaskingPolicy) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		m,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

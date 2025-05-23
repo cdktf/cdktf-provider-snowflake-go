@@ -5,14 +5,14 @@ package provider
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/provider/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/provider/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs snowflake}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs snowflake}.
 type SnowflakeProvider interface {
 	cdktf.TerraformProvider
 	AccountName() *string
@@ -152,6 +152,9 @@ type SnowflakeProvider interface {
 	SetTokenAccessor(val *SnowflakeProviderTokenAccessor)
 	TokenAccessorInput() *SnowflakeProviderTokenAccessor
 	TokenInput() *string
+	UseLegacyTomlFile() interface{}
+	SetUseLegacyTomlFile(val interface{})
+	UseLegacyTomlFileInput() interface{}
 	User() *string
 	SetUser(val *string)
 	UserInput() *string
@@ -208,6 +211,7 @@ type SnowflakeProvider interface {
 	ResetTmpDirectoryPath()
 	ResetToken()
 	ResetTokenAccessor()
+	ResetUseLegacyTomlFile()
 	ResetUser()
 	ResetValidateDefaultParameters()
 	ResetWarehouse()
@@ -1109,6 +1113,26 @@ func (j *jsiiProxy_SnowflakeProvider) TokenInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_SnowflakeProvider) UseLegacyTomlFile() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"useLegacyTomlFile",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) UseLegacyTomlFileInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"useLegacyTomlFileInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_SnowflakeProvider) User() *string {
 	var returns *string
 	_jsii_.Get(
@@ -1170,7 +1194,7 @@ func (j *jsiiProxy_SnowflakeProvider) WarehouseInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs snowflake} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs snowflake} Resource.
 func NewSnowflakeProvider(scope constructs.Construct, id *string, config *SnowflakeProviderConfig) SnowflakeProvider {
 	_init_.Initialize()
 
@@ -1188,7 +1212,7 @@ func NewSnowflakeProvider(scope constructs.Construct, id *string, config *Snowfl
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs snowflake} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs snowflake} Resource.
 func NewSnowflakeProvider_Override(s SnowflakeProvider, scope constructs.Construct, id *string, config *SnowflakeProviderConfig) {
 	_init_.Initialize()
 
@@ -1528,6 +1552,17 @@ func (j *jsiiProxy_SnowflakeProvider)SetTokenAccessor(val *SnowflakeProviderToke
 	_jsii_.Set(
 		j,
 		"tokenAccessor",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetUseLegacyTomlFile(val interface{}) {
+	if err := j.validateSetUseLegacyTomlFileParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"useLegacyTomlFile",
 		val,
 	)
 }
@@ -1997,6 +2032,14 @@ func (s *jsiiProxy_SnowflakeProvider) ResetTokenAccessor() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetTokenAccessor",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetUseLegacyTomlFile() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetUseLegacyTomlFile",
 		nil, // no parameters
 	)
 }

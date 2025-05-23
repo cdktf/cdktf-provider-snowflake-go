@@ -5,14 +5,14 @@ package grantprivilegestodatabaserole
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/grantprivilegestodatabaserole/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/grantprivilegestodatabaserole/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/grant_privileges_to_database_role snowflake_grant_privileges_to_database_role}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/grant_privileges_to_database_role snowflake_grant_privileges_to_database_role}.
 type GrantPrivilegesToDatabaseRole interface {
 	cdktf.TerraformResource
 	AllPrivileges() interface{}
@@ -86,6 +86,8 @@ type GrantPrivilegesToDatabaseRole interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() GrantPrivilegesToDatabaseRoleTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	WithGrantOption() interface{}
 	SetWithGrantOption(val interface{})
 	WithGrantOptionInput() interface{}
@@ -134,6 +136,7 @@ type GrantPrivilegesToDatabaseRole interface {
 	OverrideLogicalId(newLogicalId *string)
 	PutOnSchema(value *GrantPrivilegesToDatabaseRoleOnSchema)
 	PutOnSchemaObject(value *GrantPrivilegesToDatabaseRoleOnSchemaObject)
+	PutTimeouts(value *GrantPrivilegesToDatabaseRoleTimeouts)
 	ResetAllPrivileges()
 	ResetAlwaysApply()
 	ResetAlwaysApplyTrigger()
@@ -145,6 +148,7 @@ type GrantPrivilegesToDatabaseRole interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPrivileges()
+	ResetTimeouts()
 	ResetWithGrantOption()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -504,6 +508,26 @@ func (j *jsiiProxy_GrantPrivilegesToDatabaseRole) TerraformResourceType() *strin
 	return returns
 }
 
+func (j *jsiiProxy_GrantPrivilegesToDatabaseRole) Timeouts() GrantPrivilegesToDatabaseRoleTimeoutsOutputReference {
+	var returns GrantPrivilegesToDatabaseRoleTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_GrantPrivilegesToDatabaseRole) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_GrantPrivilegesToDatabaseRole) WithGrantOption() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -525,7 +549,7 @@ func (j *jsiiProxy_GrantPrivilegesToDatabaseRole) WithGrantOptionInput() interfa
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/grant_privileges_to_database_role snowflake_grant_privileges_to_database_role} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/grant_privileges_to_database_role snowflake_grant_privileges_to_database_role} Resource.
 func NewGrantPrivilegesToDatabaseRole(scope constructs.Construct, id *string, config *GrantPrivilegesToDatabaseRoleConfig) GrantPrivilegesToDatabaseRole {
 	_init_.Initialize()
 
@@ -543,7 +567,7 @@ func NewGrantPrivilegesToDatabaseRole(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/grant_privileges_to_database_role snowflake_grant_privileges_to_database_role} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/grant_privileges_to_database_role snowflake_grant_privileges_to_database_role} Resource.
 func NewGrantPrivilegesToDatabaseRole_Override(g GrantPrivilegesToDatabaseRole, scope constructs.Construct, id *string, config *GrantPrivilegesToDatabaseRoleConfig) {
 	_init_.Initialize()
 
@@ -1085,6 +1109,17 @@ func (g *jsiiProxy_GrantPrivilegesToDatabaseRole) PutOnSchemaObject(value *Grant
 	)
 }
 
+func (g *jsiiProxy_GrantPrivilegesToDatabaseRole) PutTimeouts(value *GrantPrivilegesToDatabaseRoleTimeouts) {
+	if err := g.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		g,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (g *jsiiProxy_GrantPrivilegesToDatabaseRole) ResetAllPrivileges() {
 	_jsii_.InvokeVoid(
 		g,
@@ -1153,6 +1188,14 @@ func (g *jsiiProxy_GrantPrivilegesToDatabaseRole) ResetPrivileges() {
 	_jsii_.InvokeVoid(
 		g,
 		"resetPrivileges",
+		nil, // no parameters
+	)
+}
+
+func (g *jsiiProxy_GrantPrivilegesToDatabaseRole) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		g,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

@@ -5,9 +5,9 @@ package tagassociation
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/tagassociation/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/tagassociation/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -31,10 +31,16 @@ type TagAssociationTimeoutsOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	Delete() *string
+	SetDelete(val *string)
+	DeleteInput() *string
 	// Experimental.
 	Fqn() *string
 	InternalValue() interface{}
 	SetInternalValue(val interface{})
+	Read() *string
+	SetRead(val *string)
+	ReadInput() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -43,6 +49,9 @@ type TagAssociationTimeoutsOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	Update() *string
+	SetUpdate(val *string)
+	UpdateInput() *string
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -68,6 +77,9 @@ type TagAssociationTimeoutsOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetCreate()
+	ResetDelete()
+	ResetRead()
+	ResetUpdate()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -133,6 +145,26 @@ func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) CreationStack() *[]*st
 	return returns
 }
 
+func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) Delete() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"delete",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) DeleteInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"deleteInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -153,6 +185,26 @@ func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) InternalValue() interf
 	return returns
 }
 
+func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) Read() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"read",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) ReadInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"readInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
@@ -168,6 +220,26 @@ func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) TerraformResource() cd
 	_jsii_.Get(
 		j,
 		"terraformResource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) Update() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"update",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TagAssociationTimeoutsOutputReference) UpdateInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"updateInput",
 		&returns,
 	)
 	return returns
@@ -234,6 +306,17 @@ func (j *jsiiProxy_TagAssociationTimeoutsOutputReference)SetCreate(val *string) 
 	)
 }
 
+func (j *jsiiProxy_TagAssociationTimeoutsOutputReference)SetDelete(val *string) {
+	if err := j.validateSetDeleteParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"delete",
+		val,
+	)
+}
+
 func (j *jsiiProxy_TagAssociationTimeoutsOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
@@ -241,6 +324,17 @@ func (j *jsiiProxy_TagAssociationTimeoutsOutputReference)SetInternalValue(val in
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_TagAssociationTimeoutsOutputReference)SetRead(val *string) {
+	if err := j.validateSetReadParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"read",
 		val,
 	)
 }
@@ -263,6 +357,17 @@ func (j *jsiiProxy_TagAssociationTimeoutsOutputReference)SetTerraformResource(va
 	_jsii_.Set(
 		j,
 		"terraformResource",
+		val,
+	)
+}
+
+func (j *jsiiProxy_TagAssociationTimeoutsOutputReference)SetUpdate(val *string) {
+	if err := j.validateSetUpdateParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"update",
 		val,
 	)
 }
@@ -457,6 +562,30 @@ func (t *jsiiProxy_TagAssociationTimeoutsOutputReference) ResetCreate() {
 	_jsii_.InvokeVoid(
 		t,
 		"resetCreate",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TagAssociationTimeoutsOutputReference) ResetDelete() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetDelete",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TagAssociationTimeoutsOutputReference) ResetRead() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetRead",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TagAssociationTimeoutsOutputReference) ResetUpdate() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetUpdate",
 		nil, // no parameters
 	)
 }

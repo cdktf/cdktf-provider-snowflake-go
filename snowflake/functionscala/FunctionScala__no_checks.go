@@ -91,6 +91,10 @@ func (f *jsiiProxy_FunctionScala) validatePutTargetPathParameters(value *Functio
 	return nil
 }
 
+func (f *jsiiProxy_FunctionScala) validatePutTimeoutsParameters(value *FunctionScalaTimeouts) error {
+	return nil
+}
+
 func validateFunctionScala_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

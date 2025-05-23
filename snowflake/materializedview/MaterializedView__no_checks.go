@@ -79,6 +79,10 @@ func (m *jsiiProxy_MaterializedView) validatePutTagParameters(value interface{})
 	return nil
 }
 
+func (m *jsiiProxy_MaterializedView) validatePutTimeoutsParameters(value *MaterializedViewTimeouts) error {
+	return nil
+}
+
 func validateMaterializedView_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

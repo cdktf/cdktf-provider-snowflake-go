@@ -79,6 +79,10 @@ func (p *jsiiProxy_ProcedureJavascript) validatePutArgumentsParameters(value int
 	return nil
 }
 
+func (p *jsiiProxy_ProcedureJavascript) validatePutTimeoutsParameters(value *ProcedureJavascriptTimeouts) error {
+	return nil
+}
+
 func validateProcedureJavascript_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

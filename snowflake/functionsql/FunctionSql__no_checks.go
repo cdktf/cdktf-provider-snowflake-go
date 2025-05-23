@@ -79,6 +79,10 @@ func (f *jsiiProxy_FunctionSql) validatePutArgumentsParameters(value interface{}
 	return nil
 }
 
+func (f *jsiiProxy_FunctionSql) validatePutTimeoutsParameters(value *FunctionSqlTimeouts) error {
+	return nil
+}
+
 func validateFunctionSql_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

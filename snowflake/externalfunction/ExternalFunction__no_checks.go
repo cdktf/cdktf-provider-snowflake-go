@@ -83,6 +83,10 @@ func (e *jsiiProxy_ExternalFunction) validatePutHeaderParameters(value interface
 	return nil
 }
 
+func (e *jsiiProxy_ExternalFunction) validatePutTimeoutsParameters(value *ExternalFunctionTimeouts) error {
+	return nil
+}
+
 func validateExternalFunction_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

@@ -5,14 +5,14 @@ package task
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/task/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/task/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/task snowflake_task}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/task snowflake_task}.
 type Task interface {
 	cdktf.TerraformResource
 	AbortDetachedQuery() interface{}
@@ -219,6 +219,8 @@ type Task interface {
 	TimeOutputFormat() *string
 	SetTimeOutputFormat(val *string)
 	TimeOutputFormatInput() *string
+	Timeouts() TaskTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	TimestampDayIsAlways24H() interface{}
 	SetTimestampDayIsAlways24H(val interface{})
 	TimestampDayIsAlways24HInput() interface{}
@@ -326,6 +328,7 @@ type Task interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutSchedule(value *TaskSchedule)
+	PutTimeouts(value *TaskTimeouts)
 	ResetAbortDetachedQuery()
 	ResetAfter()
 	ResetAllowOverlappingExecution()
@@ -376,6 +379,7 @@ type Task interface {
 	ResetTaskAutoRetryAttempts()
 	ResetTimeInputFormat()
 	ResetTimeOutputFormat()
+	ResetTimeouts()
 	ResetTimestampDayIsAlways24H()
 	ResetTimestampInputFormat()
 	ResetTimestampLtzOutputFormat()
@@ -1645,6 +1649,26 @@ func (j *jsiiProxy_Task) TimeOutputFormatInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Task) Timeouts() TaskTimeoutsOutputReference {
+	var returns TaskTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Task) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Task) TimestampDayIsAlways24H() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -2066,7 +2090,7 @@ func (j *jsiiProxy_Task) WhenInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/task snowflake_task} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/task snowflake_task} Resource.
 func NewTask(scope constructs.Construct, id *string, config *TaskConfig) Task {
 	_init_.Initialize()
 
@@ -2084,7 +2108,7 @@ func NewTask(scope constructs.Construct, id *string, config *TaskConfig) Task {
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/task snowflake_task} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/task snowflake_task} Resource.
 func NewTask_Override(t Task, scope constructs.Construct, id *string, config *TaskConfig) {
 	_init_.Initialize()
 
@@ -3319,6 +3343,17 @@ func (t *jsiiProxy_Task) PutSchedule(value *TaskSchedule) {
 	)
 }
 
+func (t *jsiiProxy_Task) PutTimeouts(value *TaskTimeouts) {
+	if err := t.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		t,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (t *jsiiProxy_Task) ResetAbortDetachedQuery() {
 	_jsii_.InvokeVoid(
 		t,
@@ -3699,6 +3734,14 @@ func (t *jsiiProxy_Task) ResetTimeOutputFormat() {
 	_jsii_.InvokeVoid(
 		t,
 		"resetTimeOutputFormat",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_Task) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

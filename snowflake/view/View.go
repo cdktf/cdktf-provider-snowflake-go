@@ -5,14 +5,14 @@ package view
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/view/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/view/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/view snowflake_view}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/view snowflake_view}.
 type View interface {
 	cdktf.TerraformResource
 	AggregationPolicy() ViewAggregationPolicyOutputReference
@@ -107,6 +107,8 @@ type View interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() ViewTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -155,6 +157,7 @@ type View interface {
 	PutDataMetricFunction(value interface{})
 	PutDataMetricSchedule(value *ViewDataMetricSchedule)
 	PutRowAccessPolicy(value *ViewRowAccessPolicy)
+	PutTimeouts(value *ViewTimeouts)
 	ResetAggregationPolicy()
 	ResetChangeTracking()
 	ResetColumn()
@@ -170,6 +173,7 @@ type View interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetRowAccessPolicy()
+	ResetTimeouts()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -698,8 +702,28 @@ func (j *jsiiProxy_View) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_View) Timeouts() ViewTimeoutsOutputReference {
+	var returns ViewTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/view snowflake_view} Resource.
+func (j *jsiiProxy_View) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/view snowflake_view} Resource.
 func NewView(scope constructs.Construct, id *string, config *ViewConfig) View {
 	_init_.Initialize()
 
@@ -717,7 +741,7 @@ func NewView(scope constructs.Construct, id *string, config *ViewConfig) View {
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/view snowflake_view} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/view snowflake_view} Resource.
 func NewView_Override(v View, scope constructs.Construct, id *string, config *ViewConfig) {
 	_init_.Initialize()
 
@@ -1325,6 +1349,17 @@ func (v *jsiiProxy_View) PutRowAccessPolicy(value *ViewRowAccessPolicy) {
 	)
 }
 
+func (v *jsiiProxy_View) PutTimeouts(value *ViewTimeouts) {
+	if err := v.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		v,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (v *jsiiProxy_View) ResetAggregationPolicy() {
 	_jsii_.InvokeVoid(
 		v,
@@ -1425,6 +1460,14 @@ func (v *jsiiProxy_View) ResetRowAccessPolicy() {
 	_jsii_.InvokeVoid(
 		v,
 		"resetRowAccessPolicy",
+		nil, // no parameters
+	)
+}
+
+func (v *jsiiProxy_View) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		v,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

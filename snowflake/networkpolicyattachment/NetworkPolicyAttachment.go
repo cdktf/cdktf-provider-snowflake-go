@@ -5,14 +5,14 @@ package networkpolicyattachment
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/networkpolicyattachment/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/networkpolicyattachment/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/network_policy_attachment snowflake_network_policy_attachment}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/network_policy_attachment snowflake_network_policy_attachment}.
 type NetworkPolicyAttachment interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -70,6 +70,8 @@ type NetworkPolicyAttachment interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() NetworkPolicyAttachmentTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	Users() *[]*string
 	SetUsers(val *[]*string)
 	UsersInput() *[]*string
@@ -116,11 +118,13 @@ type NetworkPolicyAttachment interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTimeouts(value *NetworkPolicyAttachmentTimeouts)
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetSetForAccount()
+	ResetTimeouts()
 	ResetUsers()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -360,6 +364,26 @@ func (j *jsiiProxy_NetworkPolicyAttachment) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_NetworkPolicyAttachment) Timeouts() NetworkPolicyAttachmentTimeoutsOutputReference {
+	var returns NetworkPolicyAttachmentTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_NetworkPolicyAttachment) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_NetworkPolicyAttachment) Users() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -381,7 +405,7 @@ func (j *jsiiProxy_NetworkPolicyAttachment) UsersInput() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/network_policy_attachment snowflake_network_policy_attachment} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/network_policy_attachment snowflake_network_policy_attachment} Resource.
 func NewNetworkPolicyAttachment(scope constructs.Construct, id *string, config *NetworkPolicyAttachmentConfig) NetworkPolicyAttachment {
 	_init_.Initialize()
 
@@ -399,7 +423,7 @@ func NewNetworkPolicyAttachment(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/network_policy_attachment snowflake_network_policy_attachment} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/network_policy_attachment snowflake_network_policy_attachment} Resource.
 func NewNetworkPolicyAttachment_Override(n NetworkPolicyAttachment, scope constructs.Construct, id *string, config *NetworkPolicyAttachmentConfig) {
 	_init_.Initialize()
 
@@ -875,6 +899,17 @@ func (n *jsiiProxy_NetworkPolicyAttachment) OverrideLogicalId(newLogicalId *stri
 	)
 }
 
+func (n *jsiiProxy_NetworkPolicyAttachment) PutTimeouts(value *NetworkPolicyAttachmentTimeouts) {
+	if err := n.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		n,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (n *jsiiProxy_NetworkPolicyAttachment) ResetId() {
 	_jsii_.InvokeVoid(
 		n,
@@ -895,6 +930,14 @@ func (n *jsiiProxy_NetworkPolicyAttachment) ResetSetForAccount() {
 	_jsii_.InvokeVoid(
 		n,
 		"resetSetForAccount",
+		nil, // no parameters
+	)
+}
+
+func (n *jsiiProxy_NetworkPolicyAttachment) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		n,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

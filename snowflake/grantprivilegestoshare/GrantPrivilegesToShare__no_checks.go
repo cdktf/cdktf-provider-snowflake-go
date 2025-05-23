@@ -75,6 +75,10 @@ func (g *jsiiProxy_GrantPrivilegesToShare) validateOverrideLogicalIdParameters(n
 	return nil
 }
 
+func (g *jsiiProxy_GrantPrivilegesToShare) validatePutTimeoutsParameters(value *GrantPrivilegesToShareTimeouts) error {
+	return nil
+}
+
 func validateGrantPrivilegesToShare_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

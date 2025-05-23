@@ -5,14 +5,14 @@ package functionpython
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/functionpython/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/functionpython/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/function_python snowflake_function_python}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/function_python snowflake_function_python}.
 type FunctionPython interface {
 	cdktf.TerraformResource
 	Arguments() FunctionPythonArgumentsList
@@ -125,6 +125,8 @@ type FunctionPython interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() FunctionPythonTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	TraceLevel() *string
 	SetTraceLevel(val *string)
 	TraceLevelInput() *string
@@ -174,6 +176,7 @@ type FunctionPython interface {
 	PutArguments(value interface{})
 	PutImports(value interface{})
 	PutSecrets(value interface{})
+	PutTimeouts(value *FunctionPythonTimeouts)
 	ResetArguments()
 	ResetComment()
 	ResetEnableConsoleOutput()
@@ -192,6 +195,7 @@ type FunctionPython interface {
 	ResetPackages()
 	ResetReturnResultsBehavior()
 	ResetSecrets()
+	ResetTimeouts()
 	ResetTraceLevel()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -831,6 +835,26 @@ func (j *jsiiProxy_FunctionPython) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_FunctionPython) Timeouts() FunctionPythonTimeoutsOutputReference {
+	var returns FunctionPythonTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_FunctionPython) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_FunctionPython) TraceLevel() *string {
 	var returns *string
 	_jsii_.Get(
@@ -852,7 +876,7 @@ func (j *jsiiProxy_FunctionPython) TraceLevelInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/function_python snowflake_function_python} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/function_python snowflake_function_python} Resource.
 func NewFunctionPython(scope constructs.Construct, id *string, config *FunctionPythonConfig) FunctionPython {
 	_init_.Initialize()
 
@@ -870,7 +894,7 @@ func NewFunctionPython(scope constructs.Construct, id *string, config *FunctionP
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/function_python snowflake_function_python} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/function_python snowflake_function_python} Resource.
 func NewFunctionPython_Override(f FunctionPython, scope constructs.Construct, id *string, config *FunctionPythonConfig) {
 	_init_.Initialize()
 
@@ -1544,6 +1568,17 @@ func (f *jsiiProxy_FunctionPython) PutSecrets(value interface{}) {
 	)
 }
 
+func (f *jsiiProxy_FunctionPython) PutTimeouts(value *FunctionPythonTimeouts) {
+	if err := f.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (f *jsiiProxy_FunctionPython) ResetArguments() {
 	_jsii_.InvokeVoid(
 		f,
@@ -1668,6 +1703,14 @@ func (f *jsiiProxy_FunctionPython) ResetSecrets() {
 	_jsii_.InvokeVoid(
 		f,
 		"resetSecrets",
+		nil, // no parameters
+	)
+}
+
+func (f *jsiiProxy_FunctionPython) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

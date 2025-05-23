@@ -75,6 +75,10 @@ func (n *jsiiProxy_NetworkPolicy) validateOverrideLogicalIdParameters(newLogical
 	return nil
 }
 
+func (n *jsiiProxy_NetworkPolicy) validatePutTimeoutsParameters(value *NetworkPolicyTimeouts) error {
+	return nil
+}
+
 func validateNetworkPolicy_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }

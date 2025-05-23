@@ -5,14 +5,14 @@ package functionjavascript
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/functionjavascript/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/functionjavascript/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/function_javascript snowflake_function_javascript}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/function_javascript snowflake_function_javascript}.
 type FunctionJavascript interface {
 	cdktf.TerraformResource
 	Arguments() FunctionJavascriptArgumentsList
@@ -106,6 +106,8 @@ type FunctionJavascript interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() FunctionJavascriptTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	TraceLevel() *string
 	SetTraceLevel(val *string)
 	TraceLevelInput() *string
@@ -153,6 +155,7 @@ type FunctionJavascript interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutArguments(value interface{})
+	PutTimeouts(value *FunctionJavascriptTimeouts)
 	ResetArguments()
 	ResetComment()
 	ResetEnableConsoleOutput()
@@ -165,6 +168,7 @@ type FunctionJavascript interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetReturnResultsBehavior()
+	ResetTimeouts()
 	ResetTraceLevel()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -664,6 +668,26 @@ func (j *jsiiProxy_FunctionJavascript) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_FunctionJavascript) Timeouts() FunctionJavascriptTimeoutsOutputReference {
+	var returns FunctionJavascriptTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_FunctionJavascript) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_FunctionJavascript) TraceLevel() *string {
 	var returns *string
 	_jsii_.Get(
@@ -685,7 +709,7 @@ func (j *jsiiProxy_FunctionJavascript) TraceLevelInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/function_javascript snowflake_function_javascript} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/function_javascript snowflake_function_javascript} Resource.
 func NewFunctionJavascript(scope constructs.Construct, id *string, config *FunctionJavascriptConfig) FunctionJavascript {
 	_init_.Initialize()
 
@@ -703,7 +727,7 @@ func NewFunctionJavascript(scope constructs.Construct, id *string, config *Funct
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/function_javascript snowflake_function_javascript} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/function_javascript snowflake_function_javascript} Resource.
 func NewFunctionJavascript_Override(f FunctionJavascript, scope constructs.Construct, id *string, config *FunctionJavascriptConfig) {
 	_init_.Initialize()
 
@@ -1300,6 +1324,17 @@ func (f *jsiiProxy_FunctionJavascript) PutArguments(value interface{}) {
 	)
 }
 
+func (f *jsiiProxy_FunctionJavascript) PutTimeouts(value *FunctionJavascriptTimeouts) {
+	if err := f.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		f,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (f *jsiiProxy_FunctionJavascript) ResetArguments() {
 	_jsii_.InvokeVoid(
 		f,
@@ -1376,6 +1411,14 @@ func (f *jsiiProxy_FunctionJavascript) ResetReturnResultsBehavior() {
 	_jsii_.InvokeVoid(
 		f,
 		"resetReturnResultsBehavior",
+		nil, // no parameters
+	)
+}
+
+func (f *jsiiProxy_FunctionJavascript) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		f,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }

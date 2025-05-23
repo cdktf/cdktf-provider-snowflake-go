@@ -5,14 +5,14 @@ package procedurepython
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v12/procedurepython/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/procedurepython/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/procedure_python snowflake_procedure_python}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/procedure_python snowflake_procedure_python}.
 type ProcedurePython interface {
 	cdktf.TerraformResource
 	Arguments() ProcedurePythonArgumentsList
@@ -125,6 +125,8 @@ type ProcedurePython interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	Timeouts() ProcedurePythonTimeoutsOutputReference
+	TimeoutsInput() interface{}
 	TraceLevel() *string
 	SetTraceLevel(val *string)
 	TraceLevelInput() *string
@@ -174,6 +176,7 @@ type ProcedurePython interface {
 	PutArguments(value interface{})
 	PutImports(value interface{})
 	PutSecrets(value interface{})
+	PutTimeouts(value *ProcedurePythonTimeouts)
 	ResetArguments()
 	ResetComment()
 	ResetEnableConsoleOutput()
@@ -191,6 +194,7 @@ type ProcedurePython interface {
 	ResetPackages()
 	ResetProcedureDefinition()
 	ResetSecrets()
+	ResetTimeouts()
 	ResetTraceLevel()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -830,6 +834,26 @@ func (j *jsiiProxy_ProcedurePython) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_ProcedurePython) Timeouts() ProcedurePythonTimeoutsOutputReference {
+	var returns ProcedurePythonTimeoutsOutputReference
+	_jsii_.Get(
+		j,
+		"timeouts",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_ProcedurePython) TimeoutsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"timeoutsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_ProcedurePython) TraceLevel() *string {
 	var returns *string
 	_jsii_.Get(
@@ -851,7 +875,7 @@ func (j *jsiiProxy_ProcedurePython) TraceLevelInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/procedure_python snowflake_procedure_python} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/procedure_python snowflake_procedure_python} Resource.
 func NewProcedurePython(scope constructs.Construct, id *string, config *ProcedurePythonConfig) ProcedurePython {
 	_init_.Initialize()
 
@@ -869,7 +893,7 @@ func NewProcedurePython(scope constructs.Construct, id *string, config *Procedur
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflake-labs/snowflake/1.0.5/docs/resources/procedure_python snowflake_procedure_python} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/procedure_python snowflake_procedure_python} Resource.
 func NewProcedurePython_Override(p ProcedurePython, scope constructs.Construct, id *string, config *ProcedurePythonConfig) {
 	_init_.Initialize()
 
@@ -1543,6 +1567,17 @@ func (p *jsiiProxy_ProcedurePython) PutSecrets(value interface{}) {
 	)
 }
 
+func (p *jsiiProxy_ProcedurePython) PutTimeouts(value *ProcedurePythonTimeouts) {
+	if err := p.validatePutTimeoutsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		p,
+		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
 func (p *jsiiProxy_ProcedurePython) ResetArguments() {
 	_jsii_.InvokeVoid(
 		p,
@@ -1659,6 +1694,14 @@ func (p *jsiiProxy_ProcedurePython) ResetSecrets() {
 	_jsii_.InvokeVoid(
 		p,
 		"resetSecrets",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_ProcedurePython) ResetTimeouts() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetTimeouts",
 		nil, // no parameters
 	)
 }
