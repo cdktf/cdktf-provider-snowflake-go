@@ -192,7 +192,6 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "minsToUnlock", GoGetter: "MinsToUnlock"},
 			_jsii_.MemberProperty{JsiiProperty: "mustChangePassword", GoGetter: "MustChangePassword"},
 			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
-			_jsii_.MemberProperty{JsiiProperty: "password", GoGetter: "Password"},
 			_jsii_.MemberProperty{JsiiProperty: "passwordLastSetTime", GoGetter: "PasswordLastSetTime"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "rsaPublicKey", GoGetter: "RsaPublicKey"},

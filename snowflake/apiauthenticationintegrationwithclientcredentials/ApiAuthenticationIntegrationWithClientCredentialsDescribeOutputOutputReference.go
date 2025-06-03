@@ -39,7 +39,6 @@ type ApiAuthenticationIntegrationWithClientCredentialsDescribeOutputOutputRefere
 	OauthAllowedScopes() ApiAuthenticationIntegrationWithClientCredentialsDescribeOutputOauthAllowedScopesList
 	OauthAuthorizationEndpoint() ApiAuthenticationIntegrationWithClientCredentialsDescribeOutputOauthAuthorizationEndpointList
 	OauthClientAuthMethod() ApiAuthenticationIntegrationWithClientCredentialsDescribeOutputOauthClientAuthMethodList
-	OauthClientId() ApiAuthenticationIntegrationWithClientCredentialsDescribeOutputOauthClientIdList
 	OauthGrant() ApiAuthenticationIntegrationWithClientCredentialsDescribeOutputOauthGrantList
 	OauthRefreshTokenValidity() ApiAuthenticationIntegrationWithClientCredentialsDescribeOutputOauthRefreshTokenValidityList
 	OauthTokenEndpoint() ApiAuthenticationIntegrationWithClientCredentialsDescribeOutputOauthTokenEndpointList
@@ -206,16 +205,6 @@ func (j *jsiiProxy_ApiAuthenticationIntegrationWithClientCredentialsDescribeOutp
 	_jsii_.Get(
 		j,
 		"oauthClientAuthMethod",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_ApiAuthenticationIntegrationWithClientCredentialsDescribeOutputOutputReference) OauthClientId() ApiAuthenticationIntegrationWithClientCredentialsDescribeOutputOauthClientIdList {
-	var returns ApiAuthenticationIntegrationWithClientCredentialsDescribeOutputOauthClientIdList
-	_jsii_.Get(
-		j,
-		"oauthClientId",
 		&returns,
 	)
 	return returns

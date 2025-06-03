@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/database_role snowflake_database_role}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/resources/database_role snowflake_database_role}.
 type DatabaseRole interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -426,7 +426,7 @@ func (j *jsiiProxy_DatabaseRole) TimeoutsInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/database_role snowflake_database_role} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/resources/database_role snowflake_database_role} Resource.
 func NewDatabaseRole(scope constructs.Construct, id *string, config *DatabaseRoleConfig) DatabaseRole {
 	_init_.Initialize()
 
@@ -444,7 +444,7 @@ func NewDatabaseRole(scope constructs.Construct, id *string, config *DatabaseRol
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/resources/database_role snowflake_database_role} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/resources/database_role snowflake_database_role} Resource.
 func NewDatabaseRole_Override(d DatabaseRole, scope constructs.Construct, id *string, config *DatabaseRoleConfig) {
 	_init_.Initialize()
 

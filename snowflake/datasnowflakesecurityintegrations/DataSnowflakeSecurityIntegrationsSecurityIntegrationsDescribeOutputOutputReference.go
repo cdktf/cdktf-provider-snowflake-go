@@ -57,14 +57,12 @@ type DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOutputRe
 	OauthAllowNonTlsRedirectUri() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOauthAllowNonTlsRedirectUriList
 	OauthAuthorizationEndpoint() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOauthAuthorizationEndpointList
 	OauthClientAuthMethod() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOauthClientAuthMethodList
-	OauthClientId() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOauthClientIdList
 	OauthClientRsaPublicKey2Fp() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOauthClientRsaPublicKey2FpList
 	OauthClientRsaPublicKeyFp() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOauthClientRsaPublicKeyFpList
 	OauthClientType() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOauthClientTypeList
 	OauthEnforcePkce() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOauthEnforcePkceList
 	OauthGrant() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOauthGrantList
 	OauthIssueRefreshTokens() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOauthIssueRefreshTokensList
-	OauthRedirectUri() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOauthRedirectUriList
 	OauthRefreshTokenValidity() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOauthRefreshTokenValidityList
 	OauthTokenEndpoint() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOauthTokenEndpointList
 	OauthUseSecondaryRoles() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOauthUseSecondaryRolesList
@@ -83,10 +81,8 @@ type DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOutputRe
 	Saml2SnowflakeAcsUrl() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputSaml2SnowflakeAcsUrlList
 	Saml2SnowflakeIssuerUrl() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputSaml2SnowflakeIssuerUrlList
 	Saml2SnowflakeMetadata() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputSaml2SnowflakeMetadataList
-	Saml2SnowflakeX509Cert() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputSaml2SnowflakeX509CertList
 	Saml2SpInitiatedLoginPageLabel() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputSaml2SpInitiatedLoginPageLabelList
 	Saml2SsoUrl() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputSaml2SsoUrlList
-	Saml2X509Cert() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputSaml2X509CertList
 	SyncPassword() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputSyncPasswordList
 	// Experimental.
 	TerraformAttribute() *string
@@ -435,16 +431,6 @@ func (j *jsiiProxy_DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribe
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOutputReference) OauthClientId() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOauthClientIdList {
-	var returns DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOauthClientIdList
-	_jsii_.Get(
-		j,
-		"oauthClientId",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOutputReference) OauthClientRsaPublicKey2Fp() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOauthClientRsaPublicKey2FpList {
 	var returns DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOauthClientRsaPublicKey2FpList
 	_jsii_.Get(
@@ -500,16 +486,6 @@ func (j *jsiiProxy_DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribe
 	_jsii_.Get(
 		j,
 		"oauthIssueRefreshTokens",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOutputReference) OauthRedirectUri() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOauthRedirectUriList {
-	var returns DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOauthRedirectUriList
-	_jsii_.Get(
-		j,
-		"oauthRedirectUri",
 		&returns,
 	)
 	return returns
@@ -695,16 +671,6 @@ func (j *jsiiProxy_DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribe
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOutputReference) Saml2SnowflakeX509Cert() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputSaml2SnowflakeX509CertList {
-	var returns DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputSaml2SnowflakeX509CertList
-	_jsii_.Get(
-		j,
-		"saml2SnowflakeX509Cert",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOutputReference) Saml2SpInitiatedLoginPageLabel() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputSaml2SpInitiatedLoginPageLabelList {
 	var returns DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputSaml2SpInitiatedLoginPageLabelList
 	_jsii_.Get(
@@ -720,16 +686,6 @@ func (j *jsiiProxy_DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribe
 	_jsii_.Get(
 		j,
 		"saml2SsoUrl",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputOutputReference) Saml2X509Cert() DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputSaml2X509CertList {
-	var returns DataSnowflakeSecurityIntegrationsSecurityIntegrationsDescribeOutputSaml2X509CertList
-	_jsii_.Get(
-		j,
-		"saml2X509Cert",
 		&returns,
 	)
 	return returns

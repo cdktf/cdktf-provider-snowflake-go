@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/data-sources/system_generate_scim_access_token snowflake_system_generate_scim_access_token}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/data-sources/system_generate_scim_access_token snowflake_system_generate_scim_access_token}.
 type DataSnowflakeSystemGenerateScimAccessToken interface {
 	cdktf.TerraformDataSource
 	AccessToken() *string
@@ -299,7 +299,7 @@ func (j *jsiiProxy_DataSnowflakeSystemGenerateScimAccessToken) TerraformResource
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/data-sources/system_generate_scim_access_token snowflake_system_generate_scim_access_token} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/data-sources/system_generate_scim_access_token snowflake_system_generate_scim_access_token} Data Source.
 func NewDataSnowflakeSystemGenerateScimAccessToken(scope constructs.Construct, id *string, config *DataSnowflakeSystemGenerateScimAccessTokenConfig) DataSnowflakeSystemGenerateScimAccessToken {
 	_init_.Initialize()
 
@@ -317,7 +317,7 @@ func NewDataSnowflakeSystemGenerateScimAccessToken(scope constructs.Construct, i
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/1.2.1/docs/data-sources/system_generate_scim_access_token snowflake_system_generate_scim_access_token} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/data-sources/system_generate_scim_access_token snowflake_system_generate_scim_access_token} Data Source.
 func NewDataSnowflakeSystemGenerateScimAccessToken_Override(d DataSnowflakeSystemGenerateScimAccessToken, scope constructs.Construct, id *string, config *DataSnowflakeSystemGenerateScimAccessTokenConfig) {
 	_init_.Initialize()
 

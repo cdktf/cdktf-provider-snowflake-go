@@ -40,13 +40,11 @@ type OauthIntegrationForPartnerApplicationsDescribeOutputOutputReference interfa
 	OauthAllowedTokenEndpoints() OauthIntegrationForPartnerApplicationsDescribeOutputOauthAllowedTokenEndpointsList
 	OauthAllowNonTlsRedirectUri() OauthIntegrationForPartnerApplicationsDescribeOutputOauthAllowNonTlsRedirectUriList
 	OauthAuthorizationEndpoint() OauthIntegrationForPartnerApplicationsDescribeOutputOauthAuthorizationEndpointList
-	OauthClientId() OauthIntegrationForPartnerApplicationsDescribeOutputOauthClientIdList
 	OauthClientRsaPublicKey2Fp() OauthIntegrationForPartnerApplicationsDescribeOutputOauthClientRsaPublicKey2FpList
 	OauthClientRsaPublicKeyFp() OauthIntegrationForPartnerApplicationsDescribeOutputOauthClientRsaPublicKeyFpList
 	OauthClientType() OauthIntegrationForPartnerApplicationsDescribeOutputOauthClientTypeList
 	OauthEnforcePkce() OauthIntegrationForPartnerApplicationsDescribeOutputOauthEnforcePkceList
 	OauthIssueRefreshTokens() OauthIntegrationForPartnerApplicationsDescribeOutputOauthIssueRefreshTokensList
-	OauthRedirectUri() OauthIntegrationForPartnerApplicationsDescribeOutputOauthRedirectUriList
 	OauthRefreshTokenValidity() OauthIntegrationForPartnerApplicationsDescribeOutputOauthRefreshTokenValidityList
 	OauthTokenEndpoint() OauthIntegrationForPartnerApplicationsDescribeOutputOauthTokenEndpointList
 	OauthUseSecondaryRoles() OauthIntegrationForPartnerApplicationsDescribeOutputOauthUseSecondaryRolesList
@@ -228,16 +226,6 @@ func (j *jsiiProxy_OauthIntegrationForPartnerApplicationsDescribeOutputOutputRef
 	return returns
 }
 
-func (j *jsiiProxy_OauthIntegrationForPartnerApplicationsDescribeOutputOutputReference) OauthClientId() OauthIntegrationForPartnerApplicationsDescribeOutputOauthClientIdList {
-	var returns OauthIntegrationForPartnerApplicationsDescribeOutputOauthClientIdList
-	_jsii_.Get(
-		j,
-		"oauthClientId",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_OauthIntegrationForPartnerApplicationsDescribeOutputOutputReference) OauthClientRsaPublicKey2Fp() OauthIntegrationForPartnerApplicationsDescribeOutputOauthClientRsaPublicKey2FpList {
 	var returns OauthIntegrationForPartnerApplicationsDescribeOutputOauthClientRsaPublicKey2FpList
 	_jsii_.Get(
@@ -283,16 +271,6 @@ func (j *jsiiProxy_OauthIntegrationForPartnerApplicationsDescribeOutputOutputRef
 	_jsii_.Get(
 		j,
 		"oauthIssueRefreshTokens",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_OauthIntegrationForPartnerApplicationsDescribeOutputOutputReference) OauthRedirectUri() OauthIntegrationForPartnerApplicationsDescribeOutputOauthRedirectUriList {
-	var returns OauthIntegrationForPartnerApplicationsDescribeOutputOauthRedirectUriList
-	_jsii_.Get(
-		j,
-		"oauthRedirectUri",
 		&returns,
 	)
 	return returns

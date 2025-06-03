@@ -47,10 +47,8 @@ type Saml2IntegrationDescribeOutputOutputReference interface {
 	Saml2SnowflakeAcsUrl() Saml2IntegrationDescribeOutputSaml2SnowflakeAcsUrlList
 	Saml2SnowflakeIssuerUrl() Saml2IntegrationDescribeOutputSaml2SnowflakeIssuerUrlList
 	Saml2SnowflakeMetadata() Saml2IntegrationDescribeOutputSaml2SnowflakeMetadataList
-	Saml2SnowflakeX509Cert() Saml2IntegrationDescribeOutputSaml2SnowflakeX509CertList
 	Saml2SpInitiatedLoginPageLabel() Saml2IntegrationDescribeOutputSaml2SpInitiatedLoginPageLabelList
 	Saml2SsoUrl() Saml2IntegrationDescribeOutputSaml2SsoUrlList
-	Saml2X509Cert() Saml2IntegrationDescribeOutputSaml2X509CertList
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -298,16 +296,6 @@ func (j *jsiiProxy_Saml2IntegrationDescribeOutputOutputReference) Saml2Snowflake
 	return returns
 }
 
-func (j *jsiiProxy_Saml2IntegrationDescribeOutputOutputReference) Saml2SnowflakeX509Cert() Saml2IntegrationDescribeOutputSaml2SnowflakeX509CertList {
-	var returns Saml2IntegrationDescribeOutputSaml2SnowflakeX509CertList
-	_jsii_.Get(
-		j,
-		"saml2SnowflakeX509Cert",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_Saml2IntegrationDescribeOutputOutputReference) Saml2SpInitiatedLoginPageLabel() Saml2IntegrationDescribeOutputSaml2SpInitiatedLoginPageLabelList {
 	var returns Saml2IntegrationDescribeOutputSaml2SpInitiatedLoginPageLabelList
 	_jsii_.Get(
@@ -323,16 +311,6 @@ func (j *jsiiProxy_Saml2IntegrationDescribeOutputOutputReference) Saml2SsoUrl() 
 	_jsii_.Get(
 		j,
 		"saml2SsoUrl",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_Saml2IntegrationDescribeOutputOutputReference) Saml2X509Cert() Saml2IntegrationDescribeOutputSaml2X509CertList {
-	var returns Saml2IntegrationDescribeOutputSaml2X509CertList
-	_jsii_.Get(
-		j,
-		"saml2X509Cert",
 		&returns,
 	)
 	return returns

@@ -55,7 +55,6 @@ type DataSnowflakeUsersUsersDescribeOutputOutputReference interface {
 	MinsToUnlock() *float64
 	MustChangePassword() cdktf.IResolvable
 	Name() *string
-	Password() *string
 	PasswordLastSetTime() *string
 	RsaPublicKey() *string
 	RsaPublicKey2() *string
@@ -386,16 +385,6 @@ func (j *jsiiProxy_DataSnowflakeUsersUsersDescribeOutputOutputReference) Name() 
 	_jsii_.Get(
 		j,
 		"name",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeUsersUsersDescribeOutputOutputReference) Password() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"password",
 		&returns,
 	)
 	return returns
