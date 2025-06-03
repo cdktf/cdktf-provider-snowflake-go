@@ -1,4 +1,4 @@
-module github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13
+module github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v14
 
 go 1.18
 

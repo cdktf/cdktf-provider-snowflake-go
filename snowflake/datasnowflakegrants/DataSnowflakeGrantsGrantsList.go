@@ -5,9 +5,9 @@ package datasnowflakegrants
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v14/jsii"
 
-	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v13/datasnowflakegrants/internal"
+	"github.com/cdktf/cdktf-provider-snowflake-go/snowflake/v14/datasnowflakegrants/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
