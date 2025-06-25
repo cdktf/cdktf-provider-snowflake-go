@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/data-sources/storage_integrations snowflake_storage_integrations}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/data-sources/storage_integrations snowflake_storage_integrations}.
 type DataSnowflakeStorageIntegrations interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -276,7 +276,7 @@ func (j *jsiiProxy_DataSnowflakeStorageIntegrations) TerraformResourceType() *st
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/data-sources/storage_integrations snowflake_storage_integrations} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/data-sources/storage_integrations snowflake_storage_integrations} Data Source.
 func NewDataSnowflakeStorageIntegrations(scope constructs.Construct, id *string, config *DataSnowflakeStorageIntegrationsConfig) DataSnowflakeStorageIntegrations {
 	_init_.Initialize()
 
@@ -294,7 +294,7 @@ func NewDataSnowflakeStorageIntegrations(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/data-sources/storage_integrations snowflake_storage_integrations} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/data-sources/storage_integrations snowflake_storage_integrations} Data Source.
 func NewDataSnowflakeStorageIntegrations_Override(d DataSnowflakeStorageIntegrations, scope constructs.Construct, id *string, config *DataSnowflakeStorageIntegrationsConfig) {
 	_init_.Initialize()
 

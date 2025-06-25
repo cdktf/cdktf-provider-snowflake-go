@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/data-sources/row_access_policies snowflake_row_access_policies}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/data-sources/row_access_policies snowflake_row_access_policies}.
 type DataSnowflakeRowAccessPolicies interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -372,7 +372,7 @@ func (j *jsiiProxy_DataSnowflakeRowAccessPolicies) WithDescribeInput() interface
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/data-sources/row_access_policies snowflake_row_access_policies} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/data-sources/row_access_policies snowflake_row_access_policies} Data Source.
 func NewDataSnowflakeRowAccessPolicies(scope constructs.Construct, id *string, config *DataSnowflakeRowAccessPoliciesConfig) DataSnowflakeRowAccessPolicies {
 	_init_.Initialize()
 
@@ -390,7 +390,7 @@ func NewDataSnowflakeRowAccessPolicies(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/data-sources/row_access_policies snowflake_row_access_policies} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/data-sources/row_access_policies snowflake_row_access_policies} Data Source.
 func NewDataSnowflakeRowAccessPolicies_Override(d DataSnowflakeRowAccessPolicies, scope constructs.Construct, id *string, config *DataSnowflakeRowAccessPoliciesConfig) {
 	_init_.Initialize()
 

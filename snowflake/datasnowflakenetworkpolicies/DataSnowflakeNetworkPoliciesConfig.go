@@ -22,20 +22,20 @@ type DataSnowflakeNetworkPoliciesConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/data-sources/network_policies#id DataSnowflakeNetworkPolicies#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/data-sources/network_policies#id DataSnowflakeNetworkPolicies#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
 	// Filters the output with **case-insensitive** pattern, with support for SQL wildcard characters (`%` and `_`).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/data-sources/network_policies#like DataSnowflakeNetworkPolicies#like}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/data-sources/network_policies#like DataSnowflakeNetworkPolicies#like}
 	Like *string `field:"optional" json:"like" yaml:"like"`
 	// (Default: `true`) Runs DESC NETWORK POLICY for each network policy returned by SHOW NETWORK POLICIES.
 	//
 	// The output of describe is saved to the description field. By default this value is set to true.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/data-sources/network_policies#with_describe DataSnowflakeNetworkPolicies#with_describe}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/data-sources/network_policies#with_describe DataSnowflakeNetworkPolicies#with_describe}
 	WithDescribe interface{} `field:"optional" json:"withDescribe" yaml:"withDescribe"`
 }
 

@@ -9,13 +9,13 @@ type TaskSchedule struct {
 	//
 	// Accepts positive integers only. (conflicts with `using_cron`)
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/resources/task#minutes Task#minutes}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/task#minutes Task#minutes}
 	Minutes *float64 `field:"optional" json:"minutes" yaml:"minutes"`
 	// Specifies a cron expression and time zone for periodically running the task.
 	//
 	// Supports a subset of standard cron utility syntax. (conflicts with `minutes`)
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/resources/task#using_cron Task#using_cron}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/task#using_cron Task#using_cron}
 	UsingCron *string `field:"optional" json:"usingCron" yaml:"usingCron"`
 }
 

@@ -22,70 +22,70 @@ type NotificationIntegrationConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/resources/notification_integration#name NotificationIntegration#name}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/notification_integration#name NotificationIntegration#name}.
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// The third-party cloud message queuing service (supported values: AZURE_STORAGE_QUEUE, AWS_SNS, GCP_PUBSUB;
 	//
 	// AWS_SQS is deprecated and will be removed in the future provider versions)
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/resources/notification_integration#notification_provider NotificationIntegration#notification_provider}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/notification_integration#notification_provider NotificationIntegration#notification_provider}
 	NotificationProvider *string `field:"required" json:"notificationProvider" yaml:"notificationProvider"`
 	// AWS IAM role ARN for notification integration to assume. Required for AWS_SNS provider.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/resources/notification_integration#aws_sns_role_arn NotificationIntegration#aws_sns_role_arn}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/notification_integration#aws_sns_role_arn NotificationIntegration#aws_sns_role_arn}
 	AwsSnsRoleArn *string `field:"optional" json:"awsSnsRoleArn" yaml:"awsSnsRoleArn"`
 	// AWS SNS Topic ARN for notification integration to connect to. Required for AWS_SNS provider.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/resources/notification_integration#aws_sns_topic_arn NotificationIntegration#aws_sns_topic_arn}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/notification_integration#aws_sns_topic_arn NotificationIntegration#aws_sns_topic_arn}
 	AwsSnsTopicArn *string `field:"optional" json:"awsSnsTopicArn" yaml:"awsSnsTopicArn"`
 	// AWS SQS queue ARN for notification integration to connect to.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/resources/notification_integration#aws_sqs_arn NotificationIntegration#aws_sqs_arn}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/notification_integration#aws_sqs_arn NotificationIntegration#aws_sqs_arn}
 	AwsSqsArn *string `field:"optional" json:"awsSqsArn" yaml:"awsSqsArn"`
 	// AWS IAM role ARN for notification integration to assume.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/resources/notification_integration#aws_sqs_role_arn NotificationIntegration#aws_sqs_role_arn}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/notification_integration#aws_sqs_role_arn NotificationIntegration#aws_sqs_role_arn}
 	AwsSqsRoleArn *string `field:"optional" json:"awsSqsRoleArn" yaml:"awsSqsRoleArn"`
 	// The queue ID for the Azure Queue Storage queue created for Event Grid notifications. Required for AZURE_STORAGE_QUEUE provider.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/resources/notification_integration#azure_storage_queue_primary_uri NotificationIntegration#azure_storage_queue_primary_uri}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/notification_integration#azure_storage_queue_primary_uri NotificationIntegration#azure_storage_queue_primary_uri}
 	AzureStorageQueuePrimaryUri *string `field:"optional" json:"azureStorageQueuePrimaryUri" yaml:"azureStorageQueuePrimaryUri"`
 	// The ID of the Azure Active Directory tenant used for identity management. Required for AZURE_STORAGE_QUEUE provider.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/resources/notification_integration#azure_tenant_id NotificationIntegration#azure_tenant_id}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/notification_integration#azure_tenant_id NotificationIntegration#azure_tenant_id}
 	AzureTenantId *string `field:"optional" json:"azureTenantId" yaml:"azureTenantId"`
 	// A comment for the integration.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/resources/notification_integration#comment NotificationIntegration#comment}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/notification_integration#comment NotificationIntegration#comment}
 	Comment *string `field:"optional" json:"comment" yaml:"comment"`
 	// Direction of the cloud messaging with respect to Snowflake (required only for error notifications).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/resources/notification_integration#direction NotificationIntegration#direction}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/notification_integration#direction NotificationIntegration#direction}
 	Direction *string `field:"optional" json:"direction" yaml:"direction"`
 	// (Default: `true`).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/resources/notification_integration#enabled NotificationIntegration#enabled}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/notification_integration#enabled NotificationIntegration#enabled}
 	Enabled interface{} `field:"optional" json:"enabled" yaml:"enabled"`
 	// The subscription id that Snowflake will listen to when using the GCP_PUBSUB provider.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/resources/notification_integration#gcp_pubsub_subscription_name NotificationIntegration#gcp_pubsub_subscription_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/notification_integration#gcp_pubsub_subscription_name NotificationIntegration#gcp_pubsub_subscription_name}
 	GcpPubsubSubscriptionName *string `field:"optional" json:"gcpPubsubSubscriptionName" yaml:"gcpPubsubSubscriptionName"`
 	// The topic id that Snowflake will use to push notifications.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/resources/notification_integration#gcp_pubsub_topic_name NotificationIntegration#gcp_pubsub_topic_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/notification_integration#gcp_pubsub_topic_name NotificationIntegration#gcp_pubsub_topic_name}
 	GcpPubsubTopicName *string `field:"optional" json:"gcpPubsubTopicName" yaml:"gcpPubsubTopicName"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/resources/notification_integration#id NotificationIntegration#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/notification_integration#id NotificationIntegration#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
 	// timeouts block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/resources/notification_integration#timeouts NotificationIntegration#timeouts}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/notification_integration#timeouts NotificationIntegration#timeouts}
 	Timeouts *NotificationIntegrationTimeouts `field:"optional" json:"timeouts" yaml:"timeouts"`
 	// (Default: `QUEUE`) A type of integration.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/resources/notification_integration#type NotificationIntegration#type}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/notification_integration#type NotificationIntegration#type}
 	Type *string `field:"optional" json:"type" yaml:"type"`
 }
 

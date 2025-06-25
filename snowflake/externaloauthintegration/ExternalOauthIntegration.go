@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/resources/external_oauth_integration snowflake_external_oauth_integration}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/external_oauth_integration snowflake_external_oauth_integration}.
 type ExternalOauthIntegration interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -756,7 +756,7 @@ func (j *jsiiProxy_ExternalOauthIntegration) TimeoutsInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/resources/external_oauth_integration snowflake_external_oauth_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/external_oauth_integration snowflake_external_oauth_integration} Resource.
 func NewExternalOauthIntegration(scope constructs.Construct, id *string, config *ExternalOauthIntegrationConfig) ExternalOauthIntegration {
 	_init_.Initialize()
 
@@ -774,7 +774,7 @@ func NewExternalOauthIntegration(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.0/docs/resources/external_oauth_integration snowflake_external_oauth_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/external_oauth_integration snowflake_external_oauth_integration} Resource.
 func NewExternalOauthIntegration_Override(e ExternalOauthIntegration, scope constructs.Construct, id *string, config *ExternalOauthIntegrationConfig) {
 	_init_.Initialize()
 
