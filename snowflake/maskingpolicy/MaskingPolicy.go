@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/masking_policy snowflake_masking_policy}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.2.0/docs/resources/masking_policy snowflake_masking_policy}.
 type MaskingPolicy interface {
 	cdktf.TerraformResource
 	Argument() MaskingPolicyArgumentList
@@ -553,7 +553,7 @@ func (j *jsiiProxy_MaskingPolicy) TimeoutsInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/masking_policy snowflake_masking_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.2.0/docs/resources/masking_policy snowflake_masking_policy} Resource.
 func NewMaskingPolicy(scope constructs.Construct, id *string, config *MaskingPolicyConfig) MaskingPolicy {
 	_init_.Initialize()
 
@@ -571,7 +571,7 @@ func NewMaskingPolicy(scope constructs.Construct, id *string, config *MaskingPol
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/masking_policy snowflake_masking_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.2.0/docs/resources/masking_policy snowflake_masking_policy} Resource.
 func NewMaskingPolicy_Override(m MaskingPolicy, scope constructs.Construct, id *string, config *MaskingPolicyConfig) {
 	_init_.Initialize()
 

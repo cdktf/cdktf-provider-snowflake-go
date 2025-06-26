@@ -22,28 +22,28 @@ type DataSnowflakeMaskingPoliciesConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/data-sources/masking_policies#id DataSnowflakeMaskingPolicies#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.2.0/docs/data-sources/masking_policies#id DataSnowflakeMaskingPolicies#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
 	// in block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/data-sources/masking_policies#in DataSnowflakeMaskingPolicies#in}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.2.0/docs/data-sources/masking_policies#in DataSnowflakeMaskingPolicies#in}
 	In *DataSnowflakeMaskingPoliciesIn `field:"optional" json:"in" yaml:"in"`
 	// Filters the output with **case-insensitive** pattern, with support for SQL wildcard characters (`%` and `_`).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/data-sources/masking_policies#like DataSnowflakeMaskingPolicies#like}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.2.0/docs/data-sources/masking_policies#like DataSnowflakeMaskingPolicies#like}
 	Like *string `field:"optional" json:"like" yaml:"like"`
 	// limit block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/data-sources/masking_policies#limit DataSnowflakeMaskingPolicies#limit}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.2.0/docs/data-sources/masking_policies#limit DataSnowflakeMaskingPolicies#limit}
 	Limit *DataSnowflakeMaskingPoliciesLimit `field:"optional" json:"limit" yaml:"limit"`
 	// (Default: `true`) Runs DESC MASKING POLICY for each masking policy returned by SHOW MASKING POLICIES.
 	//
 	// The output of describe is saved to the description field. By default this value is set to true.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/data-sources/masking_policies#with_describe DataSnowflakeMaskingPolicies#with_describe}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.2.0/docs/data-sources/masking_policies#with_describe DataSnowflakeMaskingPolicies#with_describe}
 	WithDescribe interface{} `field:"optional" json:"withDescribe" yaml:"withDescribe"`
 }
 

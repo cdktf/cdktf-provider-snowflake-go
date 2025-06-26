@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/cortex_search_service snowflake_cortex_search_service}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.2.0/docs/resources/cortex_search_service snowflake_cortex_search_service}.
 type CortexSearchService interface {
 	cdktf.TerraformResource
 	Attributes() *[]*string
@@ -41,6 +41,10 @@ type CortexSearchService interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	DescribeOutput() CortexSearchServiceDescribeOutputList
+	EmbeddingModel() *string
+	SetEmbeddingModel(val *string)
+	EmbeddingModelInput() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -141,6 +145,7 @@ type CortexSearchService interface {
 	PutTimeouts(value *CortexSearchServiceTimeouts)
 	ResetAttributes()
 	ResetComment()
+	ResetEmbeddingModel()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -279,6 +284,36 @@ func (j *jsiiProxy_CortexSearchService) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CortexSearchService) DescribeOutput() CortexSearchServiceDescribeOutputList {
+	var returns CortexSearchServiceDescribeOutputList
+	_jsii_.Get(
+		j,
+		"describeOutput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CortexSearchService) EmbeddingModel() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"embeddingModel",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CortexSearchService) EmbeddingModelInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"embeddingModelInput",
 		&returns,
 	)
 	return returns
@@ -565,7 +600,7 @@ func (j *jsiiProxy_CortexSearchService) WarehouseInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/cortex_search_service snowflake_cortex_search_service} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.2.0/docs/resources/cortex_search_service snowflake_cortex_search_service} Resource.
 func NewCortexSearchService(scope constructs.Construct, id *string, config *CortexSearchServiceConfig) CortexSearchService {
 	_init_.Initialize()
 
@@ -583,7 +618,7 @@ func NewCortexSearchService(scope constructs.Construct, id *string, config *Cort
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/cortex_search_service snowflake_cortex_search_service} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.2.0/docs/resources/cortex_search_service snowflake_cortex_search_service} Resource.
 func NewCortexSearchService_Override(c CortexSearchService, scope constructs.Construct, id *string, config *CortexSearchServiceConfig) {
 	_init_.Initialize()
 
@@ -653,6 +688,17 @@ func (j *jsiiProxy_CortexSearchService)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_CortexSearchService)SetEmbeddingModel(val *string) {
+	if err := j.validateSetEmbeddingModelParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"embeddingModel",
 		val,
 	)
 }
@@ -1148,6 +1194,14 @@ func (c *jsiiProxy_CortexSearchService) ResetComment() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetComment",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CortexSearchService) ResetEmbeddingModel() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetEmbeddingModel",
 		nil, // no parameters
 	)
 }

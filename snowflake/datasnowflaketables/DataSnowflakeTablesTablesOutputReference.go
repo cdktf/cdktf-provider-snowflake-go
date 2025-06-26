@@ -13,7 +13,6 @@ import (
 
 type DataSnowflakeTablesTablesOutputReference interface {
 	cdktf.ComplexObject
-	Comment() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -29,13 +28,12 @@ type DataSnowflakeTablesTablesOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
-	Database() *string
+	DescribeOutput() DataSnowflakeTablesTablesDescribeOutputList
 	// Experimental.
 	Fqn() *string
 	InternalValue() *DataSnowflakeTablesTables
 	SetInternalValue(val *DataSnowflakeTablesTables)
-	Name() *string
-	Schema() *string
+	ShowOutput() DataSnowflakeTablesTablesShowOutputList
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -83,16 +81,6 @@ type jsiiProxy_DataSnowflakeTablesTablesOutputReference struct {
 	internal.Type__cdktfComplexObject
 }
 
-func (j *jsiiProxy_DataSnowflakeTablesTablesOutputReference) Comment() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"comment",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataSnowflakeTablesTablesOutputReference) ComplexObjectIndex() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -123,11 +111,11 @@ func (j *jsiiProxy_DataSnowflakeTablesTablesOutputReference) CreationStack() *[]
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeTablesTablesOutputReference) Database() *string {
-	var returns *string
+func (j *jsiiProxy_DataSnowflakeTablesTablesOutputReference) DescribeOutput() DataSnowflakeTablesTablesDescribeOutputList {
+	var returns DataSnowflakeTablesTablesDescribeOutputList
 	_jsii_.Get(
 		j,
-		"database",
+		"describeOutput",
 		&returns,
 	)
 	return returns
@@ -153,21 +141,11 @@ func (j *jsiiProxy_DataSnowflakeTablesTablesOutputReference) InternalValue() *Da
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeTablesTablesOutputReference) Name() *string {
-	var returns *string
+func (j *jsiiProxy_DataSnowflakeTablesTablesOutputReference) ShowOutput() DataSnowflakeTablesTablesShowOutputList {
+	var returns DataSnowflakeTablesTablesShowOutputList
 	_jsii_.Get(
 		j,
-		"name",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeTablesTablesOutputReference) Schema() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"schema",
+		"showOutput",
 		&returns,
 	)
 	return returns

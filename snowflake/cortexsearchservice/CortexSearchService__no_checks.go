@@ -115,6 +115,10 @@ func (j *jsiiProxy_CortexSearchService) validateSetDatabaseParameters(val *strin
 	return nil
 }
 
+func (j *jsiiProxy_CortexSearchService) validateSetEmbeddingModelParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_CortexSearchService) validateSetIdParameters(val *string) error {
 	return nil
 }

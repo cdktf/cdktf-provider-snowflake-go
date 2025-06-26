@@ -331,6 +331,14 @@ func (j *jsiiProxy_Account) validateSetConnectionParameters(val interface{}) err
 	return nil
 }
 
+func (j *jsiiProxy_Account) validateSetConsumptionBillingEntityParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_Account) validateSetCountParameters(val interface{}) error {
 	switch val.(type) {
 	case *float64:

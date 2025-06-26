@@ -55,6 +55,14 @@ func (d *jsiiProxy_DataSnowflakeTables) validateOverrideLogicalIdParameters(newL
 	return nil
 }
 
+func (d *jsiiProxy_DataSnowflakeTables) validatePutInParameters(value *DataSnowflakeTablesIn) error {
+	return nil
+}
+
+func (d *jsiiProxy_DataSnowflakeTables) validatePutLimitParameters(value *DataSnowflakeTablesLimit) error {
+	return nil
+}
+
 func validateDataSnowflakeTables_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
@@ -75,10 +83,6 @@ func (j *jsiiProxy_DataSnowflakeTables) validateSetCountParameters(val interface
 	return nil
 }
 
-func (j *jsiiProxy_DataSnowflakeTables) validateSetDatabaseParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_DataSnowflakeTables) validateSetIdParameters(val *string) error {
 	return nil
 }
@@ -87,7 +91,15 @@ func (j *jsiiProxy_DataSnowflakeTables) validateSetLifecycleParameters(val *cdkt
 	return nil
 }
 
-func (j *jsiiProxy_DataSnowflakeTables) validateSetSchemaParameters(val *string) error {
+func (j *jsiiProxy_DataSnowflakeTables) validateSetLikeParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataSnowflakeTables) validateSetStartsWithParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataSnowflakeTables) validateSetWithDescribeParameters(val interface{}) error {
 	return nil
 }
 

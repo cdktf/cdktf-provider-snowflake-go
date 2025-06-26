@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/account snowflake_account}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.2.0/docs/resources/account snowflake_account}.
 type Account interface {
 	cdktf.TerraformResource
 	AdminName() *string
@@ -38,6 +38,9 @@ type Account interface {
 	SetConnection(val interface{})
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
+	ConsumptionBillingEntity() *string
+	SetConsumptionBillingEntity(val *string)
+	ConsumptionBillingEntityInput() *string
 	// Experimental.
 	Count() interface{}
 	// Experimental.
@@ -161,6 +164,7 @@ type Account interface {
 	ResetAdminRsaPublicKey()
 	ResetAdminUserType()
 	ResetComment()
+	ResetConsumptionBillingEntity()
 	ResetFirstName()
 	ResetId()
 	ResetIsOrgAdmin()
@@ -315,6 +319,26 @@ func (j *jsiiProxy_Account) ConstructNodeMetadata() *map[string]interface{} {
 	_jsii_.Get(
 		j,
 		"constructNodeMetadata",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Account) ConsumptionBillingEntity() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"consumptionBillingEntity",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Account) ConsumptionBillingEntityInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"consumptionBillingEntityInput",
 		&returns,
 	)
 	return returns
@@ -711,7 +735,7 @@ func (j *jsiiProxy_Account) TimeoutsInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/account snowflake_account} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.2.0/docs/resources/account snowflake_account} Resource.
 func NewAccount(scope constructs.Construct, id *string, config *AccountConfig) Account {
 	_init_.Initialize()
 
@@ -729,7 +753,7 @@ func NewAccount(scope constructs.Construct, id *string, config *AccountConfig) A
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/account snowflake_account} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.2.0/docs/resources/account snowflake_account} Resource.
 func NewAccount_Override(a Account, scope constructs.Construct, id *string, config *AccountConfig) {
 	_init_.Initialize()
 
@@ -802,6 +826,17 @@ func (j *jsiiProxy_Account)SetConnection(val interface{}) {
 	_jsii_.Set(
 		j,
 		"connection",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Account)SetConsumptionBillingEntity(val *string) {
+	if err := j.validateSetConsumptionBillingEntityParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"consumptionBillingEntity",
 		val,
 	)
 }
@@ -1376,6 +1411,14 @@ func (a *jsiiProxy_Account) ResetComment() {
 	_jsii_.InvokeVoid(
 		a,
 		"resetComment",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_Account) ResetConsumptionBillingEntity() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetConsumptionBillingEntity",
 		nil, // no parameters
 	)
 }

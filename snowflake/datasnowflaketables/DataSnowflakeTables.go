@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/data-sources/tables snowflake_tables}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.2.0/docs/data-sources/tables snowflake_tables}.
 type DataSnowflakeTables interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -23,9 +23,6 @@ type DataSnowflakeTables interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
-	Database() *string
-	SetDatabase(val *string)
-	DatabaseInput() *string
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -41,10 +38,17 @@ type DataSnowflakeTables interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	In() DataSnowflakeTablesInOutputReference
+	InInput() *DataSnowflakeTablesIn
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	Like() *string
+	SetLike(val *string)
+	LikeInput() *string
+	Limit() DataSnowflakeTablesLimitOutputReference
+	LimitInput() *DataSnowflakeTablesLimit
 	// The tree node.
 	Node() constructs.Node
 	// Experimental.
@@ -53,9 +57,9 @@ type DataSnowflakeTables interface {
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
-	Schema() *string
-	SetSchema(val *string)
-	SchemaInput() *string
+	StartsWith() *string
+	SetStartsWith(val *string)
+	StartsWithInput() *string
 	Tables() DataSnowflakeTablesTablesList
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
@@ -63,6 +67,9 @@ type DataSnowflakeTables interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	WithDescribe() interface{}
+	SetWithDescribe(val interface{})
+	WithDescribeInput() interface{}
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -88,10 +95,17 @@ type DataSnowflakeTables interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutIn(value *DataSnowflakeTablesIn)
+	PutLimit(value *DataSnowflakeTablesLimit)
 	ResetId()
+	ResetIn()
+	ResetLike()
+	ResetLimit()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetStartsWith()
+	ResetWithDescribe()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Adds this resource to the terraform JSON output.
@@ -136,26 +150,6 @@ func (j *jsiiProxy_DataSnowflakeTables) Count() interface{} {
 	_jsii_.Get(
 		j,
 		"count",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeTables) Database() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"database",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataSnowflakeTables) DatabaseInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"databaseInput",
 		&returns,
 	)
 	return returns
@@ -221,11 +215,71 @@ func (j *jsiiProxy_DataSnowflakeTables) IdInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataSnowflakeTables) In() DataSnowflakeTablesInOutputReference {
+	var returns DataSnowflakeTablesInOutputReference
+	_jsii_.Get(
+		j,
+		"in",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeTables) InInput() *DataSnowflakeTablesIn {
+	var returns *DataSnowflakeTablesIn
+	_jsii_.Get(
+		j,
+		"inInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataSnowflakeTables) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
 		j,
 		"lifecycle",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeTables) Like() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"like",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeTables) LikeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"likeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeTables) Limit() DataSnowflakeTablesLimitOutputReference {
+	var returns DataSnowflakeTablesLimitOutputReference
+	_jsii_.Get(
+		j,
+		"limit",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeTables) LimitInput() *DataSnowflakeTablesLimit {
+	var returns *DataSnowflakeTablesLimit
+	_jsii_.Get(
+		j,
+		"limitInput",
 		&returns,
 	)
 	return returns
@@ -261,21 +315,21 @@ func (j *jsiiProxy_DataSnowflakeTables) RawOverrides() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeTables) Schema() *string {
+func (j *jsiiProxy_DataSnowflakeTables) StartsWith() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
-		"schema",
+		"startsWith",
 		&returns,
 	)
 	return returns
 }
 
-func (j *jsiiProxy_DataSnowflakeTables) SchemaInput() *string {
+func (j *jsiiProxy_DataSnowflakeTables) StartsWithInput() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
-		"schemaInput",
+		"startsWithInput",
 		&returns,
 	)
 	return returns
@@ -321,8 +375,28 @@ func (j *jsiiProxy_DataSnowflakeTables) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataSnowflakeTables) WithDescribe() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"withDescribe",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/data-sources/tables snowflake_tables} Data Source.
+func (j *jsiiProxy_DataSnowflakeTables) WithDescribeInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"withDescribeInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.2.0/docs/data-sources/tables snowflake_tables} Data Source.
 func NewDataSnowflakeTables(scope constructs.Construct, id *string, config *DataSnowflakeTablesConfig) DataSnowflakeTables {
 	_init_.Initialize()
 
@@ -340,7 +414,7 @@ func NewDataSnowflakeTables(scope constructs.Construct, id *string, config *Data
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/data-sources/tables snowflake_tables} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.2.0/docs/data-sources/tables snowflake_tables} Data Source.
 func NewDataSnowflakeTables_Override(d DataSnowflakeTables, scope constructs.Construct, id *string, config *DataSnowflakeTablesConfig) {
 	_init_.Initialize()
 
@@ -358,17 +432,6 @@ func (j *jsiiProxy_DataSnowflakeTables)SetCount(val interface{}) {
 	_jsii_.Set(
 		j,
 		"count",
-		val,
-	)
-}
-
-func (j *jsiiProxy_DataSnowflakeTables)SetDatabase(val *string) {
-	if err := j.validateSetDatabaseParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"database",
 		val,
 	)
 }
@@ -411,6 +474,17 @@ func (j *jsiiProxy_DataSnowflakeTables)SetLifecycle(val *cdktf.TerraformResource
 	)
 }
 
+func (j *jsiiProxy_DataSnowflakeTables)SetLike(val *string) {
+	if err := j.validateSetLikeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"like",
+		val,
+	)
+}
+
 func (j *jsiiProxy_DataSnowflakeTables)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
@@ -419,13 +493,24 @@ func (j *jsiiProxy_DataSnowflakeTables)SetProvider(val cdktf.TerraformProvider) 
 	)
 }
 
-func (j *jsiiProxy_DataSnowflakeTables)SetSchema(val *string) {
-	if err := j.validateSetSchemaParameters(val); err != nil {
+func (j *jsiiProxy_DataSnowflakeTables)SetStartsWith(val *string) {
+	if err := j.validateSetStartsWithParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
-		"schema",
+		"startsWith",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataSnowflakeTables)SetWithDescribe(val interface{}) {
+	if err := j.validateSetWithDescribeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"withDescribe",
 		val,
 	)
 }
@@ -715,6 +800,28 @@ func (d *jsiiProxy_DataSnowflakeTables) OverrideLogicalId(newLogicalId *string) 
 	)
 }
 
+func (d *jsiiProxy_DataSnowflakeTables) PutIn(value *DataSnowflakeTablesIn) {
+	if err := d.validatePutInParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putIn",
+		[]interface{}{value},
+	)
+}
+
+func (d *jsiiProxy_DataSnowflakeTables) PutLimit(value *DataSnowflakeTablesLimit) {
+	if err := d.validatePutLimitParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putLimit",
+		[]interface{}{value},
+	)
+}
+
 func (d *jsiiProxy_DataSnowflakeTables) ResetId() {
 	_jsii_.InvokeVoid(
 		d,
@@ -723,10 +830,50 @@ func (d *jsiiProxy_DataSnowflakeTables) ResetId() {
 	)
 }
 
+func (d *jsiiProxy_DataSnowflakeTables) ResetIn() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetIn",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataSnowflakeTables) ResetLike() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetLike",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataSnowflakeTables) ResetLimit() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetLimit",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DataSnowflakeTables) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataSnowflakeTables) ResetStartsWith() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetStartsWith",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataSnowflakeTables) ResetWithDescribe() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetWithDescribe",
 		nil, // no parameters
 	)
 }

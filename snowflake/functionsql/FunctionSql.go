@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/function_sql snowflake_function_sql}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.2.0/docs/resources/function_sql snowflake_function_sql}.
 type FunctionSql interface {
 	cdktf.TerraformResource
 	Arguments() FunctionSqlArgumentsList
@@ -685,7 +685,7 @@ func (j *jsiiProxy_FunctionSql) TraceLevelInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/function_sql snowflake_function_sql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.2.0/docs/resources/function_sql snowflake_function_sql} Resource.
 func NewFunctionSql(scope constructs.Construct, id *string, config *FunctionSqlConfig) FunctionSql {
 	_init_.Initialize()
 
@@ -703,7 +703,7 @@ func NewFunctionSql(scope constructs.Construct, id *string, config *FunctionSqlC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.1.1/docs/resources/function_sql snowflake_function_sql} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.2.0/docs/resources/function_sql snowflake_function_sql} Resource.
 func NewFunctionSql_Override(f FunctionSql, scope constructs.Construct, id *string, config *FunctionSqlConfig) {
 	_init_.Initialize()
 
