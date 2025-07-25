@@ -24,62 +24,62 @@ type TableConstraintConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Columns to use in constraint key.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.3.0/docs/resources/table_constraint#columns TableConstraint#columns}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/table_constraint#columns TableConstraint#columns}
 	Columns *[]*string `field:"required" json:"columns" yaml:"columns"`
 	// Name of constraint.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.3.0/docs/resources/table_constraint#name TableConstraint#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/table_constraint#name TableConstraint#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// Identifier for table to create constraint on. Format must follow: "\"&lt;db_name&gt;\".\"&lt;schema_name&gt;\".\"&lt;table_name&gt;\"" or "&lt;db_name&gt;.&lt;schema_name&gt;.&lt;table_name&gt;" (snowflake_table.my_table.id).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.3.0/docs/resources/table_constraint#table_id TableConstraint#table_id}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/table_constraint#table_id TableConstraint#table_id}
 	TableId *string `field:"required" json:"tableId" yaml:"tableId"`
 	// Type of constraint, one of 'UNIQUE', 'PRIMARY KEY', or 'FOREIGN KEY'.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.3.0/docs/resources/table_constraint#type TableConstraint#type}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/table_constraint#type TableConstraint#type}
 	Type *string `field:"required" json:"type" yaml:"type"`
 	// Comment for the table constraint.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.3.0/docs/resources/table_constraint#comment TableConstraint#comment}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/table_constraint#comment TableConstraint#comment}
 	Comment *string `field:"optional" json:"comment" yaml:"comment"`
 	// (Default: `true`) Whether the constraint is deferrable.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.3.0/docs/resources/table_constraint#deferrable TableConstraint#deferrable}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/table_constraint#deferrable TableConstraint#deferrable}
 	Deferrable interface{} `field:"optional" json:"deferrable" yaml:"deferrable"`
 	// (Default: `true`) Specifies whether the constraint is enabled or disabled. These properties are provided for compatibility with Oracle.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.3.0/docs/resources/table_constraint#enable TableConstraint#enable}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/table_constraint#enable TableConstraint#enable}
 	Enable interface{} `field:"optional" json:"enable" yaml:"enable"`
 	// (Default: `false`) Whether the constraint is enforced.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.3.0/docs/resources/table_constraint#enforced TableConstraint#enforced}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/table_constraint#enforced TableConstraint#enforced}
 	Enforced interface{} `field:"optional" json:"enforced" yaml:"enforced"`
 	// foreign_key_properties block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.3.0/docs/resources/table_constraint#foreign_key_properties TableConstraint#foreign_key_properties}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/table_constraint#foreign_key_properties TableConstraint#foreign_key_properties}
 	ForeignKeyProperties *TableConstraintForeignKeyProperties `field:"optional" json:"foreignKeyProperties" yaml:"foreignKeyProperties"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.3.0/docs/resources/table_constraint#id TableConstraint#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/table_constraint#id TableConstraint#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
 	// (Default: `DEFERRED`) Whether the constraint is initially deferred or immediate.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.3.0/docs/resources/table_constraint#initially TableConstraint#initially}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/table_constraint#initially TableConstraint#initially}
 	Initially *string `field:"optional" json:"initially" yaml:"initially"`
 	// (Default: `true`) Specifies whether a constraint in NOVALIDATE mode is taken into account during query rewrite.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.3.0/docs/resources/table_constraint#rely TableConstraint#rely}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/table_constraint#rely TableConstraint#rely}
 	Rely interface{} `field:"optional" json:"rely" yaml:"rely"`
 	// timeouts block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.3.0/docs/resources/table_constraint#timeouts TableConstraint#timeouts}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/table_constraint#timeouts TableConstraint#timeouts}
 	Timeouts *TableConstraintTimeouts `field:"optional" json:"timeouts" yaml:"timeouts"`
 	// (Default: `false`) Specifies whether to validate existing data on the table when a constraint is created.
 	//
 	// Only used in conjunction with the ENABLE property.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.3.0/docs/resources/table_constraint#validate TableConstraint#validate}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/table_constraint#validate TableConstraint#validate}
 	Validate interface{} `field:"optional" json:"validate" yaml:"validate"`
 }
 

@@ -26,9 +26,9 @@ type GrantDatabaseRoleConfig struct {
 	//
 	// For more information about this resource, see [docs](./database_role).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.3.0/docs/resources/grant_database_role#database_role_name GrantDatabaseRole#database_role_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/grant_database_role#database_role_name GrantDatabaseRole#database_role_name}
 	DatabaseRoleName *string `field:"required" json:"databaseRoleName" yaml:"databaseRoleName"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.3.0/docs/resources/grant_database_role#id GrantDatabaseRole#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/grant_database_role#id GrantDatabaseRole#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -37,23 +37,23 @@ type GrantDatabaseRoleConfig struct {
 	//
 	// For more information about this resource, see [docs](./database_role).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.3.0/docs/resources/grant_database_role#parent_database_role_name GrantDatabaseRole#parent_database_role_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/grant_database_role#parent_database_role_name GrantDatabaseRole#parent_database_role_name}
 	ParentDatabaseRoleName *string `field:"optional" json:"parentDatabaseRoleName" yaml:"parentDatabaseRoleName"`
 	// The fully qualified name of the parent account role which will create a parent-child relationship between the roles.
 	//
 	// For more information about this resource, see [docs](./account_role).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.3.0/docs/resources/grant_database_role#parent_role_name GrantDatabaseRole#parent_role_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/grant_database_role#parent_role_name GrantDatabaseRole#parent_role_name}
 	ParentRoleName *string `field:"optional" json:"parentRoleName" yaml:"parentRoleName"`
 	// The fully qualified name of the share on which privileges will be granted.
 	//
 	// For more information about this resource, see [docs](./share).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.3.0/docs/resources/grant_database_role#share_name GrantDatabaseRole#share_name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/grant_database_role#share_name GrantDatabaseRole#share_name}
 	ShareName *string `field:"optional" json:"shareName" yaml:"shareName"`
 	// timeouts block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.3.0/docs/resources/grant_database_role#timeouts GrantDatabaseRole#timeouts}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/grant_database_role#timeouts GrantDatabaseRole#timeouts}
 	Timeouts *GrantDatabaseRoleTimeouts `field:"optional" json:"timeouts" yaml:"timeouts"`
 }
 
