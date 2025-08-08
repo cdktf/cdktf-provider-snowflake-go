@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/job_service snowflake_job_service}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/resources/job_service snowflake_job_service}.
 type JobService interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -590,7 +590,7 @@ func (j *jsiiProxy_JobService) TimeoutsInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/job_service snowflake_job_service} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/resources/job_service snowflake_job_service} Resource.
 func NewJobService(scope constructs.Construct, id *string, config *JobServiceConfig) JobService {
 	_init_.Initialize()
 
@@ -608,7 +608,7 @@ func NewJobService(scope constructs.Construct, id *string, config *JobServiceCon
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/job_service snowflake_job_service} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/resources/job_service snowflake_job_service} Resource.
 func NewJobService_Override(j JobService, scope constructs.Construct, id *string, config *JobServiceConfig) {
 	_init_.Initialize()
 

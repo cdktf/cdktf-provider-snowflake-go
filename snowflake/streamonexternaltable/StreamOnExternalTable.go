@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/stream_on_external_table snowflake_stream_on_external_table}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/resources/stream_on_external_table snowflake_stream_on_external_table}.
 type StreamOnExternalTable interface {
 	cdktf.TerraformResource
 	At() StreamOnExternalTableAtOutputReference
@@ -601,7 +601,7 @@ func (j *jsiiProxy_StreamOnExternalTable) TimeoutsInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/stream_on_external_table snowflake_stream_on_external_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/resources/stream_on_external_table snowflake_stream_on_external_table} Resource.
 func NewStreamOnExternalTable(scope constructs.Construct, id *string, config *StreamOnExternalTableConfig) StreamOnExternalTable {
 	_init_.Initialize()
 
@@ -619,7 +619,7 @@ func NewStreamOnExternalTable(scope constructs.Construct, id *string, config *St
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/stream_on_external_table snowflake_stream_on_external_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/resources/stream_on_external_table snowflake_stream_on_external_table} Resource.
 func NewStreamOnExternalTable_Override(s StreamOnExternalTable, scope constructs.Construct, id *string, config *StreamOnExternalTableConfig) {
 	_init_.Initialize()
 

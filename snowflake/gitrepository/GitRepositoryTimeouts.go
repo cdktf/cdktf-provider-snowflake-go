@@ -5,13 +5,13 @@ package gitrepository
 
 
 type GitRepositoryTimeouts struct {
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/git_repository#create GitRepository#create}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/resources/git_repository#create GitRepository#create}.
 	Create *string `field:"optional" json:"create" yaml:"create"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/git_repository#delete GitRepository#delete}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/resources/git_repository#delete GitRepository#delete}.
 	Delete *string `field:"optional" json:"delete" yaml:"delete"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/git_repository#read GitRepository#read}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/resources/git_repository#read GitRepository#read}.
 	Read *string `field:"optional" json:"read" yaml:"read"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/git_repository#update GitRepository#update}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/resources/git_repository#update GitRepository#update}.
 	Update *string `field:"optional" json:"update" yaml:"update"`
 }
 

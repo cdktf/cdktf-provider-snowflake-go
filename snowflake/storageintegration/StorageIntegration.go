@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/storage_integration snowflake_storage_integration}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/resources/storage_integration snowflake_storage_integration}.
 type StorageIntegration interface {
 	cdktf.TerraformResource
 	AzureConsentUrl() *string
@@ -40,6 +40,7 @@ type StorageIntegration interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	DescribeOutput() StorageIntegrationDescribeOutputList
 	Enabled() interface{}
 	SetEnabled(val interface{})
 	EnabledInput() interface{}
@@ -78,6 +79,8 @@ type StorageIntegration interface {
 	SetStorageAllowedLocations(val *[]*string)
 	StorageAllowedLocationsInput() *[]*string
 	StorageAwsExternalId() *string
+	SetStorageAwsExternalId(val *string)
+	StorageAwsExternalIdInput() *string
 	StorageAwsIamUserArn() *string
 	StorageAwsObjectAcl() *string
 	SetStorageAwsObjectAcl(val *string)
@@ -154,6 +157,7 @@ type StorageIntegration interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetStorageAwsExternalId()
 	ResetStorageAwsObjectAcl()
 	ResetStorageAwsRoleArn()
 	ResetStorageBlockedLocations()
@@ -292,6 +296,16 @@ func (j *jsiiProxy_StorageIntegration) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_StorageIntegration) DescribeOutput() StorageIntegrationDescribeOutputList {
+	var returns StorageIntegrationDescribeOutputList
+	_jsii_.Get(
+		j,
+		"describeOutput",
 		&returns,
 	)
 	return returns
@@ -477,6 +491,16 @@ func (j *jsiiProxy_StorageIntegration) StorageAwsExternalId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_StorageIntegration) StorageAwsExternalIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"storageAwsExternalIdInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_StorageIntegration) StorageAwsIamUserArn() *string {
 	var returns *string
 	_jsii_.Get(
@@ -648,7 +672,7 @@ func (j *jsiiProxy_StorageIntegration) TypeInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/storage_integration snowflake_storage_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/resources/storage_integration snowflake_storage_integration} Resource.
 func NewStorageIntegration(scope constructs.Construct, id *string, config *StorageIntegrationConfig) StorageIntegration {
 	_init_.Initialize()
 
@@ -666,7 +690,7 @@ func NewStorageIntegration(scope constructs.Construct, id *string, config *Stora
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/storage_integration snowflake_storage_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/resources/storage_integration snowflake_storage_integration} Resource.
 func NewStorageIntegration_Override(s StorageIntegration, scope constructs.Construct, id *string, config *StorageIntegrationConfig) {
 	_init_.Initialize()
 
@@ -807,6 +831,17 @@ func (j *jsiiProxy_StorageIntegration)SetStorageAllowedLocations(val *[]*string)
 	_jsii_.Set(
 		j,
 		"storageAllowedLocations",
+		val,
+	)
+}
+
+func (j *jsiiProxy_StorageIntegration)SetStorageAwsExternalId(val *string) {
+	if err := j.validateSetStorageAwsExternalIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"storageAwsExternalId",
 		val,
 	)
 }
@@ -1266,6 +1301,14 @@ func (s *jsiiProxy_StorageIntegration) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_StorageIntegration) ResetStorageAwsExternalId() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetStorageAwsExternalId",
 		nil, // no parameters
 	)
 }

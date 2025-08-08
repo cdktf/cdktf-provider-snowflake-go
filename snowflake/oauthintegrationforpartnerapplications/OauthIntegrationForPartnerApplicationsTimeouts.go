@@ -5,13 +5,13 @@ package oauthintegrationforpartnerapplications
 
 
 type OauthIntegrationForPartnerApplicationsTimeouts struct {
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/oauth_integration_for_partner_applications#create OauthIntegrationForPartnerApplications#create}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/resources/oauth_integration_for_partner_applications#create OauthIntegrationForPartnerApplications#create}.
 	Create *string `field:"optional" json:"create" yaml:"create"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/oauth_integration_for_partner_applications#delete OauthIntegrationForPartnerApplications#delete}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/resources/oauth_integration_for_partner_applications#delete OauthIntegrationForPartnerApplications#delete}.
 	Delete *string `field:"optional" json:"delete" yaml:"delete"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/oauth_integration_for_partner_applications#read OauthIntegrationForPartnerApplications#read}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/resources/oauth_integration_for_partner_applications#read OauthIntegrationForPartnerApplications#read}.
 	Read *string `field:"optional" json:"read" yaml:"read"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.4.0/docs/resources/oauth_integration_for_partner_applications#update OauthIntegrationForPartnerApplications#update}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/resources/oauth_integration_for_partner_applications#update OauthIntegrationForPartnerApplications#update}.
 	Update *string `field:"optional" json:"update" yaml:"update"`
 }
 

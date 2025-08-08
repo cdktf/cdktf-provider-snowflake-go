@@ -135,6 +135,10 @@ func (j *jsiiProxy_StorageIntegration) validateSetStorageAllowedLocationsParamet
 	return nil
 }
 
+func (j *jsiiProxy_StorageIntegration) validateSetStorageAwsExternalIdParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_StorageIntegration) validateSetStorageAwsObjectAclParameters(val *string) error {
 	return nil
 }
