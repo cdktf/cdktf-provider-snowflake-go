@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/data-sources/image_repositories snowflake_image_repositories}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.6.0/docs/data-sources/image_repositories snowflake_image_repositories}.
 type DataSnowflakeImageRepositories interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -324,7 +324,7 @@ func (j *jsiiProxy_DataSnowflakeImageRepositories) TerraformResourceType() *stri
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/data-sources/image_repositories snowflake_image_repositories} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.6.0/docs/data-sources/image_repositories snowflake_image_repositories} Data Source.
 func NewDataSnowflakeImageRepositories(scope constructs.Construct, id *string, config *DataSnowflakeImageRepositoriesConfig) DataSnowflakeImageRepositories {
 	_init_.Initialize()
 
@@ -342,7 +342,7 @@ func NewDataSnowflakeImageRepositories(scope constructs.Construct, id *string, c
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/data-sources/image_repositories snowflake_image_repositories} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.6.0/docs/data-sources/image_repositories snowflake_image_repositories} Data Source.
 func NewDataSnowflakeImageRepositories_Override(d DataSnowflakeImageRepositories, scope constructs.Construct, id *string, config *DataSnowflakeImageRepositoriesConfig) {
 	_init_.Initialize()
 

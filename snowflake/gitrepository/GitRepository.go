@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/resources/git_repository snowflake_git_repository}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.6.0/docs/resources/git_repository snowflake_git_repository}.
 type GitRepository interface {
 	cdktf.TerraformResource
 	ApiIntegration() *string
@@ -530,7 +530,7 @@ func (j *jsiiProxy_GitRepository) TimeoutsInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/resources/git_repository snowflake_git_repository} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.6.0/docs/resources/git_repository snowflake_git_repository} Resource.
 func NewGitRepository(scope constructs.Construct, id *string, config *GitRepositoryConfig) GitRepository {
 	_init_.Initialize()
 
@@ -548,7 +548,7 @@ func NewGitRepository(scope constructs.Construct, id *string, config *GitReposit
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/resources/git_repository snowflake_git_repository} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.6.0/docs/resources/git_repository snowflake_git_repository} Resource.
 func NewGitRepository_Override(g GitRepository, scope constructs.Construct, id *string, config *GitRepositoryConfig) {
 	_init_.Initialize()
 

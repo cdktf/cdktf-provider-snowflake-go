@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/data-sources/compute_pools snowflake_compute_pools}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.6.0/docs/data-sources/compute_pools snowflake_compute_pools}.
 type DataSnowflakeComputePools interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -372,7 +372,7 @@ func (j *jsiiProxy_DataSnowflakeComputePools) WithDescribeInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/data-sources/compute_pools snowflake_compute_pools} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.6.0/docs/data-sources/compute_pools snowflake_compute_pools} Data Source.
 func NewDataSnowflakeComputePools(scope constructs.Construct, id *string, config *DataSnowflakeComputePoolsConfig) DataSnowflakeComputePools {
 	_init_.Initialize()
 
@@ -390,7 +390,7 @@ func NewDataSnowflakeComputePools(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.5.0/docs/data-sources/compute_pools snowflake_compute_pools} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.6.0/docs/data-sources/compute_pools snowflake_compute_pools} Data Source.
 func NewDataSnowflakeComputePools_Override(d DataSnowflakeComputePools, scope constructs.Construct, id *string, config *DataSnowflakeComputePoolsConfig) {
 	_init_.Initialize()
 
