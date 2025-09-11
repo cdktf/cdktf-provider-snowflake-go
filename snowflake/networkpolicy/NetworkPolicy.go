@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.6.0/docs/resources/network_policy snowflake_network_policy}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/network_policy snowflake_network_policy}.
 type NetworkPolicy interface {
 	cdktf.TerraformResource
 	AllowedIpList() *[]*string
@@ -510,7 +510,7 @@ func (j *jsiiProxy_NetworkPolicy) TimeoutsInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.6.0/docs/resources/network_policy snowflake_network_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/network_policy snowflake_network_policy} Resource.
 func NewNetworkPolicy(scope constructs.Construct, id *string, config *NetworkPolicyConfig) NetworkPolicy {
 	_init_.Initialize()
 
@@ -528,7 +528,7 @@ func NewNetworkPolicy(scope constructs.Construct, id *string, config *NetworkPol
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.6.0/docs/resources/network_policy snowflake_network_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/network_policy snowflake_network_policy} Resource.
 func NewNetworkPolicy_Override(n NetworkPolicy, scope constructs.Construct, id *string, config *NetworkPolicyConfig) {
 	_init_.Initialize()
 

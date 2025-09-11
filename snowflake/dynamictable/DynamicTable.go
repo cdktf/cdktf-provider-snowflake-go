@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.6.0/docs/resources/dynamic_table snowflake_dynamic_table}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/dynamic_table snowflake_dynamic_table}.
 type DynamicTable interface {
 	cdktf.TerraformResource
 	AutomaticClustering() cdktf.IResolvable
@@ -711,7 +711,7 @@ func (j *jsiiProxy_DynamicTable) WarehouseInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.6.0/docs/resources/dynamic_table snowflake_dynamic_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/dynamic_table snowflake_dynamic_table} Resource.
 func NewDynamicTable(scope constructs.Construct, id *string, config *DynamicTableConfig) DynamicTable {
 	_init_.Initialize()
 
@@ -729,7 +729,7 @@ func NewDynamicTable(scope constructs.Construct, id *string, config *DynamicTabl
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.6.0/docs/resources/dynamic_table snowflake_dynamic_table} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/dynamic_table snowflake_dynamic_table} Resource.
 func NewDynamicTable_Override(d DynamicTable, scope constructs.Construct, id *string, config *DynamicTableConfig) {
 	_init_.Initialize()
 

@@ -36,6 +36,7 @@ type WarehouseShowOutputOutputReference interface {
 	EnableQueryAcceleration() cdktf.IResolvable
 	// Experimental.
 	Fqn() *string
+	Generation() *string
 	InternalValue() *WarehouseShowOutput
 	SetInternalValue(val *WarehouseShowOutput)
 	IsCurrent() cdktf.IResolvable
@@ -50,6 +51,7 @@ type WarehouseShowOutputOutputReference interface {
 	QueryAccelerationMaxScaleFactor() *float64
 	Queued() *float64
 	Quiescing() *float64
+	ResourceConstraint() *string
 	ResourceMonitor() *string
 	ResumedOn() *string
 	Running() *float64
@@ -206,6 +208,16 @@ func (j *jsiiProxy_WarehouseShowOutputOutputReference) Fqn() *string {
 	return returns
 }
 
+func (j *jsiiProxy_WarehouseShowOutputOutputReference) Generation() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"generation",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_WarehouseShowOutputOutputReference) InternalValue() *WarehouseShowOutput {
 	var returns *WarehouseShowOutput
 	_jsii_.Get(
@@ -331,6 +343,16 @@ func (j *jsiiProxy_WarehouseShowOutputOutputReference) Quiescing() *float64 {
 	_jsii_.Get(
 		j,
 		"quiescing",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_WarehouseShowOutputOutputReference) ResourceConstraint() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"resourceConstraint",
 		&returns,
 	)
 	return returns

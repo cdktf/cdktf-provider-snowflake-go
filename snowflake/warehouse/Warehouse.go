@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.6.0/docs/resources/warehouse snowflake_warehouse}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/warehouse snowflake_warehouse}.
 type Warehouse interface {
 	cdktf.TerraformResource
 	AutoResume() *string
@@ -52,6 +52,9 @@ type Warehouse interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	FullyQualifiedName() *string
+	Generation() *string
+	SetGeneration(val *string)
+	GenerationInput() *string
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -90,6 +93,9 @@ type Warehouse interface {
 	QueryAccelerationMaxScaleFactorInput() *float64
 	// Experimental.
 	RawOverrides() interface{}
+	ResourceConstraint() *string
+	SetResourceConstraint(val *string)
+	ResourceConstraintInput() *string
 	ResourceMonitor() *string
 	SetResourceMonitor(val *string)
 	ResourceMonitorInput() *string
@@ -165,6 +171,7 @@ type Warehouse interface {
 	ResetAutoSuspend()
 	ResetComment()
 	ResetEnableQueryAcceleration()
+	ResetGeneration()
 	ResetId()
 	ResetInitiallySuspended()
 	ResetMaxClusterCount()
@@ -174,6 +181,7 @@ type Warehouse interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetQueryAccelerationMaxScaleFactor()
+	ResetResourceConstraint()
 	ResetResourceMonitor()
 	ResetScalingPolicy()
 	ResetStatementQueuedTimeoutInSeconds()
@@ -364,6 +372,26 @@ func (j *jsiiProxy_Warehouse) FullyQualifiedName() *string {
 	_jsii_.Get(
 		j,
 		"fullyQualifiedName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Warehouse) Generation() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"generation",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Warehouse) GenerationInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"generationInput",
 		&returns,
 	)
 	return returns
@@ -569,6 +597,26 @@ func (j *jsiiProxy_Warehouse) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_Warehouse) ResourceConstraint() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"resourceConstraint",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Warehouse) ResourceConstraintInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"resourceConstraintInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Warehouse) ResourceMonitor() *string {
 	var returns *string
 	_jsii_.Get(
@@ -750,7 +798,7 @@ func (j *jsiiProxy_Warehouse) WarehouseTypeInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.6.0/docs/resources/warehouse snowflake_warehouse} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/warehouse snowflake_warehouse} Resource.
 func NewWarehouse(scope constructs.Construct, id *string, config *WarehouseConfig) Warehouse {
 	_init_.Initialize()
 
@@ -768,7 +816,7 @@ func NewWarehouse(scope constructs.Construct, id *string, config *WarehouseConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.6.0/docs/resources/warehouse snowflake_warehouse} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/warehouse snowflake_warehouse} Resource.
 func NewWarehouse_Override(w Warehouse, scope constructs.Construct, id *string, config *WarehouseConfig) {
 	_init_.Initialize()
 
@@ -857,6 +905,17 @@ func (j *jsiiProxy_Warehouse)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Warehouse)SetGeneration(val *string) {
+	if err := j.validateSetGenerationParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"generation",
 		val,
 	)
 }
@@ -964,6 +1023,17 @@ func (j *jsiiProxy_Warehouse)SetQueryAccelerationMaxScaleFactor(val *float64) {
 	_jsii_.Set(
 		j,
 		"queryAccelerationMaxScaleFactor",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Warehouse)SetResourceConstraint(val *string) {
+	if err := j.validateSetResourceConstraintParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"resourceConstraint",
 		val,
 	)
 }
@@ -1430,6 +1500,14 @@ func (w *jsiiProxy_Warehouse) ResetEnableQueryAcceleration() {
 	)
 }
 
+func (w *jsiiProxy_Warehouse) ResetGeneration() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetGeneration",
+		nil, // no parameters
+	)
+}
+
 func (w *jsiiProxy_Warehouse) ResetId() {
 	_jsii_.InvokeVoid(
 		w,
@@ -1482,6 +1560,14 @@ func (w *jsiiProxy_Warehouse) ResetQueryAccelerationMaxScaleFactor() {
 	_jsii_.InvokeVoid(
 		w,
 		"resetQueryAccelerationMaxScaleFactor",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_Warehouse) ResetResourceConstraint() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetResourceConstraint",
 		nil, // no parameters
 	)
 }

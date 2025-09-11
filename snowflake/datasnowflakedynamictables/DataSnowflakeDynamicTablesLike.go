@@ -9,7 +9,7 @@ type DataSnowflakeDynamicTablesLike struct {
 	//
 	// The filter uses case-insensitive pattern matching with support for SQL wildcard characters (% and _).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.6.0/docs/data-sources/dynamic_tables#pattern DataSnowflakeDynamicTables#pattern}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/data-sources/dynamic_tables#pattern DataSnowflakeDynamicTables#pattern}
 	Pattern *string `field:"required" json:"pattern" yaml:"pattern"`
 }
 

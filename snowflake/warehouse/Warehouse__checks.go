@@ -380,6 +380,14 @@ func (j *jsiiProxy_Warehouse) validateSetEnableQueryAccelerationParameters(val *
 	return nil
 }
 
+func (j *jsiiProxy_Warehouse) validateSetGenerationParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_Warehouse) validateSetIdParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
@@ -495,6 +503,14 @@ func (j *jsiiProxy_Warehouse) validateSetProvisionersParameters(val *[]interface
 }
 
 func (j *jsiiProxy_Warehouse) validateSetQueryAccelerationMaxScaleFactorParameters(val *float64) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (j *jsiiProxy_Warehouse) validateSetResourceConstraintParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")
 	}

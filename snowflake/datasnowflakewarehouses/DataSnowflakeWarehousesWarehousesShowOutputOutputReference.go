@@ -36,6 +36,7 @@ type DataSnowflakeWarehousesWarehousesShowOutputOutputReference interface {
 	EnableQueryAcceleration() cdktf.IResolvable
 	// Experimental.
 	Fqn() *string
+	Generation() *string
 	InternalValue() *DataSnowflakeWarehousesWarehousesShowOutput
 	SetInternalValue(val *DataSnowflakeWarehousesWarehousesShowOutput)
 	IsCurrent() cdktf.IResolvable
@@ -50,6 +51,7 @@ type DataSnowflakeWarehousesWarehousesShowOutputOutputReference interface {
 	QueryAccelerationMaxScaleFactor() *float64
 	Queued() *float64
 	Quiescing() *float64
+	ResourceConstraint() *string
 	ResourceMonitor() *string
 	ResumedOn() *string
 	Running() *float64
@@ -206,6 +208,16 @@ func (j *jsiiProxy_DataSnowflakeWarehousesWarehousesShowOutputOutputReference) F
 	return returns
 }
 
+func (j *jsiiProxy_DataSnowflakeWarehousesWarehousesShowOutputOutputReference) Generation() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"generation",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataSnowflakeWarehousesWarehousesShowOutputOutputReference) InternalValue() *DataSnowflakeWarehousesWarehousesShowOutput {
 	var returns *DataSnowflakeWarehousesWarehousesShowOutput
 	_jsii_.Get(
@@ -331,6 +343,16 @@ func (j *jsiiProxy_DataSnowflakeWarehousesWarehousesShowOutputOutputReference) Q
 	_jsii_.Get(
 		j,
 		"quiescing",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataSnowflakeWarehousesWarehousesShowOutputOutputReference) ResourceConstraint() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"resourceConstraint",
 		&returns,
 	)
 	return returns

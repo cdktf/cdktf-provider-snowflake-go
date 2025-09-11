@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.6.0/docs/resources/schema snowflake_schema}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/schema snowflake_schema}.
 type Schema interface {
 	cdktf.TerraformResource
 	Catalog() *string
@@ -904,7 +904,7 @@ func (j *jsiiProxy_Schema) WithManagedAccessInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.6.0/docs/resources/schema snowflake_schema} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/schema snowflake_schema} Resource.
 func NewSchema(scope constructs.Construct, id *string, config *SchemaConfig) Schema {
 	_init_.Initialize()
 
@@ -922,7 +922,7 @@ func NewSchema(scope constructs.Construct, id *string, config *SchemaConfig) Sch
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.6.0/docs/resources/schema snowflake_schema} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/schema snowflake_schema} Resource.
 func NewSchema_Override(s Schema, scope constructs.Construct, id *string, config *SchemaConfig) {
 	_init_.Initialize()
 

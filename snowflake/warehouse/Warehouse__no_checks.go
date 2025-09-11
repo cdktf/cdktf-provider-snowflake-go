@@ -119,6 +119,10 @@ func (j *jsiiProxy_Warehouse) validateSetEnableQueryAccelerationParameters(val *
 	return nil
 }
 
+func (j *jsiiProxy_Warehouse) validateSetGenerationParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Warehouse) validateSetIdParameters(val *string) error {
 	return nil
 }
@@ -152,6 +156,10 @@ func (j *jsiiProxy_Warehouse) validateSetProvisionersParameters(val *[]interface
 }
 
 func (j *jsiiProxy_Warehouse) validateSetQueryAccelerationMaxScaleFactorParameters(val *float64) error {
+	return nil
+}
+
+func (j *jsiiProxy_Warehouse) validateSetResourceConstraintParameters(val *string) error {
 	return nil
 }
 
