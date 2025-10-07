@@ -510,6 +510,14 @@ func (j *jsiiProxy_StorageIntegration) validateSetTypeParameters(val *string) er
 	return nil
 }
 
+func (j *jsiiProxy_StorageIntegration) validateSetUsePrivatelinkEndpointParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func validateNewStorageIntegrationParameters(scope constructs.Construct, id *string, config *StorageIntegrationConfig) error {
 	if scope == nil {
 		return fmt.Errorf("parameter scope is required, but nil was provided")

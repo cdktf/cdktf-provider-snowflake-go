@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/storage_integration snowflake_storage_integration}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/resources/storage_integration snowflake_storage_integration}.
 type StorageIntegration interface {
 	cdktf.TerraformResource
 	AzureConsentUrl() *string
@@ -106,6 +106,9 @@ type StorageIntegration interface {
 	Type() *string
 	SetType(val *string)
 	TypeInput() *string
+	UsePrivatelinkEndpoint() *string
+	SetUsePrivatelinkEndpoint(val *string)
+	UsePrivatelinkEndpointInput() *string
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -163,6 +166,7 @@ type StorageIntegration interface {
 	ResetStorageBlockedLocations()
 	ResetTimeouts()
 	ResetType()
+	ResetUsePrivatelinkEndpoint()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -671,8 +675,28 @@ func (j *jsiiProxy_StorageIntegration) TypeInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_StorageIntegration) UsePrivatelinkEndpoint() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"usePrivatelinkEndpoint",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/storage_integration snowflake_storage_integration} Resource.
+func (j *jsiiProxy_StorageIntegration) UsePrivatelinkEndpointInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"usePrivatelinkEndpointInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/resources/storage_integration snowflake_storage_integration} Resource.
 func NewStorageIntegration(scope constructs.Construct, id *string, config *StorageIntegrationConfig) StorageIntegration {
 	_init_.Initialize()
 
@@ -690,7 +714,7 @@ func NewStorageIntegration(scope constructs.Construct, id *string, config *Stora
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/storage_integration snowflake_storage_integration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/resources/storage_integration snowflake_storage_integration} Resource.
 func NewStorageIntegration_Override(s StorageIntegration, scope constructs.Construct, id *string, config *StorageIntegrationConfig) {
 	_init_.Initialize()
 
@@ -897,6 +921,17 @@ func (j *jsiiProxy_StorageIntegration)SetType(val *string) {
 	_jsii_.Set(
 		j,
 		"type",
+		val,
+	)
+}
+
+func (j *jsiiProxy_StorageIntegration)SetUsePrivatelinkEndpoint(val *string) {
+	if err := j.validateSetUsePrivatelinkEndpointParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"usePrivatelinkEndpoint",
 		val,
 	)
 }
@@ -1349,6 +1384,14 @@ func (s *jsiiProxy_StorageIntegration) ResetType() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetType",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_StorageIntegration) ResetUsePrivatelinkEndpoint() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetUsePrivatelinkEndpoint",
 		nil, // no parameters
 	)
 }

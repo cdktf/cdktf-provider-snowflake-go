@@ -22,56 +22,64 @@ type StorageIntegrationConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/storage_integration#name StorageIntegration#name}.
+	// String that specifies the identifier (i.e. name) for the integration; must be unique in your account.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/resources/storage_integration#name StorageIntegration#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// Explicitly limits external stages that use the integration to reference one or more storage locations.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/storage_integration#storage_allowed_locations StorageIntegration#storage_allowed_locations}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/resources/storage_integration#storage_allowed_locations StorageIntegration#storage_allowed_locations}
 	StorageAllowedLocations *[]*string `field:"required" json:"storageAllowedLocations" yaml:"storageAllowedLocations"`
 	// Specifies the storage provider for the integration. Valid options are: `S3` | `S3GOV` | `S3CHINA` | `GCS` | `AZURE`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/storage_integration#storage_provider StorageIntegration#storage_provider}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/resources/storage_integration#storage_provider StorageIntegration#storage_provider}
 	StorageProvider *string `field:"required" json:"storageProvider" yaml:"storageProvider"`
-	// (Default: ``).
+	// (Default: ``) Specifies the ID for your Office 365 tenant that the allowed and blocked storage accounts belong to.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/storage_integration#azure_tenant_id StorageIntegration#azure_tenant_id}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/resources/storage_integration#azure_tenant_id StorageIntegration#azure_tenant_id}
 	AzureTenantId *string `field:"optional" json:"azureTenantId" yaml:"azureTenantId"`
-	// (Default: ``).
+	// (Default: ``) Specifies a comment for the storage integration.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/storage_integration#comment StorageIntegration#comment}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/resources/storage_integration#comment StorageIntegration#comment}
 	Comment *string `field:"optional" json:"comment" yaml:"comment"`
 	// (Default: `true`).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/storage_integration#enabled StorageIntegration#enabled}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/resources/storage_integration#enabled StorageIntegration#enabled}
 	Enabled interface{} `field:"optional" json:"enabled" yaml:"enabled"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/storage_integration#id StorageIntegration#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/resources/storage_integration#id StorageIntegration#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
-	// The external ID that Snowflake will use when assuming the AWS role.
+	// Optionally specifies an external ID that Snowflake uses to establish a trust relationship with AWS.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/storage_integration#storage_aws_external_id StorageIntegration#storage_aws_external_id}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/resources/storage_integration#storage_aws_external_id StorageIntegration#storage_aws_external_id}
 	StorageAwsExternalId *string `field:"optional" json:"storageAwsExternalId" yaml:"storageAwsExternalId"`
 	// "bucket-owner-full-control" Enables support for AWS access control lists (ACLs) to grant the bucket owner full control.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/storage_integration#storage_aws_object_acl StorageIntegration#storage_aws_object_acl}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/resources/storage_integration#storage_aws_object_acl StorageIntegration#storage_aws_object_acl}
 	StorageAwsObjectAcl *string `field:"optional" json:"storageAwsObjectAcl" yaml:"storageAwsObjectAcl"`
-	// (Default: ``).
+	// (Default: ``) Specifies the Amazon Resource Name (ARN) of the AWS identity and access management (IAM) role that grants privileges on the S3 bucket containing your data files.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/storage_integration#storage_aws_role_arn StorageIntegration#storage_aws_role_arn}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/resources/storage_integration#storage_aws_role_arn StorageIntegration#storage_aws_role_arn}
 	StorageAwsRoleArn *string `field:"optional" json:"storageAwsRoleArn" yaml:"storageAwsRoleArn"`
 	// Explicitly prohibits external stages that use the integration from referencing one or more storage locations.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/storage_integration#storage_blocked_locations StorageIntegration#storage_blocked_locations}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/resources/storage_integration#storage_blocked_locations StorageIntegration#storage_blocked_locations}
 	StorageBlockedLocations *[]*string `field:"optional" json:"storageBlockedLocations" yaml:"storageBlockedLocations"`
 	// timeouts block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/storage_integration#timeouts StorageIntegration#timeouts}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/resources/storage_integration#timeouts StorageIntegration#timeouts}
 	Timeouts *StorageIntegrationTimeouts `field:"optional" json:"timeouts" yaml:"timeouts"`
-	// (Default: `EXTERNAL_STAGE`).
+	// (Default: `EXTERNAL_STAGE`) Specifies the type of the storage integration.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/storage_integration#type StorageIntegration#type}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/resources/storage_integration#type StorageIntegration#type}
 	Type *string `field:"optional" json:"type" yaml:"type"`
+	// (Default: fallback to Snowflake default - uses special value that cannot be set in the configuration manually (`default`)) Specifies whether to use outbound private connectivity to harden the security posture.
+	//
+	// Supported for AWS S3 and Azure storage providers. Available options are: "true" or "false". When the value is not set in the configuration the provider will put "default" there which means to use the Snowflake default for this value.
+	//
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/resources/storage_integration#use_privatelink_endpoint StorageIntegration#use_privatelink_endpoint}
+	UsePrivatelinkEndpoint *string `field:"optional" json:"usePrivatelinkEndpoint" yaml:"usePrivatelinkEndpoint"`
 }
 

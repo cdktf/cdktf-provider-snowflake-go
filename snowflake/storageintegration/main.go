@@ -72,6 +72,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetStorageBlockedLocations", GoMethod: "ResetStorageBlockedLocations"},
 			_jsii_.MemberMethod{JsiiMethod: "resetTimeouts", GoMethod: "ResetTimeouts"},
 			_jsii_.MemberMethod{JsiiMethod: "resetType", GoMethod: "ResetType"},
+			_jsii_.MemberMethod{JsiiMethod: "resetUsePrivatelinkEndpoint", GoMethod: "ResetUsePrivatelinkEndpoint"},
 			_jsii_.MemberProperty{JsiiProperty: "storageAllowedLocations", GoGetter: "StorageAllowedLocations"},
 			_jsii_.MemberProperty{JsiiProperty: "storageAllowedLocationsInput", GoGetter: "StorageAllowedLocationsInput"},
 			_jsii_.MemberProperty{JsiiProperty: "storageAwsExternalId", GoGetter: "StorageAwsExternalId"},
@@ -99,6 +100,8 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "toTerraform", GoMethod: "ToTerraform"},
 			_jsii_.MemberProperty{JsiiProperty: "type", GoGetter: "Type"},
 			_jsii_.MemberProperty{JsiiProperty: "typeInput", GoGetter: "TypeInput"},
+			_jsii_.MemberProperty{JsiiProperty: "usePrivatelinkEndpoint", GoGetter: "UsePrivatelinkEndpoint"},
+			_jsii_.MemberProperty{JsiiProperty: "usePrivatelinkEndpointInput", GoGetter: "UsePrivatelinkEndpointInput"},
 		},
 		func() interface{} {
 			j := jsiiProxy_StorageIntegration{}

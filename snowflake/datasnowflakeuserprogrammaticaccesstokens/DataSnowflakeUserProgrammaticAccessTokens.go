@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/data-sources/user_programmatic_access_tokens snowflake_user_programmatic_access_tokens}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/data-sources/user_programmatic_access_tokens snowflake_user_programmatic_access_tokens}.
 type DataSnowflakeUserProgrammaticAccessTokens interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -299,7 +299,7 @@ func (j *jsiiProxy_DataSnowflakeUserProgrammaticAccessTokens) UserProgrammaticAc
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/data-sources/user_programmatic_access_tokens snowflake_user_programmatic_access_tokens} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/data-sources/user_programmatic_access_tokens snowflake_user_programmatic_access_tokens} Data Source.
 func NewDataSnowflakeUserProgrammaticAccessTokens(scope constructs.Construct, id *string, config *DataSnowflakeUserProgrammaticAccessTokensConfig) DataSnowflakeUserProgrammaticAccessTokens {
 	_init_.Initialize()
 
@@ -317,7 +317,7 @@ func NewDataSnowflakeUserProgrammaticAccessTokens(scope constructs.Construct, id
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/data-sources/user_programmatic_access_tokens snowflake_user_programmatic_access_tokens} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/data-sources/user_programmatic_access_tokens snowflake_user_programmatic_access_tokens} Data Source.
 func NewDataSnowflakeUserProgrammaticAccessTokens_Override(d DataSnowflakeUserProgrammaticAccessTokens, scope constructs.Construct, id *string, config *DataSnowflakeUserProgrammaticAccessTokensConfig) {
 	_init_.Initialize()
 

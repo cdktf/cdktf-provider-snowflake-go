@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/procedure_python snowflake_procedure_python}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/resources/procedure_python snowflake_procedure_python}.
 type ProcedurePython interface {
 	cdktf.TerraformResource
 	Arguments() ProcedurePythonArgumentsList
@@ -875,7 +875,7 @@ func (j *jsiiProxy_ProcedurePython) TraceLevelInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/procedure_python snowflake_procedure_python} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/resources/procedure_python snowflake_procedure_python} Resource.
 func NewProcedurePython(scope constructs.Construct, id *string, config *ProcedurePythonConfig) ProcedurePython {
 	_init_.Initialize()
 
@@ -893,7 +893,7 @@ func NewProcedurePython(scope constructs.Construct, id *string, config *Procedur
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.7.0/docs/resources/procedure_python snowflake_procedure_python} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/resources/procedure_python snowflake_procedure_python} Resource.
 func NewProcedurePython_Override(p ProcedurePython, scope constructs.Construct, id *string, config *ProcedurePythonConfig) {
 	_init_.Initialize()
 

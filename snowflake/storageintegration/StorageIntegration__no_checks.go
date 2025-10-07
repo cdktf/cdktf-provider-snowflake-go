@@ -159,6 +159,10 @@ func (j *jsiiProxy_StorageIntegration) validateSetTypeParameters(val *string) er
 	return nil
 }
 
+func (j *jsiiProxy_StorageIntegration) validateSetUsePrivatelinkEndpointParameters(val *string) error {
+	return nil
+}
+
 func validateNewStorageIntegrationParameters(scope constructs.Construct, id *string, config *StorageIntegrationConfig) error {
 	return nil
 }
