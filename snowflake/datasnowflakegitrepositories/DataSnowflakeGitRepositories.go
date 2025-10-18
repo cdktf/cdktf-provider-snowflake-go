@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/data-sources/git_repositories snowflake_git_repositories}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/data-sources/git_repositories snowflake_git_repositories}.
 type DataSnowflakeGitRepositories interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -372,7 +372,7 @@ func (j *jsiiProxy_DataSnowflakeGitRepositories) WithDescribeInput() interface{}
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/data-sources/git_repositories snowflake_git_repositories} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/data-sources/git_repositories snowflake_git_repositories} Data Source.
 func NewDataSnowflakeGitRepositories(scope constructs.Construct, id *string, config *DataSnowflakeGitRepositoriesConfig) DataSnowflakeGitRepositories {
 	_init_.Initialize()
 
@@ -390,7 +390,7 @@ func NewDataSnowflakeGitRepositories(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs/data-sources/git_repositories snowflake_git_repositories} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/data-sources/git_repositories snowflake_git_repositories} Data Source.
 func NewDataSnowflakeGitRepositories_Override(d DataSnowflakeGitRepositories, scope constructs.Construct, id *string, config *DataSnowflakeGitRepositoriesConfig) {
 	_init_.Initialize()
 

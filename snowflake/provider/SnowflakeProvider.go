@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs snowflake}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs snowflake}.
 type SnowflakeProvider interface {
 	cdktf.TerraformProvider
 	AccountName() *string
@@ -52,6 +52,9 @@ type SnowflakeProvider interface {
 	DriverTracing() *string
 	SetDriverTracing(val *string)
 	DriverTracingInput() *string
+	EnableSingleUseRefreshTokens() interface{}
+	SetEnableSingleUseRefreshTokens(val interface{})
+	EnableSingleUseRefreshTokensInput() interface{}
 	ExternalBrowserTimeout() *float64
 	SetExternalBrowserTimeout(val *float64)
 	ExternalBrowserTimeoutInput() *float64
@@ -87,6 +90,24 @@ type SnowflakeProvider interface {
 	MetaAttributes() *map[string]interface{}
 	// The tree node.
 	Node() constructs.Node
+	OauthAuthorizationUrl() *string
+	SetOauthAuthorizationUrl(val *string)
+	OauthAuthorizationUrlInput() *string
+	OauthClientId() *string
+	SetOauthClientId(val *string)
+	OauthClientIdInput() *string
+	OauthClientSecret() *string
+	SetOauthClientSecret(val *string)
+	OauthClientSecretInput() *string
+	OauthRedirectUri() *string
+	SetOauthRedirectUri(val *string)
+	OauthRedirectUriInput() *string
+	OauthScope() *string
+	SetOauthScope(val *string)
+	OauthScopeInput() *string
+	OauthTokenRequestUrl() *string
+	SetOauthTokenRequestUrl(val *string)
+	OauthTokenRequestUrlInput() *string
 	OcspFailOpen() *string
 	SetOcspFailOpen(val *string)
 	OcspFailOpenInput() *string
@@ -180,6 +201,7 @@ type SnowflakeProvider interface {
 	ResetDisableQueryContextCache()
 	ResetDisableTelemetry()
 	ResetDriverTracing()
+	ResetEnableSingleUseRefreshTokens()
 	ResetExternalBrowserTimeout()
 	ResetHost()
 	ResetIncludeRetryReason()
@@ -189,6 +211,12 @@ type SnowflakeProvider interface {
 	ResetKeepSessionAlive()
 	ResetLoginTimeout()
 	ResetMaxRetryCount()
+	ResetOauthAuthorizationUrl()
+	ResetOauthClientId()
+	ResetOauthClientSecret()
+	ResetOauthRedirectUri()
+	ResetOauthScope()
+	ResetOauthTokenRequestUrl()
 	ResetOcspFailOpen()
 	ResetOktaUrl()
 	ResetOrganizationName()
@@ -473,6 +501,26 @@ func (j *jsiiProxy_SnowflakeProvider) DriverTracingInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_SnowflakeProvider) EnableSingleUseRefreshTokens() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableSingleUseRefreshTokens",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) EnableSingleUseRefreshTokensInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enableSingleUseRefreshTokensInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_SnowflakeProvider) ExternalBrowserTimeout() *float64 {
 	var returns *float64
 	_jsii_.Get(
@@ -688,6 +736,126 @@ func (j *jsiiProxy_SnowflakeProvider) Node() constructs.Node {
 	_jsii_.Get(
 		j,
 		"node",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) OauthAuthorizationUrl() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"oauthAuthorizationUrl",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) OauthAuthorizationUrlInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"oauthAuthorizationUrlInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) OauthClientId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"oauthClientId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) OauthClientIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"oauthClientIdInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) OauthClientSecret() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"oauthClientSecret",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) OauthClientSecretInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"oauthClientSecretInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) OauthRedirectUri() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"oauthRedirectUri",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) OauthRedirectUriInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"oauthRedirectUriInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) OauthScope() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"oauthScope",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) OauthScopeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"oauthScopeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) OauthTokenRequestUrl() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"oauthTokenRequestUrl",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) OauthTokenRequestUrlInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"oauthTokenRequestUrlInput",
 		&returns,
 	)
 	return returns
@@ -1194,7 +1362,7 @@ func (j *jsiiProxy_SnowflakeProvider) WarehouseInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs snowflake} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs snowflake} Resource.
 func NewSnowflakeProvider(scope constructs.Construct, id *string, config *SnowflakeProviderConfig) SnowflakeProvider {
 	_init_.Initialize()
 
@@ -1212,7 +1380,7 @@ func NewSnowflakeProvider(scope constructs.Construct, id *string, config *Snowfl
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.8.0/docs snowflake} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs snowflake} Resource.
 func NewSnowflakeProvider_Override(s SnowflakeProvider, scope constructs.Construct, id *string, config *SnowflakeProviderConfig) {
 	_init_.Initialize()
 
@@ -1317,6 +1485,17 @@ func (j *jsiiProxy_SnowflakeProvider)SetDriverTracing(val *string) {
 	)
 }
 
+func (j *jsiiProxy_SnowflakeProvider)SetEnableSingleUseRefreshTokens(val interface{}) {
+	if err := j.validateSetEnableSingleUseRefreshTokensParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"enableSingleUseRefreshTokens",
+		val,
+	)
+}
+
 func (j *jsiiProxy_SnowflakeProvider)SetExternalBrowserTimeout(val *float64) {
 	_jsii_.Set(
 		j,
@@ -1391,6 +1570,54 @@ func (j *jsiiProxy_SnowflakeProvider)SetMaxRetryCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"maxRetryCount",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetOauthAuthorizationUrl(val *string) {
+	_jsii_.Set(
+		j,
+		"oauthAuthorizationUrl",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetOauthClientId(val *string) {
+	_jsii_.Set(
+		j,
+		"oauthClientId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetOauthClientSecret(val *string) {
+	_jsii_.Set(
+		j,
+		"oauthClientSecret",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetOauthRedirectUri(val *string) {
+	_jsii_.Set(
+		j,
+		"oauthRedirectUri",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetOauthScope(val *string) {
+	_jsii_.Set(
+		j,
+		"oauthScope",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetOauthTokenRequestUrl(val *string) {
+	_jsii_.Set(
+		j,
+		"oauthTokenRequestUrl",
 		val,
 	)
 }
@@ -1804,6 +2031,14 @@ func (s *jsiiProxy_SnowflakeProvider) ResetDriverTracing() {
 	)
 }
 
+func (s *jsiiProxy_SnowflakeProvider) ResetEnableSingleUseRefreshTokens() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetEnableSingleUseRefreshTokens",
+		nil, // no parameters
+	)
+}
+
 func (s *jsiiProxy_SnowflakeProvider) ResetExternalBrowserTimeout() {
 	_jsii_.InvokeVoid(
 		s,
@@ -1872,6 +2107,54 @@ func (s *jsiiProxy_SnowflakeProvider) ResetMaxRetryCount() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetMaxRetryCount",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetOauthAuthorizationUrl() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetOauthAuthorizationUrl",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetOauthClientId() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetOauthClientId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetOauthClientSecret() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetOauthClientSecret",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetOauthRedirectUri() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetOauthRedirectUri",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetOauthScope() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetOauthScope",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetOauthTokenRequestUrl() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetOauthTokenRequestUrl",
 		nil, // no parameters
 	)
 }

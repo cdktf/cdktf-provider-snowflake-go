@@ -39,6 +39,10 @@ func (j *jsiiProxy_SnowflakeProvider) validateSetDisableTelemetryParameters(val 
 	return nil
 }
 
+func (j *jsiiProxy_SnowflakeProvider) validateSetEnableSingleUseRefreshTokensParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_SnowflakeProvider) validateSetInsecureModeParameters(val interface{}) error {
 	return nil
 }
