@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/resources/api_authentication_integration_with_authorization_code_grant snowflake_api_authentication_integration_with_authorization_code_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/api_authentication_integration_with_authorization_code_grant snowflake_api_authentication_integration_with_authorization_code_grant}.
 type ApiAuthenticationIntegrationWithAuthorizationCodeGrant interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -627,7 +627,7 @@ func (j *jsiiProxy_ApiAuthenticationIntegrationWithAuthorizationCodeGrant) Timeo
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/resources/api_authentication_integration_with_authorization_code_grant snowflake_api_authentication_integration_with_authorization_code_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/api_authentication_integration_with_authorization_code_grant snowflake_api_authentication_integration_with_authorization_code_grant} Resource.
 func NewApiAuthenticationIntegrationWithAuthorizationCodeGrant(scope constructs.Construct, id *string, config *ApiAuthenticationIntegrationWithAuthorizationCodeGrantConfig) ApiAuthenticationIntegrationWithAuthorizationCodeGrant {
 	_init_.Initialize()
 
@@ -645,7 +645,7 @@ func NewApiAuthenticationIntegrationWithAuthorizationCodeGrant(scope constructs.
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/resources/api_authentication_integration_with_authorization_code_grant snowflake_api_authentication_integration_with_authorization_code_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/api_authentication_integration_with_authorization_code_grant snowflake_api_authentication_integration_with_authorization_code_grant} Resource.
 func NewApiAuthenticationIntegrationWithAuthorizationCodeGrant_Override(a ApiAuthenticationIntegrationWithAuthorizationCodeGrant, scope constructs.Construct, id *string, config *ApiAuthenticationIntegrationWithAuthorizationCodeGrantConfig) {
 	_init_.Initialize()
 

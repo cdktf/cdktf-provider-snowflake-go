@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/resources/compute_pool snowflake_compute_pool}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/compute_pool snowflake_compute_pool}.
 type ComputePool interface {
 	cdktf.TerraformResource
 	AutoResume() *string
@@ -579,7 +579,7 @@ func (j *jsiiProxy_ComputePool) TimeoutsInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/resources/compute_pool snowflake_compute_pool} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/compute_pool snowflake_compute_pool} Resource.
 func NewComputePool(scope constructs.Construct, id *string, config *ComputePoolConfig) ComputePool {
 	_init_.Initialize()
 
@@ -597,7 +597,7 @@ func NewComputePool(scope constructs.Construct, id *string, config *ComputePoolC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/resources/compute_pool snowflake_compute_pool} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/compute_pool snowflake_compute_pool} Resource.
 func NewComputePool_Override(c ComputePool, scope constructs.Construct, id *string, config *ComputePoolConfig) {
 	_init_.Initialize()
 

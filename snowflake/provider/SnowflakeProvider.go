@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs snowflake}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs snowflake}.
 type SnowflakeProvider interface {
 	cdktf.TerraformProvider
 	AccountName() *string
@@ -55,6 +55,9 @@ type SnowflakeProvider interface {
 	EnableSingleUseRefreshTokens() interface{}
 	SetEnableSingleUseRefreshTokens(val interface{})
 	EnableSingleUseRefreshTokensInput() interface{}
+	ExperimentalFeaturesEnabled() *[]*string
+	SetExperimentalFeaturesEnabled(val *[]*string)
+	ExperimentalFeaturesEnabledInput() *[]*string
 	ExternalBrowserTimeout() *float64
 	SetExternalBrowserTimeout(val *float64)
 	ExternalBrowserTimeoutInput() *float64
@@ -185,6 +188,12 @@ type SnowflakeProvider interface {
 	Warehouse() *string
 	SetWarehouse(val *string)
 	WarehouseInput() *string
+	WorkloadIdentityEntraResource() *string
+	SetWorkloadIdentityEntraResource(val *string)
+	WorkloadIdentityEntraResourceInput() *string
+	WorkloadIdentityProvider() *string
+	SetWorkloadIdentityProvider(val *string)
+	WorkloadIdentityProviderInput() *string
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Overrides the auto-generated logical ID with a specific ID.
@@ -202,6 +211,7 @@ type SnowflakeProvider interface {
 	ResetDisableTelemetry()
 	ResetDriverTracing()
 	ResetEnableSingleUseRefreshTokens()
+	ResetExperimentalFeaturesEnabled()
 	ResetExternalBrowserTimeout()
 	ResetHost()
 	ResetIncludeRetryReason()
@@ -243,6 +253,8 @@ type SnowflakeProvider interface {
 	ResetUser()
 	ResetValidateDefaultParameters()
 	ResetWarehouse()
+	ResetWorkloadIdentityEntraResource()
+	ResetWorkloadIdentityProvider()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -516,6 +528,26 @@ func (j *jsiiProxy_SnowflakeProvider) EnableSingleUseRefreshTokensInput() interf
 	_jsii_.Get(
 		j,
 		"enableSingleUseRefreshTokensInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) ExperimentalFeaturesEnabled() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"experimentalFeaturesEnabled",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) ExperimentalFeaturesEnabledInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"experimentalFeaturesEnabledInput",
 		&returns,
 	)
 	return returns
@@ -1361,8 +1393,48 @@ func (j *jsiiProxy_SnowflakeProvider) WarehouseInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_SnowflakeProvider) WorkloadIdentityEntraResource() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"workloadIdentityEntraResource",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs snowflake} Resource.
+func (j *jsiiProxy_SnowflakeProvider) WorkloadIdentityEntraResourceInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"workloadIdentityEntraResourceInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) WorkloadIdentityProvider() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"workloadIdentityProvider",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SnowflakeProvider) WorkloadIdentityProviderInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"workloadIdentityProviderInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs snowflake} Resource.
 func NewSnowflakeProvider(scope constructs.Construct, id *string, config *SnowflakeProviderConfig) SnowflakeProvider {
 	_init_.Initialize()
 
@@ -1380,7 +1452,7 @@ func NewSnowflakeProvider(scope constructs.Construct, id *string, config *Snowfl
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs snowflake} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs snowflake} Resource.
 func NewSnowflakeProvider_Override(s SnowflakeProvider, scope constructs.Construct, id *string, config *SnowflakeProviderConfig) {
 	_init_.Initialize()
 
@@ -1492,6 +1564,14 @@ func (j *jsiiProxy_SnowflakeProvider)SetEnableSingleUseRefreshTokens(val interfa
 	_jsii_.Set(
 		j,
 		"enableSingleUseRefreshTokens",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetExperimentalFeaturesEnabled(val *[]*string) {
+	_jsii_.Set(
+		j,
+		"experimentalFeaturesEnabled",
 		val,
 	)
 }
@@ -1818,6 +1898,22 @@ func (j *jsiiProxy_SnowflakeProvider)SetWarehouse(val *string) {
 	)
 }
 
+func (j *jsiiProxy_SnowflakeProvider)SetWorkloadIdentityEntraResource(val *string) {
+	_jsii_.Set(
+		j,
+		"workloadIdentityEntraResource",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SnowflakeProvider)SetWorkloadIdentityProvider(val *string) {
+	_jsii_.Set(
+		j,
+		"workloadIdentityProvider",
+		val,
+	)
+}
+
 // Generates CDKTF code for importing a SnowflakeProvider resource upon running "cdktf plan <stack-name>".
 func SnowflakeProvider_GenerateConfigForImport(scope constructs.Construct, importToId *string, importFromId *string, provider cdktf.TerraformProvider) cdktf.ImportableResource {
 	_init_.Initialize()
@@ -2035,6 +2131,14 @@ func (s *jsiiProxy_SnowflakeProvider) ResetEnableSingleUseRefreshTokens() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetEnableSingleUseRefreshTokens",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetExperimentalFeaturesEnabled() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetExperimentalFeaturesEnabled",
 		nil, // no parameters
 	)
 }
@@ -2347,6 +2451,22 @@ func (s *jsiiProxy_SnowflakeProvider) ResetWarehouse() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetWarehouse",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetWorkloadIdentityEntraResource() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetWorkloadIdentityEntraResource",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SnowflakeProvider) ResetWorkloadIdentityProvider() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetWorkloadIdentityProvider",
 		nil, // no parameters
 	)
 }

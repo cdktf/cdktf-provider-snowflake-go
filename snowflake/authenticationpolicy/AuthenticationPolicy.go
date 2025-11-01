@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/resources/authentication_policy snowflake_authentication_policy}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/authentication_policy snowflake_authentication_policy}.
 type AuthenticationPolicy interface {
 	cdktf.TerraformResource
 	AuthenticationMethods() *[]*string
@@ -66,11 +66,15 @@ type AuthenticationPolicy interface {
 	MfaEnrollment() *string
 	SetMfaEnrollment(val *string)
 	MfaEnrollmentInput() *string
+	MfaPolicy() AuthenticationPolicyMfaPolicyOutputReference
+	MfaPolicyInput() *AuthenticationPolicyMfaPolicy
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
 	// The tree node.
 	Node() constructs.Node
+	PatPolicy() AuthenticationPolicyPatPolicyOutputReference
+	PatPolicyInput() *AuthenticationPolicyPatPolicy
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -96,6 +100,8 @@ type AuthenticationPolicy interface {
 	TerraformResourceType() *string
 	Timeouts() AuthenticationPolicyTimeoutsOutputReference
 	TimeoutsInput() interface{}
+	WorkloadIdentityPolicy() AuthenticationPolicyWorkloadIdentityPolicyOutputReference
+	WorkloadIdentityPolicyInput() *AuthenticationPolicyWorkloadIdentityPolicy
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -139,18 +145,24 @@ type AuthenticationPolicy interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutMfaPolicy(value *AuthenticationPolicyMfaPolicy)
+	PutPatPolicy(value *AuthenticationPolicyPatPolicy)
 	PutTimeouts(value *AuthenticationPolicyTimeouts)
+	PutWorkloadIdentityPolicy(value *AuthenticationPolicyWorkloadIdentityPolicy)
 	ResetAuthenticationMethods()
 	ResetClientTypes()
 	ResetComment()
 	ResetId()
 	ResetMfaAuthenticationMethods()
 	ResetMfaEnrollment()
+	ResetMfaPolicy()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetPatPolicy()
 	ResetSecurityIntegrations()
 	ResetTimeouts()
+	ResetWorkloadIdentityPolicy()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -419,6 +431,26 @@ func (j *jsiiProxy_AuthenticationPolicy) MfaEnrollmentInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_AuthenticationPolicy) MfaPolicy() AuthenticationPolicyMfaPolicyOutputReference {
+	var returns AuthenticationPolicyMfaPolicyOutputReference
+	_jsii_.Get(
+		j,
+		"mfaPolicy",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AuthenticationPolicy) MfaPolicyInput() *AuthenticationPolicyMfaPolicy {
+	var returns *AuthenticationPolicyMfaPolicy
+	_jsii_.Get(
+		j,
+		"mfaPolicyInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_AuthenticationPolicy) Name() *string {
 	var returns *string
 	_jsii_.Get(
@@ -444,6 +476,26 @@ func (j *jsiiProxy_AuthenticationPolicy) Node() constructs.Node {
 	_jsii_.Get(
 		j,
 		"node",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AuthenticationPolicy) PatPolicy() AuthenticationPolicyPatPolicyOutputReference {
+	var returns AuthenticationPolicyPatPolicyOutputReference
+	_jsii_.Get(
+		j,
+		"patPolicy",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AuthenticationPolicy) PatPolicyInput() *AuthenticationPolicyPatPolicy {
+	var returns *AuthenticationPolicyPatPolicy
+	_jsii_.Get(
+		j,
+		"patPolicyInput",
 		&returns,
 	)
 	return returns
@@ -579,8 +631,28 @@ func (j *jsiiProxy_AuthenticationPolicy) TimeoutsInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_AuthenticationPolicy) WorkloadIdentityPolicy() AuthenticationPolicyWorkloadIdentityPolicyOutputReference {
+	var returns AuthenticationPolicyWorkloadIdentityPolicyOutputReference
+	_jsii_.Get(
+		j,
+		"workloadIdentityPolicy",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/resources/authentication_policy snowflake_authentication_policy} Resource.
+func (j *jsiiProxy_AuthenticationPolicy) WorkloadIdentityPolicyInput() *AuthenticationPolicyWorkloadIdentityPolicy {
+	var returns *AuthenticationPolicyWorkloadIdentityPolicy
+	_jsii_.Get(
+		j,
+		"workloadIdentityPolicyInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/authentication_policy snowflake_authentication_policy} Resource.
 func NewAuthenticationPolicy(scope constructs.Construct, id *string, config *AuthenticationPolicyConfig) AuthenticationPolicy {
 	_init_.Initialize()
 
@@ -598,7 +670,7 @@ func NewAuthenticationPolicy(scope constructs.Construct, id *string, config *Aut
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/resources/authentication_policy snowflake_authentication_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/authentication_policy snowflake_authentication_policy} Resource.
 func NewAuthenticationPolicy_Override(a AuthenticationPolicy, scope constructs.Construct, id *string, config *AuthenticationPolicyConfig) {
 	_init_.Initialize()
 
@@ -1140,6 +1212,28 @@ func (a *jsiiProxy_AuthenticationPolicy) OverrideLogicalId(newLogicalId *string)
 	)
 }
 
+func (a *jsiiProxy_AuthenticationPolicy) PutMfaPolicy(value *AuthenticationPolicyMfaPolicy) {
+	if err := a.validatePutMfaPolicyParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"putMfaPolicy",
+		[]interface{}{value},
+	)
+}
+
+func (a *jsiiProxy_AuthenticationPolicy) PutPatPolicy(value *AuthenticationPolicyPatPolicy) {
+	if err := a.validatePutPatPolicyParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"putPatPolicy",
+		[]interface{}{value},
+	)
+}
+
 func (a *jsiiProxy_AuthenticationPolicy) PutTimeouts(value *AuthenticationPolicyTimeouts) {
 	if err := a.validatePutTimeoutsParameters(value); err != nil {
 		panic(err)
@@ -1147,6 +1241,17 @@ func (a *jsiiProxy_AuthenticationPolicy) PutTimeouts(value *AuthenticationPolicy
 	_jsii_.InvokeVoid(
 		a,
 		"putTimeouts",
+		[]interface{}{value},
+	)
+}
+
+func (a *jsiiProxy_AuthenticationPolicy) PutWorkloadIdentityPolicy(value *AuthenticationPolicyWorkloadIdentityPolicy) {
+	if err := a.validatePutWorkloadIdentityPolicyParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		a,
+		"putWorkloadIdentityPolicy",
 		[]interface{}{value},
 	)
 }
@@ -1199,10 +1304,26 @@ func (a *jsiiProxy_AuthenticationPolicy) ResetMfaEnrollment() {
 	)
 }
 
+func (a *jsiiProxy_AuthenticationPolicy) ResetMfaPolicy() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetMfaPolicy",
+		nil, // no parameters
+	)
+}
+
 func (a *jsiiProxy_AuthenticationPolicy) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		a,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AuthenticationPolicy) ResetPatPolicy() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetPatPolicy",
 		nil, // no parameters
 	)
 }
@@ -1219,6 +1340,14 @@ func (a *jsiiProxy_AuthenticationPolicy) ResetTimeouts() {
 	_jsii_.InvokeVoid(
 		a,
 		"resetTimeouts",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AuthenticationPolicy) ResetWorkloadIdentityPolicy() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetWorkloadIdentityPolicy",
 		nil, // no parameters
 	)
 }

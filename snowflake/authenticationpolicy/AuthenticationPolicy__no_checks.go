@@ -75,7 +75,19 @@ func (a *jsiiProxy_AuthenticationPolicy) validateOverrideLogicalIdParameters(new
 	return nil
 }
 
+func (a *jsiiProxy_AuthenticationPolicy) validatePutMfaPolicyParameters(value *AuthenticationPolicyMfaPolicy) error {
+	return nil
+}
+
+func (a *jsiiProxy_AuthenticationPolicy) validatePutPatPolicyParameters(value *AuthenticationPolicyPatPolicy) error {
+	return nil
+}
+
 func (a *jsiiProxy_AuthenticationPolicy) validatePutTimeoutsParameters(value *AuthenticationPolicyTimeouts) error {
+	return nil
+}
+
+func (a *jsiiProxy_AuthenticationPolicy) validatePutWorkloadIdentityPolicyParameters(value *AuthenticationPolicyWorkloadIdentityPolicy) error {
 	return nil
 }
 

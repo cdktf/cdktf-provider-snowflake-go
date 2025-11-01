@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/resources/secret_with_client_credentials snowflake_secret_with_client_credentials}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/secret_with_client_credentials snowflake_secret_with_client_credentials}.
 type SecretWithClientCredentials interface {
 	cdktf.TerraformResource
 	ApiAuthentication() *string
@@ -517,7 +517,7 @@ func (j *jsiiProxy_SecretWithClientCredentials) TimeoutsInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/resources/secret_with_client_credentials snowflake_secret_with_client_credentials} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/secret_with_client_credentials snowflake_secret_with_client_credentials} Resource.
 func NewSecretWithClientCredentials(scope constructs.Construct, id *string, config *SecretWithClientCredentialsConfig) SecretWithClientCredentials {
 	_init_.Initialize()
 
@@ -535,7 +535,7 @@ func NewSecretWithClientCredentials(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/resources/secret_with_client_credentials snowflake_secret_with_client_credentials} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/secret_with_client_credentials snowflake_secret_with_client_credentials} Resource.
 func NewSecretWithClientCredentials_Override(s SecretWithClientCredentials, scope constructs.Construct, id *string, config *SecretWithClientCredentialsConfig) {
 	_init_.Initialize()
 

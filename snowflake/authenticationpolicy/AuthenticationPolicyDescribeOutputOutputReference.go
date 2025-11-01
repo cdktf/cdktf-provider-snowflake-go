@@ -37,8 +37,10 @@ type AuthenticationPolicyDescribeOutputOutputReference interface {
 	SetInternalValue(val *AuthenticationPolicyDescribeOutput)
 	MfaAuthenticationMethods() *string
 	MfaEnrollment() *string
+	MfaPolicy() *string
 	Name() *string
 	Owner() *string
+	PatPolicy() *string
 	SecurityIntegrations() *string
 	// Experimental.
 	TerraformAttribute() *string
@@ -48,6 +50,7 @@ type AuthenticationPolicyDescribeOutputOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	WorkloadIdentityPolicy() *string
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -187,6 +190,16 @@ func (j *jsiiProxy_AuthenticationPolicyDescribeOutputOutputReference) MfaEnrollm
 	return returns
 }
 
+func (j *jsiiProxy_AuthenticationPolicyDescribeOutputOutputReference) MfaPolicy() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"mfaPolicy",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_AuthenticationPolicyDescribeOutputOutputReference) Name() *string {
 	var returns *string
 	_jsii_.Get(
@@ -202,6 +215,16 @@ func (j *jsiiProxy_AuthenticationPolicyDescribeOutputOutputReference) Owner() *s
 	_jsii_.Get(
 		j,
 		"owner",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AuthenticationPolicyDescribeOutputOutputReference) PatPolicy() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"patPolicy",
 		&returns,
 	)
 	return returns
@@ -232,6 +255,16 @@ func (j *jsiiProxy_AuthenticationPolicyDescribeOutputOutputReference) TerraformR
 	_jsii_.Get(
 		j,
 		"terraformResource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AuthenticationPolicyDescribeOutputOutputReference) WorkloadIdentityPolicy() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"workloadIdentityPolicy",
 		&returns,
 	)
 	return returns

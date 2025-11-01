@@ -24,60 +24,60 @@ type GrantPrivilegesToShareConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The privileges to grant on the share. See available list of privileges: https://docs.snowflake.com/en/sql-reference/sql/grant-privilege-share#syntax.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/resources/grant_privileges_to_share#privileges GrantPrivilegesToShare#privileges}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/grant_privileges_to_share#privileges GrantPrivilegesToShare#privileges}
 	Privileges *[]*string `field:"required" json:"privileges" yaml:"privileges"`
 	// The fully qualified name of the share on which privileges will be granted.
 	//
 	// For more information about this resource, see [docs](./share).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/resources/grant_privileges_to_share#to_share GrantPrivilegesToShare#to_share}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/grant_privileges_to_share#to_share GrantPrivilegesToShare#to_share}
 	ToShare *string `field:"required" json:"toShare" yaml:"toShare"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/resources/grant_privileges_to_share#id GrantPrivilegesToShare#id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/grant_privileges_to_share#id GrantPrivilegesToShare#id}.
 	//
 	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
 	Id *string `field:"optional" json:"id" yaml:"id"`
 	// The fully qualified identifier for the schema for which the specified privilege will be granted for all tables.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/resources/grant_privileges_to_share#on_all_tables_in_schema GrantPrivilegesToShare#on_all_tables_in_schema}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/grant_privileges_to_share#on_all_tables_in_schema GrantPrivilegesToShare#on_all_tables_in_schema}
 	OnAllTablesInSchema *string `field:"optional" json:"onAllTablesInSchema" yaml:"onAllTablesInSchema"`
 	// The fully qualified name of the database on which privileges will be granted.
 	//
 	// For more information about this resource, see [docs](./database).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/resources/grant_privileges_to_share#on_database GrantPrivilegesToShare#on_database}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/grant_privileges_to_share#on_database GrantPrivilegesToShare#on_database}
 	OnDatabase *string `field:"optional" json:"onDatabase" yaml:"onDatabase"`
 	// The fully qualified name of the function on which privileges will be granted.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/resources/grant_privileges_to_share#on_function GrantPrivilegesToShare#on_function}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/grant_privileges_to_share#on_function GrantPrivilegesToShare#on_function}
 	OnFunction *string `field:"optional" json:"onFunction" yaml:"onFunction"`
 	// The fully qualified name of the schema on which privileges will be granted.
 	//
 	// For more information about this resource, see [docs](./schema).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/resources/grant_privileges_to_share#on_schema GrantPrivilegesToShare#on_schema}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/grant_privileges_to_share#on_schema GrantPrivilegesToShare#on_schema}
 	OnSchema *string `field:"optional" json:"onSchema" yaml:"onSchema"`
 	// The fully qualified name of the table on which privileges will be granted.
 	//
 	// For more information about this resource, see [docs](./table).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/resources/grant_privileges_to_share#on_table GrantPrivilegesToShare#on_table}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/grant_privileges_to_share#on_table GrantPrivilegesToShare#on_table}
 	OnTable *string `field:"optional" json:"onTable" yaml:"onTable"`
 	// The fully qualified name of the tag on which privileges will be granted.
 	//
 	// For more information about this resource, see [docs](./tag).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/resources/grant_privileges_to_share#on_tag GrantPrivilegesToShare#on_tag}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/grant_privileges_to_share#on_tag GrantPrivilegesToShare#on_tag}
 	OnTag *string `field:"optional" json:"onTag" yaml:"onTag"`
 	// The fully qualified name of the view on which privileges will be granted.
 	//
 	// For more information about this resource, see [docs](./view).
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/resources/grant_privileges_to_share#on_view GrantPrivilegesToShare#on_view}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/grant_privileges_to_share#on_view GrantPrivilegesToShare#on_view}
 	OnView *string `field:"optional" json:"onView" yaml:"onView"`
 	// timeouts block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.9.0/docs/resources/grant_privileges_to_share#timeouts GrantPrivilegesToShare#timeouts}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/grant_privileges_to_share#timeouts GrantPrivilegesToShare#timeouts}
 	Timeouts *GrantPrivilegesToShareTimeouts `field:"optional" json:"timeouts" yaml:"timeouts"`
 }
 

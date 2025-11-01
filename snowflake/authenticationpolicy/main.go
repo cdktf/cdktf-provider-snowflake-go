@@ -53,6 +53,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "mfaAuthenticationMethodsInput", GoGetter: "MfaAuthenticationMethodsInput"},
 			_jsii_.MemberProperty{JsiiProperty: "mfaEnrollment", GoGetter: "MfaEnrollment"},
 			_jsii_.MemberProperty{JsiiProperty: "mfaEnrollmentInput", GoGetter: "MfaEnrollmentInput"},
+			_jsii_.MemberProperty{JsiiProperty: "mfaPolicy", GoGetter: "MfaPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "mfaPolicyInput", GoGetter: "MfaPolicyInput"},
 			_jsii_.MemberMethod{JsiiMethod: "moveFromId", GoMethod: "MoveFromId"},
 			_jsii_.MemberMethod{JsiiMethod: "moveTo", GoMethod: "MoveTo"},
 			_jsii_.MemberMethod{JsiiMethod: "moveToId", GoMethod: "MoveToId"},
@@ -60,9 +62,14 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "nameInput", GoGetter: "NameInput"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberMethod{JsiiMethod: "overrideLogicalId", GoMethod: "OverrideLogicalId"},
+			_jsii_.MemberProperty{JsiiProperty: "patPolicy", GoGetter: "PatPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "patPolicyInput", GoGetter: "PatPolicyInput"},
 			_jsii_.MemberProperty{JsiiProperty: "provider", GoGetter: "Provider"},
 			_jsii_.MemberProperty{JsiiProperty: "provisioners", GoGetter: "Provisioners"},
+			_jsii_.MemberMethod{JsiiMethod: "putMfaPolicy", GoMethod: "PutMfaPolicy"},
+			_jsii_.MemberMethod{JsiiMethod: "putPatPolicy", GoMethod: "PutPatPolicy"},
 			_jsii_.MemberMethod{JsiiMethod: "putTimeouts", GoMethod: "PutTimeouts"},
+			_jsii_.MemberMethod{JsiiMethod: "putWorkloadIdentityPolicy", GoMethod: "PutWorkloadIdentityPolicy"},
 			_jsii_.MemberProperty{JsiiProperty: "rawOverrides", GoGetter: "RawOverrides"},
 			_jsii_.MemberMethod{JsiiMethod: "resetAuthenticationMethods", GoMethod: "ResetAuthenticationMethods"},
 			_jsii_.MemberMethod{JsiiMethod: "resetClientTypes", GoMethod: "ResetClientTypes"},
@@ -70,9 +77,12 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetId", GoMethod: "ResetId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetMfaAuthenticationMethods", GoMethod: "ResetMfaAuthenticationMethods"},
 			_jsii_.MemberMethod{JsiiMethod: "resetMfaEnrollment", GoMethod: "ResetMfaEnrollment"},
+			_jsii_.MemberMethod{JsiiMethod: "resetMfaPolicy", GoMethod: "ResetMfaPolicy"},
 			_jsii_.MemberMethod{JsiiMethod: "resetOverrideLogicalId", GoMethod: "ResetOverrideLogicalId"},
+			_jsii_.MemberMethod{JsiiMethod: "resetPatPolicy", GoMethod: "ResetPatPolicy"},
 			_jsii_.MemberMethod{JsiiMethod: "resetSecurityIntegrations", GoMethod: "ResetSecurityIntegrations"},
 			_jsii_.MemberMethod{JsiiMethod: "resetTimeouts", GoMethod: "ResetTimeouts"},
+			_jsii_.MemberMethod{JsiiMethod: "resetWorkloadIdentityPolicy", GoMethod: "ResetWorkloadIdentityPolicy"},
 			_jsii_.MemberProperty{JsiiProperty: "schema", GoGetter: "Schema"},
 			_jsii_.MemberProperty{JsiiProperty: "schemaInput", GoGetter: "SchemaInput"},
 			_jsii_.MemberProperty{JsiiProperty: "securityIntegrations", GoGetter: "SecurityIntegrations"},
@@ -89,6 +99,8 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "toMetadata", GoMethod: "ToMetadata"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
 			_jsii_.MemberMethod{JsiiMethod: "toTerraform", GoMethod: "ToTerraform"},
+			_jsii_.MemberProperty{JsiiProperty: "workloadIdentityPolicy", GoGetter: "WorkloadIdentityPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "workloadIdentityPolicyInput", GoGetter: "WorkloadIdentityPolicyInput"},
 		},
 		func() interface{} {
 			j := jsiiProxy_AuthenticationPolicy{}
@@ -151,16 +163,106 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "mfaAuthenticationMethods", GoGetter: "MfaAuthenticationMethods"},
 			_jsii_.MemberProperty{JsiiProperty: "mfaEnrollment", GoGetter: "MfaEnrollment"},
+			_jsii_.MemberProperty{JsiiProperty: "mfaPolicy", GoGetter: "MfaPolicy"},
 			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
 			_jsii_.MemberProperty{JsiiProperty: "owner", GoGetter: "Owner"},
+			_jsii_.MemberProperty{JsiiProperty: "patPolicy", GoGetter: "PatPolicy"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "securityIntegrations", GoGetter: "SecurityIntegrations"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "workloadIdentityPolicy", GoGetter: "WorkloadIdentityPolicy"},
 		},
 		func() interface{} {
 			j := jsiiProxy_AuthenticationPolicyDescribeOutputOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdktf/provider-snowflake.authenticationPolicy.AuthenticationPolicyMfaPolicy",
+		reflect.TypeOf((*AuthenticationPolicyMfaPolicy)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdktf/provider-snowflake.authenticationPolicy.AuthenticationPolicyMfaPolicyOutputReference",
+		reflect.TypeOf((*AuthenticationPolicyMfaPolicyOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "allowedMethods", GoGetter: "AllowedMethods"},
+			_jsii_.MemberProperty{JsiiProperty: "allowedMethodsInput", GoGetter: "AllowedMethodsInput"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "enforceMfaOnExternalAuthentication", GoGetter: "EnforceMfaOnExternalAuthentication"},
+			_jsii_.MemberProperty{JsiiProperty: "enforceMfaOnExternalAuthenticationInput", GoGetter: "EnforceMfaOnExternalAuthenticationInput"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "resetAllowedMethods", GoMethod: "ResetAllowedMethods"},
+			_jsii_.MemberMethod{JsiiMethod: "resetEnforceMfaOnExternalAuthentication", GoMethod: "ResetEnforceMfaOnExternalAuthentication"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_AuthenticationPolicyMfaPolicyOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdktf/provider-snowflake.authenticationPolicy.AuthenticationPolicyPatPolicy",
+		reflect.TypeOf((*AuthenticationPolicyPatPolicy)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdktf/provider-snowflake.authenticationPolicy.AuthenticationPolicyPatPolicyOutputReference",
+		reflect.TypeOf((*AuthenticationPolicyPatPolicyOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "defaultExpiryInDays", GoGetter: "DefaultExpiryInDays"},
+			_jsii_.MemberProperty{JsiiProperty: "defaultExpiryInDaysInput", GoGetter: "DefaultExpiryInDaysInput"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "maxExpiryInDays", GoGetter: "MaxExpiryInDays"},
+			_jsii_.MemberProperty{JsiiProperty: "maxExpiryInDaysInput", GoGetter: "MaxExpiryInDaysInput"},
+			_jsii_.MemberProperty{JsiiProperty: "networkPolicyEvaluation", GoGetter: "NetworkPolicyEvaluation"},
+			_jsii_.MemberProperty{JsiiProperty: "networkPolicyEvaluationInput", GoGetter: "NetworkPolicyEvaluationInput"},
+			_jsii_.MemberMethod{JsiiMethod: "resetDefaultExpiryInDays", GoMethod: "ResetDefaultExpiryInDays"},
+			_jsii_.MemberMethod{JsiiMethod: "resetMaxExpiryInDays", GoMethod: "ResetMaxExpiryInDays"},
+			_jsii_.MemberMethod{JsiiMethod: "resetNetworkPolicyEvaluation", GoMethod: "ResetNetworkPolicyEvaluation"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_AuthenticationPolicyPatPolicyOutputReference{}
 			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
 			return &j
 		},
@@ -214,6 +316,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "kind", GoGetter: "Kind"},
 			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
 			_jsii_.MemberProperty{JsiiProperty: "options", GoGetter: "Options"},
 			_jsii_.MemberProperty{JsiiProperty: "owner", GoGetter: "Owner"},
@@ -274,6 +377,54 @@ func init() {
 		},
 		func() interface{} {
 			j := jsiiProxy_AuthenticationPolicyTimeoutsOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdktf/provider-snowflake.authenticationPolicy.AuthenticationPolicyWorkloadIdentityPolicy",
+		reflect.TypeOf((*AuthenticationPolicyWorkloadIdentityPolicy)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdktf/provider-snowflake.authenticationPolicy.AuthenticationPolicyWorkloadIdentityPolicyOutputReference",
+		reflect.TypeOf((*AuthenticationPolicyWorkloadIdentityPolicyOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "allowedAwsAccounts", GoGetter: "AllowedAwsAccounts"},
+			_jsii_.MemberProperty{JsiiProperty: "allowedAwsAccountsInput", GoGetter: "AllowedAwsAccountsInput"},
+			_jsii_.MemberProperty{JsiiProperty: "allowedAzureIssuers", GoGetter: "AllowedAzureIssuers"},
+			_jsii_.MemberProperty{JsiiProperty: "allowedAzureIssuersInput", GoGetter: "AllowedAzureIssuersInput"},
+			_jsii_.MemberProperty{JsiiProperty: "allowedOidcIssuers", GoGetter: "AllowedOidcIssuers"},
+			_jsii_.MemberProperty{JsiiProperty: "allowedOidcIssuersInput", GoGetter: "AllowedOidcIssuersInput"},
+			_jsii_.MemberProperty{JsiiProperty: "allowedProviders", GoGetter: "AllowedProviders"},
+			_jsii_.MemberProperty{JsiiProperty: "allowedProvidersInput", GoGetter: "AllowedProvidersInput"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "resetAllowedAwsAccounts", GoMethod: "ResetAllowedAwsAccounts"},
+			_jsii_.MemberMethod{JsiiMethod: "resetAllowedAzureIssuers", GoMethod: "ResetAllowedAzureIssuers"},
+			_jsii_.MemberMethod{JsiiMethod: "resetAllowedOidcIssuers", GoMethod: "ResetAllowedOidcIssuers"},
+			_jsii_.MemberMethod{JsiiMethod: "resetAllowedProviders", GoMethod: "ResetAllowedProviders"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_AuthenticationPolicyWorkloadIdentityPolicyOutputReference{}
 			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
 			return &j
 		},

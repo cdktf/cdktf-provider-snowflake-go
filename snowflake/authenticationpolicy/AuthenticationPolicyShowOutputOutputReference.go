@@ -35,6 +35,7 @@ type AuthenticationPolicyShowOutputOutputReference interface {
 	Fqn() *string
 	InternalValue() *AuthenticationPolicyShowOutput
 	SetInternalValue(val *AuthenticationPolicyShowOutput)
+	Kind() *string
 	Name() *string
 	Options() *string
 	Owner() *string
@@ -162,6 +163,16 @@ func (j *jsiiProxy_AuthenticationPolicyShowOutputOutputReference) InternalValue(
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AuthenticationPolicyShowOutputOutputReference) Kind() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"kind",
 		&returns,
 	)
 	return returns
