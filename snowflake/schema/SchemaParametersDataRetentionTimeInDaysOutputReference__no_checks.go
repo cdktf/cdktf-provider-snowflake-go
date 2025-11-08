@@ -43,11 +43,11 @@ func (s *jsiiProxy_SchemaParametersDataRetentionTimeInDaysOutputReference) valid
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersDataRetentionTimeInDaysOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_SchemaParametersDataRetentionTimeInDaysOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersDataRetentionTimeInDaysOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SchemaParametersDataRetentionTimeInDaysOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeRowAccessPoliciesRowAccessPoliciesDescribeOutput
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeRowAccessPoliciesRowAccessPoliciesDescribeOutputSignatureList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeRowAccessPoliciesRowAccessPoliciesDescribeOutputSignatureList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

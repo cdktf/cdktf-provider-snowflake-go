@@ -15,7 +15,7 @@ func (c *jsiiProxy_CurrentOrganizationAccountShowOutputList) validateGetParamete
 	return nil
 }
 
-func (c *jsiiProxy_CurrentOrganizationAccountShowOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (c *jsiiProxy_CurrentOrganizationAccountShowOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

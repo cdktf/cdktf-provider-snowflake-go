@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersNoorderSequenceAsDefaultList) validateGetParame
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersNoorderSequenceAsDefaultList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersNoorderSequenceAsDefaultList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

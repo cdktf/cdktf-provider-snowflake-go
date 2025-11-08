@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataSnowflakeFailoverGroupsFailoverGroupsOutputReference) val
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeFailoverGroupsFailoverGroupsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataSnowflakeFailoverGroupsFailoverGroupsOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeFailoverGroupsFailoverGroupsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeFailoverGroupsFailoverGroupsOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

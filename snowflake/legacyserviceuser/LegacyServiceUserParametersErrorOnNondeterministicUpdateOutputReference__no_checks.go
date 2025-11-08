@@ -43,11 +43,11 @@ func (l *jsiiProxy_LegacyServiceUserParametersErrorOnNondeterministicUpdateOutpu
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersErrorOnNondeterministicUpdateOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (l *jsiiProxy_LegacyServiceUserParametersErrorOnNondeterministicUpdateOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersErrorOnNondeterministicUpdateOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersErrorOnNondeterministicUpdateOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

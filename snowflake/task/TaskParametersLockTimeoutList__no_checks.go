@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersLockTimeoutList) validateGetParameters(index *f
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersLockTimeoutList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersLockTimeoutList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeTasksTasksParametersEnableUnloadPhysicalTypeOpti
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksTasksParametersEnableUnloadPhysicalTypeOptimizationList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeTasksTasksParametersEnableUnloadPhysicalTypeOptimizationList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

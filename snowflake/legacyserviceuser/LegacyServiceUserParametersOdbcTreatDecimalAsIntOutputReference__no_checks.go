@@ -43,11 +43,11 @@ func (l *jsiiProxy_LegacyServiceUserParametersOdbcTreatDecimalAsIntOutputReferen
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersOdbcTreatDecimalAsIntOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (l *jsiiProxy_LegacyServiceUserParametersOdbcTreatDecimalAsIntOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersOdbcTreatDecimalAsIntOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersOdbcTreatDecimalAsIntOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

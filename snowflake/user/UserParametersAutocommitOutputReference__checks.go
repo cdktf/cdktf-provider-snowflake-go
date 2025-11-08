@@ -85,17 +85,17 @@ func (u *jsiiProxy_UserParametersAutocommitOutputReference) validateGetStringMap
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersAutocommitOutputReference) validateInterpolationForAttributeParameters(property *string) error {
-	if property == nil {
-		return fmt.Errorf("parameter property is required, but nil was provided")
+func (u *jsiiProxy_UserParametersAutocommitOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	if terraformAttribute == nil {
+		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
 
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersAutocommitOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
-	if _context == nil {
-		return fmt.Errorf("parameter _context is required, but nil was provided")
+func (u *jsiiProxy_UserParametersAutocommitOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
+	if context == nil {
+		return fmt.Errorf("parameter context is required, but nil was provided")
 	}
 
 	return nil

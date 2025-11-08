@@ -15,7 +15,7 @@ func (a *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearerDescribeOutputCommen
 	return nil
 }
 
-func (a *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearerDescribeOutputCommentList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (a *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearerDescribeOutputCommentList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

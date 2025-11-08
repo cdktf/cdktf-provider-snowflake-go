@@ -7,13 +7,13 @@ package datasnowflaketasks
 type DataSnowflakeTasksLimit struct {
 	// The maximum number of rows to return.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/data-sources/tasks#rows DataSnowflakeTasks#rows}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.1/docs/data-sources/tasks#rows DataSnowflakeTasks#rows}
 	Rows *float64 `field:"required" json:"rows" yaml:"rows"`
 	// Specifies a **case-sensitive** pattern that is used to match object name.
 	//
 	// After the first match, the limit on the number of rows will be applied.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/data-sources/tasks#from DataSnowflakeTasks#from}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.1/docs/data-sources/tasks#from DataSnowflakeTasks#from}
 	From *string `field:"optional" json:"from" yaml:"from"`
 }
 

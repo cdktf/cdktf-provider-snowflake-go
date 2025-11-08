@@ -15,7 +15,7 @@ func (a *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearerDescribeOutputParent
 	return nil
 }
 
-func (a *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearerDescribeOutputParentIntegrationList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (a *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearerDescribeOutputParentIntegrationList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

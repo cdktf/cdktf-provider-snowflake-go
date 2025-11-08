@@ -15,7 +15,7 @@ func (e *jsiiProxy_ExternalOauthIntegrationDescribeOutputExternalOauthIssuerList
 	return nil
 }
 
-func (e *jsiiProxy_ExternalOauthIntegrationDescribeOutputExternalOauthIssuerList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (e *jsiiProxy_ExternalOauthIntegrationDescribeOutputExternalOauthIssuerList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

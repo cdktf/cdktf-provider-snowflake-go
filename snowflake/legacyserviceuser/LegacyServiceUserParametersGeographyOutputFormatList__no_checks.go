@@ -15,7 +15,7 @@ func (l *jsiiProxy_LegacyServiceUserParametersGeographyOutputFormatList) validat
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersGeographyOutputFormatList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersGeographyOutputFormatList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

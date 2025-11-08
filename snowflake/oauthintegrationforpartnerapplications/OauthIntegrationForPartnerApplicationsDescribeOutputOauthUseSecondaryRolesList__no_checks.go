@@ -15,7 +15,7 @@ func (o *jsiiProxy_OauthIntegrationForPartnerApplicationsDescribeOutputOauthUseS
 	return nil
 }
 
-func (o *jsiiProxy_OauthIntegrationForPartnerApplicationsDescribeOutputOauthUseSecondaryRolesList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (o *jsiiProxy_OauthIntegrationForPartnerApplicationsDescribeOutputOauthUseSecondaryRolesList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

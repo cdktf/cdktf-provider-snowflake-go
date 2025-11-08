@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataSnowflakeUsersUsersParametersSimulatedDataSharingConsumer
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeUsersUsersParametersSimulatedDataSharingConsumerOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataSnowflakeUsersUsersParametersSimulatedDataSharingConsumerOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeUsersUsersParametersSimulatedDataSharingConsumerOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeUsersUsersParametersSimulatedDataSharingConsumerOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -43,11 +43,11 @@ func (s *jsiiProxy_ServiceUserParametersJdbcTreatTimestampNtzAsUtcOutputReferenc
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersJdbcTreatTimestampNtzAsUtcOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_ServiceUserParametersJdbcTreatTimestampNtzAsUtcOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersJdbcTreatTimestampNtzAsUtcOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServiceUserParametersJdbcTreatTimestampNtzAsUtcOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

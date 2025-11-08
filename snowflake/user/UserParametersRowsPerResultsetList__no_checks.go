@@ -15,7 +15,7 @@ func (u *jsiiProxy_UserParametersRowsPerResultsetList) validateGetParameters(ind
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersRowsPerResultsetList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersRowsPerResultsetList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

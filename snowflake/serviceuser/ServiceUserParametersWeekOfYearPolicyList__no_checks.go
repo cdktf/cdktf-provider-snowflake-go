@@ -15,7 +15,7 @@ func (s *jsiiProxy_ServiceUserParametersWeekOfYearPolicyList) validateGetParamet
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersWeekOfYearPolicyList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServiceUserParametersWeekOfYearPolicyList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeUsersUsersParametersEnableUnredactedQuerySyntaxE
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeUsersUsersParametersEnableUnredactedQuerySyntaxErrorList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeUsersUsersParametersEnableUnredactedQuerySyntaxErrorList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

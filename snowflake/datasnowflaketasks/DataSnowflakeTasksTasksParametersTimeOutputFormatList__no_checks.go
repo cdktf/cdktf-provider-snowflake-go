@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeTasksTasksParametersTimeOutputFormatList) valida
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksTasksParametersTimeOutputFormatList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeTasksTasksParametersTimeOutputFormatList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

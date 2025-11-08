@@ -43,11 +43,11 @@ func (t *jsiiProxy_TaskParametersJdbcUseSessionTimezoneOutputReference) validate
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersJdbcUseSessionTimezoneOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (t *jsiiProxy_TaskParametersJdbcUseSessionTimezoneOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersJdbcUseSessionTimezoneOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersJdbcUseSessionTimezoneOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

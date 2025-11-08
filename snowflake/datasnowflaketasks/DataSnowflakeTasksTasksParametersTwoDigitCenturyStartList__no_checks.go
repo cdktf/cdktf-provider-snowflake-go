@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeTasksTasksParametersTwoDigitCenturyStartList) va
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksTasksParametersTwoDigitCenturyStartList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeTasksTasksParametersTwoDigitCenturyStartList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

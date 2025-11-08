@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeExternalFunctionsExternalFunctionsList) validate
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeExternalFunctionsExternalFunctionsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeExternalFunctionsExternalFunctionsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

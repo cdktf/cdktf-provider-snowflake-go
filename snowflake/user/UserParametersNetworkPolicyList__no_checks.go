@@ -15,7 +15,7 @@ func (u *jsiiProxy_UserParametersNetworkPolicyList) validateGetParameters(index 
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersNetworkPolicyList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersNetworkPolicyList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

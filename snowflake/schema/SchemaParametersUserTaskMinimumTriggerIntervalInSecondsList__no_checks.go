@@ -15,7 +15,7 @@ func (s *jsiiProxy_SchemaParametersUserTaskMinimumTriggerIntervalInSecondsList) 
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersUserTaskMinimumTriggerIntervalInSecondsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SchemaParametersUserTaskMinimumTriggerIntervalInSecondsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

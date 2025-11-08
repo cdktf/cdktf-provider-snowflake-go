@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersMultiStatementCountList) validateGetParameters(
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersMultiStatementCountList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersMultiStatementCountList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

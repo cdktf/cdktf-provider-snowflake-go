@@ -43,11 +43,11 @@ func (s *jsiiProxy_ScimIntegrationDescribeOutputSyncPasswordOutputReference) val
 	return nil
 }
 
-func (s *jsiiProxy_ScimIntegrationDescribeOutputSyncPasswordOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_ScimIntegrationDescribeOutputSyncPasswordOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_ScimIntegrationDescribeOutputSyncPasswordOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ScimIntegrationDescribeOutputSyncPasswordOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

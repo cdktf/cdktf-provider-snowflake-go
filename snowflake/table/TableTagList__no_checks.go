@@ -15,7 +15,7 @@ func (t *jsiiProxy_TableTagList) validateGetParameters(index *float64) error {
 	return nil
 }
 
-func (t *jsiiProxy_TableTagList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TableTagList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

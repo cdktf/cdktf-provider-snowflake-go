@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeGitRepositoriesGitRepositoriesList) validateGetP
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeGitRepositoriesGitRepositoriesList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeGitRepositoriesGitRepositoriesList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeTasksTasksParametersAbortDetachedQueryList) vali
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksTasksParametersAbortDetachedQueryList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeTasksTasksParametersAbortDetachedQueryList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

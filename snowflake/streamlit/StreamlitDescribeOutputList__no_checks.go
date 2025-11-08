@@ -15,7 +15,7 @@ func (s *jsiiProxy_StreamlitDescribeOutputList) validateGetParameters(index *flo
 	return nil
 }
 
-func (s *jsiiProxy_StreamlitDescribeOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_StreamlitDescribeOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

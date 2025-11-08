@@ -15,7 +15,7 @@ func (u *jsiiProxy_UserShowOutputList) validateGetParameters(index *float64) err
 	return nil
 }
 
-func (u *jsiiProxy_UserShowOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserShowOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

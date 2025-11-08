@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeUsersUsersParametersTimezoneList) validateGetPar
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeUsersUsersParametersTimezoneList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeUsersUsersParametersTimezoneList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

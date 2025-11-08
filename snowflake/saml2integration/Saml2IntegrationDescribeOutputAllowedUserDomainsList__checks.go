@@ -27,9 +27,9 @@ func (s *jsiiProxy_Saml2IntegrationDescribeOutputAllowedUserDomainsList) validat
 	return nil
 }
 
-func (s *jsiiProxy_Saml2IntegrationDescribeOutputAllowedUserDomainsList) validateResolveParameters(_context cdktf.IResolveContext) error {
-	if _context == nil {
-		return fmt.Errorf("parameter _context is required, but nil was provided")
+func (s *jsiiProxy_Saml2IntegrationDescribeOutputAllowedUserDomainsList) validateResolveParameters(context cdktf.IResolveContext) error {
+	if context == nil {
+		return fmt.Errorf("parameter context is required, but nil was provided")
 	}
 
 	return nil

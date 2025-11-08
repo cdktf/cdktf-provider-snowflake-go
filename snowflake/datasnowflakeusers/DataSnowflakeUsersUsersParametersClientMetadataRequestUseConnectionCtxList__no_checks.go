@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeUsersUsersParametersClientMetadataRequestUseConn
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeUsersUsersParametersClientMetadataRequestUseConnectionCtxList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeUsersUsersParametersClientMetadataRequestUseConnectionCtxList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

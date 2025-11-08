@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersJdbcTreatTimestampNtzAsUtcList) validateGetPara
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersJdbcTreatTimestampNtzAsUtcList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersJdbcTreatTimestampNtzAsUtcList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

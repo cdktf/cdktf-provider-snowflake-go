@@ -39,7 +39,7 @@ type UserParametersRowsPerResultsetList interface {
 	Get(index *float64) UserParametersRowsPerResultsetOutputReference
 	// Produce the Token's value at resolution time.
 	// Experimental.
-	Resolve(_context cdktf.IResolveContext) interface{}
+	Resolve(context cdktf.IResolveContext) interface{}
 	// Return a string representation of this resolvable object.
 	//
 	// Returns a reversible string representation.
@@ -208,8 +208,8 @@ func (u *jsiiProxy_UserParametersRowsPerResultsetList) Get(index *float64) UserP
 	return returns
 }
 
-func (u *jsiiProxy_UserParametersRowsPerResultsetList) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := u.validateResolveParameters(_context); err != nil {
+func (u *jsiiProxy_UserParametersRowsPerResultsetList) Resolve(context cdktf.IResolveContext) interface{} {
+	if err := u.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
@@ -217,7 +217,7 @@ func (u *jsiiProxy_UserParametersRowsPerResultsetList) Resolve(_context cdktf.IR
 	_jsii_.Invoke(
 		u,
 		"resolve",
-		[]interface{}{_context},
+		[]interface{}{context},
 		&returns,
 	)
 

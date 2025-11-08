@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataSnowflakeUsersUsersParametersJdbcTreatDecimalAsIntOutputR
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeUsersUsersParametersJdbcTreatDecimalAsIntOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataSnowflakeUsersUsersParametersJdbcTreatDecimalAsIntOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeUsersUsersParametersJdbcTreatDecimalAsIntOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeUsersUsersParametersJdbcTreatDecimalAsIntOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

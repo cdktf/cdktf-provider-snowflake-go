@@ -43,11 +43,11 @@ func (l *jsiiProxy_LegacyServiceUserParametersTimestampNtzOutputFormatOutputRefe
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersTimestampNtzOutputFormatOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (l *jsiiProxy_LegacyServiceUserParametersTimestampNtzOutputFormatOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersTimestampNtzOutputFormatOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersTimestampNtzOutputFormatOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

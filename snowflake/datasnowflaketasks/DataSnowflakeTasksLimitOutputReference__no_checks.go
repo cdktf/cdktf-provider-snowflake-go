@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataSnowflakeTasksLimitOutputReference) validateGetStringMapA
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksLimitOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataSnowflakeTasksLimitOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksLimitOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeTasksLimitOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataSnowflakeUsersUsersParametersQueryTagOutputReference) val
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeUsersUsersParametersQueryTagOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataSnowflakeUsersUsersParametersQueryTagOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeUsersUsersParametersQueryTagOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeUsersUsersParametersQueryTagOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

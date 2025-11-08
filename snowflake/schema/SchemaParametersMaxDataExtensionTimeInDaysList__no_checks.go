@@ -15,7 +15,7 @@ func (s *jsiiProxy_SchemaParametersMaxDataExtensionTimeInDaysList) validateGetPa
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersMaxDataExtensionTimeInDaysList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SchemaParametersMaxDataExtensionTimeInDaysList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

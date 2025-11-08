@@ -15,7 +15,7 @@ func (l *jsiiProxy_LegacyServiceUserParametersClientSessionKeepAliveList) valida
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersClientSessionKeepAliveList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersClientSessionKeepAliveList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

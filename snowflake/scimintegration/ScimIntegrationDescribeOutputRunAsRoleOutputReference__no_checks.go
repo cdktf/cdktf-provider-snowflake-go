@@ -43,11 +43,11 @@ func (s *jsiiProxy_ScimIntegrationDescribeOutputRunAsRoleOutputReference) valida
 	return nil
 }
 
-func (s *jsiiProxy_ScimIntegrationDescribeOutputRunAsRoleOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_ScimIntegrationDescribeOutputRunAsRoleOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_ScimIntegrationDescribeOutputRunAsRoleOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ScimIntegrationDescribeOutputRunAsRoleOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (f *jsiiProxy_FunctionJavascriptShowOutputList) validateGetParameters(index
 	return nil
 }
 
-func (f *jsiiProxy_FunctionJavascriptShowOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (f *jsiiProxy_FunctionJavascriptShowOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

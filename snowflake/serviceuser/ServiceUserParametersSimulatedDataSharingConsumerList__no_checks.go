@@ -15,7 +15,7 @@ func (s *jsiiProxy_ServiceUserParametersSimulatedDataSharingConsumerList) valida
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersSimulatedDataSharingConsumerList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServiceUserParametersSimulatedDataSharingConsumerList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

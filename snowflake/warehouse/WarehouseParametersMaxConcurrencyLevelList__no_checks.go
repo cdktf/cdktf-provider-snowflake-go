@@ -15,7 +15,7 @@ func (w *jsiiProxy_WarehouseParametersMaxConcurrencyLevelList) validateGetParame
 	return nil
 }
 
-func (w *jsiiProxy_WarehouseParametersMaxConcurrencyLevelList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (w *jsiiProxy_WarehouseParametersMaxConcurrencyLevelList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

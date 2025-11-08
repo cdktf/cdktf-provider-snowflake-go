@@ -15,7 +15,7 @@ func (o *jsiiProxy_OauthIntegrationForCustomClientsDescribeOutputOauthAllowNonTl
 	return nil
 }
 
-func (o *jsiiProxy_OauthIntegrationForCustomClientsDescribeOutputOauthAllowNonTlsRedirectUriList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (o *jsiiProxy_OauthIntegrationForCustomClientsDescribeOutputOauthAllowNonTlsRedirectUriList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

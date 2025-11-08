@@ -15,7 +15,7 @@ func (s *jsiiProxy_ServiceUserParametersUnsupportedDdlActionList) validateGetPar
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersUnsupportedDdlActionList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServiceUserParametersUnsupportedDdlActionList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

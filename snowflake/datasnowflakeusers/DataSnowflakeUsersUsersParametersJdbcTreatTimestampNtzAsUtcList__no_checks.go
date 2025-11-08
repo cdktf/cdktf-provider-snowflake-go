@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeUsersUsersParametersJdbcTreatTimestampNtzAsUtcLi
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeUsersUsersParametersJdbcTreatTimestampNtzAsUtcList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeUsersUsersParametersJdbcTreatTimestampNtzAsUtcList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

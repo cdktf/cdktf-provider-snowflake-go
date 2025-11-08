@@ -43,11 +43,11 @@ func (a *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearerDescribeOutputOauthG
 	return nil
 }
 
-func (a *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearerDescribeOutputOauthGrantOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (a *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearerDescribeOutputOauthGrantOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (a *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearerDescribeOutputOauthGrantOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (a *jsiiProxy_ApiAuthenticationIntegrationWithJwtBearerDescribeOutputOauthGrantOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

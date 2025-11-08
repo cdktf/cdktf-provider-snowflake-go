@@ -15,7 +15,7 @@ func (m *jsiiProxy_MaterializedViewTagList) validateGetParameters(index *float64
 	return nil
 }
 
-func (m *jsiiProxy_MaterializedViewTagList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_MaterializedViewTagList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -39,7 +39,7 @@ type UserParametersTimestampTypeMappingList interface {
 	Get(index *float64) UserParametersTimestampTypeMappingOutputReference
 	// Produce the Token's value at resolution time.
 	// Experimental.
-	Resolve(_context cdktf.IResolveContext) interface{}
+	Resolve(context cdktf.IResolveContext) interface{}
 	// Return a string representation of this resolvable object.
 	//
 	// Returns a reversible string representation.
@@ -208,8 +208,8 @@ func (u *jsiiProxy_UserParametersTimestampTypeMappingList) Get(index *float64) U
 	return returns
 }
 
-func (u *jsiiProxy_UserParametersTimestampTypeMappingList) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := u.validateResolveParameters(_context); err != nil {
+func (u *jsiiProxy_UserParametersTimestampTypeMappingList) Resolve(context cdktf.IResolveContext) interface{} {
+	if err := u.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
@@ -217,7 +217,7 @@ func (u *jsiiProxy_UserParametersTimestampTypeMappingList) Resolve(_context cdkt
 	_jsii_.Invoke(
 		u,
 		"resolve",
-		[]interface{}{_context},
+		[]interface{}{context},
 		&returns,
 	)
 

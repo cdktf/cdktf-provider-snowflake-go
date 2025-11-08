@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataSnowflakeAuthenticationPoliciesLimitOutputReference) vali
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeAuthenticationPoliciesLimitOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataSnowflakeAuthenticationPoliciesLimitOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeAuthenticationPoliciesLimitOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeAuthenticationPoliciesLimitOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

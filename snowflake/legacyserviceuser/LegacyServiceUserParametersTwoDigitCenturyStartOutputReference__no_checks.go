@@ -43,11 +43,11 @@ func (l *jsiiProxy_LegacyServiceUserParametersTwoDigitCenturyStartOutputReferenc
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersTwoDigitCenturyStartOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (l *jsiiProxy_LegacyServiceUserParametersTwoDigitCenturyStartOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersTwoDigitCenturyStartOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersTwoDigitCenturyStartOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

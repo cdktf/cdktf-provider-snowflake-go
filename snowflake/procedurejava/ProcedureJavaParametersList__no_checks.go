@@ -15,7 +15,7 @@ func (p *jsiiProxy_ProcedureJavaParametersList) validateGetParameters(index *flo
 	return nil
 }
 
-func (p *jsiiProxy_ProcedureJavaParametersList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (p *jsiiProxy_ProcedureJavaParametersList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

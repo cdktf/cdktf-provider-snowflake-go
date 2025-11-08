@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataSnowflakeUsersUsersParametersTimezoneOutputReference) val
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeUsersUsersParametersTimezoneOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataSnowflakeUsersUsersParametersTimezoneOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeUsersUsersParametersTimezoneOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeUsersUsersParametersTimezoneOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

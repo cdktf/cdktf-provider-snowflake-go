@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataSnowflakeTasksTasksParametersUseCachedResultOutputReferen
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksTasksParametersUseCachedResultOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataSnowflakeTasksTasksParametersUseCachedResultOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksTasksParametersUseCachedResultOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeTasksTasksParametersUseCachedResultOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

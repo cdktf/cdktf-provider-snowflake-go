@@ -15,7 +15,7 @@ func (p *jsiiProxy_ProcedurePythonArgumentsList) validateGetParameters(index *fl
 	return nil
 }
 
-func (p *jsiiProxy_ProcedurePythonArgumentsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (p *jsiiProxy_ProcedurePythonArgumentsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

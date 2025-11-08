@@ -15,7 +15,7 @@ func (l *jsiiProxy_LegacyServiceUserParametersClientMetadataRequestUseConnection
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersClientMetadataRequestUseConnectionCtxList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersClientMetadataRequestUseConnectionCtxList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

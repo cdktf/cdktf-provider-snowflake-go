@@ -43,7 +43,7 @@ func (f *jsiiProxy_FailoverGroupReplicationScheduleOutputReference) validateGetS
 	return nil
 }
 
-func (f *jsiiProxy_FailoverGroupReplicationScheduleOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (f *jsiiProxy_FailoverGroupReplicationScheduleOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
@@ -51,7 +51,7 @@ func (f *jsiiProxy_FailoverGroupReplicationScheduleOutputReference) validatePutC
 	return nil
 }
 
-func (f *jsiiProxy_FailoverGroupReplicationScheduleOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (f *jsiiProxy_FailoverGroupReplicationScheduleOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

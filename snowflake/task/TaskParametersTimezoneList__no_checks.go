@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersTimezoneList) validateGetParameters(index *floa
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersTimezoneList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersTimezoneList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -43,11 +43,11 @@ func (s *jsiiProxy_StreamOnDirectoryTableShowOutputOutputReference) validateGetS
 	return nil
 }
 
-func (s *jsiiProxy_StreamOnDirectoryTableShowOutputOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_StreamOnDirectoryTableShowOutputOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_StreamOnDirectoryTableShowOutputOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_StreamOnDirectoryTableShowOutputOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataSnowflakeTasksTasksParametersErrorOnNondeterministicUpdat
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksTasksParametersErrorOnNondeterministicUpdateOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataSnowflakeTasksTasksParametersErrorOnNondeterministicUpdateOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksTasksParametersErrorOnNondeterministicUpdateOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeTasksTasksParametersErrorOnNondeterministicUpdateOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

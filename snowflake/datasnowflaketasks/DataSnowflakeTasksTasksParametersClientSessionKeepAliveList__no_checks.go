@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeTasksTasksParametersClientSessionKeepAliveList) 
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksTasksParametersClientSessionKeepAliveList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeTasksTasksParametersClientSessionKeepAliveList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

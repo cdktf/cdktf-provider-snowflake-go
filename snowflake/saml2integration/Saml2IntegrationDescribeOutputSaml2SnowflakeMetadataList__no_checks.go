@@ -15,7 +15,7 @@ func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2SnowflakeMetadataList) val
 	return nil
 }
 
-func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2SnowflakeMetadataList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2SnowflakeMetadataList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -85,17 +85,17 @@ func (u *jsiiProxy_UserParametersClientTimestampTypeMappingOutputReference) vali
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersClientTimestampTypeMappingOutputReference) validateInterpolationForAttributeParameters(property *string) error {
-	if property == nil {
-		return fmt.Errorf("parameter property is required, but nil was provided")
+func (u *jsiiProxy_UserParametersClientTimestampTypeMappingOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	if terraformAttribute == nil {
+		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
 
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersClientTimestampTypeMappingOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
-	if _context == nil {
-		return fmt.Errorf("parameter _context is required, but nil was provided")
+func (u *jsiiProxy_UserParametersClientTimestampTypeMappingOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
+	if context == nil {
+		return fmt.Errorf("parameter context is required, but nil was provided")
 	}
 
 	return nil

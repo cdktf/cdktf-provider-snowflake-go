@@ -15,7 +15,7 @@ func (f *jsiiProxy_FunctionScalaSecretsList) validateGetParameters(index *float6
 	return nil
 }
 
-func (f *jsiiProxy_FunctionScalaSecretsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (f *jsiiProxy_FunctionScalaSecretsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

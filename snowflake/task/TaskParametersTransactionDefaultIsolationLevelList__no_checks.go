@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersTransactionDefaultIsolationLevelList) validateG
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersTransactionDefaultIsolationLevelList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersTransactionDefaultIsolationLevelList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

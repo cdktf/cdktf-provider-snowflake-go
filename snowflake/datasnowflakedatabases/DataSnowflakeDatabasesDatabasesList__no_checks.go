@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeDatabasesDatabasesList) validateGetParameters(in
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeDatabasesDatabasesList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeDatabasesDatabasesList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (s *jsiiProxy_StorageIntegrationDescribeOutputAzureMultiTenantAppNameList) 
 	return nil
 }
 
-func (s *jsiiProxy_StorageIntegrationDescribeOutputAzureMultiTenantAppNameList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_StorageIntegrationDescribeOutputAzureMultiTenantAppNameList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

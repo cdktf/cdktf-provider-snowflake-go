@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersAutocommitList) validateGetParameters(index *fl
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersAutocommitList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersAutocommitList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

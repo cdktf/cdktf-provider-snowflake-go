@@ -43,11 +43,11 @@ func (u *jsiiProxy_UserParametersClientResultChunkSizeOutputReference) validateG
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersClientResultChunkSizeOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (u *jsiiProxy_UserParametersClientResultChunkSizeOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersClientResultChunkSizeOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersClientResultChunkSizeOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

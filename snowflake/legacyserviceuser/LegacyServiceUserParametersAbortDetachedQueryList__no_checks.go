@@ -15,7 +15,7 @@ func (l *jsiiProxy_LegacyServiceUserParametersAbortDetachedQueryList) validateGe
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersAbortDetachedQueryList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersAbortDetachedQueryList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

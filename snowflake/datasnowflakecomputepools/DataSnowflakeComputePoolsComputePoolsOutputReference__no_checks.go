@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataSnowflakeComputePoolsComputePoolsOutputReference) validat
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeComputePoolsComputePoolsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataSnowflakeComputePoolsComputePoolsOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeComputePoolsComputePoolsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeComputePoolsComputePoolsOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

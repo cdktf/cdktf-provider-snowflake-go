@@ -15,7 +15,7 @@ func (o *jsiiProxy_OauthIntegrationForCustomClientsRelatedParametersList) valida
 	return nil
 }
 
-func (o *jsiiProxy_OauthIntegrationForCustomClientsRelatedParametersList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (o *jsiiProxy_OauthIntegrationForCustomClientsRelatedParametersList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

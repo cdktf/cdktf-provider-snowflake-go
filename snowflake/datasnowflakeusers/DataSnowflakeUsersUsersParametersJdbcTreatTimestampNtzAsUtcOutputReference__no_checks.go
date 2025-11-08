@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataSnowflakeUsersUsersParametersJdbcTreatTimestampNtzAsUtcOu
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeUsersUsersParametersJdbcTreatTimestampNtzAsUtcOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataSnowflakeUsersUsersParametersJdbcTreatTimestampNtzAsUtcOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeUsersUsersParametersJdbcTreatTimestampNtzAsUtcOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeUsersUsersParametersJdbcTreatTimestampNtzAsUtcOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

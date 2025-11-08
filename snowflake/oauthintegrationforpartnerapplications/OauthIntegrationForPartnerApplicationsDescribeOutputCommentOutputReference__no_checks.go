@@ -43,11 +43,11 @@ func (o *jsiiProxy_OauthIntegrationForPartnerApplicationsDescribeOutputCommentOu
 	return nil
 }
 
-func (o *jsiiProxy_OauthIntegrationForPartnerApplicationsDescribeOutputCommentOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (o *jsiiProxy_OauthIntegrationForPartnerApplicationsDescribeOutputCommentOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (o *jsiiProxy_OauthIntegrationForPartnerApplicationsDescribeOutputCommentOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (o *jsiiProxy_OauthIntegrationForPartnerApplicationsDescribeOutputCommentOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

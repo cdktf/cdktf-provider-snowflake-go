@@ -39,7 +39,7 @@ type UserShowOutputList interface {
 	Get(index *float64) UserShowOutputOutputReference
 	// Produce the Token's value at resolution time.
 	// Experimental.
-	Resolve(_context cdktf.IResolveContext) interface{}
+	Resolve(context cdktf.IResolveContext) interface{}
 	// Return a string representation of this resolvable object.
 	//
 	// Returns a reversible string representation.
@@ -208,8 +208,8 @@ func (u *jsiiProxy_UserShowOutputList) Get(index *float64) UserShowOutputOutputR
 	return returns
 }
 
-func (u *jsiiProxy_UserShowOutputList) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := u.validateResolveParameters(_context); err != nil {
+func (u *jsiiProxy_UserShowOutputList) Resolve(context cdktf.IResolveContext) interface{} {
+	if err := u.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
@@ -217,7 +217,7 @@ func (u *jsiiProxy_UserShowOutputList) Resolve(_context cdktf.IResolveContext) i
 	_jsii_.Invoke(
 		u,
 		"resolve",
-		[]interface{}{_context},
+		[]interface{}{context},
 		&returns,
 	)
 

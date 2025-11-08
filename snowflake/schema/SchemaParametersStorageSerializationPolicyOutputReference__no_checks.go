@@ -43,11 +43,11 @@ func (s *jsiiProxy_SchemaParametersStorageSerializationPolicyOutputReference) va
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersStorageSerializationPolicyOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_SchemaParametersStorageSerializationPolicyOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersStorageSerializationPolicyOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SchemaParametersStorageSerializationPolicyOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersStatementQueuedTimeoutInSecondsList) validateGe
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersStatementQueuedTimeoutInSecondsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersStatementQueuedTimeoutInSecondsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

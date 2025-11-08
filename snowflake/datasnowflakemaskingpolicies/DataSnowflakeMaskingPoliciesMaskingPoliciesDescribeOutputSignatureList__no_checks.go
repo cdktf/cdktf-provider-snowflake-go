@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeMaskingPoliciesMaskingPoliciesDescribeOutputSign
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeMaskingPoliciesMaskingPoliciesDescribeOutputSignatureList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeMaskingPoliciesMaskingPoliciesDescribeOutputSignatureList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

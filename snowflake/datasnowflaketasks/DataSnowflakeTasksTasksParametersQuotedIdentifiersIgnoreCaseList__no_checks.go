@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeTasksTasksParametersQuotedIdentifiersIgnoreCaseL
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksTasksParametersQuotedIdentifiersIgnoreCaseList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeTasksTasksParametersQuotedIdentifiersIgnoreCaseList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (e *jsiiProxy_ExternalTableTagList) validateGetParameters(index *float64) e
 	return nil
 }
 
-func (e *jsiiProxy_ExternalTableTagList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (e *jsiiProxy_ExternalTableTagList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -43,11 +43,11 @@ func (s *jsiiProxy_StorageIntegrationDescribeOutputUsePrivatelinkEndpointOutputR
 	return nil
 }
 
-func (s *jsiiProxy_StorageIntegrationDescribeOutputUsePrivatelinkEndpointOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_StorageIntegrationDescribeOutputUsePrivatelinkEndpointOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_StorageIntegrationDescribeOutputUsePrivatelinkEndpointOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_StorageIntegrationDescribeOutputUsePrivatelinkEndpointOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

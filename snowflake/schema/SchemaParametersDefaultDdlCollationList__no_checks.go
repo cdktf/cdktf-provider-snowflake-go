@@ -15,7 +15,7 @@ func (s *jsiiProxy_SchemaParametersDefaultDdlCollationList) validateGetParameter
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersDefaultDdlCollationList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SchemaParametersDefaultDdlCollationList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -43,11 +43,11 @@ func (l *jsiiProxy_LegacyServiceUserParametersPreventUnloadToInternalStagesOutpu
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersPreventUnloadToInternalStagesOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (l *jsiiProxy_LegacyServiceUserParametersPreventUnloadToInternalStagesOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersPreventUnloadToInternalStagesOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersPreventUnloadToInternalStagesOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -27,9 +27,9 @@ func (s *jsiiProxy_ServiceUserParametersAutocommitList) validateGetParameters(in
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersAutocommitList) validateResolveParameters(_context cdktf.IResolveContext) error {
-	if _context == nil {
-		return fmt.Errorf("parameter _context is required, but nil was provided")
+func (s *jsiiProxy_ServiceUserParametersAutocommitList) validateResolveParameters(context cdktf.IResolveContext) error {
+	if context == nil {
+		return fmt.Errorf("parameter context is required, but nil was provided")
 	}
 
 	return nil

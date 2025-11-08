@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeTasksTasksParametersUserTaskManagedInitialWareho
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksTasksParametersUserTaskManagedInitialWarehouseSizeList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeTasksTasksParametersUserTaskManagedInitialWarehouseSizeList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

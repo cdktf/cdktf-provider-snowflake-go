@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeTasksTasksParametersTimestampDayIsAlways24HList)
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksTasksParametersTimestampDayIsAlways24HList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeTasksTasksParametersTimestampDayIsAlways24HList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

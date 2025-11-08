@@ -43,11 +43,11 @@ func (u *jsiiProxy_UserParametersGeographyOutputFormatOutputReference) validateG
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersGeographyOutputFormatOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (u *jsiiProxy_UserParametersGeographyOutputFormatOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersGeographyOutputFormatOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersGeographyOutputFormatOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

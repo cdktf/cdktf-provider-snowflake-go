@@ -43,11 +43,11 @@ func (s *jsiiProxy_StorageIntegrationDescribeOutputAzureConsentUrlOutputReferenc
 	return nil
 }
 
-func (s *jsiiProxy_StorageIntegrationDescribeOutputAzureConsentUrlOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_StorageIntegrationDescribeOutputAzureConsentUrlOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_StorageIntegrationDescribeOutputAzureConsentUrlOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_StorageIntegrationDescribeOutputAzureConsentUrlOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

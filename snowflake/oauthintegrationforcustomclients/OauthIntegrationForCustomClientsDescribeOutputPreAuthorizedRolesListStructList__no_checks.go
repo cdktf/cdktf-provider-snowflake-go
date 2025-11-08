@@ -15,7 +15,7 @@ func (o *jsiiProxy_OauthIntegrationForCustomClientsDescribeOutputPreAuthorizedRo
 	return nil
 }
 
-func (o *jsiiProxy_OauthIntegrationForCustomClientsDescribeOutputPreAuthorizedRolesListStructList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (o *jsiiProxy_OauthIntegrationForCustomClientsDescribeOutputPreAuthorizedRolesListStructList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

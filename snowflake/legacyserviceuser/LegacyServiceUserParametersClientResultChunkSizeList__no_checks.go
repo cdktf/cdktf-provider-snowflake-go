@@ -15,7 +15,7 @@ func (l *jsiiProxy_LegacyServiceUserParametersClientResultChunkSizeList) validat
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersClientResultChunkSizeList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersClientResultChunkSizeList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeStorageIntegrationsStorageIntegrationsList) vali
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeStorageIntegrationsStorageIntegrationsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeStorageIntegrationsStorageIntegrationsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

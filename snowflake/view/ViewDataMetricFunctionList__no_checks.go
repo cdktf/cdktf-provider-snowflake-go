@@ -15,7 +15,7 @@ func (v *jsiiProxy_ViewDataMetricFunctionList) validateGetParameters(index *floa
 	return nil
 }
 
-func (v *jsiiProxy_ViewDataMetricFunctionList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (v *jsiiProxy_ViewDataMetricFunctionList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

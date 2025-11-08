@@ -43,11 +43,11 @@ func (u *jsiiProxy_UserParametersWeekOfYearPolicyOutputReference) validateGetStr
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersWeekOfYearPolicyOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (u *jsiiProxy_UserParametersWeekOfYearPolicyOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersWeekOfYearPolicyOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersWeekOfYearPolicyOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

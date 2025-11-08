@@ -27,9 +27,9 @@ func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2RequestedNameidFormatList)
 	return nil
 }
 
-func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2RequestedNameidFormatList) validateResolveParameters(_context cdktf.IResolveContext) error {
-	if _context == nil {
-		return fmt.Errorf("parameter _context is required, but nil was provided")
+func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2RequestedNameidFormatList) validateResolveParameters(context cdktf.IResolveContext) error {
+	if context == nil {
+		return fmt.Errorf("parameter context is required, but nil was provided")
 	}
 
 	return nil

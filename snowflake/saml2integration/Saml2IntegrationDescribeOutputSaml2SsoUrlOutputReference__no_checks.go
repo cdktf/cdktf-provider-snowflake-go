@@ -43,11 +43,11 @@ func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2SsoUrlOutputReference) val
 	return nil
 }
 
-func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2SsoUrlOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2SsoUrlOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2SsoUrlOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2SsoUrlOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

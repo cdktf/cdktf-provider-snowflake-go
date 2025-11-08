@@ -15,7 +15,7 @@ func (s *jsiiProxy_StreamOnDirectoryTableDescribeOutputList) validateGetParamete
 	return nil
 }
 
-func (s *jsiiProxy_StreamOnDirectoryTableDescribeOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_StreamOnDirectoryTableDescribeOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

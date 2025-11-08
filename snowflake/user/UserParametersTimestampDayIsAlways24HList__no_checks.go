@@ -15,7 +15,7 @@ func (u *jsiiProxy_UserParametersTimestampDayIsAlways24HList) validateGetParamet
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersTimestampDayIsAlways24HList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersTimestampDayIsAlways24HList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -43,11 +43,11 @@ func (s *jsiiProxy_SchemaParametersUserTaskManagedInitialWarehouseSizeOutputRefe
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersUserTaskManagedInitialWarehouseSizeOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_SchemaParametersUserTaskManagedInitialWarehouseSizeOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersUserTaskManagedInitialWarehouseSizeOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SchemaParametersUserTaskManagedInitialWarehouseSizeOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (s *jsiiProxy_ServiceUserParametersClientMemoryLimitList) validateGetParame
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersClientMemoryLimitList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServiceUserParametersClientMemoryLimitList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (l *jsiiProxy_LegacyServiceUserParametersClientSessionKeepAliveHeartbeatFre
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersClientSessionKeepAliveHeartbeatFrequencyList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersClientSessionKeepAliveHeartbeatFrequencyList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

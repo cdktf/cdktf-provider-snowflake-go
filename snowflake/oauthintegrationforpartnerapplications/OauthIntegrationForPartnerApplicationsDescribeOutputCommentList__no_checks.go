@@ -15,7 +15,7 @@ func (o *jsiiProxy_OauthIntegrationForPartnerApplicationsDescribeOutputCommentLi
 	return nil
 }
 
-func (o *jsiiProxy_OauthIntegrationForPartnerApplicationsDescribeOutputCommentList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (o *jsiiProxy_OauthIntegrationForPartnerApplicationsDescribeOutputCommentList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

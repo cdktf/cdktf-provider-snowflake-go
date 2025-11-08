@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeDatabasesDatabasesParametersSuspendTaskAfterNumF
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeDatabasesDatabasesParametersSuspendTaskAfterNumFailuresList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeDatabasesDatabasesParametersSuspendTaskAfterNumFailuresList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

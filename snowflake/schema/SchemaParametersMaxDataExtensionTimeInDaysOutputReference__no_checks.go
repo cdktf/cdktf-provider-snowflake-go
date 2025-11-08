@@ -43,11 +43,11 @@ func (s *jsiiProxy_SchemaParametersMaxDataExtensionTimeInDaysOutputReference) va
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersMaxDataExtensionTimeInDaysOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_SchemaParametersMaxDataExtensionTimeInDaysOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersMaxDataExtensionTimeInDaysOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SchemaParametersMaxDataExtensionTimeInDaysOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

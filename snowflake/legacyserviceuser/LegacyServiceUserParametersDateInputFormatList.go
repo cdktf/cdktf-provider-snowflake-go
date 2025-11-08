@@ -39,7 +39,7 @@ type LegacyServiceUserParametersDateInputFormatList interface {
 	Get(index *float64) LegacyServiceUserParametersDateInputFormatOutputReference
 	// Produce the Token's value at resolution time.
 	// Experimental.
-	Resolve(_context cdktf.IResolveContext) interface{}
+	Resolve(context cdktf.IResolveContext) interface{}
 	// Return a string representation of this resolvable object.
 	//
 	// Returns a reversible string representation.
@@ -208,8 +208,8 @@ func (l *jsiiProxy_LegacyServiceUserParametersDateInputFormatList) Get(index *fl
 	return returns
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersDateInputFormatList) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := l.validateResolveParameters(_context); err != nil {
+func (l *jsiiProxy_LegacyServiceUserParametersDateInputFormatList) Resolve(context cdktf.IResolveContext) interface{} {
+	if err := l.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
@@ -217,7 +217,7 @@ func (l *jsiiProxy_LegacyServiceUserParametersDateInputFormatList) Resolve(_cont
 	_jsii_.Invoke(
 		l,
 		"resolve",
-		[]interface{}{_context},
+		[]interface{}{context},
 		&returns,
 	)
 

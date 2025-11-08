@@ -43,11 +43,11 @@ func (t *jsiiProxy_TaskParametersTwoDigitCenturyStartOutputReference) validateGe
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersTwoDigitCenturyStartOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (t *jsiiProxy_TaskParametersTwoDigitCenturyStartOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersTwoDigitCenturyStartOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersTwoDigitCenturyStartOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

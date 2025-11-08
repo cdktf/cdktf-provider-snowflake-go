@@ -15,7 +15,7 @@ func (s *jsiiProxy_SchemaParametersReplaceInvalidCharactersList) validateGetPara
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersReplaceInvalidCharactersList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SchemaParametersReplaceInvalidCharactersList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

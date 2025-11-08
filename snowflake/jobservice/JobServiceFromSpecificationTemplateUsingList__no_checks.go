@@ -15,7 +15,7 @@ func (j *jsiiProxy_JobServiceFromSpecificationTemplateUsingList) validateGetPara
 	return nil
 }
 
-func (j *jsiiProxy_JobServiceFromSpecificationTemplateUsingList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (j *jsiiProxy_JobServiceFromSpecificationTemplateUsingList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

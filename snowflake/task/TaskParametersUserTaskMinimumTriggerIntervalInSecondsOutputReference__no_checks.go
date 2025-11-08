@@ -43,11 +43,11 @@ func (t *jsiiProxy_TaskParametersUserTaskMinimumTriggerIntervalInSecondsOutputRe
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersUserTaskMinimumTriggerIntervalInSecondsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (t *jsiiProxy_TaskParametersUserTaskMinimumTriggerIntervalInSecondsOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersUserTaskMinimumTriggerIntervalInSecondsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersUserTaskMinimumTriggerIntervalInSecondsOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

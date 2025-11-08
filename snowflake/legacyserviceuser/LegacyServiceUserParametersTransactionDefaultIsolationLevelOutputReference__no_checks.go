@@ -43,11 +43,11 @@ func (l *jsiiProxy_LegacyServiceUserParametersTransactionDefaultIsolationLevelOu
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersTransactionDefaultIsolationLevelOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (l *jsiiProxy_LegacyServiceUserParametersTransactionDefaultIsolationLevelOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersTransactionDefaultIsolationLevelOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersTransactionDefaultIsolationLevelOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

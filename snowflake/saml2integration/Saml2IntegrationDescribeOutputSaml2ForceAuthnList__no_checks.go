@@ -15,7 +15,7 @@ func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2ForceAuthnList) validateGe
 	return nil
 }
 
-func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2ForceAuthnList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2ForceAuthnList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

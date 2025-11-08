@@ -43,11 +43,11 @@ func (l *jsiiProxy_LegacyServiceUserParametersS3StageVpceDnsNameOutputReference)
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersS3StageVpceDnsNameOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (l *jsiiProxy_LegacyServiceUserParametersS3StageVpceDnsNameOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersS3StageVpceDnsNameOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersS3StageVpceDnsNameOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

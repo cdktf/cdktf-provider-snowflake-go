@@ -15,7 +15,7 @@ func (p *jsiiProxy_ProcedurePythonSecretsList) validateGetParameters(index *floa
 	return nil
 }
 
-func (p *jsiiProxy_ProcedurePythonSecretsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (p *jsiiProxy_ProcedurePythonSecretsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

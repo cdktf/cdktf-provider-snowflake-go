@@ -15,7 +15,7 @@ func (o *jsiiProxy_OauthIntegrationForCustomClientsDescribeOutputOauthClientRsaP
 	return nil
 }
 
-func (o *jsiiProxy_OauthIntegrationForCustomClientsDescribeOutputOauthClientRsaPublicKey2FpList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (o *jsiiProxy_OauthIntegrationForCustomClientsDescribeOutputOauthClientRsaPublicKey2FpList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

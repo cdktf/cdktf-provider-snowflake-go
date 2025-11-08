@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeDatabasesDatabasesParametersStorageSerialization
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeDatabasesDatabasesParametersStorageSerializationPolicyList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeDatabasesDatabasesParametersStorageSerializationPolicyList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

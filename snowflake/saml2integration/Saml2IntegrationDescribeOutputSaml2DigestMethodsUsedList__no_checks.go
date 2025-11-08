@@ -15,7 +15,7 @@ func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2DigestMethodsUsedList) val
 	return nil
 }
 
-func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2DigestMethodsUsedList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2DigestMethodsUsedList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

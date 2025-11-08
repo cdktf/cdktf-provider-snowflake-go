@@ -43,11 +43,11 @@ func (e *jsiiProxy_ExternalOauthIntegrationDescribeOutputExternalOauthTokenUserM
 	return nil
 }
 
-func (e *jsiiProxy_ExternalOauthIntegrationDescribeOutputExternalOauthTokenUserMappingClaimOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (e *jsiiProxy_ExternalOauthIntegrationDescribeOutputExternalOauthTokenUserMappingClaimOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (e *jsiiProxy_ExternalOauthIntegrationDescribeOutputExternalOauthTokenUserMappingClaimOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (e *jsiiProxy_ExternalOauthIntegrationDescribeOutputExternalOauthTokenUserMappingClaimOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

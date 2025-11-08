@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeWarehousesWarehousesParametersStatementTimeoutIn
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeWarehousesWarehousesParametersStatementTimeoutInSecondsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeWarehousesWarehousesParametersStatementTimeoutInSecondsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

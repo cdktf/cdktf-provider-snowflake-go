@@ -15,7 +15,7 @@ func (c *jsiiProxy_ComputePoolDescribeOutputList) validateGetParameters(index *f
 	return nil
 }
 
-func (c *jsiiProxy_ComputePoolDescribeOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (c *jsiiProxy_ComputePoolDescribeOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

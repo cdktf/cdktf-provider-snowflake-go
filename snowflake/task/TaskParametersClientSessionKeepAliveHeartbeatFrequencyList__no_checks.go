@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersClientSessionKeepAliveHeartbeatFrequencyList) v
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersClientSessionKeepAliveHeartbeatFrequencyList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersClientSessionKeepAliveHeartbeatFrequencyList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

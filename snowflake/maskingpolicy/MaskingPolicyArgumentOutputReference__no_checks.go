@@ -43,11 +43,11 @@ func (m *jsiiProxy_MaskingPolicyArgumentOutputReference) validateGetStringMapAtt
 	return nil
 }
 
-func (m *jsiiProxy_MaskingPolicyArgumentOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (m *jsiiProxy_MaskingPolicyArgumentOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (m *jsiiProxy_MaskingPolicyArgumentOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_MaskingPolicyArgumentOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

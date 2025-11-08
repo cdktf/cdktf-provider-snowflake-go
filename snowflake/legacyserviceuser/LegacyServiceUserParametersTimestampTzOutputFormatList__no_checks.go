@@ -15,7 +15,7 @@ func (l *jsiiProxy_LegacyServiceUserParametersTimestampTzOutputFormatList) valid
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersTimestampTzOutputFormatList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersTimestampTzOutputFormatList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (f *jsiiProxy_FunctionSqlParametersMetricLevelList) validateGetParameters(i
 	return nil
 }
 
-func (f *jsiiProxy_FunctionSqlParametersMetricLevelList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (f *jsiiProxy_FunctionSqlParametersMetricLevelList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

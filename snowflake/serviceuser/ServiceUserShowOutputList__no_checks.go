@@ -15,7 +15,7 @@ func (s *jsiiProxy_ServiceUserShowOutputList) validateGetParameters(index *float
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserShowOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServiceUserShowOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

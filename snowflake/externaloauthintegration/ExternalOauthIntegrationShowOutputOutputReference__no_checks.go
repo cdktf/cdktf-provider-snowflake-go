@@ -43,11 +43,11 @@ func (e *jsiiProxy_ExternalOauthIntegrationShowOutputOutputReference) validateGe
 	return nil
 }
 
-func (e *jsiiProxy_ExternalOauthIntegrationShowOutputOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (e *jsiiProxy_ExternalOauthIntegrationShowOutputOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (e *jsiiProxy_ExternalOauthIntegrationShowOutputOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (e *jsiiProxy_ExternalOauthIntegrationShowOutputOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

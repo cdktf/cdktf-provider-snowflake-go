@@ -15,7 +15,7 @@ func (s *jsiiProxy_ServiceUserParametersTimestampNtzOutputFormatList) validateGe
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersTimestampNtzOutputFormatList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServiceUserParametersTimestampNtzOutputFormatList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

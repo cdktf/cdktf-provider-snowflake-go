@@ -27,9 +27,9 @@ func (s *jsiiProxy_SchemaParametersMaxDataExtensionTimeInDaysList) validateGetPa
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersMaxDataExtensionTimeInDaysList) validateResolveParameters(_context cdktf.IResolveContext) error {
-	if _context == nil {
-		return fmt.Errorf("parameter _context is required, but nil was provided")
+func (s *jsiiProxy_SchemaParametersMaxDataExtensionTimeInDaysList) validateResolveParameters(context cdktf.IResolveContext) error {
+	if context == nil {
+		return fmt.Errorf("parameter context is required, but nil was provided")
 	}
 
 	return nil

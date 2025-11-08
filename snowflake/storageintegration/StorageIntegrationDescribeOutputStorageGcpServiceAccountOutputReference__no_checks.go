@@ -43,11 +43,11 @@ func (s *jsiiProxy_StorageIntegrationDescribeOutputStorageGcpServiceAccountOutpu
 	return nil
 }
 
-func (s *jsiiProxy_StorageIntegrationDescribeOutputStorageGcpServiceAccountOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_StorageIntegrationDescribeOutputStorageGcpServiceAccountOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_StorageIntegrationDescribeOutputStorageGcpServiceAccountOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_StorageIntegrationDescribeOutputStorageGcpServiceAccountOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

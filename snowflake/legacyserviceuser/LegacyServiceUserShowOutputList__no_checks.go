@@ -15,7 +15,7 @@ func (l *jsiiProxy_LegacyServiceUserShowOutputList) validateGetParameters(index 
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserShowOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserShowOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

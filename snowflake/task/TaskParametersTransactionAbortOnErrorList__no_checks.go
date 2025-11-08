@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersTransactionAbortOnErrorList) validateGetParamet
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersTransactionAbortOnErrorList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersTransactionAbortOnErrorList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

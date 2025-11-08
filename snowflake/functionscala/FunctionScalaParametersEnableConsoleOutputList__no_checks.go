@@ -15,7 +15,7 @@ func (f *jsiiProxy_FunctionScalaParametersEnableConsoleOutputList) validateGetPa
 	return nil
 }
 
-func (f *jsiiProxy_FunctionScalaParametersEnableConsoleOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (f *jsiiProxy_FunctionScalaParametersEnableConsoleOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

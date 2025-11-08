@@ -15,7 +15,7 @@ func (s *jsiiProxy_ServiceUserParametersTwoDigitCenturyStartList) validateGetPar
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersTwoDigitCenturyStartList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServiceUserParametersTwoDigitCenturyStartList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

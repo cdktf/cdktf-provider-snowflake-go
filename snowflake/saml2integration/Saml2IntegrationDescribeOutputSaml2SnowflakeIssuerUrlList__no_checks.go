@@ -15,7 +15,7 @@ func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2SnowflakeIssuerUrlList) va
 	return nil
 }
 
-func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2SnowflakeIssuerUrlList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2SnowflakeIssuerUrlList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

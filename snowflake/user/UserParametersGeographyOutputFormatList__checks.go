@@ -27,9 +27,9 @@ func (u *jsiiProxy_UserParametersGeographyOutputFormatList) validateGetParameter
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersGeographyOutputFormatList) validateResolveParameters(_context cdktf.IResolveContext) error {
-	if _context == nil {
-		return fmt.Errorf("parameter _context is required, but nil was provided")
+func (u *jsiiProxy_UserParametersGeographyOutputFormatList) validateResolveParameters(context cdktf.IResolveContext) error {
+	if context == nil {
+		return fmt.Errorf("parameter context is required, but nil was provided")
 	}
 
 	return nil

@@ -43,11 +43,11 @@ func (l *jsiiProxy_LegacyServiceUserParametersClientResultColumnCaseInsensitiveO
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersClientResultColumnCaseInsensitiveOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (l *jsiiProxy_LegacyServiceUserParametersClientResultColumnCaseInsensitiveOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersClientResultColumnCaseInsensitiveOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersClientResultColumnCaseInsensitiveOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

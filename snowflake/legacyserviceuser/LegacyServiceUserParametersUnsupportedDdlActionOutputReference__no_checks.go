@@ -43,11 +43,11 @@ func (l *jsiiProxy_LegacyServiceUserParametersUnsupportedDdlActionOutputReferenc
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersUnsupportedDdlActionOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (l *jsiiProxy_LegacyServiceUserParametersUnsupportedDdlActionOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersUnsupportedDdlActionOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersUnsupportedDdlActionOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

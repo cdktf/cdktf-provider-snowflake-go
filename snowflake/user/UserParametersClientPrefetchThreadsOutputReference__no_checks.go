@@ -43,11 +43,11 @@ func (u *jsiiProxy_UserParametersClientPrefetchThreadsOutputReference) validateG
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersClientPrefetchThreadsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (u *jsiiProxy_UserParametersClientPrefetchThreadsOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersClientPrefetchThreadsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersClientPrefetchThreadsOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

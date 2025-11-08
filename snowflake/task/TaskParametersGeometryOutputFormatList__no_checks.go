@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersGeometryOutputFormatList) validateGetParameters
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersGeometryOutputFormatList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersGeometryOutputFormatList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (s *jsiiProxy_SecretWithGenericStringDescribeOutputList) validateGetParamet
 	return nil
 }
 
-func (s *jsiiProxy_SecretWithGenericStringDescribeOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SecretWithGenericStringDescribeOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

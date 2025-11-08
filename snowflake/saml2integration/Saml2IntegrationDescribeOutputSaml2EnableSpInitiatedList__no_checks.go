@@ -15,7 +15,7 @@ func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2EnableSpInitiatedList) val
 	return nil
 }
 
-func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2EnableSpInitiatedList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2EnableSpInitiatedList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

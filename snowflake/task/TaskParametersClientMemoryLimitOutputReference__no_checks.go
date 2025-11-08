@@ -43,11 +43,11 @@ func (t *jsiiProxy_TaskParametersClientMemoryLimitOutputReference) validateGetSt
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersClientMemoryLimitOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (t *jsiiProxy_TaskParametersClientMemoryLimitOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersClientMemoryLimitOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersClientMemoryLimitOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (s *jsiiProxy_SecondaryConnectionShowOutputList) validateGetParameters(inde
 	return nil
 }
 
-func (s *jsiiProxy_SecondaryConnectionShowOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SecondaryConnectionShowOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -43,11 +43,11 @@ func (s *jsiiProxy_StorageIntegrationDescribeOutputCommentOutputReference) valid
 	return nil
 }
 
-func (s *jsiiProxy_StorageIntegrationDescribeOutputCommentOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_StorageIntegrationDescribeOutputCommentOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_StorageIntegrationDescribeOutputCommentOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_StorageIntegrationDescribeOutputCommentOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

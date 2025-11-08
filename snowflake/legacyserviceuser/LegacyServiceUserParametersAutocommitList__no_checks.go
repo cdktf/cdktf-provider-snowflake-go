@@ -15,7 +15,7 @@ func (l *jsiiProxy_LegacyServiceUserParametersAutocommitList) validateGetParamet
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersAutocommitList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersAutocommitList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

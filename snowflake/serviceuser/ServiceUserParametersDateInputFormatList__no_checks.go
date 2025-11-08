@@ -15,7 +15,7 @@ func (s *jsiiProxy_ServiceUserParametersDateInputFormatList) validateGetParamete
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersDateInputFormatList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServiceUserParametersDateInputFormatList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

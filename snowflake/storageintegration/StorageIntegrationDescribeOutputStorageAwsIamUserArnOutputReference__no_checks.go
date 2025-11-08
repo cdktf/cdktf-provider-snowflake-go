@@ -43,11 +43,11 @@ func (s *jsiiProxy_StorageIntegrationDescribeOutputStorageAwsIamUserArnOutputRef
 	return nil
 }
 
-func (s *jsiiProxy_StorageIntegrationDescribeOutputStorageAwsIamUserArnOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_StorageIntegrationDescribeOutputStorageAwsIamUserArnOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_StorageIntegrationDescribeOutputStorageAwsIamUserArnOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_StorageIntegrationDescribeOutputStorageAwsIamUserArnOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

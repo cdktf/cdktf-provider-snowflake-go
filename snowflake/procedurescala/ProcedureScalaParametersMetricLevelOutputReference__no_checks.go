@@ -43,11 +43,11 @@ func (p *jsiiProxy_ProcedureScalaParametersMetricLevelOutputReference) validateG
 	return nil
 }
 
-func (p *jsiiProxy_ProcedureScalaParametersMetricLevelOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (p *jsiiProxy_ProcedureScalaParametersMetricLevelOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (p *jsiiProxy_ProcedureScalaParametersMetricLevelOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (p *jsiiProxy_ProcedureScalaParametersMetricLevelOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (s *jsiiProxy_ServiceUserParametersQueryTagList) validateGetParameters(inde
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersQueryTagList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServiceUserParametersQueryTagList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

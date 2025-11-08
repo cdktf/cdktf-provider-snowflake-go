@@ -43,11 +43,11 @@ func (s *jsiiProxy_Saml2IntegrationDescribeOutputAllowedEmailPatternsOutputRefer
 	return nil
 }
 
-func (s *jsiiProxy_Saml2IntegrationDescribeOutputAllowedEmailPatternsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_Saml2IntegrationDescribeOutputAllowedEmailPatternsOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_Saml2IntegrationDescribeOutputAllowedEmailPatternsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_Saml2IntegrationDescribeOutputAllowedEmailPatternsOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

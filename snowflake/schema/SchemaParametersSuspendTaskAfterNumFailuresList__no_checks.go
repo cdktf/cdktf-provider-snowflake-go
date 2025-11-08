@@ -15,7 +15,7 @@ func (s *jsiiProxy_SchemaParametersSuspendTaskAfterNumFailuresList) validateGetP
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersSuspendTaskAfterNumFailuresList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SchemaParametersSuspendTaskAfterNumFailuresList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

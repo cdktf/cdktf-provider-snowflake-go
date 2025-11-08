@@ -15,7 +15,7 @@ func (s *jsiiProxy_SchemaParametersExternalVolumeList) validateGetParameters(ind
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersExternalVolumeList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SchemaParametersExternalVolumeList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

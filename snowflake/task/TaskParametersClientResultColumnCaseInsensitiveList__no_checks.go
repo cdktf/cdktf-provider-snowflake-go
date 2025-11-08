@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersClientResultColumnCaseInsensitiveList) validate
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersClientResultColumnCaseInsensitiveList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersClientResultColumnCaseInsensitiveList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

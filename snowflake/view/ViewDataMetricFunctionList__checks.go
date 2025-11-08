@@ -29,9 +29,9 @@ func (v *jsiiProxy_ViewDataMetricFunctionList) validateGetParameters(index *floa
 	return nil
 }
 
-func (v *jsiiProxy_ViewDataMetricFunctionList) validateResolveParameters(_context cdktf.IResolveContext) error {
-	if _context == nil {
-		return fmt.Errorf("parameter _context is required, but nil was provided")
+func (v *jsiiProxy_ViewDataMetricFunctionList) validateResolveParameters(context cdktf.IResolveContext) error {
+	if context == nil {
+		return fmt.Errorf("parameter context is required, but nil was provided")
 	}
 
 	return nil

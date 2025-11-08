@@ -15,7 +15,7 @@ func (l *jsiiProxy_LegacyServiceUserParametersTimeInputFormatList) validateGetPa
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersTimeInputFormatList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersTimeInputFormatList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

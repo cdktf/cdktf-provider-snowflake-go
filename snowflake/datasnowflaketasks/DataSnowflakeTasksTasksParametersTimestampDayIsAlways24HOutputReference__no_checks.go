@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataSnowflakeTasksTasksParametersTimestampDayIsAlways24HOutpu
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksTasksParametersTimestampDayIsAlways24HOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataSnowflakeTasksTasksParametersTimestampDayIsAlways24HOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksTasksParametersTimestampDayIsAlways24HOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeTasksTasksParametersTimestampDayIsAlways24HOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

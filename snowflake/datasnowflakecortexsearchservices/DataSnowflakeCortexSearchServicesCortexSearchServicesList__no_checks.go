@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeCortexSearchServicesCortexSearchServicesList) va
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeCortexSearchServicesCortexSearchServicesList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeCortexSearchServicesCortexSearchServicesList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

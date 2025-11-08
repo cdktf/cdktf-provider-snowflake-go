@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeUsersUsersParametersStrictJsonOutputList) valida
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeUsersUsersParametersStrictJsonOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeUsersUsersParametersStrictJsonOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

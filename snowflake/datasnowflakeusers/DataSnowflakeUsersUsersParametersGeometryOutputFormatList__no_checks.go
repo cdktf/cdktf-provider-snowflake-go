@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeUsersUsersParametersGeometryOutputFormatList) va
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeUsersUsersParametersGeometryOutputFormatList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeUsersUsersParametersGeometryOutputFormatList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

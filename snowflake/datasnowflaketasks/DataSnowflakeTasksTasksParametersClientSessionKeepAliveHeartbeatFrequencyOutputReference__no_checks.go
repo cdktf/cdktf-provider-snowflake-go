@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataSnowflakeTasksTasksParametersClientSessionKeepAliveHeartb
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksTasksParametersClientSessionKeepAliveHeartbeatFrequencyOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataSnowflakeTasksTasksParametersClientSessionKeepAliveHeartbeatFrequencyOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksTasksParametersClientSessionKeepAliveHeartbeatFrequencyOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeTasksTasksParametersClientSessionKeepAliveHeartbeatFrequencyOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

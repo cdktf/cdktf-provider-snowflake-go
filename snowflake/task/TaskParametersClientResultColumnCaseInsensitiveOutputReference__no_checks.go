@@ -43,11 +43,11 @@ func (t *jsiiProxy_TaskParametersClientResultColumnCaseInsensitiveOutputReferenc
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersClientResultColumnCaseInsensitiveOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (t *jsiiProxy_TaskParametersClientResultColumnCaseInsensitiveOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersClientResultColumnCaseInsensitiveOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersClientResultColumnCaseInsensitiveOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

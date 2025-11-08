@@ -15,7 +15,7 @@ func (a *jsiiProxy_AuthenticationPolicyShowOutputList) validateGetParameters(ind
 	return nil
 }
 
-func (a *jsiiProxy_AuthenticationPolicyShowOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (a *jsiiProxy_AuthenticationPolicyShowOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

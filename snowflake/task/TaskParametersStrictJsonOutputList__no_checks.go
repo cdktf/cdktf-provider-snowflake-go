@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersStrictJsonOutputList) validateGetParameters(ind
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersStrictJsonOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersStrictJsonOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

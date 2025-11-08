@@ -15,7 +15,7 @@ func (r *jsiiProxy_ResourceMonitorShowOutputList) validateGetParameters(index *f
 	return nil
 }
 
-func (r *jsiiProxy_ResourceMonitorShowOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (r *jsiiProxy_ResourceMonitorShowOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

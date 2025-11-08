@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeUsersUsersParametersWeekOfYearPolicyList) valida
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeUsersUsersParametersWeekOfYearPolicyList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeUsersUsersParametersWeekOfYearPolicyList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

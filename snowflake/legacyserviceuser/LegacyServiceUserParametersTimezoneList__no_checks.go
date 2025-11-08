@@ -15,7 +15,7 @@ func (l *jsiiProxy_LegacyServiceUserParametersTimezoneList) validateGetParameter
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersTimezoneList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersTimezoneList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

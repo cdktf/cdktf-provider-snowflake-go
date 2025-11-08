@@ -43,7 +43,7 @@ func (s *jsiiProxy_ServiceFromSpecificationTemplateOutputReference) validateGetS
 	return nil
 }
 
-func (s *jsiiProxy_ServiceFromSpecificationTemplateOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_ServiceFromSpecificationTemplateOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
@@ -51,7 +51,7 @@ func (s *jsiiProxy_ServiceFromSpecificationTemplateOutputReference) validatePutU
 	return nil
 }
 
-func (s *jsiiProxy_ServiceFromSpecificationTemplateOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServiceFromSpecificationTemplateOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

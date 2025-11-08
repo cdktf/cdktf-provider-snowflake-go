@@ -15,7 +15,7 @@ func (r *jsiiProxy_RowAccessPolicyArgumentList) validateGetParameters(index *flo
 	return nil
 }
 
-func (r *jsiiProxy_RowAccessPolicyArgumentList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (r *jsiiProxy_RowAccessPolicyArgumentList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersJsonIndentList) validateGetParameters(index *fl
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersJsonIndentList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersJsonIndentList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

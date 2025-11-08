@@ -43,11 +43,11 @@ func (u *jsiiProxy_UserParametersTransactionAbortOnErrorOutputReference) validat
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersTransactionAbortOnErrorOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (u *jsiiProxy_UserParametersTransactionAbortOnErrorOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersTransactionAbortOnErrorOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersTransactionAbortOnErrorOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

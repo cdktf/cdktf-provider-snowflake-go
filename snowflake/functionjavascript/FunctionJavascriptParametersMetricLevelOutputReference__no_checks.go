@@ -43,11 +43,11 @@ func (f *jsiiProxy_FunctionJavascriptParametersMetricLevelOutputReference) valid
 	return nil
 }
 
-func (f *jsiiProxy_FunctionJavascriptParametersMetricLevelOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (f *jsiiProxy_FunctionJavascriptParametersMetricLevelOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (f *jsiiProxy_FunctionJavascriptParametersMetricLevelOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (f *jsiiProxy_FunctionJavascriptParametersMetricLevelOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (s *jsiiProxy_SchemaParametersStorageSerializationPolicyList) validateGetPa
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersStorageSerializationPolicyList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SchemaParametersStorageSerializationPolicyList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

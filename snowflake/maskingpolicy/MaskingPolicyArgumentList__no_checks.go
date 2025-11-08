@@ -15,7 +15,7 @@ func (m *jsiiProxy_MaskingPolicyArgumentList) validateGetParameters(index *float
 	return nil
 }
 
-func (m *jsiiProxy_MaskingPolicyArgumentList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (m *jsiiProxy_MaskingPolicyArgumentList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

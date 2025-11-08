@@ -43,11 +43,11 @@ func (f *jsiiProxy_FunctionJavascriptShowOutputOutputReference) validateGetStrin
 	return nil
 }
 
-func (f *jsiiProxy_FunctionJavascriptShowOutputOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (f *jsiiProxy_FunctionJavascriptShowOutputOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (f *jsiiProxy_FunctionJavascriptShowOutputOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (f *jsiiProxy_FunctionJavascriptShowOutputOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

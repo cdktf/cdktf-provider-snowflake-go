@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeTasksTasksParametersTaskAutoRetryAttemptsList) v
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksTasksParametersTaskAutoRetryAttemptsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeTasksTasksParametersTaskAutoRetryAttemptsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

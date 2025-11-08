@@ -15,7 +15,7 @@ func (l *jsiiProxy_LegacyServiceUserParametersS3StageVpceDnsNameList) validateGe
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersS3StageVpceDnsNameList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersS3StageVpceDnsNameList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

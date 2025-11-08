@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeDynamicTablesRecordsList) validateGetParameters(
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeDynamicTablesRecordsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeDynamicTablesRecordsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

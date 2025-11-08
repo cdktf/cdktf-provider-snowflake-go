@@ -43,11 +43,11 @@ func (f *jsiiProxy_FailoverGroupReplicationScheduleCronOutputReference) validate
 	return nil
 }
 
-func (f *jsiiProxy_FailoverGroupReplicationScheduleCronOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (f *jsiiProxy_FailoverGroupReplicationScheduleCronOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (f *jsiiProxy_FailoverGroupReplicationScheduleCronOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (f *jsiiProxy_FailoverGroupReplicationScheduleCronOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

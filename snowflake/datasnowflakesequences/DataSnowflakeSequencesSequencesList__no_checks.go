@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeSequencesSequencesList) validateGetParameters(in
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeSequencesSequencesList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeSequencesSequencesList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

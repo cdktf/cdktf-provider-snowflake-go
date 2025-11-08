@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeUsersUsersParametersMultiStatementCountList) val
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeUsersUsersParametersMultiStatementCountList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeUsersUsersParametersMultiStatementCountList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

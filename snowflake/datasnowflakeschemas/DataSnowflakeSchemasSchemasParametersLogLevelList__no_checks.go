@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeSchemasSchemasParametersLogLevelList) validateGe
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeSchemasSchemasParametersLogLevelList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeSchemasSchemasParametersLogLevelList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

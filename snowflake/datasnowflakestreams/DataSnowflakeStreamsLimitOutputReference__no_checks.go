@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataSnowflakeStreamsLimitOutputReference) validateGetStringMa
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeStreamsLimitOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataSnowflakeStreamsLimitOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeStreamsLimitOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeStreamsLimitOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeTasksTasksParametersAutocommitList) validateGetP
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksTasksParametersAutocommitList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeTasksTasksParametersAutocommitList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

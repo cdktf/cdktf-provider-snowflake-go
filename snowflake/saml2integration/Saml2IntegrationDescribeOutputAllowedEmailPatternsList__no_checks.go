@@ -15,7 +15,7 @@ func (s *jsiiProxy_Saml2IntegrationDescribeOutputAllowedEmailPatternsList) valid
 	return nil
 }
 
-func (s *jsiiProxy_Saml2IntegrationDescribeOutputAllowedEmailPatternsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_Saml2IntegrationDescribeOutputAllowedEmailPatternsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

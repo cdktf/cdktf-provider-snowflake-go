@@ -43,11 +43,11 @@ func (s *jsiiProxy_ServiceUserParametersEnableUnredactedQuerySyntaxErrorOutputRe
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersEnableUnredactedQuerySyntaxErrorOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_ServiceUserParametersEnableUnredactedQuerySyntaxErrorOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersEnableUnredactedQuerySyntaxErrorOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServiceUserParametersEnableUnredactedQuerySyntaxErrorOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

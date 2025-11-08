@@ -39,7 +39,7 @@ type ProcedureScalaParametersList interface {
 	Get(index *float64) ProcedureScalaParametersOutputReference
 	// Produce the Token's value at resolution time.
 	// Experimental.
-	Resolve(_context cdktf.IResolveContext) interface{}
+	Resolve(context cdktf.IResolveContext) interface{}
 	// Return a string representation of this resolvable object.
 	//
 	// Returns a reversible string representation.
@@ -208,8 +208,8 @@ func (p *jsiiProxy_ProcedureScalaParametersList) Get(index *float64) ProcedureSc
 	return returns
 }
 
-func (p *jsiiProxy_ProcedureScalaParametersList) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := p.validateResolveParameters(_context); err != nil {
+func (p *jsiiProxy_ProcedureScalaParametersList) Resolve(context cdktf.IResolveContext) interface{} {
+	if err := p.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
@@ -217,7 +217,7 @@ func (p *jsiiProxy_ProcedureScalaParametersList) Resolve(_context cdktf.IResolve
 	_jsii_.Invoke(
 		p,
 		"resolve",
-		[]interface{}{_context},
+		[]interface{}{context},
 		&returns,
 	)
 

@@ -15,7 +15,7 @@ func (u *jsiiProxy_UserParametersSearchPathList) validateGetParameters(index *fl
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersSearchPathList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersSearchPathList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

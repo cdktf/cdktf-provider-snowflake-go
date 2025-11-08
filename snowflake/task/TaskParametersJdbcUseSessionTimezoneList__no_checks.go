@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersJdbcUseSessionTimezoneList) validateGetParamete
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersJdbcUseSessionTimezoneList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersJdbcUseSessionTimezoneList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

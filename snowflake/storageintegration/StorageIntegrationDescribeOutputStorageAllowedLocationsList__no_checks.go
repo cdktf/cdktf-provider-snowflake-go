@@ -15,7 +15,7 @@ func (s *jsiiProxy_StorageIntegrationDescribeOutputStorageAllowedLocationsList) 
 	return nil
 }
 
-func (s *jsiiProxy_StorageIntegrationDescribeOutputStorageAllowedLocationsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_StorageIntegrationDescribeOutputStorageAllowedLocationsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

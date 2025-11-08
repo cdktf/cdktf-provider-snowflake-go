@@ -15,7 +15,7 @@ func (s *jsiiProxy_StorageIntegrationDescribeOutputStorageAwsIamUserArnList) val
 	return nil
 }
 
-func (s *jsiiProxy_StorageIntegrationDescribeOutputStorageAwsIamUserArnList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_StorageIntegrationDescribeOutputStorageAwsIamUserArnList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

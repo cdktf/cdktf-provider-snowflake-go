@@ -15,7 +15,7 @@ func (u *jsiiProxy_UserParametersTransactionAbortOnErrorList) validateGetParamet
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersTransactionAbortOnErrorList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersTransactionAbortOnErrorList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

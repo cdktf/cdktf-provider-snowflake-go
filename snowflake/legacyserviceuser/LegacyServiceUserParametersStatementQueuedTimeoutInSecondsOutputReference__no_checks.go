@@ -43,11 +43,11 @@ func (l *jsiiProxy_LegacyServiceUserParametersStatementQueuedTimeoutInSecondsOut
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersStatementQueuedTimeoutInSecondsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (l *jsiiProxy_LegacyServiceUserParametersStatementQueuedTimeoutInSecondsOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersStatementQueuedTimeoutInSecondsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersStatementQueuedTimeoutInSecondsOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

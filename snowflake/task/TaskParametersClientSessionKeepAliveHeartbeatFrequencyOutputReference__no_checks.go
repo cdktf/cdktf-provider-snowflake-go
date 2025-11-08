@@ -43,11 +43,11 @@ func (t *jsiiProxy_TaskParametersClientSessionKeepAliveHeartbeatFrequencyOutputR
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersClientSessionKeepAliveHeartbeatFrequencyOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (t *jsiiProxy_TaskParametersClientSessionKeepAliveHeartbeatFrequencyOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersClientSessionKeepAliveHeartbeatFrequencyOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersClientSessionKeepAliveHeartbeatFrequencyOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

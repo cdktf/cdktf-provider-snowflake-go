@@ -43,11 +43,11 @@ func (t *jsiiProxy_TableColumnMaskingPolicyApplicationTimeoutsOutputReference) v
 	return nil
 }
 
-func (t *jsiiProxy_TableColumnMaskingPolicyApplicationTimeoutsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (t *jsiiProxy_TableColumnMaskingPolicyApplicationTimeoutsOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (t *jsiiProxy_TableColumnMaskingPolicyApplicationTimeoutsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TableColumnMaskingPolicyApplicationTimeoutsOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

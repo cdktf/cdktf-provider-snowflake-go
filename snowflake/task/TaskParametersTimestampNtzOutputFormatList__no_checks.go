@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersTimestampNtzOutputFormatList) validateGetParame
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersTimestampNtzOutputFormatList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersTimestampNtzOutputFormatList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

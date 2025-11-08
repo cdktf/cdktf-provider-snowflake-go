@@ -43,11 +43,11 @@ func (u *jsiiProxy_UserParametersSimulatedDataSharingConsumerOutputReference) va
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersSimulatedDataSharingConsumerOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (u *jsiiProxy_UserParametersSimulatedDataSharingConsumerOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersSimulatedDataSharingConsumerOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersSimulatedDataSharingConsumerOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

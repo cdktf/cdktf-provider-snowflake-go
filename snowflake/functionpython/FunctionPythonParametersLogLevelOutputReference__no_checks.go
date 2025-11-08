@@ -43,11 +43,11 @@ func (f *jsiiProxy_FunctionPythonParametersLogLevelOutputReference) validateGetS
 	return nil
 }
 
-func (f *jsiiProxy_FunctionPythonParametersLogLevelOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (f *jsiiProxy_FunctionPythonParametersLogLevelOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (f *jsiiProxy_FunctionPythonParametersLogLevelOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (f *jsiiProxy_FunctionPythonParametersLogLevelOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

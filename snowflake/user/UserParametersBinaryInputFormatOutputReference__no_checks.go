@@ -43,11 +43,11 @@ func (u *jsiiProxy_UserParametersBinaryInputFormatOutputReference) validateGetSt
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersBinaryInputFormatOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (u *jsiiProxy_UserParametersBinaryInputFormatOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersBinaryInputFormatOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersBinaryInputFormatOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

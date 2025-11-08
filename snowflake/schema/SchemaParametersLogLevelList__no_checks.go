@@ -15,7 +15,7 @@ func (s *jsiiProxy_SchemaParametersLogLevelList) validateGetParameters(index *fl
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersLogLevelList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SchemaParametersLogLevelList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

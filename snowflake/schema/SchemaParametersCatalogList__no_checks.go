@@ -15,7 +15,7 @@ func (s *jsiiProxy_SchemaParametersCatalogList) validateGetParameters(index *flo
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersCatalogList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SchemaParametersCatalogList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

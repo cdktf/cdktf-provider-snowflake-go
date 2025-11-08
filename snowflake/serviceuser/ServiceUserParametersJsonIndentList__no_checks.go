@@ -15,7 +15,7 @@ func (s *jsiiProxy_ServiceUserParametersJsonIndentList) validateGetParameters(in
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersJsonIndentList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServiceUserParametersJsonIndentList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

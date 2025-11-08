@@ -15,7 +15,7 @@ func (l *jsiiProxy_LegacyServiceUserParametersSearchPathList) validateGetParamet
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersSearchPathList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersSearchPathList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

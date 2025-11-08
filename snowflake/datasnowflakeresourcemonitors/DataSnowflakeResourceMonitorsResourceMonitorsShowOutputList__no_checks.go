@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeResourceMonitorsResourceMonitorsShowOutputList) 
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeResourceMonitorsResourceMonitorsShowOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeResourceMonitorsResourceMonitorsShowOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

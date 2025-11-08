@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersClientResultChunkSizeList) validateGetParameter
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersClientResultChunkSizeList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersClientResultChunkSizeList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

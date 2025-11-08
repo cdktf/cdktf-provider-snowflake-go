@@ -15,7 +15,7 @@ func (s *jsiiProxy_ServiceUserParametersS3StageVpceDnsNameList) validateGetParam
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersS3StageVpceDnsNameList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServiceUserParametersS3StageVpceDnsNameList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

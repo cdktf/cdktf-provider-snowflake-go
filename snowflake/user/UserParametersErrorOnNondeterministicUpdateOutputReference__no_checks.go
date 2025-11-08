@@ -43,11 +43,11 @@ func (u *jsiiProxy_UserParametersErrorOnNondeterministicUpdateOutputReference) v
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersErrorOnNondeterministicUpdateOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (u *jsiiProxy_UserParametersErrorOnNondeterministicUpdateOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersErrorOnNondeterministicUpdateOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersErrorOnNondeterministicUpdateOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

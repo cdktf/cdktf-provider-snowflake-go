@@ -15,7 +15,7 @@ func (s *jsiiProxy_SecretWithAuthorizationCodeGrantShowOutputList) validateGetPa
 	return nil
 }
 
-func (s *jsiiProxy_SecretWithAuthorizationCodeGrantShowOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SecretWithAuthorizationCodeGrantShowOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

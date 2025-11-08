@@ -15,7 +15,7 @@ func (l *jsiiProxy_LegacyServiceUserParametersJdbcTreatTimestampNtzAsUtcList) va
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersJdbcTreatTimestampNtzAsUtcList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersJdbcTreatTimestampNtzAsUtcList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

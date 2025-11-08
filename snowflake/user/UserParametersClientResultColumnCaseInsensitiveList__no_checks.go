@@ -15,7 +15,7 @@ func (u *jsiiProxy_UserParametersClientResultColumnCaseInsensitiveList) validate
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersClientResultColumnCaseInsensitiveList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersClientResultColumnCaseInsensitiveList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

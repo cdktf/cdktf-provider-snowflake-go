@@ -43,11 +43,11 @@ func (s *jsiiProxy_ServiceUserParametersQuotedIdentifiersIgnoreCaseOutputReferen
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersQuotedIdentifiersIgnoreCaseOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_ServiceUserParametersQuotedIdentifiersIgnoreCaseOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersQuotedIdentifiersIgnoreCaseOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServiceUserParametersQuotedIdentifiersIgnoreCaseOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

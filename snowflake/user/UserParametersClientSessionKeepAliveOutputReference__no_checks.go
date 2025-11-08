@@ -43,11 +43,11 @@ func (u *jsiiProxy_UserParametersClientSessionKeepAliveOutputReference) validate
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersClientSessionKeepAliveOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (u *jsiiProxy_UserParametersClientSessionKeepAliveOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersClientSessionKeepAliveOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersClientSessionKeepAliveOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

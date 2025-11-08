@@ -15,7 +15,7 @@ func (s *jsiiProxy_Saml2IntegrationDescribeOutputAllowedUserDomainsList) validat
 	return nil
 }
 
-func (s *jsiiProxy_Saml2IntegrationDescribeOutputAllowedUserDomainsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_Saml2IntegrationDescribeOutputAllowedUserDomainsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

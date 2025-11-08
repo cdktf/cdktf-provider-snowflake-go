@@ -15,7 +15,7 @@ func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2RequestedNameidFormatList)
 	return nil
 }
 
-func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2RequestedNameidFormatList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_Saml2IntegrationDescribeOutputSaml2RequestedNameidFormatList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

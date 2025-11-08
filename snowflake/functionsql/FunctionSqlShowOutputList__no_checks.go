@@ -15,7 +15,7 @@ func (f *jsiiProxy_FunctionSqlShowOutputList) validateGetParameters(index *float
 	return nil
 }
 
-func (f *jsiiProxy_FunctionSqlShowOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (f *jsiiProxy_FunctionSqlShowOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

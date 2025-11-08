@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersTimeInputFormatList) validateGetParameters(inde
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersTimeInputFormatList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersTimeInputFormatList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

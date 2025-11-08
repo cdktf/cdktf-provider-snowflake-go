@@ -27,9 +27,9 @@ func (u *jsiiProxy_UserParametersTransactionAbortOnErrorList) validateGetParamet
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersTransactionAbortOnErrorList) validateResolveParameters(_context cdktf.IResolveContext) error {
-	if _context == nil {
-		return fmt.Errorf("parameter _context is required, but nil was provided")
+func (u *jsiiProxy_UserParametersTransactionAbortOnErrorList) validateResolveParameters(context cdktf.IResolveContext) error {
+	if context == nil {
+		return fmt.Errorf("parameter context is required, but nil was provided")
 	}
 
 	return nil

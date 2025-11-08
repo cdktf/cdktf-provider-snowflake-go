@@ -85,17 +85,17 @@ func (t *jsiiProxy_TaskParametersLockTimeoutOutputReference) validateGetStringMa
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersLockTimeoutOutputReference) validateInterpolationForAttributeParameters(property *string) error {
-	if property == nil {
-		return fmt.Errorf("parameter property is required, but nil was provided")
+func (t *jsiiProxy_TaskParametersLockTimeoutOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	if terraformAttribute == nil {
+		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
 
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersLockTimeoutOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
-	if _context == nil {
-		return fmt.Errorf("parameter _context is required, but nil was provided")
+func (t *jsiiProxy_TaskParametersLockTimeoutOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
+	if context == nil {
+		return fmt.Errorf("parameter context is required, but nil was provided")
 	}
 
 	return nil

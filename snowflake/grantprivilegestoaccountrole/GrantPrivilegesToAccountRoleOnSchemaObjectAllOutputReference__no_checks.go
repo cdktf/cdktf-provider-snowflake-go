@@ -43,11 +43,11 @@ func (g *jsiiProxy_GrantPrivilegesToAccountRoleOnSchemaObjectAllOutputReference)
 	return nil
 }
 
-func (g *jsiiProxy_GrantPrivilegesToAccountRoleOnSchemaObjectAllOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (g *jsiiProxy_GrantPrivilegesToAccountRoleOnSchemaObjectAllOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (g *jsiiProxy_GrantPrivilegesToAccountRoleOnSchemaObjectAllOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (g *jsiiProxy_GrantPrivilegesToAccountRoleOnSchemaObjectAllOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

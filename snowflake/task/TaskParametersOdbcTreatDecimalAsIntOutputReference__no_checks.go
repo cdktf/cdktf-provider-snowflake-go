@@ -43,11 +43,11 @@ func (t *jsiiProxy_TaskParametersOdbcTreatDecimalAsIntOutputReference) validateG
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersOdbcTreatDecimalAsIntOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (t *jsiiProxy_TaskParametersOdbcTreatDecimalAsIntOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersOdbcTreatDecimalAsIntOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersOdbcTreatDecimalAsIntOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

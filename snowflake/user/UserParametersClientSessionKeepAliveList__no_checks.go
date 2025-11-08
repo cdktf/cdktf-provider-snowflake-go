@@ -15,7 +15,7 @@ func (u *jsiiProxy_UserParametersClientSessionKeepAliveList) validateGetParamete
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersClientSessionKeepAliveList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersClientSessionKeepAliveList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

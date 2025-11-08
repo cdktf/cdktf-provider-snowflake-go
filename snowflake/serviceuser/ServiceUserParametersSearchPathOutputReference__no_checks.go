@@ -43,11 +43,11 @@ func (s *jsiiProxy_ServiceUserParametersSearchPathOutputReference) validateGetSt
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersSearchPathOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_ServiceUserParametersSearchPathOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersSearchPathOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServiceUserParametersSearchPathOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

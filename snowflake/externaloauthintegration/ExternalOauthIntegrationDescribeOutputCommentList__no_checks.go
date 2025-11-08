@@ -15,7 +15,7 @@ func (e *jsiiProxy_ExternalOauthIntegrationDescribeOutputCommentList) validateGe
 	return nil
 }
 
-func (e *jsiiProxy_ExternalOauthIntegrationDescribeOutputCommentList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (e *jsiiProxy_ExternalOauthIntegrationDescribeOutputCommentList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

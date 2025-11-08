@@ -15,7 +15,7 @@ func (u *jsiiProxy_UserParametersClientMetadataRequestUseConnectionCtxList) vali
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersClientMetadataRequestUseConnectionCtxList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersClientMetadataRequestUseConnectionCtxList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

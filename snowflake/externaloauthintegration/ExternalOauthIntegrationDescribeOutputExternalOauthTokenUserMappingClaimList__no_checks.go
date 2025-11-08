@@ -15,7 +15,7 @@ func (e *jsiiProxy_ExternalOauthIntegrationDescribeOutputExternalOauthTokenUserM
 	return nil
 }
 
-func (e *jsiiProxy_ExternalOauthIntegrationDescribeOutputExternalOauthTokenUserMappingClaimList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (e *jsiiProxy_ExternalOauthIntegrationDescribeOutputExternalOauthTokenUserMappingClaimList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

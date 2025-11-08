@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeUserProgrammaticAccessTokensUserProgrammaticAcce
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeUserProgrammaticAccessTokensUserProgrammaticAccessTokensList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeUserProgrammaticAccessTokensUserProgrammaticAccessTokensList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

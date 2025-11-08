@@ -15,7 +15,7 @@ func (e *jsiiProxy_ExternalOauthIntegrationDescribeOutputExternalOauthRsaPublicK
 	return nil
 }
 
-func (e *jsiiProxy_ExternalOauthIntegrationDescribeOutputExternalOauthRsaPublicKey2List) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (e *jsiiProxy_ExternalOauthIntegrationDescribeOutputExternalOauthRsaPublicKey2List) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeWarehousesWarehousesParametersMaxConcurrencyLeve
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeWarehousesWarehousesParametersMaxConcurrencyLevelList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeWarehousesWarehousesParametersMaxConcurrencyLevelList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

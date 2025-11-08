@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeTasksTasksParametersLockTimeoutList) validateGet
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksTasksParametersLockTimeoutList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeTasksTasksParametersLockTimeoutList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

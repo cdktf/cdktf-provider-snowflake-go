@@ -15,7 +15,7 @@ func (s *jsiiProxy_StorageIntegrationDescribeOutputAzureConsentUrlList) validate
 	return nil
 }
 
-func (s *jsiiProxy_StorageIntegrationDescribeOutputAzureConsentUrlList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_StorageIntegrationDescribeOutputAzureConsentUrlList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

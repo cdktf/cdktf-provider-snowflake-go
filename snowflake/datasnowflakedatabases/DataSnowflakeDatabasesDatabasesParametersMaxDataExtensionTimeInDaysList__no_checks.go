@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeDatabasesDatabasesParametersMaxDataExtensionTime
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeDatabasesDatabasesParametersMaxDataExtensionTimeInDaysList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeDatabasesDatabasesParametersMaxDataExtensionTimeInDaysList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

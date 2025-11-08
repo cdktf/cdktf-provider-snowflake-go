@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeTasksTasksParametersGeographyOutputFormatList) v
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksTasksParametersGeographyOutputFormatList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeTasksTasksParametersGeographyOutputFormatList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

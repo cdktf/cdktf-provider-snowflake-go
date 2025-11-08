@@ -15,7 +15,7 @@ func (t *jsiiProxy_TagShowOutputList) validateGetParameters(index *float64) erro
 	return nil
 }
 
-func (t *jsiiProxy_TagShowOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TagShowOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -85,17 +85,17 @@ func (s *jsiiProxy_ServiceUserParametersS3StageVpceDnsNameOutputReference) valid
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersS3StageVpceDnsNameOutputReference) validateInterpolationForAttributeParameters(property *string) error {
-	if property == nil {
-		return fmt.Errorf("parameter property is required, but nil was provided")
+func (s *jsiiProxy_ServiceUserParametersS3StageVpceDnsNameOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	if terraformAttribute == nil {
+		return fmt.Errorf("parameter terraformAttribute is required, but nil was provided")
 	}
 
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersS3StageVpceDnsNameOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
-	if _context == nil {
-		return fmt.Errorf("parameter _context is required, but nil was provided")
+func (s *jsiiProxy_ServiceUserParametersS3StageVpceDnsNameOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
+	if context == nil {
+		return fmt.Errorf("parameter context is required, but nil was provided")
 	}
 
 	return nil

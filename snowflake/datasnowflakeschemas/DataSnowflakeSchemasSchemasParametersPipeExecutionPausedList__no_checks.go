@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeSchemasSchemasParametersPipeExecutionPausedList)
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeSchemasSchemasParametersPipeExecutionPausedList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeSchemasSchemasParametersPipeExecutionPausedList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

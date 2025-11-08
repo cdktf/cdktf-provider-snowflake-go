@@ -43,11 +43,11 @@ func (s *jsiiProxy_SchemaParametersSuspendTaskAfterNumFailuresOutputReference) v
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersSuspendTaskAfterNumFailuresOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_SchemaParametersSuspendTaskAfterNumFailuresOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersSuspendTaskAfterNumFailuresOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SchemaParametersSuspendTaskAfterNumFailuresOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

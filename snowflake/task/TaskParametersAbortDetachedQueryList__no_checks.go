@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersAbortDetachedQueryList) validateGetParameters(i
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersAbortDetachedQueryList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersAbortDetachedQueryList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

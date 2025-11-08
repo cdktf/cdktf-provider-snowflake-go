@@ -15,7 +15,7 @@ func (s *jsiiProxy_ServiceUserParametersEnableUnredactedQuerySyntaxErrorList) va
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersEnableUnredactedQuerySyntaxErrorList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServiceUserParametersEnableUnredactedQuerySyntaxErrorList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

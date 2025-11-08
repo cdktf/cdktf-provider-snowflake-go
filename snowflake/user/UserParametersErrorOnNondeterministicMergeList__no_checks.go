@@ -15,7 +15,7 @@ func (u *jsiiProxy_UserParametersErrorOnNondeterministicMergeList) validateGetPa
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersErrorOnNondeterministicMergeList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersErrorOnNondeterministicMergeList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

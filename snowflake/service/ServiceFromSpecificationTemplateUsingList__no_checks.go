@@ -15,7 +15,7 @@ func (s *jsiiProxy_ServiceFromSpecificationTemplateUsingList) validateGetParamet
 	return nil
 }
 
-func (s *jsiiProxy_ServiceFromSpecificationTemplateUsingList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServiceFromSpecificationTemplateUsingList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

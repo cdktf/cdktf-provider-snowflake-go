@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeUsersUsersParametersStatementQueuedTimeoutInSeco
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeUsersUsersParametersStatementQueuedTimeoutInSecondsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeUsersUsersParametersStatementQueuedTimeoutInSecondsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

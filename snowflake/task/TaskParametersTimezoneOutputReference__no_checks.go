@@ -43,11 +43,11 @@ func (t *jsiiProxy_TaskParametersTimezoneOutputReference) validateGetStringMapAt
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersTimezoneOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (t *jsiiProxy_TaskParametersTimezoneOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersTimezoneOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersTimezoneOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

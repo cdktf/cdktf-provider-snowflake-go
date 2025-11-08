@@ -43,11 +43,11 @@ func (l *jsiiProxy_LegacyServiceUserParametersTraceLevelOutputReference) validat
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersTraceLevelOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (l *jsiiProxy_LegacyServiceUserParametersTraceLevelOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersTraceLevelOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersTraceLevelOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

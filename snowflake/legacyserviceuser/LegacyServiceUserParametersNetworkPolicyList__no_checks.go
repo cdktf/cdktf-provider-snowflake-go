@@ -15,7 +15,7 @@ func (l *jsiiProxy_LegacyServiceUserParametersNetworkPolicyList) validateGetPara
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersNetworkPolicyList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersNetworkPolicyList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

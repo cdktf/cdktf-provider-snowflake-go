@@ -39,7 +39,7 @@ type TaskParametersUserTaskTimeoutMsList interface {
 	Get(index *float64) TaskParametersUserTaskTimeoutMsOutputReference
 	// Produce the Token's value at resolution time.
 	// Experimental.
-	Resolve(_context cdktf.IResolveContext) interface{}
+	Resolve(context cdktf.IResolveContext) interface{}
 	// Return a string representation of this resolvable object.
 	//
 	// Returns a reversible string representation.
@@ -208,8 +208,8 @@ func (t *jsiiProxy_TaskParametersUserTaskTimeoutMsList) Get(index *float64) Task
 	return returns
 }
 
-func (t *jsiiProxy_TaskParametersUserTaskTimeoutMsList) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := t.validateResolveParameters(_context); err != nil {
+func (t *jsiiProxy_TaskParametersUserTaskTimeoutMsList) Resolve(context cdktf.IResolveContext) interface{} {
+	if err := t.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
@@ -217,7 +217,7 @@ func (t *jsiiProxy_TaskParametersUserTaskTimeoutMsList) Resolve(_context cdktf.I
 	_jsii_.Invoke(
 		t,
 		"resolve",
-		[]interface{}{_context},
+		[]interface{}{context},
 		&returns,
 	)
 

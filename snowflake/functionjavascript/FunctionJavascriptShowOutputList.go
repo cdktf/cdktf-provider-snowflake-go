@@ -39,7 +39,7 @@ type FunctionJavascriptShowOutputList interface {
 	Get(index *float64) FunctionJavascriptShowOutputOutputReference
 	// Produce the Token's value at resolution time.
 	// Experimental.
-	Resolve(_context cdktf.IResolveContext) interface{}
+	Resolve(context cdktf.IResolveContext) interface{}
 	// Return a string representation of this resolvable object.
 	//
 	// Returns a reversible string representation.
@@ -208,8 +208,8 @@ func (f *jsiiProxy_FunctionJavascriptShowOutputList) Get(index *float64) Functio
 	return returns
 }
 
-func (f *jsiiProxy_FunctionJavascriptShowOutputList) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := f.validateResolveParameters(_context); err != nil {
+func (f *jsiiProxy_FunctionJavascriptShowOutputList) Resolve(context cdktf.IResolveContext) interface{} {
+	if err := f.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
@@ -217,7 +217,7 @@ func (f *jsiiProxy_FunctionJavascriptShowOutputList) Resolve(_context cdktf.IRes
 	_jsii_.Invoke(
 		f,
 		"resolve",
-		[]interface{}{_context},
+		[]interface{}{context},
 		&returns,
 	)
 

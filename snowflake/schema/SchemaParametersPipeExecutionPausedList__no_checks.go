@@ -15,7 +15,7 @@ func (s *jsiiProxy_SchemaParametersPipeExecutionPausedList) validateGetParameter
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersPipeExecutionPausedList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SchemaParametersPipeExecutionPausedList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

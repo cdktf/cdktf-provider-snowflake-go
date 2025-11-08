@@ -43,11 +43,11 @@ func (t *jsiiProxy_TaskParametersTimeInputFormatOutputReference) validateGetStri
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersTimeInputFormatOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (t *jsiiProxy_TaskParametersTimeInputFormatOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersTimeInputFormatOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersTimeInputFormatOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

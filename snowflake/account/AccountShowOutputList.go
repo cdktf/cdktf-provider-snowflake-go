@@ -39,7 +39,7 @@ type AccountShowOutputList interface {
 	Get(index *float64) AccountShowOutputOutputReference
 	// Produce the Token's value at resolution time.
 	// Experimental.
-	Resolve(_context cdktf.IResolveContext) interface{}
+	Resolve(context cdktf.IResolveContext) interface{}
 	// Return a string representation of this resolvable object.
 	//
 	// Returns a reversible string representation.
@@ -208,8 +208,8 @@ func (a *jsiiProxy_AccountShowOutputList) Get(index *float64) AccountShowOutputO
 	return returns
 }
 
-func (a *jsiiProxy_AccountShowOutputList) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := a.validateResolveParameters(_context); err != nil {
+func (a *jsiiProxy_AccountShowOutputList) Resolve(context cdktf.IResolveContext) interface{} {
+	if err := a.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
@@ -217,7 +217,7 @@ func (a *jsiiProxy_AccountShowOutputList) Resolve(_context cdktf.IResolveContext
 	_jsii_.Invoke(
 		a,
 		"resolve",
-		[]interface{}{_context},
+		[]interface{}{context},
 		&returns,
 	)
 

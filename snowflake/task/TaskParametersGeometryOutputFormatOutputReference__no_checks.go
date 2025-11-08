@@ -43,11 +43,11 @@ func (t *jsiiProxy_TaskParametersGeometryOutputFormatOutputReference) validateGe
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersGeometryOutputFormatOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (t *jsiiProxy_TaskParametersGeometryOutputFormatOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersGeometryOutputFormatOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersGeometryOutputFormatOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

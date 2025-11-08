@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersRowsPerResultsetList) validateGetParameters(ind
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersRowsPerResultsetList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersRowsPerResultsetList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

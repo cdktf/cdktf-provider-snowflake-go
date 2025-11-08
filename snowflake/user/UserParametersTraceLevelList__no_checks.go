@@ -15,7 +15,7 @@ func (u *jsiiProxy_UserParametersTraceLevelList) validateGetParameters(index *fl
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersTraceLevelList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersTraceLevelList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (s *jsiiProxy_ServiceUserParametersRowsPerResultsetList) validateGetParamet
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersRowsPerResultsetList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServiceUserParametersRowsPerResultsetList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

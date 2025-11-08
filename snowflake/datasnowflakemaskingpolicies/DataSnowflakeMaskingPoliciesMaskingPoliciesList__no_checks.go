@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeMaskingPoliciesMaskingPoliciesList) validateGetP
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeMaskingPoliciesMaskingPoliciesList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeMaskingPoliciesMaskingPoliciesList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

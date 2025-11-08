@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeUsersUsersParametersPreventUnloadToInternalStage
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeUsersUsersParametersPreventUnloadToInternalStagesList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeUsersUsersParametersPreventUnloadToInternalStagesList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

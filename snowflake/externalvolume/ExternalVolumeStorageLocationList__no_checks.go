@@ -15,7 +15,7 @@ func (e *jsiiProxy_ExternalVolumeStorageLocationList) validateGetParameters(inde
 	return nil
 }
 
-func (e *jsiiProxy_ExternalVolumeStorageLocationList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (e *jsiiProxy_ExternalVolumeStorageLocationList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

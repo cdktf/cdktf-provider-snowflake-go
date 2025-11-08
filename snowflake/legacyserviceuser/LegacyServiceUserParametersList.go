@@ -39,7 +39,7 @@ type LegacyServiceUserParametersList interface {
 	Get(index *float64) LegacyServiceUserParametersOutputReference
 	// Produce the Token's value at resolution time.
 	// Experimental.
-	Resolve(_context cdktf.IResolveContext) interface{}
+	Resolve(context cdktf.IResolveContext) interface{}
 	// Return a string representation of this resolvable object.
 	//
 	// Returns a reversible string representation.
@@ -208,8 +208,8 @@ func (l *jsiiProxy_LegacyServiceUserParametersList) Get(index *float64) LegacySe
 	return returns
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersList) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := l.validateResolveParameters(_context); err != nil {
+func (l *jsiiProxy_LegacyServiceUserParametersList) Resolve(context cdktf.IResolveContext) interface{} {
+	if err := l.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
@@ -217,7 +217,7 @@ func (l *jsiiProxy_LegacyServiceUserParametersList) Resolve(_context cdktf.IReso
 	_jsii_.Invoke(
 		l,
 		"resolve",
-		[]interface{}{_context},
+		[]interface{}{context},
 		&returns,
 	)
 

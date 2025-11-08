@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersOdbcTreatDecimalAsIntList) validateGetParameter
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersOdbcTreatDecimalAsIntList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersOdbcTreatDecimalAsIntList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

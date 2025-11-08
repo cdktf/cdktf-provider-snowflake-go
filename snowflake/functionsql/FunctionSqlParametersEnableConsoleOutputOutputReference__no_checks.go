@@ -43,11 +43,11 @@ func (f *jsiiProxy_FunctionSqlParametersEnableConsoleOutputOutputReference) vali
 	return nil
 }
 
-func (f *jsiiProxy_FunctionSqlParametersEnableConsoleOutputOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (f *jsiiProxy_FunctionSqlParametersEnableConsoleOutputOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (f *jsiiProxy_FunctionSqlParametersEnableConsoleOutputOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (f *jsiiProxy_FunctionSqlParametersEnableConsoleOutputOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

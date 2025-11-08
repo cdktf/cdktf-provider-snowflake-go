@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskShowOutputList) validateGetParameters(index *float64) err
 	return nil
 }
 
-func (t *jsiiProxy_TaskShowOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskShowOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

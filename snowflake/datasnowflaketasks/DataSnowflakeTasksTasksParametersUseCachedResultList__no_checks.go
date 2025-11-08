@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeTasksTasksParametersUseCachedResultList) validat
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksTasksParametersUseCachedResultList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeTasksTasksParametersUseCachedResultList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

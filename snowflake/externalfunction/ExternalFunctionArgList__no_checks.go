@@ -15,7 +15,7 @@ func (e *jsiiProxy_ExternalFunctionArgList) validateGetParameters(index *float64
 	return nil
 }
 
-func (e *jsiiProxy_ExternalFunctionArgList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (e *jsiiProxy_ExternalFunctionArgList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

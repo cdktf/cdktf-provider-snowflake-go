@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersSuspendTaskAfterNumFailuresList) validateGetPar
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersSuspendTaskAfterNumFailuresList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersSuspendTaskAfterNumFailuresList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

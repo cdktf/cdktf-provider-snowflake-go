@@ -15,7 +15,7 @@ func (l *jsiiProxy_LegacyServiceUserParametersClientPrefetchThreadsList) validat
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersClientPrefetchThreadsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersClientPrefetchThreadsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersTimestampInputFormatList) validateGetParameters
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersTimestampInputFormatList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersTimestampInputFormatList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

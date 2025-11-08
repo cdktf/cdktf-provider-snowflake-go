@@ -15,7 +15,7 @@ func (s *jsiiProxy_SchemaParametersQuotedIdentifiersIgnoreCaseList) validateGetP
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersQuotedIdentifiersIgnoreCaseList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SchemaParametersQuotedIdentifiersIgnoreCaseList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

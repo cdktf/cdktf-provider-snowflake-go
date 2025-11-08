@@ -43,11 +43,11 @@ func (t *jsiiProxy_TaskParametersClientPrefetchThreadsOutputReference) validateG
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersClientPrefetchThreadsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (t *jsiiProxy_TaskParametersClientPrefetchThreadsOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersClientPrefetchThreadsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersClientPrefetchThreadsOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

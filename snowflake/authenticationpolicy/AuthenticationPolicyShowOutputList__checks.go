@@ -27,9 +27,9 @@ func (a *jsiiProxy_AuthenticationPolicyShowOutputList) validateGetParameters(ind
 	return nil
 }
 
-func (a *jsiiProxy_AuthenticationPolicyShowOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
-	if _context == nil {
-		return fmt.Errorf("parameter _context is required, but nil was provided")
+func (a *jsiiProxy_AuthenticationPolicyShowOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
+	if context == nil {
+		return fmt.Errorf("parameter context is required, but nil was provided")
 	}
 
 	return nil

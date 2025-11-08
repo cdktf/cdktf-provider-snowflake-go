@@ -43,11 +43,11 @@ func (a *jsiiProxy_AlertAlertScheduleCronOutputReference) validateGetStringMapAt
 	return nil
 }
 
-func (a *jsiiProxy_AlertAlertScheduleCronOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (a *jsiiProxy_AlertAlertScheduleCronOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (a *jsiiProxy_AlertAlertScheduleCronOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (a *jsiiProxy_AlertAlertScheduleCronOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

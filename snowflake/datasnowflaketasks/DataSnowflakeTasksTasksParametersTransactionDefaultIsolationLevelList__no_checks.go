@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeTasksTasksParametersTransactionDefaultIsolationL
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksTasksParametersTransactionDefaultIsolationLevelList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeTasksTasksParametersTransactionDefaultIsolationLevelList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

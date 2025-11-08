@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataSnowflakeSchemasSchemasParametersMaxDataExtensionTimeInDa
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeSchemasSchemasParametersMaxDataExtensionTimeInDaysOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataSnowflakeSchemasSchemasParametersMaxDataExtensionTimeInDaysOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeSchemasSchemasParametersMaxDataExtensionTimeInDaysOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeSchemasSchemasParametersMaxDataExtensionTimeInDaysOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

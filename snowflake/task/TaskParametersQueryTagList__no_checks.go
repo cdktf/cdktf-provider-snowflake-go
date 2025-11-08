@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersQueryTagList) validateGetParameters(index *floa
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersQueryTagList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersQueryTagList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

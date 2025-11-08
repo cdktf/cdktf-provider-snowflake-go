@@ -27,9 +27,9 @@ func (o *jsiiProxy_OauthIntegrationForPartnerApplicationsDescribeOutputCommentLi
 	return nil
 }
 
-func (o *jsiiProxy_OauthIntegrationForPartnerApplicationsDescribeOutputCommentList) validateResolveParameters(_context cdktf.IResolveContext) error {
-	if _context == nil {
-		return fmt.Errorf("parameter _context is required, but nil was provided")
+func (o *jsiiProxy_OauthIntegrationForPartnerApplicationsDescribeOutputCommentList) validateResolveParameters(context cdktf.IResolveContext) error {
+	if context == nil {
+		return fmt.Errorf("parameter context is required, but nil was provided")
 	}
 
 	return nil

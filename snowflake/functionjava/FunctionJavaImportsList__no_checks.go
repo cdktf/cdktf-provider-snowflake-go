@@ -15,7 +15,7 @@ func (f *jsiiProxy_FunctionJavaImportsList) validateGetParameters(index *float64
 	return nil
 }
 
-func (f *jsiiProxy_FunctionJavaImportsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (f *jsiiProxy_FunctionJavaImportsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

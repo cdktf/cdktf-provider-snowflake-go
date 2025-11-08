@@ -15,7 +15,7 @@ func (u *jsiiProxy_UserParametersWeekStartList) validateGetParameters(index *flo
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersWeekStartList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersWeekStartList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

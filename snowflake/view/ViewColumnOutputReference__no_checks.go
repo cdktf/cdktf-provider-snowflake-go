@@ -43,7 +43,7 @@ func (v *jsiiProxy_ViewColumnOutputReference) validateGetStringMapAttributeParam
 	return nil
 }
 
-func (v *jsiiProxy_ViewColumnOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (v *jsiiProxy_ViewColumnOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
@@ -55,7 +55,7 @@ func (v *jsiiProxy_ViewColumnOutputReference) validatePutProjectionPolicyParamet
 	return nil
 }
 
-func (v *jsiiProxy_ViewColumnOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (v *jsiiProxy_ViewColumnOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

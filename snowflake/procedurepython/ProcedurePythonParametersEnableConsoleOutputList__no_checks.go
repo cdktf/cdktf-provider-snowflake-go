@@ -15,7 +15,7 @@ func (p *jsiiProxy_ProcedurePythonParametersEnableConsoleOutputList) validateGet
 	return nil
 }
 
-func (p *jsiiProxy_ProcedurePythonParametersEnableConsoleOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (p *jsiiProxy_ProcedurePythonParametersEnableConsoleOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

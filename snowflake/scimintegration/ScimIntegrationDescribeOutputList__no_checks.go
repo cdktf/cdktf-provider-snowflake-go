@@ -15,7 +15,7 @@ func (s *jsiiProxy_ScimIntegrationDescribeOutputList) validateGetParameters(inde
 	return nil
 }
 
-func (s *jsiiProxy_ScimIntegrationDescribeOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ScimIntegrationDescribeOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

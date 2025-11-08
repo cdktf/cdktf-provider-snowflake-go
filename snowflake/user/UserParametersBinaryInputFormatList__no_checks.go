@@ -15,7 +15,7 @@ func (u *jsiiProxy_UserParametersBinaryInputFormatList) validateGetParameters(in
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersBinaryInputFormatList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersBinaryInputFormatList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

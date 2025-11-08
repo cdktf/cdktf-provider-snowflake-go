@@ -43,11 +43,11 @@ func (t *jsiiProxy_TableConstraintForeignKeyPropertiesReferencesOutputReference)
 	return nil
 }
 
-func (t *jsiiProxy_TableConstraintForeignKeyPropertiesReferencesOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (t *jsiiProxy_TableConstraintForeignKeyPropertiesReferencesOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (t *jsiiProxy_TableConstraintForeignKeyPropertiesReferencesOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TableConstraintForeignKeyPropertiesReferencesOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

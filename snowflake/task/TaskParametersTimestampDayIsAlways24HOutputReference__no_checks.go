@@ -43,11 +43,11 @@ func (t *jsiiProxy_TaskParametersTimestampDayIsAlways24HOutputReference) validat
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersTimestampDayIsAlways24HOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (t *jsiiProxy_TaskParametersTimestampDayIsAlways24HOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersTimestampDayIsAlways24HOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersTimestampDayIsAlways24HOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

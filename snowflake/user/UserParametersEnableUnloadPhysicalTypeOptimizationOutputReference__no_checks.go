@@ -43,11 +43,11 @@ func (u *jsiiProxy_UserParametersEnableUnloadPhysicalTypeOptimizationOutputRefer
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersEnableUnloadPhysicalTypeOptimizationOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (u *jsiiProxy_UserParametersEnableUnloadPhysicalTypeOptimizationOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersEnableUnloadPhysicalTypeOptimizationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersEnableUnloadPhysicalTypeOptimizationOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

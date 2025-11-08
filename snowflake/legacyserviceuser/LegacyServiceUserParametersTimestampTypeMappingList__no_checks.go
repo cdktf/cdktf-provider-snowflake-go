@@ -15,7 +15,7 @@ func (l *jsiiProxy_LegacyServiceUserParametersTimestampTypeMappingList) validate
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersTimestampTypeMappingList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersTimestampTypeMappingList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

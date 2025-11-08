@@ -43,11 +43,11 @@ func (t *jsiiProxy_TaskParametersUserTaskTimeoutMsOutputReference) validateGetSt
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersUserTaskTimeoutMsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (t *jsiiProxy_TaskParametersUserTaskTimeoutMsOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersUserTaskTimeoutMsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersUserTaskTimeoutMsOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

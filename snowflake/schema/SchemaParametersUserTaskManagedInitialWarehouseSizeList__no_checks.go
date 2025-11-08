@@ -15,7 +15,7 @@ func (s *jsiiProxy_SchemaParametersUserTaskManagedInitialWarehouseSizeList) vali
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersUserTaskManagedInitialWarehouseSizeList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SchemaParametersUserTaskManagedInitialWarehouseSizeList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

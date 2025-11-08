@@ -15,7 +15,7 @@ func (l *jsiiProxy_LegacyServiceUserParametersMultiStatementCountList) validateG
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersMultiStatementCountList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersMultiStatementCountList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

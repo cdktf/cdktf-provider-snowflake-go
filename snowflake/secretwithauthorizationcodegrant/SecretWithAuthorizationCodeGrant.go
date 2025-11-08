@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/secret_with_authorization_code_grant snowflake_secret_with_authorization_code_grant}.
+// Represents a {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.1/docs/resources/secret_with_authorization_code_grant snowflake_secret_with_authorization_code_grant}.
 type SecretWithAuthorizationCodeGrant interface {
 	cdktf.TerraformResource
 	ApiAuthentication() *string
@@ -540,7 +540,7 @@ func (j *jsiiProxy_SecretWithAuthorizationCodeGrant) TimeoutsInput() interface{}
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/secret_with_authorization_code_grant snowflake_secret_with_authorization_code_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.1/docs/resources/secret_with_authorization_code_grant snowflake_secret_with_authorization_code_grant} Resource.
 func NewSecretWithAuthorizationCodeGrant(scope constructs.Construct, id *string, config *SecretWithAuthorizationCodeGrantConfig) SecretWithAuthorizationCodeGrant {
 	_init_.Initialize()
 
@@ -558,7 +558,7 @@ func NewSecretWithAuthorizationCodeGrant(scope constructs.Construct, id *string,
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.0/docs/resources/secret_with_authorization_code_grant snowflake_secret_with_authorization_code_grant} Resource.
+// Create a new {@link https://registry.terraform.io/providers/snowflakedb/snowflake/2.10.1/docs/resources/secret_with_authorization_code_grant snowflake_secret_with_authorization_code_grant} Resource.
 func NewSecretWithAuthorizationCodeGrant_Override(s SecretWithAuthorizationCodeGrant, scope constructs.Construct, id *string, config *SecretWithAuthorizationCodeGrantConfig) {
 	_init_.Initialize()
 

@@ -27,9 +27,9 @@ func (t *jsiiProxy_TaskShowOutputList) validateGetParameters(index *float64) err
 	return nil
 }
 
-func (t *jsiiProxy_TaskShowOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
-	if _context == nil {
-		return fmt.Errorf("parameter _context is required, but nil was provided")
+func (t *jsiiProxy_TaskShowOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
+	if context == nil {
+		return fmt.Errorf("parameter context is required, but nil was provided")
 	}
 
 	return nil

@@ -73,7 +73,7 @@ type ViewColumnOutputReference interface {
 	// Experimental.
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
-	InterpolationForAttribute(property *string) cdktf.IResolvable
+	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
 	PutMaskingPolicy(value *ViewColumnMaskingPolicy)
 	PutProjectionPolicy(value *ViewColumnProjectionPolicy)
 	ResetComment()
@@ -81,7 +81,7 @@ type ViewColumnOutputReference interface {
 	ResetProjectionPolicy()
 	// Produce the Token's value at resolution time.
 	// Experimental.
-	Resolve(_context cdktf.IResolveContext) interface{}
+	Resolve(context cdktf.IResolveContext) interface{}
 	// Return a string representation of this resolvable object.
 	//
 	// Returns a reversible string representation.
@@ -519,8 +519,8 @@ func (v *jsiiProxy_ViewColumnOutputReference) InterpolationAsList() cdktf.IResol
 	return returns
 }
 
-func (v *jsiiProxy_ViewColumnOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
-	if err := v.validateInterpolationForAttributeParameters(property); err != nil {
+func (v *jsiiProxy_ViewColumnOutputReference) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := v.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns cdktf.IResolvable
@@ -528,7 +528,7 @@ func (v *jsiiProxy_ViewColumnOutputReference) InterpolationForAttribute(property
 	_jsii_.Invoke(
 		v,
 		"interpolationForAttribute",
-		[]interface{}{property},
+		[]interface{}{terraformAttribute},
 		&returns,
 	)
 
@@ -581,8 +581,8 @@ func (v *jsiiProxy_ViewColumnOutputReference) ResetProjectionPolicy() {
 	)
 }
 
-func (v *jsiiProxy_ViewColumnOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := v.validateResolveParameters(_context); err != nil {
+func (v *jsiiProxy_ViewColumnOutputReference) Resolve(context cdktf.IResolveContext) interface{} {
+	if err := v.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
@@ -590,7 +590,7 @@ func (v *jsiiProxy_ViewColumnOutputReference) Resolve(_context cdktf.IResolveCon
 	_jsii_.Invoke(
 		v,
 		"resolve",
-		[]interface{}{_context},
+		[]interface{}{context},
 		&returns,
 	)
 

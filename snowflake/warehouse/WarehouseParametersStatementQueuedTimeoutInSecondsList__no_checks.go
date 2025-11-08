@@ -15,7 +15,7 @@ func (w *jsiiProxy_WarehouseParametersStatementQueuedTimeoutInSecondsList) valid
 	return nil
 }
 
-func (w *jsiiProxy_WarehouseParametersStatementQueuedTimeoutInSecondsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (w *jsiiProxy_WarehouseParametersStatementQueuedTimeoutInSecondsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

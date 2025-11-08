@@ -43,11 +43,11 @@ func (u *jsiiProxy_UserParametersUnsupportedDdlActionOutputReference) validateGe
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersUnsupportedDdlActionOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (u *jsiiProxy_UserParametersUnsupportedDdlActionOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersUnsupportedDdlActionOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersUnsupportedDdlActionOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

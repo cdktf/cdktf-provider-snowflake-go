@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeTasksTasksParametersBinaryInputFormatList) valid
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksTasksParametersBinaryInputFormatList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeTasksTasksParametersBinaryInputFormatList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -43,11 +43,11 @@ func (f *jsiiProxy_FunctionScalaSecretsOutputReference) validateGetStringMapAttr
 	return nil
 }
 
-func (f *jsiiProxy_FunctionScalaSecretsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (f *jsiiProxy_FunctionScalaSecretsOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (f *jsiiProxy_FunctionScalaSecretsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (f *jsiiProxy_FunctionScalaSecretsOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

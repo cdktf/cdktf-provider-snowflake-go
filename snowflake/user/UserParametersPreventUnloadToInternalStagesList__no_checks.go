@@ -15,7 +15,7 @@ func (u *jsiiProxy_UserParametersPreventUnloadToInternalStagesList) validateGetP
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersPreventUnloadToInternalStagesList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersPreventUnloadToInternalStagesList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

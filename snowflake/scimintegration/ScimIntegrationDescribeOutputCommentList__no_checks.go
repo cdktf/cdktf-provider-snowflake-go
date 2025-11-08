@@ -15,7 +15,7 @@ func (s *jsiiProxy_ScimIntegrationDescribeOutputCommentList) validateGetParamete
 	return nil
 }
 
-func (s *jsiiProxy_ScimIntegrationDescribeOutputCommentList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ScimIntegrationDescribeOutputCommentList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

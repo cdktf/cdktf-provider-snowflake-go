@@ -15,7 +15,7 @@ func (s *jsiiProxy_ServiceUserParametersStatementTimeoutInSecondsList) validateG
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersStatementTimeoutInSecondsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServiceUserParametersStatementTimeoutInSecondsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

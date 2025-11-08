@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataSnowflakeDatabasesDatabasesParametersDefaultDdlCollationO
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeDatabasesDatabasesParametersDefaultDdlCollationOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataSnowflakeDatabasesDatabasesParametersDefaultDdlCollationOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeDatabasesDatabasesParametersDefaultDdlCollationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeDatabasesDatabasesParametersDefaultDdlCollationOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

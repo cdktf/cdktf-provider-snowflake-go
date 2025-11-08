@@ -15,7 +15,7 @@ func (l *jsiiProxy_LegacyServiceUserParametersLockTimeoutList) validateGetParame
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersLockTimeoutList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersLockTimeoutList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

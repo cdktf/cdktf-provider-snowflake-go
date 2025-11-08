@@ -43,11 +43,11 @@ func (s *jsiiProxy_ServiceUserParametersNoorderSequenceAsDefaultOutputReference)
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersNoorderSequenceAsDefaultOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_ServiceUserParametersNoorderSequenceAsDefaultOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersNoorderSequenceAsDefaultOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServiceUserParametersNoorderSequenceAsDefaultOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

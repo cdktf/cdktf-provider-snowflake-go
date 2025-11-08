@@ -15,7 +15,7 @@ func (s *jsiiProxy_StorageIntegrationDescribeOutputStorageGcpServiceAccountList)
 	return nil
 }
 
-func (s *jsiiProxy_StorageIntegrationDescribeOutputStorageGcpServiceAccountList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_StorageIntegrationDescribeOutputStorageGcpServiceAccountList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

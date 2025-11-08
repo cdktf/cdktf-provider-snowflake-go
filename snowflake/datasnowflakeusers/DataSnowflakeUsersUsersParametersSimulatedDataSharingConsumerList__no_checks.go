@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeUsersUsersParametersSimulatedDataSharingConsumer
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeUsersUsersParametersSimulatedDataSharingConsumerList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeUsersUsersParametersSimulatedDataSharingConsumerList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

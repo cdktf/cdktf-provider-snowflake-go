@@ -43,11 +43,11 @@ func (c *jsiiProxy_CortexSearchServiceDescribeOutputOutputReference) validateGet
 	return nil
 }
 
-func (c *jsiiProxy_CortexSearchServiceDescribeOutputOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (c *jsiiProxy_CortexSearchServiceDescribeOutputOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (c *jsiiProxy_CortexSearchServiceDescribeOutputOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (c *jsiiProxy_CortexSearchServiceDescribeOutputOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

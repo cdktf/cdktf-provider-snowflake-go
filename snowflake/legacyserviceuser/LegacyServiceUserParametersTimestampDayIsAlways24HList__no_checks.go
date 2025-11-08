@@ -15,7 +15,7 @@ func (l *jsiiProxy_LegacyServiceUserParametersTimestampDayIsAlways24HList) valid
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersTimestampDayIsAlways24HList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersTimestampDayIsAlways24HList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

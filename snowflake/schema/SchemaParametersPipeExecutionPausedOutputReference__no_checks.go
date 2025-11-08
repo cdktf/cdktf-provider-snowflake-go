@@ -43,11 +43,11 @@ func (s *jsiiProxy_SchemaParametersPipeExecutionPausedOutputReference) validateG
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersPipeExecutionPausedOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_SchemaParametersPipeExecutionPausedOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersPipeExecutionPausedOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SchemaParametersPipeExecutionPausedOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

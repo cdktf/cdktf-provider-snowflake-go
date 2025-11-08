@@ -15,7 +15,7 @@ func (w *jsiiProxy_WarehouseShowOutputList) validateGetParameters(index *float64
 	return nil
 }
 
-func (w *jsiiProxy_WarehouseShowOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (w *jsiiProxy_WarehouseShowOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

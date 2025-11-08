@@ -15,7 +15,7 @@ func (u *jsiiProxy_UserParametersAbortDetachedQueryList) validateGetParameters(i
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersAbortDetachedQueryList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersAbortDetachedQueryList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

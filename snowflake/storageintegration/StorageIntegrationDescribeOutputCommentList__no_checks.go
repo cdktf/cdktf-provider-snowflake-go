@@ -15,7 +15,7 @@ func (s *jsiiProxy_StorageIntegrationDescribeOutputCommentList) validateGetParam
 	return nil
 }
 
-func (s *jsiiProxy_StorageIntegrationDescribeOutputCommentList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_StorageIntegrationDescribeOutputCommentList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

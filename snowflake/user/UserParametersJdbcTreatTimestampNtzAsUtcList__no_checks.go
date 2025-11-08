@@ -15,7 +15,7 @@ func (u *jsiiProxy_UserParametersJdbcTreatTimestampNtzAsUtcList) validateGetPara
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersJdbcTreatTimestampNtzAsUtcList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersJdbcTreatTimestampNtzAsUtcList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

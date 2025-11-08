@@ -43,11 +43,11 @@ func (u *jsiiProxy_UserParametersStrictJsonOutputOutputReference) validateGetStr
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersStrictJsonOutputOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (u *jsiiProxy_UserParametersStrictJsonOutputOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersStrictJsonOutputOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersStrictJsonOutputOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -43,11 +43,11 @@ func (s *jsiiProxy_SecretWithBasicAuthenticationTimeoutsOutputReference) validat
 	return nil
 }
 
-func (s *jsiiProxy_SecretWithBasicAuthenticationTimeoutsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_SecretWithBasicAuthenticationTimeoutsOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_SecretWithBasicAuthenticationTimeoutsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SecretWithBasicAuthenticationTimeoutsOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

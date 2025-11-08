@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeTasksTasksParametersClientPrefetchThreadsList) v
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksTasksParametersClientPrefetchThreadsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeTasksTasksParametersClientPrefetchThreadsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -43,11 +43,11 @@ func (t *jsiiProxy_TaskParametersErrorOnNondeterministicUpdateOutputReference) v
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersErrorOnNondeterministicUpdateOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (t *jsiiProxy_TaskParametersErrorOnNondeterministicUpdateOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersErrorOnNondeterministicUpdateOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersErrorOnNondeterministicUpdateOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

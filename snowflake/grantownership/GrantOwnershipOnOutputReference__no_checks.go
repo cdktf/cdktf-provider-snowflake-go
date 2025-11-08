@@ -43,7 +43,7 @@ func (g *jsiiProxy_GrantOwnershipOnOutputReference) validateGetStringMapAttribut
 	return nil
 }
 
-func (g *jsiiProxy_GrantOwnershipOnOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (g *jsiiProxy_GrantOwnershipOnOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
@@ -55,7 +55,7 @@ func (g *jsiiProxy_GrantOwnershipOnOutputReference) validatePutFutureParameters(
 	return nil
 }
 
-func (g *jsiiProxy_GrantOwnershipOnOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (g *jsiiProxy_GrantOwnershipOnOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeDatabasesDatabasesParametersUserTaskMinimumTrigg
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeDatabasesDatabasesParametersUserTaskMinimumTriggerIntervalInSecondsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeDatabasesDatabasesParametersUserTaskMinimumTriggerIntervalInSecondsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

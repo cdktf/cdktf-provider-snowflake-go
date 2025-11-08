@@ -75,14 +75,14 @@ type UserPasswordPolicyAttachmentTimeoutsOutputReference interface {
 	// Experimental.
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
-	InterpolationForAttribute(property *string) cdktf.IResolvable
+	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
 	ResetCreate()
 	ResetDelete()
 	ResetRead()
 	ResetUpdate()
 	// Produce the Token's value at resolution time.
 	// Experimental.
-	Resolve(_context cdktf.IResolveContext) interface{}
+	Resolve(context cdktf.IResolveContext) interface{}
 	// Return a string representation of this resolvable object.
 	//
 	// Returns a reversible string representation.
@@ -542,8 +542,8 @@ func (u *jsiiProxy_UserPasswordPolicyAttachmentTimeoutsOutputReference) Interpol
 	return returns
 }
 
-func (u *jsiiProxy_UserPasswordPolicyAttachmentTimeoutsOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
-	if err := u.validateInterpolationForAttributeParameters(property); err != nil {
+func (u *jsiiProxy_UserPasswordPolicyAttachmentTimeoutsOutputReference) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := u.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns cdktf.IResolvable
@@ -551,7 +551,7 @@ func (u *jsiiProxy_UserPasswordPolicyAttachmentTimeoutsOutputReference) Interpol
 	_jsii_.Invoke(
 		u,
 		"interpolationForAttribute",
-		[]interface{}{property},
+		[]interface{}{terraformAttribute},
 		&returns,
 	)
 
@@ -590,8 +590,8 @@ func (u *jsiiProxy_UserPasswordPolicyAttachmentTimeoutsOutputReference) ResetUpd
 	)
 }
 
-func (u *jsiiProxy_UserPasswordPolicyAttachmentTimeoutsOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := u.validateResolveParameters(_context); err != nil {
+func (u *jsiiProxy_UserPasswordPolicyAttachmentTimeoutsOutputReference) Resolve(context cdktf.IResolveContext) interface{} {
+	if err := u.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
@@ -599,7 +599,7 @@ func (u *jsiiProxy_UserPasswordPolicyAttachmentTimeoutsOutputReference) Resolve(
 	_jsii_.Invoke(
 		u,
 		"resolve",
-		[]interface{}{_context},
+		[]interface{}{context},
 		&returns,
 	)
 

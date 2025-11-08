@@ -43,11 +43,11 @@ func (u *jsiiProxy_UserAuthenticationPolicyAttachmentTimeoutsOutputReference) va
 	return nil
 }
 
-func (u *jsiiProxy_UserAuthenticationPolicyAttachmentTimeoutsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (u *jsiiProxy_UserAuthenticationPolicyAttachmentTimeoutsOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (u *jsiiProxy_UserAuthenticationPolicyAttachmentTimeoutsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserAuthenticationPolicyAttachmentTimeoutsOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (o *jsiiProxy_OauthIntegrationForPartnerApplicationsShowOutputList) validat
 	return nil
 }
 
-func (o *jsiiProxy_OauthIntegrationForPartnerApplicationsShowOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (o *jsiiProxy_OauthIntegrationForPartnerApplicationsShowOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

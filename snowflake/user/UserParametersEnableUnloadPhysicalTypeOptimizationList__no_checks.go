@@ -15,7 +15,7 @@ func (u *jsiiProxy_UserParametersEnableUnloadPhysicalTypeOptimizationList) valid
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersEnableUnloadPhysicalTypeOptimizationList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersEnableUnloadPhysicalTypeOptimizationList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

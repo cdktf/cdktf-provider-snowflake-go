@@ -43,11 +43,11 @@ func (l *jsiiProxy_LegacyServiceUserParametersSimulatedDataSharingConsumerOutput
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersSimulatedDataSharingConsumerOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (l *jsiiProxy_LegacyServiceUserParametersSimulatedDataSharingConsumerOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersSimulatedDataSharingConsumerOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersSimulatedDataSharingConsumerOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

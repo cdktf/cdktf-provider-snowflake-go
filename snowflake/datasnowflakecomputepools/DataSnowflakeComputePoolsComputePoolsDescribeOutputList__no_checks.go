@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeComputePoolsComputePoolsDescribeOutputList) vali
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeComputePoolsComputePoolsDescribeOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeComputePoolsComputePoolsDescribeOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

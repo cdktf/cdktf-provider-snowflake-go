@@ -15,7 +15,7 @@ func (l *jsiiProxy_LegacyServiceUserParametersClientResultColumnCaseInsensitiveL
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersClientResultColumnCaseInsensitiveList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersClientResultColumnCaseInsensitiveList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

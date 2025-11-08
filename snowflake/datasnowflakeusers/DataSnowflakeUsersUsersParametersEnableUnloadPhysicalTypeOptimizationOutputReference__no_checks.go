@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataSnowflakeUsersUsersParametersEnableUnloadPhysicalTypeOpti
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeUsersUsersParametersEnableUnloadPhysicalTypeOptimizationOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataSnowflakeUsersUsersParametersEnableUnloadPhysicalTypeOptimizationOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeUsersUsersParametersEnableUnloadPhysicalTypeOptimizationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeUsersUsersParametersEnableUnloadPhysicalTypeOptimizationOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

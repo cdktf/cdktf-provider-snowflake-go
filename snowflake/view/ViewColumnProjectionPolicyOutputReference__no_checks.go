@@ -43,11 +43,11 @@ func (v *jsiiProxy_ViewColumnProjectionPolicyOutputReference) validateGetStringM
 	return nil
 }
 
-func (v *jsiiProxy_ViewColumnProjectionPolicyOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (v *jsiiProxy_ViewColumnProjectionPolicyOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (v *jsiiProxy_ViewColumnProjectionPolicyOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (v *jsiiProxy_ViewColumnProjectionPolicyOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

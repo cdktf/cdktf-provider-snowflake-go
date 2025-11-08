@@ -15,7 +15,7 @@ func (l *jsiiProxy_LegacyServiceUserParametersTraceLevelList) validateGetParamet
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersTraceLevelList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersTraceLevelList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

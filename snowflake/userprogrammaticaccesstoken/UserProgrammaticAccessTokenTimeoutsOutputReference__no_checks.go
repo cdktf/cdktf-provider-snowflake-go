@@ -43,11 +43,11 @@ func (u *jsiiProxy_UserProgrammaticAccessTokenTimeoutsOutputReference) validateG
 	return nil
 }
 
-func (u *jsiiProxy_UserProgrammaticAccessTokenTimeoutsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (u *jsiiProxy_UserProgrammaticAccessTokenTimeoutsOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (u *jsiiProxy_UserProgrammaticAccessTokenTimeoutsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserProgrammaticAccessTokenTimeoutsOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

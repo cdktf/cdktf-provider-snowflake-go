@@ -27,9 +27,9 @@ func (p *jsiiProxy_ProcedureSqlParametersList) validateGetParameters(index *floa
 	return nil
 }
 
-func (p *jsiiProxy_ProcedureSqlParametersList) validateResolveParameters(_context cdktf.IResolveContext) error {
-	if _context == nil {
-		return fmt.Errorf("parameter _context is required, but nil was provided")
+func (p *jsiiProxy_ProcedureSqlParametersList) validateResolveParameters(context cdktf.IResolveContext) error {
+	if context == nil {
+		return fmt.Errorf("parameter context is required, but nil was provided")
 	}
 
 	return nil

@@ -15,7 +15,7 @@ func (l *jsiiProxy_LegacyServiceUserParametersLogLevelList) validateGetParameter
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersLogLevelList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersLogLevelList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

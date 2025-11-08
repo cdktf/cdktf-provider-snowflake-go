@@ -15,7 +15,7 @@ func (u *jsiiProxy_UserParametersMultiStatementCountList) validateGetParameters(
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersMultiStatementCountList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersMultiStatementCountList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

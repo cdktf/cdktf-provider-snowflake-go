@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataSnowflakeFileFormatsFileFormatsOutputReference) validateG
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeFileFormatsFileFormatsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataSnowflakeFileFormatsFileFormatsOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeFileFormatsFileFormatsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeFileFormatsFileFormatsOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

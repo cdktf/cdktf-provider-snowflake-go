@@ -15,7 +15,7 @@ func (s *jsiiProxy_ServiceUserParametersClientResultChunkSizeList) validateGetPa
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersClientResultChunkSizeList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServiceUserParametersClientResultChunkSizeList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

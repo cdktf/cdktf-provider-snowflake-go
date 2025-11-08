@@ -15,7 +15,7 @@ func (s *jsiiProxy_ServiceUserParametersJdbcTreatDecimalAsIntList) validateGetPa
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersJdbcTreatDecimalAsIntList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServiceUserParametersJdbcTreatDecimalAsIntList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -43,11 +43,11 @@ func (t *jsiiProxy_TaskParametersS3StageVpceDnsNameOutputReference) validateGetS
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersS3StageVpceDnsNameOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (t *jsiiProxy_TaskParametersS3StageVpceDnsNameOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersS3StageVpceDnsNameOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersS3StageVpceDnsNameOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

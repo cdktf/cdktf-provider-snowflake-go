@@ -43,7 +43,7 @@ func (d *jsiiProxy_DatabaseReplicationOutputReference) validateGetStringMapAttri
 	return nil
 }
 
-func (d *jsiiProxy_DatabaseReplicationOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DatabaseReplicationOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
@@ -51,7 +51,7 @@ func (d *jsiiProxy_DatabaseReplicationOutputReference) validatePutEnableToAccoun
 	return nil
 }
 
-func (d *jsiiProxy_DatabaseReplicationOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DatabaseReplicationOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

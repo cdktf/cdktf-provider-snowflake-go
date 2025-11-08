@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeSchemasSchemasParametersReplaceInvalidCharacters
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeSchemasSchemasParametersReplaceInvalidCharactersList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeSchemasSchemasParametersReplaceInvalidCharactersList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

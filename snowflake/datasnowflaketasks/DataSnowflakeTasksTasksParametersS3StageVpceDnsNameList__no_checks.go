@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeTasksTasksParametersS3StageVpceDnsNameList) vali
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeTasksTasksParametersS3StageVpceDnsNameList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeTasksTasksParametersS3StageVpceDnsNameList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

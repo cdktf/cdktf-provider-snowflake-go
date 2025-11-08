@@ -15,7 +15,7 @@ func (u *jsiiProxy_UserParametersTimestampTypeMappingList) validateGetParameters
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersTimestampTypeMappingList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersTimestampTypeMappingList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

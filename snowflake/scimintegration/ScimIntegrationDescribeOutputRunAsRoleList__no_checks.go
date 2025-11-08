@@ -15,7 +15,7 @@ func (s *jsiiProxy_ScimIntegrationDescribeOutputRunAsRoleList) validateGetParame
 	return nil
 }
 
-func (s *jsiiProxy_ScimIntegrationDescribeOutputRunAsRoleList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ScimIntegrationDescribeOutputRunAsRoleList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

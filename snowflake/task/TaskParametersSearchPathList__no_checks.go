@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersSearchPathList) validateGetParameters(index *fl
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersSearchPathList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersSearchPathList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

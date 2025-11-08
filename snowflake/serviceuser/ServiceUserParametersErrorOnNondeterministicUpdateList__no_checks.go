@@ -15,7 +15,7 @@ func (s *jsiiProxy_ServiceUserParametersErrorOnNondeterministicUpdateList) valid
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersErrorOnNondeterministicUpdateList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServiceUserParametersErrorOnNondeterministicUpdateList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

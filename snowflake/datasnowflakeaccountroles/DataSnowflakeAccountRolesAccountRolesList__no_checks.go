@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeAccountRolesAccountRolesList) validateGetParamet
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeAccountRolesAccountRolesList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeAccountRolesAccountRolesList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -43,11 +43,11 @@ func (l *jsiiProxy_LegacyServiceUserParametersMultiStatementCountOutputReference
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersMultiStatementCountOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (l *jsiiProxy_LegacyServiceUserParametersMultiStatementCountOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersMultiStatementCountOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersMultiStatementCountOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

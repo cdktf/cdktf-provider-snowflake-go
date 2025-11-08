@@ -15,7 +15,7 @@ func (s *jsiiProxy_SchemaDescribeOutputList) validateGetParameters(index *float6
 	return nil
 }
 
-func (s *jsiiProxy_SchemaDescribeOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SchemaDescribeOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (s *jsiiProxy_ScimIntegrationDescribeOutputSyncPasswordList) validateGetPar
 	return nil
 }
 
-func (s *jsiiProxy_ScimIntegrationDescribeOutputSyncPasswordList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ScimIntegrationDescribeOutputSyncPasswordList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

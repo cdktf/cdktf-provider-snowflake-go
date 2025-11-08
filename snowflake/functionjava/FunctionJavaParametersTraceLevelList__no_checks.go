@@ -15,7 +15,7 @@ func (f *jsiiProxy_FunctionJavaParametersTraceLevelList) validateGetParameters(i
 	return nil
 }
 
-func (f *jsiiProxy_FunctionJavaParametersTraceLevelList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (f *jsiiProxy_FunctionJavaParametersTraceLevelList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

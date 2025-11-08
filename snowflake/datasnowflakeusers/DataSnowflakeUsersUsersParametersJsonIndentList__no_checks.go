@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataSnowflakeUsersUsersParametersJsonIndentList) validateGetP
 	return nil
 }
 
-func (d *jsiiProxy_DataSnowflakeUsersUsersParametersJsonIndentList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataSnowflakeUsersUsersParametersJsonIndentList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

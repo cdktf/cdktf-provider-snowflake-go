@@ -39,7 +39,7 @@ type TaskParametersNoorderSequenceAsDefaultList interface {
 	Get(index *float64) TaskParametersNoorderSequenceAsDefaultOutputReference
 	// Produce the Token's value at resolution time.
 	// Experimental.
-	Resolve(_context cdktf.IResolveContext) interface{}
+	Resolve(context cdktf.IResolveContext) interface{}
 	// Return a string representation of this resolvable object.
 	//
 	// Returns a reversible string representation.
@@ -208,8 +208,8 @@ func (t *jsiiProxy_TaskParametersNoorderSequenceAsDefaultList) Get(index *float6
 	return returns
 }
 
-func (t *jsiiProxy_TaskParametersNoorderSequenceAsDefaultList) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := t.validateResolveParameters(_context); err != nil {
+func (t *jsiiProxy_TaskParametersNoorderSequenceAsDefaultList) Resolve(context cdktf.IResolveContext) interface{} {
+	if err := t.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
@@ -217,7 +217,7 @@ func (t *jsiiProxy_TaskParametersNoorderSequenceAsDefaultList) Resolve(_context 
 	_jsii_.Invoke(
 		t,
 		"resolve",
-		[]interface{}{_context},
+		[]interface{}{context},
 		&returns,
 	)
 

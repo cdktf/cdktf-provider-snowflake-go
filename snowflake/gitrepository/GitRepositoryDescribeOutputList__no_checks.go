@@ -15,7 +15,7 @@ func (g *jsiiProxy_GitRepositoryDescribeOutputList) validateGetParameters(index 
 	return nil
 }
 
-func (g *jsiiProxy_GitRepositoryDescribeOutputList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (g *jsiiProxy_GitRepositoryDescribeOutputList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

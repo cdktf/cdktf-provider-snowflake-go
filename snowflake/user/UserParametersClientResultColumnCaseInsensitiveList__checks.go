@@ -27,9 +27,9 @@ func (u *jsiiProxy_UserParametersClientResultColumnCaseInsensitiveList) validate
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersClientResultColumnCaseInsensitiveList) validateResolveParameters(_context cdktf.IResolveContext) error {
-	if _context == nil {
-		return fmt.Errorf("parameter _context is required, but nil was provided")
+func (u *jsiiProxy_UserParametersClientResultColumnCaseInsensitiveList) validateResolveParameters(context cdktf.IResolveContext) error {
+	if context == nil {
+		return fmt.Errorf("parameter context is required, but nil was provided")
 	}
 
 	return nil

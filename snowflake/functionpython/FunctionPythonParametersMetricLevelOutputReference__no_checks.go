@@ -43,11 +43,11 @@ func (f *jsiiProxy_FunctionPythonParametersMetricLevelOutputReference) validateG
 	return nil
 }
 
-func (f *jsiiProxy_FunctionPythonParametersMetricLevelOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (f *jsiiProxy_FunctionPythonParametersMetricLevelOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (f *jsiiProxy_FunctionPythonParametersMetricLevelOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (f *jsiiProxy_FunctionPythonParametersMetricLevelOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

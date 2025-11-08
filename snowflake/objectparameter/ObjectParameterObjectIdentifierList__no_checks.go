@@ -15,7 +15,7 @@ func (o *jsiiProxy_ObjectParameterObjectIdentifierList) validateGetParameters(in
 	return nil
 }
 
-func (o *jsiiProxy_ObjectParameterObjectIdentifierList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (o *jsiiProxy_ObjectParameterObjectIdentifierList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

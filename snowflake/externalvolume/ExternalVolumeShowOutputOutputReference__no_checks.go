@@ -43,11 +43,11 @@ func (e *jsiiProxy_ExternalVolumeShowOutputOutputReference) validateGetStringMap
 	return nil
 }
 
-func (e *jsiiProxy_ExternalVolumeShowOutputOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (e *jsiiProxy_ExternalVolumeShowOutputOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (e *jsiiProxy_ExternalVolumeShowOutputOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (e *jsiiProxy_ExternalVolumeShowOutputOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

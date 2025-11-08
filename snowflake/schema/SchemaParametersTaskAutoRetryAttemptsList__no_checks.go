@@ -15,7 +15,7 @@ func (s *jsiiProxy_SchemaParametersTaskAutoRetryAttemptsList) validateGetParamet
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersTaskAutoRetryAttemptsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SchemaParametersTaskAutoRetryAttemptsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

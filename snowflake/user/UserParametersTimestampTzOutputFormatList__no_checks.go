@@ -15,7 +15,7 @@ func (u *jsiiProxy_UserParametersTimestampTzOutputFormatList) validateGetParamet
 	return nil
 }
 
-func (u *jsiiProxy_UserParametersTimestampTzOutputFormatList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (u *jsiiProxy_UserParametersTimestampTzOutputFormatList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (t *jsiiProxy_TaskParametersTimestampTypeMappingList) validateGetParameters
 	return nil
 }
 
-func (t *jsiiProxy_TaskParametersTimestampTypeMappingList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TaskParametersTimestampTypeMappingList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

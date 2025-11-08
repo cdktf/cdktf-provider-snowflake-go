@@ -43,11 +43,11 @@ func (s *jsiiProxy_ServiceUserParametersUnsupportedDdlActionOutputReference) val
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersUnsupportedDdlActionOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_ServiceUserParametersUnsupportedDdlActionOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_ServiceUserParametersUnsupportedDdlActionOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_ServiceUserParametersUnsupportedDdlActionOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

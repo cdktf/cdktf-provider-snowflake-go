@@ -43,7 +43,7 @@ func (t *jsiiProxy_TableColumnOutputReference) validateGetStringMapAttributePara
 	return nil
 }
 
-func (t *jsiiProxy_TableColumnOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (t *jsiiProxy_TableColumnOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
@@ -55,7 +55,7 @@ func (t *jsiiProxy_TableColumnOutputReference) validatePutIdentityParameters(val
 	return nil
 }
 
-func (t *jsiiProxy_TableColumnOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TableColumnOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (s *jsiiProxy_SchemaParametersUserTaskTimeoutMsList) validateGetParameters(
 	return nil
 }
 
-func (s *jsiiProxy_SchemaParametersUserTaskTimeoutMsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SchemaParametersUserTaskTimeoutMsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

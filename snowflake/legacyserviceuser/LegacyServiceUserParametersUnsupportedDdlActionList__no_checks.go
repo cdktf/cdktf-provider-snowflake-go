@@ -15,7 +15,7 @@ func (l *jsiiProxy_LegacyServiceUserParametersUnsupportedDdlActionList) validate
 	return nil
 }
 
-func (l *jsiiProxy_LegacyServiceUserParametersUnsupportedDdlActionList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (l *jsiiProxy_LegacyServiceUserParametersUnsupportedDdlActionList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 
